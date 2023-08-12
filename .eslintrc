@@ -1,0 +1,22 @@
+{
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "no-loops"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier", // Prettier plugin
+    "plugin:prettier/recommended" // Prettier recommended rules
+  ],
+  "rules": {
+    "no-console": 1,
+    "no-loops/no-loops": 2,
+    "@typescript-eslint/no-unused-vars": ["error"], // Why would you want unused vars?
+    "prettier/prettier": ["error", { "endOfLine": "auto" }, { "usePrettierrc": true }]
+  }
+}

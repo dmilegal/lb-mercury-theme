@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  wp:
+    ports:
+      - 8080:80
+    environment:
+      MODE: development
+      WORDPRESS_DEBUG: 1
+    volumes:
+      - ./wp/wp-content/themes/mercury:/var/www/html/wp-content/themes/mercury
+      - ./wp/wp-content/themes/mercury-child:/var/www/html/wp-content/themes/mercury-child
+      - ./wp/wp-content/plugins:/var/www/html/wp-content/plugins
+      - ./wp/wp-content/uploads:/var/www/html/wp-content/uploads
+
+  db:
+    volumes:
+      - db:/var/lib/mysql
+volumes:
+  db:
+  node_modules:

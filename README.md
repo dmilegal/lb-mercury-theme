@@ -1,0 +1,27 @@
+# Wordpress Docker Template
+
+WordPress template for local development and production.
+
+#### Requirements:
+
+- docker: ^20.10.12
+- docker compose: ^2.2.3
+- node: ^16.13.2
+
+**for Windows:**
+
+- Git Bash or Ubuntu subsystem
+
+## How Use
+
+Run dev container:
+
+    ./run.sh -d
+
+Run prod container:
+
+    ./run.sh -p
+
+More info about commands:
+
+    ./run.sh -h

@@ -1,0 +1,63 @@
+# compiled output
+**/dist
+**/node_modules
+.pnpm-store
+
+# Files not required for production
+.editorconfig
+nodemon.json
+
+# Environment (contains sensitive data)
+.env*
+/secrets
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Git
+.gitignore
+README.md
+
+#local env
+**/local-dev.env
+
+# OS
+.DS_Store
+
+# Docker
+Dockerfile
+Dockerfile.dev
+docker-compose.yml
+docker-compose.dev.yml
+config
+
+# Tests
+/coverage
+/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+/test
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# WP
+wp/*
+!wp/wp-content

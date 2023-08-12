@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  wp:
+    ports:
+      - 8080:80
+    environment:
+      MODE: production
+      WORDPRESS_DEBUG: 1
+    volumes:
+      - wordpress:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - net
+  db:
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - net
+volumes:
+  wordpress:
+  db:
