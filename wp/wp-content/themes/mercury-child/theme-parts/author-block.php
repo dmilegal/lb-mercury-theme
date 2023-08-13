@@ -14,7 +14,7 @@
 <?php
 global $post;
 $author_details = '';
-        
+
 // Detect if it is a single post with a post author
 if ( isset( $post->post_author ) ) {
     
@@ -38,6 +38,7 @@ if ( isset( $post->post_author ) ) {
     $user_posts = get_author_posts_url( get_the_author_meta( 'ID' , $post->post_author));
 
     if ( ! empty( $user_description ) ) {
+       
         if ( ! empty( $display_name ) )
             $author_details = '<p class="author-name"><h3>Author: ' . $display_name . '</h3></p>';
         
