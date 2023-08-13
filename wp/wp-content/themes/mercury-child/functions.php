@@ -1,5 +1,7 @@
 <?php
 
+require_once 'settings/settings.php';
+
 // For custom functions and hooks...
 // remove wp version number from scripts and styles
 function remove_css_js_version( $src ) {
