@@ -33,6 +33,8 @@ if ( isset( $post->post_author ) ) {
     $user_twitter = get_the_author_meta( 'twitter' );
     $user_linkedin = get_the_author_meta( 'linkedin' );
     $user_instagram = get_the_author_meta( 'instagram' );
+    $soc_links = array_filter([['facebook', $user_facebook], ['twitter', $user_twitter ? 'https://twitter.com/' . $user_twitter : ''], ['linkedin', $user_linkedin], ['instagram', $user_instagram]], fn($v) => $v[1]);
+
         
     // Get link to the author archive page
     $user_posts = get_author_posts_url( get_the_author_meta( 'ID' , $post->post_author));
@@ -45,10 +47,13 @@ if ( isset( $post->post_author ) ) {
         if ( ! empty( $user_description ) ) {
             // Author avatar and bio
             $author_details .= '<p class="author-image">' . get_avatar( get_the_author_meta('user_email') , 90 ). '</p>';
-            $author_details .= '<p class="author-socials"><a href="'. $user_facebook .'" rel="nofollow" target="_blank" alt="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com/' . $user_twitter .'" rel="nofollow" target="_blank" alt="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="'. $user_linkedin .'" rel="nofollow" target="_blank" alt="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="'. $user_instagram .'" rel="nofollow" target="_blank" alt="Instagram"><i class="fab fa-instagram"></i></a></p>';
+            if (count($soc_links)) {
+                $author_details .= '<p class="author-socials">';
+                foreach ($soc_links as $link) {
+                    $author_details .= '<a href="'.$link[1] .'" rel="nofollow" target="_blank" alt="'. $link .'"><i class="fab fa-'. $link[0] .'"></i></a>';
+                }
+                $author_details .= '</p>';
+            }
             $author_details .= '<p class="author-description">' . wp_kses_post(get_field('short_biographical_info', 'user_'.$post->post_author)). '</p>';
             $author_details .= '<p class="author-links"><a href="'. $user_posts .'">View all posts by ' . $display_name . '</a>'; 
         }
