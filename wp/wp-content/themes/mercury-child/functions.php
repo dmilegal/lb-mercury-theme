@@ -1,5 +1,7 @@
 <?php
+require_once 'settings/settings.php';
 require_once 'blocks/blocks.php';
+require_once 'inc/inc.php';
 
 // For custom functions and hooks...
 function include_child_scripts()

@@ -1,16 +1,3 @@
-<script type="application/ld+json">
-{
-	"@context": "http://schema.org",
-  	"@type": "Person",
-  	"name": "<?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?>",
-  	"image": "<?php echo esc_url( get_avatar_url( get_the_author_meta('user_email'), ['size' => '200'] )); ?>",
-  	"jobTitle": "<?php echo esc_html( get_field( 'job_title', 'user_'.get_the_author_meta('ID') ) ); ?>",
-  	"description": "<?php echo esc_html( get_field ('short_biographical_info', 'user_'.$post->post_author ) ); ?>",
-    "url": "<?php echo get_author_posts_url(get_the_author_meta( 'ID' , $post->post_author)); ?>"
-}
-</script>
-
-
 <?php
 global $post;
 $author_details = '';

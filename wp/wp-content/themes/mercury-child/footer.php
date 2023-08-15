@@ -62,7 +62,7 @@
 
 <!-- Back to Top Start -->
 
-<div class="space-to-top">
+<div class="space-to-top pp">
 	<a href="#" id="scrolltop" title="<?php esc_attr_e( 'Back to Top', 'mercury' ); ?>"><i class="far fa-arrow-alt-circle-up"></i></a>
 </div>
 
