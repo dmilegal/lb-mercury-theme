@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Testimonial Block Template.
+ * Pros & Cons Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -12,49 +12,21 @@
  * @param   array $context The context provided to the block by the post or it's parent block.
  */
 
-// Support custom "anchor" values.
-$block_opts = getCommonBlockProps();
+$block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 
-// Load values and assign defaults.
 $pros_list = get_field('pros') ?: [];
 $cons_list = get_field('cons') ?: [];
+$allowed_blocks = array('core/pros-cons-col');
+$template = array(
+  array('acf/pros-cons-col', array('lock' => array(
+    'remove' => true,
+),), array(array('acf/advantages'))),
+  array('acf/pros-cons-col', array('lock' => array(
+    'remove' => true,
+),), array(array('acf/disadvantages'))),
+);
 
 ?>
-<div <?= $block_opts['anchor'] ?>class="<?= $block_opts['class_name'] ?>is-layout-flex wp-container-3 wp-block-columns">
-  <div class="is-layout-flow wp-block-column">
-    <div class="space-pros box-100 relative">
-      <div class="space-pros-ins relative">
-        <div class="space-pros-title box-100 relative">
-          <strong>Pros:</strong>
-        </div>
-        <div class="space-pros-description box-100 relative">
-          <? if (count($pros_list)) { ?>
-          <ul>
-            <? foreach ($pros_list as $item) {?>
-              <li><?= esc_html($item['text']) ?></li>
-            <?} ?>
-          </ul>
-          <? } ?>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="is-layout-flow wp-block-column">
-    <div class="space-cons box-100 relative">
-      <div class="space-cons-ins relative">
-        <div class="space-cons-title box-100 relative">
-          <strong>Cons:</strong>
-        </div>
-        <div class="space-pros-description box-100 relative">
-        <? if (count($cons_list)) { ?>
-          <ul>
-            <? foreach ($cons_list as $item) {?>
-              <li><?= esc_html($item['text']) ?></li>
-            <?} ?>
-          </ul>
-          <? } ?>
-        </div>
-      </div>
-    </div>
-  </div>
+<div <?= $block_opts['anchor'] ?>class="<?= $block_opts['class_name']['container'] ?>">
+  <InnerBlocks parentContainer="true" className="wp-container-3 is-layout-flex wp-block-columns" allowedBlocks="<?= esc_attr(wp_json_encode($allowed_blocks)) ?>" template="<?= esc_attr(wp_json_encode($template)) ?>" />
 </div>

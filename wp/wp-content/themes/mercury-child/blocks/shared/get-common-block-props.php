@@ -1,20 +1,14 @@
 <?
-function getCommonBlockProps()
+function getCommonBlockProps($block, $post_id, $is_preview = false)
 {
   $anchor = '';
   if (!empty($block['anchor']))
     $anchor = 'id="' . esc_attr($block['anchor']) . '" ';
 
-
-  $class_name = 'testimonial-block';
-  if (!empty($block['className']))
-    $class_name .= ' ' . $block['className'];
-
-  if (!empty($block['align']))
-    $class_name .= ' align' . $block['align'];
+  $class_name = get_block_class($block, $post_id, $is_preview);
 
   return [
     'anchor' => $anchor,
-    'class_name' => esc_attr($class_name)
+    'class_name' => $class_name
   ];
 };
