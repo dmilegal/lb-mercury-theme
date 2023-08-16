@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<? global $post; 
+// Get author's social media URL
+$soc_links = getUserSocLinks($post->post_author);
+
+get_header(); ?>
 
 <!--<script type="application/ld+json">
 {
@@ -27,18 +31,16 @@
 	<div class="space-archive-title-box-ins space-page-wrapper relative">
 		<div class="space-archive-title-box-h1 relative">
 			<div class="author-bio-section">
-				<p class="author-name"><h1><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></h1></p>
+				<div class="author-name"><h1><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></h1></div>
 				<p class="author-image"><?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?></p>
 				<?php
-					$facebook = get_the_author_meta( 'facebook' );
-					$twitter = get_the_author_meta( 'twitter' );
-					$linkedin = get_the_author_meta( 'linkedin' );
-					$instagram = get_the_author_meta( 'instagram' );
-					
-					echo '<p class="author-socials"><a href="'. $facebook .'" rel="nofollow" target="_blank" alt="Facebook"><i class="fab fa-facebook"></i></a>
-					<a href="https://twitter.com/' . $twitter .'" rel="nofollow" target="_blank" alt="Twitter"><i class="fab fa-twitter"></i></a>
-					<a href="'. $linkedin .'" rel="nofollow" target="_blank" alt="LinkedIn"><i class="fab fa-linkedin"></i></a>
-					<a href="'. $instagram .'" rel="nofollow" target="_blank" alt="Instagram"><i class="fab fa-instagram"></i></a></p>';
+				if (count($soc_links)) {
+					echo '<p class="author-socials">';
+					foreach ($soc_links as $link) {
+						echo '<a href="'.$link[1] .'" rel="nofollow" target="_blank"><i class="fab fa-'. $link[0] .'"></i></a>';
+					}
+					echo '</p>';
+				}
 				?>
 				<?php if (get_the_author_meta('description')) { ?>
 					<div class="space-page-content-excerpt box-100 relative">

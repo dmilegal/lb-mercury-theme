@@ -24,7 +24,7 @@ if ( isset( $post->post_author ) ) {
     if ( ! empty( $user_description ) ) {
        
         if ( ! empty( $display_name ) )
-            $author_details = '<p class="author-name"><h3>Author: ' . $display_name . '</h3></p>';
+            $author_details = '<div class="author-name"><h3>Author: ' . $display_name . '</h3></div>';
         
         if ( ! empty( $user_description ) ) {
             // Author avatar and bio
