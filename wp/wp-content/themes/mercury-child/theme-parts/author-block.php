@@ -37,7 +37,7 @@ if ( isset( $post->post_author ) ) {
             if (count($soc_links)) {
                 $author_details .= '<p class="author-socials">';
                 foreach ($soc_links as $link) {
-                    $author_details .= '<a href="'.$link[1] .'" rel="nofollow" target="_blank" alt="'. $link .'"><i class="fab fa-'. $link[0] .'"></i></a>';
+                    $author_details .= '<a href="'.$link[1] .'" rel="nofollow" target="_blank"><i class="fab fa-'. $link[0] .'"></i></a>';
                 }
                 $author_details .= '</p>';
             }
