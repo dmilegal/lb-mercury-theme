@@ -1,3 +1,3 @@
 <div class="footer-disclaimer">
-    <?php _e( get_theme_mod('footer_disclaimer'), 'aces' ); ?>
+    <?= (get_field('sett_footer_disclaimer', 'option')) ? get_field('sett_footer_disclaimer', 'option') : '' ;?>   
 </div>
