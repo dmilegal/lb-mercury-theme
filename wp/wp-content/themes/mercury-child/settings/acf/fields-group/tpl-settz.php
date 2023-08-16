@@ -29,6 +29,26 @@ add_action( 'acf/include_fields', function() {
 			'media_upload' => 1,
 			'delay' => 0,
 		),
+		array(
+			'key' => 'field_64dd392b94fef',
+			'label' => 'News Archieve Prolog',
+			'name' => 'news_arhieve_prolog',
+			'aria-label' => '',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+			'delay' => 0,
+		),
 	),
 	'location' => array(
 		array(
