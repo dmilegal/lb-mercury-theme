@@ -1,17 +1,23 @@
 <?php
+
 /**
  * Collect data to output in JSON-LD.
  *
  * @param array  $unsigned An array of data to output in json-ld.
  * @param JsonLD $unsigned JsonLD instance.
  */
-add_filter( 'rank_math/json_ld', function( $data, $jsonld ) {
-  $author_id = get_post_field( 'post_author', $jsonld->ID );
+add_filter('rank_math/json_ld', function ($data, $jsonld) {
+
+  $object_id = getLdObjectId($jsonld);
+
+  if (!$object_id) return $data;
+
+  $author_id = get_post_field('post_author', $object_id);
 
   if (!$author_id || !isset($data['ProfilePage'])) return $data;
 
-  $jobTitle = esc_html( get_field( 'job_title', 'user_'. $author_id ) );
-  $description = esc_html( get_field ('short_biographical_info', 'user_'. $author_id ) );
+  $jobTitle = esc_html(get_field('job_title', 'user_' . $author_id));
+  $description = esc_html(get_field('short_biographical_info', 'user_' . $author_id));
 
   if ($jobTitle)
     $data['ProfilePage']["jobTitle"] = $jobTitle;
@@ -20,5 +26,12 @@ add_filter( 'rank_math/json_ld', function( $data, $jsonld ) {
     $data['ProfilePage']["description"] = $description;
 
 
-	return $data;
+  return $data;
 }, 99, 2);
+
+
+function getLdObjectId($jsonld)
+{
+  if (property_exists($jsonld, 'ID')) return $jsonld->ID;
+  elseif (property_exists($jsonld, 'post')) return $jsonld->post->ID;
+}
