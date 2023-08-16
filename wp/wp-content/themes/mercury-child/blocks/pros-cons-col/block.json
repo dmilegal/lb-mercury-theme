@@ -6,6 +6,7 @@
   "category": "formatting",
   "icon": "columns",
   "keywords": ["column"],
+  "parent": [ "acf/pros-cons" ],
   "acf": {
       "mode": "preview",
       "renderTemplate": "pros-cons-col.php"
