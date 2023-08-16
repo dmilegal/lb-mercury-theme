@@ -88,7 +88,7 @@
 	}
 ?>
 
-<script type="application/ld+json">
+<!--<script type="application/ld+json">
 	{
 		"@context": "http://schema.org/",
 		"@type": "Review",
@@ -111,7 +111,7 @@
 		"datePublished": "<?php echo get_the_date(); ?>",
 		"reviewBody": "<?php echo esc_html(get_the_excerpt()); ?>"
 	}
-</script>
+</script>-->
 
 <div class="space-single-organization space-style-2-organization relative">
 

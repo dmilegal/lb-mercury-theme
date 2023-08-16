@@ -16,13 +16,8 @@ if ( isset( $post->post_author ) ) {
     $user_description = get_the_author_meta( 'user_description', $post->post_author );
         
     // Get author's social media URL
-    $user_facebook = get_the_author_meta( 'facebook' );
-    $user_twitter = get_the_author_meta( 'twitter' );
-    $user_linkedin = get_the_author_meta( 'linkedin' );
-    $user_instagram = get_the_author_meta( 'instagram' );
-    $soc_links = array_filter([['facebook', $user_facebook], ['twitter', $user_twitter ? 'https://twitter.com/' . $user_twitter : ''], ['linkedin', $user_linkedin], ['instagram', $user_instagram]], fn($v) => $v[1]);
+    $soc_links = getUserSocLinks($post->post_author);
 
-        
     // Get link to the author archive page
     $user_posts = get_author_posts_url( get_the_author_meta( 'ID' , $post->post_author));
 

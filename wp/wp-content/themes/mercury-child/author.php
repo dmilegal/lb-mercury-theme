@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<script type="application/ld+json">
+<!--<script type="application/ld+json">
 {
 	"@context": "http://schema.org",
   	"@type": "Person",
@@ -19,7 +19,7 @@
   	}
 
 }
-</script>
+</script>-->
 
 <!-- Title Box Start -->
 

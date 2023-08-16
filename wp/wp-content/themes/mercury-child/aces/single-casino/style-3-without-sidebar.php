@@ -91,7 +91,7 @@
 	}
 ?>
 
-<script type="application/ld+json">
+<!--<script type="application/ld+json">
 	{
 		"@context": "http://schema.org/",
 		"@type": "Review",
@@ -114,7 +114,7 @@
 		"datePublished": "<?php echo get_the_date(); ?>",
 		"reviewBody": "<?php echo esc_html(get_the_excerpt()); ?>"
 	}
-</script>
+</script>-->
 
 <?php
 $src_background_desktop = wp_get_attachment_image_src($casino_background_image_id, 'mercury-2000-400');

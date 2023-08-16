@@ -1,4 +1,5 @@
 <?php
+require_once 'shared/shared.php';
 require_once 'settings/settings.php';
 require_once 'blocks/blocks.php';
 require_once 'inc/inc.php';
