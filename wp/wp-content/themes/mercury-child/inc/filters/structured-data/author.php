@@ -1,36 +1,51 @@
 <?php
 
+add_filter( 'wpseo_schema_person', 'schema_change_person', 11, 2 );
+
 /**
- * Collect data to output in JSON-LD.
+ * Changes the Yoast SEO Person schema.
  *
- * @param array  $unsigned An array of data to output in json-ld.
- * @param JsonLD $unsigned JsonLD instance.
+ * @param array             $data    The Schema Person data.
+ * @param Meta_Tags_Context $context Context value object.
+ *
+ * @return array $data The Schema Person data.
  */
-add_filter('rank_math/json_ld', function ($data, $jsonld) {
-  $author_id = is_singular() ? $jsonld->post->post_author : get_the_author_meta( 'ID' );
+function schema_change_person( $data, $context ) {
+  $user_id = 0;
 
-  if (!$author_id || !isset($data['ProfilePage'])) return $data;
+  if ( $context->indexable->object_type === 'post' ) {
+    $user_id = (int) $context->post->post_author;
+  }
 
-  $data['ProfilePage'] = mergeExistsProfile($data['ProfilePage'], $author_id);
+  if ( $context->indexable->object_type === 'user' ) {
+    $user_id = $context->indexable->object_id;
+  }
+
+  /**
+   * Filter: 'wpseo_schema_person_user_id' - Allows filtering of user ID used for person output.
+   *
+   * @api int|bool $user_id The user ID currently determined.
+   */
+  $user_id = apply_filters( 'wpseo_schema_person_user_id', $user_id );
+
+  if ( is_int( $user_id ) && $user_id > 0 ) {
+    return mergeExistsProfile($data, $user_id);
+
+  }
 
   return $data;
-}, 99, 2);
-
+}
 
 function mergeExistsProfile($exists_profile_schema, $profile_id) {
   $jobTitle = esc_html(get_field('job_title', 'user_' . $profile_id));
-  $description = esc_html(get_field('short_biographical_info', 'user_' . $profile_id));
-  $soc_links = getUserSocLinks($profile_id);
+  $short_description = esc_html(get_field('short_biographical_info', 'user_' . $profile_id));
   $alumni_of = esc_html( get_field( 'alumni_of', 'user_' . $profile_id ) );
 
   if ($jobTitle)
     $exists_profile_schema["jobTitle"] = $jobTitle;
 
-  if ($description)
-    $exists_profile_schema["description"] = $description;
-
-  if (count($soc_links))
-    $exists_profile_schema["sameAs"] = array_map(fn($v) => $v[1], $soc_links);
+  if ($short_description)
+    $exists_profile_schema["description"] = $short_description;
 
   if ($alumni_of)
     $exists_profile_schema["alumniOf"] = [
