@@ -4,7 +4,7 @@
 	if(!is_author())
 		echo do_shortcode( '[show_wpb_author_info_box]' );
 ?>
-<div class="space-footer box-100 relative">
+<div class="space-footer box-100 relative coronapp">
 	<?php if ( is_active_sidebar( 'footer-center-sidebar' ) ) { ?>
 	<div class="space-footer-top box-100 relative">
 		<div class="space-footer-ins relative">
