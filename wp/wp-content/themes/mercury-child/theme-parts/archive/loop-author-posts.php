@@ -33,7 +33,7 @@
 								<?php echo esc_html(wp_trim_words( get_the_excerpt(), 18, ' ...' )); ?>
 							</div>
 							<div class="space-archive-loop-item-meta relative">
-								<span class="read-more"><a href="<?php the_permalink() ?>" title="<?php esc_attr_e( 'Read more', 'mercury' ); ?>"><?php esc_html_e( 'Read more', 'mercury' ); ?> &raquo;</a></span>
+								<span class="read-more"><a href="<?php the_permalink() ?>" title="<?php esc_attr_e( 'Read more', 'mercury-child' ); ?>"><?php esc_html_e( 'Read more', 'mercury-child' ); ?> &raquo;</a></span>
 							</div>
 						</div>
 					</div>

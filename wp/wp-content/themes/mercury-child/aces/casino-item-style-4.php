@@ -36,7 +36,7 @@ if ($casino_button_title) {
 	if ( get_option( 'casinos_play_now_title') ) {
 		$button_title = esc_html( get_option( 'casinos_play_now_title') );
 	} else {
-		$button_title = esc_html__( 'Play Now', 'mercury' );
+		$button_title = esc_html__( 'Play Now', 'mercury-child' );
 	}
 }
 
@@ -49,7 +49,7 @@ if ($casino_external_link) {
 if ($organization_popup_title) {
 	$custom_popup_title = $organization_popup_title;
 } else {
-	$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury' );
+	$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury-child' );
 }
 
 if ($casino_permalink_button_title) {
@@ -58,7 +58,7 @@ if ($casino_permalink_button_title) {
 	if ( get_option( 'casinos_read_review_title') ) {
 		$permalink_button_title = esc_html( get_option( 'casinos_read_review_title') );
 	} else {
-		$permalink_button_title = esc_html__( 'Read Review', 'mercury' );
+		$permalink_button_title = esc_html__( 'Read Review', 'mercury-child' );
 	}
 }
 
@@ -117,7 +117,7 @@ $games_count = count($games);
 			<div class="space-organizations-3-archive-item-rating-ins box-100 text-center relative">
 				<?php if ($games_count) { ?>
 				<div class="space-organizations-3-archive-item-units relative">
-					<i class="fas fa-dice"></i> <span><?php echo esc_html( $games_count ); ?></span> <?php if ($games_count == 1) { echo esc_html__( 'game', 'mercury' ); } else { echo esc_html__( 'games', 'mercury' ); } ?>
+					<i class="fas fa-dice"></i> <span><?php echo esc_html( $games_count ); ?></span> <?php if ($games_count == 1) { echo esc_html__( 'game', 'mercury-child' ); } else { echo esc_html__( 'games', 'mercury-child' ); } ?>
 				</div>
 				<?php } ?>
 

@@ -52,3 +52,11 @@ add_shortcode('show_wpb_author_info_box', 'wpb_author_info_box');
 
 // Allow HTML in author bio section
 remove_filter('pre_user_description', 'wp_filter_kses');
+
+
+#set translations for child theme
+function mercury_child_setup() {
+    $path = get_stylesheet_directory().'/languages';
+    load_child_theme_textdomain( 'mercury-child', $path );
+}
+add_action( 'after_setup_theme', 'mercury_child_setup' );

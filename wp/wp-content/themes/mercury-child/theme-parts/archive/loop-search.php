@@ -29,7 +29,7 @@
 							<div class="space-archive-loop-item-meta relative">
 								
 								<?php if( !get_theme_mod('mercury_date_display') ) { ?>
-									<span><i class="far fa-clock"></i> <?php if( get_theme_mod('mercury_time_ago_format') ){ ?><?php printf( esc_html_x( '%s ago', '%s = human-readable time difference', 'mercury' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) ); ?><?php } else { echo get_the_date(); } ?></span>
+									<span><i class="far fa-clock"></i> <?php if( get_theme_mod('mercury_time_ago_format') ){ ?><?php printf( esc_html_x( '%s ago', '%s = human-readable time difference', 'mercury-child' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) ); ?><?php } else { echo get_the_date(); } ?></span>
 								<?php } ?>
 
 								<?php if ( comments_open() ) { ?>
@@ -44,7 +44,7 @@
 								<?php echo esc_html(wp_trim_words( get_the_excerpt(), 18, ' ...' )); ?>
 							</div>
 							<div class="space-archive-loop-item-meta relative">
-								<span class="read-more"><a href="<?php the_permalink() ?>" title="<?php esc_attr_e( 'Read more', 'mercury' ); ?>"><?php esc_html_e( 'Read more', 'mercury' ); ?> &raquo;</a></span>
+								<span class="read-more"><a href="<?php the_permalink() ?>" title="<?php esc_attr_e( 'Read more', 'mercury-child' ); ?>"><?php esc_html_e( 'Read more', 'mercury-child' ); ?> &raquo;</a></span>
 							</div>
 						</div>
 					</div>

@@ -81,8 +81,8 @@ get_header(); ?>
 				<?php
 					the_posts_pagination( array(
 						'end_size' => 2,
-						'prev_text'    => esc_html__('&laquo;', 'mercury'),
-						'next_text'    => esc_html__('&raquo;', 'mercury'),
+						'prev_text'    => esc_html__('&laquo;', 'mercury-child'),
+						'next_text'    => esc_html__('&raquo;', 'mercury-child'),
 					));
 				?>
 
@@ -94,9 +94,9 @@ get_header(); ?>
 
 				<div class="space-page-content-wrap relative">
 					<div class="space-page-content page-template box-100 relative">
-						<h2><?php esc_html_e( 'Posts not found', 'mercury' ); ?></h2>
+						<h2><?php esc_html_e( 'Posts not found', 'mercury-child' ); ?></h2>
 						<p>
-							<?php esc_html_e( 'No posts has been found. Please return to the homepage.', 'mercury' ); ?>
+							<?php esc_html_e( 'No posts has been found. Please return to the homepage.', 'mercury-child' ); ?>
 						</p>
 					</div>
 				</div>

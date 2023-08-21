@@ -5,7 +5,7 @@
 <div class="space-title-box box-100 relative">
 	<div class="space-title-box-ins space-index-page space-page-wrapper relative">
 		<div class="space-title-box-h1 relative">
-			<h1><?php esc_html_e( 'Noticias', 'mercury' ); ?></h1>
+			<h1><?php esc_html_e( 'Noticias', 'mercury-child' ); ?></h1>
 		</div>
 
 		<!-- Breadcrumbs Start -->
@@ -43,8 +43,8 @@
 				<?php
 					the_posts_pagination( array(
 						'end_size' => 2,
-						'prev_text'    => esc_html__('&laquo;', 'mercury'),
-						'next_text'    => esc_html__('&raquo;', 'mercury'),
+						'prev_text'    => esc_html__('&laquo;', 'mercury-child'),
+						'next_text'    => esc_html__('&raquo;', 'mercury-child'),
 					));
 				?>
 
@@ -56,9 +56,9 @@
 
 				<div class="space-page-content-wrap relative">
 					<div class="space-page-content page-template box-100 relative">
-						<h2><?php esc_html_e( 'News not found', 'mercury' ); ?></h2>
+						<h2><?php esc_html_e( 'News not found', 'mercury-child' ); ?></h2>
 						<p>
-							<?php esc_html_e( 'No news has been found. Please return to the homepage.', 'mercury' ); ?>
+							<?php esc_html_e( 'No news has been found. Please return to the homepage.', 'mercury-child' ); ?>
 						</p>
 					</div>
 				</div>
