@@ -39,7 +39,7 @@ remove_action('wp_head', 'feed_links', 2);
 function post_types_author_archives($query)
 {
     if ($query->is_author)
-        $query->set('post_type', array('casino', 'post', 'page', 'news'));
+        $query->set('post_type', array('post', 'page', 'news'));
     remove_action('pre_get_posts', 'custom_post_author_archive');
 }
 add_action('pre_get_posts', 'post_types_author_archives');
