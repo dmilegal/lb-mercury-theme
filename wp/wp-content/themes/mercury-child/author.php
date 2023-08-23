@@ -4,27 +4,6 @@ $soc_links = getUserSocLinks($post->post_author);
 
 get_header(); ?>
 
-<!--<script type="application/ld+json">
-{
-	"@context": "http://schema.org",
-  	"@type": "Person",
-  	"name": "<?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?>",
-  	"image": "<?php echo esc_url( get_avatar_url( get_the_author_meta('user_email'), ['size' => '200'] )); ?>",
-  	"jobTitle": "<?php echo esc_html( get_field( 'job_title', 'user_'.get_the_author_meta('ID') ) ); ?>",
-  	"description": "<?php echo esc_html( get_the_author_meta( 'description' ) ); ?>",
-  	"alumniOf": {
-    	"@type": "CollegeOrUniversity",
-    	"name": "<?php echo esc_html( get_field( 'alumni_of', 'user_'.get_the_author_meta('ID') ) ); ?>"
-  	},
-  	"knowsAbout": [<?php echo get_field( 'knows_about', 'user_'.get_the_author_meta('ID') ); ?>],
-  	"worksFor": {
-    	"@type": "Organization",
-    	"name": "Top Gambling Platforms Online - Best Ratings and Reviews"
-  	}
-
-}
-</script>-->
-
 <!-- Title Box Start -->
 
 <div class="space-archive-title-box box-100 relative">

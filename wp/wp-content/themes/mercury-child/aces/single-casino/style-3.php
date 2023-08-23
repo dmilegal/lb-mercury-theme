@@ -89,31 +89,6 @@
 	}
 ?>
 
-<!--<script type="application/ld+json">
-	{
-		"@context": "http://schema.org/",
-		"@type": "Review",
-		"itemReviewed": {
-		    "@type": "Organization",
-		    "name": "<?php the_title(); ?>",
-		    "image": "<?php $src_schema = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); echo esc_url($src_schema[0]); ?>"
-		},
-		"author": {
-		    "@type": "Person",
-		    "name": "<?php echo esc_attr(get_the_author()); ?>",
-		    "url": "<?php echo esc_url( $author_schema_url ); ?>"
-		},
-		"reviewRating": {
-		    "@type": "Rating",
-		    "ratingValue": "<?php echo esc_attr($casino_overall_rating); ?>",
-		    "bestRating": "<?php echo esc_attr($casino_rating_stars_number_value); ?>",
-		    "worstRating": "1"
-		},
-		"datePublished": "<?php echo get_the_date(); ?>",
-		"reviewBody": "<?php echo esc_html(get_the_excerpt()); ?>"
-	}
-</script>-->
-
 <?php
 $src_background_desktop = wp_get_attachment_image_src($casino_background_image_id, 'mercury-2000-400');
 $src_background_tablet = wp_get_attachment_image_src($casino_background_image_id, 'mercury-767-767');
