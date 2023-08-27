@@ -16,7 +16,7 @@ get_header(); ?>
 				if (count($soc_links)) {
 					echo '<p class="author-socials">';
 					foreach ($soc_links as $link) {
-						echo '<a href="'.$link[1] .'" rel="nofollow" target="_blank"><i class="fab fa-'. $link[0] .'"></i></a>';
+						echo '<a href="'.$link[1] .'" title="'. esc_attr__( $link[0], 'mercury-child' ) . '" rel="nofollow" target="_blank"><i class="fab fa-'. $link[0] .'"></i></a>';
 					}
 					echo '</p>';
 				}
