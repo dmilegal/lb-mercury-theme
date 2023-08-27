@@ -4,6 +4,8 @@
 	$country = $record->country->name;
 	$flag = $record->extra->flag;
 
+	$bonus_fields = get_field('bonus_fields');
+
 	$casino_allowed_html = array(
 		'a' => array(
 			'href' => true,
@@ -55,14 +57,14 @@
 		if ( get_option( 'casinos_play_now_title') ) {
 			$button_title = esc_html( get_option( 'casinos_play_now_title') );
 		} else {
-			$button_title = esc_html__( 'Play Now', 'mercury-child' );
+			$button_title = esc_html__( 'Play Now', 'mercury' );
 		}
 	}
 
 	if ($organization_popup_title) {
 		$custom_popup_title = $organization_popup_title;
 	} else {
-		$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury-child' );
+		$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury' );
 	}
 
 	if ( get_option( 'aces_rating_stars_number' ) ) {
@@ -90,6 +92,31 @@
 		$author_schema_url = esc_url( home_url( '/' ));
 	}
 ?>
+
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org/",
+		"@type": "Review",
+		"itemReviewed": {
+		    "@type": "Organization",
+		    "name": "<?php the_title(); ?>",
+		    "image": "<?php $src_schema = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); echo esc_url($src_schema[0]); ?>"
+		},
+		"author": {
+		    "@type": "Person",
+		    "name": "<?php echo esc_attr(get_the_author()); ?>",
+		    "url": "<?php echo esc_url( $author_schema_url ); ?>"
+		},
+		"reviewRating": {
+		    "@type": "Rating",
+		    "ratingValue": "<?php echo esc_attr($casino_overall_rating); ?>",
+		    "bestRating": "<?php echo esc_attr($casino_rating_stars_number_value); ?>",
+		    "worstRating": "1"
+		},
+		"datePublished": "<?php echo get_the_date(); ?>",
+		"reviewBody": "<?php echo esc_html(get_the_excerpt()); ?>"
+	}
+</script>
 
 <?php
 $src_background_desktop = wp_get_attachment_image_src($casino_background_image_id, 'mercury-2000-400');
@@ -147,12 +174,25 @@ if ($src_background_desktop) {
 						<div class="space-style-3-organization-header-title relative">
 							<div class="space-style-3-organization-header-title-box relative">
 								<div class="space-organization-header-title-box-ins box-100 relative">
+									<div class="title-wrap">
+										<!-- Title Start -->
 
-									<!-- Title Start -->
+										<h1><?php the_title(); ?></h1>
 
-									<h1><?php the_title(); ?></h1>
+											<!-- Title End -->
 
-									<!-- Title End -->
+										<div class="space-organizations-7-archive-item-badges">
+											<?php if($bonus_fields && $bonus_fields['trusted']) { ?>
+												<div class="trust"><?php esc_html_e('Trusted', 'aces'); ?></div>
+											<? } 
+											if($bonus_fields && $bonus_fields['best_for']) { ?>
+												<div class="best">
+													<img role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/13.1.0/svg/1f525.svg">
+													<?php echo esc_html($bonus_fields['best_for']); ?>
+												</div>
+											<?php } ?>
+										</div>
+									</div>
 
 									<?php if ($casino_short_desc) { ?>
 
@@ -257,6 +297,40 @@ if ($src_background_desktop) {
 
 	<!-- Organization Header End -->
 
+	<?php if ($bonus_fields) { ?>
+		<div class="bonus-content">
+			<?php if($bonus_fields['bonus_title']) { ?>
+				<div class="bonus-title">
+					<strong><?php echo ($bonus_fields['bonus_title']); ?></strong>
+				</div>
+			<?php } ?>
+
+			<div class="bonus-features">
+			<div><i class="fas fa-user"></i><strong><?php esc_html_e('For whom:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['for_whom'], 'aces'); ?></div>
+				<div><i class="fas fa-dice"></i><strong><?php esc_html_e('Form:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['form'], 'aces'); ?></div>
+				<div><i class="fas fa-percent"></i><strong><?php esc_html_e('Type:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['type'], 'aces'); ?></div>
+				<div><i class="fas fa-clipboard"></i><strong><?php esc_html_e('Term:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['term'], 'aces'); ?></div>
+				<div><i class="fas fa-thumbs-up"></i><strong><?php esc_html_e('Best bonus:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['best_bonus'], 'aces'); ?></div>
+				<div><i class="fas fa-wallet"></i><strong><?php esc_html_e('Cashback:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['cashback'], 'aces'); ?></div>
+				<div><i class="fas fa-gift"></i><strong><?php esc_html_e('Birthday bonus:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['birthday_bonus'], 'aces'); ?></div>
+			</div>
+
+			<div class="space-organizations-7-archive-item-button-two bonus-button">
+				<?php if(empty($casino_external_link) || $casino_external_link == '#') : ?>
+						<a href="#" onclick="noRefPopup(event)" title="<?php echo esc_attr( $button_title ); ?>"><?php echo esc_html( $button_title ); ?></a>
+				<?php else: ?>
+						<a href="<?php echo esc_attr($casino_external_link); ?>" title="<?php echo esc_attr( $button_title ); ?>" <?php if ($external_link) { ?>target="_blank" rel="nofollow"<?php } ?>><?php echo esc_html( $button_title ); ?></a>
+				<?php endif; ?>
+			</div>
+
+			<?php if ($bonus_fields['bonus_description']) { ?>
+				<div class="bonus-desc">
+					<?php echo $bonus_fields['bonus_description']; ?>
+				</div>
+			<?php } ?>
+		</div>
+	<?php } ?>
+
 	<!-- Breadcrumbs Start -->
 
 	<?php get_template_part( '/theme-parts/breadcrumbs' ); ?>
@@ -285,7 +359,7 @@ if ($src_background_desktop) {
 										<?php
 											the_content();
 											wp_link_pages( array(
-												'before'      => '<div class="clear"></div><nav class="navigation pagination-post">' . esc_html__( 'Pages:', 'mercury-child' ),
+												'before'      => '<div class="clear"></div><nav class="navigation pagination-post">' . esc_html__( 'Pages:', 'mercury' ),
 												'after'       => '</nav>',
 												'link_before' => '<span class="page-number">',
 												'link_after'  => '</span>',
@@ -304,7 +378,7 @@ if ($src_background_desktop) {
 
 									<div class="space-organization-details box-100 relative">
 										<div class="space-organization-details-title box-100 relative">
-											<h3><?php the_title(); ?> <?php esc_html_e( 'Details', 'mercury-child' ); ?></h3>
+											<h3><?php the_title(); ?> <?php esc_html_e( 'Details', 'mercury' ); ?></h3>
 										</div>
 
 										<?php if ($casino_software) { ?>
@@ -316,7 +390,7 @@ if ($src_background_desktop) {
 												<span><i class="fas fa-puzzle-piece"></i></span> <?php if ( get_option( 'casinos_software_title') ) { ?>
 														<?php echo esc_html( get_option( 'casinos_software_title') ); ?>
 													<?php } else { ?>
-														<?php esc_html_e( 'Software', 'mercury-child' ); ?>
+														<?php esc_html_e( 'Software', 'mercury' ); ?>
 													<?php } ?>
 											</div>
 											<div class="space-organization-details-item-links box-66 relative">
@@ -346,7 +420,7 @@ if ($src_background_desktop) {
 												<span><i class="fas fa-credit-card"></i></span> <?php if ( get_option( 'casinos_deposit_method_title') ) { ?>
 														<?php echo esc_html( get_option( 'casinos_deposit_method_title') ); ?>
 													<?php } else { ?>
-														<?php esc_html_e( 'Deposit Methods', 'mercury-child' ); ?>
+														<?php esc_html_e( 'Deposit Methods', 'mercury' ); ?>
 													<?php } ?>
 											</div>
 											<div class="space-organization-details-item-links box-66 relative">
@@ -376,7 +450,7 @@ if ($src_background_desktop) {
 												<span><i class="fas fa-wallet"></i></span> <?php if ( get_option( 'casinos_withdrawal_method_title') ) { ?>
 														<?php echo esc_html( get_option( 'casinos_withdrawal_method_title') ); ?>
 													<?php } else { ?>
-														<?php esc_html_e( 'Withdrawal Methods', 'mercury-child' ); ?>
+														<?php esc_html_e( 'Withdrawal Methods', 'mercury' ); ?>
 													<?php } ?>
 											</div>
 											<div class="space-organization-details-item-links box-66 relative">
@@ -406,7 +480,7 @@ if ($src_background_desktop) {
 												<span><i class="fas fa-coins"></i></span> <?php if ( get_option( 'casinos_withdrawal_limit_title') ) { ?>
 														<?php echo esc_html( get_option( 'casinos_withdrawal_limit_title') ); ?>
 													<?php } else { ?>
-														<?php esc_html_e( 'Withdrawal Limits', 'mercury-child' ); ?>
+														<?php esc_html_e( 'Withdrawal Limits', 'mercury' ); ?>
 													<?php } ?>
 											</div>
 											<div class="space-organization-details-item-links box-66 relative">
@@ -436,7 +510,7 @@ if ($src_background_desktop) {
 												<span><i class="fas fa-flag"></i></span> <?php if ( get_option( 'casinos_restricted_countries_title') ) { ?>
 														<?php echo esc_html( get_option( 'casinos_restricted_countries_title') ); ?>
 													<?php } else { ?>
-														<?php esc_html_e( 'Restricted Countries', 'mercury-child' ); ?>
+														<?php esc_html_e( 'Restricted Countries', 'mercury' ); ?>
 													<?php } ?>
 											</div>
 											<div class="space-organization-details-item-links box-66 relative">
@@ -466,7 +540,7 @@ if ($src_background_desktop) {
 												<span><i class="fas fa-file-alt"></i></span> <?php if ( get_option( 'casinos_licences_title') ) { ?>
 														<?php echo esc_html( get_option( 'casinos_licences_title') ); ?>
 													<?php } else { ?>
-														<?php esc_html_e( 'Licences', 'mercury-child' ); ?>
+														<?php esc_html_e( 'Licences', 'mercury' ); ?>
 													<?php } ?>
 											</div>
 											<div class="space-organization-details-item-links box-66 relative">
@@ -496,7 +570,7 @@ if ($src_background_desktop) {
 												<span><i class="fas fa-globe"></i></span> <?php if ( get_option( 'casinos_languages_title') ) { ?>
 														<?php echo esc_html( get_option( 'casinos_languages_title') ); ?>
 													<?php } else { ?>
-														<?php esc_html_e( 'Languages', 'mercury-child' ); ?>
+														<?php esc_html_e( 'Languages', 'mercury' ); ?>
 													<?php } ?>
 											</div>
 											<div class="space-organization-details-item-links box-66 relative">
@@ -526,7 +600,7 @@ if ($src_background_desktop) {
 												<span><i class="fas fa-dollar-sign"></i></span> <?php if ( get_option( 'casinos_currencies_title') ) { ?>
 														<?php echo esc_html( get_option( 'casinos_currencies_title') ); ?>
 													<?php } else { ?>
-														<?php esc_html_e( 'Currencies', 'mercury-child' ); ?>
+														<?php esc_html_e( 'Currencies', 'mercury' ); ?>
 													<?php } ?>
 											</div>
 											<div class="space-organization-details-item-links box-66 relative">
@@ -556,7 +630,7 @@ if ($src_background_desktop) {
 												<span><i class="fas fa-desktop"></i></span> <?php if ( get_option( 'casinos_devices_title') ) { ?>
 														<?php echo esc_html( get_option( 'casinos_devices_title') ); ?>
 													<?php } else { ?>
-														<?php esc_html_e( 'Devices', 'mercury-child' ); ?>
+														<?php esc_html_e( 'Devices', 'mercury' ); ?>
 													<?php } ?>
 											</div>
 											<div class="space-organization-details-item-links box-66 relative">
@@ -586,7 +660,7 @@ if ($src_background_desktop) {
 												<span><i class="fas fa-building"></i></span> <?php if ( get_option( 'casinos_owner_title') ) { ?>
 														<?php echo esc_html( get_option( 'casinos_owner_title') ); ?>
 													<?php } else { ?>
-														<?php esc_html_e( 'Owner', 'mercury-child' ); ?>
+														<?php esc_html_e( 'Owner', 'mercury' ); ?>
 													<?php } ?>
 											</div>
 											<div class="space-organization-details-item-links box-66 relative">
@@ -618,7 +692,7 @@ if ($src_background_desktop) {
 												<span><i class="fas fa-glass-cheers"></i></span> <?php if ( get_option( 'casinos_est_title') ) { ?>
 														<?php echo esc_html( get_option( 'casinos_est_title') ); ?>
 													<?php } else { ?>
-														<?php esc_html_e( 'Established', 'mercury-child' ); ?>
+														<?php esc_html_e( 'Established', 'mercury' ); ?>
 													<?php } ?>
 											</div>
 											<div class="space-organization-details-item-links box-66 relative">
@@ -717,7 +791,7 @@ if ($src_background_desktop) {
 																if ( $rating_1_title ) {
 																	echo esc_html($rating_1_title);
 																} else {
-																	esc_html_e( 'Trust & Fairness', 'mercury-child' );
+																	esc_html_e( 'Trust & Fairness', 'mercury' );
 																} ?>
 															</div>
 														</div>
@@ -734,7 +808,7 @@ if ($src_background_desktop) {
 																if ( $rating_2_title ) {
 																	echo esc_html($rating_2_title);
 																} else {
-																	esc_html_e( 'Games & Software', 'mercury-child' );
+																	esc_html_e( 'Games & Software', 'mercury' );
 																} ?>
 															</div>
 														</div>
@@ -751,7 +825,7 @@ if ($src_background_desktop) {
 																if ( $rating_3_title ) {
 																	echo esc_html($rating_3_title);
 																} else {
-																	esc_html_e( 'Bonuses & Promotions', 'mercury-child' );
+																	esc_html_e( 'Bonuses & Promotions', 'mercury' );
 																} ?>
 															</div>
 														</div>
@@ -768,7 +842,7 @@ if ($src_background_desktop) {
 																if ( $rating_4_title ) {
 																	echo esc_html($rating_4_title);
 																} else {
-																	esc_html_e( 'Customer Support', 'mercury-child' );
+																	esc_html_e( 'Customer Support', 'mercury' );
 																} ?>
 															</div>
 														</div>
@@ -785,7 +859,7 @@ if ($src_background_desktop) {
 															if ( $rating_overall_title ) {
 																echo esc_html($rating_overall_title);
 															} else {
-																esc_html_e( 'Overall Rating', 'mercury-child' );
+																esc_html_e( 'Overall Rating', 'mercury' );
 															} ?>
 														</span>
 													</div>
@@ -838,7 +912,7 @@ if ($src_background_desktop) {
 										<?php the_title(); ?> <?php if ( get_option( 'games_section_name') ) {
 											esc_html_e( get_option( 'games_section_name') );
 										} else {
-											esc_html_e( 'Games', 'mercury-child' );
+											esc_html_e( 'Games', 'mercury' );
 										} ?>
 									</span>
 								</div>
@@ -895,7 +969,7 @@ if ($src_background_desktop) {
 										<?php the_title(); ?> <?php if ( get_option( 'bonuses_section_name') ) {
 											esc_html_e( get_option( 'bonuses_section_name') );
 										} else {
-											esc_html_e( 'Bonuses', 'mercury-child' );
+											esc_html_e( 'Bonuses', 'mercury' );
 										} ?>
 									</span>
 								</div>

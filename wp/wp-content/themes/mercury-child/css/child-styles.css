@@ -1,0 +1,602 @@
+@import url("../../mercury/style.css");
+
+/*.space-organizations-7-archive-item-buttons-left {display:none}
+.space-organizations-7-archive-item-rating {
+		display: none;
+}
+.space-style-3-organization-header-rating {
+    display: none;
+}*/
+
+.box-30 {
+    width: 30%;
+}
+
+.box-35 {
+    width: 35%;
+}
+
+.box-45 {
+    width: 45%;
+}
+
+.space-footer-top {display:none}
+
+.space-header-menu ul.main-menu li ul.sub-menu {width:280px}
+
+.space-organization-style-2-calltoaction-rating {
+    display: none;
+}
+
+.space-organization-float-bar-rating {
+    display: none;
+}
+
+.space-organizations-7-archive-item-logo-title-wrap {
+    display: flex;
+    flex-direction: column;
+}
+.space-style-3-organization-header-title-box .space-header-accepted-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    line-height: inherit;
+}
+.page_header_lang {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+}
+.page_header_lang:after {
+    margin-left: -3px;
+}
+.page_header_lang #btn_lang_popup {
+    color: #fff;
+}
+.page_header_lang_popup {
+    top: 42px;
+    min-width: 200px;
+}
+.wpml-ls-legacy-list-vertical a {
+    color: #000;
+}
+.wpml-ls-current-language a, .wpml-ls-legacy-list-vertical a:hover {
+    color: #e84393;
+}
+
+#noRefPopup .popup-content .referral-title a {
+    color: #151515;
+    text-decoration: none;
+}
+
+#noRefPopup .popup-content .referral-title a:hover {
+    text-decoration: underline;
+}
+
+#noRefPopup .popup-content .referral-link a {
+    display: inline-block;
+    padding: 13px 25px;
+    margin: 0 0 5px;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.25em;
+    text-decoration: none;
+    border-radius: 23px;
+    color: #ffffff;
+    background-color: #2ecc71;
+    box-shadow: 0px 5px 15px 0px rgba(46,204,113, 0.55);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#noRefPopup .popup-content .referral-link a:hover {
+    box-shadow: 0px 5px 15px 0px rgba(46,204,113, 0) !important;
+}
+
+form.wpcf7-form input[type="submit"] {
+    background-color: #e84393;
+}
+@media screen and (max-width: 479px) {
+	.space-header-logo {
+        width: 60%;
+	}
+	.space-header-menu {
+        width: 40%;
+	}
+	.page_header_lang {
+    	position: absolute;
+    	top: 25px;
+    	right: 95px;
+	}
+}
+
+@media (max-width: 767px) {
+	.page_header_lang:after {
+        margin-left: 5px;
+	}
+	.page_header_lang_popup {
+        right: -80px;
+	}
+}
+
+/* Author block */
+.author-bio-section {
+    padding: 0 45px 45px;
+}
+.author-image {
+    display: flex;
+    padding: 10px 0;
+}
+.author-image img {
+    border-radius: 50%;
+}
+.author-socials {
+    display: flex;
+    gap: 8px;
+}
+.author-socials a,
+.author-links a {
+    color: #e84393
+}
+.author-description {
+    padding: 10px 0;
+}
+.author-bio-section .space-page-content-excerpt {
+    margin: 0;
+}
+.author .space-archive-loop-item-meta span.read-more a,
+.author  .space-archive-loop-item-title a {
+    color: #e84393 !important;
+}
+.author .space-archive-loop-item-title-box-ins {
+    margin: 0 0 0 15px;
+}
+@media (max-width: 767px) {
+    .author .author-bio-section {
+        padding: 0 15px;
+    }
+}
+/* End Author block */
+
+/* Footer disclaimer */
+.footer-disclaimer {
+    padding: 15px 0;
+    color: #c7c7c7;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.footer-disclaimer strong {
+    font-weight: 700;
+    color: #e84393;
+}
+/* End Footer disclaimer */
+
+/* Footer logos */
+.footer-logos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 5px;
+}
+.footer-logos .logo {
+    display: flex;
+    min-width: 0;
+}
+.footer-logos .logo img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7491%) hue-rotate(306deg) brightness(105%) contrast(104%);
+    opacity: 0.4;
+}
+@media (max-width: 1200px) {
+    .footer-logos {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .footer-logos {
+        justify-content: center;
+        padding: 20px 0;
+        gap: 20px;
+    }
+    .footer-logos .logo {
+        min-width: calc(50% - 20px);
+    }
+}
+/* End Footer logos */
+
+/* Blog */
+.blog-description {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 0 0 15px;
+}
+.blog-description ul {
+    list-style-type: inheri;
+    padding: inherit;
+    margin: inherit;
+    line-height: inherit;
+}
+.blog .space-archive-loop-item-title-box-ins,
+.archive .space-archive-loop-item-title-box-ins {
+    margin: 0 15px 0;
+}
+.archive .space-single-aces-breadcrumbs {
+    padding: 15px 0 0;
+}
+.archive .space-single-aces-breadcrumbs .space-breadcrumbs {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.single .go-back {
+    display: inline-flex;
+    padding: 10px 25px;
+    background-color: #e84393;
+    color: #fff;
+    border-radius: 5px;
+}
+.single .go-back:hover {
+    background-color: #6c5ce7
+}
+.related-carousel {
+    padding: 0 15px;
+}
+.related-carousel .owl-item img {
+    height: 200px;
+    object-fit: cover;
+}
+.related-carousel .owl-nav button.owl-next,
+.related-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    top: 100px;
+    background-color: #e84393 !important;
+    color: #fff;
+    display: flex;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+}
+.related-carousel .owl-nav button.owl-next:hover,
+.related-carousel .owl-nav button.owl-prev:hover {
+    background-color: #6c5ce7 !important;
+}
+.related-carousel .owl-nav button span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+.related-carousel .owl-nav button.owl-prev {
+    left: 30px;
+}
+.related-carousel .owl-nav button.owl-next {
+    right: 0;
+}
+@media (max-width: 767px) {
+    .blog-description {
+        padding: 35px 15px 15px;
+    }
+}
+/* End Blog */
+
+/* Casinos list */
+.space-organizations-7-archive-item-ins-pd {
+    display: flex;
+    align-items: center;
+}
+
+.space-organizations-7-archive-item-bonus {
+    max-width: 220px;
+    width: 100%;
+    background-color: #389d29;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.space-organizations-7-archive-item-bonus p {
+    padding: 0;
+    line-height: 1.4;
+}
+
+.space-organizations-7-archive-item-bonus strong {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.space-organizations-7-archive-item-central > .space-organizations-7-archive-item-ins-pd {
+    padding: 20px 0 20px 30px;
+}
+
+.space-organizations-7-archive-item-central ul {
+    padding: 0 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.space-organizations-7-archive-item-central ul li {
+    list-style: none;
+    font-weight: 400;
+    word-wrap: break-word;
+    padding: 0;
+}
+
+.space-organizations-7-archive-item-central ul li::before {
+    content: "+";
+    font-size: 18px;
+    color: #389d29;
+    margin-right: 10px;
+}
+
+.space-organizations-7-archive-item-terms strong {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.6em;
+    color: #4D4D4D;
+}
+
+.space-organizations-7-archive-item-left {
+    flex-direction: column;
+}
+
+.space-organizations-7-archive-item-badges {
+    display: flex;
+    gap: 5px;
+    padding: 0 0 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.space-organizations-7-archive-item-badges div {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 0px 15px;
+    border-radius: 100px;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    background: #edeff4;
+}
+
+.space-organizations-7-archive-item-badges div.trust {
+    background: #ffd32a;
+}
+
+.space-organizations-7-archive-item-buttons-right {
+    display: flex;
+    align-items: center;
+}
+
+.space-organizations-7-archive-item-button-two {
+    padding-right: 20px;
+}
+
+.space-organizations-7-archive-item-buttons-right .bonus-more.rotate {
+    transform: rotate(180deg);
+    transform-origin: center;
+}
+
+.space-organizations-7-archive-item-buttons-right .bonus-more:hover {
+    color: #2ecc71;
+}
+
+.space-organizations-7-archive-item-bg.no-radius {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.space-organizations-7-archive-item .bonus-content {
+    display: flex;
+    gap: 50px;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-top: 1px solid #cfcfcf;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.space-organizations-7-archive-item .bonus-desc {
+    flex: 0 0 50%;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.space-organizations-7-archive-item .bonus-desc p {
+    padding: 0;
+}
+
+.space-organizations-7-archive-item .bonus-content.hide {
+    display: none;
+}
+
+.space-organizations-7-archive-item .bonus-features {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: baseline;
+    gap: 0 30px;
+}
+
+.space-organizations-7-archive-item .bonus-features div {
+    display: flex;
+    align-items: baseline;
+    flex: 0 0 calc(50% - 30px);
+    font-size: 14px;
+}
+
+.space-organizations-7-archive-item .bonus-features.no-desc div {
+    flex: 0 0 22%;
+}
+
+.space-organizations-7-archive-item .bonus-features div strong {
+    padding-right: 5px;
+}
+
+.space-organizations-7-archive-item .bonus-features div i {
+    color: #2ecc71;
+    padding-right: 5px;
+    flex: 0 0 25px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .space-organizations-7-archive-item-bonus {
+		max-width: 100%;
+		margin: 15px 0 20px;
+	}
+	.space-organizations-7-archive-item-central > .space-organizations-7-archive-item-ins-pd {
+		padding: 20px 30px;
+    }
+	.space-organizations-7-archive-item-central .space-organizations-7-archive-item-ins-pd {
+		flex-wrap: wrap;
+	}
+	.space-organizations-7-archive-item .bonus-content {
+        flex-wrap: wrap;
+        gap: 15px;
+	}
+	.space-organizations-7-archive-item .bonus-desc {
+        flex: 0 0 100%;
+	}
+	.space-organizations-7-archive-item .bonus-features {
+        gap: 15px;
+	}
+	.space-organizations-7-archive-item .bonus-features div,
+    .space-organizations-7-archive-item .bonus-features.no-desc div {
+        flex: 0 0 100%;
+	}
+}
+/* End Casinos list */
+
+/* Single casino bonus block */
+.space-single-organization .bonus-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 30px;
+    background-color: #ecf0f1;
+    padding: 30px 45px;
+}
+.space-single-organization .bonus-title {
+    flex: 0 0 20%;
+    width: 100%;
+    background-color: #389d29;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.space-single-organization .bonus-title p {
+    padding: 0;
+    line-height: 1.4;
+}
+
+.space-single-organization .bonus-title strong {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.space-single-organization .bonus-desc {
+    flex: 0 0 100%;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.space-single-organization .bonus-desc p {
+    padding: 0;
+}
+.space-single-organization .bonus-features {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 calc(65% - 70px);
+    flex-grow: 1;
+    align-content: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.space-single-organization .bonus-features div {
+    display: flex;
+    align-items: baseline;
+    flex: 0 0 calc(33% - 20px);
+    font-size: 14px;
+}
+
+.space-single-organization .bonus-features div strong {
+    padding-right: 5px;
+}
+
+.space-single-organization .bonus-features div i {
+    color: #2ecc71;
+    padding-right: 5px;
+    flex: 0 0 25px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.space-style-3-organization-header-short-desc p {
+    line-height: 1.4;
+}
+.space-single-organization .space-organizations-7-archive-item-button-two {
+    flex: 0 0 calc(15% - 30px);
+padding-right: 0;
+}
+.space-single-organization .space-organizations-7-archive-item-button-two a {
+display: block;
+text-align: center;
+}
+.space-single-organization .title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.space-single-organization .space-organizations-7-archive-item-badges {
+    padding: 0;
+}
+.space-single-organization .space-organizations-7-archive-item-badges div {
+    padding: 4px 15px;
+}
+@media (max-width: 767px) {
+    /* Single casino bonus block */
+	.space-single-organization .title-wrap {
+        flex-direction: column;
+    }
+    .space-single-organization .bonus-content {
+        flex-direction: column;
+        padding: 25px;
+    }
+    .space-single-organization .bonus-features {
+        gap: 20px;
+    }
+    .space-single-organization .bonus-features div {
+        flex: 0 0 100%;
+    }
+    .space-single-organization .space-organizations-7-archive-item-button-two a {
+        width: 180px;
+    }
+}
+/* End Single casino bonus block */
