@@ -600,3 +600,10 @@ text-align: center;
     }
 }
 /* End Single casino bonus block */
+
+/* Start Deskrop Header */
+.space-header-menu ul.main-menu li ul.sub-menu {
+    max-height: calc(85svh - 80px);
+    overflow: auto;
+}
+/* End Deskrop Header */
