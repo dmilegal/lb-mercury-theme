@@ -139,7 +139,7 @@ form.wpcf7-form input[type="submit"] {
 }
 .author-socials a,
 .author-links a {
-    color: #e84393
+    color: #f22613;
 }
 .author-description {
     padding: 10px 0;
@@ -149,7 +149,7 @@ form.wpcf7-form input[type="submit"] {
 }
 .author .space-archive-loop-item-meta span.read-more a,
 .author  .space-archive-loop-item-title a {
-    color: #e84393 !important;
+    color: #f22613 !important;
 }
 .author .space-archive-loop-item-title-box-ins {
     margin: 0 0 0 15px;
@@ -171,7 +171,7 @@ form.wpcf7-form input[type="submit"] {
 }
 .footer-disclaimer strong {
     font-weight: 700;
-    color: #e84393;
+    color: #f22613;
 }
 /* End Footer disclaimer */
 
@@ -236,12 +236,12 @@ form.wpcf7-form input[type="submit"] {
 .single .go-back {
     display: inline-flex;
     padding: 10px 25px;
-    background-color: #e84393;
+    background-color: #f22613;
     color: #fff;
     border-radius: 5px;
 }
 .single .go-back:hover {
-    background-color: #6c5ce7
+    background-color: #ffd32a;
 }
 .related-carousel {
     padding: 0 15px;
@@ -297,7 +297,7 @@ form.wpcf7-form input[type="submit"] {
 .space-organizations-7-archive-item-bonus {
     max-width: 220px;
     width: 100%;
-    background-color: #389d29;
+    background-color: #ffd32a;
     display: flex;
     flex-direction: column;
     font-weight: 700;
@@ -341,7 +341,7 @@ form.wpcf7-form input[type="submit"] {
 .space-organizations-7-archive-item-central ul li::before {
     content: "+";
     font-size: 18px;
-    color: #389d29;
+    color: #ffd32a;
     margin-right: 10px;
 }
 
@@ -450,7 +450,7 @@ form.wpcf7-form input[type="submit"] {
 }
 
 .space-organizations-7-archive-item .bonus-features div i {
-    color: #2ecc71;
+    color: #f22613;
     padding-right: 5px;
     flex: 0 0 25px;
     justify-content: center;
@@ -497,7 +497,7 @@ form.wpcf7-form input[type="submit"] {
 .space-single-organization .bonus-title {
     flex: 0 0 20%;
     width: 100%;
-    background-color: #389d29;
+    background-color: #ffd32a;
     display: flex;
     flex-direction: column;
     font-weight: 700;
@@ -551,7 +551,7 @@ form.wpcf7-form input[type="submit"] {
 }
 
 .space-single-organization .bonus-features div i {
-    color: #2ecc71;
+    color: #f22613;
     padding-right: 5px;
     flex: 0 0 25px;
     justify-content: center;
