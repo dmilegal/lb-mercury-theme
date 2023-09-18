@@ -378,6 +378,10 @@ form.wpcf7-form input[type="submit"] {
     background: #ffd32a;
 }
 
+.space-organizations-7-archive-item-badges div.compare {
+    padding: 0;
+}
+
 .space-organizations-7-archive-item-buttons-right {
     display: flex;
     align-items: center;
