@@ -37,7 +37,51 @@
 						if (has_nav_menu('main-menu')) {
 							wp_nav_menu( array( 'container' => 'ul', 'menu_class' => 'main-menu', 'theme_location' => 'main-menu', 'depth' => 3, 'fallback_cb' => '__return_empty_string' ) );
 						}
+						
+						global $wp;
+						$curr_url = home_url( $wp->request ) . '/';
+						$netw_html = '';
+						#Page loaded under Chili subsite
+						if(strpos($curr_url, '/cl/') !== false){
+							$netw_html = '<li class="netw__level1">
+								<span class="netw__actual">
+									<i class="fi fi-cl"></i>Chili
+									<i class="fas fa-caret-down fa-xs"></i>
+								</span>
+								<ul class="netw__sub">
+									<li class="netw__level2">
+										<a href="'.str_replace('/cl/','/',$curr_url).'">
+											<i class="fi fi-es"></i>España
+										</a>
+									</li>
+								</ul>
+							</li>';
+						}
+						#Page loaded under Spain subsite
+						else{
+							$netw_trgt = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'];
+							$netw_html = '<li class="netw__level1">
+								<span class="netw__actual">
+									<i class="fi fi-es"></i>España
+									<i class="fas fa-caret-down fa-xs"></i>
+								</span>
+								<ul class="netw__sub">
+									<li class="netw__level2">
+										<a href="'.$netw_trgt.'/cl'.$_SERVER['REQUEST_URI'].'">
+											<i class="fi fi-cl"></i>Chili
+										</a>
+									</li>
+								</ul>
+							</li>';
+						}
+
+						// echo '<pre style="display: none;">';
+						// echo $curr_url;
+						// print_r($_SERVER);
+						// echo '</pre>';
+
 					?>
+					<ul class="netw"><?= $netw_html ;?></ul>
 					<div class="space-header-search absolute">
 						<i class="fas fa-search desktop-search-button"></i>
 					</div>

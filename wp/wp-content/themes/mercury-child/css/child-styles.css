@@ -1035,3 +1035,78 @@ ul.main-menu > li.fair > a:before,
 .space-organizations-4-archive-item-button-one-ins a:hover {
     box-shadow: 0px 0px 15px 0px rgba(127,140,141, 0.55) !important;
 }
+
+
+
+
+
+
+
+/*Country switcher with flags multisite*/
+.fib {
+	background-size: contain;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+.fi {
+	background-size: contain;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	position: relative;
+	display: inline-block;
+	width: 1.33333333em;
+	line-height: 1em;
+}
+.fi:before {
+	content: "\00a0";
+}
+.fi-cl {
+	background-image: url('../img/flags/4x3/cl.svg');
+}
+.fi-es {
+	background-image: url('../img/flags/4x3/es.svg');
+}
+
+.netw{
+	color: #fff;
+}
+.netw a{
+	color: #000;
+}
+
+.netw{
+	display: block;
+	float: right;
+	position: relative;
+	right: 70px;
+	top: 20px;
+	font-size: 15px;
+	width: 120px;
+}
+.netw .fi{
+	margin-right: 5px;
+	font-size: 18px;
+}
+.netw__sub{
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 60px;
+	background-color: #fff;
+	padding: 10px;
+	color: #000;
+	border-radius: 5px;
+}
+.netw__level1{
+	position: relative;
+	padding: 10px;
+}
+.netw__level1:hover .netw__sub{
+	visibility: visible;
+	opacity: 1;
+	top: 40px;
+}
+/*END Country switcher with flags multisite*/
