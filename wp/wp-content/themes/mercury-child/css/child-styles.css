@@ -1096,7 +1096,7 @@ ul.main-menu > li.fair > a:before,
 	width: 100%;
 	top: 60px;
 	background-color: #fff;
-	padding: 10px;
+	padding: 15px 10px 0;
 	color: #000;
 	border-radius: 5px;
 }
@@ -1104,6 +1104,11 @@ ul.main-menu > li.fair > a:before,
 	position: relative;
 	padding: 10px;
 }
+
+.netw__level2{
+	margin-bottom: 15px;
+}
+
 .netw__level1:hover .netw__sub{
 	visibility: visible;
 	opacity: 1;

@@ -12,33 +12,47 @@ require_once 'blocks/blocks.php';
 require_once 'inc/inc.php';
 
 
-
+# showing hreflang meta tags in the multisite subsites
 add_action( 'wp_head', function(){
 	if(!is_multisite())
 		return;
+
 	global $wp;
 	$curr_url = home_url( $wp->request ) . '/';
 
-	$str = '<link rel="alternate" hreflang="es-cl" href="%s">
-	<link rel="alternate" hreflang="es" href="%s">
-	<link rel="alternate" hreflang="x-default" href="%s">';
+	switch_to_blog(1);
+	$subsitez = get_field('ntw_webs_switcher','m5netw_opt1');
+	restore_current_blog();
 
-	#Page loaded under Chili subsite
-	if(strpos($curr_url, '/cl/') !== false){
-		echo sprintf(
-			$str, 
-			$curr_url, 
-			str_replace('/cl/','/',$curr_url), 
-			str_replace('/cl/','/',$curr_url)
-		);
-		return;
-	}	
-	$netw_trgt = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'];
-	echo sprintf(
-		$str, 
-		$netw_trgt.'/cl'.$_SERVER['REQUEST_URI'], 
-		$curr_url, 
-		$curr_url);
+	$str = '<link rel="alternate" hreflang="%s" href="%s">';
+
+	#subsite that is active now
+	$current_subsite = $subsitez[0];
+
+	foreach ($subsitez as $k=>$v) {
+		if( $v['slug'] == '/' )
+			continue;
+		
+		if(strpos($curr_url, $v['slug']) !== false){
+			$current_subsite = $subsitez[$k];
+			break;
+		}
+	}
+	
+	foreach ($subsitez as $k=>$v):
+		if( !$v['show_lang_sw'] )
+			continue;
+	
+		if($current_subsite['slug'] === '/'){
+			echo sprintf( $str, $v['hreflang'], $v['url'].$_SERVER['REQUEST_URI'] );
+			echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', $v['url'] . $_SERVER['REQUEST_URI'] ) : '';
+			continue;
+		}
+
+		echo sprintf( $str, $v['hreflang'], str_replace($current_subsite['slug'], $v['slug'], $curr_url) );
+		echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', str_replace($current_subsite['slug'], $v['slug'], $curr_url)) : '';
+	endforeach;
+
 });
 
 
@@ -102,3 +116,13 @@ add_shortcode('show_wpb_author_info_box', 'wpb_author_info_box');
 remove_filter('pre_user_description', 'wp_filter_kses');
 
 
+
+
+
+
+acf_add_options_page([
+	'network' => true,
+	'post_id' => 'm5netw_opt1',
+	'page_title' => 'Network Options',
+	'menu_title' => 'Network Options'
+]);
