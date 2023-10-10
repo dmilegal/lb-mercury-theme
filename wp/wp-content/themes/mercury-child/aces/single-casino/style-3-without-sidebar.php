@@ -51,6 +51,8 @@
 
 	$casino_detailed_tc = wp_kses( get_post_meta( get_the_ID(), 'casino_detailed_tc', true ), $casino_allowed_html );
 
+	$sett_bonus_tf = get_field('sett_bonus_tf','option');
+
 	if ($casino_button_title) {
 		$button_title = $casino_button_title;
 	} else {
@@ -185,7 +187,7 @@ if ($src_background_desktop) {
 											<?php if($bonus_fields && $bonus_fields['trusted']) { ?>
 												<div class="trust"><?php esc_html_e('Trusted', 'aces'); ?></div>
 											<? } 
-											if($bonus_fields && $bonus_fields['best_for']) { ?>
+											if($bonus_fields && $bonus_fields['best_for'] && $sett_bonus_tf) { ?>
 												<div class="best">
 													<img role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/13.1.0/svg/1f525.svg">
 													<?php echo esc_html($bonus_fields['best_for']); ?>
@@ -299,22 +301,23 @@ if ($src_background_desktop) {
 
 	<?php if ($bonus_fields) { ?>
 		<div class="bonus-content">
-			<?php if($bonus_fields['bonus_title']) { ?>
+			<?php if($bonus_fields['bonus_title'] && $sett_bonus_tf) { ?>
 				<div class="bonus-title">
 					<strong><?php echo ($bonus_fields['bonus_title']); ?></strong>
 				</div>
 			<?php } ?>
-
-			<div class="bonus-features">
-			<div><i class="fas fa-user"></i><strong><?php esc_html_e('For whom:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['for_whom'], 'aces'); ?></div>
-				<div><i class="fas fa-dice"></i><strong><?php esc_html_e('Form:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['form'], 'aces'); ?></div>
-				<div><i class="fas fa-percent"></i><strong><?php esc_html_e('Type:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['type'], 'aces'); ?></div>
-				<div><i class="fas fa-clipboard"></i><strong><?php esc_html_e('Term:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['term'], 'aces'); ?></div>
-				<div><i class="fas fa-thumbs-up"></i><strong><?php esc_html_e('Best bonus:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['best_bonus'], 'aces'); ?></div>
-				<div><i class="fas fa-wallet"></i><strong><?php esc_html_e('Cashback:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['cashback'], 'aces'); ?></div>
-				<div><i class="fas fa-gift"></i><strong><?php esc_html_e('Birthday bonus:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['birthday_bonus'], 'aces'); ?></div>
-			</div>
-
+			
+			<? if($sett_bonus_tf): ?>
+				<div class="bonus-features">
+					<div><i class="fas fa-user"></i><strong><?php esc_html_e('For whom:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['for_whom'], 'aces'); ?></div>
+					<div><i class="fas fa-dice"></i><strong><?php esc_html_e('Form:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['form'], 'aces'); ?></div>
+					<div><i class="fas fa-percent"></i><strong><?php esc_html_e('Type:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['type'], 'aces'); ?></div>
+					<div><i class="fas fa-clipboard"></i><strong><?php esc_html_e('Term:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['term'], 'aces'); ?></div>
+					<div><i class="fas fa-thumbs-up"></i><strong><?php esc_html_e('Best bonus:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['best_bonus'], 'aces'); ?></div>
+					<div><i class="fas fa-wallet"></i><strong><?php esc_html_e('Cashback:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['cashback'], 'aces'); ?></div>
+					<div><i class="fas fa-gift"></i><strong><?php esc_html_e('Birthday bonus:', 'aces'); ?> </strong><?php esc_html_e($bonus_fields['birthday_bonus'], 'aces'); ?></div>
+				</div>
+			<? endif; ?>
 			<div class="space-organizations-7-archive-item-button-two bonus-button">
 				<?php if(empty($casino_external_link) || $casino_external_link == '#') : ?>
 						<a href="#" onclick="noRefPopup(event)" title="<?php echo esc_attr( $button_title ); ?>"><?php echo esc_html( $button_title ); ?></a>
@@ -323,7 +326,7 @@ if ($src_background_desktop) {
 				<?php endif; ?>
 			</div>
 
-			<?php if ($bonus_fields['bonus_description']) { ?>
+			<?php if ($bonus_fields['bonus_description'] && $sett_bonus_tf) { ?>
 				<div class="bonus-desc">
 					<?php echo $bonus_fields['bonus_description']; ?>
 				</div>
