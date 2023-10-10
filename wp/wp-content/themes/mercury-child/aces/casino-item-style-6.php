@@ -38,7 +38,7 @@
 					if ( get_option( 'casinos_play_now_title') ) {
 						$button_title = esc_html( get_option( 'casinos_play_now_title') );
 					} else {
-						$button_title = esc_html__( 'Play Now', 'mercury' );
+						$button_title = esc_html__( 'Play Now', 'mercury-child' );
 					}
 				}
 
@@ -48,7 +48,7 @@
 					if ( get_option( 'casinos_read_review_title') ) {
 						$permalink_button_title = esc_html( get_option( 'casinos_read_review_title') );
 					} else {
-						$permalink_button_title = esc_html__( 'Read Review', 'mercury' );
+						$permalink_button_title = esc_html__( 'Read Review', 'mercury-child' );
 					}
 				}
 

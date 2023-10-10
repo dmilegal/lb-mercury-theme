@@ -38,14 +38,14 @@
 		if ( get_option( 'games_play_now_title') ) {
 			$button_title = esc_html( get_option( 'games_play_now_title') );
 		} else {
-			$button_title = esc_html__( 'Play Now', 'mercury' );
+			$button_title = esc_html__( 'Play Now', 'mercury-child' );
 		}
 	}
 
 	if ($unit_popup_title) {
 		$custom_popup_title = $unit_popup_title;
 	} else {
-		$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury' );
+		$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury-child' );
 	}
 
 ?>
@@ -86,7 +86,7 @@
 							if ($vendors) { ?>
 								<div class="space-vendors box-100 relative">
 									<span>
-										<?php echo esc_html__( 'by', 'mercury' ); ?>
+										<?php echo esc_html__( 'by', 'mercury-child' ); ?>
 									</span>
 									<div class="space-vendors-items box-100 relative">
 										<?php foreach ( $vendors as $vendor ) { ?>
@@ -184,7 +184,7 @@
 									<?php
 										the_content();
 										wp_link_pages( array(
-											'before'      => '<div class="clear"></div><nav class="navigation pagination-post">' . esc_html__( 'Pages:', 'mercury' ),
+											'before'      => '<div class="clear"></div><nav class="navigation pagination-post">' . esc_html__( 'Pages:', 'mercury-child' ),
 											'after'       => '</nav>',
 											'link_before' => '<span class="page-number">',
 											'link_after'  => '</span>',
@@ -257,11 +257,11 @@
 								<div class="space-related-items-ins space-page-wrapper relative">
 									<div class="space-block-title relative">
 										<span>
-											<?php esc_html_e( 'More ', 'mercury' ); ?>
+											<?php esc_html_e( 'More ', 'mercury-child' ); ?>
 											<?php if ( get_option( 'games_section_name') ) {
 												esc_html_e( get_option( 'games_section_name') );
 											} else {
-												esc_html_e( 'Games', 'mercury' );
+												esc_html_e( 'Games', 'mercury-child' );
 											} ?>
 										</span>
 									</div>

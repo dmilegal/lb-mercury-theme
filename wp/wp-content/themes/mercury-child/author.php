@@ -4,27 +4,6 @@ $soc_links = getUserSocLinks($post->post_author);
 
 get_header(); ?>
 
-<!--<script type="application/ld+json">
-{
-	"@context": "http://schema.org",
-  	"@type": "Person",
-  	"name": "<?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?>",
-  	"image": "<?php echo esc_url( get_avatar_url( get_the_author_meta('user_email'), ['size' => '200'] )); ?>",
-  	"jobTitle": "<?php echo esc_html( get_field( 'job_title', 'user_'.get_the_author_meta('ID') ) ); ?>",
-  	"description": "<?php echo esc_html( get_the_author_meta( 'description' ) ); ?>",
-  	"alumniOf": {
-    	"@type": "CollegeOrUniversity",
-    	"name": "<?php echo esc_html( get_field( 'alumni_of', 'user_'.get_the_author_meta('ID') ) ); ?>"
-  	},
-  	"knowsAbout": [<?php echo get_field( 'knows_about', 'user_'.get_the_author_meta('ID') ); ?>],
-  	"worksFor": {
-    	"@type": "Organization",
-    	"name": "Top Gambling Platforms Online - Best Ratings and Reviews"
-  	}
-
-}
-</script>-->
-
 <!-- Title Box Start -->
 
 <div class="space-archive-title-box box-100 relative">
@@ -37,7 +16,7 @@ get_header(); ?>
 				if (count($soc_links)) {
 					echo '<p class="author-socials">';
 					foreach ($soc_links as $link) {
-						echo '<a href="'.$link[1] .'" rel="nofollow" target="_blank"><i class="fab fa-'. $link[0] .'"></i></a>';
+						echo '<a href="'.$link[1] .'" title="'. esc_attr__( $link[0], 'mercury-child' ) . '" rel="nofollow" target="_blank"><i class="fab fa-'. $link[0] .'"></i></a>';
 					}
 					echo '</p>';
 				}
@@ -81,8 +60,8 @@ get_header(); ?>
 				<?php
 					the_posts_pagination( array(
 						'end_size' => 2,
-						'prev_text'    => esc_html__('&laquo;', 'mercury'),
-						'next_text'    => esc_html__('&raquo;', 'mercury'),
+						'prev_text'    => esc_html__('&laquo;', 'mercury-child'),
+						'next_text'    => esc_html__('&raquo;', 'mercury-child'),
 					));
 				?>
 
@@ -94,9 +73,9 @@ get_header(); ?>
 
 				<div class="space-page-content-wrap relative">
 					<div class="space-page-content page-template box-100 relative">
-						<h2><?php esc_html_e( 'Posts not found', 'mercury' ); ?></h2>
+						<h2><?php esc_html_e( 'Posts not found', 'mercury-child' ); ?></h2>
 						<p>
-							<?php esc_html_e( 'No posts has been found. Please return to the homepage.', 'mercury' ); ?>
+							<?php esc_html_e( 'No posts has been found. Please return to the homepage.', 'mercury-child' ); ?>
 						</p>
 					</div>
 				</div>

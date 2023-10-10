@@ -12,7 +12,7 @@ if( $mercury_related ) { ?>
 <div class="space-news-3 box-100 read-more-block relative">
 				<div class="space-news-3-ins space-page-wrapper relative">
 					<div class="space-block-title relative">
-						<span><?php esc_html_e( 'Related posts', 'mercury' ); ?></span>
+						<span><?php esc_html_e( 'Related posts', 'mercury-child' ); ?></span>
 					</div>
 							<div class="space-news-items related-carousel owl-carousel">
 								<?php foreach( $mercury_related as $post ){ setup_postdata($post); ?>
@@ -50,7 +50,7 @@ if( $mercury_related ) { ?>
 											<div class="space-news-3-item-meta relative">
 												<div class="space-news-3-item-meta-left absolute">
 													<?php if( !get_theme_mod('mercury_date_display') ) { ?>
-														<span><i class="far fa-clock"></i> <?php if( get_theme_mod('mercury_time_ago_format') ){ ?><?php printf( esc_html_x( '%s ago', '%s = human-readable time difference', 'mercury' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) ); ?><?php } else { echo get_the_date(); } ?></span>
+														<span><i class="far fa-clock"></i> <?php if( get_theme_mod('mercury_time_ago_format') ){ ?><?php printf( esc_html_x( '%s ago', '%s = human-readable time difference', 'mercury-child' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) ); ?><?php } else { echo get_the_date(); } ?></span>
 													<?php } ?>
 												</div>
 												<div class="space-news-3-item-meta-right text-right absolute">

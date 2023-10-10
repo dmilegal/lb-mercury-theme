@@ -48,14 +48,14 @@ if ($bonus_button_title) {
 	if ( get_option( 'bonuses_get_bonus_title') ) {
 		$button_title = esc_html( get_option( 'bonuses_get_bonus_title') );
 	} else {
-		$button_title = esc_html__( 'Get Bonus', 'mercury' );
+		$button_title = esc_html__( 'Get Bonus', 'mercury-child' );
 	}
 }
 
 if ($offer_popup_title) {
 	$custom_popup_title = $offer_popup_title;
 } else {
-	$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury' );
+	$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury-child' );
 }
 
 ?>
@@ -111,14 +111,14 @@ if ($offer_popup_title) {
 										<div class="space-aces-single-offer-info-code box-60 left relative">
 											<div class="space-aces-single-offer-info-code-ins relative">
 												<fieldset class="space-aces-single-offer-info-code-value relative">
-													<legend><?php esc_html_e( 'Bonus Code', 'mercury' ); ?></legend>
+													<legend><?php esc_html_e( 'Bonus Code', 'mercury-child' ); ?></legend>
 													<span>
 														<?php echo esc_html( $bonus_code ); ?>
 													</span>
 												</fieldset>
 												<?php if ($bonus_valid_date) { ?>
 												<div class="space-aces-single-offer-info-code-date relative">
-													<?php esc_html_e( 'Valid Until:', 'mercury' ); ?> <span><?php echo esc_html( date_i18n('M d, Y',strtotime($bonus_valid_date))); ?></span>
+													<?php esc_html_e( 'Valid Until:', 'mercury-child' ); ?> <span><?php echo esc_html( date_i18n('M d, Y',strtotime($bonus_valid_date))); ?></span>
 												</div>
 												<?php } ?>
 
@@ -197,7 +197,7 @@ if ($offer_popup_title) {
 								<?php
 									the_content();
 									wp_link_pages( array(
-										'before'      => '<div class="clear"></div><nav class="navigation pagination-post">' . esc_html__( 'Pages:', 'mercury' ),
+										'before'      => '<div class="clear"></div><nav class="navigation pagination-post">' . esc_html__( 'Pages:', 'mercury-child' ),
 										'after'       => '</nav>',
 										'link_before' => '<span class="page-number">',
 										'link_after'  => '</span>',
@@ -256,11 +256,11 @@ if ($offer_popup_title) {
 								<div class="space-related-items-ins space-page-wrapper relative">
 									<div class="space-block-title relative">
 										<span>
-											<?php esc_html_e( 'More ', 'mercury' ); ?>
+											<?php esc_html_e( 'More ', 'mercury-child' ); ?>
 											<?php if ( get_option( 'bonuses_section_name') ) {
 												esc_html_e( get_option( 'bonuses_section_name') );
 											} else {
-												esc_html_e( 'Bonuses', 'mercury' );
+												esc_html_e( 'Bonuses', 'mercury-child' );
 											} ?>
 										</span>
 									</div>
