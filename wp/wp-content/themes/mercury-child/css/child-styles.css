@@ -1109,6 +1109,11 @@ ul.main-menu > li.fair > a:before,
 	margin-bottom: 15px;
 }
 
+
+.netw__level2__link, .netw__actual {
+    cursor: pointer;
+}
+
 .netw__level1:hover .netw__sub{
 	visibility: visible;
 	opacity: 1;

@@ -34,6 +34,7 @@ $netww_html = (function () {
 
 	# generating links for others subsites
 	foreach ($subsitez as $k => $v) :
+
 		if ($v['slug'] == $current_subsite['slug'])
 			continue;
 
@@ -41,19 +42,12 @@ $netww_html = (function () {
 			continue;
 
 
-		if ($current_subsite['slug'] == '/') {
-			$html .= '<li class="netw__level2">
-											<a href="' . $v['url'] . $_SERVER['REQUEST_URI'] . '">
-												<i class="fi" style="background-image: url(' . get_stylesheet_directory_uri() . '/img/flags/4x3/' . $v["flag"] . ');"></i>' . $v["title"] . '
-											</a>
-										</li>';
-			continue;
-		}
+		$href = $current_subsite['slug'] == '/' ? $v['url'] . $_SERVER['REQUEST_URI'] : str_replace($current_subsite['slug'], $v['slug'], $curr_url);
 
 		$html .= '<li class="netw__level2">
-			<a href="' . str_replace($current_subsite['slug'], $v['slug'], $curr_url) . '">
+			<div class="netw__level2__link" data-href="' . $href . '" onclick="location.href=this.dataset.href;">
 				<i class="fi" style="background-image: url(' . get_stylesheet_directory_uri() . '/img/flags/4x3/' . $v["flag"] . ');"></i>' . $v["title"] . '
-			</a>
+			</div>
 		</li>';
 	endforeach;
 
