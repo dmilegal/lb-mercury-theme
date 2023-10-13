@@ -12,9 +12,10 @@ require_once 'blocks/blocks.php';
 require_once 'inc/inc.php';
 
 
+
 # showing hreflang meta tags in the multisite subsites
 add_action( 'wp_head', function(){
-	if(!is_multisite())
+	if(!is_multisite() || is_404())
 		return;
 
 	global $wp;
@@ -42,15 +43,20 @@ add_action( 'wp_head', function(){
 	foreach ($subsitez as $k=>$v):
 		if( !$v['show_lang_sw'] )
 			continue;
-	
-		if($current_subsite['slug'] === '/'){
-			echo sprintf( $str, $v['hreflang'], $v['url'].$_SERVER['REQUEST_URI'] );
-			echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', $v['url'] . $_SERVER['REQUEST_URI'] ) : '';
+		
+		$urll = $v['url'] . $_SERVER['REQUEST_URI'];	
+		if($current_subsite['slug'] === '/' && check_url_exists( $urll ) ){
+			echo sprintf( $str, $v['hreflang'], $urll );
+			echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', $urll ) : '';
 			continue;
 		}
 
-		echo sprintf( $str, $v['hreflang'], str_replace($current_subsite['slug'], $v['slug'], $curr_url) );
-		echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', str_replace($current_subsite['slug'], $v['slug'], $curr_url)) : '';
+		$urll = str_replace($current_subsite['slug'], $v['slug'], $curr_url);	
+		if(!check_url_exists($urll))
+			continue;
+			
+		echo sprintf( $str, $v['hreflang'], $urll );
+		echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', $urll) : '';
 	endforeach;
 
 });
