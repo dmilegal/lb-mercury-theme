@@ -61,7 +61,10 @@ $back_url = [
 							) );
 						?>
 					</div>
-					<a href="/<?php echo $back_url[$post_type]; ?>/" class="go-back"><?php esc_html_e( 'Go back to ' . $back_url[$post_type], 'aces' ); ?></a>
+					<div class="go-back-container">
+					<a href="/<?php echo $back_url[$post_type]; ?>/" class="go-back"><?= __( 'Go back to', 'mercury-child' ) . ' ' .  __($back_url[$post_type], 'mercury-child'); ?></a>
+					</div>
+					
 				</div>
 
 				<?php endwhile; ?>

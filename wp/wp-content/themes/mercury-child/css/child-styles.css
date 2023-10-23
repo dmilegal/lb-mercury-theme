@@ -238,6 +238,9 @@ form.wpcf7-form input[type="submit"] {
     color: #fff;
     border-radius: 5px;
 }
+.single .go-back-container {
+    margin-top: 16px;
+}
 .single .go-back:hover {
     background-color: #ffd32a;
 }
@@ -1120,3 +1123,5 @@ ul.main-menu > li.fair > a:before,
 	top: 40px;
 }
 /*END Country switcher with flags multisite*/
+
+
