@@ -16,6 +16,20 @@
 	<?php } ?>
 	<div class="space-footer-copy box-100 relative">
 		<div class="space-footer-ins relative">
+			<?php if(get_theme_mod('footer_license_logo') || get_theme_mod('footer_license_text')): ?>
+				<div class="box-100 text-center footer-license">
+					<?php 
+						if(get_theme_mod('footer_license_logo')) {
+							echo '<img src="'.esc_url(get_theme_mod('footer_license_logo')).'" />';
+						}
+
+						if(get_theme_mod('footer_license_text')) {
+							echo '<p>'.get_theme_mod('footer_license_text').'</p>';
+						}
+					?>
+				</div>
+			<?php endif; ?>
+
 			<div class="space-footer-copy-left box-50 left relative">
 				<?php if(get_theme_mod('footer_copyright') == '') { ?>
 					<?php esc_html_e( '&copy; Copyright', 'mercury-child' ); ?> <?php echo esc_html( date( 'Y' ) ) ?> <?php echo esc_html( get_bloginfo( 'name' ) ) ?> | <?php esc_html_e( 'Powered by', 'mercury-child' ); ?> <a href="<?php echo esc_url( __( 'https://wordpress.org', 'mercury-child' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'WordPress', 'mercury-child' ); ?>"><?php esc_html_e( 'WordPress', 'mercury-child' ); ?></a> | <a href="<?php echo esc_url( __( 'https://mercurytheme.com', 'mercury-child' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Affiliate Marketing WordPress Theme. Reviews and Top Lists', 'mercury-child' ); ?>"><?php esc_html_e( 'Mercury Theme', 'mercury-child' ); ?></a>

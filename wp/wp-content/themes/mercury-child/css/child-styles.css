@@ -1125,3 +1125,9 @@ ul.main-menu > li.fair > a:before,
 /*END Country switcher with flags multisite*/
 
 
+.footer-license {
+    color: #777;
+    font-size: 0.75em;
+    line-height: 1.25em;
+    padding: 0 0 25px;
+}
