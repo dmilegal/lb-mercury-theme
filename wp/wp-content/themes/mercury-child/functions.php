@@ -78,8 +78,22 @@ function include_child_scripts()
 
 	wp_enqueue_script( 'jquery-fix', get_stylesheet_directory_uri() . '/js/libs/jquery-fix.js', array() );
 	wp_enqueue_script('child-scripts', get_stylesheet_directory_uri() . '/js/child-scripts.js', array('jquery'));
+
 }
 add_action('wp_enqueue_scripts', 'include_child_scripts', 25);
+
+
+
+// for dynamic template parts
+function include_dynamic_child_scripts() {
+	wp_register_style('member-block-css',  get_stylesheet_directory_uri() . '/css/dynamic/member-block.css');
+}
+add_action('init', 'include_dynamic_child_scripts');
+
+function include_member_block_styles($slug, $name, $args) {
+    wp_enqueue_style('member-block-css', '', array('mercury-child-style'));
+}
+add_action( 'get_template_part_theme-parts/member-block', 'include_member_block_styles', 10, 3 );
 
 // remove wp version number from scripts and styles
 function remove_css_js_version($src)
