@@ -4,7 +4,8 @@
   "scripts": {
     "build": "pnpm run -r build -if-present",
     "start": "pnpm run start -r --parallel --if-present",
-    "lint": "pnpm run lint -r --if-present"
+    "lint": "pnpm run lint -r --if-present",
+    "format": "prettier --write ."
   },
   "engines": {
     "npm": "^8.3.0",

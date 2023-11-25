@@ -44,3 +44,7 @@ wp/wp-content/*
 !wp/wp-content/themes
 wp/wp-content/themes/*
 !wp/wp-content/themes/mercury-child
+
+xdebug
+https-portal-data
+.env*

@@ -2,20 +2,39 @@ version: '3.9'
 
 services:
   wp:
-    ports:
-      - 8080:80
+    build:
+      dockerfile: ./config/dev/Dockerfile
+      context: .
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: 3g
     environment:
       MODE: development
       WORDPRESS_DEBUG: 1
+      XDEBUG_MODE: off
+      XDEBUG_CONFIG: client_host=host.docker.internal
     volumes:
-      - ./wp/wp-content/themes/mercury:/var/www/html/wp-content/themes/mercury
-      - ./wp/wp-content/themes/mercury-child:/var/www/html/wp-content/themes/mercury-child
-      - ./wp/wp-content/plugins:/var/www/html/wp-content/plugins
-      - ./wp/wp-content/uploads:/var/www/html/wp-content/uploads
+      - ./wp/wp-content:/var/www/html/wp-content
+      #- ./wp/wp-content/themes/mercury:/var/www/html/wp-content/themes/mercury
+      #- ./wp/wp-content/themes/mercury-child:/var/www/html/wp-content/themes/mercury-child
+      #- ./wp/wp-content/plugins:/var/www/html/wp-content/plugins
+      #- ./wp/wp-content/uploads:/var/www/html/wp-content/uploads
+      - ./wp/.htaccess:/var/www/html/.htaccess
+      - ./config/dev/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - ./xdebug:/tmp/xdebug
 
   db:
     volumes:
       - db:/var/lib/mysql
+
+  https-portal:
+    environment:
+      DOMAINS: 'localhost -> http://wp:80'
+      STAGE: local
+    volumes:
+      - ./https-portal-data:/var/lib/https-portal
 volumes:
   db:
   node_modules:

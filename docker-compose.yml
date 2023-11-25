@@ -3,13 +3,23 @@ services:
   wp:
     build:
       context: .
-      dockerfile: ./config/common/wp.dockerfile
+      dockerfile: ./config/common/Dockerfile
     restart: always
     environment:
       WORDPRESS_DB_HOST_FILE: /run/secrets/db_host
       WORDPRESS_DB_NAME_FILE: /run/secrets/db_name
       WORDPRESS_DB_USER_FILE: /run/secrets/db_user
       WORDPRESS_DB_PASSWORD_FILE: /run/secrets/db_pass
+      WORDPRESS_AUTH_KEY: '${WORDPRESS_AUTH_KEY}'
+      WORDPRESS_SECURE_AUTH_KEY: '${WORDPRESS_SECURE_AUTH_KEY}'
+      WORDPRESS_LOGGED_IN_KEY: '${WORDPRESS_LOGGED_IN_KEY}'
+      WORDPRESS_NONCE_KEY: '${WORDPRESS_NONCE_KEY}'
+      WORDPRESS_AUTH_SALT: '${WORDPRESS_AUTH_SALT}'
+      WORDPRESS_SECURE_AUTH_SALT: '${WORDPRESS_SECURE_AUTH_SALT}'
+      WORDPRESS_LOGGED_IN_SALT: '${WORDPRESS_LOGGED_IN_SALT}'
+      WORDPRESS_NONCE_SALT: '${WORDPRESS_NONCE_SALT}'
+      WORDPRESS_CONFIG_EXTRA: '${WORDPRESS_CONFIG_EXTRA}'
+
     depends_on:
       - db
     networks:
@@ -19,6 +29,7 @@ services:
       - db_name
       - db_user
       - db_pass
+
   db:
     image: mysql:8.1.0
     restart: always
@@ -34,6 +45,7 @@ services:
       - db_user
       - db_pass
       - db_root_pass
+
   phpmyadmin:
     image: phpmyadmin:5.2.1
     restart: always
@@ -51,6 +63,20 @@ services:
     secrets:
       - db_host
       - db_root_pass
+
+  https-portal:
+    image: steveltn/https-portal:1
+    ports:
+      - 80:80
+      - 443:443
+    links:
+      - wp
+    networks:
+      - net
+    restart: always
+    volumes:
+      - ./https-portal-data:/var/lib/https-portal
+
 volumes:
   db:
 networks:
