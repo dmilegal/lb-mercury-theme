@@ -1,0 +1,15 @@
+{
+  "name": "pros-cons-col",
+  "title": "Pros & Cons Column",
+  "description": "Pros and Cons Column.",
+  "style": [ "pros-cons-col-css" ],
+  "category": "formatting",
+  "icon": "columns",
+  "keywords": ["column"],
+  "parent": [ "acf/pros-cons" ],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "pros-cons-col.php"
+  },
+  "align": "full"
+}

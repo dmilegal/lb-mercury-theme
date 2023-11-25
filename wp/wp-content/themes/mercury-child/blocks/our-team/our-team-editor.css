@@ -1,0 +1,10 @@
+.our-team-editor-placeholder {
+    padding: 30px 0;
+    text-align: center;
+    border: 1px dotted #5f5f5f;
+}
+
+.our-team-editor-placeholder h2 {
+    color: #5f5f5f;
+    font-weight: 400;
+}

@@ -1,0 +1,13 @@
+.our-team-section {
+    margin: 60px 0;
+}
+
+.our-team-title {
+    margin: 0 0 24px;
+}
+
+.our-team-list {
+    display: flex;
+    flex-flow: column;
+    row-gap: 30px;
+}

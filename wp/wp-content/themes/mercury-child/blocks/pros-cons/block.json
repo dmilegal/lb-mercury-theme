@@ -1,0 +1,15 @@
+{
+  "name": "pros-cons",
+  "title": "Pros & Cons",
+  "description": "Block Pros and Cons.",
+  "style": [ "pros-cons-css" ],
+  "editorStyle": ["pros-cons-editor-css"],
+  "category": "formatting",
+  "icon": "star-half",
+  "keywords": ["pros", "cons", "compare"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "pros-cons.php"
+  },
+  "align": "full"
+}

@@ -1,0 +1,514 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mercury Child\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-25 17:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.4; wp-6.3\n"
+"X-Domain: mercury-child"
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/related-posts.php:53
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/author-info.php:13
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop-news-posts.php:32
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop-blog-posts.php:32
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop-search.php:32
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop.php:32
+#, php-format
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/footer.php:21
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/mobile-menu.php:24
+msgid "&copy; Copyright"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/author.php:63
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/archive-news.php:46
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/index.php:45
+msgid "&laquo;"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/author.php:64
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/archive-news.php:47
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/index.php:46
+msgid "&raquo;"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/footer.php:21
+msgid "Affiliate Marketing WordPress Theme. Reviews and Top Lists"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/mobile-menu.php:24
+msgid "Affiliate WordPress Theme"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/footer.php:66
+msgid "Back to Top"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/index.php:8
+msgid "Blog"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/bonus-item-style-1.php:82
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-bonus/style-1.php:114
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/related/bonus-item-style-1.php:82
+msgid "Bonus Code"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-bonus/style-1.php:263
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:899
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:853
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:898
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:889
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:885
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:899
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:853
+msgid "Bonuses"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:750
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:709
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:754
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:745
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:741
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:750
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:709
+msgid "Bonuses & Promotions"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/author-info.php:7
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1.php:89
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2-without-sidebar.php:102
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3-without-sidebar.php:213
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3.php:213
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1-without-sidebar.php:89
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2.php:102
+msgid "by"
+msgstr ""
+
+#. Description of the theme
+msgid "Child theme for Mercury theme"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:522
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:484
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:529
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:520
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:516
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:522
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:484
+msgid "Currencies"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:775
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:726
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:771
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:762
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:758
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:775
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:726
+msgid "Customer Support"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:330
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:304
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:349
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:340
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:336
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:330
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:304
+msgid "Deposit Methods"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:285
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:262
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:307
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:298
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:294
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:285
+msgid "Details"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:262
+msgid "Detalii"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:554
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:514
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:559
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:550
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:546
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:554
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:514
+msgid "Devices"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:620
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:576
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:621
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:612
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:608
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:620
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:576
+msgid "Established"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/social-icons.php:3
+msgid "Facebook"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-4.php:120
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-9.php:127
+msgid "game"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1.php:264
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2-without-sidebar.php:295
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3-without-sidebar.php:333
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3.php:333
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1-without-sidebar.php:265
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2.php:295
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:842
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:796
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:841
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:832
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:828
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:842
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:796
+msgid "Games"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-4.php:120
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-9.php:127
+msgid "games"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:725
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:692
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:737
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:728
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:724
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:725
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:692
+msgid "Games & Software"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/bonus-item-style-1.php:38
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-bonus/style-1.php:51
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/related/bonus-item-style-1.php:38
+msgid "Get Bonus"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/footer.php:21
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/mobile-menu.php:24
+msgid "https://mercurytheme.com"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "https://mercurytheme.com/"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/footer.php:21
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/mobile-menu.php:24
+msgid "https://wordpress.org"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/social-icons.php:21
+msgid "Instagram"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:490
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:454
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:499
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:490
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:486
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:490
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:454
+msgid "Languages"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:458
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:424
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:469
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:460
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:456
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:458
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:424
+msgid "Licences"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/social-icons.php:27
+msgid "LinkedIn"
+msgstr ""
+
+#. Name of the theme
+msgid "Mercury Child"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/footer.php:21
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/mobile-menu.php:24
+msgid "Mercury Theme"
+msgstr ""
+
+#. Author of the theme
+msgid "MercuryTheme.com"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-bonus/style-1.php:259
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1.php:260
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2-without-sidebar.php:291
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3-without-sidebar.php:329
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3.php:329
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1-without-sidebar.php:261
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2.php:291
+msgid "More "
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/archive-news.php:59
+msgid "News not found"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/archive-news.php:61
+msgid "No news has been found. Please return to the homepage."
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/index.php:60
+msgid "No posts has been found."
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/author.php:78
+msgid "No posts has been found. Please return to the homepage."
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/archive-news.php:8
+msgid "Noticias"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:677
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:743
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:788
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:779
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:775
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:677
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:743
+msgid "Overall Rating"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:586
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:544
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:589
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:580
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:576
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:586
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:544
+msgid "Owner"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/single-empty-sidebar.php:15
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/single-empty.php:15
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/single/style-1.php:57
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/single/style-3.php:58
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/single/style-2.php:55
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/single/style-4.php:58
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-bonus/style-1.php:200
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1.php:187
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2-without-sidebar.php:231
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3-without-sidebar.php:269
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3.php:269
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1-without-sidebar.php:188
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2.php:231
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:266
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:243
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:288
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:279
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:275
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:266
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:243
+msgid "Pages:"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-5.php:50
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-1.php:38
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-4.php:39
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-6.php:41
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-8.php:46
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/game-item-style-2.php:37
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-2.php:38
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/game-item-style-1.php:36
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-7.php:46
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-9.php:39
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1.php:41
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2-without-sidebar.php:42
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3-without-sidebar.php:42
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3.php:42
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1-without-sidebar.php:41
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2.php:42
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:56
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:56
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:58
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:56
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:60
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:56
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:56
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/related/game-item-style-1.php:36
+msgid "Play Now"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/author.php:76
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/index.php:58
+msgid "Posts not found"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/footer.php:21
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/mobile-menu.php:24
+msgid "Powered by"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop-news-posts.php:51
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop-blog-posts.php:51
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop-blog-posts.php:51
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop-author-posts.php:36
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop-author-posts.php:36
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop-search.php:47
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop-search.php:47
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop.php:51
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/archive/loop.php:51
+msgid "Read more"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-5.php:60
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-4.php:61
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-6.php:51
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-8.php:62
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/game-item-style-2.php:53
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-7.php:62
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-9.php:61
+msgid "Read Review"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/social-icons.php:33
+msgid "Reddit"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/related-posts.php:15
+msgid "Related posts"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:426
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:394
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:439
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:430
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:426
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:426
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:394
+msgid "Restricted Countries"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:298
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:274
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:319
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:310
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:306
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:298
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:274
+msgid "Software"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-5.php:41
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-1.php:51
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-4.php:52
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-8.php:53
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/game-item-style-2.php:66
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-2.php:51
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/game-item-style-1.php:49
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-7.php:53
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/casino-item-style-9.php:52
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/bonus-item-style-1.php:45
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-bonus/style-1.php:58
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1.php:48
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2-without-sidebar.php:55
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3-without-sidebar.php:55
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-3.php:55
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-1-without-sidebar.php:48
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-game/style-2.php:55
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:63
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:63
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:65
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:63
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:67
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:63
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:63
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/related/game-item-style-1.php:49
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/related/bonus-item-style-1.php:45
+msgid "T&Cs Apply"
+msgstr ""
+
+#. Name of the template
+msgid "Test1 TPL"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:700
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:675
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:720
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:711
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:707
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:700
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:675
+msgid "Trust & Fairness"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/social-icons.php:9
+msgid "Twitter"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/bonus-item-style-1.php:88
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-bonus/style-1.php:121
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/related/bonus-item-style-1.php:88
+msgid "Valid Until:"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/social-icons.php:39
+msgid "Website"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:394
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:364
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:409
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:400
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:396
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:394
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:364
+msgid "Withdrawal Limits"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1.php:362
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2-without-sidebar.php:334
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar.php:379
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3.php:370
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-3-without-sidebar_old.php:366
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-1-without-sidebar.php:362
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/aces/single-casino/style-2.php:334
+msgid "Withdrawal Methods"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/footer.php:21
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/mobile-menu.php:24
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/mobile-menu.php:24
+msgid "WordPress"
+msgstr ""
+
+#: ../../../repo/lb-mercury-theme/wp/wp-content/themes/mercury-child/theme-parts/social-icons.php:15
+msgid "YouTube"
+msgstr ""

@@ -4,13 +4,13 @@
 	</div>
 	<div class="space-page-content-meta-ins relative">
 		<div class="space-page-content-meta-author relative">
-			<?php esc_html_e( 'by', 'mercury' ); ?> <?php the_author_posts_link(); ?>
+			<?php esc_html_e( 'by', 'mercury-child' ); ?> <?php the_author_posts_link(); ?>
 		</div>
 		<div class="space-page-content-meta-data relative">
 			<div class="space-page-content-meta-data-ins relative">
 
 				<?php if( !get_theme_mod('mercury_date_display') ) { ?>
-					<span class="date"><i class="far fa-clock"></i> <?php if( get_theme_mod('mercury_time_ago_format') ){ ?><?php printf( esc_html_x( '%s ago', '%s = human-readable time difference', 'mercury' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) ); ?><?php } else { echo get_the_date(); } ?></span>
+					<span class="date"><i class="far fa-clock"></i> <?php if( get_theme_mod('mercury_time_ago_format') ){ ?><?php printf( esc_html_x( '%s ago', '%s = human-readable time difference', 'mercury-child' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) ); ?><?php } else { echo get_the_date(); } ?></span>
 				<?php } ?>
 
 				<?php if ( comments_open() ) { ?>

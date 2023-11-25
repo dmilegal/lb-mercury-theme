@@ -1,0 +1,14 @@
+{
+  "name": "advantages",
+  "title": "Advantages",
+  "description": "Advantages block.",
+  "style": [ "advantages-css" ],
+  "category": "formatting",
+  "icon": "plus-alt",
+  "keywords": ["advantages", "pros", "compare"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "advantages.php"
+  },
+  "align": "full"
+}

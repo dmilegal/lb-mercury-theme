@@ -34,7 +34,7 @@ if ($game_button_title) {
 	if ( get_option( 'games_play_now_title') ) {
 		$button_title = esc_html( get_option( 'games_play_now_title') );
 	} else {
-		$button_title = esc_html__( 'Play Now', 'mercury' );
+		$button_title = esc_html__( 'Play Now', 'mercury-child' );
 	}
 }
 
@@ -50,7 +50,7 @@ if ($game_permalink_button_title) {
 	if ( get_option( 'games_read_review_title') ) {
 		$permalink_button_title = esc_html( get_option( 'games_read_review_title') );
 	} else {
-		$permalink_button_title = esc_html__( 'Read Review', 'mercury' );
+		$permalink_button_title = esc_html__( 'Read Review', 'mercury-child' );
 	}
 }
 
@@ -63,7 +63,7 @@ if ( get_option( 'aces_game_rating_stars_number' ) ) {
 if ($unit_popup_title) {
 	$custom_popup_title = $unit_popup_title;
 } else {
-	$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury' );
+	$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury-child' );
 }
 
 $terms = get_the_terms( $post->ID, 'game-category' );

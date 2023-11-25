@@ -1,0 +1,14 @@
+{
+  "name": "disadvantages",
+  "title": "Disadvantages",
+  "description": "Disadvantages block.",
+  "style": [ "disadvantages-css" ],
+  "category": "formatting",
+  "icon": "minus",
+  "keywords": ["disadvantages", "cons", "compare"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "disadvantages.php"
+  },
+  "align": "full"
+}

@@ -35,14 +35,14 @@ if ($bonus_button_title) {
 	if ( get_option( 'bonuses_get_bonus_title') ) {
 		$button_title = esc_html( get_option( 'bonuses_get_bonus_title') );
 	} else {
-		$button_title = esc_html__( 'Get Bonus', 'mercury' );
+		$button_title = esc_html__( 'Get Bonus', 'mercury-child' );
 	}
 }
 
 if ($offer_popup_title) {
 	$custom_popup_title = $offer_popup_title;
 } else {
-	$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury' );
+	$custom_popup_title = esc_html__( 'T&Cs Apply', 'mercury-child' );
 }
 
 if ($bonus_external_link) {
@@ -79,13 +79,13 @@ $terms = get_the_terms( $post->ID, 'bonus-category' );
 					<?php echo esc_html( $bonus_code ); ?>
 				</div>
 				<div class="space-offers-archive-item-code-title absolute">
-					<span><?php esc_html_e( 'Bonus Code', 'mercury' ); ?></span>
+					<span><?php esc_html_e( 'Bonus Code', 'mercury-child' ); ?></span>
 				</div>
 			</div>
 
 				<?php if ($bonus_valid_date) { ?>
 				<div class="space-offers-archive-item-code-date relative">
-					<?php esc_html_e( 'Valid Until:', 'mercury' ); ?> <span><?php echo esc_html( date_i18n('M d, Y',strtotime($bonus_valid_date))); ?></span>
+					<?php esc_html_e( 'Valid Until:', 'mercury-child' ); ?> <span><?php echo esc_html( date_i18n('M d, Y',strtotime($bonus_valid_date))); ?></span>
 				</div>
 				<?php } ?>
 				
