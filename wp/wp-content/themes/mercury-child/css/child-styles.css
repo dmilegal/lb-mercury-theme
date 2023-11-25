@@ -238,6 +238,9 @@ form.wpcf7-form input[type="submit"] {
     color: #fff;
     border-radius: 5px;
 }
+.single .go-back-container {
+    margin-top: 16px;
+}
 .single .go-back:hover {
     background-color: #ffd32a;
 }
@@ -1109,9 +1112,22 @@ ul.main-menu > li.fair > a:before,
 	margin-bottom: 15px;
 }
 
+
+.netw__level2__link, .netw__actual {
+    cursor: pointer;
+}
+
 .netw__level1:hover .netw__sub{
 	visibility: visible;
 	opacity: 1;
 	top: 40px;
 }
 /*END Country switcher with flags multisite*/
+
+
+.footer-license {
+    color: #777;
+    font-size: 0.75em;
+    line-height: 1.25em;
+    padding: 0 0 25px;
+}

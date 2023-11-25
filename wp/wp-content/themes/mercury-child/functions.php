@@ -12,9 +12,10 @@ require_once 'blocks/blocks.php';
 require_once 'inc/inc.php';
 
 
+
 # showing hreflang meta tags in the multisite subsites
 add_action( 'wp_head', function(){
-	if(!is_multisite())
+	if(!is_multisite() || is_404())
 		return;
 
 	global $wp;
@@ -42,15 +43,20 @@ add_action( 'wp_head', function(){
 	foreach ($subsitez as $k=>$v):
 		if( !$v['show_lang_sw'] )
 			continue;
-	
-		if($current_subsite['slug'] === '/'){
-			echo sprintf( $str, $v['hreflang'], $v['url'].$_SERVER['REQUEST_URI'] );
-			echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', $v['url'] . $_SERVER['REQUEST_URI'] ) : '';
+		
+		$urll = $v['url'] . $_SERVER['REQUEST_URI'];	
+		if($current_subsite['slug'] === '/' && check_url_exists( $urll ) ){
+			echo sprintf( $str, $v['hreflang'], $urll );
+			echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', $urll ) : '';
 			continue;
 		}
 
-		echo sprintf( $str, $v['hreflang'], str_replace($current_subsite['slug'], $v['slug'], $curr_url) );
-		echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', str_replace($current_subsite['slug'], $v['slug'], $curr_url)) : '';
+		$urll = str_replace($current_subsite['slug'], $v['slug'], $curr_url);	
+		if(!check_url_exists($urll))
+			continue;
+			
+		echo sprintf( $str, $v['hreflang'], $urll );
+		echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', $urll) : '';
 	endforeach;
 
 });
@@ -72,8 +78,22 @@ function include_child_scripts()
 
 	wp_enqueue_script( 'jquery-fix', get_stylesheet_directory_uri() . '/js/libs/jquery-fix.js', array() );
 	wp_enqueue_script('child-scripts', get_stylesheet_directory_uri() . '/js/child-scripts.js', array('jquery'));
+
 }
 add_action('wp_enqueue_scripts', 'include_child_scripts', 25);
+
+
+
+// for dynamic template parts
+function include_dynamic_child_scripts() {
+	wp_register_style('member-block-css',  get_stylesheet_directory_uri() . '/css/dynamic/member-block.css');
+}
+add_action('init', 'include_dynamic_child_scripts');
+
+function include_member_block_styles($slug, $name, $args) {
+    wp_enqueue_style('member-block-css', '', array('mercury-child-style'));
+}
+add_action( 'get_template_part_theme-parts/member-block', 'include_member_block_styles', 10, 3 );
 
 // remove wp version number from scripts and styles
 function remove_css_js_version($src)

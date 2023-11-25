@@ -15,4 +15,8 @@ function register_acf_blocks() {
 
     wp_register_style('disadvantages-css', get_theme_file_uri('blocks/disadvantages/disadvantages.css'));
     register_block_type( __DIR__ . '/disadvantages' );
+
+    wp_register_style('our-team-css', get_theme_file_uri('blocks/our-team/our-team.css'));
+    wp_register_style('our-team-editor-css', get_theme_file_uri('blocks/our-team/our-team-editor.css'));
+    register_block_type( __DIR__ . '/our-team' );
 }

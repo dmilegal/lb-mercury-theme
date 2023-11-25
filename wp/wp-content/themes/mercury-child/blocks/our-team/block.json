@@ -1,0 +1,15 @@
+{
+  "name": "our-team",
+  "title": "Our Team",
+  "description": "Our Team block.",
+  "style": [ "our-team-css" ],
+  "editorStyle": ["our-team-editor-css", "member-block-css"],
+  "category": "formatting",
+  "icon": "groups",
+  "keywords": ["team", "users"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "our-team.php"
+  },
+  "align": "full"
+}

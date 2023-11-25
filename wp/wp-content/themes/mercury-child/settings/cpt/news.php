@@ -2,8 +2,8 @@
 add_action( 'init', function() {
 	register_post_type( 'news', array(
 	'labels' => array(
-		'name' => 'News',
-		'singular_name' => 'news',
+		'name' => __('News', 'mercury-child'),
+		'singular_name' => __('news', 'mercury-child'),
 		'menu_name' => 'News',
 		'all_items' => 'All News',
 		'edit_item' => 'Edit News',
