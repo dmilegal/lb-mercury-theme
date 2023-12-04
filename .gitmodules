@@ -1,0 +1,9 @@
+[submodule "wp/wp-content/plugins/lb-casino-compare"]
+	path = wp/wp-content/plugins/lb-casino-compare
+	url = https://github.com/dmilegal/lb-casino-compare.git
+[submodule "wp/wp-content/plugins/aces"]
+	path = wp/wp-content/plugins/aces
+	url = https://github.com/dmilegal/aces.git
+[submodule "wp/wp-content/plugins/custom-lang-switcher"]
+	path = wp/wp-content/plugins/custom-lang-switcher
+	url = https://github.com/dmilegal/custom-lang-switcher.git
