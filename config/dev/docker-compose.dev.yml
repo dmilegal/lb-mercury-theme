@@ -5,11 +5,11 @@ services:
     build:
       dockerfile: ./config/dev/Dockerfile
       context: .
-    deploy:
-      resources:
-        limits:
-          cpus: "0.2"
-          memory: 3g
+    #deploy:
+    #  resources:
+    #    limits:
+    #      cpus: "0.2"
+    #      memory: 3g
     environment:
       MODE: development
       WORDPRESS_DEBUG: 1

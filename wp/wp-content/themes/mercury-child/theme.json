@@ -1,0 +1,40 @@
+{
+    "$schema": "https:\/\/schemas.wp.org\/trunk\/theme.json",
+    "version": 2,
+    "settings": {
+        "appearanceTools": true,
+        "color": {
+            "custom": true
+        },
+        "typography": {
+            "customFontSize": true,
+            "fontSizes": [
+                {
+                    "name": "Display 2xl",
+                    "slug": "display-2xl",
+                    "size": "4.5rem"
+                }
+            ],
+            "fontFamilies": [
+                {
+                    "name": "Base",
+                    "slug": "base",
+                    "fontFamily": "Poppins, sans-serif"
+                }
+            ]
+        },
+        "spacing": {
+            "spacingScale": {
+                "operator": "+",
+                "increment": 4,
+                "steps": 64,
+                "mediumStep": 4,
+                "unit": "px"
+            }
+        },
+        "layout": {
+            "contentSize": "840px",
+            "wideSize": "1100px"
+        }
+    }
+}
