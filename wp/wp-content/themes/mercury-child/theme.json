@@ -4,7 +4,283 @@
     "settings": {
         "appearanceTools": true,
         "color": {
-            "custom": true
+            "palette": [
+                {
+                    "name": "Gray 25",
+                    "slug": "gray-25",
+                    "color": "#FCFCFD"
+                },
+                {
+                    "name": "Gray 50",
+                    "slug": "gray-50",
+                    "color": "#F9FAFB"
+                },
+                {
+                    "name": "Gray 100",
+                    "slug": "gray-100",
+                    "color": "#F2F4F7"
+                },
+                {
+                    "name": "Gray 200",
+                    "slug": "gray-200",
+                    "color": "#E4E7EC"
+                },
+                {
+                    "name": "Gray 300",
+                    "slug": "gray-300",
+                    "color": "#D0D5DD"
+                },
+                {
+                    "name": "Gray 400",
+                    "slug": "gray-400",
+                    "color": "#98A2B3"
+                },
+                {
+                    "name": "Gray 500",
+                    "slug": "gray-500",
+                    "color": "#667085"
+                },
+                {
+                    "name": "Gray 600",
+                    "slug": "gray-600",
+                    "color": "#475467"
+                },
+                {
+                    "name": "Gray 700",
+                    "slug": "gray-700",
+                    "color": "#344054"
+                },
+                {
+                    "name": "Gray 800",
+                    "slug": "gray-800",
+                    "color": "#1D2939"
+                },
+                {
+                    "name": "Gray 900",
+                    "slug": "gray-900",
+                    "color": "#101828"
+                },
+                {
+                    "name": "Primary 25",
+                    "slug": "primary-25",
+                    "color": "#FCFAFF"
+                },
+                {
+                    "name": "Primary 50",
+                    "slug": "primary-50",
+                    "color": "#F9F5FF"
+                },
+                {
+                    "name": "Primary 100",
+                    "slug": "primary-100",
+                    "color": "#F4EBFF"
+                },
+                {
+                    "name": "Primary 200",
+                    "slug": "primary-200",
+                    "color": "#E9D7FE"
+                },
+                {
+                    "name": "Primary 300",
+                    "slug": "primary-300",
+                    "color": "#D6BBFB"
+                },
+                {
+                    "name": "Primary 400",
+                    "slug": "primary-400",
+                    "color": "#B692F6"
+                },
+                {
+                    "name": "Primary 500",
+                    "slug": "primary-500",
+                    "color": "#9E77ED"
+                },
+                {
+                    "name": "Primary 600",
+                    "slug": "primary-600",
+                    "color": "#7F56D9"
+                },
+                {
+                    "name": "Primary 700",
+                    "slug": "primary-700",
+                    "color": "#6941C6"
+                },
+                {
+                    "name": "Primary 800",
+                    "slug": "primary-800",
+                    "color": "#53389E"
+                },
+                {
+                    "name": "Primary 900",
+                    "slug": "primary-900",
+                    "color": "#42307D"
+                },
+                {
+                    "name": "Error 25",
+                    "slug": "error-25",
+                    "color": "#FFFBFA"
+                },
+                {
+                    "name": "Error 50",
+                    "slug": "error-50",
+                    "color": "#FEF3F2"
+                },
+                {
+                    "name": "Error 100",
+                    "slug": "error-100",
+                    "color": "#FEE4E2"
+                },
+                {
+                    "name": "Error 200",
+                    "slug": "error-200",
+                    "color": "#FECDCA"
+                },
+                {
+                    "name": "Error 300",
+                    "slug": "error-300",
+                    "color": "#FDA29B"
+                },
+                {
+                    "name": "Error 400",
+                    "slug": "error-400",
+                    "color": "#F97066"
+                },
+                {
+                    "name": "Error 500",
+                    "slug": "error-500",
+                    "color": "#F04438"
+                },
+                {
+                    "name": "Error 600",
+                    "slug": "error-600",
+                    "color": "#D92D20"
+                },
+                {
+                    "name": "Error 700",
+                    "slug": "error-700",
+                    "color": "#B42318"
+                },
+                {
+                    "name": "Error 800",
+                    "slug": "error-800",
+                    "color": "#912018"
+                },
+                {
+                    "name": "Error 900",
+                    "slug": "error-900",
+                    "color": "#7A271A"
+                },
+                {
+                    "name": "Warning 25",
+                    "slug": "warning-25",
+                    "color": "#FFFCF5"
+                },
+                {
+                    "name": "Warning 50",
+                    "slug": "warning-50",
+                    "color": "#FFFAEB"
+                },
+                {
+                    "name": "Warning 100",
+                    "slug": "warning-100",
+                    "color": "#FEF0C7"
+                },
+                {
+                    "name": "Warning 200",
+                    "slug": "warning-200",
+                    "color": "#FEDF89"
+                },
+                {
+                    "name": "Warning 300",
+                    "slug": "warning-300",
+                    "color": "#FEC84B"
+                },
+                {
+                    "name": "Warning 400",
+                    "slug": "warning-400",
+                    "color": "#FDB022"
+                },
+                {
+                    "name": "Warning 500",
+                    "slug": "warning-500",
+                    "color": "#F79009"
+                },
+                {
+                    "name": "Warning 600",
+                    "slug": "warning-600",
+                    "color": "#DC6803"
+                },
+                {
+                    "name": "Warning 700",
+                    "slug": "warning-700",
+                    "color": "#B54708"
+                },
+                {
+                    "name": "Warning 800",
+                    "slug": "warning-800",
+                    "color": "#93370D"
+                },
+                {
+                    "name": "Warning 900",
+                    "slug": "warning-900",
+                    "color": "#7A2E0E"
+                },
+                {
+                    "name": "Success 25",
+                    "slug": "success-25",
+                    "color": "#F6FEF9"
+                },
+                {
+                    "name": "Success 50",
+                    "slug": "success-50",
+                    "color": "#ECFDF3"
+                },
+                {
+                    "name": "Success 100",
+                    "slug": "success-100",
+                    "color": "#D1FADF"
+                },
+                {
+                    "name": "Success 200",
+                    "slug": "success-200",
+                    "color": "#A6F4C5"
+                },
+                {
+                    "name": "Success 300",
+                    "slug": "success-300",
+                    "color": "#6CE9A6"
+                },
+                {
+                    "name": "Success 400",
+                    "slug": "success-400",
+                    "color": "#32D583"
+                },
+                {
+                    "name": "Success 500",
+                    "slug": "success-500",
+                    "color": "#12B76A"
+                },
+                {
+                    "name": "Success 600",
+                    "slug": "success-600",
+                    "color": "#039855"
+                },
+                {
+                    "name": "Success 700",
+                    "slug": "success-700",
+                    "color": "#027A48"
+                },
+                {
+                    "name": "Success 800",
+                    "slug": "success-800",
+                    "color": "#05603A"
+                },
+                {
+                    "name": "Success 900",
+                    "slug": "success-900",
+                    "color": "#054F31"
+                }
+            ]
         },
         "typography": {
             "customFontSize": true,
@@ -13,6 +289,56 @@
                     "name": "Display 2xl",
                     "slug": "display-2xl",
                     "size": "4.5rem"
+                },
+                {
+                    "name": "Display xl",
+                    "slug": "display-xl",
+                    "size": "3.75rem"
+                },
+                {
+                    "name": "Display lg",
+                    "slug": "display-lg",
+                    "size": "3rem"
+                },
+                {
+                    "name": "Display md",
+                    "slug": "display-md",
+                    "size": " 2.25rem"
+                },
+                {
+                    "name": "Display sm",
+                    "slug": "display-sm",
+                    "size": " 1.875rem"
+                },
+                {
+                    "name": "Display xs",
+                    "slug": "display-xs",
+                    "size": "1.5rem"
+                },
+                {
+                    "name": "Text xl",
+                    "slug": "text-xl",
+                    "size": " 1.25rem"
+                },
+                {
+                    "name": "Text lg",
+                    "slug": "text-lg",
+                    "size": "1.125rem"
+                },
+                {
+                    "name": "Text md",
+                    "slug": "text-md",
+                    "size": " 1rem"
+                },
+                {
+                    "name": "Text sm",
+                    "slug": "text-sm",
+                    "size": "0.875rem"
+                },
+                {
+                    "name": "Text xs",
+                    "slug": "text-xs",
+                    "size": "0.75rem"
                 }
             ],
             "fontFamilies": [
@@ -33,8 +359,29 @@
             }
         },
         "layout": {
-            "contentSize": "840px",
-            "wideSize": "1100px"
+            "contentSize": "1280px",
+            "wideSize": "100%"
+        },
+        "custom": {
+            "lineHeight": {
+                "display-2xl": "5.625rem",
+                "display-xl": "4.5rem",
+                "display-lg": "3.75rem",
+                "display-md": "2.75rem",
+                "display-sm": "2.375rem",
+                "display-xs": "2rem",
+                "text-xl": "1.875rem",
+                "text-lg": "1.75rem",
+                "text-md": "1.5rem",
+                "text-sm": "1.25rem",
+                "text-xs": "1.125rem"
+            },
+            "letterSpacing": {
+                "display-2xl": "-0.02em",
+                "display-xl": "-0.02em",
+                "display-lg": "-0.02em",
+                "display-md": "-0.02em"
+            }
         }
     }
 }
