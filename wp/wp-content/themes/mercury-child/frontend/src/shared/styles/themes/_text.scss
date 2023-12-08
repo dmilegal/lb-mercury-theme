@@ -1,0 +1,23 @@
+@use 'sass:map';
+
+h1 {
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+p {
+}
+
+//@each $name, $params in $body-fonts {
+//  .has-#{$name}-font-size {
+//   line-height: var(--wp--custom--line-height--#{$name}--responsive) !important;
+//  font-size: var(--wp--preset--font-size--#{$name}--responsive) !important;
+// }
+//}

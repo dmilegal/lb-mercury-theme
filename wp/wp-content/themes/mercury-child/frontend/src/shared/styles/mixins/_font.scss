@@ -1,0 +1,138 @@
+/**
+* font
+**/
+
+/// Convert px to rem font-size
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {String} $size - yor font-size in px
+@mixin font-size($size) {
+  font-size: font-size($size);
+}
+
+/// Convert px to rem font-size
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {String} $size - yor font-size in px
+@function font-size($size) {
+  @return $size / $DEFAULT_FONT_SIZE * 1rem;
+}
+
+/// Convert photoshop letter spacing to css letter spacing
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {Number} $points - photoshop points
+@mixin letter-spacing($points) {
+  letter-spacing: letter-spacing($points);
+}
+
+/// Convert photoshop letter spacing to css letter spacing
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {Number} $points - photoshop points
+@function letter-spacing($points) {
+  @return $points / 1000 * 1em;
+}
+
+/// Convert px to em line height
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {Number} $lh - line height in px that you want
+/// @param {Number} $fs - relative font size
+@mixin line-height($lh, $fs: $DEFAULT_FONT_SIZE) {
+  line-height: line-height($lh, $fs);
+}
+
+/// Convert px to em line height
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {Number} $lh - line height in px that you want
+/// @param {Number} $fs - relative font size
+@function line-height($lh, $fs: $DEFAULT_FONT_SIZE) {
+  @return px-to-em($lh, $fs);
+}
+
+/// Convert px to em
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {Number} $p1 - first size
+/// @param {Number} $p2 - second size
+@function px-to-em($p1, $p2) {
+  @return $p1 / $p2 * 1em;
+}
+
+/// Get font config for selected text type
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {String} $level - level size (see text-settings map at _variables.scss)
+@mixin text-setting($level) {
+  @include print(map-get($text-settings, $level));
+}
+
+/// Truncate words
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {String} $truncation-boundary - container boundary size
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/// Reset tag <a> styles
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {Boolean} $hover - if true - enable hover text decoration
+@mixin reset-link($hover: false) {
+  color: inherit;
+  text-decoration: none;
+  @if ($hover) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/// Generate fontawesome icon
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {String} $icon - icon number
+/// @param {Boolean} $after - if true - will be used :after for icon container
+@mixin font-awesome($icon, $after: false) {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  @if ($after) {
+    &:after {
+      content: $icon;
+    }
+  } @else {
+    content: $icon;
+  }
+}
+
+/// Generate font params
+/// @author Evgeniy Tsvigun
+/// @access public
+/// @param {String} $icon - icon number
+/// @param {Boolean} $after - if true - will be used :after for icon container
+@mixin font($fm: false, $size: false, $weight: false, $lh: false, $color: false) {
+  @if $fm {
+    font-family: $fm;
+  }
+  @if $size {
+    font-size: font-size($size);
+  }
+  @if $size {
+    font-size: font-size($size);
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}

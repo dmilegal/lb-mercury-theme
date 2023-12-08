@@ -1,0 +1,13 @@
+@use 'sass:map';
+
+body {
+  --color--primary: var(--wp--preset--color--black);
+
+  @each $name, $params in $body-fonts {
+    --wp--preset--font-size--#{$name}--responsive: #{map.get($params, 'font-size')};
+  }
+
+  @each $name, $params in $body-fonts {
+    --wp--custom--line-height--#{$name}--responsive: #{map.get($params, 'line-height')};
+  }
+}

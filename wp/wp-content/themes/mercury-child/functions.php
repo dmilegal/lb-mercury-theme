@@ -1,10 +1,11 @@
 <?php
 #set translations for child theme
-function mercury_child_setup() {
-	$path = get_stylesheet_directory().'/languages';
-	load_child_theme_textdomain( 'mercury-child', $path );
+function mercury_child_setup()
+{
+	$path = get_stylesheet_directory() . '/languages';
+	load_child_theme_textdomain('mercury-child', $path);
 }
-add_action( 'after_setup_theme', 'mercury_child_setup' );
+add_action('after_setup_theme', 'mercury_child_setup');
 
 require_once 'shared/shared.php';
 require_once 'settings/settings.php';
@@ -14,15 +15,15 @@ require_once 'inc/inc.php';
 
 
 # showing hreflang meta tags in the multisite subsites
-add_action( 'wp_head', function(){
-	if(!is_multisite() || is_404())
+add_action('wp_head', function () {
+	if (!is_multisite() || is_404())
 		return;
 
 	global $wp;
-	$curr_url = home_url( $wp->request ) . '/';
+	$curr_url = home_url($wp->request) . '/';
 
 	switch_to_blog(1);
-	$subsitez = get_field('ntw_webs_switcher','m5netw_opt1');
+	$subsitez = get_field('ntw_webs_switcher', 'm5netw_opt1');
 	restore_current_blog();
 
 	$str = '<link rel="alternate" hreflang="%s" href="%s">';
@@ -30,76 +31,102 @@ add_action( 'wp_head', function(){
 	#subsite that is active now
 	$current_subsite = $subsitez[0];
 
-	foreach ($subsitez as $k=>$v) {
-		if( $v['slug'] == '/' )
+	foreach ($subsitez as $k => $v) {
+		if ($v['slug'] == '/')
 			continue;
-		
-		if(strpos($curr_url, $v['slug']) !== false){
+
+		if (strpos($curr_url, $v['slug']) !== false) {
 			$current_subsite = $subsitez[$k];
 			break;
 		}
 	}
-	
-	foreach ($subsitez as $k=>$v):
-		if( !$v['show_lang_sw'] )
+
+	foreach ($subsitez as $k => $v) :
+		if (!$v['show_lang_sw'])
 			continue;
-		
-		$urll = $v['url'] . $_SERVER['REQUEST_URI'];	
-		if($current_subsite['slug'] === '/' && check_url_exists( $urll ) ){
-			echo sprintf( $str, $v['hreflang'], $urll );
-			echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', $urll ) : '';
+
+		$urll = $v['url'] . $_SERVER['REQUEST_URI'];
+		if ($current_subsite['slug'] === '/' && check_url_exists($urll)) {
+			echo sprintf($str, $v['hreflang'], $urll);
+			echo ($v['slug'] === '/') ? sprintf($str, 'x-default', $urll) : '';
 			continue;
 		}
 
-		$urll = str_replace($current_subsite['slug'], $v['slug'], $curr_url);	
-		if(!check_url_exists($urll))
+		$urll = str_replace($current_subsite['slug'], $v['slug'], $curr_url);
+		if (!check_url_exists($urll))
 			continue;
-			
-		echo sprintf( $str, $v['hreflang'], $urll );
-		echo ($v['slug'] === '/') ? sprintf( $str, 'x-default', $urll) : '';
-	endforeach;
 
+		echo sprintf($str, $v['hreflang'], $urll);
+		echo ($v['slug'] === '/') ? sprintf($str, 'x-default', $urll) : '';
+	endforeach;
 });
 
 
-// For custom functions and hooks...
-function include_child_scripts()
+function disable_old_assets()
 {
 	wp_deregister_style('mercury-style');
 	wp_deregister_style('mercury-media');
 	wp_deregister_style('mercury-googlefonts');
+}
+add_action('wp_enqueue_scripts', 'disable_old_assets', 25);
+// For custom functions and hooks...
+function include_assets()
+{
+	wp_enqueue_style('css-style-main', get_stylesheet_directory_uri() . '/frontend/dist/css/main.css', [], filemtime(get_theme_file_path('frontend/dist/css/main.css')));
 
-	//wp_enqueue_style( 'mercury-googlefonts', get_stylesheet_directory_uri() . '/fonts/stylesheet.css', array(), '20230829', 'all' );
+	wp_enqueue_script('js-script-main', get_stylesheet_directory_uri() . '/frontend/dist/js/main.js', [], filemtime(get_theme_file_path('frontend/dist/js/main.js')), [
+		'in_footer' => true,
+		'strategy'  => 'defer',
+	]);
+	
 
-	//wp_enqueue_style( 'mercury-style', get_template_directory_uri() . '/style.css', array(), '20230829', 'all' );
-	//wp_enqueue_style( 'mercury-child-style', get_stylesheet_directory_uri() . '/css/child-styles.css', array('mercury-style'), '20230829', 'all' );
-	//wp_enqueue_style( 'mercury-media', get_template_directory_uri() . '/css/media.css',  array('mercury-child-style'), '20230829', 'all');
-	//wp_enqueue_style( 'mercury-child-media', get_stylesheet_directory_uri() . '/css/child-media.css',  array('mercury-child-style'), '20230829', 'all');
+	foreach (['js/libs/', 'js/commons/', 'css/libs/', 'css/commons/'] as $path) {
+		$dir = get_template_directory() . '/frontend/dist/' . $path;
+		$cssFiles = glob($dir . "*[main]*.css");
+		$jsFiles  = glob($dir . "*[main]*.js");
 
-	wp_enqueue_script( 'jquery-fix', get_stylesheet_directory_uri() . '/js/libs/jquery-fix.js', array() );
-	wp_enqueue_script('child-scripts', get_stylesheet_directory_uri() . '/js/child-scripts.js', array('jquery'));
+		// Подключаем CSS файлы
+		foreach ($cssFiles as $file) {
+			$file_url = str_replace(get_template_directory(), get_template_directory_uri(), $file);
+			wp_enqueue_style('css-style-' . basename($file), $file_url, [], filemtime($file));
+		}
+
+		// Подключаем JS файлы
+		foreach ($jsFiles as $file) {
+			$file_url = str_replace(get_template_directory(), get_template_directory_uri(), $file);
+			wp_enqueue_script('js-script-' . basename($file), $file_url, [], filemtime($file), [
+				'in_footer' => true,
+				'strategy'  => 'defer',
+			]);
+		}
+	}
+
+	//wp_enqueue_script( 'jquery-fix', get_stylesheet_directory_uri() . '/js/libs/jquery-fix.js', array() );
+	//wp_enqueue_script('child-scripts', get_stylesheet_directory_uri() . '/js/child-scripts.js', array('jquery'));
 
 }
-add_action('wp_enqueue_scripts', 'include_child_scripts', 25);
+add_action('wp_enqueue_scripts', 'include_assets', 25);
 
 
 
 // for dynamic template parts
-function include_dynamic_child_scripts() {
+function include_dynamic_child_scripts()
+{
 	wp_register_style('member-block-css',  get_stylesheet_directory_uri() . '/css/dynamic/member-block.css');
 }
 add_action('init', 'include_dynamic_child_scripts');
 
-function include_member_block_styles($slug, $name, $args) {
-    wp_enqueue_style('member-block-css', '', array('mercury-child-style'));
+function include_member_block_styles($slug, $name, $args)
+{
+	wp_enqueue_style('member-block-css', '', array('mercury-child-style'));
 }
-add_action( 'get_template_part_theme-parts/member-block', 'include_member_block_styles', 10, 3 );
+add_action('get_template_part_theme-parts/member-block', 'include_member_block_styles', 10, 3);
 
 // remove wp version number from scripts and styles
 function remove_css_js_version($src)
 {
 	if (strpos($src, '?ver='))
-			$src = remove_query_arg('ver', $src);
+		$src = remove_query_arg('ver', $src);
 	return $src;
 }
 add_filter('style_loader_src', 'remove_css_js_version', 9999);
@@ -109,7 +136,7 @@ if (function_exists('geoip_detect2_get_info_from_current_ip')) {
 	add_filter('geoip_object', 'return_geoip_object');
 	function return_geoip_object()
 	{
-			return geoip_detect2_get_info_from_current_ip();
+		return geoip_detect2_get_info_from_current_ip();
 	}
 }
 
@@ -121,14 +148,14 @@ remove_action('wp_head', 'feed_links', 2);
 function post_types_author_archives($query)
 {
 	if ($query->is_author)
-			$query->set('post_type', array('post', 'page', 'news'));
+		$query->set('post_type', array('post', 'page', 'news'));
 	remove_action('pre_get_posts', 'custom_post_author_archive');
 }
 add_action('pre_get_posts', 'post_types_author_archives');
 
 function wpb_author_info_box()
 {
-  get_template_part('/theme-parts/author-block');
+	get_template_part('/theme-parts/author-block');
 }
 add_shortcode('show_wpb_author_info_box', 'wpb_author_info_box');
 

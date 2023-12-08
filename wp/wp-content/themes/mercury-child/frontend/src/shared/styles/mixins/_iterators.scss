@@ -1,0 +1,10 @@
+/**
+* itertors
+**/
+@mixin property-iterator($property, $from, $to, $factor, $divider, $ext) {
+  @for $i from $from through $to {
+    &-#{$i} {
+      #{$property}: $i * $factor / $divider + $ext;
+    }
+  }
+}

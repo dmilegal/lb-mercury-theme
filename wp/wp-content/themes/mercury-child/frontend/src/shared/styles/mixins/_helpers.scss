@@ -1,0 +1,25 @@
+/**
+* helpers
+**/
+@mixin print($declarations) {
+  @each $property, $value in $declarations {
+    #{$property}: $value;
+  }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin wp-editor-fix($r) {
+  @at-root {
+    #{$r} {
+      @content;
+    }
+  }
+  #{$r} {
+    @content;
+  }
+}

@@ -1,0 +1,11 @@
+@mixin make-container-max-width(
+  $container-width: var(--container-width),
+  $container-padding: var(--conainer-padding)
+) {
+  width: 100%;
+  max-width: calc($container-width + 2 * $container-padding);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
