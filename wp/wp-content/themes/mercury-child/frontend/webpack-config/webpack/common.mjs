@@ -20,11 +20,9 @@ export default function common(mode) {
     entry: {
       main: {
         import: [`${paths.src}/main/app.ts`],
-        chunkLoading: false,
       },
       'width-container': {
         import: [`${paths.src}/blocks/width-container/width-container.ts`],
-        chunkLoading: false,
       },
     },
     output: {

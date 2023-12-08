@@ -72,42 +72,48 @@ add_action('wp_enqueue_scripts', 'disable_old_assets', 25);
 // For custom functions and hooks...
 function include_assets()
 {
-	wp_enqueue_style('css-style-main', get_stylesheet_directory_uri() . '/frontend/dist/css/main.css', [], filemtime(get_theme_file_path('frontend/dist/css/main.css')));
+	foreach (['js/libs/', 'css/libs/'] as $path) {
+		$dir = get_stylesheet_directory() . '/frontend/dist/' . $path;
 
-	wp_enqueue_script('js-script-main', get_stylesheet_directory_uri() . '/frontend/dist/js/main.js', [], filemtime(get_theme_file_path('frontend/dist/js/main.js')), [
+		include_assets_by_path($dir);
+	}
+
+	wp_enqueue_style('main', get_stylesheet_directory_uri() . '/frontend/dist/css/main.css', [], filemtime(get_theme_file_path('frontend/dist/css/main.css')));
+
+	wp_enqueue_script('main', get_stylesheet_directory_uri() . '/frontend/dist/js/main.js', [], filemtime(get_theme_file_path('frontend/dist/js/main.js')), [
 		'in_footer' => true,
 		'strategy'  => 'defer',
 	]);
-	
 
-	foreach (['js/libs/', 'js/commons/', 'css/libs/', 'css/commons/'] as $path) {
-		$dir = get_template_directory() . '/frontend/dist/' . $path;
-		$cssFiles = glob($dir . "*[main]*.css");
-		$jsFiles  = glob($dir . "*[main]*.js");
+	foreach (['js/commons/', 'css/commons/'] as $path) {
+		$dir = get_stylesheet_directory() . '/frontend/dist/' . $path;
 
-		// Подключаем CSS файлы
-		foreach ($cssFiles as $file) {
-			$file_url = str_replace(get_template_directory(), get_template_directory_uri(), $file);
-			wp_enqueue_style('css-style-' . basename($file), $file_url, [], filemtime($file));
-		}
-
-		// Подключаем JS файлы
-		foreach ($jsFiles as $file) {
-			$file_url = str_replace(get_template_directory(), get_template_directory_uri(), $file);
-			wp_enqueue_script('js-script-' . basename($file), $file_url, [], filemtime($file), [
-				'in_footer' => true,
-				'strategy'  => 'defer',
-			]);
-		}
+		include_assets_by_path($dir);
 	}
 
 	//wp_enqueue_script( 'jquery-fix', get_stylesheet_directory_uri() . '/js/libs/jquery-fix.js', array() );
 	//wp_enqueue_script('child-scripts', get_stylesheet_directory_uri() . '/js/child-scripts.js', array('jquery'));
-
 }
 add_action('wp_enqueue_scripts', 'include_assets', 25);
 
+function include_assets_by_path($dir)
+{
+	$cssFiles = glob($dir . "*[main]*.css");
+	$jsFiles  = glob($dir . "*[main]*.js");
 
+	foreach ($cssFiles as $file) {
+		$file_url = str_replace(get_template_directory(), get_template_directory_uri(), $file);
+		wp_enqueue_style(basename($file), $file_url, [], filemtime($file));
+	}
+
+	foreach ($jsFiles as $file) {
+		$file_url = str_replace(get_template_directory(), get_template_directory_uri(), $file);
+		wp_enqueue_script(basename($file), $file_url, [], filemtime($file), [
+			'in_footer' => true,
+			'strategy'  => 'defer',
+		]);
+	}
+}
 
 // for dynamic template parts
 function include_dynamic_child_scripts()
