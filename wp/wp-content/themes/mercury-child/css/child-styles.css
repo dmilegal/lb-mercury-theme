@@ -1131,3 +1131,8 @@ ul.main-menu > li.fair > a:before,
     line-height: 1.25em;
     padding: 0 0 25px;
 }
+
+.boxed img{
+	width: 100%;
+	height: auto;
+}
