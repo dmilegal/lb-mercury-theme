@@ -146,3 +146,11 @@ acf_add_options_page([
 	'page_title' => 'Network Options',
 	'menu_title' => 'Network Options'
 ]);
+
+// New allowed mime types.
+function mc8_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	$mimes['svgz'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'mc8_mime_types' );
