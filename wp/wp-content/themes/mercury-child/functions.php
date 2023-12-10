@@ -70,12 +70,13 @@ function disable_old_assets()
 }
 add_action('wp_enqueue_scripts', 'disable_old_assets', 25);
 // For custom functions and hooks...
-function include_assets()
+function include_main_assets()
 {
 	foreach (['js/libs/', 'css/libs/'] as $path) {
 		$dir = get_stylesheet_directory() . '/frontend/dist/' . $path;
 
-		include_assets_by_path($dir);
+		enqueue_assets_by_path($dir . "*chk-main-chk*.css");
+		enqueue_assets_by_path($dir . "*chk-main-chk*.js");
 	}
 
 	wp_enqueue_style('main', get_stylesheet_directory_uri() . '/frontend/dist/css/main.css', [], filemtime(get_theme_file_path('frontend/dist/css/main.css')));
@@ -88,34 +89,61 @@ function include_assets()
 	foreach (['js/commons/', 'css/commons/'] as $path) {
 		$dir = get_stylesheet_directory() . '/frontend/dist/' . $path;
 
-		include_assets_by_path($dir);
+		enqueue_assets_by_path($dir . "*chk-main-chk*.css");
+		enqueue_assets_by_path($dir . "*chk-main-chk*.js");
 	}
 
 	//wp_enqueue_script( 'jquery-fix', get_stylesheet_directory_uri() . '/js/libs/jquery-fix.js', array() );
 	//wp_enqueue_script('child-scripts', get_stylesheet_directory_uri() . '/js/child-scripts.js', array('jquery'));
 }
-add_action('wp_enqueue_scripts', 'include_assets', 25);
+add_action('wp_enqueue_scripts', 'include_main_assets', 25);
 
-function include_assets_by_path($dir)
+
+// for dynamic template parts
+function include_dynamic_assets()
 {
-	$cssFiles = glob($dir . "*[main]*.css");
-	$jsFiles  = glob($dir . "*[main]*.js");
+	foreach (['js/libs/', 'css/libs/', 'js/commons/', 'css/commons/'] as $path) {
+		$dir = get_stylesheet_directory() . '/frontend/dist/' . $path;
 
-	foreach ($cssFiles as $file) {
-		$file_url = str_replace(get_template_directory(), get_template_directory_uri(), $file);
-		wp_enqueue_style(basename($file), $file_url, [], filemtime($file));
+		register_assets_by_path($dir . "*.css");
+		register_assets_by_path($dir . "*.js");
 	}
+}
+add_action('init', 'include_dynamic_assets');
 
-	foreach ($jsFiles as $file) {
-		$file_url = str_replace(get_template_directory(), get_template_directory_uri(), $file);
-		wp_enqueue_script(basename($file), $file_url, [], filemtime($file), [
-			'in_footer' => true,
-			'strategy'  => 'defer',
-		]);
+function enqueue_assets_by_path($assetPath)
+{
+	$files = glob($assetPath);
+	$isJs = str_contains($assetPath, '.js');
+	$isCss = str_contains($assetPath, '.css');
+
+	foreach ($files as $file) {
+		if ($isCss)
+			wp_enqueue_style(getAssetName($file));
+		elseif ($isJs)
+			wp_enqueue_script(getAssetName($file));
 	}
 }
 
-// for dynamic template parts
+function register_assets_by_path($assetPath)
+{
+	$files = glob($assetPath);
+	$isJs = str_contains($assetPath, '.js');
+	$isCss = str_contains($assetPath, '.css');
+
+	foreach ($files as $file) {
+		$file_url = str_replace(get_template_directory(), get_template_directory_uri(), $file);
+		if ($isCss)
+			wp_register_style(getAssetName($file), $file_url, [], filemtime($file));
+		elseif ($isJs)
+			wp_register_script(getAssetName($file), $file_url, [], filemtime($file), [
+				'in_footer' => true,
+				'strategy'  => 'defer',
+			]);
+	}
+}
+
+
 function include_dynamic_child_scripts()
 {
 	wp_register_style('member-block-css',  get_stylesheet_directory_uri() . '/css/dynamic/member-block.css');

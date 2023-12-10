@@ -1,9 +1,10 @@
 import paths from '../paths.mjs'
 //import path from 'path'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
+import { globSync } from 'glob'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 //import webpack from 'webpack'
-//import { readFileSync } from 'fs'
+import fs from 'fs'
 import threadLoader from 'thread-loader'
 
 threadLoader.warmup(
@@ -14,6 +15,26 @@ threadLoader.warmup(
   ['babel-loader', 'sass-loader']
 )
 
+function getBlockConfig(dir = `${paths.src}/blocks`, dirs = {}) {
+  // Get an array of all files and directories in the passed directory using fs.readdirSync
+  const fileList = fs.readdirSync(dir)
+  // Create the full path of the file/directory by concatenating the passed directory and file/directory name
+  for (const file of fileList) {
+    const name = `${dir}/${file}`
+    // Check if the current file/directory is a directory using fs.statSync
+    if (fs.statSync(name).isDirectory()) {
+      const files = globSync(`${name}/${file}.{ts,js}`)
+      dirs[`${file}`] = {
+        import: [files[0]],
+      }
+    }
+  }
+
+  return dirs
+}
+
+const blocksEntries = getBlockConfig()
+
 export default function common(mode) {
   return {
     context: paths.root,
@@ -21,9 +42,7 @@ export default function common(mode) {
       main: {
         import: [`${paths.src}/main/app.ts`],
       },
-      'width-container': {
-        import: [`${paths.src}/blocks/width-container/width-container.ts`],
-      },
+      ...blocksEntries,
     },
     output: {
       path: paths.build,
@@ -42,7 +61,11 @@ export default function common(mode) {
           '/'
         )
       })(),
-      filename: 'js/[name].js',
+      filename: (pathData) => {
+        const names = Object.keys(blocksEntries)
+        if (names.includes(pathData.chunk.name)) return 'js/blocks/[name].js'
+        return 'js/[name].js'
+      },
       clean: true,
     },
     optimization: {
@@ -65,8 +88,10 @@ export default function common(mode) {
               // to be what we need, joining the entry point names
               // together by ~.  We can then determine which chunk/file
               // needs to be loaded by each entry point.
-              const allChunksNames = chunks.map((item) => `[${item.name}]`).join('~')
-              return `libs/${allChunksNames}-${moduleFileName}`
+              const allChunksNames = chunks
+                .map((item) => `chk-${item.name}-chk`)
+                .join('~')
+              return `libs/${allChunksNames}-mdl-${moduleFileName}-mdl`
             },
             chunks: 'initial',
             priority: -10,
@@ -86,8 +111,10 @@ export default function common(mode) {
               // to be what we need, joining the entry point names
               // together by ~.  We can then determine which chunk/file
               // needs to be loaded by each entry point.
-              const allChunksNames = chunks.map((item) => `[${item.name}]`).join('~')
-              return `libs/${allChunksNames}-${moduleFileName}`
+              const allChunksNames = chunks
+                .map((item) => `chk-${item.name}-chk`)
+                .join('~')
+              return `libs/${allChunksNames}-mdl-${moduleFileName}-mdl`
             },
             chunks: 'all',
             priority: -10,
@@ -107,8 +134,10 @@ export default function common(mode) {
               // to be what we need, joining the entry point names
               // together by ~.  We can then determine which chunk/file
               // needs to be loaded by each entry point.
-              const allChunksNames = chunks.map((item) => `[${item.name}]`).join('~')
-              return `commons/${allChunksNames}-${moduleFileName}`
+              const allChunksNames = chunks
+                .map((item) => `chk-${item.name}-chk`)
+                .join('~')
+              return `commons/${allChunksNames}-mdl-${moduleFileName}-mdl`
             },
             // Automatically split all code as needed into separate files.
             chunks: 'all',
@@ -221,7 +250,11 @@ export default function common(mode) {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'css/[name].css',
+        filename: (pathData) => {
+          const names = Object.keys(blocksEntries)
+          if (names.includes(pathData.chunk.name)) return 'css/blocks/[name].css'
+          return 'css/[name].css'
+        },
         chunkFilename: '[name].css',
       }),
       /*new CopyWebpackPlugin({
