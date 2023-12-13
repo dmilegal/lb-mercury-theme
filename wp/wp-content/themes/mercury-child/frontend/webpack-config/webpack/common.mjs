@@ -40,7 +40,10 @@ export default function common(mode) {
     context: paths.root,
     entry: {
       main: {
-        import: [`${paths.src}/main/app.ts`],
+        import: [`${paths.src}/main/main.ts`],
+      },
+      editor: {
+        import: [`${paths.src}/editor/editor.ts`],
       },
       ...blocksEntries,
     },

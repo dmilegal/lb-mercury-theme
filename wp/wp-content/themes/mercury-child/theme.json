@@ -6,113 +6,113 @@
         "color": {
             "palette": [
                 {
-                    "name": "Gray 25",
-                    "slug": "gray-25",
+                    "name": "Site 25",
+                    "slug": "site-25",
                     "color": "#FCFCFD"
                 },
                 {
-                    "name": "Gray 50",
-                    "slug": "gray-50",
+                    "name": "Site 50",
+                    "slug": "site-50",
                     "color": "#F9FAFB"
                 },
                 {
-                    "name": "Gray 100",
-                    "slug": "gray-100",
+                    "name": "Site 100",
+                    "slug": "site-100",
                     "color": "#F2F4F7"
                 },
                 {
-                    "name": "Gray 200",
-                    "slug": "gray-200",
+                    "name": "Site 200",
+                    "slug": "site-200",
                     "color": "#E4E7EC"
                 },
                 {
-                    "name": "Gray 300",
-                    "slug": "gray-300",
+                    "name": "Site 300",
+                    "slug": "site-300",
                     "color": "#D0D5DD"
                 },
                 {
-                    "name": "Gray 400",
-                    "slug": "gray-400",
+                    "name": "Site 400",
+                    "slug": "site-400",
                     "color": "#98A2B3"
                 },
                 {
-                    "name": "Gray 500",
-                    "slug": "gray-500",
+                    "name": "Site 500",
+                    "slug": "site-500",
                     "color": "#667085"
                 },
                 {
-                    "name": "Gray 600",
-                    "slug": "gray-600",
+                    "name": "Site 600",
+                    "slug": "site-600",
                     "color": "#475467"
                 },
                 {
-                    "name": "Gray 700",
-                    "slug": "gray-700",
+                    "name": "Site 700",
+                    "slug": "site-700",
                     "color": "#344054"
                 },
                 {
-                    "name": "Gray 800",
-                    "slug": "gray-800",
+                    "name": "Site 800",
+                    "slug": "site-800",
                     "color": "#1D2939"
                 },
                 {
-                    "name": "Gray 900",
-                    "slug": "gray-900",
+                    "name": "Site 900",
+                    "slug": "site-900",
                     "color": "#101828"
                 },
                 {
-                    "name": "Primary 25",
-                    "slug": "primary-25",
+                    "name": "Brand 25",
+                    "slug": "brand-25",
                     "color": "#FCFAFF"
                 },
                 {
-                    "name": "Primary 50",
-                    "slug": "primary-50",
+                    "name": "Brand 50",
+                    "slug": "brand-50",
                     "color": "#F9F5FF"
                 },
                 {
-                    "name": "Primary 100",
-                    "slug": "primary-100",
+                    "name": "Brand 100",
+                    "slug": "brand-100",
                     "color": "#F4EBFF"
                 },
                 {
-                    "name": "Primary 200",
-                    "slug": "primary-200",
+                    "name": "Brand 200",
+                    "slug": "brand-200",
                     "color": "#E9D7FE"
                 },
                 {
-                    "name": "Primary 300",
-                    "slug": "primary-300",
+                    "name": "Brand 300",
+                    "slug": "brand-300",
                     "color": "#D6BBFB"
                 },
                 {
-                    "name": "Primary 400",
-                    "slug": "primary-400",
+                    "name": "Brand 400",
+                    "slug": "brand-400",
                     "color": "#B692F6"
                 },
                 {
-                    "name": "Primary 500",
-                    "slug": "primary-500",
+                    "name": "Brand 500",
+                    "slug": "brand-500",
                     "color": "#9E77ED"
                 },
                 {
-                    "name": "Primary 600",
-                    "slug": "primary-600",
+                    "name": "Brand 600",
+                    "slug": "brand-600",
                     "color": "#7F56D9"
                 },
                 {
-                    "name": "Primary 700",
-                    "slug": "primary-700",
+                    "name": "Brand 700",
+                    "slug": "brand-700",
                     "color": "#6941C6"
                 },
                 {
-                    "name": "Primary 800",
-                    "slug": "primary-800",
+                    "name": "Brand 800",
+                    "slug": "brand-800",
                     "color": "#53389E"
                 },
                 {
-                    "name": "Primary 900",
-                    "slug": "primary-900",
+                    "name": "Brand 900",
+                    "slug": "brand-900",
                     "color": "#42307D"
                 },
                 {

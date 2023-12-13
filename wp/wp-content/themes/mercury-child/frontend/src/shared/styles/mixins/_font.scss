@@ -3,7 +3,7 @@
 **/
 
 /// Convert px to rem font-size
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {String} $size - yor font-size in px
 @mixin font-size($size) {
@@ -11,15 +11,25 @@
 }
 
 /// Convert px to rem font-size
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {String} $size - yor font-size in px
 @function font-size($size) {
   @return $size / $DEFAULT_FONT_SIZE * 1rem;
 }
 
+/// Convert px to rem font-size
+/// @author NN
+/// @access public
+/// @param {String} $size - font size
+@mixin get-text-styles($size) {
+  font-size: var(--wp--preset--font-size--$size);
+  line-height: var(--wp--custom--line-height--$size);
+  letter-spacing: var(--wp--custom--letter-spacing--$size, inherit);
+}
+
 /// Convert photoshop letter spacing to css letter spacing
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {Number} $points - photoshop points
 @mixin letter-spacing($points) {
@@ -27,7 +37,7 @@
 }
 
 /// Convert photoshop letter spacing to css letter spacing
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {Number} $points - photoshop points
 @function letter-spacing($points) {
@@ -35,7 +45,7 @@
 }
 
 /// Convert px to em line height
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {Number} $lh - line height in px that you want
 /// @param {Number} $fs - relative font size
@@ -44,7 +54,7 @@
 }
 
 /// Convert px to em line height
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {Number} $lh - line height in px that you want
 /// @param {Number} $fs - relative font size
@@ -53,7 +63,7 @@
 }
 
 /// Convert px to em
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {Number} $p1 - first size
 /// @param {Number} $p2 - second size
@@ -62,7 +72,7 @@
 }
 
 /// Get font config for selected text type
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {String} $level - level size (see text-settings map at _variables.scss)
 @mixin text-setting($level) {
@@ -70,7 +80,7 @@
 }
 
 /// Truncate words
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {String} $truncation-boundary - container boundary size
 @mixin truncate($truncation-boundary) {
@@ -81,7 +91,7 @@
 }
 
 /// Reset tag <a> styles
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {Boolean} $hover - if true - enable hover text decoration
 @mixin reset-link($hover: false) {
@@ -95,7 +105,7 @@
 }
 
 /// Generate fontawesome icon
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {String} $icon - icon number
 /// @param {Boolean} $after - if true - will be used :after for icon container
@@ -112,7 +122,7 @@
 }
 
 /// Generate font params
-/// @author Evgeniy Tsvigun
+/// @author NN
 /// @access public
 /// @param {String} $icon - icon number
 /// @param {Boolean} $after - if true - will be used :after for icon container

@@ -5,6 +5,7 @@ $style = $args['className'] ?? '';
  * sm | md | lg | xl | 2xl
  */
 $size = $args['size'] ?? 'md';
+$color = $args['color'] ?? 'brand-600';
 $content = $args['content'] ?? '';
 $prefix = $args['prefix'] ?? '';
 $href = $args['href'] ?? null;

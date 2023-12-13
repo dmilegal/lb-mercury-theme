@@ -12,8 +12,6 @@ require_once 'settings/settings.php';
 require_once 'blocks/blocks.php';
 require_once 'inc/inc.php';
 
-
-
 # showing hreflang meta tags in the multisite subsites
 add_action('wp_head', function () {
 	if (!is_multisite() || is_404())
@@ -61,7 +59,7 @@ add_action('wp_head', function () {
 	endforeach;
 });
 
-
+// Disable css and js
 function disable_old_assets()
 {
 	wp_deregister_style('mercury-style');
@@ -69,8 +67,9 @@ function disable_old_assets()
 	wp_deregister_style('mercury-googlefonts');
 }
 add_action('wp_enqueue_scripts', 'disable_old_assets', 25);
-// For custom functions and hooks...
-function include_main_assets()
+
+// For custom css and js
+function enqueue_main_assets()
 {
 	foreach (['js/libs/', 'css/libs/'] as $path) {
 		$dir = get_stylesheet_directory() . '/frontend/dist/' . $path;
@@ -96,11 +95,16 @@ function include_main_assets()
 	//wp_enqueue_script( 'jquery-fix', get_stylesheet_directory_uri() . '/js/libs/jquery-fix.js', array() );
 	//wp_enqueue_script('child-scripts', get_stylesheet_directory_uri() . '/js/child-scripts.js', array('jquery'));
 }
-add_action('wp_enqueue_scripts', 'include_main_assets', 25);
+add_action('wp_enqueue_scripts', 'enqueue_main_assets', 25);
 
+// enqueue editor styles
+function enqueue_block_editor_styles() {
+	wp_enqueue_style( 'lb-editor', get_stylesheet_directory_uri() . '/frontend/dist/css/editor.css', [], filemtime(get_theme_file_path('frontend/dist/css/editor.css')), 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'enqueue_block_editor_styles' );
 
 // for dynamic template parts
-function include_dynamic_assets()
+function register_dynamic_assets()
 {
 	foreach (['js/libs/', 'css/libs/', 'js/commons/', 'css/commons/'] as $path) {
 		$dir = get_stylesheet_directory() . '/frontend/dist/' . $path;
@@ -109,7 +113,7 @@ function include_dynamic_assets()
 		register_assets_by_path($dir . "*.js");
 	}
 }
-add_action('init', 'include_dynamic_assets');
+add_action('init', 'register_dynamic_assets');
 
 function enqueue_assets_by_path($assetPath)
 {
@@ -142,7 +146,6 @@ function register_assets_by_path($assetPath)
 			]);
 	}
 }
-
 
 function include_dynamic_child_scripts()
 {

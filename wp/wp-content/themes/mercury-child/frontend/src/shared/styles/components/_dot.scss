@@ -1,0 +1,17 @@
+.lbc-dot {
+  background-color: var(--wp--preset--color--success-500);
+  border-radius: 50%;
+  display: inline-block;
+  &:where(.sm) {
+    width: 6px;
+    height: 6px;
+  }
+  &:where(.md) {
+    width: 8px;
+    height: 8px;
+  }
+  &:where(.lg) {
+    width: 10px;
+    height: 10px;
+  }
+}
