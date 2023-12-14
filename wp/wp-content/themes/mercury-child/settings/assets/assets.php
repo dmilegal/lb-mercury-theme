@@ -34,7 +34,7 @@ function enqueue_block_editor_styles()
 }
 add_action('enqueue_block_editor_assets', 'enqueue_block_editor_styles');
 
-// for dynamic template parts
+// register all assets
 function register_all_assets()
 {
   foreach (['js/libs/', 'css/libs/', 'js/', 'css/', 'js/blocks/', 'css/blocks/', 'js/commons/', 'css/commons/'] as $path) {

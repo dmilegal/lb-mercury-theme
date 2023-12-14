@@ -12,4 +12,7 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/disadvantages' );
 
     register_block_type( __DIR__ . '/our-team' );
+
+    register_block_type( __DIR__ . '/button' );
 }
+

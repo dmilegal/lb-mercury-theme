@@ -7,6 +7,30 @@
 	'size' => 'md',
 	'content' => 'Button CTA'
  ] );
+ get_template_part( 'theme-parts/components/atoms/button', null, [
+	'size' => 'md',
+	'color' => 'brand-50',
+	'content' => 'Button CTA'
+ ] );
+ get_template_part( 'theme-parts/components/atoms/button', null, [
+	'size' => 'md',
+	'variant' => 'outlined',
+	'color' => 'site-700',
+	'content' => 'Button CTA'
+ ] );
+ get_template_part( 'theme-parts/components/atoms/button', null, [
+	'size' => 'md',
+	'variant' => 'text',
+	'color' => 'brand-700',
+	'content' => 'Button CTA'
+ ] );
+ get_template_part( 'theme-parts/components/atoms/button', null, [
+	'size' => 'md',
+	'variant' => 'inline',
+	'color' => 'brand-700',
+	'content' => 'Button CTA'
+ ] );
+
  ?>
 <?php
 	if(!is_author())

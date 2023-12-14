@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/button",
+  "title": "Button",
+  "description": "",
+  "style": [ "button" ],
+  "editorStyle": [],
+  "category": "formatting",
+  "icon": "groups",
+  "keywords": ["button", "link"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "button.php"
+  },
+  "align": "full"
+}
