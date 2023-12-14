@@ -37,6 +37,10 @@
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   }
 
+  &-wrapper {
+    display: contents;
+  }
+
   &--size_sm {
     @include get-text-styles('text-sm');
     padding: 8px 14px;

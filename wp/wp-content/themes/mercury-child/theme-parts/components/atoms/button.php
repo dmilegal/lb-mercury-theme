@@ -111,8 +111,7 @@ $additionalAttrs = [];
 $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel'])));
 
 ?>
-<div style="<?= classNames(
-              'display: contents;',
+<div class="lbc-button-wrapper" style="<?= classNames(
               $variant == 'contained' ? getButtonVariantContained($color) : '',
               $variant == 'outlined' ? getButtonVariantOutlined($color) : '',
               $variant == 'text' ? getButtonVariantText($color) : '',
