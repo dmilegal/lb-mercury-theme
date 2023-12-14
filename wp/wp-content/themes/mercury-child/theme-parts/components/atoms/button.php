@@ -6,6 +6,7 @@ $style = $args['className'] ?? '';
  */
 $size = $args['size'] ?? 'md';
 $color = $args['color'] ?? 'brand-600';
+$variant = $args['variant'] ?? 'contained';
 $content = $args['content'] ?? '';
 $prefix = $args['prefix'] ?? '';
 $href = $args['href'] ?? null;
@@ -19,7 +20,13 @@ $additionalAttrs = [];
 $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['style', 'href', 'target', 'rel'])));
 
 ?>
-<<?= $tag ?> class="<?= classNames('lbc-button', $className, $size) ?>" <?= $attrsStr ?>>
+<<?= $tag ?> class="<?= classNames(
+                      'lbc-button',
+                      $className,
+                      'lbc-button--size_' . $size,
+                      'lbc-button--color_' . $color,
+                      'lbc-button--variant_' . $variant
+                    ) ?>" <?= $attrsStr ?>>
   <? if ($prefix) { ?>
     <span class="lbc-button__prefix">
       <?= $prefix ?>

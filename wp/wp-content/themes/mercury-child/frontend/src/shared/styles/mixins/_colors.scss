@@ -1,0 +1,20 @@
+@use "sass:string";
+@use 'sass:list';
+
+/// Get contrast color by color name
+/// https://www.figma.com/file/10zhewKmqwcHCSuyzvJqNR/%E2%9D%96-Casino-UI?type=design&node-id=6436-54363&mode=design&t=LJjiWJwWrzIAhbOR-0
+/// @author NN
+/// @access public
+/// @param {String} $size - yor font-size in px
+@function get-contrast-text-color($colorName) {
+  @debug $colorName;
+  $list: string.split($colorName, '-');
+  $offset: nth($list, -1);
+  $newList: remove-nth($list, -1);
+
+  @if str-to-num($offset) > 200 {
+    @return 'white';
+  }
+
+  @return implode(list.append($newList, 700), '-');
+}

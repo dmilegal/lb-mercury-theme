@@ -23,9 +23,9 @@
 /// @access public
 /// @param {String} $size - font size
 @mixin get-text-styles($size) {
-  font-size: var(--wp--preset--font-size--$size);
-  line-height: var(--wp--custom--line-height--$size);
-  letter-spacing: var(--wp--custom--letter-spacing--$size, inherit);
+  font-size: var(--wp--preset--font-size--#{$size});
+  line-height: var(--wp--custom--line-height--#{$size});
+  letter-spacing: var(--wp--custom--letter-spacing--#{$size}, inherit);
 }
 
 /// Convert photoshop letter spacing to css letter spacing

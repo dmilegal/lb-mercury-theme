@@ -88,6 +88,7 @@ Set the default cursor for buttons.
 button,
 [role="button"] {
   cursor: pointer;
+  font-family: inherit;
 }
 
 /*

@@ -1,5 +1,13 @@
 <!-- Footer Start -->
-
+<?
+ get_template_part( 'theme-parts/components/atoms/dot', null, [
+	'size' => 'sm'
+ ] );
+ get_template_part( 'theme-parts/components/atoms/button', null, [
+	'size' => 'md',
+	'content' => 'Button CTA'
+ ] );
+ ?>
 <?php
 	if(!is_author())
 		echo do_shortcode( '[show_wpb_author_info_box]' );
