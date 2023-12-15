@@ -14,9 +14,9 @@
   column-gap: var(--wp--preset--spacing--60);
   background-color: var(--lbc-button--background--color);
   transition:
-    background-color 300ms ease-in-out,
-    color 300ms ease-in-out,
-    border-color 300ms ease-in-out;
+    background-color 170ms ease-in-out,
+    color 170ms ease-in-out,
+    border-color 170ms ease-in-out;
   outline-width: 4px;
   outline-color: transparent;
 
@@ -57,13 +57,60 @@
     @include get-text-styles('text-md');
     padding: 12px 20px;
   }
-  &--size_xxl {
+  &--size_2xl {
     @include get-text-styles('text-lg');
     padding: 16px 28px;
     column-gap: var(--wp--preset--spacing--70);
   }
 
-  &--variant_contained {
+  @each $variant in 'primary', 'secondary', 'text', 'inline' {
+    @each $colorName in $colorNames {
+      &--variant_#{$variant}:where(#{'&--color_' + $colorName}) {
+        @if $variant == 'primary' {
+          --lbc-button--background--color: var(
+            --wp--preset--color--#{$colorName}-#{$targetOffsets - 100}
+          );
+          --lbc-button--background--color--hover: var(
+            --wp--preset--color--#{$colorName}-#{$targetOffsets}
+          );
+          --lbc-button--background--color--disabled: var(
+            --wp--preset--color--#{$colorName}-200
+          );
+          --lbc-button--color: var(--wp--preset--color--white);
+          --lbc-button--color--disabled: var(--wp--preset--color--white);
+          --lbc-button--outline--color--focus: var(
+            --wp--preset--color--#{$colorName}-100
+          );
+        } @else if $variant == 'secondary' {
+          --lbc-button--background--color: var(--wp--preset--color--#{$colorName}-50);
+          --lbc-button--background--color--hover: var(
+            --wp--preset--color--#{$colorName}-100
+          );
+          --lbc-button--background--color--disabled: var(
+            --wp--preset--color--#{$colorName}-25
+          );
+          --lbc-button--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+          --lbc-button--color--disabled: var(--wp--preset--color--#{$colorName}-300);
+          --lbc-button--outline--color--focus: var(
+            --wp--preset--color--#{$colorName}-100
+          );
+        } @else if $variant == 'text' {
+          --lbc-button--background--color--hover: var(
+            --wp--preset--color--#{$colorName}-50
+          );
+          --lbc-button--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+        } @else if $variant == 'inline' {
+          --lbc-button--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+          --lbc-button--color--hover: var(
+            --wp--preset--color--#{$colorName}-#{$targetOffsets + 100}
+          );
+        }
+      }
+    }
+  }
+
+  &--variant_primary,
+  &--variant_secondary {
     --lbc-button--border--color: var(--lbc-button--background--color);
     --lbc-button--border--color--hover: var(--lbc-button--background--color--hover);
     --lbc-button--border--color--disabled: var(--lbc-button--background--color--disabled);
@@ -72,9 +119,18 @@
 
   &--variant_outlined {
     --lbc-button--background--color: var(--wp--preset--color--white);
+    --lbc-button--background--color--hover: var(--wp--preset--color--site-50);
     --lbc-button--background--color--disabled: var(--wp--preset--color--white);
 
+    --lbc-button--border--color: var(--wp--preset--color--site-300);
     --lbc-button--border--color--hover: var(--lbc-button--border--color);
+    --lbc-button--border--color--disabled: var(--wp--preset--color--site-200);
+
+    --lbc-button--color: var(--wp--preset--color--site-#{$targetOffsets});
+    --lbc-button--color--hover: var(--wp--preset--color--site-#{$targetOffsets + 100});
+    --lbc-button--color--disabled: var(--wp--preset--color--site-300);
+
+    --lbc-button--outline--color--focus: var(--wp--preset--color--site-100);
   }
 
   &--variant_text {
@@ -102,5 +158,4 @@
 
     padding: 0;
   }
-  
 }

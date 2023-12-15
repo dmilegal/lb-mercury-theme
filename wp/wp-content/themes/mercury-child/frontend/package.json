@@ -60,6 +60,7 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
+    "hamburgers": "^1.2.1",
     "swiper": "^11.0.5"
   }
 }

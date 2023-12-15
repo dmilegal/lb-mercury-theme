@@ -5,7 +5,7 @@ function disable_old_assets()
   wp_deregister_style('mercury-media');
   wp_deregister_style('mercury-googlefonts');
 }
-add_action('wp_enqueue_scripts', 'disable_old_assets');
+add_action('wp_enqueue_scripts', 'disable_old_assets', 999);
 
 // Enqueue custom css and js
 function enqueue_main_assets()

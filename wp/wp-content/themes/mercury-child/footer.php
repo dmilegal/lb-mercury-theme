@@ -4,30 +4,32 @@
 	'size' => 'sm'
  ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
-	'size' => 'md',
+	'size' => 'sm',
+	'prefix' => '<i class="icon-circle-1"></i>',
 	'content' => 'Button CTA'
  ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
 	'size' => 'md',
-	'color' => 'brand-50',
-	'content' => 'Button CTA'
+	'variant' => 'secondary',
+	'content' => 'Button CTA',
+	'prefix' => '<i class="icon-circle-1"></i>'
  ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
-	'size' => 'md',
+	'size' => 'lg',
 	'variant' => 'outlined',
-	'color' => 'site-700',
+	'prefix' => '<i class="icon-circle-1"></i>',
 	'content' => 'Button CTA'
  ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
-	'size' => 'md',
+	'size' => 'xl',
 	'variant' => 'text',
-	'color' => 'brand-700',
+	'prefix' => '<i class="icon-circle-1"></i>',
 	'content' => 'Button CTA'
  ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
-	'size' => 'md',
+	'size' => '2xl',
 	'variant' => 'inline',
-	'color' => 'brand-700',
+	'prefix' => '<i class="icon-circle-1"></i>',
 	'content' => 'Button CTA'
  ] );
 

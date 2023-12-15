@@ -60,62 +60,63 @@ $netww_html = (function () {
 
 ?>
 
-<div class="space-header-height relative <?php if (get_theme_mod('mercury_enable_top_bar')) { ?> enable-top-bar<?php } ?>">
-	<div class="space-header-wrap space-header-float relative">
-		<?php if (get_theme_mod('mercury_enable_top_bar')) { ?>
-			<div class="space-header-top relative">
-				<div class="space-header-top-ins space-wrapper relative">
-					<div class="space-header-top-menu box-75 left relative">
-						<?php
-						if (has_nav_menu('top-menu')) {
-							wp_nav_menu(array('container' => 'ul', 'menu_class' => 'space-top-menu', 'theme_location' => 'top-menu', 'depth' => 1, 'fallback_cb' => '__return_empty_string'));
-						}
-						?>
-					</div>
-					<div class="space-header-top-soc box-25 right text-right relative">
-						<?php get_template_part('/theme-parts/social-icons'); ?>
-					</div>
-				</div>
-			</div>
-		<?php } ?>
-		<div class="space-header relative">
-			<div class="space-header-ins space-wrapper relative">
-				<div class="space-header-logo box-25 left relative">
-					<div class="space-header-logo-ins relative">
-						<?php
-						$site_name = esc_attr(get_bloginfo('name'));
-						$custom_logo_id = get_theme_mod('custom_logo');
+<div class="lb-header">
+	<div class="lb-header__inner">
+		<div class="lb-header__grid">
+			<div class="lb-header__col">
+				<div class="lb-header__logo-wrapper">
+					<?php
+					$site_name = esc_attr(get_bloginfo('name'));
+					$custom_logo_id = get_theme_mod('custom_logo');
 
-						if (has_custom_logo()) {
-							echo '<a href="' . esc_url(home_url('/')) . '" title="' . $site_name . '">' . wp_get_attachment_image($custom_logo_id, 'mercury-custom-logo', "", array("alt" => $site_name)) . '</a>';
-						} else {
-							echo '<a href="' . esc_url(home_url('/')) . '" title="' . esc_attr(get_bloginfo('name')) . '" class="text-logo">' . esc_html(get_bloginfo('name')) . '</a><span>' . esc_html(get_bloginfo('description')) . '</span>';
-						}
-						?>
-					</div>
+					if (has_custom_logo()) { ?>
+						<a href="<?= esc_url(home_url('/')) ?>" class="lb-header__home-link" title="<?= $site_name ?>">
+							<?= wp_get_attachment_image($custom_logo_id, [260, 0], false, array("alt" => $site_name, 'class' => 'lb-header__logo')) ?>
+						</a>
+					<? } else { ?>
+						<a href="<?= esc_url(home_url('/')) ?>" title="<?= esc_attr(get_bloginfo('name')) ?>" class="lb-header__home-link">
+							<?= esc_html(get_bloginfo('name')) ?>
+						</a>
+					<? } ?>
 				</div>
 				<div class="space-header-menu box-75 left relative">
 					<?php
 					if (has_nav_menu('main-menu')) {
 						wp_nav_menu(array('container' => 'ul', 'menu_class' => 'main-menu', 'theme_location' => 'main-menu', 'depth' => 3, 'fallback_cb' => '__return_empty_string'));
 					}
-
-
 					echo $netww_html;
 					?>
 
-					<div class="space-header-search absolute">
+				</div>
+			</div>
+			<div class="lb-header__col">
+				<div class="lb-header__search">
+					<button class="lb-header-search__search-btn">
 						<i class="fas fa-search desktop-search-button"></i>
+					</button>
+					<div class="lb-header__search-modal">
+						<div class="lb-header__search-form">
+							<?php get_search_form(); ?>
+						</div>
+						<button class="lb-header-search__search-close">
+							<i class="fas fa-search desktop-search-button"></i>
+						</button>
 					</div>
-					<?php if (class_exists('Custom_Lang_Switcher'))
-						echo do_shortcode('[custom-lang-switcher]'); ?>
-					<div class="space-mobile-menu-icon absolute">
-						<div></div>
-						<div></div>
-						<div></div>
+				</div>
+
+				<?php if (class_exists('Custom_Lang_Switcher'))
+					echo do_shortcode('[custom-lang-switcher]'); ?>
+
+				<div id="mobile-header-trigger" class="lb-header__hamburger hamburger hamburger--slider" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+
+
+
 	</div>
 </div>

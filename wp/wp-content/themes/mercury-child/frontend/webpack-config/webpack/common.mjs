@@ -123,30 +123,7 @@ export default function common(mode) {
             priority: -10,
             reuseExistingChunk: true,
           },
-          commons: {
-            name: function (module, chunks, cacheGroupKey) {
-              const spl = module.identifier().split('.')
-              spl.pop()
-              const moduleFileName = spl
-                .join('.')
-                .split('/')
-                .reduceRight((item) => item)
-
-              // This is taken from the documentation but there
-              // seems to be no great explaination but it seems
-              // to be what we need, joining the entry point names
-              // together by ~.  We can then determine which chunk/file
-              // needs to be loaded by each entry point.
-              const allChunksNames = chunks
-                .map((item) => `chk-${item.name}-chk`)
-                .join('~')
-              return `commons/${allChunksNames}-mdl-${moduleFileName}-mdl`
-            },
-            // Automatically split all code as needed into separate files.
-            chunks: 'all',
-            priority: -20,
-            reuseExistingChunk: true,
-          },
+          default: false,
         },
       },
     },
