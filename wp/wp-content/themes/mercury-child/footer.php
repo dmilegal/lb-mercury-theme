@@ -1,5 +1,6 @@
 <!-- Footer Start -->
 <?
+var_dump(get_theme_mod('main_ui_color'));
  get_template_part( 'theme-parts/components/atoms/dot', null, [
 	'size' => 'sm'
  ] );
@@ -31,6 +32,15 @@
 	'variant' => 'inline',
 	'prefix' => '<i class="icon-circle-1"></i>',
 	'content' => 'Button CTA'
+ ] );
+ get_template_part( 'theme-parts/components/atoms/button', null, [
+	'size' => '2xl',
+	'prefix' => '<i class="icon-circle-1"></i>',
+	'content' => 'Button CTA'
+ ] );
+ get_template_part( 'theme-parts/components/atoms/button', null, [
+	'size' => '2xl',
+	'prefix' => '<i class="icon-circle-1"></i>',
  ] );
 
  ?>

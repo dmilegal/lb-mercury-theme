@@ -1,3 +1,6 @@
 @import 'fonts/poppins/stylesheet.css';
 @import 'fonts/lhicon/stylesheet.css';
-@import '@/shared/styles/main.scss';
+
+:where(.editor-styles-wrapper) {
+  @import '@/shared/styles/main.scss';
+}

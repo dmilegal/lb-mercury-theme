@@ -49,19 +49,41 @@ function legalbet_customizer_init($wp_customize)
 
 function theme_colors_customize_register($wp_customize)
 {
-
-    $wp_customize->add_setting('main_color', array(
-        'type'          => 'theme_mod',
-        'transport'     => 'refresh',
+    $settings = WP_Theme_JSON_Resolver::get_theme_data();
+    $data = $settings->get_data();
+    $palette =  $data['settings']['color']['palette'];
+    $groups = array_unique(
+        array_map(fn ($color) => $color['group'], array_filter($palette, fn ($color) => isset($color['group'])))
+    );
+    $choices = array_merge(...array_map(
+        fn ($group) => [
+            $group => ucfirst(preg_replace("![^a-z0-9]+!i", "-", $group))
+        ],
+        $groups
     ));
-    $wp_customize->add_control('main_color_control', array(
-        'label'      => 'Main color',
+
+    $wp_customize->add_setting('main_ui_color', array(
+        'capability'    => 'edit_theme_options',
+        'default'       => $groups[0]
+    ));
+
+    $wp_customize->add_control('main_ui_color', array(
+        'label'      => 'Main UI color',
         'section'    => 'colors',
-        'settings'   => 'main_color',
+        'settings'   => 'main_ui_color',
         'type'       => 'radio',
-        'choices'    => array(
-            'site' => 'Site',
-        ),
+        'choices'    => $choices,
     ));
 }
 add_action('customize_register', 'theme_colors_customize_register');
+
+function unregister_customize_elements($wp_customize)
+{
+    // parent theme color control
+    $wp_customize->remove_control('main_color');
+    $wp_customize->remove_control('second_color');
+    $wp_customize->remove_control('stars_color');
+
+
+}
+add_action('customize_register', 'unregister_customize_elements', 999);

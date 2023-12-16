@@ -60,7 +60,7 @@ $netww_html = (function () {
 
 ?>
 
-<div class="lb-header">
+<div class="lb-header lb-header--color_<?= get_theme_mod('main_ui_color') ?>">
 	<div class="lb-header__inner">
 		<div class="lb-header__grid">
 			<div class="lb-header__col">

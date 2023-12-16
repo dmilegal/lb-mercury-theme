@@ -6,114 +6,136 @@
         "color": {
             "palette": [
                 {
-                    "name": "Site 25",
-                    "slug": "site-25",
-                    "color": "#FCFCFD"
+                    "name": "Gray 25",
+                    "slug": "gray-25",
+                    "color": "#FCFCFD",
+                    "group": "gray"
                 },
                 {
-                    "name": "Site 50",
-                    "slug": "site-50",
-                    "color": "#F9FAFB"
+                    "name": "Gray 50",
+                    "slug": "gray-50",
+                    "color": "#F9FAFB",
+                    "group": "gray"
                 },
                 {
-                    "name": "Site 100",
-                    "slug": "site-100",
-                    "color": "#F2F4F7"
+                    "name": "Gray 100",
+                    "slug": "gray-100",
+                    "color": "#F2F4F7",
+                    "group": "gray"
                 },
                 {
-                    "name": "Site 200",
-                    "slug": "site-200",
-                    "color": "#E4E7EC"
+                    "name": "Gray 200",
+                    "slug": "gray-200",
+                    "color": "#E4E7EC",
+                    "group": "gray"
                 },
                 {
-                    "name": "Site 300",
-                    "slug": "site-300",
-                    "color": "#D0D5DD"
+                    "name": "Gray 300",
+                    "slug": "gray-300",
+                    "color": "#D0D5DD",
+                    "group": "gray"
                 },
                 {
-                    "name": "Site 400",
-                    "slug": "site-400",
-                    "color": "#98A2B3"
+                    "name": "Gray 400",
+                    "slug": "gray-400",
+                    "color": "#98A2B3",
+                    "group": "gray"
                 },
                 {
-                    "name": "Site 500",
-                    "slug": "site-500",
-                    "color": "#667085"
+                    "name": "Gray 500",
+                    "slug": "gray-500",
+                    "color": "#667085",
+                    "group": "gray"
                 },
                 {
-                    "name": "Site 600",
-                    "slug": "site-600",
-                    "color": "#475467"
+                    "name": "Gray 600",
+                    "slug": "gray-600",
+                    "color": "#475467",
+                    "group": "gray"
                 },
                 {
-                    "name": "Site 700",
-                    "slug": "site-700",
-                    "color": "#344054"
+                    "name": "Gray 700",
+                    "slug": "gray-700",
+                    "color": "#344054",
+                    "group": "gray"
                 },
                 {
-                    "name": "Site 800",
-                    "slug": "site-800",
-                    "color": "#1D2939"
+                    "name": "Gray 800",
+                    "slug": "gray-800",
+                    "color": "#1D2939",
+                    "group": "gray"
                 },
                 {
-                    "name": "Site 900",
-                    "slug": "site-900",
-                    "color": "#101828"
+                    "name": "Gray 900",
+                    "slug": "gray-900",
+                    "color": "#101828",
+                    "group": "gray"
                 },
                 {
-                    "name": "Brand 25",
-                    "slug": "brand-25",
-                    "color": "#FCFAFF"
+                    "name": "Primary 25",
+                    "slug": "primary-25",
+                    "color": "#FCFAFF",
+                    "group": "primary"
                 },
                 {
-                    "name": "Brand 50",
-                    "slug": "brand-50",
-                    "color": "#F9F5FF"
+                    "name": "Primary 50",
+                    "slug": "primary-50",
+                    "color": "#F9F5FF",
+                    "group": "primary"
                 },
                 {
-                    "name": "Brand 100",
-                    "slug": "brand-100",
-                    "color": "#F4EBFF"
+                    "name": "Primary 100",
+                    "slug": "primary-100",
+                    "color": "#F4EBFF",
+                    "group": "primary"
                 },
                 {
-                    "name": "Brand 200",
-                    "slug": "brand-200",
-                    "color": "#E9D7FE"
+                    "name": "Primary 200",
+                    "slug": "primary-200",
+                    "color": "#E9D7FE",
+                    "group": "primary"
                 },
                 {
-                    "name": "Brand 300",
-                    "slug": "brand-300",
-                    "color": "#D6BBFB"
+                    "name": "Primary 300",
+                    "slug": "primary-300",
+                    "color": "#D6BBFB",
+                    "group": "primary"
                 },
                 {
-                    "name": "Brand 400",
-                    "slug": "brand-400",
-                    "color": "#B692F6"
+                    "name": "Primary 400",
+                    "slug": "primary-400",
+                    "color": "#B692F6",
+                    "group": "primary"
                 },
                 {
-                    "name": "Brand 500",
-                    "slug": "brand-500",
-                    "color": "#9E77ED"
+                    "name": "Primary 500",
+                    "slug": "primary-500",
+                    "color": "#9E77ED",
+                    "group": "primary"
                 },
                 {
-                    "name": "Brand 600",
-                    "slug": "brand-600",
-                    "color": "#7F56D9"
+                    "name": "Primary 600",
+                    "slug": "primary-600",
+                    "color": "#7F56D9",
+                    "group": "primary"
                 },
                 {
-                    "name": "Brand 700",
-                    "slug": "brand-700",
-                    "color": "#6941C6"
+                    "name": "Primary 700",
+                    "slug": "primary-700",
+                    "color": "#6941C6",
+                    "group": "primary"
                 },
                 {
-                    "name": "Brand 800",
-                    "slug": "brand-800",
-                    "color": "#53389E"
+                    "name": "Primary 800",
+                    "slug": "primary-800",
+                    "color": "#53389E",
+                    "group": "primary"
                 },
                 {
-                    "name": "Brand 900",
-                    "slug": "brand-900",
-                    "color": "#42307D"
+                    "name": "Primary 900",
+                    "slug": "primary-900",
+                    "color": "#42307D",
+                    "group": "primary"
                 },
                 {
                     "name": "Error 25",
@@ -123,162 +145,195 @@
                 {
                     "name": "Error 50",
                     "slug": "error-50",
-                    "color": "#FEF3F2"
+                    "color": "#FEF3F2",
+                    "group": "error"
                 },
                 {
                     "name": "Error 100",
                     "slug": "error-100",
-                    "color": "#FEE4E2"
+                    "color": "#FEE4E2",
+                    "group": "error"
                 },
                 {
                     "name": "Error 200",
                     "slug": "error-200",
-                    "color": "#FECDCA"
+                    "color": "#FECDCA",
+                    "group": "error"
                 },
                 {
                     "name": "Error 300",
                     "slug": "error-300",
-                    "color": "#FDA29B"
+                    "color": "#FDA29B",
+                    "group": "error"
                 },
                 {
                     "name": "Error 400",
                     "slug": "error-400",
-                    "color": "#F97066"
+                    "color": "#F97066",
+                    "group": "error"
                 },
                 {
                     "name": "Error 500",
                     "slug": "error-500",
-                    "color": "#F04438"
+                    "color": "#F04438",
+                    "group": "error"
                 },
                 {
                     "name": "Error 600",
                     "slug": "error-600",
-                    "color": "#D92D20"
+                    "color": "#D92D20",
+                    "group": "error"
                 },
                 {
                     "name": "Error 700",
                     "slug": "error-700",
-                    "color": "#B42318"
+                    "color": "#B42318",
+                    "group": "error"
                 },
                 {
                     "name": "Error 800",
                     "slug": "error-800",
-                    "color": "#912018"
+                    "color": "#912018",
+                    "group": "error"
                 },
                 {
                     "name": "Error 900",
                     "slug": "error-900",
-                    "color": "#7A271A"
+                    "color": "#7A271A",
+                    "group": "error"
                 },
                 {
                     "name": "Warning 25",
                     "slug": "warning-25",
-                    "color": "#FFFCF5"
+                    "color": "#FFFCF5",
+                    "group": "warning"
                 },
                 {
                     "name": "Warning 50",
                     "slug": "warning-50",
-                    "color": "#FFFAEB"
+                    "color": "#FFFAEB",
+                    "group": "warning"
                 },
                 {
                     "name": "Warning 100",
                     "slug": "warning-100",
-                    "color": "#FEF0C7"
+                    "color": "#FEF0C7",
+                    "group": "warning"
                 },
                 {
                     "name": "Warning 200",
                     "slug": "warning-200",
-                    "color": "#FEDF89"
+                    "color": "#FEDF89",
+                    "group": "warning"
                 },
                 {
                     "name": "Warning 300",
                     "slug": "warning-300",
-                    "color": "#FEC84B"
+                    "color": "#FEC84B",
+                    "group": "warning"
                 },
                 {
                     "name": "Warning 400",
                     "slug": "warning-400",
-                    "color": "#FDB022"
+                    "color": "#FDB022",
+                    "group": "warning"
                 },
                 {
                     "name": "Warning 500",
                     "slug": "warning-500",
-                    "color": "#F79009"
+                    "color": "#F79009",
+                    "group": "warning"
                 },
                 {
                     "name": "Warning 600",
                     "slug": "warning-600",
-                    "color": "#DC6803"
+                    "color": "#DC6803",
+                    "group": "warning"
                 },
                 {
                     "name": "Warning 700",
                     "slug": "warning-700",
-                    "color": "#B54708"
+                    "color": "#B54708",
+                    "group": "warning"
                 },
                 {
                     "name": "Warning 800",
                     "slug": "warning-800",
-                    "color": "#93370D"
+                    "color": "#93370D",
+                    "group": "warning"
                 },
                 {
                     "name": "Warning 900",
                     "slug": "warning-900",
-                    "color": "#7A2E0E"
+                    "color": "#7A2E0E",
+                    "group": "warning"
                 },
                 {
                     "name": "Success 25",
                     "slug": "success-25",
-                    "color": "#F6FEF9"
+                    "color": "#F6FEF9",
+                    "group": "success"
                 },
                 {
                     "name": "Success 50",
                     "slug": "success-50",
-                    "color": "#ECFDF3"
+                    "color": "#ECFDF3",
+                    "group": "success"
                 },
                 {
                     "name": "Success 100",
                     "slug": "success-100",
-                    "color": "#D1FADF"
+                    "color": "#D1FADF",
+                    "group": "success"
                 },
                 {
                     "name": "Success 200",
                     "slug": "success-200",
-                    "color": "#A6F4C5"
+                    "color": "#A6F4C5",
+                    "group": "success"
                 },
                 {
                     "name": "Success 300",
                     "slug": "success-300",
-                    "color": "#6CE9A6"
+                    "color": "#6CE9A6",
+                    "group": "success"
+                    
                 },
                 {
                     "name": "Success 400",
                     "slug": "success-400",
-                    "color": "#32D583"
+                    "color": "#32D583",
+                    "group": "success"
                 },
                 {
                     "name": "Success 500",
                     "slug": "success-500",
-                    "color": "#12B76A"
+                    "color": "#12B76A",
+                    "group": "success"
                 },
                 {
                     "name": "Success 600",
                     "slug": "success-600",
-                    "color": "#039855"
+                    "color": "#039855",
+                    "group": "success"
                 },
                 {
                     "name": "Success 700",
                     "slug": "success-700",
-                    "color": "#027A48"
+                    "color": "#027A48",
+                    "group": "success"
                 },
                 {
                     "name": "Success 800",
                     "slug": "success-800",
-                    "color": "#05603A"
+                    "color": "#05603A",
+                    "group": "success"
                 },
                 {
                     "name": "Success 900",
                     "slug": "success-900",
-                    "color": "#054F31"
+                    "color": "#054F31",
+                    "group": "success"
                 }
             ]
         },
@@ -363,6 +418,9 @@
             "wideSize": "100%"
         },
         "custom": {
+            "layout": {
+                "contentPadding": "var(--wp--preset--spacing--120)"
+            },
             "lineHeight": {
                 "display-2xl": "5.625rem",
                 "display-xl": "4.5rem",

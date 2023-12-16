@@ -1,5 +1,6 @@
 <?
 function getAssetName($path) {
-  $string = explode('-mdl', (explode('mdl-', $path)[1]))[0];
-  return (!!$string ? $string : pathinfo($path, PATHINFO_FILENAME));
+
+  $string = str_contains($path, '-mdl') && str_contains($path, 'mdl-') ?  explode('-mdl', explode('mdl-', $path)[1])[0] : pathinfo($path, PATHINFO_FILENAME);
+  return $string;
 }

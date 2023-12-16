@@ -18,15 +18,40 @@
   @return $size / $DEFAULT_FONT_SIZE * 1rem;
 }
 
-/// Convert px to rem font-size
+/// Get full text styles
 /// @author NN
 /// @access public
-/// @param {String} $size - font size
+/// @param {String} $size - font size name
 @mixin get-text-styles($size) {
-  font-size: var(--wp--preset--font-size--#{$size});
-  line-height: var(--wp--custom--line-height--#{$size});
-  letter-spacing: var(--wp--custom--letter-spacing--#{$size}, inherit);
+  font-size: font-size-by-name($size);
+  line-height: line-height-by-name($size);
+  letter-spacing: letter-spacing-by-name($size);
 }
+
+/// Get font size by name
+/// @author NN
+/// @access public
+/// @param {String} $size - font size name
+@function font-size-by-name($size) {
+  @return var(--wp--preset--font-size--#{$size});
+}
+
+/// Get line height size by name
+/// @author NN
+/// @access public
+/// @param {String} $size - font size name
+@function line-height-by-name($size) {
+  @return var(--wp--custom--line-height--#{$size});
+}
+
+/// Get letter spacing size by name
+/// @author NN
+/// @access public
+/// @param {String} $size - font size name
+@function letter-spacing-by-name($size) {
+  @return var(--wp--custom--letter-spacing--#{$size}, inherit);
+}
+
 
 /// Convert photoshop letter spacing to css letter spacing
 /// @author NN

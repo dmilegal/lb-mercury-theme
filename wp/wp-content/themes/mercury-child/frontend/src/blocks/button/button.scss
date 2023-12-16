@@ -17,6 +17,7 @@
     background-color 170ms ease-in-out,
     color 170ms ease-in-out,
     border-color 170ms ease-in-out;
+  outline-style: solid;
   outline-width: 4px;
   outline-color: transparent;
 
@@ -37,30 +38,82 @@
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   }
 
-  &-wrapper {
-    display: contents;
+  &__postfix,
+  &__prefix {
+    display: flex;
+    align-items: center;
+
+    & > :where(i) {
+      @extend %icon;
+    }
+  }
+
+  $noIcon: & + '--display_icon';
+
+  &--display_icon {
+    line-height: 1em;
   }
 
   &--size_sm {
-    @include get-text-styles('text-sm');
-    padding: 8px 14px;
+    &:where(:not(#{$noIcon})) {
+      @include get-text-styles('text-sm');
+      padding: 8px 14px;
+    }
+    &:where(#{$noIcon}) {
+      padding: 8px;
+    }
+    :where(%icon) {
+      font-size: calc(#{font-size-by-name('text-sm')} + 6px);
+    }
   }
   &--size_md {
-    @include get-text-styles('text-sm');
-    padding: 10px 16px;
+    &:where(:not(#{$noIcon})) {
+      @include get-text-styles('text-sm');
+      padding: 10px 16px;
+    }
+    &:where(#{$noIcon}) {
+      padding: 10px;
+    }
+    :where(%icon) {
+      font-size: calc(#{font-size-by-name('text-sm')} + 6px);
+    }
   }
   &--size_lg {
-    @include get-text-styles('text-md');
-    padding: 10px 18px;
+    &:where(:not(#{$noIcon})) {
+      @include get-text-styles('text-md');
+      padding: 10px 18px;
+    }
+    &:where(#{$noIcon}) {
+      padding: 12px;
+    }
+    :where(%icon) {
+      font-size: calc(#{font-size-by-name('text-md')} + 4px);
+    }
   }
   &--size_xl {
-    @include get-text-styles('text-md');
-    padding: 12px 20px;
+    &:where(:not(#{$noIcon})) {
+      @include get-text-styles('text-md');
+      padding: 12px 20px;
+    }
+    &:where(#{$noIcon}) {
+      padding: 14px;
+    }
+    :where(%icon) {
+      font-size: calc(#{font-size-by-name('text-md')} + 4px);
+    }
   }
   &--size_2xl {
-    @include get-text-styles('text-lg');
-    padding: 16px 28px;
-    column-gap: var(--wp--preset--spacing--70);
+    &:where(:not(#{$noIcon})) {
+      @include get-text-styles('text-lg');
+      padding: 16px 28px;
+      column-gap: var(--wp--preset--spacing--70);
+    }
+    &:where(#{$noIcon}) {
+      padding: 16px;
+    }
+    :where(%icon) {
+      font-size: calc(#{font-size-by-name('text-lg')} + 6px);
+    }
   }
 
   @each $variant in 'primary', 'secondary', 'text', 'inline' {
@@ -99,10 +152,16 @@
             --wp--preset--color--#{$colorName}-50
           );
           --lbc-button--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+          --lbc-button--outline--color--focus: var(
+            --wp--preset--color--#{$colorName}-100
+          );
         } @else if $variant == 'inline' {
           --lbc-button--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
           --lbc-button--color--hover: var(
             --wp--preset--color--#{$colorName}-#{$targetOffsets + 100}
+          );
+          --lbc-button--outline--color--focus: var(
+            --wp--preset--color--#{$colorName}-100
           );
         }
       }
@@ -119,18 +178,20 @@
 
   &--variant_outlined {
     --lbc-button--background--color: var(--wp--preset--color--white);
-    --lbc-button--background--color--hover: var(--wp--preset--color--site-50);
+    --lbc-button--background--color--hover: var(--wp--preset--color--#{$colorGray}-50);
     --lbc-button--background--color--disabled: var(--wp--preset--color--white);
 
-    --lbc-button--border--color: var(--wp--preset--color--site-300);
+    --lbc-button--border--color: var(--wp--preset--color--#{$colorGray}-300);
     --lbc-button--border--color--hover: var(--lbc-button--border--color);
-    --lbc-button--border--color--disabled: var(--wp--preset--color--site-200);
+    --lbc-button--border--color--disabled: var(--wp--preset--color--#{$colorGray}-200);
 
-    --lbc-button--color: var(--wp--preset--color--site-#{$targetOffsets});
-    --lbc-button--color--hover: var(--wp--preset--color--site-#{$targetOffsets + 100});
-    --lbc-button--color--disabled: var(--wp--preset--color--site-300);
+    --lbc-button--color: var(--wp--preset--color--#{$colorGray}-#{$targetOffsets});
+    --lbc-button--color--hover: var(
+      --wp--preset--color--#{$colorGray}-#{$targetOffsets + 100}
+    );
+    --lbc-button--color--disabled: var(--wp--preset--color--#{$colorGray}-300);
 
-    --lbc-button--outline--color--focus: var(--wp--preset--color--site-100);
+    --lbc-button--outline--color--focus: var(--wp--preset--color--#{$colorGray}-100);
   }
 
   &--variant_text {
@@ -142,7 +203,7 @@
     --lbc-button--border--color--disabled: transparent;
 
     --lbc-button--color--hover: var(--lbc-button--color);
-    --lbc-button--color--disabled: var(--wp--preset--color--site-300);
+    --lbc-button--color--disabled: var(--wp--preset--color--#{$colorGray}-300);
   }
 
   &--variant_inline {
@@ -154,7 +215,7 @@
     --lbc-button--border--color--hover: transparent;
     --lbc-button--border--color--disabled: transparent;
 
-    --lbc-button--color--disabled: var(--wp--preset--color--site-300);
+    --lbc-button--color--disabled: var(--wp--preset--color--#{$colorGray}-300);
 
     padding: 0;
   }

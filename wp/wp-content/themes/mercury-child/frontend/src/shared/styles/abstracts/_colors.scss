@@ -1,3 +1,9 @@
-$colorNames: site, brand, error, warning, success;
+$colorGray: 'gray';
+$colorPrimary: 'primary';
+$colorError: 'error';
+$colorWarning: 'warning';
+$colorSuccess: 'success';
+
+$colorNames: $colorGray, $colorPrimary, $colorError, $colorWarning, $colorSuccess;
 $colorOffsets: 25, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
 $targetOffsets: 700;
