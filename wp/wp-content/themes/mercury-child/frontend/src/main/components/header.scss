@@ -2,7 +2,7 @@
   .lb-header {
     top: 32px;
     @include media-breakpoint-down('sm') {
-      top: 46px;
+      top: 0;
     }
   }
 }
