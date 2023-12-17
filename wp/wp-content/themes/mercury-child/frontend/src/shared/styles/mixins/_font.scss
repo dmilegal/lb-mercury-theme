@@ -15,7 +15,7 @@
 /// @access public
 /// @param {String} $size - yor font-size in px
 @function font-size($size) {
-  @return $size / $DEFAULT_FONT_SIZE * 1rem;
+  @return calc($size / $DEFAULT_FONT_SIZE * 1rem);
 }
 
 /// Get full text styles
@@ -66,7 +66,7 @@
 /// @access public
 /// @param {Number} $points - photoshop points
 @function letter-spacing($points) {
-  @return $points / 1000 * 1em;
+  @return calc($points / 1000 * 1em);
 }
 
 /// Convert px to em line height
@@ -93,7 +93,7 @@
 /// @param {Number} $p1 - first size
 /// @param {Number} $p2 - second size
 @function px-to-em($p1, $p2) {
-  @return $p1 / $p2 * 1em;
+  @return calc($p1 / $p2 * 1em);
 }
 
 /// Get font config for selected text type

@@ -1,0 +1,82 @@
+.lb-lang-switcher {
+  position: relative;
+  @include get-text-styles('text-xs');
+  font-weight: 500;
+  color: var(--wp--preset--color--black);
+
+  &,
+  :where(ul) {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &:hover {
+    %lng-sw-list {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @each $colorName in $colorNames {
+    &--color_#{$colorName} {
+      --lb-lang-switcher--color--hover: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+    }
+  }
+
+  &__list {
+    background-color: var(--wp--preset--color--white);
+    position: absolute;
+    width: max-content;
+    min-width: 100px;
+    max-width: 160px;
+    padding: 6px;
+    top: calc(100% + 6px);
+    left: -6px;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--wp--preset--spacing--60);
+    opacity: 0;
+    border-radius: 6px;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 4px 10px 0px rgb(57 60 63 / 33%);
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      bottom: 100%;
+      left: 0;
+
+    }
+
+    @extend %lng-sw-list;
+
+   
+  }
+  &__trigger {
+    cursor: pointer;
+  }
+  &__link {
+    display: flex;
+    column-gap: var(--wp--preset--spacing--60);
+    align-items: center;
+    padding: 2px 0;
+    cursor: pointer;
+    transition: color 170ms ease-in-out;
+    &:hover {
+      color: var(--lb-lang-switcher--color--hover);
+    }
+  }
+  &__ico {
+    &--main {
+      width: 32px;
+      height: 32px;
+    }
+    &--sub {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@use 'sass:math';
+@import '@/shared/styles/abstracts/_all.scss';
+@import '@/shared/styles/mixins/_all.scss';
+
+.lbc-badge {
+  display: inline-flex;
+  color: var(--lbc-badge--color);
+  border-radius: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  column-gap: calc(var(--wp--preset--spacing--70) / 2);
+  background-color: var(--lbc-badge--background--color);
+  text-decoration: none;
+  $iconSize: 12;
+  $imageSize: 16;
+
+  &__postfix,
+  &__prefix {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    & > :where([class^='icon-'], [class*=' icon-']) {
+      font-size: font-size($iconSize * 1px);
+      font-weight: bold;
+      color: var(--lbc-badge--icon--color);
+      @extend %icon;
+    }
+    & > :where(svg, img) {
+      width: $imageSize * 1px;
+      height: $imageSize * 1px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  $onlyIcon: & + '--only_icon';
+
+  &--only_icon {
+    line-height: 1em;
+    :where(%icon) {
+      margin: calc(($imageSize - $iconSize) / 2) * 1px;
+    }
+  }
+
+  &--size_sm {
+    &:where(:not(#{$onlyIcon})) {
+      @include get-text-styles('text-xs');
+      padding: 2px 8px;
+    }
+    &:where(#{$onlyIcon}) {
+      padding: 3px;
+    }
+  }
+  &--size_md {
+    &:where(:not(#{$onlyIcon})) {
+      @include get-text-styles('text-sm');
+      padding: 2px 8px;
+    }
+    &:where(#{$onlyIcon}) {
+      padding: 4px;
+    }
+  }
+  &--size_lg {
+    &:where(:not(#{$onlyIcon})) {
+      @include get-text-styles('text-sm');
+      padding: 4px 10px;
+    }
+    &:where(#{$onlyIcon}) {
+      padding: 6px;
+    }
+  }
+
+  @each $theme in 'light', 'medium', 'dark' {
+    @each $colorName in $colorNames {
+      &--theme_#{$theme}:where(#{'&--color_' + $colorName}) {
+        @if $theme == 'light' {
+          --lbc-badge--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+          --lbc-badge--background--color: var(--wp--preset--color--white);
+          --lbc-badge--icon--color: var(
+            --wp--preset--color--#{$colorName}-#{$targetOffsets - 100}
+          );
+        } @else if $theme == 'medium' {
+          --lbc-badge--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+          @if $colorName == $colorGray {
+            --lbc-badge--background--color: var(--wp--preset--color--#{$colorName}-100);
+          } @else {
+            --lbc-badge--background--color: var(--wp--preset--color--#{$colorName}-50);
+          }
+          --lbc-badge--icon--color: var(
+            --wp--preset--color--#{$colorName}-#{$targetOffsets - 100}
+          );
+        } @else if $theme == 'dark' {
+          --lbc-badge--color: var(--wp--preset--color--white);
+          --lbc-badge--background--color: var(
+            --wp--preset--color--#{$colorName}-#{$targetOffsets}
+          );
+          --lbc-badge--icon--color: var(--wp--preset--color--white);
+        }
+      }
+    }
+  }
+}

@@ -220,7 +220,7 @@ export default function common(mode) {
       outputModule: true,
     },
     resolve: {
-      extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json', 'scss'],
+      extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json', '.scss'],
       modules: ['node_modules'],
       alias: {
         '@': `${paths.src}`,

@@ -1,0 +1,57 @@
+@use 'sass:math';
+@import '@/shared/styles/abstracts/_all.scss';
+@import '@/shared/styles/mixins/_all.scss';
+
+.lbc-badge-group {
+  display: inline-flex;
+  border-radius: 16px;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  background-color: var(--lbc-badge--background--color);
+  text-decoration: none;
+  padding: 4px 12px;
+
+  &__label {
+  }
+
+  &__container {
+    padding: 0;
+    --lbc-badge--background--color: transparent;
+    & :where([class^='icon-'], [class*=' icon-']) {
+      font-size: font-size-by-name('text-md');
+    }
+  }
+
+  &--align_left {
+    padding-left: 4px;
+  }
+
+  &--align_right {
+    padding-right: 4px;
+  }
+
+  &--size_sm {
+    column-gap: calc(var(--wp--preset--spacing--70) / 2);
+  }
+  &--size_md {
+    column-gap: var(--wp--preset--spacing--60);
+  }
+  &--size_lg {
+    column-gap: var(--wp--preset--spacing--70);
+  }
+
+  @each $theme in 'light', 'medium', 'dark' {
+    @each $colorName in $colorNames {
+      &--theme_#{$theme}:where(#{'&--color_' + $colorName}) {
+        @if $theme == 'light' {
+          --lbc-badge--background--color: var(--wp--preset--color--#{$colorName}-50);
+        } @else if $theme == 'medium' {
+          --lbc-badge--background--color: var(--wp--preset--color--#{$colorName}-100);
+        } @else if $theme == 'dark' {
+          --lbc-badge--background--color: var(--wp--preset--color--#{$colorName}-50);
+        }
+      }
+    }
+  }
+}

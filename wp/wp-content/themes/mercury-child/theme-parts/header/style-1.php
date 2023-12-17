@@ -1,69 +1,7 @@
-<?
-$netww_html = (function () {
-	if (!is_multisite())
-		return;
-
-	global $wp;
-	$curr_url = home_url($wp->request) . '/';
-
-	switch_to_blog(1);
-	$subsitez = get_field('ntw_webs_switcher', 'm5netw_opt1');
-	restore_current_blog();
-
-	$html = '<ul class="netw"><li class="netw__level1">';
-
-	#subsite that is active now
-	$current_subsite = $subsitez[0];
-
-	foreach ($subsitez as $k => $v) {
-		if ($v['slug'] == '/')
-			continue;
-
-		if (strpos($curr_url, $v['slug']) !== false) {
-			$current_subsite = $subsitez[$k];
-			break;
-		}
-	}
-
-	#actual country where page is loaded html
-	$html .= '<span class="netw__actual">
-					<i class="fi" style="background-image: url(' . get_stylesheet_directory_uri() . '/img/flags/4x3/' . $current_subsite["flag"] . ');"></i>' .
-		$current_subsite['title'] .
-		'<i class="fas fa-caret-down fa-xs"></i>
-				</span><ul class="netw__sub">';
-
-	# generating links for others subsites
-	foreach ($subsitez as $k => $v) :
-
-		if ($v['slug'] == $current_subsite['slug'])
-			continue;
-
-		if (!$v['show_lang_sw'])
-			continue;
-
-
-		$href = $current_subsite['slug'] == '/' ? $v['url'] . $_SERVER['REQUEST_URI'] : str_replace($current_subsite['slug'], $v['slug'], $curr_url);
-
-		$html .= '<li class="netw__level2">
-			<div class="netw__level2__link" data-href="' . $href . '" onclick="location.href=this.dataset.href;">
-				<i class="fi" style="background-image: url(' . get_stylesheet_directory_uri() . '/img/flags/4x3/' . $v["flag"] . ');"></i>' . $v["title"] . '
-			</div>
-		</li>';
-	endforeach;
-
-	$html .= '</ul></li></ul>';
-
-	return $html;
-})();
-
-
-
-?>
-
-<div class="lb-header lb-header--color_<?= get_theme_mod('main_ui_color') ?>">
+<header class="lb-header lb-header--color_<?= get_theme_mod('main_ui_color') ?>">
 	<div class="lb-header__inner">
 		<div class="lb-header__grid">
-			<div class="lb-header__col">
+			<div class="lb-header__head">
 				<div class="lb-header__logo-wrapper">
 					<?php
 					$site_name = esc_attr(get_bloginfo('name'));
@@ -79,17 +17,15 @@ $netww_html = (function () {
 						</a>
 					<? } ?>
 				</div>
-				<div class="space-header-menu box-75 left relative">
+				<div class="lb-header__navigation">
 					<?php
 					if (has_nav_menu('main-menu')) {
 						wp_nav_menu(array('container' => 'ul', 'menu_class' => 'main-menu', 'theme_location' => 'main-menu', 'depth' => 3, 'fallback_cb' => '__return_empty_string'));
-					}
-					echo $netww_html;
-					?>
+					}; ?>
 
 				</div>
 			</div>
-			<div class="lb-header__col">
+			<div class="lb-header__tail">
 				<div class="lb-header__search">
 					<button class="lb-header-search__search-btn">
 						<i class="fas fa-search desktop-search-button"></i>
@@ -103,9 +39,11 @@ $netww_html = (function () {
 						</button>
 					</div>
 				</div>
-
-				<?php if (class_exists('Custom_Lang_Switcher'))
-					echo do_shortcode('[custom-lang-switcher]'); ?>
+				<div class="lb-header__lng-switcher">
+					<? get_template_part('theme-parts/components/molecules/lang-switcher', null, [
+						'color' => get_theme_mod('main_ui_color')
+					]); ?>
+				</div>
 
 				<div id="mobile-header-trigger" class="lb-header__hamburger hamburger hamburger--slider" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
 					<div class="hamburger-box">
@@ -114,9 +52,5 @@ $netww_html = (function () {
 				</div>
 			</div>
 		</div>
-
-
-
-
 	</div>
-</div>
+</header>

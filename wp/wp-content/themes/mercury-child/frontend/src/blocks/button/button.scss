@@ -6,7 +6,7 @@
   display: inline-flex;
   color: var(--lbc-button--color);
   border: 1px solid var(--lbc-button--border--color);
-  border-radius: var(--wp--preset--spacing--60);
+  border-radius: 8px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -20,6 +20,7 @@
   outline-style: solid;
   outline-width: 4px;
   outline-color: transparent;
+  text-decoration: none;
 
   &:hover {
     background-color: var(--lbc-button--background--color--hover);
@@ -43,7 +44,10 @@
     display: flex;
     align-items: center;
 
-    & > :where(i) {
+    & > :where([class^='icon-'],
+    [class*=' icon-']) {
+      font-size: font-size(20px);
+      font-weight: normal;
       @extend %icon;
     }
   }
@@ -62,9 +66,6 @@
     &:where(#{$noIcon}) {
       padding: 8px;
     }
-    :where(%icon) {
-      font-size: calc(#{font-size-by-name('text-sm')} + 6px);
-    }
   }
   &--size_md {
     &:where(:not(#{$noIcon})) {
@@ -74,9 +75,6 @@
     &:where(#{$noIcon}) {
       padding: 10px;
     }
-    :where(%icon) {
-      font-size: calc(#{font-size-by-name('text-sm')} + 6px);
-    }
   }
   &--size_lg {
     &:where(:not(#{$noIcon})) {
@@ -85,9 +83,6 @@
     }
     &:where(#{$noIcon}) {
       padding: 12px;
-    }
-    :where(%icon) {
-      font-size: calc(#{font-size-by-name('text-md')} + 4px);
     }
   }
   &--size_xl {
@@ -112,7 +107,7 @@
       padding: 16px;
     }
     :where(%icon) {
-      font-size: calc(#{font-size-by-name('text-lg')} + 6px);
+      font-size: font-size(24px);
     }
   }
 

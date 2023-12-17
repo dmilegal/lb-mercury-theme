@@ -1,46 +1,88 @@
 <!-- Footer Start -->
 <?
-var_dump(get_theme_mod('main_ui_color'));
- get_template_part( 'theme-parts/components/atoms/dot', null, [
-	'size' => 'sm'
- ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
 	'size' => 'sm',
-	'prefix' => '<i class="icon-circle-1"></i>',
+	'prefix' => '<i class="icon-circle"></i>',
 	'content' => 'Button CTA'
  ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
 	'size' => 'md',
 	'variant' => 'secondary',
 	'content' => 'Button CTA',
-	'prefix' => '<i class="icon-circle-1"></i>'
+	'prefix' => '<i class="icon-circle"></i>'
  ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
 	'size' => 'lg',
 	'variant' => 'outlined',
-	'prefix' => '<i class="icon-circle-1"></i>',
+	'prefix' => '<i class="icon-circle"></i>',
 	'content' => 'Button CTA'
  ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
 	'size' => 'xl',
 	'variant' => 'text',
-	'prefix' => '<i class="icon-circle-1"></i>',
+	'prefix' => '<i class="icon-circle"></i>',
+	'href' => '#',
 	'content' => 'Button CTA'
  ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
 	'size' => '2xl',
 	'variant' => 'inline',
-	'prefix' => '<i class="icon-circle-1"></i>',
+	'prefix' => '<i class="icon-circle"></i>',
 	'content' => 'Button CTA'
  ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
 	'size' => '2xl',
-	'prefix' => '<i class="icon-circle-1"></i>',
+	'prefix' => '<i class="icon-circle"></i>',
 	'content' => 'Button CTA'
  ] );
  get_template_part( 'theme-parts/components/atoms/button', null, [
 	'size' => '2xl',
-	'prefix' => '<i class="icon-circle-1"></i>',
+	'prefix' => '<i class="icon-circle"></i>',
+ ] );
+
+////////////////////////////////////////////////////////////
+echo '<br>';
+
+ get_template_part( 'theme-parts/components/atoms/badge', null, [
+	'size' => 'sm',
+	'content' => 'Label',
+	'prefix' => '<i class="icon-arrow-up"></i>'
+ ] );
+ get_template_part( 'theme-parts/components/atoms/badge', null, [
+	'size' => 'md',
+	'postfix' => '<i class="icon-arrow-up"></i>',
+	'content' => 'Label'
+ ] );
+ get_template_part( 'theme-parts/components/atoms/badge', null, [
+	'size' => 'lg',
+	'prefix' => '<img />',
+	'content' => 'Label',
+	'href' => '#',
+ ] );
+ get_template_part( 'theme-parts/components/atoms/badge', null, [
+	'size' => 'sm',
+	'prefix' => '<i class="icon-plus"></i>',
+ ] );
+ get_template_part( 'theme-parts/components/atoms/badge', null, [
+	'size' => 'md',
+	'prefix' => '<i class="icon-plus"></i>',
+ ] );
+ get_template_part( 'theme-parts/components/atoms/badge', null, [
+	'size' => 'lg',
+	'prefix' => '<img src="https://espaciomood.com/wp-content/uploads/2023/08/45913d94-bf70-4a78-a833-a41aafda597f-100x100.jpeg?x77770" />',
+ ] );
+////////////////////////////////////////////////////////////
+echo '<br>';
+get_template_part( 'theme-parts/components/molecules/badge-group', null, [
+	'size' => 'md',
+	'prefix' => '<i class="icon-plus"></i>',
+	'postfix' => '<i class="icon-plus"></i>',
+	'theme' => 'light',
+	'color' => 'gray',
+	'label' => [
+		'position' => 'left',
+		'content' => 'test'
+	]
  ] );
 
  ?>
@@ -48,20 +90,20 @@ var_dump(get_theme_mod('main_ui_color'));
 	if(!is_author())
 		echo do_shortcode( '[show_wpb_author_info_box]' );
 ?>
-<div class="space-footer box-100 relative coronapp">
+<div class="space-footer box00 relative coronapp">
 	<?php if ( is_active_sidebar( 'footer-center-sidebar' ) ) { ?>
-	<div class="space-footer-top box-100 relative">
+	<div class="space-footer-top box00 relative">
 		<div class="space-footer-ins relative">
-			<div class="space-footer-top-center box-100 relative">
+			<div class="space-footer-top-center box00 relative">
 				<?php dynamic_sidebar( 'footer-center-sidebar' ); ?>
 			</div>
 		</div>
 	</div>
 	<?php } ?>
-	<div class="space-footer-copy box-100 relative">
+	<div class="space-footer-copy box00 relative">
 		<div class="space-footer-ins relative">
 			<?php if(get_theme_mod('footer_license_logo') || get_theme_mod('footer_license_text')): ?>
-				<div class="box-100 text-center footer-license">
+				<div class="box00 text-center footer-license">
 					<?php 
 						if(get_theme_mod('footer_license_logo')) {
 							echo '<img src="'.esc_url(get_theme_mod('footer_license_logo')).'" />';
