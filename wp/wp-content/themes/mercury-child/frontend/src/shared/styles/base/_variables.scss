@@ -1,1 +1,8 @@
 @use 'sass:map';
+
+body {
+  --layout--content-padding: var(--wp--custom--layout--content-padding-md);
+  @include media-breakpoint-down('md') {
+    --layout--content-padding: var(--wp--custom--layout--content-padding-sm);
+  }
+}

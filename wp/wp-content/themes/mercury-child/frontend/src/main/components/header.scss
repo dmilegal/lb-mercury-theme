@@ -1,5 +1,6 @@
 .lb-header {
   position: sticky;
+  display: flex;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,12 +11,22 @@
   &__logo-wrapper,
   &__tail {
     padding: 20px 0;
+    @include media-breakpoint-down('lg') {
+      padding: 16px 0;
+    }
   }
 
   :where(ul) {
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  @include media-breakpoint-down('xl') {
+    .lb-lang-switcher__list {
+      right: -6px;
+      left: auto;
+    }
   }
 
   a {
@@ -47,10 +58,21 @@
     column-gap: var(--wp--preset--spacing--80);
   }
 
+  &__logo {
+    max-height: 48px;
+    width: auto;
+    @include media-breakpoint-down('lg') {
+      max-height: 38px;
+    }
+  }
+
   &__navigation {
     @include get-text-styles('text-md');
     font-weight: 600;
     height: 100%;
+    @include media-breakpoint-down('lg') {
+      display: none;
+    }
 
     & > .main-menu {
       height: 100%;
@@ -138,7 +160,10 @@
 
   &__hamburger {
     padding: 0;
-    display: none;
+    margin-top: 8px;
+    @include media-breakpoint-up('xl') {
+      display: none;
+    }
   }
 
   @each $colorName in $colorNames {

@@ -1,6 +1,9 @@
 $hamburger-types: (slider);
 $hamburger-padding-x: 5px;
 $hamburger-padding-y: 10px;
+$hamburger-layer-width: 36px;
+$hamburger-padding-y: 14px;
+$hamburger-layer-height: 3px;
 $hamburger-layer-color: currentColor;
 
 @import '~hamburgers/_sass/hamburgers/hamburgers.scss';

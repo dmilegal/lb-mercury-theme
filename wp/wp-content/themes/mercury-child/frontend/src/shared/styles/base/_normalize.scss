@@ -13,6 +13,11 @@
   font: inherit; /* 2 */
 }
 
+
+:where(*) {
+  box-sizing: border-box;
+}
+
 /*
 Add the correct display in Chrome and Safari.
 */

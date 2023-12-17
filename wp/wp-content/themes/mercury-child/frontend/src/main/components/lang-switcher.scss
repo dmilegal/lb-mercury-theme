@@ -57,6 +57,8 @@
   }
   &__trigger {
     cursor: pointer;
+    position: relative;
+    z-index: 10;
   }
   &__link {
     display: flex;

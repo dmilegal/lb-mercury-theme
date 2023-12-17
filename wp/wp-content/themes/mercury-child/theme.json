@@ -419,7 +419,8 @@
         },
         "custom": {
             "layout": {
-                "contentPadding": "var(--wp--preset--spacing--120)"
+                "contentPaddingSm": "var(--wp--preset--spacing--80)",
+                "contentPaddingMd": "var(--wp--preset--spacing--120)"
             },
             "lineHeight": {
                 "display-2xl": "5.625rem",
