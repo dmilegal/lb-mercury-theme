@@ -1,3 +1,12 @@
+.admin-bar {
+  .lb-header {
+    top: 32px;
+    @include media-breakpoint-down('sm') {
+      top: 46px;
+    }
+  }
+}
+
 .lb-header {
   position: sticky;
   display: flex;
