@@ -49,7 +49,7 @@ function legalbet_customizer_init($wp_customize)
 
 function theme_colors_customize_register($wp_customize)
 {
-    $settings = WP_Theme_JSON_Resolver::get_theme_data();
+   /* $settings = WP_Theme_JSON_Resolver::get_theme_data();
     $data = $settings->get_data();
     $palette =  $data['settings']['color']['palette'];
     $groups = array_unique(
@@ -73,7 +73,7 @@ function theme_colors_customize_register($wp_customize)
         'settings'   => 'main_ui_color',
         'type'       => 'radio',
         'choices'    => $choices,
-    ));
+    ));*/
 }
 add_action('customize_register', 'theme_colors_customize_register');
 

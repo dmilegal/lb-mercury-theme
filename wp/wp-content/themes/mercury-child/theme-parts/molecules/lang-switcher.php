@@ -1,4 +1,6 @@
 <?
+use Shared\Theme\LbThemeService;
+
 if (!is_multisite())
   return;
 
@@ -16,7 +18,7 @@ $style = $args['style'] ?? '';
  */
 $size = $args['size'] ?? 'md';
 
-$color = $args['color'] ?? get_theme_mod('main_ui_color');
+$color = $args['color'] ?? LbThemeService::getMainGroupColor();
 $content = $args['content'] ?? '';
 
 $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel'])));

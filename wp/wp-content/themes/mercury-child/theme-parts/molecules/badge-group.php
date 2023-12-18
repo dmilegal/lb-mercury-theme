@@ -1,4 +1,6 @@
 <?
+use Shared\Theme\LbThemeService;
+
 $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
 /**
@@ -9,7 +11,7 @@ $size = $args['size'] ?? 'md';
  * light | medium | dark
  */
 $theme = $args['theme'] ?? 'medium';
-$color = $args['color'] ?? get_theme_mod('main_ui_color');
+$color = $args['color'] ?? LbThemeService::getMainGroupColor();
 $content = $args['content'] ?? '';
 $prefix = $args['prefix'] ?? '';
 $postfix = $args['postfix'] ?? '';

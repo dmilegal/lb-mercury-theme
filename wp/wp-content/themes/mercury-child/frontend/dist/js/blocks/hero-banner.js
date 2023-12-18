@@ -1,9 +1,9 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ "./src/blocks/badge/badge.scss":
-/*!*************************************!*\
-  !*** ./src/blocks/badge/badge.scss ***!
-  \*************************************/
+/***/ "./src/blocks/hero-banner/hero-banner.scss":
+/*!*************************************************!*\
+  !*** ./src/blocks/hero-banner/hero-banner.scss ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -54,13 +54,13 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!***********************************!*\
-  !*** ./src/blocks/badge/badge.ts ***!
-  \***********************************/
+/*!***********************************************!*\
+  !*** ./src/blocks/hero-banner/hero-banner.ts ***!
+  \***********************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _badge_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./badge.scss */ "./src/blocks/badge/badge.scss");
+/* harmony import */ var _hero_banner_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-banner.scss */ "./src/blocks/hero-banner/hero-banner.scss");
 
 })();
 
 
-//# sourceMappingURL=badge.js.map
+//# sourceMappingURL=hero-banner.js.map

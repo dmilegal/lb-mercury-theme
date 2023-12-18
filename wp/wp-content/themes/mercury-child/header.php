@@ -11,11 +11,11 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class("lb-default-ui--color_" . get_theme_mod('main_ui_color')); ?>>
+<body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div class="lb-main">
 
 		<!-- Header Start -->
-		<? get_template_part('/theme-parts/header/style-1'); ?>
+		<? get_template_part('/theme-parts/organisms/header/style-1'); ?>
 
 		<!-- Header End -->

@@ -19,9 +19,9 @@
 
   &__logo-wrapper,
   &__tail {
-    padding: 20px 0;
+    padding: var(--wp--preset--spacing--90) 0;
     @include media-breakpoint-down('lg') {
-      padding: 16px 0;
+      padding: var(--wp--preset--spacing--80) 0;
     }
   }
 
@@ -97,7 +97,7 @@
       &-has-children {
         position: relative;
         & > a {
-          padding: 6px 4px;
+          padding: var(--wp--preset--spacing--55) var(--wp--preset--spacing--50);
           display: flex;
           align-items: center;
           column-gap: var(--wp--preset--spacing--70);

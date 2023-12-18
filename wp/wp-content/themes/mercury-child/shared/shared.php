@@ -10,3 +10,4 @@ require_once 'get-block-class.php';
 require_once 'get-block-id.php';
 require_once 'get-block-styles.php';
 require_once 'get-contrast-text-color.php';
+require_once 'theme/theme.php';

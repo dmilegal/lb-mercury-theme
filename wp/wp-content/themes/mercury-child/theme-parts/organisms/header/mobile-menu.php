@@ -1,4 +1,8 @@
-<div class="lb-mobile-menu lb-mobile-menu--color_<?= get_theme_mod('main_ui_color') ?>">
+<?
+use Shared\Theme\LbThemeService;
+?>
+
+<div class="lb-mobile-menu lb-mobile-menu--color_<?= LbThemeService::getMainGroupColor() ?>">
 	<div class="lb-mobile-menu__block">
 		<div class="lb-mobile-menu__inner">
 			<div class="lb-mobile-menu__header">

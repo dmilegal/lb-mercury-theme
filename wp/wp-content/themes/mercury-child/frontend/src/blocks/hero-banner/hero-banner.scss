@@ -1,0 +1,21 @@
+@import '@/shared/styles/abstracts/_all.scss';
+@import '@/shared/styles/mixins/_all.scss';
+
+.lbc-hero-banner {
+  --lbc-hero-banner--background--color: var(--wp--preset--color--white);
+
+  padding: var(--wp--preset--spacing--280) 0 var(--wp--preset--spacing--155);
+  background-color: var(--lbc-hero-banner--background--color);
+  
+  &--white {
+    --lbc-hero-banner--background--color: var(--wp--preset--color--white);
+  }
+
+  &--gray {
+    --lbc-hero-banner--background--color: var(--wp--preset--color--#{$colorGray}-25);
+  }
+
+  &__inner {
+    @include make-container-max-width(--wp--preset--color--white);
+  }
+}

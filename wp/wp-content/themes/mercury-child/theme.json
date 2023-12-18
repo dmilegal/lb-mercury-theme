@@ -4,6 +4,7 @@
     "settings": {
         "appearanceTools": true,
         "color": {
+            "mainColorGroup": "primary",
             "palette": [
                 {
                     "name": "Gray 25",
@@ -411,7 +412,19 @@
                 "steps": 64,
                 "mediumStep": 4,
                 "unit": "px"
-            }
+            },
+            "spacingSizes": [
+                {
+                    "size": "6px",
+                    "slug": "55",
+                    "name": "6px"
+                },
+                {
+                    "size": "46px",
+                    "slug": "155",
+                    "name": "46px"
+                }
+            ]
         },
         "layout": {
             "contentSize": "1280px",
@@ -419,6 +432,8 @@
         },
         "custom": {
             "layout": {
+                "contentSpacingSm": "var(--wp--preset--spacing--80)",
+                "contentSpacingMd": "var(--wp--preset--spacing--120)",
                 "contentPaddingSm": "var(--wp--preset--spacing--80)",
                 "contentPaddingMd": "var(--wp--preset--spacing--120)"
             },
