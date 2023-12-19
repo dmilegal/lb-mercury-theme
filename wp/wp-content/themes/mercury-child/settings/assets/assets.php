@@ -4,11 +4,14 @@ function disable_old_assets()
   wp_deregister_style('mercury-style');
   wp_deregister_style('mercury-media');
   wp_deregister_style('mercury-googlefonts');
+  wp_deregister_style('mercury-block-editor-styles');
 
   wp_deregister_script('mercury-global-js');
   
 }
 add_action('wp_enqueue_scripts', 'disable_old_assets', 999);
+add_action('enqueue_block_editor_assets', 'disable_old_assets', 999);
+
 
 // Enqueue custom css and js
 function enqueue_main_assets()

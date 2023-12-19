@@ -1,8 +1,8 @@
 /*mixins*/
-@import 'mixins/_all.scss';
+@import 'mixins/_index.scss';
 
 /*abstracts*/
-@import 'abstracts/_all.scss';
+@import 'abstracts/_index.scss';
 
 /*external*/
 
@@ -12,17 +12,10 @@
 * Project style
 */
 /*base*/
-@import 'base/_variables.scss';
-@import 'base/_normalize.scss';
-@import 'base/_defaults.scss';
+@import 'base/_index.scss';
 
 /*themes*/
-@import 'themes/_link.scss';
-@import 'themes/_text.scss';
-@import 'themes/_list.scss';
-@import 'themes/_spacing.scss';
-@import 'themes/_form.scss';
-@import 'themes/_images.scss';
-@import 'themes/_screen.scss';
+@import 'themes/_index.scss';
+
 
 /*pages*/

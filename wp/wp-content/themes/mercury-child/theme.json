@@ -339,7 +339,7 @@
             ]
         },
         "typography": {
-            "customFontSize": true,
+            "customFontSize": false,
             "fontSizes": [
                 {
                     "name": "Display 2xl",

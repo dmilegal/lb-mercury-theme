@@ -1,6 +1,6 @@
 @use 'sass:math';
-@import '@/shared/styles/abstracts/_all.scss';
-@import '@/shared/styles/mixins/_all.scss';
+@import '@/shared/styles/abstracts/_index.scss';
+@import '@/shared/styles/mixins/_index.scss';
 
 .lbc-badge-group {
   display: inline-flex;
