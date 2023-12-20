@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "../abstracts/text";
+@use "helpers";
+
 /**
 * font
 **/
@@ -15,7 +19,7 @@
 /// @access public
 /// @param {String} $size - yor font-size in px
 @function font-size($size) {
-  @return calc($size / $DEFAULT_FONT_SIZE * 1rem);
+  @return calc($size / text.$DEFAULT_FONT_SIZE * 1rem);
 }
 
 /// Get full text styles
@@ -74,7 +78,7 @@
 /// @access public
 /// @param {Number} $lh - line height in px that you want
 /// @param {Number} $fs - relative font size
-@mixin line-height($lh, $fs: $DEFAULT_FONT_SIZE) {
+@mixin line-height($lh, $fs: text.$DEFAULT_FONT_SIZE) {
   line-height: line-height($lh, $fs);
 }
 
@@ -83,7 +87,7 @@
 /// @access public
 /// @param {Number} $lh - line height in px that you want
 /// @param {Number} $fs - relative font size
-@function line-height($lh, $fs: $DEFAULT_FONT_SIZE) {
+@function line-height($lh, $fs: text.$DEFAULT_FONT_SIZE) {
   @return px-to-em($lh, $fs);
 }
 
@@ -101,7 +105,7 @@
 /// @access public
 /// @param {String} $level - level size (see text-settings map at _variables.scss)
 @mixin text-setting($level) {
-  @include print(map-get($text-settings, $level));
+  @include helpers.print(map.get($text-settings, $level));
 }
 
 /// Truncate words

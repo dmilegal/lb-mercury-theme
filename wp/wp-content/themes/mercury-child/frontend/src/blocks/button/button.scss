@@ -1,6 +1,6 @@
 @use 'sass:math';
-@import '@/shared/styles/abstracts/_index.scss';
-@import '@/shared/styles/mixins/_index.scss';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
 
 .lbc-button {
   display: inline-flex;
@@ -60,7 +60,7 @@
 
   &--size_sm {
     &:where(:not(#{$noIcon})) {
-      @include get-text-styles('text-sm');
+      @include font.get-text-styles('text-sm');
       padding: 8px 14px;
     }
     &:where(#{$noIcon}) {
@@ -69,7 +69,7 @@
   }
   &--size_md {
     &:where(:not(#{$noIcon})) {
-      @include get-text-styles('text-sm');
+      @include font.get-text-styles('text-sm');
       padding: 10px 16px;
     }
     &:where(#{$noIcon}) {
@@ -78,7 +78,7 @@
   }
   &--size_lg {
     &:where(:not(#{$noIcon})) {
-      @include get-text-styles('text-md');
+      @include font.get-text-styles('text-md');
       padding: 10px 18px;
     }
     &:where(#{$noIcon}) {
@@ -87,19 +87,19 @@
   }
   &--size_xl {
     &:where(:not(#{$noIcon})) {
-      @include get-text-styles('text-md');
+      @include font.get-text-styles('text-md');
       padding: 12px 20px;
     }
     &:where(#{$noIcon}) {
       padding: 14px;
     }
     :where(%icon) {
-      font-size: calc(#{font-size-by-name('text-md')} + 4px);
+      font-size: calc(#{font.font-size-by-name('text-md')} + 4px);
     }
   }
   &--size_2xl {
     &:where(:not(#{$noIcon})) {
-      @include get-text-styles('text-lg');
+      @include font.get-text-styles('text-lg');
       padding: 16px 28px;
       column-gap: var(--wp--preset--spacing--70);
     }
@@ -112,14 +112,14 @@
   }
 
   @each $variant in 'primary', 'secondary', 'text', 'inline' {
-    @each $colorName in $colorNames {
+    @each $colorName in colors.$colorNames {
       &--variant_#{$variant}:where(#{'&--color_' + $colorName}) {
         @if $variant == 'primary' {
           --lbc-button--background--color: var(
-            --wp--preset--color--#{$colorName}-#{$targetOffsets - 100}
+            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets - 100}
           );
           --lbc-button--background--color--hover: var(
-            --wp--preset--color--#{$colorName}-#{$targetOffsets}
+            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets}
           );
           --lbc-button--background--color--disabled: var(
             --wp--preset--color--#{$colorName}-200
@@ -137,7 +137,7 @@
           --lbc-button--background--color--disabled: var(
             --wp--preset--color--#{$colorName}-25
           );
-          --lbc-button--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+          --lbc-button--color: var(--wp--preset--color--#{$colorName}-#{colors.$targetOffsets});
           --lbc-button--color--disabled: var(--wp--preset--color--#{$colorName}-300);
           --lbc-button--outline--color--focus: var(
             --wp--preset--color--#{$colorName}-100
@@ -146,14 +146,14 @@
           --lbc-button--background--color--hover: var(
             --wp--preset--color--#{$colorName}-50
           );
-          --lbc-button--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+          --lbc-button--color: var(--wp--preset--color--#{$colorName}-#{colors.$targetOffsets});
           --lbc-button--outline--color--focus: var(
             --wp--preset--color--#{$colorName}-100
           );
         } @else if $variant == 'inline' {
-          --lbc-button--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+          --lbc-button--color: var(--wp--preset--color--#{$colorName}-#{colors.$targetOffsets});
           --lbc-button--color--hover: var(
-            --wp--preset--color--#{$colorName}-#{$targetOffsets + 100}
+            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets + 100}
           );
           --lbc-button--outline--color--focus: var(
             --wp--preset--color--#{$colorName}-100
@@ -173,20 +173,20 @@
 
   &--variant_outlined {
     --lbc-button--background--color: var(--wp--preset--color--white);
-    --lbc-button--background--color--hover: var(--wp--preset--color--#{$colorGray}-50);
+    --lbc-button--background--color--hover: var(--wp--preset--color--#{colors.$colorGray}-50);
     --lbc-button--background--color--disabled: var(--wp--preset--color--white);
 
-    --lbc-button--border--color: var(--wp--preset--color--#{$colorGray}-300);
+    --lbc-button--border--color: var(--wp--preset--color--#{colors.$colorGray}-300);
     --lbc-button--border--color--hover: var(--lbc-button--border--color);
-    --lbc-button--border--color--disabled: var(--wp--preset--color--#{$colorGray}-200);
+    --lbc-button--border--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-200);
 
-    --lbc-button--color: var(--wp--preset--color--#{$colorGray}-#{$targetOffsets});
+    --lbc-button--color: var(--wp--preset--color--#{colors.$colorGray}-#{colors.$targetOffsets});
     --lbc-button--color--hover: var(
-      --wp--preset--color--#{$colorGray}-#{$targetOffsets + 100}
+      --wp--preset--color--#{colors.$colorGray}-#{colors.$targetOffsets + 100}
     );
-    --lbc-button--color--disabled: var(--wp--preset--color--#{$colorGray}-300);
+    --lbc-button--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-300);
 
-    --lbc-button--outline--color--focus: var(--wp--preset--color--#{$colorGray}-100);
+    --lbc-button--outline--color--focus: var(--wp--preset--color--#{colors.$colorGray}-100);
   }
 
   &--variant_text {
@@ -198,7 +198,7 @@
     --lbc-button--border--color--disabled: transparent;
 
     --lbc-button--color--hover: var(--lbc-button--color);
-    --lbc-button--color--disabled: var(--wp--preset--color--#{$colorGray}-300);
+    --lbc-button--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-300);
   }
 
   &--variant_inline {
@@ -210,7 +210,7 @@
     --lbc-button--border--color--hover: transparent;
     --lbc-button--border--color--disabled: transparent;
 
-    --lbc-button--color--disabled: var(--wp--preset--color--#{$colorGray}-300);
+    --lbc-button--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-300);
 
     padding: 0;
   }

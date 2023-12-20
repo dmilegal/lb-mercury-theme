@@ -1,7 +1,12 @@
+@use "@/shared/styles/abstracts/colors";
+@use "@/shared/styles/mixins/breakpoints";
+@use "@/shared/styles/mixins/container";
+@use "@/shared/styles/mixins/font";
+
 .admin-bar {
   .lb-header {
     top: 32px;
-    @include media-breakpoint-down('sm') {
+    @include breakpoints.media-breakpoint-down('sm') {
       top: 0;
     }
   }
@@ -20,7 +25,7 @@
   &__logo-wrapper,
   &__tail {
     padding: var(--wp--preset--spacing--90) 0;
-    @include media-breakpoint-down('lg') {
+    @include breakpoints.media-breakpoint-down('lg') {
       padding: var(--wp--preset--spacing--80) 0;
     }
   }
@@ -31,7 +36,7 @@
     margin: 0;
   }
 
-  @include media-breakpoint-down('xl') {
+  @include breakpoints.media-breakpoint-down('xl') {
     .lb-lang-switcher__list {
       right: -6px;
       left: auto;
@@ -44,7 +49,7 @@
   }
 
   &__inner {
-    @include make-container-max-width();
+    @include container.make-container-max-width();
   }
 
   &__grid {
@@ -76,10 +81,10 @@
   }*/
 
   &__navigation {
-    @include get-text-styles('text-md');
+    @include font.get-text-styles('text-md');
     font-weight: 600;
     height: 100%;
-    @include media-breakpoint-down('lg') {
+    @include breakpoints.media-breakpoint-down('lg') {
       display: none;
     }
 
@@ -107,7 +112,7 @@
           }
           &:after {
             content: '\e952';
-            font-size: font-size-by-name('text-lg');
+            font-size: font.font-size-by-name('text-lg');
             font-family: 'lhicon';
             font-weight: normal;
           }
@@ -170,22 +175,22 @@
   &__hamburger {
     padding: 0;
     margin-top: 8px;
-    @include media-breakpoint-up('xl') {
+    @include breakpoints.media-breakpoint-up('xl') {
       display: none;
     }
   }
 
-  @each $colorName in $colorNames {
+  @each $colorName in colors.$colorNames {
     &--color_#{$colorName} {
       --lb-header--background--color: var(
-        --wp--preset--color--#{$colorName}-#{$targetOffsets}
+        --wp--preset--color--#{$colorName}-#{colors.$targetOffsets}
       );
       --lb-header--color: var(--wp--preset--color--#{$colorName}-100);
       --lb-header--color--hover: var(--wp--preset--color--white);
 
       --lb-header--alter--color: var(--wp--preset--color--black);
       --lb-header--alter--color--hover: var(
-        --wp--preset--color--#{$colorName}-#{$targetOffsets}
+        --wp--preset--color--#{$colorName}-#{colors.$targetOffsets}
       );
     }
   }
@@ -194,7 +199,7 @@
     --lb-header--background--color: var(--wp--preset--color--white);
 
     --lb-header--color: var(--wp--preset--color--black);
-    --lb-header--color--hover: var(--wp--preset--color--#{$colorGray}-700);
+    --lb-header--color--hover: var(--wp--preset--color--#{colors.$colorGray}-700);
 
     --lb-header--alter--color: var(--lb-header--color);
     --lb-header--alter--color--hover: var(--lb-header--color--hover);

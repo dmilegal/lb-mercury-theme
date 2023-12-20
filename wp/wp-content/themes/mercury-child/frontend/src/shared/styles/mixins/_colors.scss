@@ -1,3 +1,5 @@
+@use "helpers";
+
 @use "sass:string";
 @use 'sass:list';
 
@@ -9,12 +11,12 @@
 @function get-contrast-text-color($colorName) {
   @debug $colorName;
   $list: string.split($colorName, '-');
-  $offset: nth($list, -1);
-  $newList: remove-nth($list, -1);
+  $offset: list.nth($list, -1);
+  $newList: helpers.remove-nth($list, -1);
 
-  @if str-to-num($offset) > 200 {
+  @if helpers.str-to-num($offset) > 200 {
     @return 'white';
   }
 
-  @return implode(list.append($newList, 700), '-');
+  @return helpers.implode(list.append($newList, 700), '-');
 }

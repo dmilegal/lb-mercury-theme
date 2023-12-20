@@ -1,5 +1,5 @@
-@import '@/shared/styles/abstracts/_index.scss';
-@import '@/shared/styles/mixins/_index.scss';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
 
 .lbc-hero-banner {
   --lbc-hero-banner--background--color: var(--wp--preset--color--white);
@@ -12,10 +12,10 @@
   }
 
   &--gray {
-    --lbc-hero-banner--background--color: var(--wp--preset--color--#{$colorGray}-25);
+    --lbc-hero-banner--background--color: var(--wp--preset--color--#{colors.$colorGray}-25);
   }
 
   &__inner {
-    @include make-container-max-width(--wp--preset--color--white);
+    @include container.make-container-max-width(--wp--preset--color--white);
   }
 }

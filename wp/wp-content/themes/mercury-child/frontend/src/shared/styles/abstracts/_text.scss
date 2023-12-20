@@ -1,2 +1,60 @@
 @use 'sass:map';
 $DEFAULT_FONT_SIZE: 16px;
+
+$body-fonts: (
+  display-2xl: (
+    font-size: var(--wp--preset--font-size--display-2xl),
+    line-height: var(--wp--custom--line-height--display-2xl),
+    letter-spacing: var(--wp--custom--letter-spacing--display-2xl),
+  ),
+  display-xl: (
+    font-size: var(--wp--preset--font-size--display-xl),
+    line-height: var(--wp--custom--line-height--display-xl),
+    letter-spacing: var(--wp--custom--letter-spacing--display-xl),
+  ),
+  display-lg: (
+    font-size: var(--wp--preset--font-size--display-lg),
+    line-height: var(--wp--custom--line-height--display-lg),
+    letter-spacing: var(--wp--custom--letter-spacing--display-lg),
+  ),
+  display-md: (
+    font-size: var(--wp--preset--font-size--display-md),
+    line-height: var(--wp--custom--line-height--display-md),
+    letter-spacing: var(--wp--custom--letter-spacing--display-md),
+  ),
+  display-sm: (
+    font-size: var(--wp--preset--font-size--display-sm),
+    line-height: var(--wp--custom--line-height--display-sm),
+    letter-spacing: var(--wp--custom--letter-spacing--display-sm),
+  ),
+  display-xs: (
+    font-size: var(--wp--preset--font-size--display-xs),
+    line-height: var(--wp--custom--line-height--display-xs),
+    letter-spacing: var(--wp--custom--letter-spacing--display-xs),
+  ),
+  text-xl: (
+    font-size: var(--wp--preset--font-size--text-xl),
+    line-height: var(--wp--custom--line-height--text-xl),
+    letter-spacing: var(--wp--custom--letter-spacing--text-xl),
+  ),
+  text-lg: (
+    font-size: var(--wp--preset--font-size--text-lg),
+    line-height: var(--wp--custom--line-height--text-lg),
+    letter-spacing: var(--wp--custom--letter-spacing--text-lg),
+  ),
+  text-md: (
+    font-size: var(--wp--preset--font-size--text-md),
+    line-height: var(--wp--custom--line-height--text-md),
+    letter-spacing: var(--wp--custom--letter-spacing--text-md),
+  ),
+  text-sm: (
+    font-size: var(--wp--preset--font-size--text-sm),
+    line-height: var(--wp--custom--line-height--text-sm),
+    letter-spacing: var(--wp--custom--letter-spacing--text-sm),
+  ),
+  text-xs: (
+    font-size: var(--wp--preset--font-size--text-xs),
+    line-height: var(--wp--custom--line-height--text-xs),
+    letter-spacing: var(--wp--custom--letter-spacing--text-xs),
+  ),
+);

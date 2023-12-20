@@ -1,6 +1,9 @@
+@use "@/shared/styles/abstracts/colors";
+@use "@/shared/styles/mixins/font";
+
 .lb-lang-switcher {
   position: relative;
-  @include get-text-styles('text-xs');
+  @include font.get-text-styles('text-xs');
   font-weight: 500;
   color: var(--wp--preset--color--black);
 
@@ -18,9 +21,9 @@
     }
   }
 
-  @each $colorName in $colorNames {
+  @each $colorName in colors.$colorNames {
     &--color_#{$colorName} {
-      --lb-lang-switcher--color--hover: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+      --lb-lang-switcher--color--hover: var(--wp--preset--color--#{$colorName}-#{colors.$targetOffsets});
     }
   }
 

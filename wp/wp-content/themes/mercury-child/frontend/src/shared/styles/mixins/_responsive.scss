@@ -1,10 +1,13 @@
+@use "sass:string";
+@use "helpers";
+
 @use 'sass:math';
 //rsponsive ratio
 @mixin responsive-ratio($x, $y, $pseudo: false) {
-  $padding: unquote(math.div($y, $x) * 100 + '%');
+  $padding: string.unquote(math.div($y, $x) * 100 + '%');
   @if $pseudo {
     &:before {
-      @include pseudo($pos: relative);
+      @include helpers.pseudo($pos: relative);
       width: 100%;
       padding-top: $padding;
     }

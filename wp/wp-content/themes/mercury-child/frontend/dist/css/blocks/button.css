@@ -5,16 +5,7 @@
 * helpers
 **/
 /**
-* itertors
-**/
-/**
 * font
-**/
-/**
-* images
-**/
-/**
-* form
 **/
 .lbc-button {
   display: inline-flex;
@@ -55,7 +46,7 @@
 .lbc-button__postfix > :where([class^=icon-],
 [class*=" icon-"]), .lbc-button__prefix > :where([class^=icon-],
 [class*=" icon-"]) {
-  font-size: 1.25rem;
+  font-size: font-size(20px);
   font-weight: normal;
 }
 .lbc-button--display_icon {
@@ -120,7 +111,7 @@
 .lbc-button--size_2xl :where(.lbc-button__postfix > :where([class^=icon-],
 [class*=" icon-"]), .lbc-button__prefix > :where([class^=icon-],
 [class*=" icon-"])) {
-  font-size: 1.5rem;
+  font-size: font-size(24px);
 }
 .lbc-button--variant_primary:where(.lbc-button--color_gray) {
   --lbc-button--background--color: var(

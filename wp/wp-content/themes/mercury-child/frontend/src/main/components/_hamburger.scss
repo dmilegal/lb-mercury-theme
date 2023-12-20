@@ -6,4 +6,4 @@ $hamburger-padding-y: 14px;
 $hamburger-layer-height: 3px;
 $hamburger-layer-color: currentColor;
 
-@import '~hamburgers/_sass/hamburgers/hamburgers.scss';
+@use '~hamburgers/_sass/hamburgers/hamburgers.scss';

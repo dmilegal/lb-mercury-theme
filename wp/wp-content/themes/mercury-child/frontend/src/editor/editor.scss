@@ -1,6 +1,2 @@
-@import 'fonts/poppins/stylesheet.css';
-@import 'fonts/lhicon/stylesheet.css';
-
-:where(.editor-styles-wrapper) {
-  @import '@/shared/styles/main.scss';
-}
+@use "sass:meta";
+@use 'styles';

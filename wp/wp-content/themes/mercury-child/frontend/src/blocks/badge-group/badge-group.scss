@@ -1,6 +1,6 @@
 @use 'sass:math';
-@import '@/shared/styles/abstracts/_index.scss';
-@import '@/shared/styles/mixins/_index.scss';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
 
 .lbc-badge-group {
   display: inline-flex;
@@ -19,7 +19,7 @@
     padding: 0;
     --lbc-badge--background--color: transparent;
     & :where([class^='icon-'], [class*=' icon-']) {
-      font-size: font-size-by-name('text-md');
+      font-size: font.font-size-by-name('text-md');
     }
   }
 
@@ -42,7 +42,7 @@
   }
 
   @each $theme in 'light', 'medium', 'dark' {
-    @each $colorName in $colorNames {
+    @each $colorName in colors.$colorNames {
       &--theme_#{$theme}:where(#{'&--color_' + $colorName}) {
         @if $theme == 'light' {
           --lbc-badge--background--color: var(--wp--preset--color--#{$colorName}-50);

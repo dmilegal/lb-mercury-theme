@@ -1,3 +1,7 @@
-@import '_variables.scss';
-@import '_normalize.scss';
-@import '_defaults.scss';
+$globalSelector: 'body' !default;
+
+@use 'variables';
+@use 'normalize';
+@use 'defaults' with (
+  $globalSelector: $globalSelector
+);

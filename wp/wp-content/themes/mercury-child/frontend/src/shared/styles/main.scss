@@ -1,8 +1,8 @@
 /*mixins*/
-@import 'mixins/_index.scss';
+@use 'mixins';
 
 /*abstracts*/
-@import 'abstracts/_index.scss';
+@use 'abstracts';
 
 /*external*/
 
@@ -12,10 +12,10 @@
 * Project style
 */
 /*base*/
-@import 'base/_index.scss';
+@use 'base';
 
 /*themes*/
-@import 'themes/_index.scss';
+@use 'themes';
 
 
 /*pages*/

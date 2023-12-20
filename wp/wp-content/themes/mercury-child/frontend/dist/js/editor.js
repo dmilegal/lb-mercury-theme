@@ -1,5 +1,29 @@
 /******/ var __webpack_modules__ = ({
 
+/***/ "./public/fonts/lhicon/stylesheet.css":
+/*!********************************************!*\
+  !*** ./public/fonts/lhicon/stylesheet.css ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./public/fonts/poppins/stylesheet.css":
+/*!*********************************************!*\
+  !*** ./public/fonts/poppins/stylesheet.css ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/editor/editor.scss":
 /*!********************************!*\
   !*** ./src/editor/editor.scss ***!
@@ -58,7 +82,11 @@ var __webpack_exports__ = {};
   !*** ./src/editor/editor.ts ***!
   \******************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./editor.scss */ "./src/editor/editor.scss");
+/* harmony import */ var fonts_poppins_stylesheet_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fonts/poppins/stylesheet.css */ "./public/fonts/poppins/stylesheet.css");
+/* harmony import */ var fonts_lhicon_stylesheet_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! fonts/lhicon/stylesheet.css */ "./public/fonts/lhicon/stylesheet.css");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./src/editor/editor.scss");
+
+
 
 })();
 

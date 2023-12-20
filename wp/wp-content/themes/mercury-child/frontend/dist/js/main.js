@@ -1,5 +1,29 @@
 /******/ var __webpack_modules__ = ({
 
+/***/ "./public/fonts/lhicon/stylesheet.css":
+/*!********************************************!*\
+  !*** ./public/fonts/lhicon/stylesheet.css ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./public/fonts/poppins/stylesheet.css":
+/*!*********************************************!*\
+  !*** ./public/fonts/poppins/stylesheet.css ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/main/main.scss":
 /*!****************************!*\
   !*** ./src/main/main.scss ***!
@@ -127,9 +151,13 @@ var __webpack_exports__ = {};
   !*** ./src/main/main.ts ***!
   \**************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ "./src/main/main.scss");
-/* harmony import */ var _scripts_mobile_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/mobile-menu.js */ "./src/main/scripts/mobile-menu.js");
-/* harmony import */ var _scripts_mobile_menu_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scripts_mobile_menu_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var fonts_poppins_stylesheet_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fonts/poppins/stylesheet.css */ "./public/fonts/poppins/stylesheet.css");
+/* harmony import */ var fonts_lhicon_stylesheet_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! fonts/lhicon/stylesheet.css */ "./public/fonts/lhicon/stylesheet.css");
+/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main.scss */ "./src/main/main.scss");
+/* harmony import */ var _scripts_mobile_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/mobile-menu.js */ "./src/main/scripts/mobile-menu.js");
+/* harmony import */ var _scripts_mobile_menu_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scripts_mobile_menu_js__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 

@@ -1,6 +1,6 @@
 @use 'sass:math';
-@import '@/shared/styles/abstracts/_index.scss';
-@import '@/shared/styles/mixins/_index.scss';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
 
 .lbc-badge {
   display: inline-flex;
@@ -46,7 +46,7 @@
 
   &--size_sm {
     &:where(:not(#{$onlyIcon})) {
-      @include get-text-styles('text-xs');
+      @include font.get-text-styles('text-xs');
       padding: 2px 8px;
     }
     &:where(#{$onlyIcon}) {
@@ -55,7 +55,7 @@
   }
   &--size_md {
     &:where(:not(#{$onlyIcon})) {
-      @include get-text-styles('text-sm');
+      @include font.get-text-styles('text-sm');
       padding: 2px 8px;
     }
     &:where(#{$onlyIcon}) {
@@ -64,7 +64,7 @@
   }
   &--size_lg {
     &:where(:not(#{$onlyIcon})) {
-      @include get-text-styles('text-sm');
+      @include font.get-text-styles('text-sm');
       padding: 4px 10px;
     }
     &:where(#{$onlyIcon}) {
@@ -73,28 +73,28 @@
   }
 
   @each $theme in 'light', 'medium', 'dark' {
-    @each $colorName in $colorNames {
+    @each $colorName in colors.$colorNames {
       &--theme_#{$theme}:where(#{'&--color_' + $colorName}) {
         @if $theme == 'light' {
-          --lbc-badge--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
+          --lbc-badge--color: var(--wp--preset--color--#{$colorName}-#{colors.$targetOffsets});
           --lbc-badge--background--color: var(--wp--preset--color--white);
           --lbc-badge--icon--color: var(
-            --wp--preset--color--#{$colorName}-#{$targetOffsets - 100}
+            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets - 100}
           );
         } @else if $theme == 'medium' {
-          --lbc-badge--color: var(--wp--preset--color--#{$colorName}-#{$targetOffsets});
-          @if $colorName == $colorGray {
+          --lbc-badge--color: var(--wp--preset--color--#{$colorName}-#{colors.$targetOffsets});
+          @if $colorName == colors.$colorGray {
             --lbc-badge--background--color: var(--wp--preset--color--#{$colorName}-100);
           } @else {
             --lbc-badge--background--color: var(--wp--preset--color--#{$colorName}-50);
           }
           --lbc-badge--icon--color: var(
-            --wp--preset--color--#{$colorName}-#{$targetOffsets - 100}
+            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets - 100}
           );
         } @else if $theme == 'dark' {
           --lbc-badge--color: var(--wp--preset--color--white);
           --lbc-badge--background--color: var(
-            --wp--preset--color--#{$colorName}-#{$targetOffsets}
+            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets}
           );
           --lbc-badge--icon--color: var(--wp--preset--color--white);
         }
