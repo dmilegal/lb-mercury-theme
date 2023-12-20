@@ -85,11 +85,11 @@ get_template_part('theme-parts/molecules/badge-group', null, [
 	]
 ]);
 
+echo do_shortcode('[show_wpb_author_info_box]');
 ?>
+</div>
 <?php
 if (!is_author())
-	echo do_shortcode('[show_wpb_author_info_box]');
-
 	get_template_part('theme-parts/organisms/footer/style-1');
 ?>
 

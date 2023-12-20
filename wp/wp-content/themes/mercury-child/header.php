@@ -17,5 +17,5 @@
 
 		<!-- Header Start -->
 		<? get_template_part('/theme-parts/organisms/header/style-1'); ?>
-
+		<div class="lb-main__content">
 		<!-- Header End -->

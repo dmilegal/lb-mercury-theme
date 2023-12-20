@@ -1,34 +1,4 @@
-$globalSelector: 'body' !default;
-
 @use 'sass:map';
 @use '@/shared/styles/abstracts/text';
 
-#{$globalSelector} {
-  font-family: var(--wp--preset--font-family--base);
-}
 
-img {
-  max-width: 100%;
-}
-
-
-.prose-headings :is(:where(p):not(:where([class~=not-prose],[class~=not-prose] *))) {
-  
-}
-
-.md\:prose-h1\:text-h1 :is(:where(h1):not(:where([class~=not-prose],[class~=not-prose] *))) {
-
-}
-
-
-a {
-  color:var(--wp--preset--color--primary-600)
-}
-
-@each $name, $params in text.$body-fonts {
-  .has-#{$name}-font-size {
-    font-size: map.get($params, 'font-size');
-    line-height: map.get($params, 'line-height');
-    letter-spacing: map.get($params, 'letter-spacing');
-  }
-}

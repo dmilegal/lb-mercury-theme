@@ -1,14 +1,4 @@
 @use '@/shared/styles/mixins/container';
-@use '@/shared/styles/base' with (
-  $globalSelector: ':where(.editor-styles-wrapper)'
-);
-
-// gutenberg editor
-:where(.editor-styles-wrapper) {
-  font-family: var(--wp--preset--font-family--base);
-
-  // @import '@/shared/styles/base/_all..scss';
-}
 
 .editor-styles-wrapper
   .block-editor-block-list__layout.is-root-container

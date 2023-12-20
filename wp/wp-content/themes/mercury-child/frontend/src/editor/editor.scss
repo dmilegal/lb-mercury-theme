@@ -1,2 +1,8 @@
 @use "sass:meta";
+@use '@/shared/styles/main' with (
+  $globalSelector: 'body',
+  $proseCustomSelector: 'body',
+  $disableNormalize: true
+);
 @use 'styles';
+

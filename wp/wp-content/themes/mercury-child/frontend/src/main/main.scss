@@ -1,3 +1,6 @@
 @use "sass:meta";
-@use '@/shared/styles/main';
+@use '@/shared/styles/main' with (
+  $globalSelector: 'body',
+  $proseCustomSelector: '.prose'
+);
 @use 'components';

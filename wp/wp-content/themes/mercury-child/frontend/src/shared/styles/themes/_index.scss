@@ -1,7 +1,14 @@
-@use 'link';
-@use 'text';
+$globalSelector: null !default;
+$proseCustomSelector: null !default;
+
+@use 'text' with (
+  $globalSelector: $globalSelector,
+  $proseCustomSelector: $proseCustomSelector
+);
 @use 'list';
 @use 'spacing';
 @use 'form';
-@use 'images';
+@use 'images' with (
+  $proseCustomSelector: $proseCustomSelector
+);
 @use 'screen';

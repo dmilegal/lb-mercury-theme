@@ -1,7 +1,9 @@
-$globalSelector: 'body' !default;
+$globalSelector: null !default;
+$proseCustomSelector: null !default;
+$disableNormalize: null !default;
 
 @use 'variables';
-@use 'normalize';
-@use 'defaults' with (
-  $globalSelector: $globalSelector
+@use 'normalize' with (
+  $disableNormalize: $disableNormalize
 );
+@use 'defaults';

@@ -1302,6 +1302,10 @@
 /*!***********************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/editor/editor.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************/
+/*
+* Project style
+*/
+/*base*/
 body {
   --layout--content-spacing: var(--wp--custom--layout--content-spacing-md);
   --layout--content-padding: var(--wp--custom--layout--content-padding-md);
@@ -1317,146 +1321,68 @@ body {
   }
 }
 
-::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to `inherit` in Safari.
-*/
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-:where(*) {
-  box-sizing: border-box;
-}
-
-/*
-Add the correct display in Chrome and Safari.
-*/
-summary {
-  display: list-item;
-}
-
-/*
-Removes the default spacing for appropriate elements.
-*/
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
-}
-
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-legend {
-  padding: 0;
-}
-
-ol,
-ul,
-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-dialog {
-  padding: 0;
-}
-
-/*
-Prevent resizing textareas horizontally by default.
-*/
-textarea {
-  resize: vertical;
-}
-
-/*
-1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
-2. Set the default placeholder color to the user's configured gray 400 color.
-*/
-input::placeholder,
-textarea::placeholder {
-  opacity: 1; /* 1 */
-  color: theme("colors.gray.400", #9ca3af); /* 2 */
-}
-
-/*
-Set the default cursor for buttons.
-*/
-button,
-[role=button] {
-  cursor: pointer;
-  font-family: inherit;
-}
-
-/*
-Make sure disabled buttons don't get the pointer cursor.
-*/
-:disabled {
-  cursor: default;
-}
-
-/*
-1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-   This can trigger a poorly considered lint error in some tools but is included by design.
-*/
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block; /* 1 */
-  vertical-align: middle; /* 2 */
-}
-
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/*
-Make elements with the HTML hidden attribute stay hidden by default.
-*/
-[hidden] {
-  display: none;
-}
-
-:where(.editor-styles-wrapper) {
+/*themes*/
+/**
+* itertors
+**/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body {
   font-family: var(--wp--preset--font-family--base);
 }
 
-img {
-  max-width: 100%;
+body :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  font-size: var(--wp--preset--font-size--display-sm);
+  line-height: var(--wp--custom--line-height--display-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--display-sm, inherit);
+  font-weight: 600;
 }
 
-a {
+body :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  font-size: var(--wp--preset--font-size--display-xs);
+  line-height: var(--wp--custom--line-height--display-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--display-xs, inherit);
+  font-weight: 600;
+}
+
+body :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  font-size: var(--wp--preset--font-size--text-lg);
+  line-height: var(--wp--custom--line-height--text-lg);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
+}
+
+body :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--160);
+  margin-bottom: var(--wp--preset--spacing--100);
+}
+
+body :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--160);
+  margin-bottom: var(--wp--preset--spacing--80);
+}
+
+body :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--80);
+  margin-bottom: var(--wp--preset--spacing--80);
+}
+
+body :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  color: var(--wp--preset--color--gray-900);
+}
+
+body :where(a):not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--wp--preset--color--primary-600);
+}
+
+body :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  color: var(--wp--preset--color--gray-500);
 }
 
 .has-display-2xl-font-size {
@@ -1525,10 +1451,58 @@ a {
   letter-spacing: var(--wp--custom--letter-spacing--text-xs);
 }
 
-:where(.editor-styles-wrapper) {
-  font-family: var(--wp--preset--font-family--base);
+/*.form {
 }
 
+.invalid {
+  &--text {
+  }
+}
+.valid {
+  &--text {
+  }
+}
+
+.error {
+  &--text {
+  }
+}
+.warn {
+  &--text {
+  }
+}
+.info {
+  &--text {
+  }
+}*/
+body :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) img {
+  max-width: 100%;
+}
+
+/*.sr {
+  &-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    &-focusable {
+      &:active,
+      &:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+      }
+    }
+  }
+}
+*/
 .editor-styles-wrapper .block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)),
 .editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
   width: 100%;

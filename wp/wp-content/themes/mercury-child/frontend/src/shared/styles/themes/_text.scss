@@ -1,16 +1,58 @@
-@use 'sass:map';
+$globalSelector: 'body' !default;
+$proseCustomSelector: null !default;
 
-h1 {
+@use 'sass:map';
+@use '@/shared/styles/abstracts/text';
+@use '@/shared/styles/mixins/typo';
+@use '@/shared/styles/mixins/font';
+
+#{$globalSelector} {
+  font-family: var(--wp--preset--font-family--base);
 }
-h2 {
+
+@include typo.make-prose('headings', 'h2', $proseCustomSelector) {
+  @include font.get-text-styles('display-sm');
+  font-weight: 600;
 }
-h3 {
+
+@include typo.make-prose('headings', 'h3', $proseCustomSelector) {
+  @include font.get-text-styles('display-xs');
+  font-weight: 600;
 }
-h4 {
+
+@include typo.make-prose('content', 'p', $proseCustomSelector) {
+  @include font.get-text-styles('text-lg');
 }
-h5 {
+
+@include typo.make-prose('spaces', 'h2', $proseCustomSelector) {
+  margin-block-start: var(--wp--preset--spacing--160);
+  margin-block-end: var(--wp--preset--spacing--100);
 }
-h6 {
+@include typo.make-prose('spaces', 'h3', $proseCustomSelector) {
+  margin-block-start: var(--wp--preset--spacing--160);
+  margin-block-end: var(--wp--preset--spacing--80);
 }
-p {
+@include typo.make-prose('spaces', 'p', $proseCustomSelector) {
+  margin-block-start: var(--wp--preset--spacing--80);
+  margin-block-end: var(--wp--preset--spacing--80);
+}
+
+@include typo.make-prose('colors--light', 'h1,h2,h3,h4,h5,h6', $proseCustomSelector) {
+  color: var(--wp--preset--color--gray-900);
+}
+
+@include typo.make-prose('colors--light', 'a', $proseCustomSelector) {
+  color: var(--wp--preset--color--primary-600);
+}
+
+@include typo.make-prose('colors--light', 'p', $proseCustomSelector) {
+  color: var(--wp--preset--color--gray-500);
+}
+
+@each $name, $params in text.$body-fonts {
+  .has-#{$name}-font-size {
+    font-size: map.get($params, 'font-size');
+    line-height: map.get($params, 'line-height');
+    letter-spacing: map.get($params, 'letter-spacing');
+  }
 }

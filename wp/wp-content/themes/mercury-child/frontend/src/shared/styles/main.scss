@@ -1,21 +1,19 @@
-/*mixins*/
-@use 'mixins';
-
-/*abstracts*/
-@use 'abstracts';
-
-/*external*/
-
-/* components */
-
+$globalSelector: null !default;
+$proseCustomSelector: null !default;
+$disableNormalize: null !default;
 /*
 * Project style
 */
 /*base*/
-@use 'base';
+@use 'base' with (
+  $globalSelector: $globalSelector,
+  $proseCustomSelector: $proseCustomSelector,
+  $disableNormalize: $disableNormalize
+);
 
 /*themes*/
-@use 'themes';
+@use 'themes' with (
+  $globalSelector: $globalSelector,
+  $proseCustomSelector: $proseCustomSelector
+);
 
-
-/*pages*/

@@ -45,6 +45,9 @@ export default function common(mode) {
       editor: {
         import: [`${paths.src}/editor/editor.ts`],
       },
+      'editor-reset': {
+        import: [`${paths.src}/editor/editor-reset.scss`],
+      },
       ...blocksEntries,
     },
     output: {
