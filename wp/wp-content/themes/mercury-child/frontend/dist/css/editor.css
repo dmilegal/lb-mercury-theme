@@ -1381,7 +1381,7 @@ body :where(a):not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--wp--preset--color--primary-600);
 }
 
-body :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
+body:not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--wp--preset--color--gray-500);
 }
 

@@ -1,0 +1,8 @@
+
+@use "@/shared/styles/mixins/container";
+
+.content-container {
+  & > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    @include container.make-container-max-width();
+  }
+}

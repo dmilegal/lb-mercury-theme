@@ -1467,7 +1467,7 @@ body {
   font-family: var(--wp--preset--font-family--base);
 }
 
-.prose :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.prose-headings :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
   font-size: var(--wp--preset--font-size--display-sm);
   line-height: var(--wp--custom--line-height--display-sm);
   letter-spacing: inherit;
@@ -1475,7 +1475,7 @@ body {
   font-weight: 600;
 }
 
-.prose :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.prose-headings :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
   font-size: var(--wp--preset--font-size--display-xs);
   line-height: var(--wp--custom--line-height--display-xs);
   letter-spacing: inherit;
@@ -1483,37 +1483,37 @@ body {
   font-weight: 600;
 }
 
-.prose :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.prose-content :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
   font-size: var(--wp--preset--font-size--text-lg);
   line-height: var(--wp--custom--line-height--text-lg);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
 }
 
-.prose :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.prose-spaces :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-top: var(--wp--preset--spacing--160);
   margin-bottom: var(--wp--preset--spacing--100);
 }
 
-.prose :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.prose-spaces :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-top: var(--wp--preset--spacing--160);
   margin-bottom: var(--wp--preset--spacing--80);
 }
 
-.prose :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.prose-spaces :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-top: var(--wp--preset--spacing--80);
   margin-bottom: var(--wp--preset--spacing--80);
 }
 
-.prose :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.prose-colors :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--wp--preset--color--gray-900);
 }
 
-.prose :where(a):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.prose-colors :where(a):not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--wp--preset--color--primary-600);
 }
 
-.prose :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.prose-colors:not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--wp--preset--color--gray-500);
 }
 
@@ -1607,7 +1607,7 @@ body {
   &--text {
   }
 }*/
-.prose :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) img {
+.prose-content :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) img {
   max-width: 100%;
 }
 
@@ -2382,6 +2382,15 @@ body {
 .lb-lang-switcher__ico--sub {
   width: 20px;
   height: 20px;
+}
+
+.content-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  width: 100%;
+  max-width: calc(var(--wp--style--global--content-size) - 2 * var(--layout--content-padding));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--layout--content-padding);
+  padding-right: var(--layout--content-padding);
 }
 
 /*# sourceMappingURL=main.css.map*/

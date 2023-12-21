@@ -1,21 +1,59 @@
 @use '@/shared/styles/abstracts/colors';
 @use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use "@/shared/styles/mixins/breakpoints";
 
 .lbc-hero-banner {
   --lbc-hero-banner--background--color: var(--wp--preset--color--white);
-
-  padding: var(--wp--preset--spacing--280) 0 var(--wp--preset--spacing--155);
+  padding-top: var(--wp--preset--spacing--280);
+  padding-bottom: var(--wp--preset--spacing--155);
   background-color: var(--lbc-hero-banner--background--color);
-  
-  &--white {
-    --lbc-hero-banner--background--color: var(--wp--preset--color--white);
+
+  &#{&} {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  &--gray {
-    --lbc-hero-banner--background--color: var(--wp--preset--color--#{colors.$colorGray}-25);
+  &--color {
+    &_white {
+      --lbc-hero-banner--background--color: var(--wp--preset--color--white);
+    }
+    &_gray {
+      --lbc-hero-banner--background--color: var(--wp--preset--color--gray-25);
+    }
   }
 
   &__inner {
-    @include container.make-container-max-width(--wp--preset--color--white);
+    @include container.make-container-max-width();
+    display: grid;
+    
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: var(--layout--content-spacing);
+  }
+
+  &__content {
+    grid-column: span 10;
+    @include breakpoints.media-breakpoint-down(md) {
+      grid-column: span 12;
+    }
+  }
+
+  &__publish-date {
+    display: block;
+    color: var(--wp--preset--color--primary-600);
+    @include font.get-text-styles('text-md');
+    font-weight: 600;
+    margin-bottom: var(--wp--preset--spacing--70);
+  }
+
+  &__title {
+    @include font.get-text-styles('display-lg');
+    font-weight: 500;
+    margin-bottom: var(--wp--preset--spacing--100);
+  }
+
+  &__subtitle {
+    @include font.get-text-styles('text-xl');
   }
 }

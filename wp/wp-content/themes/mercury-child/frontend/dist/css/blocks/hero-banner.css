@@ -1,25 +1,73 @@
 /*!****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/hero-banner/hero-banner.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
 .lbc-hero-banner {
   --lbc-hero-banner--background--color: var(--wp--preset--color--white);
-  padding: var(--wp--preset--spacing--280) 0 var(--wp--preset--spacing--155);
+  padding-top: var(--wp--preset--spacing--280);
+  padding-bottom: var(--wp--preset--spacing--155);
   background-color: var(--wp--preset--color--white);
   background-color: var(--lbc-hero-banner--background--color);
 }
-.lbc-hero-banner--white {
+.lbc-hero-banner.lbc-hero-banner {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.lbc-hero-banner--color_white {
   --lbc-hero-banner--background--color: var(--wp--preset--color--white);
 }
-.lbc-hero-banner--gray {
+.lbc-hero-banner--color_gray {
   --lbc-hero-banner--background--color: var(--wp--preset--color--gray-25);
 }
 .lbc-hero-banner__inner {
   width: 100%;
-  max-width: calc(--wp--preset--color--white - 2 * var(--layout--content-padding));
+  max-width: calc(var(--wp--style--global--content-size) - 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: var(--layout--content-spacing);
+  column-gap: var(--layout--content-spacing);
+}
+.lbc-hero-banner__content {
+  grid-column: span 10;
+}
+@media (max-width: 991.98px) {
+  .lbc-hero-banner__content {
+    grid-column: span 12;
+  }
+}
+.lbc-hero-banner__publish-date {
+  display: block;
+  color: var(--wp--preset--color--primary-600);
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  font-weight: 600;
+  margin-bottom: var(--wp--preset--spacing--70);
+}
+.lbc-hero-banner__title {
+  font-size: var(--wp--preset--font-size--display-lg);
+  line-height: var(--wp--custom--line-height--display-lg);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--display-lg, inherit);
+  font-weight: 500;
+  margin-bottom: var(--wp--preset--spacing--100);
+}
+.lbc-hero-banner__subtitle {
+  font-size: var(--wp--preset--font-size--text-xl);
+  line-height: var(--wp--custom--line-height--text-xl);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xl, inherit);
 }
 
 /*# sourceMappingURL=hero-banner.css.map*/

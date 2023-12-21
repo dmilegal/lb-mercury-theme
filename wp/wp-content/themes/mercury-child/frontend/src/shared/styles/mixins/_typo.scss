@@ -3,18 +3,38 @@
 **/
 @mixin make-prose($groupName, $selectorList, $customProseSelector) {
   @if $customProseSelector {
-    #{$customProseSelector}
-      :is(
-        :where(#{$selectorList}):not(:where([class~='not-prose'], [class~='not-prose'] *))
+    @if $selectorList != '' {
+      #{$customProseSelector}
+        :is(
+          :where(#{$selectorList}):not(
+              :where([class~='not-prose'], [class~='not-prose'] *)
+            )
+        ) {
+        @content;
+      }
+    } @else {
+      #{$customProseSelector}:not(
+        :where([class~='not-prose'], [class~='not-prose'] *)
       ) {
-      @content;
+        @content;
+      }
     }
   } @else {
-    .prose-#{$groupName}
-      :is(
-        :where(#{$selectorList}):not(:where([class~='not-prose'], [class~='not-prose'] *))
+    @if $selectorList != '' {
+      .prose-#{$groupName}
+        :is(
+          :where(#{$selectorList}):not(
+              :where([class~='not-prose'], [class~='not-prose'] *)
+            )
+        ) {
+        @content;
+      }
+    } @else {
+      .prose-#{$groupName}:not(
+        :where([class~='not-prose'], [class~='not-prose'] *)
       ) {
-      @content;
+        @content;
+      }
     }
   }
 }

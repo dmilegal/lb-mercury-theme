@@ -27,7 +27,7 @@ add_action('wp_enqueue_scripts', 'enqueue_main_assets', 9);
 function enqueue_components_assets($slug, $name, $args)
 {
   $list = explode('/', $slug);
-  if (!in_array('components', $list)) return;
+  if (!(in_array('atoms', $list) || in_array('molecules', $list) || in_array('organisms', $list))) return;
 
   enqueue_assets_by_name(end($list));
 }
