@@ -24,6 +24,15 @@ $proseCustomSelector: null !default;
   @include font.get-text-styles('text-lg');
 }
 
+@include typo.make-prose('spaces', 'h1,h2,h3,h4,h5,h6,p', $proseCustomSelector) {
+  &:first-child {
+    margin-block-start: 0
+  }
+  &:last-child {
+    margin-block-end: 0
+  }
+}
+
 @include typo.make-prose('spaces', 'h2', $proseCustomSelector) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--100);

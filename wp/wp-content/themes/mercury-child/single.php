@@ -7,8 +7,13 @@ get_template_part('theme-parts/molecules/hero-banner', null, [
 	'published_date' => get_the_date(),
 ]);
 ?>
-<div class="content-container prose-headings prose-content prose-spaces prose-colors">
-  <? the_content() ?>
-</div>
-
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<div class="lb-content-container lb-content--with-sidebar prose-headings prose-content prose-spaces prose-colors">
+			<? get_template_part('theme-parts/organisms/sidebar/sidebar', null); ?>
+			<div class="lb-content">
+				<? the_content() ?>
+			</div>
+		</div>
+	<?php endwhile; ?>
+<?php endif; ?>
 <?php get_footer(); ?>

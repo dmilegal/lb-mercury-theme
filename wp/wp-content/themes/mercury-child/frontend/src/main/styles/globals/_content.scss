@@ -1,8 +1,26 @@
 
 @use "@/shared/styles/mixins/container";
 
-.content-container {
-  & > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+.lb-content {
+  //& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  //  @include container.make-container-max-width();
+  //}
+  
+  &-container {
     @include container.make-container-max-width();
+    padding-top: var(--wp--preset--spacing--155);
+    padding-bottom: var(--wp--preset--spacing--155);
+  }
+  &--with-sidebar {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    column-gap: calc(var(--layout--content-spacing) / 4);
+    & > *:nth-child(1) {
+      grid-column: 2/7;
+    }
+    & > *:nth-child(2) {
+      grid-column: 8/20;
+    }
+
   }
 }

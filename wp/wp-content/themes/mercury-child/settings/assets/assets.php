@@ -7,7 +7,7 @@ function disable_old_assets()
   wp_deregister_style('mercury-block-editor-styles');
 
   wp_deregister_script('mercury-global-js');
-  
+  wp_deregister_script('mercury-floating-header');
 }
 add_action('wp_enqueue_scripts', 'disable_old_assets', 999);
 add_action('enqueue_block_editor_assets', 'disable_old_assets', 999);
