@@ -14,7 +14,7 @@
   &--with-sidebar {
     display: grid;
     grid-template-columns: repeat(20, 1fr);
-    column-gap: calc(var(--layout--content-spacing) / 4);
+    column-gap: calc(var(--layout--content-spacing) / 2);
     & > *:nth-child(1) {
       grid-column: 2/7;
     }

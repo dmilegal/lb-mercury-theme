@@ -28,7 +28,7 @@
     @include container.make-container-max-width();
     display: grid;
     grid-template-columns: repeat(20, 1fr);
-    column-gap: calc(var(--layout--content-spacing) / 4);
+    column-gap: calc(var(--layout--content-spacing) / 2);
   }
 
   &__content {

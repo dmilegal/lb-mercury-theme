@@ -1,0 +1,30 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+
+body {
+  --toc--link--color: var(--wp--preset--color--gray-500);
+  --toc--link--color--hover: var(--wp--preset--color--primary-600);
+}
+
+.ez-toc {
+  &-counter {
+    @include font.get-text-styles('text-md');
+    font-weight: 600;
+  }
+  &-link {
+    color: var(--toc--link--color);
+    text-decoration: none;
+    transition: color 170ms ease-in-out;
+    &:hover {
+      color: var(--toc--link--color--hover);
+    }
+  }
+  &-list {
+    li {
+      margin: var(--wp--preset--spacing--70) 0;
+    }
+    ul {
+      padding-left: var(--wp--preset--spacing--70);
+    }
+  }
+}

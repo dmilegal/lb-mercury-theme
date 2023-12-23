@@ -56,7 +56,7 @@ $proseCustomSelector: null !default;
   color: var(--wp--preset--color--primary-600);
 }
 
-@include typo.make-prose('colors', '', $proseCustomSelector) {
+@include typo.make-prose('colors', 'p', $proseCustomSelector) {
   color: var(--wp--preset--color--gray-500);
 }
 
