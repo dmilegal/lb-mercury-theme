@@ -1,1 +1,123 @@
-:where(:where(.editor-styles-wrapper)) ::-webkit-search-decoration{-webkit-appearance:none}:where(:where(.editor-styles-wrapper)) ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}:where(:where(.editor-styles-wrapper)) :where(*),:where(:where(.editor-styles-wrapper)) :where(*)::before,:where(:where(.editor-styles-wrapper)) :where(*)::after{box-sizing:border-box}:where(:where(.editor-styles-wrapper)) summary{display:list-item}:where(:where(.editor-styles-wrapper)) blockquote,:where(:where(.editor-styles-wrapper)) dl,:where(:where(.editor-styles-wrapper)) dd,:where(:where(.editor-styles-wrapper)) h1,:where(:where(.editor-styles-wrapper)) h2,:where(:where(.editor-styles-wrapper)) h3,:where(:where(.editor-styles-wrapper)) h4,:where(:where(.editor-styles-wrapper)) h5,:where(:where(.editor-styles-wrapper)) h6,:where(:where(.editor-styles-wrapper)) hr,:where(:where(.editor-styles-wrapper)) figure,:where(:where(.editor-styles-wrapper)) p,:where(:where(.editor-styles-wrapper)) pre{margin:0}:where(:where(.editor-styles-wrapper)) fieldset{margin:0;padding:0}:where(:where(.editor-styles-wrapper)) legend{padding:0}:where(:where(.editor-styles-wrapper)) ol,:where(:where(.editor-styles-wrapper)) ul,:where(:where(.editor-styles-wrapper)) menu{list-style:none;margin:0;padding:0}:where(:where(.editor-styles-wrapper)) dialog{padding:0}:where(:where(.editor-styles-wrapper)) textarea{resize:vertical}:where(:where(.editor-styles-wrapper)) input::placeholder,:where(:where(.editor-styles-wrapper)) textarea::placeholder{opacity:1;color:theme("colors.gray.400", #9ca3af)}:where(:where(.editor-styles-wrapper)) button,:where(:where(.editor-styles-wrapper)) [role=button]{cursor:pointer;font-family:inherit}:where(:where(.editor-styles-wrapper)) :disabled{cursor:default}:where(:where(.editor-styles-wrapper)) img,:where(:where(.editor-styles-wrapper)) svg,:where(:where(.editor-styles-wrapper)) video,:where(:where(.editor-styles-wrapper)) canvas,:where(:where(.editor-styles-wrapper)) audio,:where(:where(.editor-styles-wrapper)) iframe,:where(:where(.editor-styles-wrapper)) embed,:where(:where(.editor-styles-wrapper)) object{display:block;vertical-align:middle}:where(:where(.editor-styles-wrapper)) img,:where(:where(.editor-styles-wrapper)) video{max-width:100%;height:auto}:where(:where(.editor-styles-wrapper)) [hidden]{display:none}
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/editor/editor-reset.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+:where(:where(.editor-styles-wrapper)) {
+  /*
+  1. Correct the inability to style clickable types in iOS and Safari.
+  2. Change font properties to `inherit` in Safari.
+  */
+  /*
+  Add the correct display in Chrome and Safari.
+  */
+  /*
+  Removes the default spacing for appropriate elements.
+  */
+  /*
+  Prevent resizing textareas horizontally by default.
+  */
+  /*
+  1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+  2. Set the default placeholder color to the user's configured gray 400 color.
+  */
+  /*
+  Set the default cursor for buttons.
+  */
+  /*
+  Make sure disabled buttons don't get the pointer cursor.
+  */
+  /*
+  1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+  2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+     This can trigger a poorly considered lint error in some tools but is included by design.
+  */
+  /*
+  Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+  */
+  /*
+  Make elements with the HTML hidden attribute stay hidden by default.
+  */
+}
+:where(:where(.editor-styles-wrapper)) ::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+:where(:where(.editor-styles-wrapper)) ::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+:where(:where(.editor-styles-wrapper)) :where(*),
+:where(:where(.editor-styles-wrapper)) :where(*)::before,
+:where(:where(.editor-styles-wrapper)) :where(*)::after {
+  box-sizing: border-box;
+}
+:where(:where(.editor-styles-wrapper)) summary {
+  display: list-item;
+}
+:where(:where(.editor-styles-wrapper)) blockquote,
+:where(:where(.editor-styles-wrapper)) dl,
+:where(:where(.editor-styles-wrapper)) dd,
+:where(:where(.editor-styles-wrapper)) h1,
+:where(:where(.editor-styles-wrapper)) h2,
+:where(:where(.editor-styles-wrapper)) h3,
+:where(:where(.editor-styles-wrapper)) h4,
+:where(:where(.editor-styles-wrapper)) h5,
+:where(:where(.editor-styles-wrapper)) h6,
+:where(:where(.editor-styles-wrapper)) hr,
+:where(:where(.editor-styles-wrapper)) figure,
+:where(:where(.editor-styles-wrapper)) p,
+:where(:where(.editor-styles-wrapper)) pre {
+  margin: 0;
+}
+:where(:where(.editor-styles-wrapper)) fieldset {
+  margin: 0;
+  padding: 0;
+}
+:where(:where(.editor-styles-wrapper)) legend {
+  padding: 0;
+}
+:where(:where(.editor-styles-wrapper)) ol,
+:where(:where(.editor-styles-wrapper)) ul,
+:where(:where(.editor-styles-wrapper)) menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+:where(:where(.editor-styles-wrapper)) dialog {
+  padding: 0;
+}
+:where(:where(.editor-styles-wrapper)) textarea {
+  resize: vertical;
+}
+:where(:where(.editor-styles-wrapper)) input::placeholder,
+:where(:where(.editor-styles-wrapper)) textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: theme("colors.gray.400", #9ca3af); /* 2 */
+}
+:where(:where(.editor-styles-wrapper)) button,
+:where(:where(.editor-styles-wrapper)) [role=button] {
+  cursor: pointer;
+  font-family: inherit;
+}
+:where(:where(.editor-styles-wrapper)) :disabled {
+  cursor: default;
+}
+:where(:where(.editor-styles-wrapper)) img,
+:where(:where(.editor-styles-wrapper)) svg,
+:where(:where(.editor-styles-wrapper)) video,
+:where(:where(.editor-styles-wrapper)) canvas,
+:where(:where(.editor-styles-wrapper)) audio,
+:where(:where(.editor-styles-wrapper)) iframe,
+:where(:where(.editor-styles-wrapper)) embed,
+:where(:where(.editor-styles-wrapper)) object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+:where(:where(.editor-styles-wrapper)) img,
+:where(:where(.editor-styles-wrapper)) video {
+  max-width: 100%;
+  height: auto;
+}
+:where(:where(.editor-styles-wrapper)) [hidden] {
+  display: none;
+}
+
+/*# sourceMappingURL=editor-reset.css.map*/

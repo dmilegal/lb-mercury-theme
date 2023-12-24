@@ -12,6 +12,7 @@ get_template_part('theme-parts/molecules/hero-banner', null, [
 			<? get_template_part('theme-parts/organisms/sidebar/sidebar', null); ?>
 			<div class="lb-content">
 				<? the_content() ?>
+				<?= do_shortcode('[show_wpb_author_info_box]'); ?>
 			</div>
 		</div>
 	<?php endwhile; ?>

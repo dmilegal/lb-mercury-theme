@@ -1,0 +1,66 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/author-block/author-block.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body {
+  --lb-author-block--name--color: var(--wp--preset--color--gray-900);
+  --lb-author-block--status--color: var(--wp--preset--color--gray-500);
+  --lb-author-block--border--color: var(--wp--preset--color--gray-200);
+}
+
+.lb-author-block {
+  margin: var(--wp--preset--spacing--100) 0;
+  padding: var(--wp--preset--spacing--100) 0;
+  border-bottom: 1px solid var(--lb-author-block--border--color);
+  width: 100%;
+}
+.lb-author-block__head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: var(--wp--preset--spacing--80);
+  column-gap: var(--wp--preset--spacing--80);
+  align-items: flex-start;
+}
+.lb-author-block__head-left {
+  display: flex;
+  column-gap: var(--wp--preset--spacing--80);
+  align-items: center;
+}
+.lb-author-block__avatar {
+  flex-shrink: 0;
+  width: var(--wp--preset--spacing--180);
+  height: var(--wp--preset--spacing--180);
+  border-radius: 50%;
+}
+.lb-author-block__info {
+  display: flex;
+  flex-direction: column;
+}
+.lb-author-block__name {
+  display: block;
+  font-size: var(--wp--preset--font-size--text-lg);
+  line-height: var(--wp--custom--line-height--text-lg);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
+  font-weight: 600;
+  color: var(--lb-author-block--name--color);
+}
+.lb-author-block__status {
+  display: block;
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  color: var(--lb-author-block--status--color);
+}
+.lb-author-block__socs {
+  display: flex;
+  column-gap: var(--wp--preset--spacing--70);
+}
+
+/*# sourceMappingURL=author-block.css.map*/

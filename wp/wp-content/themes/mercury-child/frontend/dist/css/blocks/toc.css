@@ -1,0 +1,38 @@
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/toc/toc.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body {
+  --toc--link--color: var(--wp--preset--color--gray-500);
+  --toc--link--color--hover: var(--wp--preset--color--primary-600);
+}
+
+.ez-toc-counter {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  font-weight: 600;
+}
+.ez-toc-link {
+  color: var(--toc--link--color);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  transition: color 170ms ease-in-out;
+}
+.ez-toc-link:hover {
+  color: var(--toc--link--color--hover);
+}
+.ez-toc-list li {
+  margin: var(--wp--preset--spacing--70) 0;
+}
+.ez-toc-list ul {
+  padding-left: var(--wp--preset--spacing--70);
+}
+
+/*# sourceMappingURL=toc.css.map*/

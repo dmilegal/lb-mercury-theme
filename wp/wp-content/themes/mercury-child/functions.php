@@ -94,7 +94,7 @@ add_action('pre_get_posts', 'post_types_author_archives');
 
 function wpb_author_info_box()
 {
-	get_template_part('/theme-parts/author-block');
+	get_template_part('/theme-parts/organisms/author/author-block');
 }
 add_shortcode('show_wpb_author_info_box', 'wpb_author_info_box');
 

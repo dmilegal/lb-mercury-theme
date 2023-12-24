@@ -24,6 +24,10 @@ $proseCustomSelector: null !default;
   @include font.get-text-styles('text-lg');
 }
 
+@include typo.make-prose('content', 'img', $proseCustomSelector) {
+  width: 100%;
+}
+
 @include typo.make-prose('spaces', 'h1,h2,h3,h4,h5,h6,p', $proseCustomSelector) {
   &:first-child {
     margin-block-start: 0

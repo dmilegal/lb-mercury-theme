@@ -3,7 +3,7 @@
   "name": "lb/button",
   "title": "Button",
   "description": "",
-  "style": [ "button" ],
+  "style": [  ],
   "editorStyle": [],
   "category": "formatting",
   "icon": "groups",

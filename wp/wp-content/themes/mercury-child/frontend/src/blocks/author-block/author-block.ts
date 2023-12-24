@@ -1,0 +1,1 @@
+import './author-block.scss'
