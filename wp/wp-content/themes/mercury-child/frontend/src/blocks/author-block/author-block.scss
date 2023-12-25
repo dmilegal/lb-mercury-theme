@@ -3,7 +3,7 @@
 
 body {
   --lb-author-block--name--color: var(--wp--preset--color--gray-900);
-  --lb-author-block--status--color: var(--wp--preset--color--gray-500);
+  --lb-author-block--job--color: var(--wp--preset--color--gray-500);
   --lb-author-block--border--color: var(--wp--preset--color--gray-200);
 }
 
@@ -43,14 +43,19 @@ body {
     color: var(--lb-author-block--name--color);
 
   }
-  &__status {
+  &__job {
     display: block;
     @include font.get-text-styles('text-md');
-    color: var(--lb-author-block--status--color);
+    color: var(--lb-author-block--job--color);
   }
 
   &__socs {
     display: flex;
     column-gap: var(--wp--preset--spacing--70);
+  }
+
+  &__bio {
+    margin-top: var(--wp--preset--spacing--80);
+    @include font.get-text-styles('text-md');
   }
 }

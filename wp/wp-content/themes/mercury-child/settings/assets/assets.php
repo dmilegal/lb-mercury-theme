@@ -5,6 +5,8 @@ function disable_old_assets()
   wp_deregister_style('mercury-media');
   wp_deregister_style('mercury-googlefonts');
   wp_deregister_style('mercury-block-editor-styles');
+  wp_deregister_style('aces-style');
+  
 
   wp_deregister_script('mercury-global-js');
   wp_deregister_script('mercury-floating-header');
@@ -27,7 +29,7 @@ add_action('wp_enqueue_scripts', 'enqueue_main_assets', 9);
 function enqueue_components_assets($slug, $name, $args)
 {
   $list = explode('/', $slug);
-  if (!(in_array('atoms', $list) || in_array('molecules', $list) || in_array('organisms', $list))) return;
+  if (!(in_array('atoms', $list) || in_array('molecules', $list) || in_array('organisms', $list) || in_array('cells', $list))) return;
 
   enqueue_assets_by_name(end($list));
 }
@@ -36,8 +38,8 @@ add_action('get_template_part', 'enqueue_components_assets', 10, 3);
 // enqueue editor styles
 function add_editor_styles()
 {
-  add_theme_support( 'editor-styles' );
-  add_editor_style( 'frontend/dist/css/editor.css');
+  add_theme_support('editor-styles');
+  add_editor_style('frontend/dist/css/editor.css');
 };
 add_action('after_setup_theme', 'add_editor_styles');
 function enqueue_block_editor_styles()

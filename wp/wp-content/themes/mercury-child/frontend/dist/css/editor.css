@@ -1388,10 +1388,30 @@ body :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
 }
 
 body :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  font-size: var(--wp--preset--font-size--text-lg);
-  line-height: var(--wp--custom--line-height--text-lg);
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+}
+
+body :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  list-style: disc;
+  padding-left: var(--wp--preset--spacing--90);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--wp--preset--spacing--80);
+}
+
+body :where(ul):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  list-style: disc;
+}
+
+body :where(ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  list-style: decimal;
 }
 
 body :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) {
@@ -1420,6 +1440,11 @@ body :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-bottom: var(--wp--preset--spacing--80);
 }
 
+body :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--80);
+  margin-bottom: var(--wp--preset--spacing--80);
+}
+
 body :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--wp--preset--color--gray-900);
 }
@@ -1428,7 +1453,7 @@ body :where(a):not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--wp--preset--color--primary-600);
 }
 
-body :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
+body :where(p, ul):not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--wp--preset--color--gray-500);
 }
 

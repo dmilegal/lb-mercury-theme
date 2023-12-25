@@ -15,6 +15,9 @@ body {
   border-top: 1px solid var(--lb-sidebar--border--color);
   padding-top: var(--wp--preset--spacing--120);
 }
+.lb-sidebar__block:not(:first-child) {
+  margin-top: var(--wp--preset--spacing--120);
+}
 .lb-sidebar__block-title {
   font-size: var(--wp--preset--font-size--text-md);
   line-height: var(--wp--custom--line-height--text-md);
