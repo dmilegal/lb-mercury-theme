@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Advantages Block Template.
+ * Blockquote Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -17,10 +17,10 @@ $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 $title = get_field('title');
 $users = get_field('members');
 
-get_template_part( 'theme-parts/atoms/button', null, [
-	'size' => 'md',
-	'color' => 'brand-50',
-	'content' => 'Button CTA'
+$allowed_blocks = array('core/paragraph');
+
+get_template_part( 'theme-parts/atoms/blockquote', null, [
+  'content' => '<InnerBlocks parentContainer="false" allowedBlocks="'. esc_attr(wp_json_encode($allowed_blocks)) .'" />',
+	...$block_opts,
  ] );
 ?>
-

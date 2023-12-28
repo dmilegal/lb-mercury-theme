@@ -9,5 +9,6 @@ require_once 'get-attributes-string.php';
 require_once 'get-block-class.php';
 require_once 'get-block-id.php';
 require_once 'get-block-styles.php';
+require_once 'get-common-block-props.php';
 require_once 'get-contrast-text-color.php';
 require_once 'theme/theme.php';

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/blockquote",
+  "title": "Blockquote",
+  "description": "",
+  "style": [  ],
+  "editorStyle": [],
+  "category": "text",
+  "icon": "format-quote",
+  "keywords": ["blockquote", "cite"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "blockquote.php"
+  }
+}
