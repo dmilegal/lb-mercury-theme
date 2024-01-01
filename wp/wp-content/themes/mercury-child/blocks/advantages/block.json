@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "name": "advantages",
+  "name": "lb/advantages",
   "title": "Advantages",
   "description": "Advantages block.",
   "style": [ "advantages-css" ],

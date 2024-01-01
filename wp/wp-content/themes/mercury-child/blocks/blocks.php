@@ -10,3 +10,13 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/blockquote' );
 }
 
+function mg_disable_gutenberg_blocks($allowed_blocks) {
+    $blocks = array_diff( 
+        array_keys( WP_Block_Type_Registry::get_instance()->get_all_registered() ),
+        [
+            'core/quote',
+        ]
+    );
+    return array_values( $blocks );
+}
+add_filter('allowed_block_types', 'mg_disable_gutenberg_blocks');
