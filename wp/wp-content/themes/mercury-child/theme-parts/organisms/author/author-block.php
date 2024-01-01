@@ -63,7 +63,7 @@ $job_title = get_field('job_title', 'user_' . $author_id);
 <div class="lb-author-block not-prose">
     <div class="lb-author-block__head">
         <div class="lb-author-block__head-left">
-            <?= get_avatar(get_the_author_meta('user_email'), 56, '', '', [
+            <?= get_avatar(get_the_author_meta('user_email', $author_id), 56, '', '', [
                 'class' => 'lb-author-block__avatar'
             ]) ?>
             <div class="lb-author-block__info">

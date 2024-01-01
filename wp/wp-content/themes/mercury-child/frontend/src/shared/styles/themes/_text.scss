@@ -45,7 +45,7 @@ $proseCustomSelector: null !default;
   width: 100%;
 }
 
-@include typo.make-prose('spaces', 'h1,h2,h3,h4,h5,h6,p', $proseCustomSelector) {
+@include typo.make-prose('spaces', 'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote', $proseCustomSelector) {
   &:first-child {
     margin-block-start: 0;
   }
@@ -64,14 +64,14 @@ $proseCustomSelector: null !default;
   margin-block-end: var(--wp--preset--spacing--80);
 }
 
-@include typo.make-prose('spaces', 'p', $proseCustomSelector) {
+@include typo.make-prose('spaces', 'p,ul,ol', $proseCustomSelector) {
   margin-block-start: var(--wp--preset--spacing--80);
   margin-block-end: var(--wp--preset--spacing--80);
 }
 
-@include typo.make-prose('spaces', 'ul, ol', $proseCustomSelector) {
-  margin-block-start: var(--wp--preset--spacing--80);
-  margin-block-end: var(--wp--preset--spacing--80);
+@include typo.make-prose('spaces', 'blockquote', $proseCustomSelector) {
+  margin-block-start: var(--wp--preset--spacing--100);
+  margin-block-end: var(--wp--preset--spacing--100);
 }
 
 @include typo.make-prose('colors', 'h1,h2,h3,h4,h5,h6', $proseCustomSelector) {

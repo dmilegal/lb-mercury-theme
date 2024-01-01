@@ -3,7 +3,7 @@
   "name": "lb/blockquote",
   "title": "Blockquote",
   "description": "",
-  "style": [  ],
+  "style": ["blockquote"],
   "editorStyle": [],
   "category": "text",
   "icon": "format-quote",

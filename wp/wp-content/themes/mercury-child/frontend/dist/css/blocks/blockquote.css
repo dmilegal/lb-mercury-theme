@@ -1,4 +1,63 @@
 /*!**************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/blockquote/blockquote.scss ***!
   \**************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+.lb-blockquote {
+  padding-top: var(--wp--preset--spacing--60);
+  padding-bottom: var(--wp--preset--spacing--60);
+  padding-left: var(--wp--preset--spacing--90);
+  border-left: 2px solid var(--wp--preset--color--primary-700);
+}
+.lb-blockquote :where(p) {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  color: var(--wp--preset--color--gray-900);
+  margin: var(--wp--preset--spacing--70) 0;
+}
+.lb-blockquote :where(p):first-child {
+  margin-top: 0;
+}
+.lb-blockquote :where(p):last-child {
+  margin-bottom: 0;
+}
+.lb-blockquote :where(footer) {
+  margin-top: var(--wp--preset--spacing--110);
+}
+.lb-blockquote :where(cite) {
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  color: var(--wp--preset--color--gray-500);
+}
+.lb-blockquote__author {
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  display: flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--70);
+}
+.lb-blockquote__author-avatar {
+  width: var(--wp--preset--spacing--140);
+  height: var(--wp--preset--spacing--140);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.lb-blockquote__author-name {
+  font-weight: 600;
+  color: var(--wp--preset--color--gray-900);
+}
+.lb-blockquote__author-job {
+  color: var(--wp--preset--color--gray-500);
+}
 
+/*# sourceMappingURL=blockquote.css.map*/
