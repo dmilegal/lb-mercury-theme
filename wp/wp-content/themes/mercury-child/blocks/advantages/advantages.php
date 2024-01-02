@@ -17,19 +17,16 @@ $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 $title = get_field('title');
 $allowed_blocks = array('core/list');
 $template = array(
-	array('core/list', array(
-  ), array(
-    array('core/list-item', array(
-      'placeholder' => __( 'Enter Advantages...' ),
+  array('core/list', array(), array(
+    array(
+      'core/list-item', array(
+        'placeholder' => __('Enter Advantages...'),
+      )
     )
-  ))),
+  )),
 );
-?>
-<div <?= $block_opts['anchor'] ?>class="<?= $block_opts['class_name']['container'] ?> space-pros-ins relative">
-  <? if ($title) { ?>
-    <div class="space-pros-title box-100 relative">
-      <strong><?= esc_html($title) ?></strong>
-    </div>
-  <? } ?>
-    <InnerBlocks className="space-pros-description box-100 relative" allowedBlocks="<?= esc_attr( wp_json_encode( $allowed_blocks ) ) ?>" template="<?= esc_attr( wp_json_encode( $template ) ) ?>" />
-</div>
+
+get_template_part('theme-parts/molecules/pros-cons-col', null, [
+  ...$block_opts,
+  'content' => '<InnerBlocks parentContainer="false" allowedBlocks="' . esc_attr(wp_json_encode($allowed_blocks)) . '" template="' . esc_attr(wp_json_encode($template)) . '" />'
+]);

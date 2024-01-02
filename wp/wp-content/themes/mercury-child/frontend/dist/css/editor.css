@@ -1523,6 +1523,49 @@ body :where(p, ul):not(:where([class~=not-prose], [class~=not-prose] *)) {
   letter-spacing: var(--wp--custom--letter-spacing--text-xs);
 }
 
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table {
+  border: 1px solid var(--wp--preset--color--gray-200);
+  color: var(--wp--preset--color--gray-500);
+  border-radius: var(--wp--preset--spacing--60);
+}
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table thead {
+  border: none;
+}
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table tr:last-child td {
+  border-bottom: 0;
+}
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table td {
+  padding: var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  border: none;
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+}
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table th {
+  padding: var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  border: none;
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+}
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table th {
+  font-weight: 600;
+  text-align: left;
+}
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin: var(--wp--preset--spacing--160) 0;
+}
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+  margin-top: 0;
+}
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+  margin-bottom: 0;
+}
+
 /*.form {
 }
 

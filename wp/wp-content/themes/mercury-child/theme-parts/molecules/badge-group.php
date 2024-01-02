@@ -24,7 +24,7 @@ $rel = $args['rel'] ?? null;
 
 $tag = $href ? 'a' : 'div';
 
-$attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel'])));
+$attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'id'])));
 
 
 ob_start();

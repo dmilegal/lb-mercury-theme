@@ -21,7 +21,7 @@ $size = $args['size'] ?? 'md';
 $color = $args['color'] ?? LbThemeService::getMainGroupColor();
 $content = $args['content'] ?? '';
 
-$attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel'])));
+$attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'id'])));
 
 ?>
 <ul class="<?= classNames('lb-lang-switcher', $className, 'lb-lang-switcher--color_' . $color, 'lb-lang-switcher--size_' . $size) ?>" <?= $attrsStr ?> style="<?= stylesValue($style) ?>">

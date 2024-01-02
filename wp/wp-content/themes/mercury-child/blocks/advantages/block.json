@@ -3,7 +3,7 @@
   "name": "lb/advantages",
   "title": "Advantages",
   "description": "Advantages block.",
-  "style": [ "advantages-css" ],
+  "style": [],
   "category": "formatting",
   "icon": "plus-alt",
   "keywords": ["advantages", "pros", "compare"],

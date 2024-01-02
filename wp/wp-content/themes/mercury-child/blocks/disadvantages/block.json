@@ -2,7 +2,7 @@
   "name": "lb/disadvantages",
   "title": "Disadvantages",
   "description": "Disadvantages block.",
-  "style": [ "disadvantages-css" ],
+  "style": [],
   "category": "formatting",
   "icon": "minus",
   "keywords": ["disadvantages", "cons", "compare"],

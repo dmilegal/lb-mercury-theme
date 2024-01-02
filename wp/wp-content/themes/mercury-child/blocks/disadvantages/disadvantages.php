@@ -25,12 +25,9 @@ $template = array(
     )
   )),
 );
+
+get_template_part('theme-parts/molecules/pros-cons-col', null, [
+  ...$block_opts,
+  'content' => '<InnerBlocks parentContainer="false" allowedBlocks="' . esc_attr(wp_json_encode($allowed_blocks)) . '" template="' . esc_attr(wp_json_encode($template)) . '" />'
+]);
 ?>
-<div <?= $block_opts['anchor'] ?>class="<?= $block_opts['class_name']['container'] ?> space-cons-ins relative">
-  <? if ($title) { ?>
-    <div class="space-cons-title box-100 relative">
-      <strong><?= esc_html($title) ?></strong>
-    </div>
-  <? } ?>
-  <InnerBlocks className="space-cons-description box-100 relative" allowedBlocks="<?= esc_attr(wp_json_encode($allowed_blocks)) ?>" template="<?= esc_attr(wp_json_encode($template)) ?>" />
-</div>

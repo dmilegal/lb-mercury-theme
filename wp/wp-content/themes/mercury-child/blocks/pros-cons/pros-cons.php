@@ -14,19 +14,9 @@
 
 $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 
-$pros_list = get_field('pros') ?: [];
-$cons_list = get_field('cons') ?: [];
-$allowed_blocks = array('core/pros-cons-col');
-$template = array(
-  array('acf/pros-cons-col', array('lock' => array(
-    'remove' => true,
-),), array(array('acf/advantages'))),
-  array('acf/pros-cons-col', array('lock' => array(
-    'remove' => true,
-),), array(array('acf/disadvantages'))),
-);
+$allowed_blocks = array('lb/advantages', 'lb/disadvantages');
 
-?>
-<div <?= $block_opts['anchor'] ?>class="<?= $block_opts['class_name']['container'] ?>">
-  <InnerBlocks parentContainer="true" className="wp-container-3 is-layout-flex wp-block-columns" allowedBlocks="<?= esc_attr(wp_json_encode($allowed_blocks)) ?>" template="<?= esc_attr(wp_json_encode($template)) ?>" />
-</div>
+get_template_part('theme-parts/cells/pros-cons', null, [
+  ...$block_opts,
+  'content' => '<InnerBlocks parentContainer="false" allowedBlocks="' .  esc_attr(wp_json_encode($allowed_blocks)) . '" />',
+]);

@@ -5,6 +5,10 @@ $proseCustomSelector: null !default;
   $globalSelector: $globalSelector,
   $proseCustomSelector: $proseCustomSelector
 );
+@use 'table' with (
+  $globalSelector: $globalSelector,
+  $proseCustomSelector: $proseCustomSelector
+);
 @use 'list';
 @use 'spacing';
 @use 'form';

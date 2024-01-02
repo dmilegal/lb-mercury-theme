@@ -1,0 +1,10 @@
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+.lb-pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--wp--preset--spacing--120);
+  row-gap: var(--wp--preset--spacing--120);
+  
+}
