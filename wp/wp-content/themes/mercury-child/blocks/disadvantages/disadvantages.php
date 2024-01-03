@@ -28,6 +28,8 @@ $template = array(
 
 get_template_part('theme-parts/molecules/pros-cons-col', null, [
   ...$block_opts,
-  'content' => '<InnerBlocks parentContainer="false" allowedBlocks="' . esc_attr(wp_json_encode($allowed_blocks)) . '" template="' . esc_attr(wp_json_encode($template)) . '" />'
+  'content' => '<InnerBlocks parentContainer="false" allowedBlocks="' . esc_attr(wp_json_encode($allowed_blocks)) . '" template="' . esc_attr(wp_json_encode($template)) . '" />',
+  'type' => 'dis',
+  'title' => $title
 ]);
 ?>

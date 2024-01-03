@@ -423,7 +423,13 @@
                     "size": "46px",
                     "slug": "155",
                     "name": "46px"
+                },
+                {
+                    "size": "26px",
+                    "slug": "105",
+                    "name": "26px"
                 }
+
             ]
         },
         "layout": {

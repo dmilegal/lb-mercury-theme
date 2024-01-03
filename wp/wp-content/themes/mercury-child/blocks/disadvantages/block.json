@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/block.json",
   "name": "lb/disadvantages",
   "title": "Disadvantages",
   "description": "Disadvantages block.",
@@ -6,6 +7,7 @@
   "category": "formatting",
   "icon": "minus",
   "keywords": ["disadvantages", "cons", "compare"],
+  "parent": [ "lb/pros-cons" ],
   "acf": {
       "mode": "preview",
       "renderTemplate": "disadvantages.php"

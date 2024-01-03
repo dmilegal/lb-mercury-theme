@@ -7,41 +7,39 @@ $proseCustomSelector: null !default;
 @use '@/shared/styles/mixins/font';
 
 @include typo.make-prose('content', '.wp-block-table', $proseCustomSelector) {
-    table {
-      border: 1px solid var(--wp--preset--color--gray-200);
-      color: var(--wp--preset--color--gray-500);
-      border-radius: var(--wp--preset--spacing--60);
-      thead {
-        border: none;
-      }
-      tr {
-        &:last-child {
-          td {
-            border-bottom: 0;
-          }
+  table {
+    border: 1px solid var(--wp--preset--color--gray-200);
+    color: var(--wp--preset--color--gray-500);
+    border-radius: var(--wp--preset--spacing--60);
+    border-spacing: 0;
+    border-collapse: separate!important;
+    thead {
+      border: none;
+    }
+    tr {
+      &:last-child {
+        td {
+          border-bottom: 0;
         }
       }
-      td, th {
-        padding: var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
-        @include font.get-text-styles('text-sm');
-        border:none;
-        border-bottom: 1px solid var(--wp--preset--color--gray-200);
-       
-      }
-  
-      th {
-        font-weight: 600;
-        text-align: left;
-      }
-      
-      tr {
-    
-      }
     }
-  
- 
-}
+    td,
+    th {
+      padding: var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
+      @include font.get-text-styles('text-sm');
+      border: none;
+      border-bottom: 1px solid var(--wp--preset--color--gray-200);
+    }
 
+    th {
+      font-weight: 600;
+      text-align: left;
+    }
+
+    tr {
+    }
+  }
+}
 
 @include typo.make-prose('spaces', '.wp-block-table', $proseCustomSelector) {
   margin: var(--wp--preset--spacing--160) 0;

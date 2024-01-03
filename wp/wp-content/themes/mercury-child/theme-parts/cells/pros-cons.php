@@ -7,8 +7,6 @@ $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['id', 'st
 <div class="<?= classNames(
               'lb-pros-cons',
               $className,
-            ) ?>" <?= $attrsStr ?> style="<?= stylesValue(
-                                            $style
-                                          ) ?>">
+            ) ?>" <?= $attrsStr ?>>
   <?= $content ?>
 </div>

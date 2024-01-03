@@ -108,7 +108,7 @@
 :where(:where(.editor-styles-wrapper)) iframe,
 :where(:where(.editor-styles-wrapper)) embed,
 :where(:where(.editor-styles-wrapper)) object {
-  display: block; /* 1 */
+  display: inline-block; /* 1 */
   vertical-align: middle; /* 2 */
 }
 :where(:where(.editor-styles-wrapper)) img,

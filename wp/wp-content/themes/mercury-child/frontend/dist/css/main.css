@@ -1469,7 +1469,7 @@ audio,
 iframe,
 embed,
 object {
-  display: block; /* 1 */
+  display: inline-block; /* 1 */
   vertical-align: middle; /* 2 */
 }
 
@@ -1577,6 +1577,11 @@ body {
   margin-bottom: var(--wp--preset--spacing--100);
 }
 
+.prose-spaces :where(.lb-pros-cons):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--120);
+  margin-bottom: var(--wp--preset--spacing--120);
+}
+
 .prose-colors :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--wp--preset--color--gray-900);
 }
@@ -1659,6 +1664,8 @@ body {
   border: 1px solid var(--wp--preset--color--gray-200);
   color: var(--wp--preset--color--gray-500);
   border-radius: var(--wp--preset--spacing--60);
+  border-spacing: 0;
+  border-collapse: separate !important;
 }
 .prose-content :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table thead {
   border: none;
@@ -1726,30 +1733,10 @@ body {
   max-width: 100%;
 }
 
-/*.sr {
-  &-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    &-focusable {
-      &:active,
-      &:focus {
-        clip: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        position: static;
-        width: auto;
-      }
-    }
-  }
+.size-full {
+  width: 100%;
 }
-*/
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
