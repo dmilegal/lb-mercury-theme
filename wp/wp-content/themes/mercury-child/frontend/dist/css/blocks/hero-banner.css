@@ -27,11 +27,11 @@
 }
 .lbc-hero-banner__inner {
   width: 100%;
-  max-width: calc(var(--wp--style--global--content-size) - 2 * var(--layout--content-padding));
-  margin-left: auto;
-  margin-right: auto;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
+  max-width: calc(var(--wp--style--global--content-size) + 2 * var(--layout--content-padding));
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-column-gap: calc(var(--layout--content-spacing) / 2);

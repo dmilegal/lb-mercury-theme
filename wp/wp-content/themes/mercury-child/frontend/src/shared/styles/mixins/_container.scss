@@ -1,11 +1,11 @@
 @mixin make-container-max-width(
   $container-width: var(--wp--style--global--content-size),
-  $container-padding: var(--layout--content-padding)
+  $container-padding: var(--layout--content-padding),
 ) {
   width: 100%;
-  max-width: calc($container-width - 2 * $container-padding);
-  margin-left: auto;
-  margin-right: auto;
   padding-left: $container-padding;
   padding-right: $container-padding;
+  max-width: calc($container-width + 2 * $container-padding);
+  margin-left: auto;
+  margin-right: auto;
 }

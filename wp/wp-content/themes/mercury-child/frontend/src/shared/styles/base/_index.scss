@@ -1,9 +1,13 @@
 $globalSelector: null !default;
 $proseCustomSelector: null !default;
 $disableNormalize: null !default;
+$disableWpDefaultStyles: null !default;
 
 @use 'variables';
 @use 'normalize' with (
-  $disableNormalize: $disableNormalize
+  $disableNormalize: $disableNormalize,
+);
+@use 'wp' with (
+  $disableWpDefaultStyles: $disableWpDefaultStyles,
 );
 @use 'defaults';

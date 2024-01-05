@@ -1,4 +1,6 @@
 <?
+
+remove_editor_styles('style-editor.css');
 function disable_old_assets()
 {
   wp_deregister_style('mercury-style');

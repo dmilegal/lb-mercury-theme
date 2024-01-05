@@ -10,6 +10,7 @@
     @include font.get-text-styles('text-md');
     color: var(--wp--preset--color--gray-900);
     margin: var(--wp--preset--spacing--70) 0;
+    font-weight: 500;
     &:first-child {
       margin-top: 0;
     }
@@ -18,7 +19,7 @@
     }
   }
   :where(footer) {
-    margin-top: var(--wp--preset--spacing--110);
+    margin-top: var(--wp--preset--spacing--90);
   }
   :where(cite) {
     @include font.get-text-styles('text-sm');

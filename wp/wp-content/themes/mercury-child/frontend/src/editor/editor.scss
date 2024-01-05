@@ -2,7 +2,7 @@
 @use '@/shared/styles/main' with (
   $globalSelector: 'body',
   $proseCustomSelector: 'body',
-  $disableNormalize: true
+  $disableNormalize: true,
 );
 @use 'styles';
 

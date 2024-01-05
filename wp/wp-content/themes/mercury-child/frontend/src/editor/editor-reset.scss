@@ -1,6 +1,1 @@
 @use "sass:meta";
-@use '@/shared/styles/base/normalize' with (
-  $wrapperSelector: ':where(.editor-styles-wrapper)',
-);
-
-

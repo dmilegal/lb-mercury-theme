@@ -433,7 +433,7 @@
             ]
         },
         "layout": {
-            "contentSize": "1280px",
+            "contentSize": "calc(1280px - 2 * var(--layout--content-padding))",
             "wideSize": "100%"
         },
         "custom": {

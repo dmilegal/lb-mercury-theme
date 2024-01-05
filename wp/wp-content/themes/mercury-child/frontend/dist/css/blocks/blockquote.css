@@ -20,6 +20,7 @@
   letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
   color: var(--wp--preset--color--gray-900);
   margin: var(--wp--preset--spacing--70) 0;
+  font-weight: 500;
 }
 .lb-blockquote :where(p):first-child {
   margin-top: 0;
@@ -28,7 +29,7 @@
   margin-bottom: 0;
 }
 .lb-blockquote :where(footer) {
-  margin-top: var(--wp--preset--spacing--110);
+  margin-top: var(--wp--preset--spacing--90);
 }
 .lb-blockquote :where(cite) {
   font-size: var(--wp--preset--font-size--text-sm);
