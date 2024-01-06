@@ -6,10 +6,15 @@ $proseCustomSelector: null !default;
 @use '@/shared/styles/mixins/typo';
 @use '@/shared/styles/mixins/font';
 
+#{$globalSelector} {
+  --lb-table-color-text: var(--lb-semantic-color-text-default);
+}
+
+
 @include typo.make-prose('content', '.wp-block-table', $proseCustomSelector) {
   table {
     border: 1px solid var(--wp--preset--color--gray-200);
-    color: var(--wp--preset--color--gray-500);
+    color: var(--lb-table-color-text);
     border-radius: var(--wp--preset--spacing--60);
     border-spacing: 0;
     border-collapse: separate!important;

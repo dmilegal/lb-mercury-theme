@@ -4,6 +4,9 @@ $wrapperSelector: null !default;
 @use "@/shared/styles/mixins/container";
 @use "@/shared/styles/mixins/font";
 
+body {
+  --lb--caption-color-text: var(--lb-semantic-color-text-default);
+}
 
 @mixin wp-default-styles() {
   .wp-caption {
@@ -88,7 +91,7 @@ $wrapperSelector: null !default;
     margin-top: var(--wp--preset--spacing--55);
     margin-bottom: 0;
     text-align: center;
-    color: var(--wp--preset--color--gray-500);
+    color: var(--lb--caption-color-text);
     @include font.get-text-styles('text-xs');
   }
   .wp-block-image.aligncenter {

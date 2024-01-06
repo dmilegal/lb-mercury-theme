@@ -8,15 +8,16 @@
 * font
 **/
 body {
-  --lb-author-block--name--color: var(--wp--preset--color--gray-900);
-  --lb-author-block--job--color: var(--wp--preset--color--gray-500);
-  --lb-author-block--border--color: var(--wp--preset--color--gray-200);
+  --lb-author-block-name-color: var(--lb-semantic-color-text-prominent);
+  --lb-author-block-job-color: var(--lb-semantic-color-text-default);
+  --lb-author-block-bio-color: var(--lb-semantic-color-text-default);
+  --lb-author-block-border-color: var(--wp--preset--color--gray-200);
 }
 
 .lb-author-block {
   margin: var(--wp--preset--spacing--100) 0;
   padding: var(--wp--preset--spacing--100) 0;
-  border-bottom: 1px solid var(--lb-author-block--border--color);
+  border-bottom: 1px solid var(--lb-author-block-border-color);
   width: 100%;
 }
 .lb-author-block__head {
@@ -48,7 +49,7 @@ body {
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
   font-weight: 600;
-  color: var(--lb-author-block--name--color);
+  color: var(--lb-author-block-name-color);
 }
 .lb-author-block__job {
   display: block;
@@ -56,7 +57,7 @@ body {
   line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
-  color: var(--lb-author-block--job--color);
+  color: var(--lb-author-block-job-color);
 }
 .lb-author-block__socs {
   display: flex;
@@ -68,6 +69,7 @@ body {
   line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  color: var(--lb-author-block-bio-color);
 }
 
 /*# sourceMappingURL=author-block.css.map*/

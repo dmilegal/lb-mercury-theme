@@ -7,17 +7,17 @@
 /**
 * font
 **/
-.lbc-button {
+.lb-button {
   display: inline-flex;
-  color: var(--lbc-button--color);
-  border: 1px solid var(--lbc-button--border--color);
+  color: var(--lb-button--color);
+  border: 1px solid var(--lb-button--border--color);
   border-radius: 8px;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-weight: 600;
   column-gap: var(--wp--preset--spacing--60);
-  background-color: var(--lbc-button--background--color);
+  background-color: var(--lb-button--background--color);
   transition: background-color 170ms ease-in-out, color 170ms ease-in-out, border-color 170ms ease-in-out;
   outline-style: solid;
   outline-width: 4px;
@@ -25,79 +25,79 @@
   -webkit-text-decoration: none;
   text-decoration: none;
 }
-.lbc-button:hover {
-  background-color: var(--lbc-button--background--color--hover);
-  border-color: var(--lbc-button--border--color--hover);
-  color: var(--lbc-button--color--hover);
+.lb-button:hover {
+  background-color: var(--lb-button--background--color--hover);
+  border-color: var(--lb-button--border--color--hover);
+  color: var(--lb-button--color--hover);
 }
-.lbc-button:focus {
-  outline-color: var(--lbc-button--outline--color--focus);
+.lb-button:focus {
+  outline-color: var(--lb-button--outline--color--focus);
 }
-.lbc-button:disabled {
-  background-color: var(--lbc-button--background--color--disabled);
-  border-color: var(--lbc-button--border--color--disabled);
-  color: var(--lbc-button--color--disabled);
+.lb-button:disabled {
+  background-color: var(--lb-button--background--color--disabled);
+  border-color: var(--lb-button--border--color--disabled);
+  color: var(--lb-button--color--disabled);
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
-.lbc-button__postfix, .lbc-button__prefix {
+.lb-button__postfix, .lb-button__prefix {
   display: flex;
   align-items: center;
 }
-.lbc-button__postfix > :where([class^=icon-],
-[class*=" icon-"]), .lbc-button__prefix > :where([class^=icon-],
+.lb-button__postfix > :where([class^=icon-],
+[class*=" icon-"]), .lb-button__prefix > :where([class^=icon-],
 [class*=" icon-"]) {
   font-size: 1.25rem;
   font-weight: normal;
 }
-.lbc-button--display_icon {
+.lb-button--display_icon {
   line-height: 1em;
 }
-.lbc-button--size_sm:where(:not(.lbc-button--display_icon)) {
+.lb-button--size_sm:where(:not(.lb-button--display_icon)) {
   font-size: var(--wp--preset--font-size--text-sm);
   line-height: var(--wp--custom--line-height--text-sm);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
   padding: 8px 14px;
 }
-.lbc-button--size_sm:where(.lbc-button--display_icon) {
+.lb-button--size_sm:where(.lb-button--display_icon) {
   padding: 8px;
 }
-.lbc-button--size_md:where(:not(.lbc-button--display_icon)) {
+.lb-button--size_md:where(:not(.lb-button--display_icon)) {
   font-size: var(--wp--preset--font-size--text-sm);
   line-height: var(--wp--custom--line-height--text-sm);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
   padding: 10px 16px;
 }
-.lbc-button--size_md:where(.lbc-button--display_icon) {
+.lb-button--size_md:where(.lb-button--display_icon) {
   padding: 10px;
 }
-.lbc-button--size_lg:where(:not(.lbc-button--display_icon)) {
+.lb-button--size_lg:where(:not(.lb-button--display_icon)) {
   font-size: var(--wp--preset--font-size--text-md);
   line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
   padding: 10px 18px;
 }
-.lbc-button--size_lg:where(.lbc-button--display_icon) {
+.lb-button--size_lg:where(.lb-button--display_icon) {
   padding: 12px;
 }
-.lbc-button--size_xl:where(:not(.lbc-button--display_icon)) {
+.lb-button--size_xl:where(:not(.lb-button--display_icon)) {
   font-size: var(--wp--preset--font-size--text-md);
   line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
   padding: 12px 20px;
 }
-.lbc-button--size_xl:where(.lbc-button--display_icon) {
+.lb-button--size_xl:where(.lb-button--display_icon) {
   padding: 14px;
 }
-.lbc-button--size_xl :where(.lbc-button__postfix > :where([class^=icon-],
-[class*=" icon-"]), .lbc-button__prefix > :where([class^=icon-],
+.lb-button--size_xl :where(.lb-button__postfix > :where([class^=icon-],
+[class*=" icon-"]), .lb-button__prefix > :where([class^=icon-],
 [class*=" icon-"])) {
   font-size: calc(var(--wp--preset--font-size--text-md) + 4px);
 }
-.lbc-button--size_2xl:where(:not(.lbc-button--display_icon)) {
+.lb-button--size_2xl:where(:not(.lb-button--display_icon)) {
   font-size: var(--wp--preset--font-size--text-lg);
   line-height: var(--wp--custom--line-height--text-lg);
   letter-spacing: inherit;
@@ -105,291 +105,291 @@
   padding: 16px 28px;
   column-gap: var(--wp--preset--spacing--70);
 }
-.lbc-button--size_2xl:where(.lbc-button--display_icon) {
+.lb-button--size_2xl:where(.lb-button--display_icon) {
   padding: 16px;
 }
-.lbc-button--size_2xl :where(.lbc-button__postfix > :where([class^=icon-],
-[class*=" icon-"]), .lbc-button__prefix > :where([class^=icon-],
+.lb-button--size_2xl :where(.lb-button__postfix > :where([class^=icon-],
+[class*=" icon-"]), .lb-button__prefix > :where([class^=icon-],
 [class*=" icon-"])) {
   font-size: 1.5rem;
 }
-.lbc-button--variant_primary:where(.lbc-button--color_gray) {
-  --lbc-button--background--color: var(
+.lb-button--variant_primary:where(.lb-button--color_gray) {
+  --lb-button--background--color: var(
     --wp--preset--color--gray-600
   );
-  --lbc-button--background--color--hover: var(
+  --lb-button--background--color--hover: var(
     --wp--preset--color--gray-700
   );
-  --lbc-button--background--color--disabled: var(
+  --lb-button--background--color--disabled: var(
     --wp--preset--color--gray-200
   );
-  --lbc-button--color: var(--wp--preset--color--white);
-  --lbc-button--color--disabled: var(--wp--preset--color--white);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--white);
+  --lb-button--color--disabled: var(--wp--preset--color--white);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--gray-100
   );
 }
-.lbc-button--variant_primary:where(.lbc-button--color_primary) {
-  --lbc-button--background--color: var(
+.lb-button--variant_primary:where(.lb-button--color_primary) {
+  --lb-button--background--color: var(
     --wp--preset--color--primary-600
   );
-  --lbc-button--background--color--hover: var(
+  --lb-button--background--color--hover: var(
     --wp--preset--color--primary-700
   );
-  --lbc-button--background--color--disabled: var(
+  --lb-button--background--color--disabled: var(
     --wp--preset--color--primary-200
   );
-  --lbc-button--color: var(--wp--preset--color--white);
-  --lbc-button--color--disabled: var(--wp--preset--color--white);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--white);
+  --lb-button--color--disabled: var(--wp--preset--color--white);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--primary-100
   );
 }
-.lbc-button--variant_primary:where(.lbc-button--color_error) {
-  --lbc-button--background--color: var(
+.lb-button--variant_primary:where(.lb-button--color_error) {
+  --lb-button--background--color: var(
     --wp--preset--color--error-600
   );
-  --lbc-button--background--color--hover: var(
+  --lb-button--background--color--hover: var(
     --wp--preset--color--error-700
   );
-  --lbc-button--background--color--disabled: var(
+  --lb-button--background--color--disabled: var(
     --wp--preset--color--error-200
   );
-  --lbc-button--color: var(--wp--preset--color--white);
-  --lbc-button--color--disabled: var(--wp--preset--color--white);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--white);
+  --lb-button--color--disabled: var(--wp--preset--color--white);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--error-100
   );
 }
-.lbc-button--variant_primary:where(.lbc-button--color_warning) {
-  --lbc-button--background--color: var(
+.lb-button--variant_primary:where(.lb-button--color_warning) {
+  --lb-button--background--color: var(
     --wp--preset--color--warning-600
   );
-  --lbc-button--background--color--hover: var(
+  --lb-button--background--color--hover: var(
     --wp--preset--color--warning-700
   );
-  --lbc-button--background--color--disabled: var(
+  --lb-button--background--color--disabled: var(
     --wp--preset--color--warning-200
   );
-  --lbc-button--color: var(--wp--preset--color--white);
-  --lbc-button--color--disabled: var(--wp--preset--color--white);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--white);
+  --lb-button--color--disabled: var(--wp--preset--color--white);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--warning-100
   );
 }
-.lbc-button--variant_primary:where(.lbc-button--color_success) {
-  --lbc-button--background--color: var(
+.lb-button--variant_primary:where(.lb-button--color_success) {
+  --lb-button--background--color: var(
     --wp--preset--color--success-600
   );
-  --lbc-button--background--color--hover: var(
+  --lb-button--background--color--hover: var(
     --wp--preset--color--success-700
   );
-  --lbc-button--background--color--disabled: var(
+  --lb-button--background--color--disabled: var(
     --wp--preset--color--success-200
   );
-  --lbc-button--color: var(--wp--preset--color--white);
-  --lbc-button--color--disabled: var(--wp--preset--color--white);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--white);
+  --lb-button--color--disabled: var(--wp--preset--color--white);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--success-100
   );
 }
-.lbc-button--variant_secondary:where(.lbc-button--color_gray) {
-  --lbc-button--background--color: var(--wp--preset--color--gray-50);
-  --lbc-button--background--color--hover: var(
+.lb-button--variant_secondary:where(.lb-button--color_gray) {
+  --lb-button--background--color: var(--wp--preset--color--gray-50);
+  --lb-button--background--color--hover: var(
     --wp--preset--color--gray-100
   );
-  --lbc-button--background--color--disabled: var(
+  --lb-button--background--color--disabled: var(
     --wp--preset--color--gray-25
   );
-  --lbc-button--color: var(--wp--preset--color--gray-700);
-  --lbc-button--color--disabled: var(--wp--preset--color--gray-300);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--gray-700);
+  --lb-button--color--disabled: var(--wp--preset--color--gray-300);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--gray-100
   );
 }
-.lbc-button--variant_secondary:where(.lbc-button--color_primary) {
-  --lbc-button--background--color: var(--wp--preset--color--primary-50);
-  --lbc-button--background--color--hover: var(
+.lb-button--variant_secondary:where(.lb-button--color_primary) {
+  --lb-button--background--color: var(--wp--preset--color--primary-50);
+  --lb-button--background--color--hover: var(
     --wp--preset--color--primary-100
   );
-  --lbc-button--background--color--disabled: var(
+  --lb-button--background--color--disabled: var(
     --wp--preset--color--primary-25
   );
-  --lbc-button--color: var(--wp--preset--color--primary-700);
-  --lbc-button--color--disabled: var(--wp--preset--color--primary-300);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--primary-700);
+  --lb-button--color--disabled: var(--wp--preset--color--primary-300);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--primary-100
   );
 }
-.lbc-button--variant_secondary:where(.lbc-button--color_error) {
-  --lbc-button--background--color: var(--wp--preset--color--error-50);
-  --lbc-button--background--color--hover: var(
+.lb-button--variant_secondary:where(.lb-button--color_error) {
+  --lb-button--background--color: var(--wp--preset--color--error-50);
+  --lb-button--background--color--hover: var(
     --wp--preset--color--error-100
   );
-  --lbc-button--background--color--disabled: var(
+  --lb-button--background--color--disabled: var(
     --wp--preset--color--error-25
   );
-  --lbc-button--color: var(--wp--preset--color--error-700);
-  --lbc-button--color--disabled: var(--wp--preset--color--error-300);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--error-700);
+  --lb-button--color--disabled: var(--wp--preset--color--error-300);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--error-100
   );
 }
-.lbc-button--variant_secondary:where(.lbc-button--color_warning) {
-  --lbc-button--background--color: var(--wp--preset--color--warning-50);
-  --lbc-button--background--color--hover: var(
+.lb-button--variant_secondary:where(.lb-button--color_warning) {
+  --lb-button--background--color: var(--wp--preset--color--warning-50);
+  --lb-button--background--color--hover: var(
     --wp--preset--color--warning-100
   );
-  --lbc-button--background--color--disabled: var(
+  --lb-button--background--color--disabled: var(
     --wp--preset--color--warning-25
   );
-  --lbc-button--color: var(--wp--preset--color--warning-700);
-  --lbc-button--color--disabled: var(--wp--preset--color--warning-300);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--warning-700);
+  --lb-button--color--disabled: var(--wp--preset--color--warning-300);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--warning-100
   );
 }
-.lbc-button--variant_secondary:where(.lbc-button--color_success) {
-  --lbc-button--background--color: var(--wp--preset--color--success-50);
-  --lbc-button--background--color--hover: var(
+.lb-button--variant_secondary:where(.lb-button--color_success) {
+  --lb-button--background--color: var(--wp--preset--color--success-50);
+  --lb-button--background--color--hover: var(
     --wp--preset--color--success-100
   );
-  --lbc-button--background--color--disabled: var(
+  --lb-button--background--color--disabled: var(
     --wp--preset--color--success-25
   );
-  --lbc-button--color: var(--wp--preset--color--success-700);
-  --lbc-button--color--disabled: var(--wp--preset--color--success-300);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--success-700);
+  --lb-button--color--disabled: var(--wp--preset--color--success-300);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--success-100
   );
 }
-.lbc-button--variant_text:where(.lbc-button--color_gray) {
-  --lbc-button--background--color--hover: var(
+.lb-button--variant_text:where(.lb-button--color_gray) {
+  --lb-button--background--color--hover: var(
     --wp--preset--color--gray-50
   );
-  --lbc-button--color: var(--wp--preset--color--gray-700);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--gray-700);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--gray-100
   );
 }
-.lbc-button--variant_text:where(.lbc-button--color_primary) {
-  --lbc-button--background--color--hover: var(
+.lb-button--variant_text:where(.lb-button--color_primary) {
+  --lb-button--background--color--hover: var(
     --wp--preset--color--primary-50
   );
-  --lbc-button--color: var(--wp--preset--color--primary-700);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--primary-700);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--primary-100
   );
 }
-.lbc-button--variant_text:where(.lbc-button--color_error) {
-  --lbc-button--background--color--hover: var(
+.lb-button--variant_text:where(.lb-button--color_error) {
+  --lb-button--background--color--hover: var(
     --wp--preset--color--error-50
   );
-  --lbc-button--color: var(--wp--preset--color--error-700);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--error-700);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--error-100
   );
 }
-.lbc-button--variant_text:where(.lbc-button--color_warning) {
-  --lbc-button--background--color--hover: var(
+.lb-button--variant_text:where(.lb-button--color_warning) {
+  --lb-button--background--color--hover: var(
     --wp--preset--color--warning-50
   );
-  --lbc-button--color: var(--wp--preset--color--warning-700);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--warning-700);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--warning-100
   );
 }
-.lbc-button--variant_text:where(.lbc-button--color_success) {
-  --lbc-button--background--color--hover: var(
+.lb-button--variant_text:where(.lb-button--color_success) {
+  --lb-button--background--color--hover: var(
     --wp--preset--color--success-50
   );
-  --lbc-button--color: var(--wp--preset--color--success-700);
-  --lbc-button--outline--color--focus: var(
+  --lb-button--color: var(--wp--preset--color--success-700);
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--success-100
   );
 }
-.lbc-button--variant_inline:where(.lbc-button--color_gray) {
-  --lbc-button--color: var(--wp--preset--color--gray-700);
-  --lbc-button--color--hover: var(
+.lb-button--variant_inline:where(.lb-button--color_gray) {
+  --lb-button--color: var(--wp--preset--color--gray-700);
+  --lb-button--color--hover: var(
     --wp--preset--color--gray-800
   );
-  --lbc-button--outline--color--focus: var(
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--gray-100
   );
 }
-.lbc-button--variant_inline:where(.lbc-button--color_primary) {
-  --lbc-button--color: var(--wp--preset--color--primary-700);
-  --lbc-button--color--hover: var(
+.lb-button--variant_inline:where(.lb-button--color_primary) {
+  --lb-button--color: var(--wp--preset--color--primary-700);
+  --lb-button--color--hover: var(
     --wp--preset--color--primary-800
   );
-  --lbc-button--outline--color--focus: var(
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--primary-100
   );
 }
-.lbc-button--variant_inline:where(.lbc-button--color_error) {
-  --lbc-button--color: var(--wp--preset--color--error-700);
-  --lbc-button--color--hover: var(
+.lb-button--variant_inline:where(.lb-button--color_error) {
+  --lb-button--color: var(--wp--preset--color--error-700);
+  --lb-button--color--hover: var(
     --wp--preset--color--error-800
   );
-  --lbc-button--outline--color--focus: var(
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--error-100
   );
 }
-.lbc-button--variant_inline:where(.lbc-button--color_warning) {
-  --lbc-button--color: var(--wp--preset--color--warning-700);
-  --lbc-button--color--hover: var(
+.lb-button--variant_inline:where(.lb-button--color_warning) {
+  --lb-button--color: var(--wp--preset--color--warning-700);
+  --lb-button--color--hover: var(
     --wp--preset--color--warning-800
   );
-  --lbc-button--outline--color--focus: var(
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--warning-100
   );
 }
-.lbc-button--variant_inline:where(.lbc-button--color_success) {
-  --lbc-button--color: var(--wp--preset--color--success-700);
-  --lbc-button--color--hover: var(
+.lb-button--variant_inline:where(.lb-button--color_success) {
+  --lb-button--color: var(--wp--preset--color--success-700);
+  --lb-button--color--hover: var(
     --wp--preset--color--success-800
   );
-  --lbc-button--outline--color--focus: var(
+  --lb-button--outline--color--focus: var(
     --wp--preset--color--success-100
   );
 }
-.lbc-button--variant_primary, .lbc-button--variant_secondary {
-  --lbc-button--border--color: var(--lbc-button--background--color);
-  --lbc-button--border--color--hover: var(--lbc-button--background--color--hover);
-  --lbc-button--border--color--disabled: var(--lbc-button--background--color--disabled);
-  --lbc-button--color--hover: var(--lbc-button--color);
+.lb-button--variant_primary, .lb-button--variant_secondary {
+  --lb-button--border--color: var(--lb-button--background--color);
+  --lb-button--border--color--hover: var(--lb-button--background--color--hover);
+  --lb-button--border--color--disabled: var(--lb-button--background--color--disabled);
+  --lb-button--color--hover: var(--lb-button--color);
 }
-.lbc-button--variant_outlined {
-  --lbc-button--background--color: var(--wp--preset--color--white);
-  --lbc-button--background--color--hover: var(--wp--preset--color--gray-50);
-  --lbc-button--background--color--disabled: var(--wp--preset--color--white);
-  --lbc-button--border--color: var(--wp--preset--color--gray-300);
-  --lbc-button--border--color--hover: var(--lbc-button--border--color);
-  --lbc-button--border--color--disabled: var(--wp--preset--color--gray-200);
-  --lbc-button--color: var(--wp--preset--color--gray-700);
-  --lbc-button--color--hover: var(
+.lb-button--variant_outlined {
+  --lb-button--background--color: var(--wp--preset--color--white);
+  --lb-button--background--color--hover: var(--wp--preset--color--gray-50);
+  --lb-button--background--color--disabled: var(--wp--preset--color--white);
+  --lb-button--border--color: var(--wp--preset--color--gray-300);
+  --lb-button--border--color--hover: var(--lb-button--border--color);
+  --lb-button--border--color--disabled: var(--wp--preset--color--gray-200);
+  --lb-button--color: var(--wp--preset--color--gray-700);
+  --lb-button--color--hover: var(
     --wp--preset--color--gray-800
   );
-  --lbc-button--color--disabled: var(--wp--preset--color--gray-300);
-  --lbc-button--outline--color--focus: var(--wp--preset--color--gray-100);
+  --lb-button--color--disabled: var(--wp--preset--color--gray-300);
+  --lb-button--outline--color--focus: var(--wp--preset--color--gray-100);
 }
-.lbc-button--variant_text {
-  --lbc-button--background--color: transparent;
-  --lbc-button--background--color--disabled: transparent;
-  --lbc-button--border--color: transparent;
-  --lbc-button--border--color--hover: var(--lbc-button--background--color--hover);
-  --lbc-button--border--color--disabled: transparent;
-  --lbc-button--color--hover: var(--lbc-button--color);
-  --lbc-button--color--disabled: var(--wp--preset--color--gray-300);
+.lb-button--variant_text {
+  --lb-button--background--color: transparent;
+  --lb-button--background--color--disabled: transparent;
+  --lb-button--border--color: transparent;
+  --lb-button--border--color--hover: var(--lb-button--background--color--hover);
+  --lb-button--border--color--disabled: transparent;
+  --lb-button--color--hover: var(--lb-button--color);
+  --lb-button--color--disabled: var(--wp--preset--color--gray-300);
 }
-.lbc-button--variant_inline {
-  --lbc-button--background--color: transparent;
-  --lbc-button--background--color--hover: transparent;
-  --lbc-button--background--color--disabled: transparent;
-  --lbc-button--border--color: transparent;
-  --lbc-button--border--color--hover: transparent;
-  --lbc-button--border--color--disabled: transparent;
-  --lbc-button--color--disabled: var(--wp--preset--color--gray-300);
+.lb-button--variant_inline {
+  --lb-button--background--color: transparent;
+  --lb-button--background--color--hover: transparent;
+  --lb-button--background--color--disabled: transparent;
+  --lb-button--border--color: transparent;
+  --lb-button--border--color--hover: transparent;
+  --lb-button--border--color--disabled: transparent;
+  --lb-button--color--disabled: var(--wp--preset--color--gray-300);
   padding: 0;
 }
 

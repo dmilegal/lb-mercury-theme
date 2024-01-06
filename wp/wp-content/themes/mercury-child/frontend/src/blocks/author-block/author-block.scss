@@ -2,15 +2,16 @@
 @use '@/shared/styles/mixins/font';
 
 body {
-  --lb-author-block--name--color: var(--wp--preset--color--gray-900);
-  --lb-author-block--job--color: var(--wp--preset--color--gray-500);
-  --lb-author-block--border--color: var(--wp--preset--color--gray-200);
+  --lb-author-block-name-color: var(--lb-semantic-color-text-prominent);
+  --lb-author-block-job-color: var(--lb-semantic-color-text-default);
+  --lb-author-block-bio-color: var(--lb-semantic-color-text-default);
+  --lb-author-block-border-color: var(--wp--preset--color--gray-200);
 }
 
 .lb-author-block {
   margin: var(--wp--preset--spacing--100) 0;
   padding: var(--wp--preset--spacing--100) 0;
-  border-bottom: 1px solid var(--lb-author-block--border--color);
+  border-bottom: 1px solid var(--lb-author-block-border-color);
   width: 100%;
   &__head {
     display: grid;
@@ -40,13 +41,13 @@ body {
     display: block;
     @include font.get-text-styles('text-lg');
     font-weight: 600;
-    color: var(--lb-author-block--name--color);
+    color: var(--lb-author-block-name-color);
 
   }
   &__job {
     display: block;
     @include font.get-text-styles('text-md');
-    color: var(--lb-author-block--job--color);
+    color: var(--lb-author-block-job-color);
   }
 
   &__socs {
@@ -57,5 +58,6 @@ body {
   &__bio {
     margin-top: var(--wp--preset--spacing--80);
     @include font.get-text-styles('text-md');
+    color: var(--lb-author-block-bio-color);
   }
 }

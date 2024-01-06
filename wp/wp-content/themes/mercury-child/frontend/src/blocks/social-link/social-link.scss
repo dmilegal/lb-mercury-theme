@@ -1,18 +1,18 @@
-.lbc-button.lb-social-link {
-  color: var(--lb-social-link--ico--color);
+.lb-button.lb-social-link {
+  color: var(--lb-social-link-ico-color);
   &:hover {
-    color: var(--lb-social-link--ico--color--hover);
+    color: var(--lb-social-link-ico-color-hover);
   }
 
   &--color {
     &_gray {
-      --lb-social-link--ico--color: var(--wp--preset--color--gray-400);
-      --lb-social-link--ico--color--hover: var(--wp--preset--color--gray-500);
+      --lb-social-link-ico-color: var(--wp--preset--color--gray-400);
+      --lb-social-link-ico-color-hover: var(--wp--preset--color--gray-500);
 
     }
     &_white {
-      --lb-social-link--ico--color: var(--wp--preset--color--white);
-      --lb-social-link--ico--color--hover: var(--wp--preset--color--gray-200);
+      --lb-social-link-ico-color: var(--wp--preset--color--white);
+      --lb-social-link-ico-color-hover: var(--wp--preset--color--gray-200);
     }
   }
 }

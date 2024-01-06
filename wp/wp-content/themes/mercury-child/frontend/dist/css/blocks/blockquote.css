@@ -7,6 +7,12 @@
 /**
 * font
 **/
+body {
+  --lb-blockquote-job-color-text: var(--lb-semantic-color-text-default);
+  --lb-blockquote-name-color-text: var(--lb-semantic-color-text-prominent);
+  --lb-blockquote-color-text: var(--lb-semantic-color-text-prominent);
+}
+
 .lb-blockquote {
   padding-top: var(--wp--preset--spacing--60);
   padding-bottom: var(--wp--preset--spacing--60);
@@ -18,7 +24,7 @@
   line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
-  color: var(--wp--preset--color--gray-900);
+  color: var(--lb-blockquote-color-text);
   margin: var(--wp--preset--spacing--70) 0;
   font-weight: 500;
 }
@@ -36,7 +42,7 @@
   line-height: var(--wp--custom--line-height--text-sm);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
-  color: var(--wp--preset--color--gray-500);
+  color: var(--lb-blockquote-color-text);
 }
 .lb-blockquote__author {
   font-size: var(--wp--preset--font-size--text-sm);
@@ -55,10 +61,10 @@
 }
 .lb-blockquote__author-name {
   font-weight: 600;
-  color: var(--wp--preset--color--gray-900);
+  color: var(--lb-blockquote-name-color-text);
 }
 .lb-blockquote__author-job {
-  color: var(--wp--preset--color--gray-500);
+  color: var(--lb-blockquote-job-color-text);
 }
 
 /*# sourceMappingURL=blockquote.css.map*/

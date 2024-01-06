@@ -1,19 +1,19 @@
 /*!****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/social-link/social-link.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************/
-.lbc-button.lb-social-link {
-  color: var(--lb-social-link--ico--color);
+.lb-button.lb-social-link {
+  color: var(--lb-social-link-ico-color);
 }
-.lbc-button.lb-social-link:hover {
-  color: var(--lb-social-link--ico--color--hover);
+.lb-button.lb-social-link:hover {
+  color: var(--lb-social-link-ico-color-hover);
 }
-.lbc-button.lb-social-link--color_gray {
-  --lb-social-link--ico--color: var(--wp--preset--color--gray-400);
-  --lb-social-link--ico--color--hover: var(--wp--preset--color--gray-500);
+.lb-button.lb-social-link--color_gray {
+  --lb-social-link-ico-color: var(--wp--preset--color--gray-400);
+  --lb-social-link-ico-color-hover: var(--wp--preset--color--gray-500);
 }
-.lbc-button.lb-social-link--color_white {
-  --lb-social-link--ico--color: var(--wp--preset--color--white);
-  --lb-social-link--ico--color--hover: var(--wp--preset--color--gray-200);
+.lb-button.lb-social-link--color_white {
+  --lb-social-link-ico-color: var(--wp--preset--color--white);
+  --lb-social-link-ico-color-hover: var(--wp--preset--color--gray-200);
 }
 
 /*# sourceMappingURL=social-link.css.map*/

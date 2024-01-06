@@ -55,4 +55,4 @@ use Shared\Theme\LbThemeService;
 		</div>
 	</div>
 </header>
-<? get_template_part( 'theme-parts/header/mobile-menu', null ); ?>
+<? get_template_part( 'theme-parts/organisms/header/mobile-menu', null ); ?>

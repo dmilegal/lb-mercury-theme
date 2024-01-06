@@ -1,6 +1,11 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
+body {
+  --lb-pros-cons-color-text: var(--lb-semantic-color-text-default);
+  --lb-pros-cons-title-color-text: var(--lb-semantic-color-text-prominent);
+}
+
 .lb-pros-cons {
   &__inner {
     display: grid;
@@ -15,7 +20,7 @@
   &-col {
     padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100)
       var(--wp--preset--spacing--110);
-    color: var(--wp--preset--color--gray-500);
+    color: var(--lb-pros-cons-color-text);
     border: 1px solid var(--wp--preset--color--gray-200);
     border-radius: var(--wp--preset--spacing--80);
     &--adv {
@@ -39,7 +44,7 @@
       @include font.get-text-styles('text-lg');
       font-weight: 500;
       margin-bottom: var(--wp--preset--spacing--105);
-      color: var(--wp--preset--color--gray-900);
+      color: var(--lb-pros-cons-title-color-text);
     }
 
     ul {

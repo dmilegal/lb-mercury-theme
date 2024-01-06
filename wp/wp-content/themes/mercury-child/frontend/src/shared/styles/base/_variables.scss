@@ -1,4 +1,4 @@
-@use "../mixins/breakpoints";
+@use '../mixins/breakpoints';
 
 @use 'sass:map';
 
@@ -12,4 +12,7 @@ body {
   @include breakpoints.media-breakpoint-down('sm') {
     --layout--content-padding: var(--wp--custom--layout--content-padding-sm);
   }
+
+  --lb-semantic-color-text-default: var(--wp--preset--color--gray-500);
+  --lb-semantic-color-text-prominent: var(--wp--preset--color--gray-900);
 }

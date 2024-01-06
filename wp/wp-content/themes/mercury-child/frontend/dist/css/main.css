@@ -1345,6 +1345,8 @@
 body {
   --layout--content-spacing: var(--wp--custom--layout--content-spacing-md);
   --layout--content-padding: var(--wp--custom--layout--content-padding-md);
+  --lb-semantic-color-text-default: var(--wp--preset--color--gray-500);
+  --lb-semantic-color-text-prominent: var(--wp--preset--color--gray-900);
 }
 @media (max-width: 767.98px) {
   body {
@@ -1495,6 +1497,10 @@ Make elements with the HTML hidden attribute stay hidden by default.
 /**
 * font
 **/
+body {
+  --lb--caption-color-text: var(--lb-semantic-color-text-default);
+}
+
 .wp-caption {
   max-width: 100%;
   padding: 1.45em 0 2.9em;
@@ -1583,7 +1589,7 @@ ul.wp-block-gallery.alignwide {
   margin-top: var(--wp--preset--spacing--55);
   margin-bottom: 0;
   text-align: center;
-  color: var(--wp--preset--color--gray-500);
+  color: var(--lb--caption-color-text);
   font-size: var(--wp--preset--font-size--text-xs);
   line-height: var(--wp--custom--line-height--text-xs);
   letter-spacing: inherit;
@@ -1628,6 +1634,8 @@ ul.wp-block-gallery.alignwide {
 **/
 body {
   font-family: var(--wp--preset--font-family--base);
+  --lb-ui-color-text: var(--lb-semantic-color-text-default);
+  --lb-ui-color-heading-text: var(--lb-semantic-color-text-prominent);
 }
 
 .prose-headings :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
@@ -1710,7 +1718,7 @@ body {
 }
 
 .prose-colors :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  color: var(--wp--preset--color--gray-900);
+  color: var(--lb-ui-color-heading-text);
 }
 
 .prose-colors :where(a):not(:where([class~=not-prose], [class~=not-prose] *)) {
@@ -1718,7 +1726,7 @@ body {
 }
 
 .prose-colors :where(p, ul):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  color: var(--wp--preset--color--gray-500);
+  color: var(--lb-ui-color-text);
 }
 
 .has-display-2xl-font-size {
@@ -1787,9 +1795,13 @@ body {
   letter-spacing: var(--wp--custom--letter-spacing--text-xs);
 }
 
+body {
+  --lb-table-color-text: var(--lb-semantic-color-text-default);
+}
+
 .prose-content :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table {
   border: 1px solid var(--wp--preset--color--gray-200);
-  color: var(--wp--preset--color--gray-500);
+  color: var(--lb-table-color-text);
   border-radius: var(--wp--preset--spacing--60);
   border-spacing: 0;
   border-collapse: separate !important;

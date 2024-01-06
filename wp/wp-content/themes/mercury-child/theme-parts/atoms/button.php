@@ -24,31 +24,32 @@ $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', '
 
 ?>
 
-<<?= $tag ?> class="<?= classNames(
-                      'lbc-button',
-                      $className,
-                      'lbc-button--size_' . $size,
-                      'lbc-button--color_' . $color,
-                      'lbc-button--variant_' . $variant,
-                      [
-                        'lbc-button--display_icon' => !$content && !!($prefix || $postfix)
-                      ]
-                     
-                    ) ?>" <?= $attrsStr ?> style="<?= stylesValue(
-                                                    $style
-                                                  ) ?>">
+<<?= $tag ?> class="
+  <?= classNames(
+    'lb-button',
+    $className,
+    'lb-button--size_' . $size,
+    'lb-button--color_' . $color,
+    'lb-button--variant_' . $variant,
+    [
+      'lb-button--display_icon' => !$content && !!($prefix || $postfix)
+    ]
+
+  ) ?>" <?= $attrsStr ?> style="<?= stylesValue(
+        $style
+      ) ?>">
   <? if ($prefix) { ?>
-    <span class="lbc-button__prefix">
+    <span class="lb-button__prefix">
       <?= $prefix ?>
     </span>
   <? } ?>
   <? if ($content) { ?>
-    <span class="lbc-button__content">
+    <span class="lb-button__content">
       <?= $content ?>
     </span>
   <? } ?>
   <? if ($postfix) { ?>
-    <span class="lbc-button__postfix">
+    <span class="lb-button__postfix">
       <?= $postfix ?>
     </span>
   <? } ?>

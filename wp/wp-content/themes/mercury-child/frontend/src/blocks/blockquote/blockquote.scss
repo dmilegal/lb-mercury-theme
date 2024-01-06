@@ -1,6 +1,12 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
+body {
+  --lb-blockquote-job-color-text: var(--lb-semantic-color-text-default);
+  --lb-blockquote-name-color-text: var(--lb-semantic-color-text-prominent);
+  --lb-blockquote-color-text: var(--lb-semantic-color-text-prominent);
+}
+
 .lb-blockquote {
   padding-top: var(--wp--preset--spacing--60);
   padding-bottom: var(--wp--preset--spacing--60);
@@ -8,7 +14,7 @@
   border-left: 2px solid var(--wp--preset--color--primary-700);
   :where(p) {
     @include font.get-text-styles('text-md');
-    color: var(--wp--preset--color--gray-900);
+    color: var(--lb-blockquote-color-text);
     margin: var(--wp--preset--spacing--70) 0;
     font-weight: 500;
     &:first-child {
@@ -23,7 +29,7 @@
   }
   :where(cite) {
     @include font.get-text-styles('text-sm');
-    color: var(--wp--preset--color--gray-500);
+    color: var(--lb-blockquote-color-text);
   }
 
   &__author {
@@ -39,10 +45,10 @@
     }
     &-name {
       font-weight: 600;
-      color: var(--wp--preset--color--gray-900);
+      color: var(--lb-blockquote-name-color-text);
     }
     &-job {
-      color: var(--wp--preset--color--gray-500);
+      color: var(--lb-blockquote-job-color-text);
     }
   }
 }

@@ -8,6 +8,8 @@ $proseCustomSelector: null !default;
 
 #{$globalSelector} {
   font-family: var(--wp--preset--font-family--base);
+  --lb-ui-color-text: var(--lb-semantic-color-text-default);
+  --lb-ui-color-heading-text: var(--lb-semantic-color-text-prominent);
 }
 
 @include typo.make-prose('headings', 'h2', $proseCustomSelector) {
@@ -84,7 +86,7 @@ $proseCustomSelector: null !default;
 }
 
 @include typo.make-prose('colors', 'h1,h2,h3,h4,h5,h6', $proseCustomSelector) {
-  color: var(--wp--preset--color--gray-900);
+  color: var(--lb-ui-color-heading-text);
 }
 
 @include typo.make-prose('colors', 'a', $proseCustomSelector) {
@@ -92,7 +94,7 @@ $proseCustomSelector: null !default;
 }
 
 @include typo.make-prose('colors', 'p,ul', $proseCustomSelector) {
-  color: var(--wp--preset--color--gray-500);
+  color: var(--lb-ui-color-text);
 }
 
 @each $name, $params in text.$body-fonts {
