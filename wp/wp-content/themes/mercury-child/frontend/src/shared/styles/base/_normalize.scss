@@ -147,7 +147,7 @@ $wrapperSelector: null !default;
 
 @if not $disableNormalize {
   @if $wrapperSelector {
-    :where(#{$wrapperSelector}) {
+    #{$wrapperSelector} {
       @include normalize();
     }
   } @else {

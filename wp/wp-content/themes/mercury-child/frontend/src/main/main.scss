@@ -1,6 +1,3 @@
 @use "sass:meta";
-@use '@/shared/styles/main' with (
-  $globalSelector: 'body',
-);
-
+@use '@/shared/styles/main';
 @use 'styles';

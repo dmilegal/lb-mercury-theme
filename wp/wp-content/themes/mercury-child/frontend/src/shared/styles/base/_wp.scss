@@ -1,6 +1,10 @@
 $disableWpDefaultStyles: false !default;
 $wrapperSelector: null !default;
 
+@use "@/shared/styles/mixins/container";
+@use "@/shared/styles/mixins/font";
+
+
 @mixin wp-default-styles() {
   .wp-caption {
     max-width: 100%;
@@ -9,14 +13,14 @@ $wrapperSelector: null !default;
 
   .alignleft {
     float: left;
-    padding: 8px 30px 20px 0;
+    margin-inline-end: 2em;
     text-align: left;
   }
 
   .alignright {
     float: right;
-    padding: 8px 0 20px 30px;
     text-align: right;
+    margin-inline-start: 2em;
   }
 
   .aligncenter {
@@ -50,10 +54,7 @@ $wrapperSelector: null !default;
     padding: 0;
     margin-bottom: 0;
     font-style: italic;
-    color: #7f8c8d;
-    font-size: 0.75em;
-    line-height: 1.45em;
-    text-align: center;
+    @include font.get-text-styles('text-xs');
   }
 
   .wp-caption.alignleft p.wp-caption-text {
@@ -62,11 +63,6 @@ $wrapperSelector: null !default;
 
   .wp-caption.aligncenter p.wp-caption-text {
     text-align: center;
-  }
-
-  .wp-caption p.wp-caption-text a {
-    color: #7f8c8d;
-    text-decoration: underline;
   }
 
   .wp-caption p.wp-caption-text a:hover {
@@ -89,20 +85,21 @@ $wrapperSelector: null !default;
   }
   .wp-block-image figcaption {
     padding: 0;
-    margin-top: 5px;
-    color: #7f8c8d;
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
+    margin-top: var(--wp--preset--spacing--55);
+    margin-bottom: 0;
+    text-align: center;
+    color: var(--wp--preset--color--gray-500);
+    @include font.get-text-styles('text-xs');
   }
-  .wp-block-image .aligncenter {
-    margin: 0 auto;
+  .wp-block-image.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 0;
   }
 
-  .wp-block-image .aligncenter > figcaption,
-  .wp-block-image .alignleft > figcaption,
-  .wp-block-image .alignright > figcaption,
+  .wp-block-image.aligncenter > figcaption,
+  .wp-block-image.alignleft > figcaption,
+  .wp-block-image.alignright > figcaption,
   .wp-block-image.is-resized > figcaption {
     display: block;
   }
@@ -130,7 +127,7 @@ $wrapperSelector: null !default;
 
 @if not $disableWpDefaultStyles {
   @if $wrapperSelector {
-    :where(#{$wrapperSelector}) {
+    #{$wrapperSelector} {
       @include wp-default-styles();
     }
   } @else {

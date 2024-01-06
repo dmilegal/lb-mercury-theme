@@ -1357,6 +1357,12 @@ body {
   }
 }
 
+/**
+* helpers
+**/
+/**
+* font
+**/
 .wp-caption {
   max-width: 100%;
   padding: 1.45em 0 2.9em;
@@ -1364,14 +1370,14 @@ body {
 
 .alignleft {
   float: left;
-  padding: 8px 30px 20px 0;
+  margin-right: 2em;
   text-align: left;
 }
 
 .alignright {
   float: right;
-  padding: 8px 0 20px 30px;
   text-align: right;
+  margin-left: 2em;
 }
 
 .aligncenter {
@@ -1405,10 +1411,10 @@ body {
   padding: 0;
   margin-bottom: 0;
   font-style: italic;
-  color: #7f8c8d;
-  font-size: 0.75em;
-  line-height: 1.45em;
-  text-align: center;
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
 }
 
 .wp-caption.alignleft p.wp-caption-text {
@@ -1417,12 +1423,6 @@ body {
 
 .wp-caption.aligncenter p.wp-caption-text {
   text-align: center;
-}
-
-.wp-caption p.wp-caption-text a {
-  color: #7f8c8d;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .wp-caption p.wp-caption-text a:hover {
@@ -1448,21 +1448,25 @@ ul.wp-block-gallery.alignwide {
 
 .wp-block-image figcaption {
   padding: 0;
-  margin-top: 5px;
-  color: #7f8c8d;
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
+  margin-top: var(--wp--preset--spacing--55);
+  margin-bottom: 0;
+  text-align: center;
+  color: var(--wp--preset--color--gray-500);
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
 }
 
-.wp-block-image .aligncenter {
-  margin: 0 auto;
+.wp-block-image.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 0;
 }
 
-.wp-block-image .aligncenter > figcaption,
-.wp-block-image .alignleft > figcaption,
-.wp-block-image .alignright > figcaption,
+.wp-block-image.aligncenter > figcaption,
+.wp-block-image.alignleft > figcaption,
+.wp-block-image.alignright > figcaption,
 .wp-block-image.is-resized > figcaption {
   display: block;
 }
@@ -1489,12 +1493,6 @@ ul.wp-block-gallery.alignwide {
 /*themes*/
 /**
 * itertors
-**/
-/**
-* helpers
-**/
-/**
-* font
 **/
 body {
   font-family: var(--wp--preset--font-family--base);
@@ -1547,10 +1545,10 @@ body :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) {
   width: 100%;
 }
 
-body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .lb-pros-cons):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
   margin-top: 0;
 }
-body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .lb-pros-cons):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
   margin-bottom: 0;
 }
 
@@ -1564,7 +1562,7 @@ body :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-bottom: var(--wp--preset--spacing--80);
 }
 
-body :where(p, ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
+body :where(p, ul, ol, .wp-block-image):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-top: var(--wp--preset--spacing--80);
   margin-bottom: var(--wp--preset--spacing--80);
 }

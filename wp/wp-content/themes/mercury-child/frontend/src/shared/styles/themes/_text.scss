@@ -45,7 +45,11 @@ $proseCustomSelector: null !default;
   width: 100%;
 }
 
-@include typo.make-prose('spaces', 'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote', $proseCustomSelector) {
+@include typo.make-prose(
+  'spaces',
+  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.lb-pros-cons',
+  $proseCustomSelector
+) {
   &:first-child {
     margin-block-start: 0;
   }
@@ -64,7 +68,7 @@ $proseCustomSelector: null !default;
   margin-block-end: var(--wp--preset--spacing--80);
 }
 
-@include typo.make-prose('spaces', 'p,ul,ol', $proseCustomSelector) {
+@include typo.make-prose('spaces', 'p,ul,ol,.wp-block-image', $proseCustomSelector) {
   margin-block-start: var(--wp--preset--spacing--80);
   margin-block-end: var(--wp--preset--spacing--80);
 }
@@ -72,13 +76,12 @@ $proseCustomSelector: null !default;
 @include typo.make-prose('spaces', 'blockquote', $proseCustomSelector) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
-
 }
+
 @include typo.make-prose('spaces', '.lb-pros-cons', $proseCustomSelector) {
   margin-block-start: var(--wp--preset--spacing--120);
   margin-block-end: var(--wp--preset--spacing--120);
 }
-
 
 @include typo.make-prose('colors', 'h1,h2,h3,h4,h5,h6', $proseCustomSelector) {
   color: var(--wp--preset--color--gray-900);
