@@ -4,40 +4,51 @@
 
 .lb-featured-icon {
   display: inline-flex;
+  box-sizing: border-box;
   color: var(--lb-featured-icon-color-text);
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-weight: 600;
+  font-weight: 400;
   background-color: var(--lb-featured-icon-color-background);
+  border: var(--lb-featured-icon-size-border, 0px) solid
+    var(--lb-featured-icon-color-border);
 
-  width: 2em;
-  height: 2em;
-  font-size: 1em;
+  width: var(--lb-featured-icon-size);
+  height: var(--lb-featured-icon-size);
+  font-size: calc(var(--lb-featured-icon-size) / 2);
   line-height: 1em;
   border-radius: 50%;
 
   &--size {
     &_2xs {
-      @include font.get-text-styles('caption-md');
+      --lb-featured-icon-size: var(--wp--preset--spacing--90);
     }
     &_xs {
-      @include font.get-text-styles('text-xs');
+      --lb-featured-icon-size-border: 2px;
+      --lb-featured-icon-size: var(--wp--preset--spacing--100);
     }
     &_sm {
-      @include font.get-text-styles('text-sm');
+      --lb-featured-icon-size: var(--wp--preset--spacing--110);
     }
     &_md {
-      @include font.get-text-styles('text-md');
+      --lb-featured-icon-size-border: 4px;
+      --lb-featured-icon-size: var(--wp--preset--spacing--120);
     }
     &_lg {
-      @include font.get-text-styles('text-lg');
+      --lb-featured-icon-size: var(--wp--preset--spacing--130);
     }
     &_xl {
-      @include font.get-text-styles('text-xl');
+      --lb-featured-icon-size-border: 6px;
+      --lb-featured-icon-size: var(--wp--preset--spacing--140);
     }
     &_2xl {
-      @include font.get-text-styles('display-xs');
+      --lb-featured-icon-size-border: 8px;
+      --lb-featured-icon-size: var(--wp--preset--spacing--160);
+    }
+    &_3xl {
+      --lb-featured-icon-size-border: 10px;
+      --lb-featured-icon-size: var(--wp--preset--spacing--180);
     }
   }
 
@@ -52,7 +63,7 @@
       &--variant_#{$variant}:where(#{'&--color_' + $colorName}) {
         @if $variant == 'contained' {
           --lb-featured-icon-color-text: var(--lb-color-on-#{$colorName});
-          --lb-featured-icon-color-bg: var(--lb-color-#{$colorName});
+          --lb-featured-icon-color-background: var(--lb-color-#{$colorName});
         } @else if $variant == 'contained-light' {
           --lb-featured-icon-color-text: var(--lb-color-on-#{$colorName}-container);
           --lb-featured-icon-color-background: var(--lb-color-#{$colorName}-container);
@@ -65,13 +76,9 @@
           --lb-featured-icon-color-text: var(--lb-color-on-#{$colorName});
           --lb-featured-icon-color-background: var(--lb-color-#{$colorName}-highest);
         } @else if $variant == 'outlined-bold' {
-          --lb-button--color: var(
-            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets}
-          );
-          --lb-button--color--hover: var(
-            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets + 100}
-          );
-          --lb-button--outline--color--focus: var(--wp--preset--color--#{$colorName}-100);
+          --lb-featured-icon-color-text: var(--lb-color-on-#{$colorName}-container);
+          --lb-featured-icon-color-border: var(--lb-color-#{$colorName}-container-low);
+          --lb-featured-icon-color-background: var(--lb-color-#{$colorName}-container);
         }
       }
     }
@@ -79,9 +86,9 @@
 
   &--variant {
     &_outlined {
-      --lb-featured-icon-color-text: var( --lb-color-on-surface);
+      --lb-featured-icon-color-text: var(--lb-color-on-surface);
       --lb-featured-icon-color-background: var(--lb-color-surface);
-      --lb-featured-icon-color-border: var(--lb-color-surface);
+      --lb-featured-icon-color-border: var(--lb-color-surface-outline);
     }
   }
 }

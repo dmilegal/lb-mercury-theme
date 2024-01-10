@@ -86,7 +86,25 @@ get_template_part('theme-parts/molecules/badge-group', null, [
 		'content' => 'test'
 	]
 ]);
-
+echo '<br>';
+get_template_part('theme-parts/molecules/featured-icon', null, [
+	'size' => 'md',
+	'variant' => 'contained-light',
+	'color' => 'primary',
+	'icon' => 'zap'
+]);
+get_template_part('theme-parts/molecules/featured-icon', null, [
+	'size' => 'xl',
+	'variant' => 'contained-light',
+	'color' => 'primary',
+	'icon' => 'zap'
+]);
+get_template_part('theme-parts/molecules/featured-icon', null, [
+	'size' => '2xl',
+	'variant' => 'outlined-bold',
+	'color' => 'primary',
+	'icon' => 'zap'
+]);
 ////
 
 get_template_part('theme-parts/organisms/footer/style-1');

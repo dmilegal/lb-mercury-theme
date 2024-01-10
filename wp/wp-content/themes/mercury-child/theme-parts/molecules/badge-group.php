@@ -28,7 +28,7 @@ $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', '
 
 
 ob_start();
-get_template_part('theme-parts/components/atoms/badge', null, [
+get_template_part('theme-parts/atoms/badge', null, [
   'size' => $size,
   'prefix' => $labelPosition == 'left' ? $prefix : '',
   'postfix' => $labelPosition == 'right' ? $postfix : '',
@@ -57,7 +57,7 @@ ob_end_clean();
   <?
   if ($labelPosition == 'left')
     echo $labelBadge;
-  get_template_part('theme-parts/components/atoms/badge', null, [
+  get_template_part('theme-parts/atoms/badge', null, [
     'size' => $size,
     'prefix' => $labelPosition == 'left' ? '' : $prefix,
     'postfix' => $labelPosition == 'right' ? '' : $postfix,

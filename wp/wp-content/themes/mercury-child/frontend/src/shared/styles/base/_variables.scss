@@ -22,8 +22,8 @@ body {
   @each $colorName in colors.$colorNames {
     --lb-color-on-#{$colorName}: var(--wp--preset--color--white);
     --lb-color-#{$colorName}: var(--wp--preset--color--#{$colorName}-600);
-    --lb-color-#{$colorName}-highest: var(--wp--preset--color--#{$colorName}-800);
     --lb-color-#{$colorName}-high: var(--wp--preset--color--#{$colorName}-700);
+    --lb-color-#{$colorName}-highest: var(--wp--preset--color--#{$colorName}-800);
     --lb-color-#{$colorName}-low: var(--wp--preset--color--#{$colorName}-100);
 
     --lb-color-on-#{$colorName}-container: var(--wp--preset--color--#{$colorName}-600);
@@ -32,6 +32,8 @@ body {
   }
 
   --lb-color-surface: var(--wp--preset--color--white);
+  --lb-color-surface-outline-1: var(--wp--preset--color--gray-200);
+  --lb-color-surface-outline-2: var(--wp--preset--color--gray-300);
   --lb-color-on-surface: var(--wp--preset--color--gray-700);
  
 }
