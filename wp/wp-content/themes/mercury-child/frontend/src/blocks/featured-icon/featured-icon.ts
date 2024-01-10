@@ -1,0 +1,1 @@
+import './featured-icon.scss'

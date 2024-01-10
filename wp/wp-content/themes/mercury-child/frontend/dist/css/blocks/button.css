@@ -46,7 +46,7 @@
 .lb-button__postfix > :where([class^=icon-],
 [class*=" icon-"]), .lb-button__prefix > :where([class^=icon-],
 [class*=" icon-"]) {
-  font-size: 1.25rem;
+  font-size: var(--wp--preset--font-size--text-xl);
   font-weight: normal;
 }
 .lb-button--display_icon {
@@ -95,7 +95,7 @@
 .lb-button--size_xl :where(.lb-button__postfix > :where([class^=icon-],
 [class*=" icon-"]), .lb-button__prefix > :where([class^=icon-],
 [class*=" icon-"])) {
-  font-size: calc(var(--wp--preset--font-size--text-md) + 4px);
+  font-size: var(--wp--preset--font-size--text-xl);
 }
 .lb-button--size_2xl:where(:not(.lb-button--display_icon)) {
   font-size: var(--wp--preset--font-size--text-lg);
@@ -111,9 +111,9 @@
 .lb-button--size_2xl :where(.lb-button__postfix > :where([class^=icon-],
 [class*=" icon-"]), .lb-button__prefix > :where([class^=icon-],
 [class*=" icon-"])) {
-  font-size: 1.5rem;
+  font-size: var(--wp--preset--font-size--display-xs);
 }
-.lb-button--variant_primary:where(.lb-button--color_gray) {
+.lb-button--variant_contained:where(.lb-button--color_gray) {
   --lb-button--background--color: var(
     --wp--preset--color--gray-600
   );
@@ -129,7 +129,7 @@
     --wp--preset--color--gray-100
   );
 }
-.lb-button--variant_primary:where(.lb-button--color_primary) {
+.lb-button--variant_contained:where(.lb-button--color_primary) {
   --lb-button--background--color: var(
     --wp--preset--color--primary-600
   );
@@ -145,7 +145,7 @@
     --wp--preset--color--primary-100
   );
 }
-.lb-button--variant_primary:where(.lb-button--color_error) {
+.lb-button--variant_contained:where(.lb-button--color_error) {
   --lb-button--background--color: var(
     --wp--preset--color--error-600
   );
@@ -161,7 +161,7 @@
     --wp--preset--color--error-100
   );
 }
-.lb-button--variant_primary:where(.lb-button--color_warning) {
+.lb-button--variant_contained:where(.lb-button--color_warning) {
   --lb-button--background--color: var(
     --wp--preset--color--warning-600
   );
@@ -177,7 +177,7 @@
     --wp--preset--color--warning-100
   );
 }
-.lb-button--variant_primary:where(.lb-button--color_success) {
+.lb-button--variant_contained:where(.lb-button--color_success) {
   --lb-button--background--color: var(
     --wp--preset--color--success-600
   );
@@ -193,7 +193,7 @@
     --wp--preset--color--success-100
   );
 }
-.lb-button--variant_secondary:where(.lb-button--color_gray) {
+.lb-button--variant_contained-light:where(.lb-button--color_gray) {
   --lb-button--background--color: var(--wp--preset--color--gray-50);
   --lb-button--background--color--hover: var(
     --wp--preset--color--gray-100
@@ -207,7 +207,7 @@
     --wp--preset--color--gray-100
   );
 }
-.lb-button--variant_secondary:where(.lb-button--color_primary) {
+.lb-button--variant_contained-light:where(.lb-button--color_primary) {
   --lb-button--background--color: var(--wp--preset--color--primary-50);
   --lb-button--background--color--hover: var(
     --wp--preset--color--primary-100
@@ -221,7 +221,7 @@
     --wp--preset--color--primary-100
   );
 }
-.lb-button--variant_secondary:where(.lb-button--color_error) {
+.lb-button--variant_contained-light:where(.lb-button--color_error) {
   --lb-button--background--color: var(--wp--preset--color--error-50);
   --lb-button--background--color--hover: var(
     --wp--preset--color--error-100
@@ -235,7 +235,7 @@
     --wp--preset--color--error-100
   );
 }
-.lb-button--variant_secondary:where(.lb-button--color_warning) {
+.lb-button--variant_contained-light:where(.lb-button--color_warning) {
   --lb-button--background--color: var(--wp--preset--color--warning-50);
   --lb-button--background--color--hover: var(
     --wp--preset--color--warning-100
@@ -249,7 +249,7 @@
     --wp--preset--color--warning-100
   );
 }
-.lb-button--variant_secondary:where(.lb-button--color_success) {
+.lb-button--variant_contained-light:where(.lb-button--color_success) {
   --lb-button--background--color: var(--wp--preset--color--success-50);
   --lb-button--background--color--hover: var(
     --wp--preset--color--success-100
@@ -353,7 +353,7 @@
     --wp--preset--color--success-100
   );
 }
-.lb-button--variant_primary, .lb-button--variant_secondary {
+.lb-button--variant_contained, .lb-button--variant_contained-light {
   --lb-button--border--color: var(--lb-button--background--color);
   --lb-button--border--color--hover: var(--lb-button--background--color--hover);
   --lb-button--border--color--disabled: var(--lb-button--background--color--disabled);

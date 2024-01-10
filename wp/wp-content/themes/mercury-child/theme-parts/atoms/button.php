@@ -5,11 +5,11 @@ $style = $args['style'] ?? '';
  * sm | md | lg | xl | 2xl
  */
 $size = $args['size'] ?? 'md';
-$color = $args['color'] ?? get_theme_mod('main_ui_color');
+$color = $args['color'] ?? 'primary';
 /**
- * primary | secondary | outlined | text | inline
+ * contained | contained-light | outlined | text | inline
  */
-$variant = $args['variant'] ?? 'primary';
+$variant = $args['variant'] ?? 'contained';
 $flat = $args['flat'] ?? false;
 $content = $args['content'] ?? '';
 $prefix = $args['prefix'] ?? '';

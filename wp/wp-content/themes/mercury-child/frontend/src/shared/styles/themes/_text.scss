@@ -8,8 +8,9 @@ $proseCustomSelector: null !default;
 
 #{$globalSelector} {
   font-family: var(--wp--preset--font-family--base);
-  --lb-ui-color-text: var(--lb-semantic-color-text-default);
-  --lb-ui-color-heading-text: var(--lb-semantic-color-text-prominent);
+  --lb-ui-color-text: var(--lb-color-text-default);
+  --lb-ui-color-heading-text: var(--lb-color-text-strong);
+  --lb-ui-color-link-text: var(--lb-color-action-text-default);
 }
 
 @include typo.make-prose('headings', 'h2', $proseCustomSelector) {
@@ -90,7 +91,7 @@ $proseCustomSelector: null !default;
 }
 
 @include typo.make-prose('colors', 'a', $proseCustomSelector) {
-  color: var(--wp--preset--color--primary-600);
+  color: var(--lb-ui-color-link-text);
 }
 
 @include typo.make-prose('colors', 'p,ul', $proseCustomSelector) {

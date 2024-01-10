@@ -46,7 +46,7 @@
 
     & > :where([class^='icon-'],
     [class*=' icon-']) {
-      font-size: font.font-size(20px);
+      font-size: font.font-size-by-name('text-xl');
       font-weight: normal;
       @extend %icon;
     }
@@ -94,7 +94,7 @@
       padding: 14px;
     }
     :where(%icon) {
-      font-size: calc(#{font.font-size-by-name('text-md')} + 4px);
+      font-size: font.font-size-by-name('text-xl');
     }
   }
   &--size_2xl {
@@ -107,14 +107,14 @@
       padding: 16px;
     }
     :where(%icon) {
-      font-size: font.font-size(24px);
+      font-size: font.font-size-by-name('display-xs');
     }
   }
 
-  @each $variant in 'primary', 'secondary', 'text', 'inline' {
+  @each $variant in 'contained', 'contained-light', 'text', 'inline' {
     @each $colorName in colors.$colorNames {
       &--variant_#{$variant}:where(#{'&--color_' + $colorName}) {
-        @if $variant == 'primary' {
+        @if $variant == 'contained' {
           --lb-button--background--color: var(
             --wp--preset--color--#{$colorName}-#{colors.$targetOffsets - 100}
           );
@@ -129,7 +129,7 @@
           --lb-button--outline--color--focus: var(
             --wp--preset--color--#{$colorName}-100
           );
-        } @else if $variant == 'secondary' {
+        } @else if $variant == 'contained-light' {
           --lb-button--background--color: var(--wp--preset--color--#{$colorName}-50);
           --lb-button--background--color--hover: var(
             --wp--preset--color--#{$colorName}-100
@@ -163,55 +163,58 @@
     }
   }
 
-  &--variant_primary,
-  &--variant_secondary {
-    --lb-button--border--color: var(--lb-button--background--color);
-    --lb-button--border--color--hover: var(--lb-button--background--color--hover);
-    --lb-button--border--color--disabled: var(--lb-button--background--color--disabled);
-    --lb-button--color--hover: var(--lb-button--color);
+  &--variant {
+    &_contained,
+    &_contained-light {
+      --lb-button--border--color: var(--lb-button--background--color);
+      --lb-button--border--color--hover: var(--lb-button--background--color--hover);
+      --lb-button--border--color--disabled: var(--lb-button--background--color--disabled);
+      --lb-button--color--hover: var(--lb-button--color);
+    }
+  
+    &_outlined {
+      --lb-button--background--color: var(--wp--preset--color--white);
+      --lb-button--background--color--hover: var(--wp--preset--color--#{colors.$colorGray}-50);
+      --lb-button--background--color--disabled: var(--wp--preset--color--white);
+  
+      --lb-button--border--color: var(--wp--preset--color--#{colors.$colorGray}-300);
+      --lb-button--border--color--hover: var(--lb-button--border--color);
+      --lb-button--border--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-200);
+  
+      --lb-button--color: var(--wp--preset--color--#{colors.$colorGray}-#{colors.$targetOffsets});
+      --lb-button--color--hover: var(
+        --wp--preset--color--#{colors.$colorGray}-#{colors.$targetOffsets + 100}
+      );
+      --lb-button--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-300);
+  
+      --lb-button--outline--color--focus: var(--wp--preset--color--#{colors.$colorGray}-100);
+    }
+  
+    &_text {
+      --lb-button--background--color: transparent;
+      --lb-button--background--color--disabled: transparent;
+  
+      --lb-button--border--color: transparent;
+      --lb-button--border--color--hover: var(--lb-button--background--color--hover);
+      --lb-button--border--color--disabled: transparent;
+  
+      --lb-button--color--hover: var(--lb-button--color);
+      --lb-button--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-300);
+    }
+  
+    &_inline {
+      --lb-button--background--color: transparent;
+      --lb-button--background--color--hover: transparent;
+      --lb-button--background--color--disabled: transparent;
+  
+      --lb-button--border--color: transparent;
+      --lb-button--border--color--hover: transparent;
+      --lb-button--border--color--disabled: transparent;
+  
+      --lb-button--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-300);
+  
+      padding: 0;
+    }
   }
-
-  &--variant_outlined {
-    --lb-button--background--color: var(--wp--preset--color--white);
-    --lb-button--background--color--hover: var(--wp--preset--color--#{colors.$colorGray}-50);
-    --lb-button--background--color--disabled: var(--wp--preset--color--white);
-
-    --lb-button--border--color: var(--wp--preset--color--#{colors.$colorGray}-300);
-    --lb-button--border--color--hover: var(--lb-button--border--color);
-    --lb-button--border--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-200);
-
-    --lb-button--color: var(--wp--preset--color--#{colors.$colorGray}-#{colors.$targetOffsets});
-    --lb-button--color--hover: var(
-      --wp--preset--color--#{colors.$colorGray}-#{colors.$targetOffsets + 100}
-    );
-    --lb-button--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-300);
-
-    --lb-button--outline--color--focus: var(--wp--preset--color--#{colors.$colorGray}-100);
-  }
-
-  &--variant_text {
-    --lb-button--background--color: transparent;
-    --lb-button--background--color--disabled: transparent;
-
-    --lb-button--border--color: transparent;
-    --lb-button--border--color--hover: var(--lb-button--background--color--hover);
-    --lb-button--border--color--disabled: transparent;
-
-    --lb-button--color--hover: var(--lb-button--color);
-    --lb-button--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-300);
-  }
-
-  &--variant_inline {
-    --lb-button--background--color: transparent;
-    --lb-button--background--color--hover: transparent;
-    --lb-button--background--color--disabled: transparent;
-
-    --lb-button--border--color: transparent;
-    --lb-button--border--color--hover: transparent;
-    --lb-button--border--color--disabled: transparent;
-
-    --lb-button--color--disabled: var(--wp--preset--color--#{colors.$colorGray}-300);
-
-    padding: 0;
-  }
+ 
 }

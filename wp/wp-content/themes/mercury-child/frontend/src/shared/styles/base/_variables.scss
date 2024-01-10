@@ -1,4 +1,5 @@
 @use '../mixins/breakpoints';
+@use '@/shared/styles/abstracts/colors';
 
 @use 'sass:map';
 
@@ -13,6 +14,24 @@ body {
     --layout--content-padding: var(--wp--custom--layout--content-padding-sm);
   }
 
-  --lb-semantic-color-text-default: var(--wp--preset--color--gray-500);
-  --lb-semantic-color-text-prominent: var(--wp--preset--color--gray-900);
+  --lb-color-text-default: var(--wp--preset--color--gray-500);
+  --lb-color-text-strong: var(--wp--preset--color--gray-900);
+
+  --lb-color-action-text-default: var(--wp--preset--color--primary-600);
+
+  @each $colorName in colors.$colorNames {
+    --lb-color-on-#{$colorName}: var(--wp--preset--color--white);
+    --lb-color-#{$colorName}: var(--wp--preset--color--#{$colorName}-600);
+    --lb-color-#{$colorName}-highest: var(--wp--preset--color--#{$colorName}-800);
+    --lb-color-#{$colorName}-high: var(--wp--preset--color--#{$colorName}-700);
+    --lb-color-#{$colorName}-low: var(--wp--preset--color--#{$colorName}-100);
+
+    --lb-color-on-#{$colorName}-container: var(--wp--preset--color--#{$colorName}-600);
+    --lb-color-#{$colorName}-container: var(--wp--preset--color--#{$colorName}-100);
+    --lb-color-#{$colorName}-container-low: var(--wp--preset--color--#{$colorName}-50);
+  }
+
+  --lb-color-surface: var(--wp--preset--color--white);
+  --lb-color-on-surface: var(--wp--preset--color--gray-700);
+ 
 }

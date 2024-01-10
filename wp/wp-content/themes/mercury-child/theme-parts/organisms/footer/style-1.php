@@ -1,4 +1,4 @@
-<footer class="lb-footer lb-footer--color_<?= get_theme_mod('main_ui_color') ?>">
+<footer class="lb-footer lb-footer--color_primary">
 	<div class="lb-footer__top">
 		<div class="lb-footer__inner">
 			<div class="lb-footer__grid">

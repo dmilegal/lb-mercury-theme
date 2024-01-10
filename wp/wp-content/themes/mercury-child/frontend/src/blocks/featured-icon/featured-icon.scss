@@ -1,0 +1,87 @@
+@use 'sass:math';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+
+.lb-featured-icon {
+  display: inline-flex;
+  color: var(--lb-featured-icon-color-text);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  background-color: var(--lb-featured-icon-color-background);
+
+  width: 2em;
+  height: 2em;
+  font-size: 1em;
+  line-height: 1em;
+  border-radius: 50%;
+
+  &--size {
+    &_2xs {
+      @include font.get-text-styles('caption-md');
+    }
+    &_xs {
+      @include font.get-text-styles('text-xs');
+    }
+    &_sm {
+      @include font.get-text-styles('text-sm');
+    }
+    &_md {
+      @include font.get-text-styles('text-md');
+    }
+    &_lg {
+      @include font.get-text-styles('text-lg');
+    }
+    &_xl {
+      @include font.get-text-styles('text-xl');
+    }
+    &_2xl {
+      @include font.get-text-styles('display-xs');
+    }
+  }
+
+  &--rounded {
+    border-radius: var(--wp--preset--spacing--60);
+  }
+
+  @each $variant in 'contained', 'contained-light', 'contained-lightest', 'contained-dark',
+    'outlined-bold'
+  {
+    @each $colorName in colors.$colorNames {
+      &--variant_#{$variant}:where(#{'&--color_' + $colorName}) {
+        @if $variant == 'contained' {
+          --lb-featured-icon-color-text: var(--lb-color-on-#{$colorName});
+          --lb-featured-icon-color-bg: var(--lb-color-#{$colorName});
+        } @else if $variant == 'contained-light' {
+          --lb-featured-icon-color-text: var(--lb-color-on-#{$colorName}-container);
+          --lb-featured-icon-color-background: var(--lb-color-#{$colorName}-container);
+        } @else if $variant == 'contained-lightest' {
+          --lb-featured-icon-color-text: var(--lb-color-on-#{$colorName}-container);
+          --lb-featured-icon-color-background: var(
+            --lb-color-#{$colorName}-container-low
+          );
+        } @else if $variant == 'contained-dark' {
+          --lb-featured-icon-color-text: var(--lb-color-on-#{$colorName});
+          --lb-featured-icon-color-background: var(--lb-color-#{$colorName}-highest);
+        } @else if $variant == 'outlined-bold' {
+          --lb-button--color: var(
+            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets}
+          );
+          --lb-button--color--hover: var(
+            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets + 100}
+          );
+          --lb-button--outline--color--focus: var(--wp--preset--color--#{$colorName}-100);
+        }
+      }
+    }
+  }
+
+  &--variant {
+    &_outlined {
+      --lb-featured-icon-color-text: var( --lb-color-on-surface);
+      --lb-featured-icon-color-background: var(--lb-color-surface);
+      --lb-featured-icon-color-border: var(--lb-color-surface);
+    }
+  }
+}

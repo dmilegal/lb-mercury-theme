@@ -8,7 +8,7 @@
 * font
 **/
 body {
-  --lb-toc-link-color-text: var(--lb-semantic-color-text-default);
+  --lb-toc-link-color-text: var(--lb-color-text-default);
   --lb-toc-link-color-text-hover: var(--wp--preset--color--primary-600);
 }
 

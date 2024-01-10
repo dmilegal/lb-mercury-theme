@@ -36,6 +36,14 @@
 /// @author NN
 /// @access public
 /// @param {String} $size - font size name
+@mixin font-size-by-name($size) {
+  font-size: font-size-by-name($size);
+}
+
+/// Get font size by name
+/// @author NN
+/// @access public
+/// @param {String} $size - font size name
 @function font-size-by-name($size) {
   @return var(--wp--preset--font-size--#{$size});
 }
