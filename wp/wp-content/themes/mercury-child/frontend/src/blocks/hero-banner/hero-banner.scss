@@ -3,11 +3,11 @@
 @use '@/shared/styles/mixins/font';
 @use "@/shared/styles/mixins/breakpoints";
 
-.lbc-hero-banner {
-  --lbc-hero-banner--background--color: var(--wp--preset--color--white);
+.lb-hero-banner {
+  --lb-hero-banner--background--color: var(--wp--preset--color--white);
   padding-top: var(--wp--preset--spacing--280);
   padding-bottom: var(--wp--preset--spacing--155);
-  background-color: var(--lbc-hero-banner--background--color);
+  background-color: var(--lb-hero-banner--background--color);
 
   &#{&} {
     width: 100%;
@@ -17,10 +17,10 @@
 
   &--color {
     &_white {
-      --lbc-hero-banner--background--color: var(--wp--preset--color--white);
+      --lb-hero-banner--background--color: var(--wp--preset--color--white);
     }
     &_gray {
-      --lbc-hero-banner--background--color: var(--wp--preset--color--gray-25);
+      --lb-hero-banner--background--color: var(--wp--preset--color--gray-25);
     }
   }
 

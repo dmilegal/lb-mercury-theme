@@ -7,25 +7,25 @@
 /**
 * font
 **/
-.lbc-hero-banner {
-  --lbc-hero-banner--background--color: var(--wp--preset--color--white);
+.lb-hero-banner {
+  --lb-hero-banner--background--color: var(--wp--preset--color--white);
   padding-top: var(--wp--preset--spacing--280);
   padding-bottom: var(--wp--preset--spacing--155);
   background-color: var(--wp--preset--color--white);
-  background-color: var(--lbc-hero-banner--background--color);
+  background-color: var(--lb-hero-banner--background--color);
 }
-.lbc-hero-banner.lbc-hero-banner {
+.lb-hero-banner.lb-hero-banner {
   width: 100%;
   padding-left: 0;
   padding-right: 0;
 }
-.lbc-hero-banner--color_white {
-  --lbc-hero-banner--background--color: var(--wp--preset--color--white);
+.lb-hero-banner--color_white {
+  --lb-hero-banner--background--color: var(--wp--preset--color--white);
 }
-.lbc-hero-banner--color_gray {
-  --lbc-hero-banner--background--color: var(--wp--preset--color--gray-25);
+.lb-hero-banner--color_gray {
+  --lb-hero-banner--background--color: var(--wp--preset--color--gray-25);
 }
-.lbc-hero-banner__inner {
+.lb-hero-banner__inner {
   width: 100%;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
@@ -37,15 +37,15 @@
   grid-column-gap: calc(var(--layout--content-spacing) / 2);
   column-gap: calc(var(--layout--content-spacing) / 2);
 }
-.lbc-hero-banner__content {
+.lb-hero-banner__content {
   grid-column: 2/20;
 }
 @media (max-width: 991.98px) {
-  .lbc-hero-banner__content {
+  .lb-hero-banner__content {
     grid-column: 1/21;
   }
 }
-.lbc-hero-banner__publish-date {
+.lb-hero-banner__publish-date {
   display: block;
   color: var(--wp--preset--color--primary-600);
   font-size: var(--wp--preset--font-size--text-md);
@@ -55,7 +55,7 @@
   font-weight: 600;
   margin-bottom: var(--wp--preset--spacing--70);
 }
-.lbc-hero-banner__title {
+.lb-hero-banner__title {
   font-size: var(--wp--preset--font-size--display-lg);
   line-height: var(--wp--custom--line-height--display-lg);
   letter-spacing: inherit;
@@ -63,7 +63,7 @@
   font-weight: 500;
   margin-bottom: var(--wp--preset--spacing--100);
 }
-.lbc-hero-banner__subtitle {
+.lb-hero-banner__subtitle {
   font-size: var(--wp--preset--font-size--text-xl);
   line-height: var(--wp--custom--line-height--text-xl);
   letter-spacing: inherit;

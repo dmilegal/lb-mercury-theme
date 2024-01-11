@@ -1,0 +1,41 @@
+@use '@/shared/styles/mixins/container';
+
+.lb-layout {
+  &--sticky-box {
+    position: relative;
+  }
+
+  &__sticky {
+    &-box {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100%;
+      transform: translateX(-50%);
+      z-index: 5;
+      pointer-events: none;
+      @include container.make-container-max-width();
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: calc(var(--layout--content-spacing));
+      &-container {
+        position: relative;
+        pointer-events: auto;
+        grid-column: 9/13;
+        & > * {
+          position: sticky;
+          top: calc(var(--lb-header-height, 0px) + var(--wp--preset--spacing--80) + var(--lb-admin-bar-offset, 0px));
+        }
+      }
+    }
+    &-banner {
+    }
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      & > * {
+        grid-column: 1/8;
+      }
+    }
+  }
+}

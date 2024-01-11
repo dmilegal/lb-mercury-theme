@@ -2,13 +2,13 @@
 @use '@/shared/styles/abstracts/colors';
 @use '@/shared/styles/mixins/font';
 
-.lbc-badge-group {
+.lb-badge-group {
   display: inline-flex;
   border-radius: 16px;
   justify-content: center;
   align-items: center;
   column-gap: 8px;
-  background-color: var(--lbc-badge--background--color);
+  background-color: var(--lb-badge--background--color);
   text-decoration: none;
   padding: 4px 12px;
 
@@ -17,7 +17,7 @@
 
   &__container {
     padding: 0;
-    --lbc-badge--background--color: transparent;
+    --lb-badge--background--color: transparent;
     & :where([class^='icon-'], [class*=' icon-']) {
       font-size: font.font-size-by-name('text-md');
     }
@@ -45,11 +45,11 @@
     @each $colorName in colors.$colorNames {
       &--theme_#{$theme}:where(#{'&--color_' + $colorName}) {
         @if $theme == 'light' {
-          --lbc-badge--background--color: var(--wp--preset--color--#{$colorName}-50);
+          --lb-badge--background--color: var(--wp--preset--color--#{$colorName}-50);
         } @else if $theme == 'medium' {
-          --lbc-badge--background--color: var(--wp--preset--color--#{$colorName}-100);
+          --lb-badge--background--color: var(--wp--preset--color--#{$colorName}-100);
         } @else if $theme == 'dark' {
-          --lbc-badge--background--color: var(--wp--preset--color--#{$colorName}-50);
+          --lb-badge--background--color: var(--wp--preset--color--#{$colorName}-50);
         }
       }
     }

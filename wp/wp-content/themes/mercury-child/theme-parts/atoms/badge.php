@@ -22,29 +22,29 @@ $tag = $href ? 'a' : 'div';
 $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'id'])));
 ?>
 <<?= $tag ?> class="<?= classNames(
-                      'lbc-badge',
+                      'lb-badge',
                       $className,
-                      'lbc-badge--size_' . $size,
-                      'lbc-badge--color_' . $color,
-                      'lbc-badge--theme_' . $theme,
+                      'lb-badge--size_' . $size,
+                      'lb-badge--color_' . $color,
+                      'lb-badge--theme_' . $theme,
                       [
-                        'lbc-badge--only_icon' => !$content && !!($prefix || $postfix)
+                        'lb-badge--only_icon' => !$content && !!($prefix || $postfix)
                       ]
                     ) ?>" <?= $attrsStr ?> style="<?= stylesValue(
                                                     $style
                                                   ) ?>">
   <? if ($prefix) { ?>
-    <span class="lbc-badge__prefix">
+    <span class="lb-badge__prefix">
       <?= $prefix ?>
     </span>
   <? } ?>
   <? if ($content) { ?>
-    <span class="lbc-badge__content">
+    <span class="lb-badge__content">
       <?= $content ?>
     </span>
   <? } ?>
   <? if ($postfix) { ?>
-    <span class="lbc-badge__postfix">
+    <span class="lb-badge__postfix">
       <?= $postfix ?>
     </span>
   <? } ?>

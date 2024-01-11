@@ -35,7 +35,7 @@ get_template_part('theme-parts/atoms/badge', null, [
   'theme' => $theme,
   'color' => $color,
   'content' => $labelContent,
-  'className' => 'lbc-badge-group__label'
+  'className' => 'lb-badge-group__label'
 ]);
 $labelBadge = ob_get_contents();
 ob_end_clean();
@@ -43,12 +43,12 @@ ob_end_clean();
 
 ?>
 <<?= $tag ?> class="<?= classNames(
-                      'lbc-badge-group',
+                      'lb-badge-group',
                       $className,
-                      'lbc-badge-group--size_' . $size,
-                      'lbc-badge-group--color_' . $color,
-                      'lbc-badge-group--theme_' . $theme,
-                      'lbc-badge-group--align_' . $labelPosition,
+                      'lb-badge-group--size_' . $size,
+                      'lb-badge-group--color_' . $color,
+                      'lb-badge-group--theme_' . $theme,
+                      'lb-badge-group--align_' . $labelPosition,
                     ) ?>" <?= $attrsStr ?> style="<?= stylesValue(
                                                     $style
                                                   ) ?>">
@@ -63,7 +63,7 @@ ob_end_clean();
     'postfix' => $labelPosition == 'right' ? '' : $postfix,
     'color' => $color,
     'content' => $labelContent,
-    'className' => 'lbc-badge-group__container'
+    'className' => 'lb-badge-group__container'
   ]);
   if ($labelPosition == 'right')
     echo $labelBadge;
