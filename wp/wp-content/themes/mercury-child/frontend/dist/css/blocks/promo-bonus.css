@@ -1,4 +1,57 @@
 /*!****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/promo-bonus/promo-bonus.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body {
+  --lb-promo-bonus-color-border: var(--lb-color-primary-outline-variant-1);
+  --lb-promo-bonus-color-background:var(--lb-color-primary-container-low);
+  --lb-promo-bonus-title-color-text: var(--lb-color-primary);
+  --lb-promo-bonus-subtitle-color-text: var(--lb-color-text-strong);
+  --lb-promo-bonus-tc-color-text: var(--lb-color-on-primary-container);
+}
 
+.lb-promo-bonus {
+  background-color: var(--lb-promo-bonus-color-background);
+  border: 1px solid var(--lb-promo-bonus-color-border);
+  border-radius: var(--wp--preset--spacing--80);
+  padding: var(--wp--preset--spacing--120);
+}
+.lb-promo-bonus__title {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  font-weight: 700;
+  color: var(--lb-promo-bonus-title-color-text);
+  margin-bottom: var(--wp--preset--spacing--70);
+}
+.lb-promo-bonus__subtitle {
+  font-size: var(--wp--preset--font-size--display-sm);
+  line-height: var(--wp--custom--line-height--display-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--display-sm, inherit);
+  font-weight: 500;
+  color: var(--lb-promo-bonus-subtitle-color-text);
+  margin-bottom: var(--wp--preset--spacing--120);
+}
+.lb-promo-bonus__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--80);
+  margin-bottom: var(--wp--preset--spacing--120);
+}
+.lb-promo-bonus__tc {
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  color: var(--lb-promo-bonus-tc-color-text);
+}
+
+/*# sourceMappingURL=promo-bonus.css.map*/
