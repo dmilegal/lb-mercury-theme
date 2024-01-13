@@ -2736,6 +2736,8 @@ body {
   position: relative;
   pointer-events: auto;
   grid-column: 9/13;
+  padding-top: 0px;
+  padding-top: var(--hero-banner-space-top, 0px);
 }
 .lb-layout__sticky-box-container > * {
   position: sticky;
@@ -2745,6 +2747,8 @@ body {
 .lb-layout__sticky-content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: calc(var(--layout--content-spacing));
+  column-gap: calc(var(--layout--content-spacing));
 }
 .lb-layout__sticky-content > * {
   grid-column: 1/8;

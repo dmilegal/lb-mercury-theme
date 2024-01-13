@@ -7,12 +7,14 @@
 /**
 * font
 **/
+body {
+  --lb-hero-banner-color-background: var(--wp--preset--color--white);
+}
+
 .lb-hero-banner {
-  --lb-hero-banner--background--color: var(--wp--preset--color--white);
   padding-top: var(--wp--preset--spacing--280);
   padding-bottom: var(--wp--preset--spacing--155);
-  background-color: var(--wp--preset--color--white);
-  background-color: var(--lb-hero-banner--background--color);
+  background-color: var(--lb-hero-banner-color-background);
 }
 .lb-hero-banner.lb-hero-banner {
   width: 100%;
@@ -20,10 +22,10 @@
   padding-right: 0;
 }
 .lb-hero-banner--color_white {
-  --lb-hero-banner--background--color: var(--wp--preset--color--white);
+  --lb-hero-banner-color-background: var(--wp--preset--color--white);
 }
 .lb-hero-banner--color_gray {
-  --lb-hero-banner--background--color: var(--wp--preset--color--gray-25);
+  --lb-hero-banner-color-background: var(--wp--preset--color--gray-25);
 }
 .lb-hero-banner__inner {
   width: 100%;

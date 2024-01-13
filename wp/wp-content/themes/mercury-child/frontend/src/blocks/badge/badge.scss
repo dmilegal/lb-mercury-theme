@@ -56,7 +56,7 @@
   &--size_md {
     &:where(:not(#{$onlyIcon})) {
       @include font.get-text-styles('text-sm');
-      padding: 2px 8px;
+      padding: 2px 10px;
     }
     &:where(#{$onlyIcon}) {
       padding: 4px;
@@ -65,7 +65,7 @@
   &--size_lg {
     &:where(:not(#{$onlyIcon})) {
       @include font.get-text-styles('text-sm');
-      padding: 4px 10px;
+      padding: 4px 12px;
     }
     &:where(#{$onlyIcon}) {
       padding: 6px;

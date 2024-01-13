@@ -1,11 +1,10 @@
 <?php get_header(); ?>
 <div class="lb-layout lb-layout--sticky-box">
 	<?
-	get_template_part('theme-parts/molecules/hero-banner', null, [
-		'title' => get_the_title(),
-		'subtitle' => 'Lucy Bond is an interior designer who started her career in New Zealand, working for large architectural firms. We chatted to her about design and starting her own studio.',
-		'published_date' => get_the_date('Y-m-d'),
-		'className' => 'lb-layout__sticky-banner'
+	get_template_part('theme-parts/molecules/hero-casino-banner', null, [
+		'post_id' => get_the_ID(),
+		'className' => 'lb-layout__sticky-banner',
+		'col_span' => true,
 	]);
 	?>
 

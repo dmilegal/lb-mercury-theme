@@ -22,6 +22,7 @@
         position: relative;
         pointer-events: auto;
         grid-column: 9/13;
+        padding-top: var(--hero-banner-space-top, 0px);
         & > * {
           position: sticky;
           top: calc(var(--lb-header-height, 0px) + var(--wp--preset--spacing--80) + var(--lb-admin-bar-offset, 0px));
@@ -33,6 +34,7 @@
     &-content {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
+      column-gap: calc(var(--layout--content-spacing));
       & > * {
         grid-column: 1/8;
       }
