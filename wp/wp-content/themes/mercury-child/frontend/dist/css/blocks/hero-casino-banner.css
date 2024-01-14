@@ -76,6 +76,7 @@ body {
 }
 .lb-hero-casino-banner__info-title {
   color: var(--hero-casino-banner-info-title-color-text);
+  margin-bottom: var(--wp--preset--spacing--60);
 }
 .lb-hero-casino-banner__info-value {
   color: var(--hero-casino-banner-info-value-color-text);
@@ -83,6 +84,7 @@ body {
 .lb-hero-casino-banner__info-value i {
   position: relative;
   top: 1px;
+  margin-right: var(--wp--preset--spacing--50);
   font-size: var(--wp--preset--font-size--text-lg);
   line-height: var(--wp--custom--line-height--text-lg);
   letter-spacing: inherit;

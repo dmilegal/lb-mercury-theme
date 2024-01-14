@@ -1,0 +1,48 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/casino-details/casino-details.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+.lb-casino-details__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: var(--wp--preset--spacing--160);
+  column-gap: var(--wp--preset--spacing--160);
+  grid-row-gap: var(--wp--preset--spacing--100);
+  row-gap: var(--wp--preset--spacing--100);
+}
+.lb-casino-details-item {
+  display: flex;
+  column-gap: var(--wp--preset--spacing--80);
+}
+.lb-casino-details-item__ico {
+  flex-shrink: 0;
+}
+.lb-casino-details-item__content {
+  padding-top: var(--wp--preset--spacing--65);
+}
+.lb-casino-details-item__title {
+  font-size: var(--wp--preset--font-size--text-lg);
+  line-height: var(--wp--custom--line-height--text-lg);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
+  font-weight: 500;
+  margin-bottom: var(--wp--preset--spacing--60);
+  color: var(--lb-color-text-strong);
+}
+.lb-casino-details-item__tags {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  color: var(--lb-color-text-default);
+}
+.lb-casino-details-tag:not(:last-child):after {
+  content: ", ";
+}
+
+/*# sourceMappingURL=casino-details.css.map*/

@@ -16,6 +16,7 @@ $color = $args['color'] ?? 'primary';
 
 ?>
 <div class=" <?= classNames(
+                $className,
                 'lb-featured-icon',
                 $size ? 'lb-featured-icon--size_' . $size : '',
                 'lb-featured-icon--variant_' . $variant,

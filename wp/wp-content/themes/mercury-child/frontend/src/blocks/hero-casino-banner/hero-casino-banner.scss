@@ -73,6 +73,7 @@ body {
 
     &-title {
       color: var(--hero-casino-banner-info-title-color-text);
+      margin-bottom: var(--wp--preset--spacing--60);
     }
 
     &-value {
@@ -80,6 +81,7 @@ body {
       i {
         position: relative;
         top: 1px;
+        margin-right: var(--wp--preset--spacing--50);
         @include font.get-text-styles('text-lg');
         line-height: 0;
         font-weight: 600;
