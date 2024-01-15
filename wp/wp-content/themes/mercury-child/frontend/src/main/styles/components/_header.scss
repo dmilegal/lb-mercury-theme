@@ -12,6 +12,9 @@
 
 body {
   --lb-header-height: var(--wp--preset--spacing--220);
+  @include breakpoints.media-breakpoint-down('sm') {
+    --lb-header-height: var(--wp--preset--spacing--185);
+  }
 }
 
 .lb-header {
@@ -37,6 +40,9 @@ body {
     padding: var(--wp--preset--spacing--85) 0;
     @include breakpoints.media-breakpoint-down('lg') {
       padding: var(--wp--preset--spacing--80) 0;
+    }
+    @include breakpoints.media-breakpoint-down('sm') {
+      padding: var(--wp--preset--spacing--70) 0;
     }
   }
 
@@ -78,7 +84,7 @@ body {
   &__tail {
     display: flex;
     align-items: center;
-    column-gap: var(--wp--preset--spacing--80);
+    column-gap: var(--wp--preset--spacing--90);
   }
 
   &__logo {
@@ -181,7 +187,6 @@ body {
 
   &__hamburger {
     padding: 0;
-    margin-top: 8px;
     @include breakpoints.media-breakpoint-up('xl') {
       display: none;
     }

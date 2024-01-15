@@ -1,4 +1,5 @@
 <div class="lb-sidebar not-prose">
+	<div class="lb-sidebar__inner">
 	<div class="lb-sidebar__block">
 		<div class="lb-sidebar__block-title">
 			<?= __('Table of contents', 'mercury-child') ?>
@@ -15,4 +16,6 @@
 			]); ?>
 		</div>
 	</div>
+	</div>
+	
 </div>

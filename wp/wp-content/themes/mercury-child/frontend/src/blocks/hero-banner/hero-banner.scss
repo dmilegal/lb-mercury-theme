@@ -12,6 +12,11 @@ body {
   padding-bottom: var(--wp--preset--spacing--155);
   background-color: var(--lb-hero-banner-color-background);
 
+  @include breakpoints.media-breakpoint-down(sm) {
+    padding-top: var(--wp--preset--spacing--120);
+    padding-bottom: var(--wp--preset--spacing--140);
+  }
+
   &#{&} {
     width: 100%;
     padding-left: 0;

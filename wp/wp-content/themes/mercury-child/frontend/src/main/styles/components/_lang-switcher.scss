@@ -1,5 +1,6 @@
 @use "@/shared/styles/abstracts/colors";
 @use "@/shared/styles/mixins/font";
+@use '@/shared/styles/mixins/breakpoints';
 
 .lb-lang-switcher {
   position: relative;
@@ -76,8 +77,12 @@
   }
   &__ico {
     &--main {
-      width: 32px;
-      height: 32px;
+      width: var(--wp--preset--spacing--120);
+      height: var(--wp--preset--spacing--120);
+      @include breakpoints.media-breakpoint-down(sm) {
+        width: var(--wp--preset--spacing--100);
+        height: var(--wp--preset--spacing--100);
+      }
     }
     &--sub {
       width: 20px;

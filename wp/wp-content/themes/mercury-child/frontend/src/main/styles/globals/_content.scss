@@ -1,5 +1,6 @@
 
 @use "@/shared/styles/mixins/container";
+@use "@/shared/styles/mixins/breakpoints";
 
 .lb-content {
   //& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
@@ -21,6 +22,9 @@
     & > *:nth-child(2) {
       grid-column: 8/20;
     }
-
+    @include breakpoints.media-breakpoint-down(md) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

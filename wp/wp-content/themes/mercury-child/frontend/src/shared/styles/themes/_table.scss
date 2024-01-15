@@ -12,6 +12,7 @@ $proseCustomSelector: null !default;
 
 
 @include typo.make-prose('content', '.wp-block-table', $proseCustomSelector) {
+  overflow: auto;
   table {
     border: 1px solid var(--wp--preset--color--gray-200);
     color: var(--lb-table-color-text);

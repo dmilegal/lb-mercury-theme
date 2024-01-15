@@ -1,6 +1,6 @@
-@use "sass:map";
-@use "../abstracts/text";
-@use "helpers";
+@use 'sass:map';
+@use '../abstracts/text';
+@use 'helpers';
 
 /**
 * font
@@ -26,44 +26,61 @@
 /// @author NN
 /// @access public
 /// @param {String} $size - font size name
-@mixin get-text-styles($size) {
-  font-size: font-size-by-name($size);
-  line-height: line-height-by-name($size);
-  letter-spacing: letter-spacing-by-name($size);
+/// @param {Boolean} $relative - Set true if you need font scale depending on the screen resolution
+@mixin get-text-styles($size, $relative: true) {
+  font-size: font-size-by-name($size, $relative);
+  line-height: line-height-by-name($size, $relative);
+  letter-spacing: letter-spacing-by-name($size, $relative);
 }
 
 /// Get font size by name
 /// @author NN
 /// @access public
 /// @param {String} $size - font size name
-@mixin font-size-by-name($size) {
-  font-size: font-size-by-name($size);
+/// @param {Boolean} $relative - Set true if you need font scale depending on the screen resolution
+@mixin font-size-by-name($size, $relative: true) {
+  font-size: font-size-by-name($size, $relative);
 }
 
 /// Get font size by name
 /// @author NN
 /// @access public
 /// @param {String} $size - font size name
-@function font-size-by-name($size) {
-  @return var(--wp--preset--font-size--#{$size});
+/// @param {Boolean} $relative - Set true if you need font scale depending on the screen resolution
+@function font-size-by-name($size, $relative: true) {
+  @if $relative {
+    @return var(--lb-font-size-#{$size}-relative);
+  } @else {
+    @return var(--wp--preset--font-size--#{$size});
+  }
 }
 
 /// Get line height size by name
 /// @author NN
 /// @access public
 /// @param {String} $size - font size name
-@function line-height-by-name($size) {
-  @return var(--wp--custom--line-height--#{$size});
+/// @param {Boolean} $relative - Set true if you need font scale depending on the screen resolution
+@function line-height-by-name($size, $relative: true) {
+  @if $relative {
+    @return var(--lb-line-height-#{$size}-relative);
+  } @else {
+    @return var(--wp--custom--line-height--#{$size});
+  }
 }
 
 /// Get letter spacing size by name
 /// @author NN
 /// @access public
 /// @param {String} $size - font size name
-@function letter-spacing-by-name($size) {
-  @return var(--wp--custom--letter-spacing--#{$size}, inherit);
+/// @param {Boolean} $relative - Set true if you need font scale depending on the screen resolution
+@function letter-spacing-by-name($size, $relative: true) {
+  @if $relative {
+    @return var(--lb-letter-spacing-#{$size}-relative, inherit);
+  } @else {
+    @return var(--wp--custom--letter-spacing--#{$size}, inherit);
+  }
+ 
 }
-
 
 /// Convert photoshop letter spacing to css letter spacing
 /// @author NN

@@ -1409,6 +1409,127 @@ body {
   }
 }
 
+body {
+  --lb-font-size-display-2xl-relative: var(--wp--preset--font-size--display-2xl);
+  --lb-line-height-display-2xl-relative: var(--wp--custom--line-height--display-2xl);
+  --lb-letter-spacing-display-2xl-relative: var(--wp--custom--letter-spacing--display-2xl);
+}
+
+body {
+  --lb-font-size-display-xl-relative: var(--wp--preset--font-size--display-xl);
+  --lb-line-height-display-xl-relative: var(--wp--custom--line-height--display-xl);
+  --lb-letter-spacing-display-xl-relative: var(--wp--custom--letter-spacing--display-xl);
+}
+
+body {
+  --lb-font-size-display-lg-relative: var(--wp--preset--font-size--display-lg);
+  --lb-line-height-display-lg-relative: var(--wp--custom--line-height--display-lg);
+  --lb-letter-spacing-display-lg-relative: var(--wp--custom--letter-spacing--display-lg);
+}
+@media (max-width: 767.98px) {
+  body {
+    --lb-font-size-display-lg-relative: var(--wp--preset--font-size--display-sm);
+    --lb-line-height-display-lg-relative: var(--wp--custom--line-height--display-sm);
+    --lb-letter-spacing-display-lg-relative: var(--wp--custom--letter-spacing--display-sm);
+  }
+}
+
+body {
+  --lb-font-size-display-md-relative: var(--wp--preset--font-size--display-md);
+  --lb-line-height-display-md-relative: var(--wp--custom--line-height--display-md);
+  --lb-letter-spacing-display-md-relative: var(--wp--custom--letter-spacing--display-md);
+}
+@media (max-width: 767.98px) {
+  body {
+    --lb-font-size-display-md-relative: var(--wp--preset--font-size--display-xs);
+    --lb-line-height-display-md-relative: var(--wp--custom--line-height--display-xs);
+    --lb-letter-spacing-display-md-relative: var(--wp--custom--letter-spacing--display-xs);
+  }
+}
+
+body {
+  --lb-font-size-display-sm-relative: var(--wp--preset--font-size--display-sm);
+  --lb-line-height-display-sm-relative: var(--wp--custom--line-height--display-sm);
+  --lb-letter-spacing-display-sm-relative: var(--wp--custom--letter-spacing--display-sm);
+}
+@media (max-width: 767.98px) {
+  body {
+    --lb-font-size-display-sm-relative: var(--wp--preset--font-size--display-xs);
+    --lb-line-height-display-sm-relative: var(--wp--custom--line-height--display-xs);
+    --lb-letter-spacing-display-sm-relative: var(--wp--custom--letter-spacing--display-xs);
+  }
+}
+
+body {
+  --lb-font-size-display-xs-relative: var(--wp--preset--font-size--display-xs);
+  --lb-line-height-display-xs-relative: var(--wp--custom--line-height--display-xs);
+  --lb-letter-spacing-display-xs-relative: var(--wp--custom--letter-spacing--display-xs);
+}
+@media (max-width: 767.98px) {
+  body {
+    --lb-font-size-display-xs-relative: var(--wp--preset--font-size--text-xl);
+    --lb-line-height-display-xs-relative: var(--wp--custom--line-height--text-xl);
+    --lb-letter-spacing-display-xs-relative: var(--wp--custom--letter-spacing--text-xl);
+  }
+}
+
+body {
+  --lb-font-size-text-xl-relative: var(--wp--preset--font-size--text-xl);
+  --lb-line-height-text-xl-relative: var(--wp--custom--line-height--text-xl);
+  --lb-letter-spacing-text-xl-relative: var(--wp--custom--letter-spacing--text-xl);
+}
+@media (max-width: 767.98px) {
+  body {
+    --lb-font-size-text-xl-relative: var(--wp--preset--font-size--text-lg);
+    --lb-line-height-text-xl-relative: var(--wp--custom--line-height--text-lg);
+    --lb-letter-spacing-text-xl-relative: var(--wp--custom--letter-spacing--text-lg);
+  }
+}
+
+body {
+  --lb-font-size-text-lg-relative: var(--wp--preset--font-size--text-lg);
+  --lb-line-height-text-lg-relative: var(--wp--custom--line-height--text-lg);
+  --lb-letter-spacing-text-lg-relative: var(--wp--custom--letter-spacing--text-lg);
+}
+@media (max-width: 767.98px) {
+  body {
+    --lb-font-size-text-lg-relative: var(--wp--preset--font-size--text-sm);
+    --lb-line-height-text-lg-relative: var(--wp--custom--line-height--text-sm);
+    --lb-letter-spacing-text-lg-relative: var(--wp--custom--letter-spacing--text-sm);
+  }
+}
+
+body {
+  --lb-font-size-text-md-relative: var(--wp--preset--font-size--text-md);
+  --lb-line-height-text-md-relative: var(--wp--custom--line-height--text-md);
+  --lb-letter-spacing-text-md-relative: var(--wp--custom--letter-spacing--text-md);
+}
+@media (max-width: 767.98px) {
+  body {
+    --lb-font-size-text-md-relative: var(--wp--preset--font-size--text-sm);
+    --lb-line-height-text-md-relative: var(--wp--custom--line-height--text-sm);
+    --lb-letter-spacing-text-md-relative: var(--wp--custom--letter-spacing--text-sm);
+  }
+}
+
+body {
+  --lb-font-size-text-sm-relative: var(--wp--preset--font-size--text-sm);
+  --lb-line-height-text-sm-relative: var(--wp--custom--line-height--text-sm);
+  --lb-letter-spacing-text-sm-relative: var(--wp--custom--letter-spacing--text-sm);
+}
+
+body {
+  --lb-font-size-text-xs-relative: var(--wp--preset--font-size--text-xs);
+  --lb-line-height-text-xs-relative: var(--wp--custom--line-height--text-xs);
+  --lb-letter-spacing-text-xs-relative: var(--wp--custom--letter-spacing--text-xs);
+}
+
+body {
+  --lb-font-size-caption-md-relative: var(--wp--preset--font-size--caption-md);
+  --lb-line-height-caption-md-relative: var(--wp--custom--line-height--caption-md);
+  --lb-letter-spacing-caption-md-relative: var(--wp--custom--letter-spacing--caption-md);
+}
+
 /**
 * helpers
 **/
@@ -1467,10 +1588,10 @@ body {
   padding: 0;
   margin-bottom: 0;
   font-style: italic;
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--lb-font-size-text-xs-relative);
+  line-height: var(--lb-line-height-text-xs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
 }
 
 .wp-caption.alignleft p.wp-caption-text {
@@ -1508,10 +1629,10 @@ ul.wp-block-gallery.alignwide {
   margin-bottom: 0;
   text-align: center;
   color: var(--lb--caption-color-text);
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--lb-font-size-text-xs-relative);
+  line-height: var(--lb-line-height-text-xs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
 }
 
 .wp-block-image.aligncenter {
@@ -1558,33 +1679,33 @@ body {
 }
 
 body :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  font-size: var(--wp--preset--font-size--display-sm);
-  line-height: var(--wp--custom--line-height--display-sm);
+  font-size: var(--lb-font-size-display-sm-relative);
+  line-height: var(--lb-line-height-display-sm-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--display-sm, inherit);
+  letter-spacing: var(--lb-letter-spacing-display-sm-relative, inherit);
   font-weight: 600;
 }
 
 body :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  font-size: var(--wp--preset--font-size--display-xs);
-  line-height: var(--wp--custom--line-height--display-xs);
+  font-size: var(--lb-font-size-display-xs-relative);
+  line-height: var(--lb-line-height-display-xs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--display-xs, inherit);
+  letter-spacing: var(--lb-letter-spacing-display-xs-relative, inherit);
   font-weight: 600;
 }
 
 body :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  font-size: var(--wp--preset--font-size--text-md);
-  line-height: var(--wp--custom--line-height--text-md);
+  font-size: var(--lb-font-size-text-md-relative);
+  line-height: var(--lb-line-height-text-md-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
 }
 
 body :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  font-size: var(--wp--preset--font-size--text-md);
-  line-height: var(--wp--custom--line-height--text-md);
+  font-size: var(--lb-font-size-text-md-relative);
+  line-height: var(--lb-line-height-text-md-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
   list-style: disc;
   padding-left: var(--wp--preset--spacing--90);
   display: flex;
@@ -1724,6 +1845,9 @@ body {
   --lb-table-color-text: var(--lb-color-text-default);
 }
 
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  overflow: auto;
+}
 body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table {
   border: 1px solid var(--wp--preset--color--gray-200);
   color: var(--lb-table-color-text);
@@ -1739,19 +1863,19 @@ body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *
 }
 body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table td {
   padding: var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
-  font-size: var(--wp--preset--font-size--text-sm);
-  line-height: var(--wp--custom--line-height--text-sm);
+  font-size: var(--lb-font-size-text-sm-relative);
+  line-height: var(--lb-line-height-text-sm-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
   border: none;
   border-bottom: 1px solid var(--wp--preset--color--gray-200);
 }
 body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table th {
   padding: var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
-  font-size: var(--wp--preset--font-size--text-sm);
-  line-height: var(--wp--custom--line-height--text-sm);
+  font-size: var(--lb-font-size-text-sm-relative);
+  line-height: var(--lb-line-height-text-sm-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
   border: none;
   border-bottom: 1px solid var(--wp--preset--color--gray-200);
 }
