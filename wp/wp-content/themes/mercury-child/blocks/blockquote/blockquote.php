@@ -27,7 +27,7 @@ $allowed_blocks = array('core/paragraph');
 get_template_part( 'theme-parts/atoms/blockquote', null, [
   'content' => '<InnerBlocks parentContainer="false" allowedBlocks="'. esc_attr(wp_json_encode($allowed_blocks)) .'" />',
 	...$block_opts,
-  'cite' => $cite,
-  'author_id' => $authorId
+  'cite' => $cite ?? null,
+  'author_id' => $authorId ?? null
  ] );
 ?>

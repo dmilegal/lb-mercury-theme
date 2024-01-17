@@ -1,0 +1,109 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/user-block/user-block.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body {
+  --lb-user-block-name-color: var(--lb-color-text-strong);
+  --lb-user-block-job-color: var(--lb-color-text-default);
+  --lb-user-block-bio-color: var(--lb-color-text-default);
+}
+
+.lb-user-block {
+  width: 100%;
+}
+.lb-user-block--size_sm .lb-user-block__avatar {
+  width: var(--wp--preset--spacing--140);
+  height: var(--wp--preset--spacing--140);
+}
+.lb-user-block--size_sm .lb-user-block__name {
+  font-size: var(--lb-font-size-text-sm-relative);
+  line-height: var(--lb-line-height-text-sm-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
+}
+.lb-user-block--size_sm .lb-user-block__job {
+  font-size: var(--lb-font-size-text-sm-relative);
+  line-height: var(--lb-line-height-text-sm-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
+}
+.lb-user-block--size_md .lb-user-block__avatar {
+  width: var(--wp--preset--spacing--160);
+  height: var(--wp--preset--spacing--160);
+}
+.lb-user-block--size_md .lb-user-block__name {
+  font-size: var(--lb-font-size-text-md-relative);
+  line-height: var(--lb-line-height-text-md-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+}
+.lb-user-block--size_md .lb-user-block__job {
+  font-size: var(--lb-font-size-text-md-relative);
+  line-height: var(--lb-line-height-text-md-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+}
+.lb-user-block--size_lg {
+  font-size: var(--lb-font-size-text-lg-relative);
+  line-height: var(--lb-line-height-text-lg-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-lg-relative, inherit);
+}
+.lb-user-block--size_lg .lb-user-block__avatar {
+  width: var(--wp--preset--spacing--180);
+  height: var(--wp--preset--spacing--180);
+}
+.lb-user-block--size_lg .lb-user-block__job {
+  font-size: var(--lb-font-size-text-md-relative);
+  line-height: var(--lb-line-height-text-md-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+}
+.lb-user-block__head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: var(--wp--preset--spacing--80);
+  column-gap: var(--wp--preset--spacing--80);
+  align-items: flex-start;
+}
+.lb-user-block__head-left {
+  display: flex;
+  column-gap: var(--wp--preset--spacing--80);
+  align-items: center;
+}
+.lb-user-block__avatar {
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+.lb-user-block__info {
+  display: flex;
+  flex-direction: column;
+}
+.lb-user-block__name {
+  display: block;
+  font-weight: 600;
+  color: var(--lb-user-block-name-color);
+}
+.lb-user-block__job {
+  display: block;
+  color: var(--lb-user-block-job-color);
+}
+.lb-user-block__socs {
+  display: flex;
+  column-gap: var(--wp--preset--spacing--70);
+}
+.lb-user-block__bio {
+  margin-top: var(--wp--preset--spacing--80);
+  font-size: var(--lb-font-size-text-md-relative);
+  line-height: var(--lb-line-height-text-md-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+  color: var(--lb-user-block-bio-color);
+}
+
+/*# sourceMappingURL=user-block.css.map*/

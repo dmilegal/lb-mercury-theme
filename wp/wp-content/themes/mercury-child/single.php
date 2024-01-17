@@ -8,7 +8,7 @@
 	]);
 	?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<div class="lb-content-container lb-content--with-sidebar ">
+			<div class="lb-content-container lb-content--with-sidebar">
 				<? get_template_part('theme-parts/organisms/sidebar/sidebar', null); ?>
 				<div class="lb-content prose-headings prose-content prose-spaces prose-colors">
 					<? the_content() ?>

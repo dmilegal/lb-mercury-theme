@@ -1,0 +1,101 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+
+body {
+  --lb-user-block-name-color: var(--lb-color-text-strong);
+  --lb-user-block-job-color: var(--lb-color-text-default);
+  --lb-user-block-bio-color: var(--lb-color-text-default);
+}
+
+.lb-user-block {
+  width: 100%;
+
+  &--size{
+    &_sm {
+      %avatar {
+      width: var(--wp--preset--spacing--140);
+        height: var(--wp--preset--spacing--140);
+      }
+      %name {
+        @include font.get-text-styles('text-sm');
+      }
+      %job {
+        @include font.get-text-styles('text-sm');
+      }
+    }
+
+    &_md {
+      %avatar {
+      width: var(--wp--preset--spacing--160);
+        height: var(--wp--preset--spacing--160);
+      }
+      %name {
+        @include font.get-text-styles('text-md');
+      }
+      %job {
+        @include font.get-text-styles('text-md');
+      }
+    }
+
+    &_lg {
+      %avatar {
+        width: var(--wp--preset--spacing--180);
+        height: var(--wp--preset--spacing--180);
+      }
+      %name {
+        
+      }@include font.get-text-styles('text-lg');
+      %job {
+        @include font.get-text-styles('text-md');
+      }
+    }
+    
+  }
+
+  &__head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: var(--wp--preset--spacing--80);
+    align-items: flex-start;
+    &-left {
+      display: flex;
+      column-gap: var(--wp--preset--spacing--80);
+      align-items: center;
+    }
+
+  }
+  &__avatar {
+    flex-shrink: 0;
+    
+    border-radius: 50%;
+    @extend %avatar;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    display: block;
+    font-weight: 600;
+    color: var(--lb-user-block-name-color);
+    @extend %name;
+  }
+  &__job {
+    display: block;
+    color: var(--lb-user-block-job-color);
+    @extend %job;
+  }
+
+  &__socs {
+    display: flex;
+    column-gap: var(--wp--preset--spacing--70);
+  }
+
+  &__bio {
+    margin-top: var(--wp--preset--spacing--80);
+    @include font.get-text-styles('text-md');
+    color: var(--lb-user-block-bio-color);
+  }
+}

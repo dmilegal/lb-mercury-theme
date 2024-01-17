@@ -31,24 +31,4 @@ body {
     @include font.get-text-styles('text-sm');
     color: var(--lb-blockquote-color-text);
   }
-
-  &__author {
-    @include font.get-text-styles('text-sm');
-    display: flex;
-    align-items: center;
-    column-gap: var(--wp--preset--spacing--70);
-    &-avatar {
-      width: var(--wp--preset--spacing--140);
-      height: var(--wp--preset--spacing--140);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    &-name {
-      font-weight: 600;
-      color: var(--lb-blockquote-name-color-text);
-    }
-    &-job {
-      color: var(--lb-blockquote-job-color-text);
-    }
-  }
 }

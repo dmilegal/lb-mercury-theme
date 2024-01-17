@@ -1,0 +1,10 @@
+.lb-user-block-list {
+  &--orient {
+    &_vertical {
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--wp--preset--spacing--100);
+      column-gap: var(--wp--preset--spacing--100);
+    }
+  }
+}

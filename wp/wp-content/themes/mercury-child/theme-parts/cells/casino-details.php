@@ -78,7 +78,7 @@ $infoListFiltered = array_filter($infoList, fn ($el) => !!$el);
 
 if ($organization_disable_details == true || !$infoListFiltered) return; ?>
 
-<div class="lb-casino-details">
+<div class="<?= classNames($className, 'lb-casino-details') ?>" style="<?= stylesValue($style) ?>">
   <div class="lb-casino-details__list">
     <? foreach ($infoListFiltered as $info) { ?>
       <div class="lb-casino-details-item">

@@ -7,29 +7,18 @@ $authorId = $args['author_id'] ?? null;
 
 $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'id'])));
 ?>
-<blockquote class="lb-blockquote">
+<blockquote class="<?= classNames($className, 'lb-blockquote') ?>" style="<?= stylesValue($style) ?>">
   <div class="not-prose">
     <?= $content ?>
   </div>
   <? if ($authorId || $cite) { ?>
   <footer>
-    <? if ($authorId) {
-      $displayName = get_the_author_meta('display_name', $authorId);
-      $jobTitle = get_field('job_title', 'user_' . $authorId);
-
-    ?>
+    <? if ($authorId) { ?>
       <div class="lb-blockquote__author not-prose">
-        <?= get_avatar(get_the_author_meta('user_email', $author_id), 40, '', '', [
-          'class' => 'lb-blockquote__author-avatar'
-        ]) ?>
-        <div>
-          <? if ($displayName) { ?>
-            <span class="lb-blockquote__author-name"><?= $displayName ?></span>
-          <? } ?>
-          <? if ($jobTitle) { ?>
-            <span class="lb-blockquote__author-job"><?= $jobTitle ?></span>
-          <? } ?>
-        </div>
+        <? get_template_part('theme-parts/cells/user-block', null, [
+        'user_id' => $authorId,
+        'size' => 'sm'
+      ]); ?>
       </div>
     <? } elseif ($cite) { ?>
       <cite><?= $cite ?></cite>

@@ -1,5 +1,6 @@
 @use '../mixins/breakpoints';
 @use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/abstracts/text';
 
 @use 'sass:map';
 
@@ -30,12 +31,140 @@ body {
     --lb-color-#{$colorName}-container: var(--wp--preset--color--#{$colorName}-100);
     --lb-color-#{$colorName}-container-low: var(--wp--preset--color--#{$colorName}-50);
 
-    --lb-color-#{$colorName}-outline-variant-1: var(--wp--preset--color--#{$colorName}-500);
+    --lb-color-#{$colorName}-outline-variant-1: var(
+      --wp--preset--color--#{$colorName}-500
+    );
   }
 
   --lb-color-surface: var(--wp--preset--color--white);
   --lb-color-surface-outline-1: var(--wp--preset--color--gray-200);
   --lb-color-surface-outline-2: var(--wp--preset--color--gray-300);
   --lb-color-on-surface: var(--wp--preset--color--gray-700);
- 
+}
+
+body {
+  @each $name, $params in text.$body-fonts {
+    --lb-font-size-#{$name}-relative: #{map.get($params, 'font-size')};
+    --lb-line-height-#{$name}-relative: #{map.get($params, 'line-height')};
+    --lb-letter-spacing-#{$name}-relative: #{map.get($params, 'letter-spacing')};
+
+    @if $name == 'display-lg' {
+      @include breakpoints.media-breakpoint-down(sm) {
+        --lb-font-size-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-sm),
+            'font-size'
+          )};
+        --lb-line-height-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-sm),
+            'line-height'
+          )};
+        --lb-letter-spacing-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-sm),
+            'letter-spacing'
+          )};
+      }
+    }
+
+    @if $name == 'display-md' {
+      @include breakpoints.media-breakpoint-down(sm) {
+        --lb-font-size-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-xs),
+            'font-size'
+          )};
+        --lb-line-height-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-xs),
+            'line-height'
+          )};
+        --lb-letter-spacing-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-xs),
+            'letter-spacing'
+          )};
+      }
+    }
+
+    @if $name == 'display-sm' {
+      @include breakpoints.media-breakpoint-down(sm) {
+        --lb-font-size-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-xs),
+            'font-size'
+          )};
+        --lb-line-height-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-xs),
+            'line-height'
+          )};
+        --lb-letter-spacing-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-xs),
+            'letter-spacing'
+          )};
+      }
+    }
+
+    @if $name == 'display-xs' {
+      @include breakpoints.media-breakpoint-down(sm) {
+        --lb-font-size-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-xl),
+            'font-size'
+          )};
+        --lb-line-height-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-xl),
+            'line-height'
+          )};
+        --lb-letter-spacing-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-xl),
+            'letter-spacing'
+          )};
+      }
+    }
+
+    @if $name == 'text-xl' {
+      @include breakpoints.media-breakpoint-down(sm) {
+        --lb-font-size-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-lg),
+            'font-size'
+          )};
+        --lb-line-height-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-lg),
+            'line-height'
+          )};
+        --lb-letter-spacing-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-lg),
+            'letter-spacing'
+          )};
+      }
+    }
+
+    @if $name == 'text-lg' {
+      @include breakpoints.media-breakpoint-down(sm) {
+        --lb-font-size-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-sm),
+            'font-size'
+          )};
+        --lb-line-height-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-sm),
+            'line-height'
+          )};
+        --lb-letter-spacing-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-sm),
+            'letter-spacing'
+          )};
+      }
+    }
+
+    @if $name == 'text-md' {
+      @include breakpoints.media-breakpoint-down(sm) {
+        --lb-font-size-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-sm),
+            'font-size'
+          )};
+        --lb-line-height-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-sm),
+            'line-height'
+          )};
+        --lb-letter-spacing-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, text-sm),
+            'letter-spacing'
+          )};
+      }
+    }
+  }
 }

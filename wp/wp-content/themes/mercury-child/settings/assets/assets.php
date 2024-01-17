@@ -8,7 +8,7 @@ function disable_old_assets()
   wp_deregister_style('mercury-googlefonts');
   wp_deregister_style('mercury-block-editor-styles');
   wp_deregister_style('aces-style');
-  
+
 
   wp_deregister_script('mercury-global-js');
   wp_deregister_script('mercury-floating-header');
@@ -31,7 +31,9 @@ add_action('wp_enqueue_scripts', 'enqueue_main_assets', 9);
 function enqueue_components_assets($slug, $name, $args)
 {
   $list = explode('/', $slug);
-  if (!(in_array('atoms', $list) || in_array('molecules', $list) || in_array('organisms', $list) || in_array('cells', $list))) return;
+  if (!in_array('theme-parts', $list) || !(in_array('atoms', $list)
+    || in_array('molecules', $list) || in_array('organisms', $list) || in_array('cells', $list)
+    || in_array('templates', $list) || in_array('organs', $list))) return;
 
   enqueue_assets_by_name(end($list));
 }
