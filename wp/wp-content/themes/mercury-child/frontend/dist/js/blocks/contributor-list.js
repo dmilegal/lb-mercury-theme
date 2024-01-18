@@ -1,9 +1,9 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ "./src/blocks/user-block-list/user-block-list.scss":
-/*!*********************************************************!*\
-  !*** ./src/blocks/user-block-list/user-block-list.scss ***!
-  \*********************************************************/
+/***/ "./src/blocks/contributor-list/contributor-list.scss":
+/*!***********************************************************!*\
+  !*** ./src/blocks/contributor-list/contributor-list.scss ***!
+  \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -54,13 +54,13 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!*******************************************************!*\
-  !*** ./src/blocks/user-block-list/user-block-list.ts ***!
-  \*******************************************************/
+/*!*********************************************************!*\
+  !*** ./src/blocks/contributor-list/contributor-list.ts ***!
+  \*********************************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _user_block_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./user-block-list.scss */ "./src/blocks/user-block-list/user-block-list.scss");
+/* harmony import */ var _contributor_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contributor-list.scss */ "./src/blocks/contributor-list/contributor-list.scss");
 
 })();
 
 
-//# sourceMappingURL=user-block-list.js.map
+//# sourceMappingURL=contributor-list.js.map

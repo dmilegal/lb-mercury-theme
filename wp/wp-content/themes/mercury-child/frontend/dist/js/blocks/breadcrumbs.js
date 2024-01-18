@@ -1,9 +1,9 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ "./src/blocks/sidebar/sidebar.scss":
-/*!*****************************************!*\
-  !*** ./src/blocks/sidebar/sidebar.scss ***!
-  \*****************************************/
+/***/ "./src/blocks/breadcrumbs/breadcrumbs.scss":
+/*!*************************************************!*\
+  !*** ./src/blocks/breadcrumbs/breadcrumbs.scss ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -54,25 +54,13 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!***************************************!*\
-  !*** ./src/blocks/sidebar/sidebar.ts ***!
-  \***************************************/
+/*!***********************************************!*\
+  !*** ./src/blocks/breadcrumbs/breadcrumbs.ts ***!
+  \***********************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _sidebar_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sidebar.scss */ "./src/blocks/sidebar/sidebar.scss");
+/* harmony import */ var _breadcrumbs_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./breadcrumbs.scss */ "./src/blocks/breadcrumbs/breadcrumbs.scss");
 
-document.querySelectorAll('.lb-sidebar__block--collapse').forEach(container => {
-  const btnEl = container.querySelector('.lb-sidebar__block-title');
-  btnEl.addEventListener('click', () => {
-    if (container.classList.contains('lb-sidebar__block--state_opened')) {
-      container.classList.remove('lb-sidebar__block--state_opened');
-      container.classList.add('lb-sidebar__block--state_closed');
-    } else {
-      container.classList.remove('lb-sidebar__block--state_closed');
-      container.classList.add('lb-sidebar__block--state_opened');
-    }
-  });
-});
 })();
 
 
-//# sourceMappingURL=sidebar.js.map
+//# sourceMappingURL=breadcrumbs.js.map

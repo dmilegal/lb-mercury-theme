@@ -1,0 +1,34 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/breadcrumbs/breadcrumbs.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body {
+  --lb-breadcrumbs-color-text: var(--lb-color-on-lowest);
+  --lb-breadcrumbs-color-text-active: var(--lb-color-on-surface-highest);
+}
+
+.lb-breadcrumbs {
+  font-size: var(--lb-font-size-text-sm-relative);
+  line-height: var(--lb-line-height-text-sm-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
+}
+.lb-breadcrumbs a {
+  color: var(--lb-breadcrumbs-color-text);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+.lb-breadcrumbs a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+.lb-breadcrumbs .breadcrumb_last {
+  color: var(--lb-breadcrumbs-color-text-active);
+}
+
+/*# sourceMappingURL=breadcrumbs.css.map*/

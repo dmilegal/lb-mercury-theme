@@ -8,7 +8,7 @@
 * font
 **/
 body {
-  --lb-hero-banner-color-background: var(--wp--preset--color--white);
+  --lb-hero-banner-color-background: transparent;
 }
 
 .lb-hero-banner {
@@ -28,10 +28,10 @@ body {
   padding-right: 0;
 }
 .lb-hero-banner--color_white {
-  --lb-hero-banner-color-background: var(--wp--preset--color--white);
+  --lb-hero-banner-color-background: var(--lb-color-surface);
 }
 .lb-hero-banner--color_gray {
-  --lb-hero-banner-color-background: var(--wp--preset--color--gray-25);
+  --lb-hero-banner-color-background: var(--lb-color-surface-high);
 }
 .lb-hero-banner__inner {
   width: 100%;

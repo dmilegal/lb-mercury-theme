@@ -10,6 +10,7 @@
 body {
   --lb-pros-cons-color-text: var(--lb-color-text-default);
   --lb-pros-cons-title-color-text: var(--lb-color-text-strong);
+  --lb-pros-cons-item-color-background: var(--lb-color-surface);
 }
 
 .lb-pros-cons__inner {
@@ -26,6 +27,7 @@ body {
   }
 }
 .lb-pros-cons-col {
+  background-color: var(--lb-pros-cons-item-color-background);
   padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100) var(--wp--preset--spacing--110);
   color: var(--lb-pros-cons-color-text);
   border: 1px solid var(--wp--preset--color--gray-200);

@@ -21,48 +21,62 @@ body {
   height: var(--wp--preset--spacing--140);
 }
 .lb-user-block--size_sm .lb-user-block__name {
-  font-size: var(--lb-font-size-text-sm-relative);
-  line-height: var(--lb-line-height-text-sm-relative);
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
 }
 .lb-user-block--size_sm .lb-user-block__job {
-  font-size: var(--lb-font-size-text-sm-relative);
-  line-height: var(--lb-line-height-text-sm-relative);
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
 }
 .lb-user-block--size_md .lb-user-block__avatar {
   width: var(--wp--preset--spacing--160);
   height: var(--wp--preset--spacing--160);
 }
 .lb-user-block--size_md .lb-user-block__name {
-  font-size: var(--lb-font-size-text-md-relative);
-  line-height: var(--lb-line-height-text-md-relative);
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
 }
 .lb-user-block--size_md .lb-user-block__job {
-  font-size: var(--lb-font-size-text-md-relative);
-  line-height: var(--lb-line-height-text-md-relative);
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
 }
-.lb-user-block--size_lg {
-  font-size: var(--lb-font-size-text-lg-relative);
-  line-height: var(--lb-line-height-text-lg-relative);
-  letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-lg-relative, inherit);
+@media (max-width: 767.98px) {
+  .lb-user-block--size_md .lb-user-block__name {
+    font-size: var(--wp--preset--font-size--text-sm);
+    line-height: var(--wp--custom--line-height--text-sm);
+    letter-spacing: inherit;
+    letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  }
+  .lb-user-block--size_md .lb-user-block__job {
+    font-size: var(--wp--preset--font-size--text-sm);
+    line-height: var(--wp--custom--line-height--text-sm);
+    letter-spacing: inherit;
+    letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  }
 }
 .lb-user-block--size_lg .lb-user-block__avatar {
   width: var(--wp--preset--spacing--180);
   height: var(--wp--preset--spacing--180);
 }
-.lb-user-block--size_lg .lb-user-block__job {
-  font-size: var(--lb-font-size-text-md-relative);
-  line-height: var(--lb-line-height-text-md-relative);
+.lb-user-block--size_lg .lb-user-block__name {
+  font-size: var(--wp--preset--font-size--text-lg);
+  line-height: var(--wp--custom--line-height--text-lg);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
+}
+.lb-user-block--size_lg .lb-user-block__job {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
 }
 .lb-user-block__head {
   display: grid;
@@ -74,7 +88,6 @@ body {
 .lb-user-block__head-left {
   display: flex;
   column-gap: var(--wp--preset--spacing--80);
-  align-items: center;
 }
 .lb-user-block__avatar {
   flex-shrink: 0;
@@ -83,6 +96,9 @@ body {
 .lb-user-block__info {
   display: flex;
   flex-direction: column;
+}
+.lb-user-block__info--one-line {
+  justify-content: center;
 }
 .lb-user-block__name {
   display: block;

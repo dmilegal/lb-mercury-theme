@@ -1,5 +1,7 @@
 @use '@/shared/styles/abstracts/colors';
 @use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
 
 body {
   --lb-user-block-name-color: var(--lb-color-text-strong);
@@ -10,30 +12,38 @@ body {
 .lb-user-block {
   width: 100%;
 
-  &--size{
+  &--size {
     &_sm {
       %avatar {
-      width: var(--wp--preset--spacing--140);
+        width: var(--wp--preset--spacing--140);
         height: var(--wp--preset--spacing--140);
       }
       %name {
-        @include font.get-text-styles('text-sm');
+        @include font.get-text-styles('text-sm', false);
       }
       %job {
-        @include font.get-text-styles('text-sm');
+        @include font.get-text-styles('text-sm', false);
       }
     }
 
     &_md {
       %avatar {
-      width: var(--wp--preset--spacing--160);
+        width: var(--wp--preset--spacing--160);
         height: var(--wp--preset--spacing--160);
       }
       %name {
-        @include font.get-text-styles('text-md');
+        @include font.get-text-styles('text-md', false);
       }
       %job {
-        @include font.get-text-styles('text-md');
+        @include font.get-text-styles('text-md', false);
+      }
+      @include breakpoints.media-breakpoint-down('sm') {
+        %name {
+          @include font.get-text-styles('text-sm', false);
+        }
+        %job {
+          @include font.get-text-styles('text-sm', false);
+        }
       }
     }
 
@@ -43,13 +53,13 @@ body {
         height: var(--wp--preset--spacing--180);
       }
       %name {
-        
-      }@include font.get-text-styles('text-lg');
+        @include font.get-text-styles('text-lg', false);
+      }
+      
       %job {
-        @include font.get-text-styles('text-md');
+        @include font.get-text-styles('text-md', false);
       }
     }
-    
   }
 
   &__head {
@@ -60,13 +70,11 @@ body {
     &-left {
       display: flex;
       column-gap: var(--wp--preset--spacing--80);
-      align-items: center;
     }
-
   }
   &__avatar {
     flex-shrink: 0;
-    
+
     border-radius: 50%;
     @extend %avatar;
   }
@@ -74,6 +82,9 @@ body {
   &__info {
     display: flex;
     flex-direction: column;
+    &--one-line {
+      justify-content: center;
+    }
   }
 
   &__name {

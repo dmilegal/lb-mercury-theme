@@ -8,12 +8,14 @@ $proseCustomSelector: null !default;
 
 #{$globalSelector} {
   --lb-table-color-text: var(--lb-color-text-default);
+  --lb-table-color-background: var(--lb-color-surface);
 }
 
 
 @include typo.make-prose('content', '.wp-block-table', $proseCustomSelector) {
   overflow: auto;
   table {
+    background-color: var(--lb-table-color-background);
     border: 1px solid var(--wp--preset--color--gray-200);
     color: var(--lb-table-color-text);
     border-radius: var(--wp--preset--spacing--60);

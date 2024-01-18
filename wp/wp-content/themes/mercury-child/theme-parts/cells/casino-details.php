@@ -111,7 +111,8 @@ if ($organization_disable_details == true || !$infoListFiltered) return; ?>
               <?php } ?>
             <?php } ?>
           </div>
+        </div>
       </div>
+    <? } ?>
   </div>
-<? } ?>
 </div>

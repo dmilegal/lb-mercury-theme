@@ -430,6 +430,11 @@
                     "name": "10px"
                 },
                 {
+                    "size": "14px",
+                    "slug": "75",
+                    "name": "14px"
+                },
+                {
                     "size": "18px",
                     "slug": "85",
                     "name": "18px"

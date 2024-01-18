@@ -5,6 +5,7 @@ $proseCustomSelector: null !default;
 @use '@/shared/styles/abstracts/text';
 @use '@/shared/styles/mixins/typo';
 @use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
 
 #{$globalSelector} {
   font-family: var(--wp--preset--font-family--base);
@@ -69,6 +70,9 @@ $proseCustomSelector: null !default;
 @include typo.make-prose('spaces', 'h3', $proseCustomSelector) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--80);
+  @include breakpoints.media-breakpoint-down(sm) {
+    margin-block-start: var(--wp--preset--spacing--140);
+  }
 }
 
 @include typo.make-prose('spaces', 'p,ul,ol,.wp-block-image', $proseCustomSelector) {

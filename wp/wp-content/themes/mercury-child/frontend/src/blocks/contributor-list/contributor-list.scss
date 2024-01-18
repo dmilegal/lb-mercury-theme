@@ -1,0 +1,13 @@
+@use '@/shared/styles/mixins/breakpoints';
+
+.lb-contributor-list {
+  display: flex;
+      flex-direction: column;
+      row-gap: var(--wp--preset--spacing--100);
+      column-gap: var(--wp--preset--spacing--100);
+      flex-wrap: wrap;
+
+      @include breakpoints.media-breakpoint-down(sm) {
+        flex-direction: column;
+      }
+}

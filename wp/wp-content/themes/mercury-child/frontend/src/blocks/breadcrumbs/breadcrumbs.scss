@@ -1,0 +1,21 @@
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+body {
+  --lb-breadcrumbs-color-text: var(--lb-color-on-lowest);
+  --lb-breadcrumbs-color-text-active: var(--lb-color-on-surface-highest);
+}
+
+.lb-breadcrumbs {
+  @include font.get-text-styles('text-sm');
+  a {
+    color: var(--lb-breadcrumbs-color-text);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .breadcrumb_last {
+    color: var(--lb-breadcrumbs-color-text-active);
+  }
+}

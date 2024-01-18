@@ -4,7 +4,7 @@
 @use "@/shared/styles/mixins/breakpoints";
 
 body {
-  --lb-hero-banner-color-background: var(--wp--preset--color--white);
+  --lb-hero-banner-color-background: transparent;
 }
 
 .lb-hero-banner {
@@ -25,10 +25,10 @@ body {
 
   &--color {
     &_white {
-      --lb-hero-banner-color-background: var(--wp--preset--color--white);
+      --lb-hero-banner-color-background: var(--lb-color-surface);
     }
     &_gray {
-      --lb-hero-banner-color-background: var(--wp--preset--color--gray-25);
+      --lb-hero-banner-color-background: var(--lb-color-surface-high);
     }
   }
 

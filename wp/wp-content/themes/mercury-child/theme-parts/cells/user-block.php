@@ -39,7 +39,7 @@ $job_title = get_field('job_title', 'user_' . $user_id);
             <?= get_avatar(get_the_author_meta('user_email', $user_id), 56, '', '', [
                 'class' => 'lb-user-block__avatar'
             ]) ?>
-            <div class="lb-user-block__info">
+            <div class="<?= classNames("lb-user-block__info", !$job_title ? "lb-user-block__info--one-line" : '') ?>">
                 <? if (!empty($display_name)) { ?>
                     <span class="lb-user-block__name"><?= $display_name ?></span>
                 <? } ?>

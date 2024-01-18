@@ -5,7 +5,7 @@ $style = $args['style'] ?? '';
 $content = $args['title'] ?? '';
 $subtitle = $args['subtitle'] ?? '';
 $publishedDate = $args['published_date'] ?? '';
-$color = $args['color'] ?? 'gray';
+$color = $args['color'] ?? 'transparent';
 
 ?>
 <div class="<?= classNames(
