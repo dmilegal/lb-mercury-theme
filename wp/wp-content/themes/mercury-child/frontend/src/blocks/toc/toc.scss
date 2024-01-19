@@ -1,5 +1,6 @@
 @use '@/shared/styles/abstracts/colors';
 @use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
 
 body {
   --lb-toc-link-color-text: var(--lb-color-text-default);
@@ -9,7 +10,9 @@ body {
 .ez-toc {
   &-counter {
     @include font.get-text-styles('text-md');
-    font-weight: 600;
+    @include breakpoints.media-breakpoint-down(sm) {
+      @include font.get-text-styles('text-sm');
+    }
   }
   &-link {
     color: var(--lb-toc-link-color-text);
@@ -20,8 +23,23 @@ body {
     }
   }
   &-list {
+    &-level-3,&-level-4, &-level-5 {
+      margin-top: var(--wp--preset--spacing--70);
+      @include breakpoints.media-breakpoint-down(sm) {
+        margin-top: var(--wp--preset--spacing--80);
+      }
+    }
     li {
       margin: var(--wp--preset--spacing--70) 0;
+      @include breakpoints.media-breakpoint-down(sm) {
+        margin: var(--wp--preset--spacing--80) 0;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     ul {
       padding-left: var(--wp--preset--spacing--70);

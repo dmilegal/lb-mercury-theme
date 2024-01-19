@@ -17,7 +17,14 @@ body {
   line-height: var(--lb-line-height-text-md-relative);
   letter-spacing: inherit;
   letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
-  font-weight: 600;
+}
+@media (max-width: 767.98px) {
+  .ez-toc-counter {
+    font-size: var(--lb-font-size-text-sm-relative);
+    line-height: var(--lb-line-height-text-sm-relative);
+    letter-spacing: inherit;
+    letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
+  }
 }
 .ez-toc-link {
   color: var(--lb-toc-link-color-text);
@@ -28,8 +35,27 @@ body {
 .ez-toc-link:hover {
   color: var(--lb-toc-link-color-text-hover);
 }
+.ez-toc-list-level-3, .ez-toc-list-level-4, .ez-toc-list-level-5 {
+  margin-top: var(--wp--preset--spacing--70);
+}
+@media (max-width: 767.98px) {
+  .ez-toc-list-level-3, .ez-toc-list-level-4, .ez-toc-list-level-5 {
+    margin-top: var(--wp--preset--spacing--80);
+  }
+}
 .ez-toc-list li {
   margin: var(--wp--preset--spacing--70) 0;
+}
+@media (max-width: 767.98px) {
+  .ez-toc-list li {
+    margin: var(--wp--preset--spacing--80) 0;
+  }
+}
+.ez-toc-list li:first-child {
+  margin-top: 0;
+}
+.ez-toc-list li:last-child {
+  margin-bottom: 0;
 }
 .ez-toc-list ul {
   padding-left: var(--wp--preset--spacing--70);

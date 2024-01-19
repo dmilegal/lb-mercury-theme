@@ -15,6 +15,7 @@
 $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 
 $enableAuthor = get_field('enable_author');
+$size = get_field('size') ?? 'md';
 
 if ($enableAuthor) {
   $authorId = get_field('author');
@@ -22,12 +23,14 @@ if ($enableAuthor) {
   $cite = get_field('cite');
 }
 
+
 $allowed_blocks = array('core/paragraph');
 
 get_template_part( 'theme-parts/atoms/blockquote', null, [
   'content' => '<InnerBlocks parentContainer="false" allowedBlocks="'. esc_attr(wp_json_encode($allowed_blocks)) .'" />',
 	...$block_opts,
   'cite' => $cite ?? null,
-  'author_id' => $authorId ?? null
+  'author_id' => $authorId ?? null,
+  'size' => $size
  ] );
 ?>

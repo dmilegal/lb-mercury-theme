@@ -4,7 +4,7 @@ $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
 
 $user_id = $args['user_id'] ?? null;
-// 'sm' | 'md' | 'lg'
+// 'sm' | 'md' | 'lg' | 'xl'
 $size = $args['size'] ?? 'md';
 $showBio = $args['show_bio'] ?? false;
 $showSocials = $args['show_socials'] ?? false;

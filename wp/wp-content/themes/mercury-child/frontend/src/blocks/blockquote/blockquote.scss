@@ -1,19 +1,89 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
-  --lb-blockquote-job-color-text: var(--lb-color-text-default);
-  --lb-blockquote-name-color-text: var(--lb-color-text-strong);
+body, .editor-styles-wrapper {
   --lb-blockquote-color-text: var(--lb-color-text-strong);
+  --lb-blockquote-cite-color-text: var(--lb-color-text-default);
+  --lb-blockquote-color-outline: var(--lb-color-primary-high);
 }
 
 .lb-blockquote {
   padding-top: var(--wp--preset--spacing--60);
   padding-bottom: var(--wp--preset--spacing--60);
+  margin-left: auto;
+  margin-right: auto;
   padding-left: var(--wp--preset--spacing--90);
-  border-left: 2px solid var(--wp--preset--color--primary-700);
+  border-left: 2px solid var(--lb-blockquote-color-outline);
+  &--size {
+    &_sm {
+      :where(p) {
+        @include font.get-text-styles('text-md');
+      }
+      :where(footer) {
+        margin-top: var(--wp--preset--spacing--90);
+      }
+      :where(cite) {
+        @include font.get-text-styles('text-sm');
+      }
+     
+    }
+
+    &_md {
+      :where(p) {
+        @include font.get-text-styles('text-lg');
+      }
+      :where(footer) {
+        margin-top: var(--wp--preset--spacing--100);
+      }
+      :where(cite) {
+        @include font.get-text-styles('text-sm');
+      }
+      
+      @include breakpoints.media-breakpoint-down(sm) {
+        :where(p) {
+          @include font.get-text-styles('text-md');
+        }
+      }
+    }
+
+    &_xl {
+      :where(p) {
+        @include font.get-text-styles('display-xs');
+      }
+      :where(footer) {
+        margin-top: var(--wp--preset--spacing--120);
+      }
+      :where(cite) {
+        @include font.get-text-styles('text-md');
+      }
+
+      @include breakpoints.media-breakpoint-down(sm) {
+        :where(p) {
+          @include font.get-text-styles('text-xl');
+        }
+      }
+    }
+
+    &_2xl {
+      :where(p) {
+        @include font.get-text-styles('display-sm');
+      }
+      :where(footer) {
+        margin-top: var(--wp--preset--spacing--120);
+      }
+      :where(cite) {
+        @include font.get-text-styles('text-md');
+      }
+
+      @include breakpoints.media-breakpoint-down(sm) {
+        :where(p) {
+          @include font.get-text-styles('text-xl');
+        }
+      }
+    }
+  }
   :where(p) {
-    @include font.get-text-styles('text-md');
+    font-style: italic;
     color: var(--lb-blockquote-color-text);
     margin: var(--wp--preset--spacing--70) 0;
     font-weight: 500;
@@ -24,11 +94,8 @@ body {
       margin-bottom: 0;
     }
   }
-  :where(footer) {
-    margin-top: var(--wp--preset--spacing--90);
-  }
   :where(cite) {
-    @include font.get-text-styles('text-sm');
-    color: var(--lb-blockquote-color-text);
+    font-style: normal;
+    color: var(--lb-blockquote-cite-color-text);
   }
 }

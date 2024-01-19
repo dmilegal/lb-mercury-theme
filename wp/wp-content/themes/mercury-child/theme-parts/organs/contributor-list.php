@@ -2,6 +2,7 @@
 $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
 $userIds = $args['user_ids'] ?? [];
+$size = $args['size'] ?? 'md';
 
 if (!$userIds) return;
 

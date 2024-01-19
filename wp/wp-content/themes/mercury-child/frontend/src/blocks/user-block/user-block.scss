@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/breakpoints';
 
 
-body {
+body, .editor-styles-wrapper {
   --lb-user-block-name-color: var(--lb-color-text-strong);
   --lb-user-block-job-color: var(--lb-color-text-default);
   --lb-user-block-bio-color: var(--lb-color-text-default);
@@ -15,43 +15,71 @@ body {
   &--size {
     &_sm {
       %avatar {
-        width: var(--wp--preset--spacing--140);
-        height: var(--wp--preset--spacing--140);
+        width: var(--wp--preset--spacing--120);
+        height: var(--wp--preset--spacing--120);
       }
+
+      %head-left {
+        column-gap: var(--wp--preset--spacing--65);
+      }
+
       %name {
         @include font.get-text-styles('text-sm', false);
       }
+
       %job {
-        @include font.get-text-styles('text-sm', false);
+        @include font.get-text-styles('text-xs', false);
       }
     }
 
     &_md {
       %avatar {
-        width: var(--wp--preset--spacing--160);
-        height: var(--wp--preset--spacing--160);
+        width: var(--wp--preset--spacing--140);
+        height: var(--wp--preset--spacing--140);
       }
+
+      %head-left {
+        column-gap: var(--wp--preset--spacing--70);
+      }
+
       %name {
-        @include font.get-text-styles('text-md', false);
+        @include font.get-text-styles('text-sm', false);
       }
+
       %job {
-        @include font.get-text-styles('text-md', false);
-      }
-      @include breakpoints.media-breakpoint-down('sm') {
-        %name {
-          @include font.get-text-styles('text-sm', false);
-        }
-        %job {
-          @include font.get-text-styles('text-sm', false);
-        }
+        @include font.get-text-styles('text-sm', false);
       }
     }
 
     &_lg {
       %avatar {
+        width: var(--wp--preset--spacing--160);
+        height: var(--wp--preset--spacing--160);
+      }
+
+      %head-left {
+        column-gap: var(--wp--preset--spacing--70);
+      }
+
+      %name {
+        @include font.get-text-styles('text-md', false);
+      }
+      
+      %job {
+        @include font.get-text-styles('text-md', false);
+      }
+    }
+
+    &_xl {
+      %avatar {
         width: var(--wp--preset--spacing--180);
         height: var(--wp--preset--spacing--180);
       }
+
+      %head-left {
+        column-gap: var(--wp--preset--spacing--80);
+      }
+
       %name {
         @include font.get-text-styles('text-lg', false);
       }
@@ -63,15 +91,20 @@ body {
   }
 
   &__head {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     column-gap: var(--wp--preset--spacing--80);
+    row-gap: var(--wp--preset--spacing--100);
     align-items: flex-start;
+    @include breakpoints.media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
     &-left {
       display: flex;
-      column-gap: var(--wp--preset--spacing--80);
+      flex-grow: 1;
+      @extend %head-left;
     }
   }
+
   &__avatar {
     flex-shrink: 0;
 

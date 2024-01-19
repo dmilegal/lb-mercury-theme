@@ -1404,6 +1404,7 @@ body {
     --wp--preset--color--success-500
   );
   --lb-color-surface: var(--wp--preset--color--white);
+  --lb-color-surface-highest: var(--wp--preset--color--gray-25);
   --lb-color-surface-high: var(--wp--preset--color--gray-50);
   --lb-color-surface-outline-1: var(--wp--preset--color--gray-200);
   --lb-color-surface-outline-2: var(--wp--preset--color--gray-300);
