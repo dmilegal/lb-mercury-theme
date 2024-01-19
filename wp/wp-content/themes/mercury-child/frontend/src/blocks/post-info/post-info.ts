@@ -1,0 +1,1 @@
+import './post-info.scss'

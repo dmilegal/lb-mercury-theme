@@ -90,6 +90,11 @@ $proseCustomSelector: null !default;
   margin-block-end: var(--wp--preset--spacing--120);
 }
 
+@include typo.make-prose('spaces', '.lb-post-info', $proseCustomSelector) {
+  margin-block-start: var(--wp--preset--spacing--100);
+  margin-block-end: var(--wp--preset--spacing--100);
+}
+
 @include typo.make-prose('colors', 'h1,h2,h3,h4,h5,h6', $proseCustomSelector) {
   color: var(--lb-ui-color-heading-text);
 }

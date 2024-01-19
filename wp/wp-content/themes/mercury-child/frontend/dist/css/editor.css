@@ -120,11 +120,11 @@
   content: "\ea38";
 }
 
-.icon-Deposite:before {
+.icon-deposite:before {
   content: "\ea03";
 }
 
-.icon-Filters-lines:before {
+.icon-filters-lines:before {
   content: "\ea04";
 }
 
@@ -1743,6 +1743,11 @@ body :where(blockquote):not(:where([class~=not-prose], [class~=not-prose] *)) {
 body :where(.lb-pros-cons):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-top: var(--wp--preset--spacing--120);
   margin-bottom: var(--wp--preset--spacing--120);
+}
+
+body :where(.lb-post-info):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--100);
+  margin-bottom: var(--wp--preset--spacing--100);
 }
 
 body :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {

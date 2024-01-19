@@ -21,56 +21,67 @@ $infoList = [
     'slug' => 'software',
     'title' => __('Software', 'mercury-child'),
     'terms' => $casino_software,
+    'ico' => 'cpu'
   ],
   [
     'slug' => 'deposit_method',
     'title' => __('Deposit Methods', 'mercury-child'),
-    'terms' => $casino_deposit_methods
+    'terms' => $casino_deposit_methods,
+    'ico' => 'deposite'
   ],
   [
     'slug' => 'withdrawal_method',
     'title' => __('Withdrawal Methods', 'mercury-child'),
-    'terms' => $casino_withdrawal_methods
+    'terms' => $casino_withdrawal_methods,
+    'ico' => 'withdraw'
   ],
   [
     'slug' => 'withdrawal_limit',
     'title' => __('Withdrawal Limits', 'mercury-child'),
-    'terms' => $casino_withdrawal_limits
+    'terms' => $casino_withdrawal_limits,
+    'ico' => 'coins'
   ],
   [
     'slug' => 'restricted_countries',
     'title' => __('Restricted Countries', 'mercury-child'),
-    'terms' => $casino_restricted_countries
+    'terms' => $casino_restricted_countries,
+    'ico' => 'flag'
   ],
   [
     'slug' => 'licences',
     'title' => __('Licences', 'mercury-child'),
-    'terms' => $casino_licences
+    'terms' => $casino_licences,
+    'ico' => 'file-text'
   ],
   [
     'slug' => 'languages',
     'title' => __('Languages', 'mercury-child'),
-    'terms' => $casino_languages
+    'terms' => $casino_languages,
+    'ico' => 'message-circle'
   ],
   [
     'slug' => 'currencies',
     'title' => __('Currencies', 'mercury-child'),
-    'terms' => $casino_currencies
+    'terms' => $casino_currencies,
+    'ico'  => 'money'
   ],
   [
     'slug' => 'devices',
     'title' => __('Devices', 'mercury-child'),
-    'terms' => $casino_devices
+    'terms' => $casino_devices,
+    'ico' => 'smartphone'
   ],
   [
     'slug' => 'owner',
     'title' => __('Owner', 'mercury-child'),
-    'terms' => $casino_owner
+    'terms' => $casino_owner,
+    'ico' => 'home'
   ],
   [
     'slug' => 'est',
     'title' => __('Established', 'mercury-child'),
-    'terms' => $casino_est
+    'terms' => $casino_est,
+    'ico' => 'zap'
   ],
 ];
 
@@ -86,7 +97,7 @@ if ($organization_disable_details == true || !$infoListFiltered) return; ?>
           'size' => 'xl',
           'variant' => 'outlined-bold',
           'color' => 'gray',
-          'icon' => 'zap',
+          'icon' => $info['ico'],
           'className' => 'lb-casino-details-item__ico'
         ]); ?>
         <div class="lb-casino-details-item__content">

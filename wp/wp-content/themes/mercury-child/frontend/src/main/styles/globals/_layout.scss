@@ -5,13 +5,11 @@
   &--sticky-box {
     position: relative;
     %content {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: calc(var(--layout--content-spacing));
       & > * {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: calc(var(--layout--content-spacing));
-        & > * {
-          grid-column: 1/8;
-        }
+        grid-column: 1/8;
       }
     }
   }

@@ -120,11 +120,11 @@
   content: "\ea38";
 }
 
-.icon-Deposite:before {
+.icon-deposite:before {
   content: "\ea03";
 }
 
-.icon-Filters-lines:before {
+.icon-filters-lines:before {
   content: "\ea04";
 }
 
@@ -1877,6 +1877,11 @@ body {
   margin-bottom: var(--wp--preset--spacing--120);
 }
 
+.prose-spaces :where(.lb-post-info):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--100);
+  margin-bottom: var(--wp--preset--spacing--100);
+}
+
 .prose-colors :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--lb-ui-color-heading-text);
 }
@@ -2819,13 +2824,13 @@ body {
 .lb-layout--sticky-box {
   position: relative;
 }
-.lb-layout--sticky-box .lb-layout__content > * {
+.lb-layout--sticky-box .lb-layout__content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: calc(var(--layout--content-spacing));
   column-gap: calc(var(--layout--content-spacing));
 }
-.lb-layout--sticky-box .lb-layout__content > * > * {
+.lb-layout--sticky-box .lb-layout__content > * {
   grid-column: 1/8;
 }
 .lb-layout--with-sidebar .lb-layout__content,

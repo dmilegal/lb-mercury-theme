@@ -1,0 +1,28 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use "@/shared/styles/mixins/breakpoints";
+
+body {
+  --lb-post-info-title-color-text: var(--lb-color-primary);
+  --lb-post-info-value-color-text: var(--lb-color-on-surface-highest);
+}
+
+.lb-post-info {
+  display: flex;
+  column-gap: var(--wp--preset--spacing--200);
+
+  &__title {
+    display: block;
+    @include font.get-text-styles('text-md');
+    color: var( --lb-post-info-title-color-text);
+    font-weight: 500;
+    margin-bottom: var(--wp--preset--spacing--70);
+  }
+
+  &__value {
+    display: block;
+    @include font.get-text-styles('text-md');
+    font-weight: 500;
+    color: var(--lb-post-info-value-color-text);
+  }
+}
