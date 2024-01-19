@@ -53,7 +53,7 @@ $job_title = get_field('job_title', 'user_' . $user_id);
                 <? foreach ($soc_links as $link) {
                     get_template_part('theme-parts/molecules/social-link', null, [
                         'icon' => $link[0],
-                        'link' => $link[1],
+                        'href' => $link[1],
                         'rel' => "nofollow",
                         'target' => "_blank",
                     ]);

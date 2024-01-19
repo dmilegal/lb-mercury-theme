@@ -20,10 +20,10 @@
 					<? the_content() ?>
 					<?= do_shortcode('[show_wpb_author_info_box]'); ?>
 					<div class="lb-layout__content-footer">
-					<? get_template_part('theme-parts/organisms/post-footer/post-footer', null); ?>
+						<? get_template_part('theme-parts/organisms/post-footer/post-footer', null); ?>
+					</div>
 				</div>
-				</div>
-				
+
 			</div>
 		<?php endwhile; ?>
 	<?php endif; ?>
