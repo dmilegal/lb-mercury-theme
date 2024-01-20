@@ -1411,8 +1411,9 @@ body {
   --lb-color-on-surface-highest: var(--wp--preset--color--gray-900);
   --lb-color-on-surface-high: var(--wp--preset--color--gray-800);
   --lb-color-on-surface: var(--wp--preset--color--gray-700);
-  --lb-color-on-low: var(--wp--preset--color--gray-600);
-  --lb-color-on-lowest: var(--wp--preset--color--gray-500);
+  --lb-color-on-surface-low: var(--wp--preset--color--gray-600);
+  --lb-color-on-surface-lowest: var(--wp--preset--color--gray-500);
+  --lb-color-on-surface-min: var(--wp--preset--color--gray-400);
 }
 @media (max-width: 767.98px) {
   body {
@@ -1880,6 +1881,16 @@ body {
 .prose-spaces :where(.lb-post-info):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-top: var(--wp--preset--spacing--100);
   margin-bottom: var(--wp--preset--spacing--100);
+}
+
+.prose-spaces :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin: var(--wp--preset--spacing--100) 0;
+}
+.prose-spaces :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+  margin-bottom: 0;
+}
+.prose-spaces :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+  margin-top: 0;
 }
 
 .prose-colors :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
@@ -2884,30 +2895,19 @@ body {
   }
 }
 .lb-layout__breadcrumbs {
-  padding-top: var(--wp--preset--spacing--85);
+  padding-top: var(--wp--preset--spacing--90);
+  margin-bottom: calc(-1 * var(--wp--preset--spacing--100));
   width: 100%;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
   max-width: calc(var(--wp--style--global--content-size) + 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
-  /*&--pos {
-    &_bot {
-      margin-top: calc(-1 * var(--wp--preset--spacing--100));
-      padding-bottom: var(--wp--preset--spacing--100);
-      @include breakpoints.media-breakpoint-down(sm) {
-        display: none;
-      }
-    }
-    &_top {
-      padding-top: var(--wp--preset--spacing--85);
-      padding-bottom: var(--wp--preset--spacing--75);
-      @include container.make-container-max-width();
-      @include breakpoints.media-breakpoint-up(md) {
-        display: none
-      }
-    }
-  }*/
+}
+@media (max-width: 991.98px) {
+  .lb-layout__breadcrumbs {
+    margin-bottom: calc(-1 * var(--wp--preset--spacing--60));
+  }
 }
 .lb-layout__sticky-box {
   position: absolute;

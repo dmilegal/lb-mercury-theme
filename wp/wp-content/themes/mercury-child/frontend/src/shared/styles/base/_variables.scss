@@ -44,8 +44,9 @@ body {
   --lb-color-on-surface-highest: var(--wp--preset--color--gray-900);
   --lb-color-on-surface-high: var(--wp--preset--color--gray-800);
   --lb-color-on-surface: var(--wp--preset--color--gray-700);
-  --lb-color-on-low: var(--wp--preset--color--gray-600);
-  --lb-color-on-lowest: var(--wp--preset--color--gray-500);
+  --lb-color-on-surface-low: var(--wp--preset--color--gray-600);
+  --lb-color-on-surface-lowest: var(--wp--preset--color--gray-500);
+  --lb-color-on-surface-min: var(--wp--preset--color--gray-400);
 }
 
 body {

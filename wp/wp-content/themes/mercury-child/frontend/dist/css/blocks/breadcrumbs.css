@@ -8,7 +8,7 @@
 * font
 **/
 body {
-  --lb-breadcrumbs-color-text: var(--lb-color-on-lowest);
+  --lb-breadcrumbs-color-text: var(--lb-color-on-surface-lowest);
   --lb-breadcrumbs-color-text-active: var(--lb-color-on-surface-highest);
 }
 

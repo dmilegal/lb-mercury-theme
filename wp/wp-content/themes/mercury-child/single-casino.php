@@ -10,10 +10,12 @@
 
 	<? if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="lb-layout__content">
-				<div class="lb-layout__inner prose-headings prose-content prose-spaces prose-colors">
-					<? get_template_part('theme-parts/cells/casino-details', null, ['post_id' => get_the_ID(),]); ?>
-					<? the_content() ?>
-					<?= do_shortcode('[show_wpb_author_info_box]'); ?>
+				<div class="lb-layout__inner">
+					<div class="prose-headings prose-content prose-spaces prose-colors">
+						<? get_template_part('theme-parts/cells/casino-details', null, ['post_id' => get_the_ID(),]); ?>
+						<? the_content() ?>
+						<?= do_shortcode('[show_wpb_author_info_box]'); ?>
+					</div>
 				</div>
 			</div>
 		<?php endwhile; ?>

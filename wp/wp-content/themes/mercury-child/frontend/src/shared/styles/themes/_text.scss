@@ -95,6 +95,16 @@ $proseCustomSelector: null !default;
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
+@include typo.make-prose('spaces', '.lb-author-block', $proseCustomSelector) {
+  margin: var(--wp--preset--spacing--100) 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
 @include typo.make-prose('colors', 'h1,h2,h3,h4,h5,h6', $proseCustomSelector) {
   color: var(--lb-ui-color-heading-text);
 }

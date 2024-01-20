@@ -1,12 +1,12 @@
 @use '@/shared/styles/abstracts/colors';
 @use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/typo';
 
 body {
   --lb-author-block-border-color: var(--wp--preset--color--gray-200);
 }
 
 .lb-author-block {
-  margin: var(--wp--preset--spacing--100) 0;
   padding: var(--wp--preset--spacing--100) 0;
   border-bottom: 1px solid var(--lb-author-block-border-color);
   width: 100%;

@@ -7,7 +7,7 @@
 /**
 * font
 **/
-body {
+body, .editor-styles-wrapper {
   --lb-pros-cons-color-text: var(--lb-color-text-default);
   --lb-pros-cons-title-color-text: var(--lb-color-text-strong);
   --lb-pros-cons-item-color-background: var(--lb-color-surface);

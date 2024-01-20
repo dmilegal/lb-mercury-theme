@@ -9,17 +9,22 @@ body {
 
 .lb-sidebar {
   position: relative;
-  @include breakpoints.media-breakpoint-down(md) {
-    display: none;
-  }
+  
   &__inner {
     position: sticky;
-    top: calc(var(--lb-admin-bar-offset, 0) + var(--lb-header-height, 0));
+    top: calc(var(--lb-admin-bar-offset, 0px) + var(--lb-header-height, 0px));
   }
 
   &__block {
     border-top: 1px solid var(--lb-sidebar-color-border);
     padding: var(--wp--preset--spacing--120) 0;
+
+    @include breakpoints.media-breakpoint-down(md) {
+      border-top: none;
+      &:first-child {
+        padding-top: 0;
+      }
+    }
 
     &--collapse {
       %block-title {
@@ -60,6 +65,15 @@ body {
     }
 
     &--soc {
+      @include breakpoints.media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    &--contributors {
+      @include breakpoints.media-breakpoint-down(md) {
+        display: none;
+      }
     }
 
     &-title {
@@ -71,7 +85,7 @@ body {
       column-gap: var(--wp--preset--spacing--80);
       padding: 0;
       border: none;
-      @include font.get-text-styles('text-md');
+      @include font.get-text-styles('text-md', false);
       font-weight: 600;
       color: var(--lb-sidebar-block-title-color-text);
       margin-bottom: var(--wp--preset--spacing--80);

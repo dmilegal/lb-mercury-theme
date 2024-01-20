@@ -16,9 +16,12 @@
 				<div class="lb-layout__sidebar">
 					<? get_template_part('theme-parts/organisms/sidebar/sidebar', null); ?>
 				</div>
-				<div class="lb-layout__inner prose-headings prose-content prose-spaces prose-colors">
-					<? the_content() ?>
-					<?= do_shortcode('[show_wpb_author_info_box]'); ?>
+				<div class="lb-layout__inner">
+					<div class="prose-headings prose-content prose-spaces prose-colors">
+						<? the_content() ?>
+						<?= do_shortcode('[show_wpb_author_info_box]'); ?>
+					</div>
+
 					<div class="lb-layout__content-footer">
 						<? get_template_part('theme-parts/organisms/post-footer/post-footer', null); ?>
 					</div>
