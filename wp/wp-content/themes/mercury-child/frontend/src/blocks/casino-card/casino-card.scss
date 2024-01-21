@@ -1,0 +1,161 @@
+@use 'sass:math';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+body,
+.editor-styles-wrapper {
+  --lb-casino-card-color-border: var(--lb-color-primary-outline-variant-1);
+  --lb-casino-card-color-text: var(--lb-color-text-strong);
+  --lb-casino-card-tc-color-text: var(--lb-color-on-surface-lowest);
+  --lb-casino-card-promo-tc-color-text: var(--lb-color-on-surface-min);
+  --lb-casino-card-desc-color-text: var(--lb-color-on-surface-lowest);
+
+  --lb-casino-card-link-color-text: var(--lb-color-action-text-default);
+  --lb-casino-card-promo-color-background: var(--lb-color-primary-container-low);
+}
+
+.lb-casino-card {
+  container-type: inline-size;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 469fr 299fr;
+    border: 1px solid var(--lb-casino-card-color-border);
+    border-radius: var(--wp--preset--spacing--80);
+    overflow: hidden;
+    @include breakpoints.media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+
+  &__main {
+    padding: var(--wp--preset--spacing--90) var(--wp--preset--spacing--100);
+    @include breakpoints.media-breakpoint-down(sm) {
+      padding: var(--wp--preset--spacing--90);
+    }
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: var(--wp--preset--spacing--60);
+    margin-bottom: var(--wp--preset--spacing--85);
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__title {
+    @include font.get-text-styles('text-xl', false);
+    font-weight: 600;
+    color: var(--lb-casino-card-color-text);
+    margin-bottom: var(--wp--preset--spacing--60);
+    @include breakpoints.media-breakpoint-down(sm) {
+      @include font.get-text-styles('text-md', false);
+      margin-bottom: var(--wp--preset--spacing--50);
+    }
+  }
+
+  &__logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: var(--wp--preset--spacing--70);
+    @include breakpoints.media-breakpoint-down(sm) {
+      width: var(--wp--preset--spacing--170);
+      height: var(--wp--preset--spacing--170);
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: var(--wp--preset--spacing--60);
+    row-gap: var(--wp--preset--spacing--60);
+  }
+
+  &__rating {
+    display: flex;
+    align-items: baseline;
+    font-weight: 500;
+    color: var(--lb-casino-card-color-text);
+    column-gap: var(--wp--preset--spacing--50);
+    @include font.get-text-styles('text-md', false);
+    
+    @include breakpoints.media-breakpoint-down(sm) {
+      @include font.get-text-styles('text-sm', false);
+    }
+
+    i {
+      font-size: 1.11em;
+      line-height: 0;
+      font-weight: 600;
+    }
+  }
+
+  &__link {
+    @include font.get-text-styles('text-md', false);
+    color: var(--lb-casino-card-link-color-text);
+    text-decoration: underline;
+
+    @include breakpoints.media-breakpoint-down(sm) {
+      @include font.get-text-styles('text-sm', false);
+    }
+  }
+
+  &__desc {
+    @include font.get-text-styles('text-sm', false);
+    color: var(--lb-casino-card-desc-color-text);
+    li {
+      margin: var(--wp--preset--spacing--60) 0;
+      :last-child {
+        margin-bottom: 0;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &-promo {
+    padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100)
+      var(--wp--preset--spacing--70);
+    background-color: var(--lb-casino-card-promo-color-background);
+
+    &__title {
+      @include font.get-text-styles('text-xl', false);
+      font-weight: 600;
+      color: var(--lb-casino-card-color-text);
+      margin-bottom: var(--wp--preset--spacing--120);
+    }
+
+    &__actions {
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--wp--preset--spacing--60);
+      margin-bottom: var(--wp--preset--spacing--60);
+    }
+
+    &__copy,
+    &__play {
+      width: 100%;
+    }
+
+    &__tc {
+      @include font.get-text-styles('text-xs', false);
+      text-align: center;
+      color: var(--lb-casino-card-promo-tc-color-text);
+    }
+  }
+
+  &__tc {
+    @include font.get-text-styles('text-xs', false);
+    color: var(--lb-casino-card-tc-color-text);
+    margin-top: var(--wp--preset--spacing--50);
+    @include breakpoints.media-breakpoint-down(sm) {
+      @include font.get-text-styles('caption-md', false);
+    }
+  }
+}

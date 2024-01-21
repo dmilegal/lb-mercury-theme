@@ -36,7 +36,7 @@ $casino_restricted_countries = wp_get_object_terms($post->ID, 'restricted-countr
 $casino_licences = wp_get_object_terms($post->ID, 'licence');
 $bonus_fields = get_field('bonus_fields');
 $casino_detailed_tc = wp_kses(get_post_meta($casinoId, 'casino_detailed_tc', true), $casino_allowed_html);
-$overall_rating = esc_html(get_post_meta(get_the_ID(), 'casino_overall_rating', true));
+$overall_rating = esc_html(get_post_meta($casinoId, 'casino_overall_rating', true));
 
 ?>
 <div class="<?= classNames(

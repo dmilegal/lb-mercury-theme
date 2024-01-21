@@ -1,6 +1,12 @@
 <?
 $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
+$casinoId = $args['casino_id'] ?? null;
+
+if (!$casinoId) return;
+
+$bonusFields = get_field('bonus_fields', $casinoId);
+
 ?>
 <div class="<?= classNames(
               'lb-promo-bonus',
@@ -11,10 +17,12 @@ $style = $args['style'] ?? '';
   <div class="lb-promo-bonus__title">
     Bonus PokerStars Casino
   </div>
-  <div  class="lb-promo-bonus__subtitle">
-    Up to £100 Extra Winnings on Your First Sport Bet
-  </div>
-  <div  class="lb-promo-bonus__actions">
+  <? if (isset($bonusFields['bonus_title'])) { ?>
+    <div class="lb-promo-bonus__subtitle">
+      <?= $bonusFields['bonus_title'] ?>
+    </div>
+  <? } ?>
+  <div class="lb-promo-bonus__actions">
     <?
     get_template_part('theme-parts/atoms/button', null, [
       'size' => 'xl',

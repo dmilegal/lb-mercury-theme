@@ -1,0 +1,194 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/casino-card/casino-card.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body,
+.editor-styles-wrapper {
+  --lb-casino-card-color-border: var(--lb-color-primary-outline-variant-1);
+  --lb-casino-card-color-text: var(--lb-color-text-strong);
+  --lb-casino-card-tc-color-text: var(--lb-color-on-surface-lowest);
+  --lb-casino-card-promo-tc-color-text: var(--lb-color-on-surface-min);
+  --lb-casino-card-desc-color-text: var(--lb-color-on-surface-lowest);
+  --lb-casino-card-link-color-text: var(--lb-color-action-text-default);
+  --lb-casino-card-promo-color-background: var(--lb-color-primary-container-low);
+}
+
+.lb-casino-card {
+  container-type: inline-size;
+}
+.lb-casino-card__inner {
+  display: grid;
+  grid-template-columns: 469fr 299fr;
+  border: 1px solid var(--lb-casino-card-color-border);
+  border-radius: var(--wp--preset--spacing--80);
+  overflow: hidden;
+}
+@media (max-width: 767.98px) {
+  .lb-casino-card__inner {
+    display: block;
+  }
+}
+.lb-casino-card__main {
+  padding: var(--wp--preset--spacing--90) var(--wp--preset--spacing--100);
+}
+@media (max-width: 767.98px) {
+  .lb-casino-card__main {
+    padding: var(--wp--preset--spacing--90);
+  }
+}
+.lb-casino-card__header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: var(--wp--preset--spacing--60);
+  column-gap: var(--wp--preset--spacing--60);
+  margin-bottom: var(--wp--preset--spacing--85);
+}
+.lb-casino-card__logo {
+  flex-shrink: 0;
+}
+.lb-casino-card__title {
+  font-size: var(--wp--preset--font-size--text-xl);
+  line-height: var(--wp--custom--line-height--text-xl);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xl, inherit);
+  font-weight: 600;
+  color: var(--lb-casino-card-color-text);
+  margin-bottom: var(--wp--preset--spacing--60);
+}
+@media (max-width: 767.98px) {
+  .lb-casino-card__title {
+    font-size: var(--wp--preset--font-size--text-md);
+    line-height: var(--wp--custom--line-height--text-md);
+    letter-spacing: inherit;
+    letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+    margin-bottom: var(--wp--preset--spacing--50);
+  }
+}
+.lb-casino-card__logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: var(--wp--preset--spacing--70);
+}
+@media (max-width: 767.98px) {
+  .lb-casino-card__logo {
+    width: var(--wp--preset--spacing--170);
+    height: var(--wp--preset--spacing--170);
+  }
+}
+.lb-casino-card__info {
+  display: flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--60);
+  row-gap: var(--wp--preset--spacing--60);
+}
+.lb-casino-card__rating {
+  display: flex;
+  align-items: baseline;
+  font-weight: 500;
+  color: var(--lb-casino-card-color-text);
+  column-gap: var(--wp--preset--spacing--50);
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+}
+@media (max-width: 767.98px) {
+  .lb-casino-card__rating {
+    font-size: var(--wp--preset--font-size--text-sm);
+    line-height: var(--wp--custom--line-height--text-sm);
+    letter-spacing: inherit;
+    letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  }
+}
+.lb-casino-card__rating i {
+  font-size: 1.11em;
+  line-height: 0;
+  font-weight: 600;
+}
+.lb-casino-card__link {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  color: var(--lb-casino-card-link-color-text);
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+@media (max-width: 767.98px) {
+  .lb-casino-card__link {
+    font-size: var(--wp--preset--font-size--text-sm);
+    line-height: var(--wp--custom--line-height--text-sm);
+    letter-spacing: inherit;
+    letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  }
+}
+.lb-casino-card__desc {
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  color: var(--lb-casino-card-desc-color-text);
+}
+.lb-casino-card__desc li {
+  margin: var(--wp--preset--spacing--60) 0;
+}
+.lb-casino-card__desc li :last-child {
+  margin-bottom: 0;
+}
+.lb-casino-card__desc li:first-child {
+  margin-top: 0;
+}
+.lb-casino-card-promo {
+  padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100) var(--wp--preset--spacing--70);
+  background-color: var(--lb-casino-card-promo-color-background);
+}
+.lb-casino-card-promo__title {
+  font-size: var(--wp--preset--font-size--text-xl);
+  line-height: var(--wp--custom--line-height--text-xl);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xl, inherit);
+  font-weight: 600;
+  color: var(--lb-casino-card-color-text);
+  margin-bottom: var(--wp--preset--spacing--120);
+}
+.lb-casino-card-promo__actions {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--wp--preset--spacing--60);
+  margin-bottom: var(--wp--preset--spacing--60);
+}
+.lb-casino-card-promo__copy, .lb-casino-card-promo__play {
+  width: 100%;
+}
+.lb-casino-card-promo__tc {
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  text-align: center;
+  color: var(--lb-casino-card-promo-tc-color-text);
+}
+.lb-casino-card__tc {
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  color: var(--lb-casino-card-tc-color-text);
+  margin-top: var(--wp--preset--spacing--50);
+}
+@media (max-width: 767.98px) {
+  .lb-casino-card__tc {
+    font-size: var(--wp--preset--font-size--caption-md);
+    line-height: var(--wp--custom--line-height--caption-md);
+    letter-spacing: inherit;
+    letter-spacing: var(--wp--custom--letter-spacing--caption-md, inherit);
+  }
+}
+
+/*# sourceMappingURL=casino-card.css.map*/
