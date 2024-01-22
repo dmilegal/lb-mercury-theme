@@ -46,6 +46,9 @@ body {
   column-gap: var(--wp--preset--spacing--80);
   margin-bottom: var(--wp--preset--spacing--120);
 }
+.lb-promo-bonus__actions > *:only-child {
+  flex-grow: 1;
+}
 .lb-promo-bonus__tc {
   font-size: var(--lb-font-size-text-sm-relative);
   line-height: var(--lb-line-height-text-sm-relative);

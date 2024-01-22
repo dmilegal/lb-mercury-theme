@@ -70,24 +70,25 @@ $overall_rating = esc_html(get_post_meta($casinoId, 'casino_overall_rating', tru
               ]);
             }
 
-            get_template_part('theme-parts/atoms/badge', null, [
-              'size' => 'lg',
-              'prefix' => file_exists(get_stylesheet_directory() . '/img/flags/round/' . strtolower($record->country->isoCode) . '.svg') ?
-                '<img src="' . get_stylesheet_directory_uri() . '/img/flags/round/' . strtolower($record->country->isoCode) . '.svg' . '">' : $flag,
-              'content' => in_array($country, array_column($casino_restricted_countries, 'name')) ? esc_html(
-                sprintf(
-                  __('Users from %s are not accepted', 'aces'),
-                  $country
-                )
-              )
-                : esc_html(
+            if ($country)
+              get_template_part('theme-parts/atoms/badge', null, [
+                'size' => 'lg',
+                'prefix' => file_exists(get_stylesheet_directory() . '/img/flags/round/' . strtolower($record->country->isoCode) . '.svg') ?
+                  '<img src="' . get_stylesheet_directory_uri() . '/img/flags/round/' . strtolower($record->country->isoCode) . '.svg' . '">' : $flag,
+                'content' => in_array($country, array_column($casino_restricted_countries, 'name')) ? esc_html(
                   sprintf(
-                    __('Users from %s are accepted', 'aces'),
+                    __('Users from %s are not accepted', 'aces'),
                     $country
                   )
-                ),
-              'color' => 'gray',
-            ]);
+                )
+                  : esc_html(
+                    sprintf(
+                      __('Users from %s are accepted', 'aces'),
+                      $country
+                    )
+                  ),
+                'color' => 'gray',
+              ]);
             ?>
           </div>
         </div>

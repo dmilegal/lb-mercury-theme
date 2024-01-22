@@ -13,8 +13,8 @@ $casino_allowed_html = array(
     'target' => true,
     'rel' => true
   ),
-  'ul'=> array(),
-  'li'=> array(),
+  'ul' => array(),
+  'li' => array(),
   'br' => array(),
   'em' => array(),
   'span' => array(
@@ -34,16 +34,11 @@ $casino_external_link = esc_url(get_post_meta($casinoId, 'casino_external_link',
 $casino_terms_desc = wp_kses(get_post_meta($casinoId, 'casino_terms_desc', true), $casino_allowed_html);
 $bonusFields = get_field('bonus_fields', $casinoId);
 
-if ($external_link) {
-  if ($casino_external_link) {
-    $external_link_url = $casino_external_link;
-  } else {
-    $external_link_url = get_the_permalink();
-  }
+if ($casino_external_link) {
+  $external_link_url = $casino_external_link;
 } else {
   $external_link_url = get_the_permalink();
 }
-
 
 if ($casino_button_title) {
   $button_title = $casino_button_title;
@@ -100,23 +95,28 @@ if ($casino_permalink_button_title) {
       <? } ?>
       <div class="lb-casino-card-promo__actions">
         <?
-        get_template_part('theme-parts/atoms/button', null, [
-          'size' => 'xl',
-          'variant' => 'outlined',
-          'content' => __('Copy Promo', 'mercury-child'),
-          'prefix' => '<i class="icon-copy"></i>',
-          'className' => 'lb-casino-card__copy'
-        ]);
-        if ($external_link_url)
+        if (!empty($bonusFields['promo_code']))
+          get_template_part('theme-parts/atoms/button', null, [
+            'size' => 'xl',
+            'variant' => 'outlined',
+            'content' => __('Copy Promo', 'mercury-child'),
+            'prefix' => '<i class="icon-copy"></i>',
+            'className' => 'lb-casino-card__copy'
+          ]);
+
+        if ($external_link_url) {
+          
+          $isExternal = isExternalLink($external_link_url);
           get_template_part('theme-parts/atoms/button', null, [
             'size' => 'xl',
             'color' => 'primary',
             'className' => 'lb-casino-card__play',
             'content' => esc_html($button_title),
             'href' => esc_url($external_link_url),
-            'target' => $external_link ? "_blank" : '',
-            'rel' => $external_link ? "nofollow" : ''
+            'target' => $isExternal ? "_blank" : '',
+            'rel' => $isExternal ? "nofollow" : ''
           ]);
+        }
         ?>
       </div>
       <div class="lb-casino-card-promo__tc">

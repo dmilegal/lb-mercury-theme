@@ -34,6 +34,12 @@ body {
     align-items: center;
     column-gap: var(--wp--preset--spacing--80);
     margin-bottom: var(--wp--preset--spacing--120);
+    & > * {
+      &:only-child {
+        flex-grow: 1;
+      }
+      
+    }
   }
 
   &__tc {
