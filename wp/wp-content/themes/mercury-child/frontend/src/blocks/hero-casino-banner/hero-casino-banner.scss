@@ -1,8 +1,7 @@
 @use '@/shared/styles/abstracts/colors';
 @use '@/shared/styles/mixins/container';
 @use '@/shared/styles/mixins/font';
-@use "@/shared/styles/mixins/breakpoints";
-
+@use '@/shared/styles/mixins/breakpoints';
 
 body {
   --hero-banner-space-top: var(--wp--preset--spacing--280);
@@ -10,7 +9,7 @@ body {
   --hero-casino-banner-color-background: var(--lb-color-surface-high);
   --hero-casino-banner-info-title-color-text: var(--lb-color-primary);
   --hero-casino-banner-info-value-color-text: var(--lb-color-text-strong);
-  
+
   @include breakpoints.media-breakpoint-down(sm) {
     --hero-banner-space-top: var(--wp--preset--spacing--100);
     --hero-banner-space-bottom: var(--wp--preset--spacing--140);
@@ -23,9 +22,12 @@ body {
   background-color: var(--hero-casino-banner-color-background);
 
   &--col-span {
-    %content {
-      grid-column: 1/8;
+    @include breakpoints.media-breakpoint-up(lg) {
+      %content {
+        grid-column: 1/8;
+      }
     }
+    
   }
 
   &__inner {
@@ -37,24 +39,32 @@ body {
 
   &__content {
     grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    row-gap: var(--wp--preset--spacing--160);
     @extend %content;
   }
-
-
 
   &__header {
     display: grid;
     grid-template-columns: var(--wp--preset--spacing--330) 1fr;
     column-gap: var(--wp--preset--spacing--120);
+    margin-bottom: var(--wp--preset--spacing--160);
+    @include breakpoints.media-breakpoint-down(sm) {
+      column-gap: var(--wp--preset--spacing--70);
+      margin-bottom: var(--wp--preset--spacing--85);
+      grid-template-columns: var(--wp--preset--spacing--220) 1fr;
+    }
+  }
+
+  &__logo {
+    border-radius: var(--wp--preset--spacing--60);
   }
 
   &__title {
-    @include font.get-text-styles('display-lg');
+    @include font.get-text-styles('display-lg', false);
     font-weight: 600;
     margin-bottom: var(--wp--preset--spacing--70);
+    @include breakpoints.media-breakpoint-down(sm) {
+      @include font.get-text-styles('display-xs', false);
+    }
   }
 
   &__captions {
@@ -65,14 +75,18 @@ body {
   }
 
   &__info {
-    @include font.get-text-styles('text-md');
+    @include font.get-text-styles('text-md', false);
     font-weight: 500;
-
     &-list {
       display: flex;
       flex-wrap: wrap;
       column-gap: var(--wp--preset--spacing--200);
       row-gap: var(--wp--preset--spacing--160);
+      margin-bottom: var(--wp--preset--spacing--160);
+      @include breakpoints.media-breakpoint-down(sm) {
+        row-gap: var(--wp--preset--spacing--120);
+        margin-bottom: var(--wp--preset--spacing--85);
+      }
     }
 
     &-title {
@@ -86,9 +100,47 @@ body {
         position: relative;
         top: 1px;
         margin-right: var(--wp--preset--spacing--50);
-        @include font.get-text-styles('text-lg');
+        @include font.get-text-styles('text-lg', false);
         line-height: 0;
         font-weight: 600;
+      }
+    }
+  }
+
+  &-promo {
+    margin-bottom: var(--wp--preset--spacing--160);
+    @include breakpoints.media-breakpoint-down(sm) {
+      margin-bottom: var(--wp--preset--spacing--85);
+    }
+    @include breakpoints.media-breakpoint-up(lg) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100%;
+      transform: translateX(-50%);
+      z-index: 5;
+      pointer-events: none;
+      @include container.make-container-max-width();
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: calc(var(--layout--content-spacing));
+    }
+
+    &__inner {
+      @include breakpoints.media-breakpoint-up(lg) {
+        position: relative;
+        pointer-events: auto;
+        grid-column: 9/13;
+        padding-top: var(--hero-banner-space-top, 0px);
+      }
+    }
+    &__sticky {
+      @include breakpoints.media-breakpoint-up(lg) {
+        position: sticky;
+        top: calc(
+          var(--lb-header-height, 0px) + var(--wp--preset--spacing--80) +
+            var(--lb-admin-bar-offset, 0px)
+        );
       }
     }
   }

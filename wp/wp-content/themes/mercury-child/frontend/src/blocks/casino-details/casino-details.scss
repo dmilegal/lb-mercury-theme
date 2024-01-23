@@ -9,6 +9,9 @@
     grid-template-columns: 1fr 1fr;
     column-gap: var(--wp--preset--spacing--160);
     row-gap: var(--wp--preset--spacing--100);
+    @include breakpoints.media-breakpoint-down(sm) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &-item {
@@ -24,14 +27,14 @@
     }
 
     &__title {
-      @include font.get-text-styles('text-lg');
+      @include font.get-text-styles('text-lg', false);
       font-weight: 500;
       margin-bottom: var(--wp--preset--spacing--60);
       color: var(--lb-color-text-strong);
     }
 
     &__tags {
-      @include font.get-text-styles('text-md');
+      @include font.get-text-styles('text-md', false);
       color: var(--lb-color-text-default);
     }
   }

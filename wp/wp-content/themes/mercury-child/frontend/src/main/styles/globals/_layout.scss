@@ -3,13 +3,15 @@
 
 .lb-layout {
   &--sticky-box {
-    position: relative;
-    %content {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      column-gap: calc(var(--layout--content-spacing));
-      & > * {
-        grid-column: 1/8;
+    @include breakpoints.media-breakpoint-up(lg) {
+      position: relative;
+      %content {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: calc(var(--layout--content-spacing));
+        & > * {
+          grid-column: 1/8;
+        }
       }
     }
   }
@@ -75,41 +77,12 @@
 
   &__breadcrumbs {
     padding-top: var(--wp--preset--spacing--90);
-    margin-bottom: calc(-1 *var(--wp--preset--spacing--100));
+    margin-bottom: calc(-1 * var(--wp--preset--spacing--100));
     @include breakpoints.media-breakpoint-down(md) {
-      margin-bottom: calc(-1 *var(--wp--preset--spacing--60));
+      margin-bottom: calc(-1 * var(--wp--preset--spacing--60));
     }
     @include container.make-container-max-width();
 
     @extend %breadcrumbs;
-  }
-
-  &__sticky {
-    &-box {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      height: 100%;
-      transform: translateX(-50%);
-      z-index: 5;
-      pointer-events: none;
-      @include container.make-container-max-width();
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      column-gap: calc(var(--layout--content-spacing));
-      &-container {
-        position: relative;
-        pointer-events: auto;
-        grid-column: 9/13;
-        padding-top: var(--hero-banner-space-top, 0px);
-        & > * {
-          position: sticky;
-          top: calc(
-            var(--lb-header-height, 0px) + var(--wp--preset--spacing--80) +
-              var(--lb-admin-bar-offset, 0px)
-          );
-        }
-      }
-    }
   }
 }

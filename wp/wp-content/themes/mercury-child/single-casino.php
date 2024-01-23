@@ -6,7 +6,7 @@ $organization_disable_details = esc_attr(get_post_meta(get_the_ID(), 'organizati
 ?>
 <div class="lb-layout lb-layout--sticky-box">
 	<div class="lb-layout__banner">
-		<? get_template_part('theme-parts/molecules/hero-casino-banner', null, [
+		<? get_template_part('theme-parts/cells/hero-casino-banner', null, [
 			'post_id' => get_the_ID(),
 			'col_span' => true,
 		]); ?>
@@ -30,15 +30,7 @@ $organization_disable_details = esc_attr(get_post_meta(get_the_ID(), 'organizati
 		<?php endwhile; ?>
 	<?php endif; ?>
 
-	<? if (hasCasinoBonus(get_the_ID())) { ?>
-		<div class="lb-layout__sticky-box">
-			<div class="lb-layout__sticky-box-container">
-				<? get_template_part('theme-parts/molecules/promo-bonus', null, [
-					'casino_id' => get_the_ID()
-				]); ?>
-			</div>
-		</div>
-	<? } ?>
+
 </div>
 
 

@@ -93,6 +93,18 @@ $overall_rating = esc_html(get_post_meta($casinoId, 'casino_overall_rating', tru
           </div>
         </div>
       </header>
+      <? if (hasCasinoBonus($casinoId)) { ?>
+        <div class="lb-hero-casino-banner-promo">
+          <div class="lb-hero-casino-banner-promo__inner">
+            <div class="lb-hero-casino-banner-promo__sticky">
+              <? get_template_part('theme-parts/molecules/promo-bonus', null, [
+                'casino_id' => $casinoId
+              ]); ?>
+            </div>
+          </div>
+        </div>
+      <? } ?>
+      <? do_action('hero_casino_banner_after_header') ?>
       <div class="lb-hero-casino-banner__info-list">
         <div class="lb-hero-casino-banner__info">
           <div class="lb-hero-casino-banner__info-title">
