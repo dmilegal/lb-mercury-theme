@@ -11,8 +11,8 @@ body, .editor-styles-wrapper {
   &__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: var(--wp--preset--spacing--120);
-    row-gap: var(--wp--preset--spacing--120);
+    column-gap: var(--wp--preset--spacing--90);
+    row-gap: var(--wp--preset--spacing--90);
     @include breakpoints.media-breakpoint-down(sm) {
       grid-template-columns: 1fr;
     }
@@ -43,14 +43,14 @@ body, .editor-styles-wrapper {
     }
 
     &__title {
-      @include font.get-text-styles('text-lg');
+      @include font.get-text-styles('text-lg', false);
       font-weight: 500;
       margin-bottom: var(--wp--preset--spacing--105);
       color: var(--lb-pros-cons-title-color-text);
     }
 
     ul {
-      @include font.get-text-styles('text-md');
+      @include font.get-text-styles('text-md', false);
       display: flex;
       flex-direction: column;
       row-gap: var(--wp--preset--spacing--90);
@@ -61,7 +61,7 @@ body, .editor-styles-wrapper {
       column-gap: var(--wp--preset--spacing--60);
       &::before {
         font-family: 'lhicon';
-        font-size: 1.375em;
+        font-size: 1.25em;
         speak: never;
         font-style: normal;
         font-weight: inherit;

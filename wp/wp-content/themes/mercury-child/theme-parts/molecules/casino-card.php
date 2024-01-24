@@ -97,7 +97,7 @@ if ($casino_permalink_button_title) {
         <?
         if (!empty($bonusFields['promo_code']))
           get_template_part('theme-parts/atoms/button', null, [
-            'size' => 'xl',
+            'size' => 'md',
             'variant' => 'outlined',
             'content' => __('Copy Promo', 'mercury-child'),
             'prefix' => '<i class="icon-copy"></i>',
@@ -120,7 +120,7 @@ if ($casino_permalink_button_title) {
         ?>
       </div>
       <div class="lb-casino-card-promo__tc">
-        Read about <a>T&C</a>
+      <a href="#">Read about T&C</a>
       </div>
     </div>
   </div>

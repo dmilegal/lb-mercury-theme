@@ -21,7 +21,6 @@ $organization_disable_details = esc_attr(get_post_meta(get_the_ID(), 'organizati
 						if (!$organization_disable_details)
 							get_template_part('theme-parts/cells/casino-details', null, ['post_id' => get_the_ID(),]);
 						?>
-						<? get_template_part('theme-parts/molecules/casino-card', null, ['casino_id' => get_the_ID(),]); ?>
 						<? the_content() ?>
 						<?= do_shortcode('[show_wpb_author_info_box]'); ?>
 					</div>

@@ -3,7 +3,6 @@ $proseCustomSelector: null !default;
 @use '@/shared/styles/mixins/typo';
 
 @include typo.make-prose('content', 'img', $proseCustomSelector) {
-  img {
-    max-width: 100%;
-  }
+  max-width: 100%;
+  height: auto !important;
 }

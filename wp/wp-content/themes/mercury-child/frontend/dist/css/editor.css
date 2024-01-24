@@ -1848,6 +1848,7 @@ body :where(p, ul):not(:where([class~=not-prose], [class~=not-prose] *)) {
 body {
   --lb-table-color-text: var(--lb-color-text-default);
   --lb-table-color-background: var(--lb-color-surface);
+  --lb-table-title-color-text: var(--lb-color-on-surface);
 }
 
 body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) {
@@ -1864,11 +1865,11 @@ body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *
 body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table thead {
   border: none;
 }
-body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table tr:last-child td {
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table :where(tr):last-child td {
   border-bottom: 0;
 }
 body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table td {
-  padding: var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
+  padding: var(--wp--preset--spacing--85) var(--wp--preset--spacing--100);
   font-size: var(--lb-font-size-text-sm-relative);
   line-height: var(--lb-line-height-text-sm-relative);
   letter-spacing: inherit;
@@ -1877,7 +1878,7 @@ body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *
   border-bottom: 1px solid var(--wp--preset--color--gray-200);
 }
 body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table th {
-  padding: var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
+  padding: var(--wp--preset--spacing--85) var(--wp--preset--spacing--100);
   font-size: var(--lb-font-size-text-sm-relative);
   line-height: var(--lb-line-height-text-sm-relative);
   letter-spacing: inherit;
@@ -1885,10 +1886,14 @@ body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *
   border: none;
   border-bottom: 1px solid var(--wp--preset--color--gray-200);
 }
-body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table th {
-  font-weight: 600;
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table :where(th) {
+  color: var(--lb-table-title-color-text);
+  font-weight: 500;
+}
+body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) :where(th):not([class*=has-text-align]) {
   text-align: left;
 }
+
 body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin: var(--wp--preset--spacing--160) 0;
 }
@@ -1923,8 +1928,9 @@ body :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *
   &--text {
   }
 }*/
-body :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) img {
+body :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) {
   max-width: 100%;
+  height: auto !important;
 }
 
 .size-full:not(:where(.alignleft, .alignright)) {

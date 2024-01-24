@@ -92,7 +92,7 @@ body,
   align-items: baseline;
   font-weight: 500;
   color: var(--lb-casino-card-color-text);
-  column-gap: var(--wp--preset--spacing--50);
+  column-gap: var(--wp--preset--spacing--60);
   font-size: var(--wp--preset--font-size--text-md);
   line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
@@ -107,9 +107,11 @@ body,
   }
 }
 .lb-casino-card__rating i {
-  font-size: 1.11em;
-  line-height: 0;
+  position: relative;
+  font-size: 1.25em;
+  line-height: 0.75em;
   font-weight: 600;
+  top: 2px;
 }
 .lb-casino-card__link {
   font-size: var(--wp--preset--font-size--text-md);
@@ -172,7 +174,15 @@ body,
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
   text-align: center;
+}
+.lb-casino-card-promo__tc a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: var(--lb-casino-card-promo-tc-color-text);
+}
+.lb-casino-card-promo__tc a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 .lb-casino-card__tc {
   font-size: var(--wp--preset--font-size--text-xs);

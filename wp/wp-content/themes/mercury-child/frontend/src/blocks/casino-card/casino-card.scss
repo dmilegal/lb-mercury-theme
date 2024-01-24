@@ -81,17 +81,19 @@ body,
     align-items: baseline;
     font-weight: 500;
     color: var(--lb-casino-card-color-text);
-    column-gap: var(--wp--preset--spacing--50);
+    column-gap: var(--wp--preset--spacing--60);
     @include font.get-text-styles('text-md', false);
-    
+
     @include breakpoints.media-breakpoint-down(sm) {
       @include font.get-text-styles('text-sm', false);
     }
 
     i {
-      font-size: 1.11em;
-      line-height: 0;
+      position: relative;
+      font-size: 1.25em;
+      line-height: 0.75em;
       font-weight: 600;
+      top: 2px;
     }
   }
 
@@ -146,7 +148,15 @@ body,
     &__tc {
       @include font.get-text-styles('text-xs', false);
       text-align: center;
-      color: var(--lb-casino-card-promo-tc-color-text);
+      
+      a {
+        text-decoration: none;
+        color: var(--lb-casino-card-promo-tc-color-text);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      
     }
   }
 
