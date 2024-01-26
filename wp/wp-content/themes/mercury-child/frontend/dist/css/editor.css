@@ -84,50 +84,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-youtube-solid:before {
-  content: "\ea30";
-}
-
-.icon-twitter-solid:before {
-  content: "\ea31";
-}
-
-.icon-snapchat:before {
-  content: "\ea32";
-}
-
-.icon-pinterest:before {
-  content: "\ea33";
-}
-
-.icon-linkedin-solid:before {
-  content: "\ea34";
-}
-
-.icon-google:before {
-  content: "\ea35";
-}
-
-.icon-github-solid:before {
-  content: "\ea36";
-}
-
-.icon-facebook-solid:before {
-  content: "\ea37";
-}
-
-.icon-apple:before {
-  content: "\ea38";
-}
-
-.icon-deposite:before {
-  content: "\ea03";
-}
-
-.icon-filters-lines:before {
-  content: "\ea04";
-}
-
 .icon-activity:before {
   content: "\e900";
 }
@@ -170,6 +126,10 @@
 
 .icon-aperture:before {
   content: "\e90a";
+}
+
+.icon-apple:before {
+  content: "\ea38";
 }
 
 .icon-archive:before {
@@ -488,6 +448,10 @@
   content: "\e97e";
 }
 
+.icon-deposite:before {
+  content: "\ea03";
+}
+
 .icon-disc:before {
   content: "\e97f";
 }
@@ -556,6 +520,10 @@
   content: "\e954";
 }
 
+.icon-facebook-solid:before {
+  content: "\ea37";
+}
+
 .icon-fast-forward:before {
   content: "\e955";
 }
@@ -594,6 +562,10 @@
 
 .icon-filter:before {
   content: "\e95d";
+}
+
+.icon-filters-lines:before {
+  content: "\ea04";
 }
 
 .icon-flag:before {
@@ -644,12 +616,20 @@
   content: "\e967";
 }
 
+.icon-github-solid:before {
+  content: "\ea36";
+}
+
 .icon-gitlab:before {
   content: "\e968";
 }
 
 .icon-globe:before {
   content: "\e96b";
+}
+
+.icon-google:before {
+  content: "\ea35";
 }
 
 .icon-grid:before {
@@ -682,6 +662,10 @@
 
 .icon-home:before {
   content: "\e973";
+}
+
+.icon-home-solid:before {
+  content: "\ea39";
 }
 
 .icon-image:before {
@@ -734,6 +718,10 @@
 
 .icon-linkedin-regular:before {
   content: "\e9c0";
+}
+
+.icon-linkedin-solid:before {
+  content: "\ea34";
 }
 
 .icon-list:before {
@@ -932,6 +920,10 @@
   content: "\e9a8";
 }
 
+.icon-pinterest:before {
+  content: "\ea33";
+}
+
 .icon-play:before {
   content: "\e9a9";
 }
@@ -1092,6 +1084,10 @@
   content: "\ea19";
 }
 
+.icon-snapchat:before {
+  content: "\ea32";
+}
+
 .icon-speaker:before {
   content: "\ea1a";
 }
@@ -1202,6 +1198,10 @@
 
 .icon-twitter-regular:before {
   content: "\e9e4";
+}
+
+.icon-twitter-solid:before {
+  content: "\ea31";
 }
 
 .icon-type:before {
@@ -1318,6 +1318,10 @@
 
 .icon-youtube-regular:before {
   content: "\ea2a";
+}
+
+.icon-youtube-solid:before {
+  content: "\ea30";
 }
 
 .icon-zap:before {

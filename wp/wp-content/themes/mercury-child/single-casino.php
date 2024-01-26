@@ -5,13 +5,16 @@ $organization_disable_details = esc_attr(get_post_meta(get_the_ID(), 'organizati
 
 ?>
 <div class="lb-layout lb-layout--sticky-box">
+	<div class="lb-layout__breadcrumbs">
+		<?php get_template_part('/theme-parts/molecules/breadcrumbs'); ?>
+	</div>
+	
 	<div class="lb-layout__banner">
 		<? get_template_part('theme-parts/cells/hero-casino-banner', null, [
 			'post_id' => get_the_ID(),
 			'col_span' => true,
 		]); ?>
 	</div>
-
 
 	<? if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="lb-layout__content">

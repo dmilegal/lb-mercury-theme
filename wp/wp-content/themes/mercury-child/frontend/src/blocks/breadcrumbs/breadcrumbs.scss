@@ -2,18 +2,35 @@
 @use '@/shared/styles/mixins/breakpoints';
 
 body {
-  --lb-breadcrumbs-color-text: var(--lb-color-on-surface-lowest);
+  --lb-breadcrumbs-color-text: var(--lb-color-on-surface-min);
   --lb-breadcrumbs-color-text-active: var(--lb-color-on-surface-highest);
 }
 
 .lb-breadcrumbs {
-  @include font.get-text-styles('text-sm');
+  @include font.get-text-styles('text-xs', false);
+  color: var(--lb-breadcrumbs-color-text);
   a {
     color: var(--lb-breadcrumbs-color-text);
     text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
+  }
+  span {
+    margin: 0 var(--wp--preset--spacing--50);
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  i {
+    position: relative;
+    top: 1px;
+    @include font.get-text-styles('text-md', false);
+    line-height: font.line-height-by-name('text-xs');
   }
   .breadcrumb_last {
     color: var(--lb-breadcrumbs-color-text-active);
