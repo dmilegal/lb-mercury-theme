@@ -12,10 +12,15 @@ get_header(); ?>
 			'post_id' => get_the_id(),
 			'align' => 'center',
 			'enable_published_date' => false,
-			'color' => 'gray'
+			'color' => 'white'
 		]); ?>
 	</div>
-
+	<div>
+		<?
+		$list = get_field('casino_list', get_the_id()) ?? [];
+		echo do_shortcode('[aces-casinos-8 items_number="10" external_link="1" category="" items_id="' . implode(',', $list) . '" exclude_id="" game_id="" show_title="1" order="DESC" orderby="rating" title=""]');
+		?>
+	</div>
 	<div class="lb-layout__breadcrumbs">
 		<?php get_template_part('/theme-parts/molecules/breadcrumbs'); ?>
 	</div>

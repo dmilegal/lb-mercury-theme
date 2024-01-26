@@ -6,7 +6,7 @@ $title = $args['title'] ?? ($postId ? get_the_title($postId) : '');
 $subtitle = $args['subtitle'] ?? ($postId && has_excerpt($postId) ? get_the_excerpt($postId)  : '');
 $publishedDate = $args['published_date'] ?? ($postId ? get_the_date('Y-m-d', $postId) : '');
 $enablePublishedDate = $args['enable_published_date'] ?? true;
-$color = $args['color'] ?? 'transparent';
+$color = $args['color'] ?? 'gray';
 // 'center'
 $align = $args['align'] ?? 'left';
 

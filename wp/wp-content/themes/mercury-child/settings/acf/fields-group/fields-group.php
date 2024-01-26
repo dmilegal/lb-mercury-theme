@@ -6,3 +6,4 @@ require_once 'cpt-casino.php';
 require_once 'pages/pages.php';
 require_once 'blocks/blocks.php';
 require_once 'co-authors.php';
+require_once 'templates/templates.php';
