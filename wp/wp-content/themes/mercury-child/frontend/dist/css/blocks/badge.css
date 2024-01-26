@@ -13,7 +13,7 @@
   border-radius: 16px;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
   font-weight: 500;
   column-gap: calc(var(--wp--preset--spacing--70) / 2);
   background-color: var(--lb-badge--background--color);

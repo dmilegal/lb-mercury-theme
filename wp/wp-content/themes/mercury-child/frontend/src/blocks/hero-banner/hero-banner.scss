@@ -5,9 +5,15 @@
 
 body {
   --lb-hero-banner-color-background: var(--lb-color-surface-highest);
+  
 }
 
 .lb-hero-banner {
+  --lb-hero-banner-grid-col-template: var(--lb-layout-grid-col-template, repeat(12, 1fr));
+  --lb-hero-banner-gap-x: var(--lb-layout-grid-gap-x, var(--layout-content-spacing));
+  --lb-hero-banner-grid-col-start: var(--lb-layout-content-grid-col-start, 1);
+  --lb-hero-banner-grid-col-end: var(--lb-layout-content-grid-col-end, -1);
+
   padding-top: var(--wp--preset--spacing--280);
   padding-bottom: var(--wp--preset--spacing--155);
   background-color: var(--lb-hero-banner-color-background);
@@ -28,22 +34,35 @@ body {
       --lb-hero-banner-color-background: var(--lb-color-surface);
     }
     &_gray {
-      --lb-hero-banner-color-background: var(--lb-color-surface-high);
+      --lb-hero-banner-color-background: var(--lb-color-surface-highest);
     }
+  }
+
+  &--align {
+    &_center {
+      @include breakpoints.media-breakpoint-up(md) {
+        :where(%title) {
+          text-align: center;
+  
+        }
+        :where(%subtitle) {
+          text-align: center;
+        }
+      }
+      
+    }
+
   }
 
   &__inner {
     @include container.make-container-max-width();
     display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    column-gap: calc(var(--layout--content-spacing) / 2);
+    grid-template-columns: var(--lb-hero-banner-grid-col-template);
+    column-gap: var(--lb-hero-banner-gap-x);
   }
 
   &__content {
-    grid-column: 2 / 20;
-    @include breakpoints.media-breakpoint-down(md) {
-      grid-column: 1 / 21;
-    }
+    grid-column: var(--lb-hero-banner-grid-col-start) / var(--lb-hero-banner-grid-col-end);
   }
 
   &__publish-date {
@@ -58,9 +77,11 @@ body {
     @include font.get-text-styles('display-lg');
     font-weight: 500;
     margin-bottom: var(--wp--preset--spacing--100);
+    @extend %title;
   }
 
   &__subtitle {
     @include font.get-text-styles('text-xl');
+    @extend %subtitle;
   }
 }

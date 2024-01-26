@@ -56,6 +56,7 @@ body, .editor-styles-wrapper {
   letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
   display: flex;
   flex-direction: column;
+  padding-left: 0;
   row-gap: var(--wp--preset--spacing--90);
 }
 .lb-pros-cons-col li {

@@ -1,44 +1,75 @@
 @use '@/shared/styles/mixins/container';
 @use '@/shared/styles/mixins/breakpoints';
 
+body {
+  --lb-layout-grid-col-template: repeat(20, 1fr);
+  --lb-layout-grid-gap-x: calc(var(--layout-content-spacing) / 2);
+  --lb-layout-content-grid-col-start: 1;
+  --lb-layout-content-grid-col-end: -1;
+}
+
 .lb-layout {
   &--sticky-box {
+    --lb-layout-grid-col-template: repeat(12, 1fr);
+    --lb-layout-grid-gap-x: var(--layout-content-spacing);
+    --lb-layout-content-grid-col-start: 1;
+    --lb-layout-content-grid-col-end: -1;
+
     @include breakpoints.media-breakpoint-up(lg) {
+      --lb-layout-content-grid-col-start: 1;
+      --lb-layout-content-grid-col-end: 8;
+
       position: relative;
       %content {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: calc(var(--layout--content-spacing));
+        grid-template-columns: var(--lb-layout-grid-col-template);
+        column-gap: var(--lb-layout-grid-gap-x);
         & > * {
-          grid-column: 1/8;
+          grid-column: var(--lb-layout-content-grid-col-start) /
+            var(--lb-layout-content-grid-col-end);
         }
       }
     }
   }
 
   &--with-sidebar {
+    --lb-layout-grid-col-template: repeat(20, 1fr);
+    --lb-layout-grid-gap-x: calc(var(--layout-content-spacing) / 2);
+    --lb-layout-content-grid-col-start: 2;
+    --lb-layout-content-grid-col-end: 20;
+    
+    @include breakpoints.media-breakpoint-down(md) {
+      --lb-layout-content-grid-col-start: 1;
+      --lb-layout-content-grid-col-end: -1;
+    }
+
     %content,
     %breadcrumbs {
       display: grid;
-      grid-template-columns: repeat(20, 1fr);
-      column-gap: calc(var(--layout--content-spacing) / 2);
-
-      @include breakpoints.media-breakpoint-down(md) {
-        display: block;
-      }
+      grid-template-columns: var(--lb-layout-grid-col-template);
+      column-gap: var(--lb-layout-grid-gap-x);
     }
 
     %sidebar {
-      grid-column: 2/7;
+      grid-column: var(--lb-layout-content-grid-col-start) / 7;
+      @include breakpoints.media-breakpoint-down(md) {
+        grid-column: var(--lb-layout-content-grid-col-start) /
+          var(--lb-layout-content-grid-col-end);
+      }
     }
 
     %inner {
-      grid-column: 8/20;
+      grid-column: 8 / var(--lb-layout-content-grid-col-end);
+      @include breakpoints.media-breakpoint-down(md) {
+        grid-column: var(--lb-layout-content-grid-col-start) /
+          var(--lb-layout-content-grid-col-end);
+      }
     }
 
     %breadcrumbs {
       & > * {
-        grid-column: 2/20;
+        grid-column: var(--lb-layout-content-grid-col-start) /
+          var(--lb-layout-content-grid-col-end);
       }
     }
   }

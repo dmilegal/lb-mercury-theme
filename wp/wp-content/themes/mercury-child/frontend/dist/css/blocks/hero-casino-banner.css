@@ -40,8 +40,8 @@ body {
   margin-right: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: calc(var(--layout--content-spacing));
-  column-gap: calc(var(--layout--content-spacing));
+  grid-column-gap: var(--layout-content-spacing);
+  column-gap: var(--layout-content-spacing);
 }
 .lb-hero-casino-banner__content {
   grid-column: 1/-1;
@@ -148,8 +148,8 @@ body {
     margin-right: auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: calc(var(--layout--content-spacing));
-    column-gap: calc(var(--layout--content-spacing));
+    grid-column-gap: var(--layout-content-spacing);
+    column-gap: var(--layout-content-spacing);
   }
 }
 @media (min-width: 992px) {

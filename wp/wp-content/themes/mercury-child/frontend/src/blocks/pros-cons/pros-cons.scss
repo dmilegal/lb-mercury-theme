@@ -53,6 +53,7 @@ body, .editor-styles-wrapper {
       @include font.get-text-styles('text-md', false);
       display: flex;
       flex-direction: column;
+      padding-left: 0;
       row-gap: var(--wp--preset--spacing--90);
     }
 

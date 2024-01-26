@@ -125,7 +125,9 @@ body,
     padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100)
       var(--wp--preset--spacing--70);
     background-color: var(--lb-casino-card-promo-color-background);
-
+    @include breakpoints.media-breakpoint-down(sm) {
+      border-top: 1px solid var(--lb-casino-card-color-border);
+    }
     &__title {
       @include font.get-text-styles('text-xl', false);
       font-weight: 600;

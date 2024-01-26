@@ -5,9 +5,9 @@
 @use 'sass:map';
 
 body {
-  --layout--content-spacing: var(--wp--custom--layout--content-spacing-md);
+  --layout-content-spacing: var(--wp--custom--layout--content-spacing-md);
   @include breakpoints.media-breakpoint-down('sm') {
-    --layout--content-padding: var(--wp--custom--layout--content-spacing-sm);
+    --layout-content-spacing: var(--wp--custom--layout--content-spacing-sm);
   }
 
   --layout--content-padding: var(--wp--custom--layout--content-padding-md);

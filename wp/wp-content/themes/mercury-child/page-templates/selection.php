@@ -3,18 +3,16 @@
 /**
  * Template Name: Casino Selection Page
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
  */
 
 get_header(); ?>
-<div class="lb-layout">
+<div class="lb-layout lb-layout--with-sidebar">
 	<div class="lb-layout__banner">
 		<? get_template_part('theme-parts/cells/hero-banner', null, [
-			'title' => get_the_title(),
-			'subtitle' => 'Lucy Bond is an interior designer who started her career in New Zealand, working for large architectural firms. We chatted to her about design and starting her own studio.',
-			'published_date' => get_the_date('Y-m-d'),
+			'post_id' => get_the_id(),
+			'align' => 'center',
+			'enable_published_date' => false,
+			'color' => 'gray'
 		]); ?>
 	</div>
 
@@ -23,6 +21,9 @@ get_header(); ?>
 	</div>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="lb-layout__content">
+				<div class="lb-layout__sidebar">
+					<? get_template_part('theme-parts/organisms/sidebar/sidebar', null); ?>
+				</div>
 				<div class="lb-layout__inner">
 					<div class="prose-headings prose-content prose-spaces prose-colors">
 						<? the_content() ?>
@@ -34,7 +35,6 @@ get_header(); ?>
 						]); ?>
 					</div>
 					<div class="lb-layout__content-footer">
-
 						<? get_template_part('theme-parts/organisms/post-footer/post-footer', null); ?>
 					</div>
 				</div>

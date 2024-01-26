@@ -150,6 +150,11 @@ body,
   padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100) var(--wp--preset--spacing--70);
   background-color: var(--lb-casino-card-promo-color-background);
 }
+@media (max-width: 767.98px) {
+  .lb-casino-card-promo {
+    border-top: 1px solid var(--lb-casino-card-color-border);
+  }
+}
 .lb-casino-card-promo__title {
   font-size: var(--wp--preset--font-size--text-xl);
   line-height: var(--wp--custom--line-height--text-xl);
