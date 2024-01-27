@@ -8,9 +8,8 @@ $desc = $args['description'] ?? '';
 <div class="<?= classNames('lb-share-links', $className) ?>" style="<?= stylesValue(
                                                                       $style
                                                                     ) ?>">
-  <? get_template_part('theme-parts/atoms/button', null, [
-    'prefix' => '<i class="icon-link"></i>',
-    'variant' => 'outlined',
+  <? get_template_part('theme-parts/molecules/social-link', null, [
+    'icon' => 'link',
   ]); ?>
   <? get_template_part('theme-parts/molecules/social-link', null, [
     'icon' => 'twitter',

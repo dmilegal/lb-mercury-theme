@@ -16,6 +16,9 @@ switch ($icon) {
   case 'instagram':
     $icon = 'icon-instagram';
     break;
+  case 'link':
+    $icon = 'icon-link';
+    break;
   default:
     # code...
     break;

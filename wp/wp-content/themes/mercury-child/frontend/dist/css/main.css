@@ -2921,11 +2921,6 @@ body {
 .lb-layout__content-footer {
   margin-top: var(--wp--preset--spacing--140);
 }
-@media (min-width: 992px) {
-  .lb-layout__content-footer {
-    display: none;
-  }
-}
 .lb-layout__breadcrumbs {
   display: grid;
   grid-template-columns: var(--lb-layout-grid-col-template);

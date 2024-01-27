@@ -20,13 +20,7 @@
 						<? the_content() ?>
 						<?= do_shortcode('[show_wpb_author_info_box]'); ?>
 					</div>
-					<div class="lb-layout__content-taxs">
-						<? get_template_part('theme-parts/molecules/tag-list', null, [
-							'post_id' => get_the_ID()
-						]); ?>
-					</div>
 					<div class="lb-layout__content-footer">
-
 						<? get_template_part('theme-parts/organisms/post-footer/post-footer', null); ?>
 					</div>
 				</div>

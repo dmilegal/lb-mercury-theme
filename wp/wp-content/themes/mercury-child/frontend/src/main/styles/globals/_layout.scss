@@ -76,9 +76,6 @@ body {
 
     &-footer {
       margin-top: var(--wp--preset--spacing--140);
-      @include breakpoints.media-breakpoint-up(lg) {
-        display: none;
-      }
     }
 
   }
