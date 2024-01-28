@@ -2,7 +2,7 @@
 
 </div>
 <?php
-get_template_part('theme-parts/atoms/button', null, [
+/*get_template_part('theme-parts/atoms/button', null, [
 	'size' => 'sm',
 	'prefix' => '<i class="icon-circle"></i>',
 	'content' => 'Button CTA'
@@ -104,7 +104,7 @@ get_template_part('theme-parts/molecules/featured-icon', null, [
 	'variant' => 'outlined-bold',
 	'color' => 'primary',
 	'icon' => 'zap'
-]);
+]);*/
 ////
 
 get_template_part('theme-parts/organisms/footer/style-1');

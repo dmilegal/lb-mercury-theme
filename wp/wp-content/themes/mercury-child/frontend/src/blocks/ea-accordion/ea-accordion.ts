@@ -1,0 +1,1 @@
+import './ea-accordion.scss'

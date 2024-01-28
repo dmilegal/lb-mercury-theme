@@ -62,7 +62,7 @@ $job_title = get_field('job_title', 'user_' . $user_id);
         <? } ?>
 
     </div>
-    <? if ($showBio && $bio) { ?>
+    <? if (false && $showBio && $bio) { ?>
         <div class="lb-user-block__bio">
             <p>
                 <?= wp_kses_post($bio) ?>
