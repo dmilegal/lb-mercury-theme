@@ -69,6 +69,13 @@ body,
     padding-left: var(--wp--preset--spacing--140);
   }
 }
+.sp-easy-accordion.sp-easy-accordion.sp-easy-accordion.sp-easy-accordion .ea-body p {
+  color: var(--lb-color-text-default);
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+}
 .sp-easy-accordion.sp-easy-accordion.sp-easy-accordion.sp-easy-accordion [class^=ea-icon-]:before,
 .sp-easy-accordion.sp-easy-accordion.sp-easy-accordion.sp-easy-accordion [class*=" ea-icon-"]:before {
   margin: 0;

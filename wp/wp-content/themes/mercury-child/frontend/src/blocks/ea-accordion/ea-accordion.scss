@@ -73,6 +73,11 @@ body,
       @include breakpoints.media-breakpoint-down(sm) {
         padding-left: var(--wp--preset--spacing--140);
       }
+
+      p {
+        color: var(--lb-color-text-default);
+        @include font.get-text-styles('text-md', false);
+      }
     }
   }
 
