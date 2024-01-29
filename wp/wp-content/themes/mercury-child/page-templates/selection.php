@@ -21,7 +21,7 @@ get_header(); ?>
 		]); ?>
 	</div>
 
-	<div style="max-width:798px; padding:30px;">
+	<div style="max-width:798px; padding: 15px; margin: 10px auto;">
 		<?
 		$list = get_field('casino_list', get_the_id()) ?? [];
 		echo do_shortcode('[aces-casinos-8 items_number="10" external_link="1" category="" items_id="' . implode(',', $list) . '" exclude_id="" game_id="" show_title="1" order="DESC" orderby="rating" title=""]');
