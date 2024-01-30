@@ -6,11 +6,9 @@ $authorId = $post->post_author;
 ?>
 <div class="lb-sidebar not-prose">
 	<div class="lb-sidebar__inner">
-		<div class="lb-sidebar__block lb-sidebar__block--toc lb-sidebar__block--collapse lb-sidebar__block--state_opened">
+		<div class="lb-sidebar__block lb-sidebar__block--toc">
 			<button class="lb-sidebar__block-title">
 				<?= __('Table of contents', 'mercury-child') ?>
-				<i class="icon-minus-circle lb-sidebar__block-ico lb-sidebar__block-ico--opened"></i>
-				<i class="icon-plus-circle lb-sidebar__block-ico lb-sidebar__block-ico--closed"></i>
 			</button>
 			<div class="lb-sidebar__block-content">
 				<? get_template_part('theme-parts/molecules/toc'); ?>

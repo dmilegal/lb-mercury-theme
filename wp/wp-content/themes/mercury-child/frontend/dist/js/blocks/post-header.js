@@ -1,9 +1,9 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ "./src/blocks/sidebar/sidebar.scss":
-/*!*****************************************!*\
-  !*** ./src/blocks/sidebar/sidebar.scss ***!
-  \*****************************************/
+/***/ "./src/blocks/post-header/post-header.scss":
+/*!*************************************************!*\
+  !*** ./src/blocks/post-header/post-header.scss ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -54,13 +54,13 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!***************************************!*\
-  !*** ./src/blocks/sidebar/sidebar.ts ***!
-  \***************************************/
+/*!***********************************************!*\
+  !*** ./src/blocks/post-header/post-header.ts ***!
+  \***********************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _sidebar_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sidebar.scss */ "./src/blocks/sidebar/sidebar.scss");
+/* harmony import */ var _post_header_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./post-header.scss */ "./src/blocks/post-header/post-header.scss");
 
 })();
 
 
-//# sourceMappingURL=sidebar.js.map
+//# sourceMappingURL=post-header.js.map

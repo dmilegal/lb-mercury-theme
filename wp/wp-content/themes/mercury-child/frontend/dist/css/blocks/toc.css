@@ -7,9 +7,20 @@
 /**
 * font
 **/
-body {
+.lb-toc--variant_default {
   --lb-toc-link-color-text: var(--lb-color-text-default);
   --lb-toc-link-color-text-hover: var(--wp--preset--color--primary-600);
+  --lb-toc-item-gap-y: var(--wp--preset--spacing--70);
+}
+@media (max-width: 767.98px) {
+  .lb-toc--variant_default {
+    --lb-toc-item-gap-y: var(--wp--preset--spacing--80);
+  }
+}
+.lb-toc--variant_contrast {
+  --lb-toc-link-color-text: var(--lb-color-on-surface);
+  --lb-toc-link-color-text-hover: var(--wp--preset--color--primary-600);
+  --lb-toc-item-gap-y: var(--wp--preset--spacing--90);
 }
 
 .ez-toc-counter {
@@ -44,12 +55,7 @@ body {
   }
 }
 .ez-toc-list li {
-  margin: var(--wp--preset--spacing--70) 0;
-}
-@media (max-width: 767.98px) {
-  .ez-toc-list li {
-    margin: var(--wp--preset--spacing--80) 0;
-  }
+  margin: var(--lb-toc-item-gap-y) 0;
 }
 .ez-toc-list li:first-child {
   margin-top: 0;

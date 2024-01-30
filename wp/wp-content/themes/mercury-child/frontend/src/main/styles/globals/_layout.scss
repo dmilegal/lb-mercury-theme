@@ -36,7 +36,8 @@ body {
     }
 
     %sidebar {
-      grid-column: var(--lb-layout-content-grid-col-start) / 7;
+      grid-row: 1 / -1;
+      grid-column: 15 / span 5;
       @include breakpoints.media-breakpoint-down(md) {
         grid-column: var(--lb-layout-content-grid-col-start) /
           var(--lb-layout-content-grid-col-end);
@@ -44,7 +45,8 @@ body {
     }
 
     %inner {
-      grid-column: 8 / var(--lb-layout-content-grid-col-end);
+      grid-row: 1 / -1;
+      grid-column: var(--lb-layout-content-grid-col-start) / span 12;
       @include breakpoints.media-breakpoint-down(md) {
         grid-column: var(--lb-layout-content-grid-col-start) /
           var(--lb-layout-content-grid-col-end);
@@ -56,12 +58,23 @@ body {
     background-color: var(--lb-layout-banner-color-background);
   }
 
-  &__content {
+  &__content, &__precontent {
     display: grid;
     grid-template-columns: var(--lb-layout-grid-col-template);
     column-gap: var(--lb-layout-grid-gap-x);
-    background-color: var(--lb-layout-content-color-background);
     @include container.make-container-max-width();
+    
+  }
+
+  &__precontent {
+    &-inner {
+      grid-column: var(--lb-layout-content-grid-col-start) /
+        var(--lb-layout-content-grid-col-end);
+    }
+  }
+
+  &__content {
+    background-color: var(--lb-layout-content-color-background);
     padding-top: var(--wp--preset--spacing--155);
     padding-bottom: var(--wp--preset--spacing--155);
     @include breakpoints.media-breakpoint-down(md) {
@@ -69,22 +82,21 @@ body {
       padding-bottom: var(--wp--preset--spacing--120);
     }
 
-    & > * {
-      grid-column: var(--lb-layout-content-grid-col-start) /
-        var(--lb-layout-content-grid-col-end);
-    }
-
     &-footer {
       margin-top: var(--wp--preset--spacing--140);
     }
-
   }
 
   &__sidebar {
+    @include breakpoints.media-breakpoint-down(md) {
+      display: none;
+    }
     @extend %sidebar;
   }
 
   &__inner {
+    grid-column: var(--lb-layout-content-grid-col-start) /
+        var(--lb-layout-content-grid-col-end);
     @extend %inner;
   }
 

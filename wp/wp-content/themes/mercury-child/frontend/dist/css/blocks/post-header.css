@@ -1,0 +1,38 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/post-header/post-header.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body {
+  --lb-post-header-block-title-color-text: var(--lb-color-on-surface);
+  --lb-post-header-soc-color-border: var(--lb-color-surface-outline-1);
+}
+
+.lb-post-header {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--wp--preset--spacing--140);
+}
+.lb-post-header__block--toc {
+  padding: var(--wp--preset--spacing--85) 0;
+}
+@media (min-width: 992px) {
+  .lb-post-header__block--on_md {
+    display: none;
+  }
+}
+.lb-post-header__block-title {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  color: var(--lb-post-header-block-title-color-text);
+  font-weight: 600;
+  margin-bottom: var(--wp--preset--spacing--75);
+}
+
+/*# sourceMappingURL=post-header.css.map*/
