@@ -1888,13 +1888,14 @@ body {
   margin-bottom: var(--wp--preset--spacing--100);
 }
 
-.prose-spaces :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  margin: var(--wp--preset--spacing--100) 0;
+.prose-spaces :where(.lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--100);
+  margin-bottom: var(--wp--preset--spacing--100);
 }
-.prose-spaces :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+.prose-spaces :where(.lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
   margin-bottom: 0;
 }
-.prose-spaces :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+.prose-spaces :where(.lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
   margin-top: 0;
 }
 
@@ -1906,7 +1907,7 @@ body {
   color: var(--lb-ui-color-link-text);
 }
 
-.prose-colors :where(p, ul):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.prose-colors :where(p, ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--lb-ui-color-text);
 }
 
@@ -2067,11 +2068,37 @@ body {
 }*/
 .prose-content :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) {
   max-width: 100%;
-  height: auto !important;
+  height: auto;
 }
 
 .size-full:not(:where(.alignleft, .alignright)) {
   width: 100%;
+}
+
+.wp-block-media-text.wp-block-media-text {
+  column-gap: var(--wp--preset--spacing--140);
+  row-gap: var(--wp--preset--spacing--85);
+  margin-top: var(--wp--preset--spacing--100);
+  margin-bottom: var(--wp--preset--spacing--100);
+}
+@media (max-width: 575.98px) {
+  .wp-block-media-text.wp-block-media-text .wp-block-media-text__media {
+    text-align: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .wp-block-media-text.wp-block-media-text .wp-block-media-text__media img {
+    max-width: 100%;
+    width: auto;
+  }
+}
+.wp-block-media-text.wp-block-media-text .wp-block-media-text__content {
+  padding: 0;
+}
+
+.wp-block-separator.wp-block-separator {
+  color: var(--lb-color-surface-outline-2);
+  border: 1px solid currentColor;
 }
 
 /*!

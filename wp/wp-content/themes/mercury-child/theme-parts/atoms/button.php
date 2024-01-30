@@ -20,7 +20,7 @@ $rel = $args['rel'] ?? null;
 
 $tag = $href ? 'a' : 'button';
 
-$attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'id'])));
+$attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'id', 'title'])));
 
 ?>
 

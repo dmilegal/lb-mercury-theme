@@ -22,12 +22,14 @@ function enqueue_main_assets()
 {
   enqueue_assets_by_name('main');
 
-  wp_enqueue_style('ea-accordion', '',['sp-ea-style']);
-
+  // style ea accordion plugin
+  wp_enqueue_style('ea-accordion', '', ['sp-ea-style']);
+  
   //wp_enqueue_script( 'jquery-fix', get_stylesheet_directory_uri() . '/js/libs/jquery-fix.js', array() );
   //wp_enqueue_script('child-scripts', get_stylesheet_directory_uri() . '/js/child-scripts.js', array('jquery'));
 }
 add_action('wp_enqueue_scripts', 'enqueue_main_assets', 9);
+
 
 // Enqueue components assets
 function enqueue_components_assets($slug, $name, $args)

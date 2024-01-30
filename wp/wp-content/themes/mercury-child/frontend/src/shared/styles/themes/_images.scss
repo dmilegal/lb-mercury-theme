@@ -4,5 +4,5 @@ $proseCustomSelector: null !default;
 
 @include typo.make-prose('content', 'img', $proseCustomSelector) {
   max-width: 100%;
-  height: auto !important;
+  height: auto;
 }

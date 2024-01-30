@@ -95,8 +95,9 @@ $proseCustomSelector: null !default;
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-@include typo.make-prose('spaces', '.lb-author-block', $proseCustomSelector) {
-  margin: var(--wp--preset--spacing--100) 0;
+@include typo.make-prose('spaces', '.lb-author-block, [id*="sp_easy_accordion"]', $proseCustomSelector) {
+  margin-top: var(--wp--preset--spacing--100);
+  margin-bottom: var(--wp--preset--spacing--100);
   &:last-child {
     margin-bottom: 0;
   }
@@ -105,7 +106,7 @@ $proseCustomSelector: null !default;
   }
 }
 
-@include typo.make-prose('colors', 'h1,h2,h3,h4,h5,h6', $proseCustomSelector) {
+@include typo.make-prose('colors', 'h1, h2, h3, h4, h5, h6', $proseCustomSelector) {
   color: var(--lb-ui-color-heading-text);
 }
 
@@ -113,7 +114,7 @@ $proseCustomSelector: null !default;
   color: var(--lb-ui-color-link-text);
 }
 
-@include typo.make-prose('colors', 'p,ul', $proseCustomSelector) {
+@include typo.make-prose('colors', 'p, ul, ol', $proseCustomSelector) {
   color: var(--lb-ui-color-text);
 }
 
