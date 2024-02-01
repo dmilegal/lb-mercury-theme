@@ -45,6 +45,20 @@ add_action('acf/include_fields', function () {
           'value' => 'news',
         ),
       ),
+      array(
+        array(
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'casino',
+        ),
+      ),
+      array(
+        array(
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'page',
+        ),
+      ),
     ),
     'menu_order' => 0,
     'position' => 'side',
