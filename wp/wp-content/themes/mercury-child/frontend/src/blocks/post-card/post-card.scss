@@ -1,0 +1,88 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+body {
+  --lb-post-card-info-color-text: var(--lb-color-text-default);
+  --lb-post-card-title-color-text: var(--lb-color-text-strong);
+  --lb-post-card-title-color-text-hover: var(--lb-color-text-default);
+  --lb-post-card-excerpt-color-text: var(--lb-color-text-default);
+}
+
+.lb-post-card {
+  &--grid {
+    %inner {
+      display: grid;
+      grid-template-columns: var(--wp--preset--spacing--560) 1fr;
+      column-gap: var(--wp--preset--spacing--100);
+      row-gap: var(--wp--preset--spacing--80);
+      @include breakpoints.media-breakpoint-down(xs) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &--no-thumb {
+    %inner {
+      display: block;
+    }
+  }
+
+  &__inner {
+    @extend %inner;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: var(--wp--preset--spacing--70);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    display: flex;
+    column-gap: var(--wp--preset--spacing--80);
+    row-gap: var(--wp--preset--spacing--50);
+    color: var(--lb-post-card-info-color-text);
+    @include font.get-text-styles('text-xs', false);
+    margin-bottom: var(--wp--preset--spacing--60);
+    &-item {
+      display: flex;
+      column-gap: var(--wp--preset--spacing--55);
+    }
+
+    i {
+      font-size: font.font-size-by-name('text-md', false);
+      line-height: 1em;
+    }
+  }
+
+  &__title {
+    display: block;
+    @include font.get-text-styles('display-xs', false);
+    font-weight: 500;
+    color: var(--lb-post-card-title-color-text);
+    margin-bottom: var(--wp--preset--spacing--70);
+    text-decoration: none;
+    transition: color 160ms ease-in-out;
+    &:hover {
+      color: var(--lb-post-card-title-color-text-hover);
+    }
+  }
+
+  &__excerpt {
+    @include font.get-text-styles('text-md', false);
+    color: var(--lb-post-card-excerpt-color-text);
+    margin-bottom: var(--wp--preset--spacing--80);
+  }
+
+  &__read-more {
+    @include font.get-text-styles('text-md', false);
+    color: var(--lb-color-action-text-default);
+    text-decoration: none;
+  }
+}

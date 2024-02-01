@@ -4,6 +4,7 @@ $style = $args['style'] ?? '';
 $postId =  $args['post_id'] ?? null;
 $title = $args['title'] ?? ($postId ? get_the_title($postId) : '');
 $subtitle = $args['subtitle'] ?? ($postId && has_excerpt($postId) ? get_the_excerpt($postId)  : '');
+$textContent = $args['text_content'] ?? '';
 $publishedDate = $args['published_date'] ?? ($postId ? get_the_date('Y-m-d', $postId) : '');
 $enablePublishedDate = $args['enable_published_date'] ?? true;
 $color = $args['color'] ?? 'gray';
@@ -34,9 +35,14 @@ $align = $args['align'] ?? 'left';
         </h1>
       <? } ?>
       <? if ($subtitle) { ?>
-        <p class="lb-hero-banner__subtitle">
+        <div class="lb-hero-banner__subtitle">
           <?= $subtitle ?>
-        </p>
+        </div>
+      <? } ?>
+      <? if ($textContent) { ?>
+        <div class="lb-hero-banner__text-content prose-content prose-spaces prose-colors">
+          <?= $textContent ?>
+        </div>
       <? } ?>
     </div>
   </div>

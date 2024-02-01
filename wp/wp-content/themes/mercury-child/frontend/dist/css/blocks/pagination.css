@@ -1,0 +1,140 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/pagination/pagination.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body {
+  --lb-pagination-num-color-background: transparent;
+  --lb-pagination-num-color-text: var(--lb-color-on-surface-lowest);
+  --lb-pagination-num-color-background-active: var(--lb-color-primary-container-low);
+  --lb-pagination-num-color-text-active: var(--lb-color-primary);
+  --lb-pagination-num-color-background-hover: var(--lb-color-primary-container-low);
+  --lb-pagination-num-color-text-hover: var(--lb-color-primary);
+  --lb-pagination-num-color-outline: var(--lb-color-primary-outline-low);
+  --lb-pagination-btn-color-text: var(--lb-color-on-surface-lowest);
+  --lb-pagination-btn-color-text-active: var(--lb-color-primary-tint);
+}
+
+.lb-pagination {
+  display: inline-block;
+}
+.lb-pagination__v {
+  display: inline-block;
+}
+@media (max-width: 767.98px) {
+  .lb-pagination__v--large {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .lb-pagination__v--small {
+    display: none;
+  }
+}
+.lb-pagination__btn {
+  display: inline-flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--60);
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  font-weight: 500;
+}
+@media (max-width: 767.98px) {
+  .lb-pagination__btn {
+    padding: var(--wp--preset--spacing--50);
+  }
+}
+.lb-pagination__btn i {
+  font-size: var(--wp--preset--font-size--text-xl);
+  line-height: 1em;
+}
+@media (max-width: 767.98px) {
+  .lb-pagination__btn i {
+    font-size: var(--wp--preset--font-size--display-xs);
+  }
+}
+@media (max-width: 767.98px) {
+  .lb-pagination__btn span {
+    display: none;
+  }
+}
+.lb-pagination .nav-links {
+  display: flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--45);
+}
+@media (max-width: 767.98px) {
+  .lb-pagination .nav-links {
+    column-gap: 0;
+  }
+}
+.lb-pagination .next,
+.lb-pagination .prev {
+  display: inline-flex;
+  color: var(--lb-pagination-btn-color-text);
+  transition: color 160ms ease-in-out;
+}
+.lb-pagination .next:hover, .lb-pagination .next:focus-visible,
+.lb-pagination .prev:hover,
+.lb-pagination .prev:focus-visible {
+  color: var(--lb-pagination-btn-color-text-active);
+}
+.lb-pagination .prev {
+  margin-right: var(--wp--preset--spacing--190);
+}
+@media (max-width: 767.98px) {
+  .lb-pagination .prev {
+    margin-right: var(--wp--preset--spacing--120);
+  }
+}
+.lb-pagination .next {
+  margin-left: var(--wp--preset--spacing--190);
+}
+@media (max-width: 767.98px) {
+  .lb-pagination .next {
+    margin-left: var(--wp--preset--spacing--120);
+  }
+}
+.lb-pagination .page-numbers {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+.lb-pagination .page-numbers:not(:where(.next, .prev)) {
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: var(--wp--preset--spacing--140);
+  height: var(--wp--preset--spacing--140);
+  font-weight: 500;
+  background-color: var(--lb-pagination-num-color-background);
+  color: var(--lb-pagination-num-color-text);
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  transition: color 160ms ease-in-out, background-color 160ms ease-in-out;
+}
+.lb-pagination .page-numbers:not(:where(.next, .prev, .dots)).current {
+  background-color: var(--lb-pagination-num-color-background-active);
+  color: var(--lb-pagination-num-color-text-active);
+}
+.lb-pagination .page-numbers:not(:where(.next, .prev, .dots)):hover, .lb-pagination .page-numbers:not(:where(.next, .prev, .dots)):focus-visible {
+  background-color: var(--lb-pagination-num-color-background-hover);
+  color: var(--lb-pagination-num-color-text-hover);
+}
+.lb-pagination .page-numbers:not(:where(.next, .prev, .dots)):focus-visible {
+  outline: none;
+  box-shadow: 0px 0px 0px 4px var(--lb-pagination-num-color-outline);
+}
+
+/*# sourceMappingURL=pagination.css.map*/

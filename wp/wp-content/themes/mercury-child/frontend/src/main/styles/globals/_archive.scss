@@ -1,0 +1,10 @@
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/breakpoints';
+@use '@/shared/styles/mixins/font';
+
+.lb-archive {
+  &__pag {
+    text-align: center;
+    margin-top: var(--wp--preset--spacing--130);
+  }
+}

@@ -420,6 +420,11 @@
             },
             "spacingSizes": [
                 {
+                    "size": "2px",
+                    "slug": "45",
+                    "name": "2px"
+                },
+                {
                     "size": "6px",
                     "slug": "55",
                     "name": "6px"
@@ -443,6 +448,11 @@
                     "size": "26px",
                     "slug": "105",
                     "name": "26px"
+                },
+                {
+                    "size": "30px",
+                    "slug": "115",
+                    "name": "30px"
                 },
                 {
                     "size": "46px",
