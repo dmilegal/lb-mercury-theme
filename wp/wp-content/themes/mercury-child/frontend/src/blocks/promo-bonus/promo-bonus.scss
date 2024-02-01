@@ -7,6 +7,8 @@ body {
   --lb-promo-bonus-title-color-text: var(--lb-color-primary);
   --lb-promo-bonus-subtitle-color-text: var(--lb-color-text-strong);
   --lb-promo-bonus-tc-color-text: var(--lb-color-on-primary-container);
+
+  --lb-promo-bonus-tc-extra-color-text: var(--lb-color-text-default);
 }
 
 .lb-promo-bonus {
@@ -24,6 +26,9 @@ body {
     font-weight: 700;
     color: var(--lb-promo-bonus-title-color-text);
     margin-bottom: var(--wp--preset--spacing--70);
+    &:last-child {
+      margin-bottom: 0;
+    }
     @include breakpoints.media-breakpoint-down(sm) {
       @include font.get-text-styles('text-sm', false);
     }
@@ -34,6 +39,9 @@ body {
     font-weight: 500;
     color: var(--lb-promo-bonus-subtitle-color-text);
     margin-bottom: var(--wp--preset--spacing--120);
+    &:last-child {
+      margin-bottom: 0;
+    }
     @include breakpoints.media-breakpoint-down(sm) {
       @include font.get-text-styles('display-xs', false);
     }
@@ -46,6 +54,9 @@ body {
     column-gap: var(--wp--preset--spacing--80);
     row-gap: var(--wp--preset--spacing--80);
     margin-bottom: var(--wp--preset--spacing--120);
+    &:last-child {
+      margin-bottom: 0;
+    }
     & > * {
       flex-grow: 1;
       @include breakpoints.media-breakpoint-down(sm) {
@@ -57,8 +68,14 @@ body {
     }
   }
 
-  &__tc {
+  &__tc-link {
     @include font.get-text-styles('text-sm', false);
     color: var(--lb-promo-bonus-tc-color-text);
+  }
+
+  &__tc-extra {
+    @include font.get-text-styles('text-xs', false);
+    color: var(--lb-promo-bonus-tc-extra-color-text);
+    margin-top: var(--wp--preset--spacing--60);
   }
 }

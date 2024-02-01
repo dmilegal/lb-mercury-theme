@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Casino Selection Page
+ * Template Name: Casino Selection
  *
  */
-get_template_part('theme-parts/templates/casino/default-with-selection');
+get_template_part('theme-parts/templates/page/default-with-selection');

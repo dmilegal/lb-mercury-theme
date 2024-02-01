@@ -70,6 +70,10 @@ body {
     }
   }
 
+  &__relative {
+    position: relative;
+  }
+
   &__banner {
     background-color: var(--lb-layout-banner-color-background);
   }

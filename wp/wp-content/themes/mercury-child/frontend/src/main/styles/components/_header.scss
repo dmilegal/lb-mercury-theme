@@ -93,7 +93,7 @@ body {
   }
 
   &__navigation {
-    @include font.get-text-styles('text-md');
+    @include font.get-text-styles('text-md', false);
     font-weight: 600;
     height: 100%;
     @include breakpoints.media-breakpoint-down('lg') {

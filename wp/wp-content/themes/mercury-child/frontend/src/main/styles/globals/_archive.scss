@@ -2,9 +2,28 @@
 @use '@/shared/styles/mixins/breakpoints';
 @use '@/shared/styles/mixins/font';
 
+body {
+  --lb-archive-nf-title-color-text: var(--lb-color-text-strong);
+  --lb-archive-nf-subtitle-color-text: var(--lb-color-text-default);
+}
+
+
 .lb-archive {
   &__pag {
     text-align: center;
     margin-top: var(--wp--preset--spacing--130);
+  }
+
+  &-not-found {
+    &__title {
+      @include font.get-text-styles('display-xs');
+      color: var(--lb-archive-nf-title-color-text);
+      margin-bottom: var(--wp--preset--spacing--60)
+    }
+
+    &__subtitle {
+      color: var(--lb-archive-nf-subtitle-color-text);
+      @include font.get-text-styles('text-lg');
+    }
   }
 }
