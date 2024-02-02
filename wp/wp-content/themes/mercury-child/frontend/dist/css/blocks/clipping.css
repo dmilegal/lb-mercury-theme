@@ -1,0 +1,67 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/clipping/clipping.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body {
+  --lb-clipping-clip-line-count: 5;
+}
+
+.lb-clipping--hidden .lb-clipping__actions {
+  display: grid;
+}
+.lb-clipping--hidden .lb-clipping__toggle--more {
+  visibility: visible;
+  pointer-events: all;
+}
+.lb-clipping--showed .lb-clipping__actions {
+  display: grid;
+}
+.lb-clipping--showed .lb-clipping__content {
+  -webkit-line-clamp: 999;
+}
+.lb-clipping--showed .lb-clipping__toggle--less {
+  visibility: visible;
+  pointer-events: all;
+}
+.lb-clipping__content {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--lb-clipping-clip-line-count);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.lb-clipping__actions {
+  display: none;
+  grid-template-columns: auto;
+  margin-top: var(--wp--preset--spacing--60);
+}
+.lb-clipping__actions > * {
+  pointer-events: none;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+.lb-clipping__toggle {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--60);
+  pointer-events: none;
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  color: var(--hero-casino-banner-toggle-color-text);
+  font-weight: 600;
+  visibility: hidden;
+}
+.lb-clipping__ico {
+  font-size: var(--wp--preset--font-size--text-lg);
+}
+
+/*# sourceMappingURL=clipping.css.map*/

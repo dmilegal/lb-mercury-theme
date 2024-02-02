@@ -1,0 +1,77 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+body {
+  --lb-clipping-clip-line-count: 5;
+}
+
+.lb-clipping {
+  &--hidden {
+    %actions {
+      display: grid;
+    }
+    %more {
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+  &--showed {
+    %actions {
+      display: grid;
+    }
+    %content {
+      -webkit-line-clamp: 999;
+    }
+    %less {
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+
+  &__content {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--lb-clipping-clip-line-count);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @extend %content;
+  }
+
+  &__actions {
+    display: none;
+    grid-template-columns: auto;
+    margin-top: var(--wp--preset--spacing--60);
+    & > * {
+      pointer-events: none;
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+    }
+
+    @extend %actions;
+  }
+
+  &__toggle {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    column-gap: var(--wp--preset--spacing--60);
+    pointer-events: none;
+    @include font.get-text-styles('text-sm', false);
+    color: var(--hero-casino-banner-toggle-color-text);
+    font-weight: 600;
+    visibility: hidden;
+    &--more {
+      @extend %more;
+    }
+    &--less {
+      @extend %less;
+    }
+  }
+
+  &__ico {
+    font-size: font.font-size-by-name('text-lg', false);
+  }
+}

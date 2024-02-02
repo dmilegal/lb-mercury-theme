@@ -32,8 +32,9 @@ $casino_allowed_html = array(
   'li' => array(),
 );
 
-$casino_restricted_countries = wp_get_object_terms($post->ID, 'restricted-country');
-$casino_licences = wp_get_object_terms($post->ID, 'licence');
+$casino_short_desc = wp_kses(get_post_meta($casinoId, 'casino_short_desc', true), $casino_allowed_html);
+$casino_restricted_countries = wp_get_object_terms($casinoId, 'restricted-country');
+$casino_licences = wp_get_object_terms($casinoId, 'licence');
 $bonus_fields = get_field('bonus_fields');
 $casino_detailed_tc = wp_kses(get_post_meta($casinoId, 'casino_detailed_tc', true), $casino_allowed_html);
 $overall_rating = esc_html(get_post_meta($casinoId, 'casino_overall_rating', true));
@@ -124,13 +125,12 @@ $overall_rating = esc_html(get_post_meta($casinoId, 'casino_overall_rating', tru
           </div>
         </div>
       </div>
-      <? if ($casino_detailed_tc) { ?>
-        <div class="prose-content prose-colors">
-          <p class="lb-hero-casino-banner__tc">
-            <?= wp_kses($casino_detailed_tc, $casino_allowed_html); ?>
-          </p>
-        </div>
-
+      <? if ($casino_short_desc) { ?>
+        <? get_template_part('theme-parts/cells/clipping', null, [
+          'content' => '<div class="lb-hero-casino-banner__desc prose-content prose-colors">
+                ' . wp_kses($casino_short_desc, $casino_allowed_html) . '
+              </div>'
+        ]); ?>
       <? } ?>
     </div>
   </div>

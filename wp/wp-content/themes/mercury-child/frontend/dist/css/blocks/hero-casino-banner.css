@@ -13,6 +13,8 @@ body {
   --hero-casino-banner-color-background: var(--lb-color-surface-high);
   --hero-casino-banner-info-title-color-text: var(--lb-color-primary);
   --hero-casino-banner-info-value-color-text: var(--lb-color-text-strong);
+  --hero-casino-banner-desc-color-text: var(--lb-color-text-default);
+  --hero-casino-banner-toggle-color-text: var(--lb-color-text-default);
 }
 @media (max-width: 767.98px) {
   body {
@@ -122,6 +124,13 @@ body {
   letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
   line-height: 0;
   font-weight: 600;
+}
+.lb-hero-casino-banner__desc {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  color: var(--hero-casino-banner-desc-color-text);
 }
 .lb-hero-casino-banner-promo {
   margin-bottom: var(--wp--preset--spacing--160);
