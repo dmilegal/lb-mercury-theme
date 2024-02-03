@@ -96,11 +96,12 @@ if ($casino_permalink_button_title) {
       <div class="lb-casino-card-promo__actions">
         <?
         if (!empty($bonusFields['promo_code']))
-          get_template_part('theme-parts/atoms/button', null, [
+          get_template_part('theme-parts/molecules/promo-button', null, [
             'size' => 'md',
             'variant' => 'outlined',
             'content' => __('Copy Promo', 'mercury-child'),
             'prefix' => '<i class="icon-copy"></i>',
+            'code' => $bonusFields['promo_code'],
             'className' => 'lb-casino-card__copy'
           ]);
 

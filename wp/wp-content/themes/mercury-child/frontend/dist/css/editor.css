@@ -1433,6 +1433,7 @@ body {
   --lb-color-surface-max: var(--wp--preset--color--gray-200);
   --lb-color-surface-outline-1: var(--wp--preset--color--gray-200);
   --lb-color-surface-outline-2: var(--wp--preset--color--gray-300);
+  --lb-color-surface-outline-highest: var(--wp--preset--color--gray-900);
   --lb-color-on-surface-highest: var(--wp--preset--color--gray-900);
   --lb-color-on-surface-high: var(--wp--preset--color--gray-800);
   --lb-color-on-surface: var(--wp--preset--color--gray-700);

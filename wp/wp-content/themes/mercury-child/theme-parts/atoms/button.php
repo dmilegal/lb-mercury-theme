@@ -20,12 +20,11 @@ $rel = $args['rel'] ?? null;
 
 $tag = $href ? 'a' : 'button';
 
-$attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'id', 'title', 'data'])));
+$attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'id', 'title', 'data', 'aria'])));
 
 ?>
 
-<<?= $tag ?> class="
-  <?= classNames(
+<<?= $tag ?> class="<?= classNames(
     'lb-button',
     $className,
     'lb-button--size_' . $size,

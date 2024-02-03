@@ -52,13 +52,13 @@ if (!hasCasinoBonus($casinoId)) return;
       <div class="lb-promo-bonus__actions">
         <?
         if (!empty($bonusFields['promo_code']))
-          get_template_part('theme-parts/atoms/button', null, [
+          get_template_part('theme-parts/molecules/promo-button', null, [
             'size' => 'xl',
             'variant' => 'outlined',
             'content' => __('Copy Promo', 'mercury-child'),
             'prefix' => '<i class="icon-copy"></i>',
             'className' => 'lb-promo-bonus__copy',
-            'value' => $bonusFields['promo_code']
+            'code' => $bonusFields['promo_code'],
           ]);
 
         if (!empty($bonusFields['bonus_link']))
