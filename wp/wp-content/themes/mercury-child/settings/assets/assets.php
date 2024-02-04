@@ -27,6 +27,9 @@ function enqueue_main_assets()
 
   // style cmplz plugin
   wp_enqueue_style('cookie-banner', '', ['cmplz-general']);
+
+  // style age gate plugin
+  wp_enqueue_style('age-gate-banner', '', ['age-gate']);
   
   //wp_enqueue_script( 'jquery-fix', get_stylesheet_directory_uri() . '/js/libs/jquery-fix.js', array() );
   //wp_enqueue_script('child-scripts', get_stylesheet_directory_uri() . '/js/child-scripts.js', array('jquery'));

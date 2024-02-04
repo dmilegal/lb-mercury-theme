@@ -124,7 +124,7 @@
           --lb-button--background--color--disabled: var(
             --wp--preset--color--#{$colorName}-200
           );
-          --lb-button--color: var(--wp--preset--color--white);
+          --lb-button--color: var(--lb-color-on-#{$colorName});
           --lb-button--color--disabled: var(--wp--preset--color--white);
           --lb-button--outline--color--focus: var(
             --wp--preset--color--#{$colorName}-100

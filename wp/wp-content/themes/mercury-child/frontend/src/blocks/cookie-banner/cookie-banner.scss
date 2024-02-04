@@ -47,6 +47,7 @@ body {
       border-radius: 8px;
       @include font.get-text-styles('text-md');
       padding: 10px 18px;
+      font-weight: 600;
       transition:
         color 160ms ease-in-out,
         background-color 160ms ease-in-out,

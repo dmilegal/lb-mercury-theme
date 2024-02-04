@@ -53,6 +53,7 @@ body {
   letter-spacing: inherit;
   letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
   padding: 10px 18px;
+  font-weight: 600;
   transition: color 160ms ease-in-out, background-color 160ms ease-in-out, border-color 160ms ease-in-out;
 }
 .cmplz-cookiebanner.cmplz-cookiebanner .cmplz-buttons .cmplz-btn:hover, .cmplz-cookiebanner.cmplz-cookiebanner .cmplz-buttons .cmplz-btn:focus {
