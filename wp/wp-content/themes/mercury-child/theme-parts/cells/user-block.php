@@ -3,40 +3,39 @@ global $post;
 $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
 
-$user_id = $args['user_id'] ?? null;
+$userId = $args['user_id'] ?? null;
 // 'sm' | 'md' | 'lg' | 'xl'
 $size = $args['size'] ?? 'md';
 $showBio = $args['show_bio'] ?? false;
 $showSocials = $args['show_socials'] ?? false;
 
 // Detect if it is a single post with a post author
-if (!$user_id)
+if (!$userId)
     return;
 
+
+$user = get_userdata($userId);
 // Get author's display name
-$display_name = get_the_author_meta('display_name', $user_id);
+$display_name = $user->display_name;
 
 // If display name is not available then use nickname as display name
 if (empty($display_name))
-    $display_name = get_the_author_meta('nickname', $user_id);
+    $display_name = $user->nickname;
 
 // Get author's biographical information or description
-$user_description = get_the_author_meta('user_description', $user_id);
+$user_description = $user->user_description;
 
 // Get author's social media URL
-$soc_links = getUserSocLinks($user_id);
+$soc_links = getUserSocLinks($userId);
 
-// Get link to the author archive page
-$user_posts = get_author_posts_url(get_the_author_meta('ID', $user_id));
+$bio = get_field('short_biographical_info', 'user_' . $userId);
 
-$bio = get_field('short_biographical_info', 'user_' . $user_id);
-
-$job_title = get_field('job_title', 'user_' . $user_id);
+$job_title = get_field('job_title', 'user_' . $userId);
 ?>
 <div class="<?= classNames($className, 'lb-user-block not-prose', 'lb-user-block--size_' . $size) ?>" style="<?= stylesValue($style) ?>">
     <div class="lb-user-block__head">
         <div class="lb-user-block__head-left">
-            <?= get_avatar(get_the_author_meta('user_email', $user_id), 56, '', '', [
+            <?= get_avatar($userId, 56, '', '', [
                 'class' => 'lb-user-block__avatar'
             ]) ?>
             <div class="<?= classNames("lb-user-block__info", !$job_title ? "lb-user-block__info--one-line" : '') ?>">

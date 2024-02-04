@@ -1,0 +1,81 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+body {
+  --lb-hero-author-banner-color-background: var(--lb-color-surface-high);
+  --lb-hero-author-banner-name-color-text: var(--lb-color-text-strong);
+  --lb-hero-author-banner-bio-color-text: var(--lb-color-text-default);
+}
+
+.lb-hero-author-banner {
+  --lb-hero-author-banner-grid-col-template: var(
+    --lb-layout-grid-col-template,
+    repeat(12, 1fr)
+  );
+  --lb-hero-author-banner-gap-x: var(
+    --lb-layout-grid-gap-x,
+    var(--layout-content-spacing)
+  );
+  --lb-hero-author-banner-grid-col-start: var(--lb-layout-content-grid-col-start, 1);
+  --lb-hero-author-banner-grid-col-end: var(--lb-layout-content-grid-col-end, -1);
+
+  padding-top: var(--wp--preset--spacing--280);
+  padding-bottom: var(--wp--preset--spacing--155);
+  background-color: var(--lb-hero-author-banner-color-background);
+
+  @include breakpoints.media-breakpoint-down(sm) {
+    padding-top: var(--wp--preset--spacing--120);
+    padding-bottom: var(--wp--preset--spacing--140);
+  }
+
+  &__inner {
+    @include container.make-container-max-width();
+    display: grid;
+    grid-template-columns: var(--lb-hero-author-banner-grid-col-template);
+    column-gap: var(--lb-hero-author-banner-gap-x);
+  }
+
+  &__content {
+    @include font.get-text-styles('display-sm');
+    grid-column: var(--lb-hero-author-banner-grid-col-start) /
+      var(--lb-hero-author-banner-grid-col-end);
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    column-gap: var(--wp--preset--spacing--120);
+    margin-bottom: var(--wp--preset--spacing--80);
+    @include breakpoints.media-breakpoint-down(sm) {
+      column-gap: var(--wp--preset--spacing--100);
+    }
+  }
+
+  &__avatar {
+    width: var(--wp--preset--spacing--240);
+    height: var(--wp--preset--spacing--240);
+    border: 1px solid var(--lb-color-surface-outline-2);
+    border-radius: 50%;
+    overflow: hidden;
+    @include breakpoints.media-breakpoint-down(sm) {
+      width: var(--wp--preset--spacing--200);
+      height: var(--wp--preset--spacing--200);
+    }
+  }
+
+  &__name {
+    color: var(--lb-hero-author-banner-name-color-text);
+    @include font.get-text-styles('display-sm', false);
+    font-weight: 600;
+    @include breakpoints.media-breakpoint-down(sm) {
+      @include font.get-text-styles('display-xs', false);
+    }
+  }
+
+  &__bio {
+    @include font.get-text-styles('text-md', false);
+    color: var(--lb-hero-author-banner-bio-color-text);
+  }
+}

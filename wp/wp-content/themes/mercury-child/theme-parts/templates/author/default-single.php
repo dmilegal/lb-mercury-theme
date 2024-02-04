@@ -1,27 +1,22 @@
 <?php
-$bannerTitle = $args['banner_title'] ?? get_the_archive_title();
-$bannerSubtitle = $args['banner_subtitle'] ?? '';
-$bannerTextContent = $args['banner_text_content'] ?? '';
+global $post;
+// Get author's social media URL
+$authorId = $post->post_author;
+
 get_header();
 
 ?>
-
-<div class="lb-layout lb-layout--tight-content">
-  <? if (!is_front_page()) { ?>
-    <div class="lb-layout__breadcrumbs">
-      <?php get_template_part('/theme-parts/molecules/breadcrumbs'); ?>
-    </div>
-  <? } ?>
+<div class="lb-layout lb-layout--tight">
+  <div class="lb-layout__breadcrumbs">
+    <?php get_template_part('/theme-parts/molecules/breadcrumbs'); ?>
+  </div>
 
   <div class="lb-layout__banner">
-    <? get_template_part('theme-parts/cells/hero-banner', null, [
-      'title' => $bannerTitle,
-      'subtitle' => $bannerSubtitle,
-      'align' => $bannerTextContent ? 'left' : 'center',
-      'text_content' => $bannerTextContent,
-      'enable_published_date' => false,
+    <? get_template_part('theme-parts/cells/hero-author-banner', null, [
+      'author_id' => $authorId,
     ]); ?>
   </div>
+
 
   <div class="lb-layout__content">
     <div class="lb-layout__inner">
@@ -41,7 +36,7 @@ get_header();
           </div>
           <!-- Archive Navigation Start -->
           <div class="lb-archive__pag">
-            <?php  get_template_part('/theme-parts/cells/pagination'); ?>
+            <?php get_template_part('/theme-parts/cells/pagination'); ?>
           </div>
 
           <!-- Archive Navigation End -->
@@ -51,9 +46,6 @@ get_header();
           <div class="lb-archive-not-found">
             <div class="lb-archive-not-found__inner">
               <h2 class="lb-archive-not-found__title"><?php esc_html_e('Posts not found', 'mercury-child'); ?></h2>
-              <p class="lb-archive-not-found__subtitle">
-                <?php esc_html_e('No posts has been found. Please return to the homepage.', 'mercury-child'); ?>
-              </p>
             </div>
           </div>
           <!-- Posts not found End -->
@@ -62,5 +54,7 @@ get_header();
       </div>
     </div>
   </div>
+</div>
 
-  <?php get_footer(); ?>
+
+<?php get_footer(); ?>

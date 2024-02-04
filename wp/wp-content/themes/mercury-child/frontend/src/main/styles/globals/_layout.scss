@@ -5,7 +5,7 @@ body {
   --lb-layout-grid-col-template: repeat(20, 1fr);
   --lb-layout-grid-gap-x: calc(var(--layout-content-spacing) / 2);
   --lb-layout-content-grid-col-start: 1;
-  --lb-layout-content-grid-rcol-end: -1;
+  --lb-layout-content-grid-col-end: -1;
   --lb-layout-breadcrumbs-color-border: var(--lb-color-surface-high);
 }
 
@@ -55,6 +55,21 @@ body {
   }
 
   &--tight {
+    --lb-layout-content-grid-col-start: 4;
+    --lb-layout-content-grid-col-end: 18;
+    
+    @include breakpoints.media-breakpoint-down(lg) {
+      --lb-layout-content-grid-col-start: 3;
+      --lb-layout-content-grid-col-end: 19;
+    }
+
+    @include breakpoints.media-breakpoint-down(md) {
+      --lb-layout-content-grid-col-start: 1;
+      --lb-layout-content-grid-col-end: -1;
+    }
+  }
+
+  &--tight-content {
     %inner {
       --lb-layout-content-grid-col-start: 4;
       --lb-layout-content-grid-col-end: 18;
