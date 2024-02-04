@@ -24,6 +24,9 @@ function enqueue_main_assets()
 
   // style ea accordion plugin
   wp_enqueue_style('ea-accordion', '', ['sp-ea-style']);
+
+  // style cmplz plugin
+  wp_enqueue_style('cookie-banner', '', ['cmplz-general']);
   
   //wp_enqueue_script( 'jquery-fix', get_stylesheet_directory_uri() . '/js/libs/jquery-fix.js', array() );
   //wp_enqueue_script('child-scripts', get_stylesheet_directory_uri() . '/js/child-scripts.js', array('jquery'));
