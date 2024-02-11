@@ -1,35 +1,75 @@
 <?
 $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
-$casinoId = $args['casino_id'] ?? null;
+$bonusId = $args['bonus_id'] ?? null;
 
-if (!$casinoId) return;
+if (!$bonusId) return;
 
-$casino_allowed_html = array(
+$bonus_allowed_html = array(
   'a' => array(
     'href' => true,
     'title' => true,
     'target' => true,
     'rel' => true
   ),
-  'ul' => array(),
-  'li' => array(),
+  'img' => array(
+    'src' => true,
+    'alt' => true
+  ),
   'br' => array(),
   'em' => array(),
+  'strong' => array(),
   'span' => array(
-    'class' => true
+    'class' => true,
+    'style' => true
   ),
   'div' => array(
-    'class' => true
+    'class' => true,
+    'style' => true
   ),
-  'p' => array()
+  'p' => array(),
+  'ul' => array(),
+  'ol' => array(),
+  'li' => array(),
 );
 
 
-$bonusFields = get_field('bonus_fields', $casinoId);
-$casino_detailed_tc = wp_kses(get_post_meta($casinoId, 'casino_detailed_tc', true), $casino_allowed_html);
+$bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $bonus_allowed_html);
+$bonus_external_link = esc_url(get_post_meta($bonusId, 'bonus_external_link', true));
+$bonus_button_title = esc_html(get_post_meta($bonusId, 'bonus_button_title', true));
+$bonus_button_notice = wp_kses(get_post_meta($bonusId, 'bonus_button_notice', true), $bonus_allowed_html);
+$bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
+$bonus_valid_date = esc_html(get_post_meta($bonusId, 'bonus_valid_date', true));
+$bonus_dark_style = esc_attr(get_post_meta($bonusId, 'bonus_dark_style', true));
+$offer_popup_hide = esc_attr(get_post_meta($bonusId, 'aces_offer_popup_hide', true));
 
-if (!hasCasinoBonus($casinoId)) return;
+$offer_popup_title = esc_html(get_post_meta($bonusId, 'aces_offer_popup_title', true));
+$offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), $bonus_allowed_html);
+
+$offers_disable_more_block = esc_attr(get_post_meta($bonusId, 'offers_disable_more_block', true));
+
+if ($bonus_button_title) {
+  $button_title = $bonus_button_title;
+} else {
+  if (get_option('bonuses_get_bonus_title')) {
+    $bonus_button_title = esc_html(get_option('bonuses_get_bonus_title'));
+  } else {
+    $bonus_button_title = esc_html__('Get Bonus', 'mercury-child');
+  }
+}
+
+if ($offer_popup_title) {
+  $custom_popup_title = $offer_popup_title;
+} else {
+  $custom_popup_title = esc_html__('Read about T&C', 'mercury-child');
+}
+
+if ($bonus_external_link) {
+  $external_link_url = $bonus_external_link;
+} else {
+  $external_link_url = get_the_permalink($bonusId);
+}
+
 
 ?>
 <div class="lb-promo-bonus-container">
@@ -41,45 +81,47 @@ if (!hasCasinoBonus($casinoId)) return;
                             ) ?>">
 
     <div class="lb-promo-bonus__title">
-      <? printf(__('Bonus %s', 'mercury-child'), get_the_title($casinoId)) ?>
+      <? printf(__('Bonus %s', 'mercury-child'), get_the_title($bonusId)) ?>
     </div>
-    <? if (isset($bonusFields['bonus_title'])) { ?>
+    <? if ($bonus_short_desc) { ?>
       <div class="lb-promo-bonus__subtitle">
-        <?= $bonusFields['bonus_title'] ?>
+        <?php echo wp_kses($bonus_short_desc, $bonus_allowed_html); ?>
       </div>
     <? } ?>
-    <? if (!empty($bonusFields['promo_code']) || !empty($bonusFields['bonus_link'])) { ?>
+    <? if ($bonus_code || $bonus_external_link) { ?>
       <div class="lb-promo-bonus__actions">
         <?
-        if (!empty($bonusFields['promo_code']))
+        if ($bonus_code)
           get_template_part('theme-parts/molecules/promo-button', null, [
             'size' => 'xl',
             'variant' => 'outlined',
             'content' => __('Copy Promo', 'mercury-child'),
             'prefix' => '<i class="icon-copy"></i>',
             'className' => 'lb-promo-bonus__copy',
-            'code' => $bonusFields['promo_code'],
+            'code' => $bonus_code,
           ]);
 
-        if (!empty($bonusFields['bonus_link']))
+        if ($bonus_external_link)
           get_template_part('theme-parts/atoms/button', null, [
             'size' => 'xl',
             'color' => 'primary',
-            'content' => __('Get bonus', 'mercury-child'),
-            'href' => $bonusFields['bonus_link'],
+            'content' => $bonus_button_title,
+            'href' => $bonus_external_link,
             'target' => "_blank",
             'rel' => "nofollow"
           ]);
         ?>
       </div>
     <? } ?>
-    <!--<a class="lb-promo-bonus__tc-link">
-    Read about T&C
-        </a>-->
+    <? if (!$offer_popup_hide && $offer_detailed_tc) { ?>
+      <a class="lb-promo-bonus__tc-link">
+        <?= wp_kses($offer_detailed_tc, $bonus_allowed_html); ?>
+      </a>
+    <? } ?>
   </div>
-  <?php if ($casino_detailed_tc) { ?>
+  <?php if (!!$offer_popup_hide && $offer_detailed_tc) { ?>
     <div class="lb-promo-bonus__tc-extra">
-      <?= wp_kses($casino_detailed_tc, $casino_allowed_html); ?>
+      <?= wp_kses($casino_detailed_tc, $bonus_allowed_html); ?>
     </div>
   <? } ?>
 

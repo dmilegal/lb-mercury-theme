@@ -94,12 +94,12 @@ $overall_rating = esc_html(get_post_meta($casinoId, 'casino_overall_rating', tru
           </div>
         </div>
       </header>
-      <? if (hasCasinoBonus($casinoId)) { ?>
+      <? if ($mainBonusId = aces_get_main_casino_bonus_id($casinoId)) { ?>
         <div class="lb-hero-casino-banner-promo">
           <div class="lb-hero-casino-banner-promo__inner">
             <div class="lb-hero-casino-banner-promo__sticky">
               <? get_template_part('theme-parts/molecules/promo-bonus', null, [
-                'casino_id' => $casinoId
+                'bonus_id' => $mainBonusId
               ]); ?>
             </div>
           </div>
