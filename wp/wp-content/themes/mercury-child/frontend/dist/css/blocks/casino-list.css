@@ -1,0 +1,44 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/casino-list/casino-list.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body {
+  --lb-casino-selection-color-background: var(--lb-color-surface-high);
+}
+
+.lb-casino-list {
+  padding: var(--wp--preset--spacing--155) 0 var(--wp--preset--spacing--280);
+  background-color: var(--lb-casino-selection-color-background);
+}
+.lb-casino-list__inner {
+  width: 100%;
+  padding-left: var(--layout--content-padding);
+  padding-right: var(--layout--content-padding);
+  max-width: calc(720px + 2 * var(--layout--content-padding));
+  margin-left: auto;
+  margin-right: auto;
+}
+.lb-casino-list__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--wp--preset--spacing--100);
+}
+.lb-casino-list__actions {
+  display: flex;
+  margin-top: var(--wp--preset--spacing--100);
+}
+@media (max-width: 767.98px) {
+  .lb-casino-list__actions {
+    margin-top: var(--wp--preset--spacing--110);
+  }
+}
+.lb-casino-list__actions > *:only-child {
+  width: 100%;
+}
+
+/*# sourceMappingURL=casino-list.css.map*/

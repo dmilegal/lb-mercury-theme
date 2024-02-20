@@ -56,7 +56,7 @@ if ($casino_permalink_button_title) {
   if (get_option('casinos_read_review_title')) {
     $permalink_button_title = esc_html(get_option('casinos_read_review_title'));
   } else {
-    $permalink_button_title = esc_html__('Read Review', 'aces');
+    $permalink_button_title = esc_html__('Review', 'aces');
   }
 }
 
@@ -65,7 +65,7 @@ if ($casino_permalink_button_title) {
   <div class="lb-casino-card__inner">
     <div class="lb-casino-card__main">
       <div class="lb-casino-card__header">
-        <?= get_the_post_thumbnail($casinoId, [70, 70], [
+        <?= get_the_post_thumbnail($casinoId, [52, 52], [
           "class" => "lb-casino-card__logo"
         ]) ?>
         <div>
@@ -81,32 +81,16 @@ if ($casino_permalink_button_title) {
           </div>
         </div>
       </div>
-      <?php if ($casino_terms_desc) { ?>
-        <div class="lb-casino-card__desc">
-          <?= wp_kses($casino_terms_desc, $casino_allowed_html); ?>
-        </div>
-      <? } ?>
     </div>
-    <div class="lb-casino-card-promo">
+    <div class="lb-casino-card__sub">
       <? if (isset($bonusFields['bonus_title'])) { ?>
-        <div class="lb-casino-card-promo__title">
+        <div class="lb-casino-card__bonus-title">
           <?= $bonusFields['bonus_title'] ?>
         </div>
       <? } ?>
-      <div class="lb-casino-card-promo__actions">
+      <div class="lb-casino-card__actions">
         <?
-        if (!empty($bonusFields['promo_code']))
-          get_template_part('theme-parts/molecules/promo-button', null, [
-            'size' => 'md',
-            'variant' => 'outlined',
-            'content' => __('Copy Promo', 'mercury-child'),
-            'prefix' => '<i class="icon-copy"></i>',
-            'code' => $bonusFields['promo_code'],
-            'className' => 'lb-casino-card__copy'
-          ]);
-
         if ($external_link_url) {
-          
           $isExternal = isExternalLink($external_link_url);
           get_template_part('theme-parts/atoms/button', null, [
             'size' => 'xl',
@@ -118,11 +102,40 @@ if ($casino_permalink_button_title) {
             'rel' => $isExternal ? "nofollow" : ''
           ]);
         }
-        ?>
+
+        if (!empty($bonusFields['promo_code']))
+          get_template_part('theme-parts/molecules/promo-button', null, [
+            'size' => 'sm',
+            'variant' => 'outlined',
+            'content' => __('Copy Promo', 'mercury-child'),
+            'prefix' => '<i class="icon-copy"></i>',
+            'code' => $bonusFields['promo_code'],
+            'className' => 'lb-casino-card__bonus-copy'
+          ]); ?>
       </div>
-      <div class="lb-casino-card-promo__tc">
-      <a href="#">Read about T&C</a>
+    </div>
+    <div class="lb-casino-card__detail-list">
+      <div class="lb-casino-card__detail">
+        <div class="lb-casino-card__detail-title"><?= __('License', 'mercury-child') ?></div>
+        <div class="lb-casino-card__detail-value"><?= aces_casino_has_licence($casinoId) ? __('Yes', 'mercury-child') : __('No', 'mercury-child') ?></div>
       </div>
+    </div>
+    <div class="lb-casino-card__extra-actions">
+      <? get_template_part('theme-parts/atoms/button', null, [
+        'size' => 'sm',
+        'color' => 'gray',
+        'variant' => 'inline',
+        'postfix' => '<i class="icon-chevron-down"></i>',
+        'content' => __('Read more', 'mercury-child'),
+        'className' => "lb-casino-card__read-more",
+      ]); ?>
+    </div>
+    <div class="lb-casino-card__extra-content">
+      <?php if ($casino_terms_desc) { ?>
+        <div class="lb-casino-card__desc">
+          <?= wp_kses($casino_terms_desc, $casino_allowed_html); ?>
+        </div>
+      <? } ?>
     </div>
   </div>
   <?php if ($casino_detailed_tc) { ?>

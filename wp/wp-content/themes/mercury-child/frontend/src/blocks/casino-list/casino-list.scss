@@ -1,0 +1,36 @@
+@use 'sass:math';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+@use '@/shared/styles/mixins/container';
+
+body {
+  --lb-casino-selection-color-background: var(--lb-color-surface-high);
+}
+.lb-casino-list {
+  padding: var(--wp--preset--spacing--155) 0 var(--wp--preset--spacing--280);
+  background-color: var(--lb-casino-selection-color-background);
+  
+  &__inner {
+    @include container.make-container-max-width(720px);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--wp--preset--spacing--100);
+  }
+
+  &__actions {
+    display: flex;
+    margin-top: var(--wp--preset--spacing--100);
+    @include breakpoints.media-breakpoint-down('sm') {
+      margin-top: var(--wp--preset--spacing--110);
+    }
+
+    & > * {
+      &:only-child {
+        width: 100%;
+      }
+    }
+  }
+}
