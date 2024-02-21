@@ -60,6 +60,50 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _casino_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./casino-list.scss */ "./src/blocks/casino-list/casino-list.scss");
 
+function init() {
+  const btns = document.querySelectorAll('.lb-casino-list__load-more');
+  btns.forEach(btn => {
+    btn.addEventListener('click', triggetLoad);
+  });
+}
+async function triggetLoad(e) {
+  const btn = e.currentTarget;
+  const container = btn.closest('.lb-casino-list');
+  const preparedQuery = prepareQuery(btn.dataset.query, {
+    paged: (+btn.dataset.currentPage || 1) + 1
+  });
+  btn.classList.add('lb-button--pending');
+  btn.disabled = true;
+  try {
+    const data = await load(preparedQuery);
+    render(data.html, container);
+  } catch (error) {
+    console.error(error);
+  }
+  btn.classList.remove('lb-button--pending');
+  btn.disabled = false;
+}
+async function load(query) {
+  const res = await fetch(`/wp-json/aces/v1/html/casinos?${query || ''}`);
+  const data = await res.json();
+  return data;
+}
+function prepareQuery(query, data) {
+  const params = new URLSearchParams(query);
+  Object.keys(data || {}).forEach(key => {
+    params.set(key, data[key] + '');
+  });
+  return params.toString();
+}
+function render(html, container) {
+  const listEl = container.querySelector('.lb-casino-list__list');
+  const btn = container.querySelector('.lb-casino-list__load-more');
+  listEl.insertAdjacentHTML('beforeend', html);
+  window.CasinoCardsInit(listEl);
+  btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + '';
+  if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';
+}
+init();
 })();
 
 

@@ -77,6 +77,8 @@ body {
   letter-spacing: inherit;
   letter-spacing: var(--lb-letter-spacing-display-lg-relative, inherit);
   font-weight: 500;
+}
+.lb-hero-banner__title:not(:last-child) {
   margin-bottom: var(--wp--preset--spacing--100);
 }
 .lb-hero-banner__subtitle {

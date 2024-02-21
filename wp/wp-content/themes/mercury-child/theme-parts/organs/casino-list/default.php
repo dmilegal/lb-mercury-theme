@@ -19,7 +19,9 @@ if ($postIds) {
           get_template_part('theme-parts/cells/casino-card', null, ['casino_id' => $postId]);
         } ?>
       </div>
-      <? if ($currentPage < $totalPages) { ?>
+      <? 
+    
+      if ($currentPage < $totalPages) { ?>
         <div class="lb-casino-list__actions">
           <?= get_template_part("theme-parts/organs/casino-list/load-more-button", null, [
             'query_string' => http_build_query($queryArgs),

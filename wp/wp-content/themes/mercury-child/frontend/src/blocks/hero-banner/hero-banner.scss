@@ -76,7 +76,9 @@ body {
   &__title {
     @include font.get-text-styles('display-lg');
     font-weight: 500;
-    margin-bottom: var(--wp--preset--spacing--100);
+    &:not(:last-child) {
+      margin-bottom: var(--wp--preset--spacing--100);
+    }
     @extend %title;
   }
 
