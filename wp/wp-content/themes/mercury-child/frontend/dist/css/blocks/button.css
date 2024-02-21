@@ -49,6 +49,21 @@
   font-size: var(--lb-font-size-text-xl-relative);
   font-weight: normal;
 }
+.lb-button__loading {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  opacity: 0.75;
+  aspect-ratio: 1/1;
+  color: var(--lb-button--color);
+}
+.lb-button__loading svg {
+  width: 100%;
+  height: 100%;
+}
 .lb-button--display_icon {
   line-height: 1em;
 }
@@ -112,6 +127,15 @@
 [class*=" icon-"]), .lb-button__prefix > :where([class^=icon-],
 [class*=" icon-"])) {
   font-size: var(--lb-font-size-display-xs-relative);
+}
+.lb-button--pending {
+  position: relative;
+}
+.lb-button--pending .lb-button__loading {
+  display: inline-flex;
+}
+.lb-button--pending .lb-button__content, .lb-button--pending .lb-button__postfix, .lb-button--pending .lb-button__prefix {
+  visibility: hidden;
 }
 .lb-button--variant_contained:where(.lb-button--color_gray) {
   --lb-button--background--color: var(

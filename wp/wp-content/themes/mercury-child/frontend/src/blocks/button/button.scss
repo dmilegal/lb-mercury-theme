@@ -51,6 +51,35 @@
       @extend %icon;
     }
   }
+  
+  &__postfix {
+    @extend %postfix;
+  }
+
+  &__content {
+    @extend %content;
+  }
+
+  &__prefix {
+    @extend %prefix;
+  }
+
+  &__loading {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    opacity: 0.75;
+    aspect-ratio: 1/1;
+    color: var(--lb-button--color);
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    @extend %loading;
+  }
 
   $noIcon: & + '--display_icon';
 
@@ -109,6 +138,16 @@
     :where(%icon) {
       font-size: font.font-size-by-name('display-xs');
     }
+  }
+
+  &--pending {
+    position: relative;
+    %loading {
+      display: inline-flex;
+    }
+    %content, %postfix, %prefix {
+      visibility: hidden;
+    } 
   }
 
   @each $variant in 'contained', 'contained-light', 'text', 'inline' {

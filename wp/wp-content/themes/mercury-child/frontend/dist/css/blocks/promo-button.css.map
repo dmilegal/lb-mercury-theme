@@ -1,0 +1,1 @@
+{"version":3,"file":"css/blocks/promo-button.css","mappings":";;;AACE;EACE;EACA;AAAJ,C","sources":["webpack://@mercury-child/wp/./src/blocks/promo-button/promo-button.scss"],"sourcesContent":[".lb-promo-button {\n  .lb-button__content {\n    white-space: nowrap;\n    overflow: hidden;\n  }\n}"],"names":[],"sourceRoot":""}

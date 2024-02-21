@@ -18,6 +18,8 @@ $href = $args['href'] ?? null;
 $target = $args['target'] ?? null;
 $rel = $args['rel'] ?? null;
 
+$isLoadingBtn =  $args['is_loading'] ?? false;
+
 $tag = $href ? 'a' : 'button';
 
 $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'id', 'title', 'data', 'aria'])));
@@ -25,18 +27,18 @@ $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', '
 ?>
 
 <<?= $tag ?> class="<?= classNames(
-    'lb-button',
-    $className,
-    'lb-button--size_' . $size,
-    'lb-button--color_' . $color,
-    'lb-button--variant_' . $variant,
-    [
-      'lb-button--display_icon' => !$content && !!($prefix || $postfix)
-    ]
+                      'lb-button',
+                      $className,
+                      'lb-button--size_' . $size,
+                      'lb-button--color_' . $color,
+                      'lb-button--variant_' . $variant,
+                      [
+                        'lb-button--display_icon' => !$content && !!($prefix || $postfix)
+                      ]
 
-  ) ?>" <?= $attrsStr ?> style="<?= stylesValue(
-        $style
-      ) ?>">
+                    ) ?>" <?= $attrsStr ?> style="<?= stylesValue(
+                                                    $style
+                                                  ) ?>">
   <? if ($prefix) { ?>
     <span class="lb-button__prefix">
       <?= $prefix ?>
@@ -50,6 +52,15 @@ $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', '
   <? if ($postfix) { ?>
     <span class="lb-button__postfix">
       <?= $postfix ?>
+    </span>
+  <? } ?>
+  <? if ($isLoadingBtn) { ?>
+    <span class="lb-button__loading">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(255, 255, 255, 0); display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <circle cx="50" cy="50" fill="none" stroke="currentColor" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+          <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+        </circle>
+      </svg>
     </span>
   <? } ?>
 </<?= $tag ?>>

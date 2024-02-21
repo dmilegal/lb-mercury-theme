@@ -1,5 +1,5 @@
 import './promo-button.scss'
-import { LbTooltip } from '@/shared/scripts/components/tooltip'
+//import { LbTooltip } from '@/shared/scripts/components/tooltip'
 
 function init() {
   const btns = document.querySelectorAll<HTMLButtonElement>('.lb-promo-button')
@@ -10,6 +10,27 @@ function init() {
 }
 
 async function onCopy(btn: HTMLElement) {
+  if (!btn) return
+
+  try {
+    if (navigator?.clipboard?.writeText) {
+      await navigator.clipboard.writeText(btn.dataset.code)
+    }
+
+    if (!btn) return
+    const txtEl = btn.querySelector<HTMLElement>('.lb-button__content')
+
+    txtEl.innerHTML = btn.dataset.text
+
+    setTimeout(() => {
+      txtEl.innerHTML = btn.dataset.code
+    }, 2000)
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+/*async function onCopy(btn: HTMLElement) {
   if (!btn) return
 
   try {
@@ -34,6 +55,6 @@ async function onCopy(btn: HTMLElement) {
   } catch (err) {
     console.error(err)
   }
-}
+}*/
 
 init()

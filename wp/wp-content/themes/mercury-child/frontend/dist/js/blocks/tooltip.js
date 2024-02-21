@@ -554,7 +554,7 @@ function rectToClientRect(rect) {
 /******/ // startup
 /******/ // Load entry module and return exports
 /******/ // This entry module depends on other loaded chunks and execution need to be delayed
-/******/ var __webpack_exports__ = __webpack_require__.O(undefined, ["libs/chk-promo-button-chk~chk-tooltip-chk-mdl-floating-ui.core-mdl","libs/chk-promo-button-chk~chk-tooltip-chk-mdl-floating-ui.dom-mdl"], () => (__webpack_require__("./src/blocks/tooltip/tooltip.ts")))
+/******/ var __webpack_exports__ = __webpack_require__.O(undefined, ["libs/chk-tooltip-chk-mdl-floating-ui.dom-mdl","libs/chk-tooltip-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/tooltip/tooltip.ts")))
 /******/ __webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 
 
