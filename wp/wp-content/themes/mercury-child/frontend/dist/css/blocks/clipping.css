@@ -9,6 +9,7 @@
 **/
 body {
   --lb-clipping-clip-line-count: 3;
+  --lb-clipping-toggle-color-text: var(--lb-color-text-default);
 }
 
 .lb-clipping--hidden .lb-clipping__actions {
@@ -52,11 +53,11 @@ body {
   align-items: center;
   column-gap: var(--wp--preset--spacing--60);
   pointer-events: none;
-  font-size: var(--wp--preset--font-size--text-sm);
-  line-height: var(--wp--custom--line-height--text-sm);
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
-  color: var(--hero-casino-banner-toggle-color-text);
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  color: var(--lb-clipping-toggle-color-text);
   font-weight: 600;
   visibility: hidden;
 }

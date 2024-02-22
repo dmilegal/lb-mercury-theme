@@ -4,6 +4,7 @@
 
 body {
   --lb-clipping-clip-line-count: 3;
+  --lb-clipping-toggle-color-text: var(--lb-color-text-default);
 }
 
 .lb-clipping {
@@ -59,8 +60,8 @@ body {
     align-items: center;
     column-gap: var(--wp--preset--spacing--60);
     pointer-events: none;
-    @include font.get-text-styles('text-sm', false);
-    color: var(--hero-casino-banner-toggle-color-text);
+    @include font.get-text-styles('text-md', false);
+    color: var(--lb-clipping-toggle-color-text);
     font-weight: 600;
     visibility: hidden;
     &--more {
