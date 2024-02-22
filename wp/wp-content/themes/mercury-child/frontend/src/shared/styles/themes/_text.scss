@@ -106,6 +106,53 @@ $proseCustomSelector: null !default;
   }
 }
 
+@include typo.make-prose('spaces', '.lb-author-block', $proseCustomSelector) {
+  margin-top: var(--wp--preset--spacing--160);
+  margin-bottom: var(--wp--preset--spacing--160);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  @include breakpoints.media-breakpoint-down(sm) {
+    margin-top: var(--wp--preset--spacing--140);
+    margin-bottom: var(--wp--preset--spacing--140);
+  }
+
+}
+
+@include typo.make-prose('spaces', '.lb-casino-details', $proseCustomSelector) {
+  margin-top: var(--wp--preset--spacing--160);
+  margin-bottom: var(--wp--preset--spacing--160);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  @include breakpoints.media-breakpoint-down(sm) {
+    margin-top: var(--wp--preset--spacing--140);
+    margin-bottom: var(--wp--preset--spacing--140);
+  }
+}
+
+
+@include typo.make-prose('spaces', '.lb-casino-list', $proseCustomSelector) {
+  margin-top: var(--wp--preset--spacing--140);
+  margin-bottom: var(--wp--preset--spacing--140);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  @include breakpoints.media-breakpoint-down(sm) {
+    margin-top: var(--wp--preset--spacing--120);
+    margin-bottom: var(--wp--preset--spacing--120);
+  }
+}
+
 @include typo.make-prose('colors', 'h1, h2, h3, h4, h5, h6', $proseCustomSelector) {
   color: var(--lb-ui-color-heading-text);
 }

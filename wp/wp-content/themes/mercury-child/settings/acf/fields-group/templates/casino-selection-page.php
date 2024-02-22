@@ -4,61 +4,41 @@ add_action('acf/include_fields', function () {
     return;
   }
 
-  acf_add_local_field_group(array(
-    'key' => 'group_65b37a86de300',
-    'title' => 'Casino Selection',
-    'fields' => array(
+  $params = getCasinoListGroupParams('_tpl');
+  
+  $params['location'] = array(
+    array(
       array(
-        'key' => 'field_65b37a87cc50b',
-        'label' => 'Casino List',
-        'name' => 'casino_list',
-        'aria-label' => '',
-        'type' => 'relationship',
-        'instructions' => '',
-        'required' => 0,
-        'conditional_logic' => 0,
-        'wrapper' => array(
-          'width' => '',
-          'class' => '',
-          'id' => '',
-        ),
-        'post_type' => array(
-          0 => 'casino',
-        ),
-        'post_status' => array(
-          0 => 'publish',
-        ),
-        'taxonomy' => '',
-        'filters' => array(
-          0 => 'search',
-          1 => 'post_type',
-          2 => 'taxonomy',
-        ),
-        'return_format' => 'id',
-        'min' => '',
-        'max' => '',
-        'elements' => '',
-        'bidirectional' => 0,
-        'bidirectional_target' => array(),
+        'param' => 'page_template',
+        'operator' => '==',
+        'value' => 'page-templates/selection.php',
       ),
     ),
-    'location' => array(
-      array(
-        array(
-          'param' => 'page_template',
-          'operator' => '==',
-          'value' => 'page-templates/selection.php',
-        ),
+  );
+
+  $params['fields'][0]['sub_fields'] = [
+    array(
+      'key' => 'field_65d677e68edce',
+      'label' => 'Title',
+      'name' => 'title',
+      'aria-label' => '',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array(
+        'width' => '',
+        'class' => '',
+        'id' => '',
       ),
+      'default_value' => '',
+      'maxlength' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
     ),
-    'menu_order' => 0,
-    'position' => 'normal',
-    'style' => 'seamless',
-    'label_placement' => 'top',
-    'instruction_placement' => 'label',
-    'hide_on_screen' => '',
-    'active' => true,
-    'description' => '',
-    'show_in_rest' => 0,
-  ));
+    ...$params['fields'][0]['sub_fields']
+  ];
+
+  acf_add_local_field_group($params);
 });

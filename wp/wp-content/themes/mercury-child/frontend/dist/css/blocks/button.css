@@ -8,6 +8,7 @@
 * font
 **/
 .lb-button {
+  box-sizing: border-box;
   display: inline-flex;
   color: var(--lb-button--color);
   border: 1px solid var(--lb-button--border--color);
@@ -22,6 +23,8 @@
   outline-style: solid;
   outline-width: 4px;
   outline-color: transparent;
+}
+.lb-button.lb-button {
   -webkit-text-decoration: none;
   text-decoration: none;
 }

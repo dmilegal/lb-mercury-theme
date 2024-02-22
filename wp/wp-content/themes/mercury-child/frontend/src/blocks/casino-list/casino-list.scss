@@ -4,16 +4,38 @@
 @use '@/shared/styles/mixins/breakpoints';
 @use '@/shared/styles/mixins/container';
 
-body {
+body, .editor-styles-wrapper {
   --lb-casino-selection-color-background: var(--lb-color-surface-high);
 }
 .lb-casino-list {
-  padding: var(--wp--preset--spacing--155) 0 var(--wp--preset--spacing--280);
-  background-color: var(--lb-casino-selection-color-background);
+  &--theme {
+    &_fullwidth {
+      padding: var(--wp--preset--spacing--155) 0 var(--wp--preset--spacing--280);
+      background-color: var(--lb-casino-selection-color-background);
+
+      %inner {
+        @include container.make-container-max-width(720px);
+      }
+
+      %title {
+        text-align: center;
+      }
+    }
+
+    &_inline {
+
+    }
+  }
   
   &__inner {
-    @include container.make-container-max-width(720px);
+    @extend %inner;
   }
+
+  &__title {
+    margin-bottom: var(--wp--preset--spacing--100);
+    @extend %title;
+  }
+  
   &__list {
     display: flex;
     flex-direction: column;

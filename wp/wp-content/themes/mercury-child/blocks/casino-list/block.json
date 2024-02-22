@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/casino-list",
+  "title": "Casino List",
+  "description": "",
+  "style": ["casino-list","casino-card", "button", "badge", "promo-button"],
+  "editorStyle": [],
+  "script": ["casino-list","casino-card", "button","badge", "promo-button"],
+  "category": "formatting",
+  "icon": "book",
+  "keywords": ["casino", "list", "selection"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "casino-list.php"
+  }
+}

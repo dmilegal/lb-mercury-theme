@@ -41,7 +41,7 @@ $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
 if ($casino_external_link) {
   $external_link_url = $casino_external_link;
 } else {
-  $external_link_url = get_the_permalink();
+  $external_link_url = get_the_permalink($casinoId);
 }
 
 if ($casino_button_title) {
@@ -141,14 +141,7 @@ if ($casino_permalink_button_title) {
           'variant' => 'inline',
           'postfix' => '<i class="icon-chevron-down"></i>',
           'content' => __('Read more', 'mercury-child'),
-          'className' => "lb-casino-card__read-more lb-casino-card__read-more--lg-only",
-        ]); ?>
-        <? get_template_part('theme-parts/atoms/button', null, [
-          'size' => 'sm',
-          'variant' => 'inline',
-          'postfix' => '<i class="icon-chevron-down"></i>',
-          'content' => __('Read more', 'mercury-child'),
-          'className' => "lb-casino-card__read-more lb-casino-card__read-more--mb-only",
+          'className' => "lb-casino-card__read-more",
         ]); ?>
         <? get_template_part('theme-parts/atoms/button', null, [
           'size' => 'sm',

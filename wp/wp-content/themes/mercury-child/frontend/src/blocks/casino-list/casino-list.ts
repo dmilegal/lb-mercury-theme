@@ -45,7 +45,7 @@ function prepareQuery(query: string, data?: { paged?: number | string }) {
   const params = new URLSearchParams(query)
 
   Object.keys(data || {}).forEach((key) => {
-    params.set(key, data[key] + '')
+    params.set(`query[${key}]`, data[key] + '')
   })
 
   return params.toString()
@@ -57,6 +57,7 @@ function render(html: string, container: HTMLElement) {
 
   listEl.insertAdjacentHTML('beforeend', html)
   ;(window as any).CasinoCardsInit(listEl)
+  ;(window as any).initPromoButton(listEl)
 
   btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + ''
 

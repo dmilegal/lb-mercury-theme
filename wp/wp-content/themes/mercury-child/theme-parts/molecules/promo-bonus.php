@@ -81,7 +81,7 @@ if ($bonus_external_link) {
                             ) ?>">
 
     <div class="lb-promo-bonus__title">
-      <? printf(__('Bonus %s', 'mercury-child'), get_the_title($bonusId)) ?>
+      <?= get_the_title($bonusId) ?>
     </div>
     <? if ($bonus_short_desc) { ?>
       <div class="lb-promo-bonus__subtitle">

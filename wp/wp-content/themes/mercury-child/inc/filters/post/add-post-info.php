@@ -3,12 +3,14 @@ add_filter('the_content', 'addPostInfoFilterHandler');
 
 function addPostInfoFilterHandler($content)
 {
+
   ob_start();
   get_template_part('theme-parts/organs/post-info', null);
   $tpl = ob_get_contents();
   ob_end_clean();
 
-  if (is_single() && !is_admin()) {
+
+  if ((is_page() || is_single()) && !is_admin()) {
     return addPostInfo($tpl, $content);
   }
 

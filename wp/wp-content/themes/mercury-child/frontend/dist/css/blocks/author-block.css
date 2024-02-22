@@ -15,7 +15,7 @@ body {
 }
 
 .lb-author-block {
-  padding: var(--wp--preset--spacing--100) 0;
+  padding: 0 0 var(--wp--preset--spacing--100);
   border-bottom: 1px solid var(--lb-author-block-border-color);
   width: 100%;
 }

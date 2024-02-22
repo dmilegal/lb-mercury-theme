@@ -1789,6 +1789,57 @@ body :where(.lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-pr
   margin-top: 0;
 }
 
+body :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--160);
+  margin-bottom: var(--wp--preset--spacing--160);
+}
+body :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+  margin-bottom: 0;
+}
+body :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+  margin-top: 0;
+}
+@media (max-width: 767.98px) {
+  body :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)) {
+    margin-top: var(--wp--preset--spacing--140);
+    margin-bottom: var(--wp--preset--spacing--140);
+  }
+}
+
+body :where(.lb-casino-details):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--160);
+  margin-bottom: var(--wp--preset--spacing--160);
+}
+body :where(.lb-casino-details):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+  margin-bottom: 0;
+}
+body :where(.lb-casino-details):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+  margin-top: 0;
+}
+@media (max-width: 767.98px) {
+  body :where(.lb-casino-details):not(:where([class~=not-prose], [class~=not-prose] *)) {
+    margin-top: var(--wp--preset--spacing--140);
+    margin-bottom: var(--wp--preset--spacing--140);
+  }
+}
+
+body :where(.lb-casino-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--140);
+  margin-bottom: var(--wp--preset--spacing--140);
+}
+body :where(.lb-casino-list):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+  margin-bottom: 0;
+}
+body :where(.lb-casino-list):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+  margin-top: 0;
+}
+@media (max-width: 767.98px) {
+  body :where(.lb-casino-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+    margin-top: var(--wp--preset--spacing--120);
+    margin-bottom: var(--wp--preset--spacing--120);
+  }
+}
+
 body :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
   color: var(--lb-ui-color-heading-text);
 }

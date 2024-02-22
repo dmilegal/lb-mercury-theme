@@ -91,7 +91,7 @@ async function load(query) {
 function prepareQuery(query, data) {
   const params = new URLSearchParams(query);
   Object.keys(data || {}).forEach(key => {
-    params.set(key, data[key] + '');
+    params.set(`query[${key}]`, data[key] + '');
   });
   return params.toString();
 }
@@ -100,6 +100,7 @@ function render(html, container) {
   const btn = container.querySelector('.lb-casino-list__load-more');
   listEl.insertAdjacentHTML('beforeend', html);
   window.CasinoCardsInit(listEl);
+  window.initPromoButton(listEl);
   btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + '';
   if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';
 }

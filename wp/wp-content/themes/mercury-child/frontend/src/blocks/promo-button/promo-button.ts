@@ -1,11 +1,15 @@
 import './promo-button.scss'
 //import { LbTooltip } from '@/shared/scripts/components/tooltip'
 
-function init() {
-  const btns = document.querySelectorAll<HTMLButtonElement>('.lb-promo-button')
+function init(container: HTMLElement = document.body) {
+  const btns = container.querySelectorAll<HTMLButtonElement>(
+    '.lb-promo-button:not(.lb-button--initiated)'
+  )
 
   btns.forEach((btn) => {
     btn.addEventListener('click', () => onCopy(btn))
+
+    btn.classList.add('lb-button--initiated')
   })
 }
 
@@ -29,6 +33,8 @@ async function onCopy(btn: HTMLElement) {
     console.error(err)
   }
 }
+
+;(window as any).initPromoButton = init
 
 /*async function onCopy(btn: HTMLElement) {
   if (!btn) return

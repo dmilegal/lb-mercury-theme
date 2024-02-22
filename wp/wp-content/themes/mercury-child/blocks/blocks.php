@@ -7,6 +7,7 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/our-team' );
     register_block_type( __DIR__ . '/button' );
     register_block_type( __DIR__ . '/blockquote' );
+    register_block_type( __DIR__ . '/casino-list' );
 }
 
 function mg_disable_gutenberg_blocks($allowed_blocks) {

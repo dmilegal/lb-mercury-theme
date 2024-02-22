@@ -62,10 +62,11 @@ __webpack_require__.r(__webpack_exports__);
 
 //import { LbTooltip } from '@/shared/scripts/components/tooltip'
 
-function init() {
-  const btns = document.querySelectorAll('.lb-promo-button');
+function init(container = document.body) {
+  const btns = container.querySelectorAll('.lb-promo-button:not(.lb-button--initiated)');
   btns.forEach(btn => {
     btn.addEventListener('click', () => onCopy(btn));
+    btn.classList.add('lb-button--initiated');
   });
 }
 async function onCopy(btn) {
@@ -84,6 +85,8 @@ async function onCopy(btn) {
     console.error(err);
   }
 }
+;
+window.initPromoButton = init;
 
 /*async function onCopy(btn: HTMLElement) {
   if (!btn) return

@@ -7,6 +7,7 @@
 	<div class="lb-layout__banner">
 		<? get_template_part('theme-parts/cells/hero-banner', null, [
 			'post_id' => get_the_ID(),
+			'enable_published_date' => !!get_field('hero_banner_show_published_date', get_the_ID()),
 		]); ?>
 	</div>
 

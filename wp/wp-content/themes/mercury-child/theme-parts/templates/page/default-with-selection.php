@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <div class="lb-layout lb-layout--with-sidebar">
 	<? if (!is_front_page()) { ?>
 		<div class="lb-layout__breadcrumbs">
@@ -9,15 +10,17 @@
 		<? get_template_part('theme-parts/cells/hero-banner', null, [
 			'post_id' => get_the_id(),
 			'align' => 'center',
-			'enable_published_date' => false,
-			'color' => 'white'
+			'enable_published_date' => !!get_field('hero_banner_show_published_date', get_the_ID()),
+			'color' => 'white',
 		]); ?>
 	</div>
 
 	<div>
 		<?
-		$list = get_field('casino_list', get_the_id()) ?? [];
-		echo do_shortcode('[aces-casinos-8 items_number="10" external_link="1" category="" items_id="' . implode(',', $list) . '" exclude_id="" game_id="" show_title="1" order="DESC" orderby="rating" title=""]');
+		$selectionGroup = get_field('casino_selection_group', get_the_id()) ?? null;
+
+		if ($selectionGroup && $selectionGroup['casino_list'])
+			get_template_part('theme-parts/organs/casino-list/casino-list', null, $selectionGroup);
 		?>
 	</div>
 
@@ -44,6 +47,6 @@
 			</div>
 		<?php endwhile; ?>
 	<?php endif; ?>
-
 </div>
+
 <?php get_footer(); ?>
