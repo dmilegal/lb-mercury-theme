@@ -7,3 +7,6 @@
 [submodule "wp/wp-content/plugins/custom-lang-switcher"]
 	path = wp/wp-content/plugins/custom-lang-switcher
 	url = https://github.com/dmilegal/custom-lang-switcher.git
+[submodule "wp/wp-content/plugins/easy-accordion"]
+	path = wp/wp-content/plugins/easy-accordion
+	url = https://github.com/dmilegal/easy-accordion.git
