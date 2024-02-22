@@ -8,7 +8,7 @@
 * font
 **/
 body {
-  --lb-clipping-clip-line-count: 5;
+  --lb-clipping-clip-line-count: 3;
 }
 
 .lb-clipping--hidden .lb-clipping__actions {
