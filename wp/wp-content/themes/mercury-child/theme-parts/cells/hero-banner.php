@@ -36,9 +36,9 @@ $align = $args['align'] ?? 'left';
       <? } ?>
       <? if ($subtitle) { ?>
         <? get_template_part('theme-parts/cells/clipping', null, [
-          'content' => '<div class="lb-hero-banner__subtitle">
+          'content' => '<p class="lb-hero-banner__subtitle">
                 ' . $subtitle . '
-              </div>'
+              </p>'
         ]); ?>
       <? } ?>
       <? if ($textContent) { ?>

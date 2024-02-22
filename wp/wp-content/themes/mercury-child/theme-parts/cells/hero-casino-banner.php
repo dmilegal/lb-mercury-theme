@@ -94,18 +94,6 @@ $overall_rating = esc_html(get_post_meta($casinoId, 'casino_overall_rating', tru
           </div>
         </div>
       </header>
-      <? if ($mainBonusId = aces_get_main_casino_bonus_id($casinoId)) { ?>
-        <div class="lb-hero-casino-banner-promo">
-          <div class="lb-hero-casino-banner-promo__inner">
-            <div class="lb-hero-casino-banner-promo__sticky">
-              <? get_template_part('theme-parts/molecules/promo-bonus', null, [
-                'bonus_id' => $mainBonusId
-              ]); ?>
-            </div>
-          </div>
-        </div>
-      <? } ?>
-      <? do_action('hero_casino_banner_after_header') ?>
       <div class="lb-hero-casino-banner__info-list">
         <div class="lb-hero-casino-banner__info">
           <div class="lb-hero-casino-banner__info-title">
@@ -125,6 +113,21 @@ $overall_rating = esc_html(get_post_meta($casinoId, 'casino_overall_rating', tru
           </div>
         </div>
       </div>
+
+      <? if ($mainBonusId = aces_get_main_casino_bonus_id($casinoId)) { ?>
+        <div class="lb-hero-casino-banner-promo">
+          <div class="lb-hero-casino-banner-promo__inner">
+            <div class="lb-hero-casino-banner-promo__sticky">
+              <? get_template_part('theme-parts/molecules/promo-bonus', null, [
+                'bonus_id' => $mainBonusId
+              ]); ?>
+            </div>
+          </div>
+        </div>
+      <? } ?>
+
+      <? do_action('hero_casino_banner_after_header') ?>
+
       <? if ($casino_short_desc) { ?>
         <? get_template_part('theme-parts/cells/clipping', null, [
           'content' => '<div class="lb-hero-casino-banner__desc prose-content prose-colors">
