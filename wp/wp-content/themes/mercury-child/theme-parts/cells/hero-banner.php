@@ -40,9 +40,11 @@ $align = $args['align'] ?? 'left';
         </div>
       <? } ?>
       <? if ($textContent) { ?>
-        <div class="lb-hero-banner__text-content prose-content prose-spaces prose-colors">
-          <?= $textContent ?>
-        </div>
+        <? get_template_part('theme-parts/cells/clipping', null, [
+          'content' => '<div class="lb-hero-banner__text-content prose-content prose-spaces prose-colors">
+                ' . $textContent . '
+              </div>'
+        ]); ?>
       <? } ?>
     </div>
   </div>
