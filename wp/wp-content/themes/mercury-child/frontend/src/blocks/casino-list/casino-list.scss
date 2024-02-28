@@ -10,8 +10,12 @@ body, .editor-styles-wrapper {
 .lb-casino-list {
   &--theme {
     &_fullwidth {
-      padding: var(--wp--preset--spacing--155) 0 var(--wp--preset--spacing--280);
+      padding: var(--wp--preset--spacing--155) 0 var(--wp--preset--spacing--175);
       background-color: var(--lb-casino-selection-color-background);
+      
+      @include breakpoints.media-breakpoint-down('sm') {
+        padding: var(--wp--preset--spacing--85) 0 var(--wp--preset--spacing--120);
+      }
 
       %inner {
         @include container.make-container-max-width(720px);
@@ -32,7 +36,11 @@ body, .editor-styles-wrapper {
   }
 
   &__title {
-    margin-bottom: var(--wp--preset--spacing--100);
+    margin-bottom: var(--wp--preset--spacing--140);
+    @include breakpoints.media-breakpoint-down('sm') {
+      margin-bottom: var(--wp--preset--spacing--100);
+    }
+    
     @extend %title;
   }
   
