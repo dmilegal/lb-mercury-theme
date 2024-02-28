@@ -7,6 +7,10 @@
 /**
 * font
 **/
+.wp-block-lb-logo-text .lb-logo-text__media .components-resizable-box__container {
+  width: 100% !important;
+  height: auto !important;
+}
 .wp-block-lb-logo-text + .wp-block-lb-logo-text .lb-logo-text {
   border-top: 0;
   margin-top: calc(-1 * var(--lb-logo-text-space-y));

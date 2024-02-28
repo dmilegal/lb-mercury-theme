@@ -6,6 +6,13 @@
 
 
 .wp-block-lb-logo-text {
+  .lb-logo-text__media {
+    .components-resizable-box__container {
+      width: 100%!important;
+      height: auto!important;
+    }
+  }
+ 
   & + #{&} {
     .lb-logo-text {
       border-top: 0;
