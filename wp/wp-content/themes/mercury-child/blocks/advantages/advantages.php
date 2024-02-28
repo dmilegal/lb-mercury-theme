@@ -15,9 +15,23 @@
 $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 
 $title = get_field('title');
-$allowed_blocks = array('core/list');
+$allowed_blocks = array('core/list', 'core/paragraph');
 $template = array(
-  array('core/list', array(), array(
+  array('core/paragraph', array(
+    'placeholder' => __('Enter Title...'),
+    'content' => __('Advantages', 'mercury-child'),
+    'className' => 'lb-pros-cons-col__title',
+    'lock' => [
+      'move'   => true,
+      'remove' => false,
+    ]
+  )),
+  array('core/list', array(
+    'lock' => array(
+      'move'   => true,
+      'remove' => true,
+    ),
+  ), array(
     array(
       'core/list-item', array(
         'placeholder' => __('Enter Advantages...'),
@@ -28,7 +42,7 @@ $template = array(
 
 get_template_part('theme-parts/molecules/pros-cons-col', null, [
   ...$block_opts,
-  'content' => '<InnerBlocks parentContainer="false" allowedBlocks="' . esc_attr(wp_json_encode($allowed_blocks)) . '" template="' . esc_attr(wp_json_encode($template)) . '" />',
+  'content' => '<InnerBlocks allowedBlocks="' . esc_attr(wp_json_encode($allowed_blocks)) . '" template="' . esc_attr(wp_json_encode($template)) . '" />',
   'type' => 'adv',
   'title' => $title
 ]);

@@ -14,10 +14,25 @@
 
 $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 
+
 $title = get_field('title');
-$allowed_blocks = array('core/list');
+$allowed_blocks = array('core/list', 'core/paragraph');
 $template = array(
-  array('core/list', array(), array(
+  array('core/paragraph', array(
+    'placeholder' => __('Enter Title...'),
+    'content' => __('Disadvantages', 'mercury-child'),
+    'className' => 'lb-pros-cons-col__title',
+    'lock' => array(
+      'move'   => true,
+      'remove' => false,
+    ),
+  )),
+  array('core/list', array(
+    'lock' => array(
+      'move'   => true,
+      'remove' => true,
+    ),
+  ), array(
     array(
       'core/list-item', array(
         'placeholder' => __('Enter Disadvantages...'),
@@ -32,4 +47,3 @@ get_template_part('theme-parts/molecules/pros-cons-col', null, [
   'type' => 'dis',
   'title' => $title
 ]);
-?>

@@ -61,6 +61,8 @@
   },
   "dependencies": {
     "@floating-ui/dom": "^1.6.1",
+    "@wordpress/core-data": "^6.29.0",
+    "@wordpress/data": "^9.22.0",
     "hamburgers": "^1.2.1",
     "swiper": "^11.0.5"
   }

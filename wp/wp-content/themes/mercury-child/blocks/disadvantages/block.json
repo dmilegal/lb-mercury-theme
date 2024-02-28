@@ -7,7 +7,6 @@
   "category": "formatting",
   "icon": "minus",
   "keywords": ["disadvantages", "cons", "compare"],
-  "parent": [ "lb/pros-cons" ],
   "acf": {
       "mode": "preview",
       "renderTemplate": "disadvantages.php"

@@ -1,0 +1,15 @@
+{
+  "name": "lb/logo-text",
+  "title": "Logo & Text",
+  "description": "Block Logo and Text",
+  "style": [ "logo-text" ],
+  "editorStyle": ["logo-text-editor"],
+  "category": "formatting",
+  "icon": "align-pull-left",
+  "keywords": ["logo & text", "image & text","media & text", "media"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "logo-text.php"
+  },
+  "align": "full"
+}

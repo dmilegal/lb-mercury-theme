@@ -56,11 +56,24 @@ function add_editor_styles()
   add_editor_style('frontend/dist/css/editor.css');
 };
 add_action('after_setup_theme', 'add_editor_styles');
+
 function enqueue_block_editor_styles()
 {
   enqueue_assets_by_name('editor-reset');
 }
 add_action('enqueue_block_editor_assets', 'enqueue_block_editor_styles');
+
+function enqueue_block_editor_scripts()
+{
+  wp_enqueue_script(
+    'editor-custom',
+    get_stylesheet_directory_uri() . '/frontend/dist/js/editor.js',
+    array( 'wp-blocks' ),
+    wp_get_theme()->get( 'Version' ),
+    false
+);
+}
+add_action('enqueue_block_editor_assets', 'enqueue_block_editor_scripts');
 
 // register all assets
 function register_all_assets()

@@ -1,0 +1,63 @@
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/logo-text/logo-text.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body, .editor-styles-wrapper {
+  --lb-logo-text-space-y: 0px;
+}
+
+.lb-logo-text {
+  container-type: inline-size;
+  padding: var(--wp--preset--spacing--90) 0;
+  border-top: 1px solid var(--wp--preset--color--gray-200);
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+  margin-top: var(--lb-logo-text-space-y);
+  margin-bottom: var(--lb-logo-text-space-y);
+}
+.lb-logo-text + .lb-logo-text {
+  border-top: 0;
+  margin-top: calc(-1 * var(--lb-logo-text-space-y));
+}
+.lb-logo-text__inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: var(--wp--preset--spacing--140);
+  column-gap: var(--wp--preset--spacing--140);
+  grid-row-gap: var(--wp--preset--spacing--85);
+  row-gap: var(--wp--preset--spacing--85);
+}
+@container (max-width: 575.98px) {
+  .lb-logo-text__inner {
+    grid-template-columns: 1fr;
+  }
+}
+.lb-logo-text__title.lb-logo-text__title {
+  font-weight: 600;
+  font-size: var(--lb-font-size-text-lg-relative);
+  line-height: var(--lb-line-height-text-lg-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-lg-relative, inherit);
+  margin-bottom: var(--wp--preset--spacing--80);
+}
+.lb-logo-text__media {
+  width: var(--wp--preset--spacing--270);
+}
+@container (max-width: 575.98px) {
+  .lb-logo-text__media {
+    margin: 0 auto;
+  }
+}
+.lb-logo-text__media > * {
+  width: 100%;
+}
+.lb-logo-text__media img {
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=logo-text.css.map*/

@@ -15,11 +15,7 @@ $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['id', 'st
                 'lb-pros-cons-col--dis' => $type === 'dis',
               ]
             ) ?>" <?= $attrsStr ?>>
-  <? if ($title) { ?>
-    <div class="lb-pros-cons-col__title">
-      <strong><?= esc_html($title) ?></strong>
-    </div>
-  <? } ?>
+
   <div class="lb-pros-cons-col__content">
     <?= $content ?>
   </div>

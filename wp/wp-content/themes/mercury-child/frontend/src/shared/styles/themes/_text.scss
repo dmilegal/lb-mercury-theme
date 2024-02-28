@@ -95,6 +95,15 @@ $proseCustomSelector: null !default;
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
+@include typo.make-prose('spaces', '.lb-logo-text', $proseCustomSelector) {
+  --lb-logo-text-space-y: var(--wp--preset--spacing--100);
+}
+
+@include typo.make-prose('spaces', '.wp-block-media-text', $proseCustomSelector) {
+  --wp-block-media-text-space-y: var(--wp--preset--spacing--100);
+}
+
+
 @include typo.make-prose('spaces', '.lb-author-block, [id*="sp_easy_accordion"]', $proseCustomSelector) {
   margin-top: var(--wp--preset--spacing--100);
   margin-bottom: var(--wp--preset--spacing--100);

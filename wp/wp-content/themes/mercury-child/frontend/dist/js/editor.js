@@ -34,6 +34,135 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
+/***/ }),
+
+/***/ "./src/editor/blocks/index.ts":
+/*!************************************!*\
+  !*** ./src/editor/blocks/index.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _variations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./variations */ "./src/editor/blocks/variations/index.ts");
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles */ "./src/editor/blocks/styles/index.ts");
+
+
+
+/***/ }),
+
+/***/ "./src/editor/blocks/styles/index.ts":
+/*!*******************************************!*\
+  !*** ./src/editor/blocks/styles/index.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _media_text__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./media-text */ "./src/editor/blocks/styles/media-text.ts");
+
+
+/***/ }),
+
+/***/ "./src/editor/blocks/styles/media-text.ts":
+/*!************************************************!*\
+  !*** ./src/editor/blocks/styles/media-text.ts ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   S: () => (/* binding */ S)
+/* harmony export */ });
+const S = wp.domReady(function () {
+  wp.blocks.registerBlockStyle('core/media-text', {
+    name: 'media-text-bordered',
+    label: 'Bordered'
+  });
+  /* wp.blocks.registerBlockVariation('core/media-text', {
+    name: 'lb-logo-text',
+    title: 'Logo & Text',
+    //isDefault: true,
+    attributes: {
+      className: 'lb-media-text--style_logo',
+      mediaPosition: 'left',
+      mediaSizeSlug: 'medium',
+      verticalAlignment: 'top',
+    },
+    supports: {
+      mediaWidth: false,
+    },
+    innerBlocks: [
+      [
+        'core/heading',
+        {
+          level: 3,
+          size: 'text-lg',
+          placeholder: 'Enter title...',
+        },
+      ],
+      [
+        'core/paragraph',
+        {
+          placeholder: 'Start writing your text...',
+        },
+      ],
+    ],
+  })*/
+});
+
+/***/ }),
+
+/***/ "./src/editor/blocks/variations/index.ts":
+/*!***********************************************!*\
+  !*** ./src/editor/blocks/variations/index.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./list */ "./src/editor/blocks/variations/list.ts");
+/* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_list__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/***/ }),
+
+/***/ "./src/editor/blocks/variations/list.ts":
+/*!**********************************************!*\
+  !*** ./src/editor/blocks/variations/list.ts ***!
+  \**********************************************/
+/***/ (() => {
+
+wp.domReady(function () {
+  /* wp.blocks.registerBlockVariation('core/media-text', {
+    name: 'lb-logo-text',
+    title: 'Logo & Text',
+    //isDefault: true,
+    attributes: {
+      className: 'lb-media-text--style_logo',
+      mediaPosition: 'left',
+      mediaSizeSlug: 'medium',
+      verticalAlignment: 'top',
+    },
+    supports: {
+      mediaWidth: false,
+    },
+    innerBlocks: [
+      [
+        'core/heading',
+        {
+          level: 3,
+          size: 'text-lg',
+          placeholder: 'Enter title...',
+        },
+      ],
+      [
+        'core/paragraph',
+        {
+          placeholder: 'Start writing your text...',
+        },
+      ],
+    ],
+  })*/
+});
+
 /***/ })
 
 /******/ });
@@ -63,6 +192,35 @@ __webpack_require__.r(__webpack_exports__);
 /******/ }
 /******/ 
 /************************************************************************/
+/******/ /* webpack/runtime/compat get default export */
+/******/ (() => {
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = (module) => {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			() => (module['default']) :
+/******/ 			() => (module);
+/******/ 		__webpack_require__.d(getter, { a: getter });
+/******/ 		return getter;
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/define property getters */
+/******/ (() => {
+/******/ 	// define getter functions for harmony exports
+/******/ 	__webpack_require__.d = (exports, definition) => {
+/******/ 		for(var key in definition) {
+/******/ 			if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			}
+/******/ 		}
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/hasOwnProperty shorthand */
+/******/ (() => {
+/******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ })();
+/******/ 
 /******/ /* webpack/runtime/make namespace object */
 /******/ (() => {
 /******/ 	// define __esModule on exports
@@ -85,6 +243,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var fonts_poppins_stylesheet_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fonts/poppins/stylesheet.css */ "./public/fonts/poppins/stylesheet.css");
 /* harmony import */ var fonts_lhicon_stylesheet_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! fonts/lhicon/stylesheet.css */ "./public/fonts/lhicon/stylesheet.css");
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./src/editor/editor.scss");
+/* harmony import */ var _blocks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks */ "./src/editor/blocks/index.ts");
+
 
 
 

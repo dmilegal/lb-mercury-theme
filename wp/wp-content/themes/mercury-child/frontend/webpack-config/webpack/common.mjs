@@ -27,6 +27,12 @@ function getBlockConfig(dir = `${paths.src}/blocks`, dirs = {}) {
       dirs[`${file}`] = {
         import: [files[0]],
       }
+
+      const editorFiles = globSync(`${name}/${file}-editor.{ts,js}`)
+      if (editorFiles.length)
+        dirs[`${file}-editor`] = {
+          import: [editorFiles[0]],
+        }
     }
   }
 

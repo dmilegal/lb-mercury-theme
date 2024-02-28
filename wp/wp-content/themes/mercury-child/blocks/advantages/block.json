@@ -2,12 +2,11 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "name": "lb/advantages",
   "title": "Advantages",
-  "description": "Advantages block.",
+  "description": "Advantages block",
   "style": [],
   "category": "formatting",
   "icon": "plus-alt",
   "keywords": ["advantages", "pros", "compare"],
-  "parent": [ "lb/pros-cons" ],
   "acf": {
       "mode": "preview",
       "renderTemplate": "advantages.php"

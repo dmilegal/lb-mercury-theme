@@ -1,0 +1,11 @@
+{
+  "name": "lb/logo-text-media",
+  "title": "Media",
+  "icon": "format-image",
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "media.php"
+  },
+  "parent": [ "lb/logo-text" ],
+  "align": "full"
+}

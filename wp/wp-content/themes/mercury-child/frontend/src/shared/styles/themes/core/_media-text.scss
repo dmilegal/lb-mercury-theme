@@ -3,11 +3,15 @@
 @use '@/shared/styles/mixins/breakpoints';
 @use '@/shared/styles/mixins/container';
 
+body, .editor-styles-wrapper {
+  --wp-block-media-text-space-y: 0px;
+}
+
 .wp-block-media-text.wp-block-media-text {
   column-gap: var(--wp--preset--spacing--140);
   row-gap: var(--wp--preset--spacing--85);
-  margin-top: var(--wp--preset--spacing--100);
-  margin-bottom: var(--wp--preset--spacing--100);
+  margin-top: var(--wp-block-media-text-space-y);
+  margin-bottom: var(--wp-block-media-text-space-y);
 
   .wp-block-media-text__media {
     @include breakpoints.media-breakpoint-down(xs) {
@@ -24,5 +28,15 @@
 
   .wp-block-media-text__content {
     padding: 0;
+  }
+}
+
+.is-style-media-text-bordered {
+  padding: var(--wp--preset--spacing--90) 0;
+  border-top: 1px solid var(--wp--preset--color--gray-200);
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+  & + #{&} {
+    border-top: 0;
+    margin-top: calc(-1 * var(--wp--preset--spacing--100));
   }
 }

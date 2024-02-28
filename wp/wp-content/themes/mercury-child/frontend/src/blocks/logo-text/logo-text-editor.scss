@@ -1,0 +1,15 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+@use '@/shared/styles/mixins/media-containers';
+
+
+.wp-block-lb-logo-text {
+  & + #{&} {
+    .lb-logo-text {
+      border-top: 0;
+      margin-top: calc(-1 * var(--lb-logo-text-space-y));
+    }
+  }
+}

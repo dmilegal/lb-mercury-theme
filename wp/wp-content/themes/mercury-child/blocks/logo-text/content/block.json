@@ -1,0 +1,11 @@
+{
+  "name": "lb/logo-text-content",
+  "title": "Content",
+  "icon": "text",
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "content.php"
+  },
+  "parent": [ "lb/logo-text" ],
+  "align": "full"
+}
