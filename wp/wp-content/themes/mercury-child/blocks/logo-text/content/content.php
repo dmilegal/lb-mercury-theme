@@ -1,7 +1,7 @@
 <?php
 $allowed_blocks = array('core/paragraph', 'lb/logo-text-title');
 $template = array(
-  array('lb/logo-text-title'. array()),
+  array('lb/logo-text-title', array()),
   array('core/paragraph', array(
     'placeholder' => __('Enter content...'),
   )),
