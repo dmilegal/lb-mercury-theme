@@ -1,6 +1,8 @@
 <?
 global $post;
 
+if (!$post) return;
+
 $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
 $authorId = $args['author_id'] ?? $post->post_author;
