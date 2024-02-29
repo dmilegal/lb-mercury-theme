@@ -1744,16 +1744,12 @@ body :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([clas
   top: 0;
 }
 
-body :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  counter-reset: counter;
-}
 body :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) li {
   padding-left: var(--wp-list-ico-spacing-s);
   position: relative;
-  counter-increment: counter;
 }
 body :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) li:before {
-  content: counter(counter);
+  content: counter(list-item);
   font-weight: 500;
   position: absolute;
   right: calc(100% - var(--wp-list-ico-spacing-s) / 2 + 1px);

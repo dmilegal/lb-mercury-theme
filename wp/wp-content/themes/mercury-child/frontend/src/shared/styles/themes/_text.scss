@@ -57,13 +57,11 @@ $proseCustomSelector: null !default;
 }
 
 @include typo.make-prose('content', 'ol:not(.is-list-ico-check,.is-list-ico-cross)', $proseCustomSelector) {
-  counter-reset: counter;
   li {
     padding-left: var(--wp-list-ico-spacing-s);
     position: relative;
-    counter-increment: counter;
     &:before {
-      content: counter(counter);
+      content: counter(list-item);
       font-weight: 500;
       position: absolute;
       right: calc(100% - var(--wp-list-ico-spacing-s) / 2 + 1px);
