@@ -1,34 +1,19 @@
 declare const wp: any
 
 wp.domReady(function () {
-  /* wp.blocks.registerBlockVariation('core/media-text', {
-    name: 'lb-logo-text',
-    title: 'Logo & Text',
-    //isDefault: true,
+  wp.blocks.registerBlockVariation('core/list', {
+    name: 'list-with-ico-check',
+    title: 'List - ✓ Icon',
     attributes: {
-      className: 'lb-media-text--style_logo',
-      mediaPosition: 'left',
-      mediaSizeSlug: 'medium',
-      verticalAlignment: 'top',
+      className: 'is-list-ico-check',
     },
-    supports: {
-      mediaWidth: false,
+  })
+
+  wp.blocks.registerBlockVariation('core/list', {
+    name: 'list-with-ico-cross',
+    title: 'List - ✘ Icon',
+    attributes: {
+      className: 'is-list-ico-cross',
     },
-    innerBlocks: [
-      [
-        'core/heading',
-        {
-          level: 3,
-          size: 'text-lg',
-          placeholder: 'Enter title...',
-        },
-      ],
-      [
-        'core/paragraph',
-        {
-          placeholder: 'Start writing your text...',
-        },
-      ],
-    ],
-  })*/
+  })
 })

@@ -1,0 +1,11 @@
+@use '@/shared/styles/mixins/breakpoints';
+
+.is-style-group-bordered {
+  padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100) var(--wp--preset--spacing--110);
+  border: 1px solid var(--wp--preset--color--gray-200);
+  border-radius: var(--wp--preset--spacing--80);
+
+  @include breakpoints.media-breakpoint-down(sm) {
+    padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--90) var(--wp--preset--spacing--110);
+  }
+}

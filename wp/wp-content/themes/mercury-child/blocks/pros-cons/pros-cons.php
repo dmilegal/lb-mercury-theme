@@ -23,5 +23,5 @@ $template = array(
 
 get_template_part('theme-parts/cells/pros-cons', null, [
   ...$block_opts,
-  'content' => '<InnerBlocks class="lb-pros-cons__inner" allowedBlocks="' .  esc_attr(wp_json_encode($allowed_blocks)) . '" template="' . esc_attr(wp_json_encode($template)) . '" />',
+  'content' => '<InnerBlocks templateLock="all" class="lb-pros-cons__inner" allowedBlocks="' .  esc_attr(wp_json_encode($allowed_blocks)) . '" template="' . esc_attr(wp_json_encode($template)) . '" />',
 ]);

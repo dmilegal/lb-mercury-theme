@@ -34,7 +34,16 @@ $proseCustomSelector: null !default;
   padding-left: var(--wp--preset--spacing--90);
   display: flex;
   flex-direction: column;
-  row-gap: var(--wp--preset--spacing--80);
+  row-gap: var(--wp--preset--spacing--90);
+}
+
+@include typo.make-prose('content', 'ul,ol', $proseCustomSelector) {
+  padding-left: var(--wp-list-ico-spacing-s);
+  li {
+    &::marker {
+      color: var(--wp-list-ico-color-text);
+    }
+  }
 }
 
 @include typo.make-prose('content', 'ul', $proseCustomSelector) {
@@ -51,7 +60,7 @@ $proseCustomSelector: null !default;
 
 @include typo.make-prose(
   'spaces',
-  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.lb-pros-cons',
+  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.lb-pros-cons,.lb-pros-cons-item',
   $proseCustomSelector
 ) {
   &:first-child {
@@ -75,9 +84,14 @@ $proseCustomSelector: null !default;
   }
 }
 
-@include typo.make-prose('spaces', 'p,ul,ol,.wp-block-image', $proseCustomSelector) {
+@include typo.make-prose('spaces', 'p,.wp-block-image', $proseCustomSelector) {
   margin-block-start: var(--wp--preset--spacing--80);
   margin-block-end: var(--wp--preset--spacing--80);
+}
+
+@include typo.make-prose('spaces', 'ul,ol', $proseCustomSelector) {
+  margin-block-start: var(--wp--preset--spacing--90);
+  margin-block-end: var(--wp--preset--spacing--90);
 }
 
 @include typo.make-prose('spaces', 'blockquote', $proseCustomSelector) {
@@ -86,9 +100,15 @@ $proseCustomSelector: null !default;
 }
 
 @include typo.make-prose('spaces', '.lb-pros-cons', $proseCustomSelector) {
-  margin-block-start: var(--wp--preset--spacing--120);
-  margin-block-end: var(--wp--preset--spacing--120);
+  margin-block-start: var(--wp--preset--spacing--100);
+  margin-block-end: var(--wp--preset--spacing--100);
 }
+
+@include typo.make-prose('spaces', '.lb-pros-cons-item', $proseCustomSelector) {
+  margin-block-start: var(--wp--preset--spacing--100);
+  margin-block-end: var(--wp--preset--spacing--100);
+}
+
 
 @include typo.make-prose('spaces', '.lb-post-info', $proseCustomSelector) {
   margin-block-start: var(--wp--preset--spacing--100);

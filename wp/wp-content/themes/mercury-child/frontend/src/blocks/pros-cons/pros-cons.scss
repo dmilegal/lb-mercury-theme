@@ -1,7 +1,8 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body, .editor-styles-wrapper {
+body,
+.editor-styles-wrapper {
   --lb-pros-cons-color-text: var(--lb-color-text-default);
   --lb-pros-cons-title-color-text: var(--lb-color-text-strong);
   --lb-pros-cons-item-color-background: var(--lb-color-surface);
@@ -18,58 +19,20 @@ body, .editor-styles-wrapper {
     }
   }
 
-  &-col {
-    background-color: var(--lb-pros-cons-item-color-background);
-    padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100)
-      var(--wp--preset--spacing--110);
-    color: var(--lb-pros-cons-color-text);
-    border: 1px solid var(--wp--preset--color--gray-200);
-    border-radius: var(--wp--preset--spacing--80);
-    &--adv {
-      li {
-        &::before {
-          content: '\e94f';
-          color: var(--wp--preset--color--primary-500);
-        }
-      }
-    }
+  & %item {
+    margin: 0;
+  }
 
-    &--dis {
-      li {
-        &::before {
-          content: '\ea27';
-        }
-      }
-    }
-
+  &-item {
     &__title {
-      @include font.get-text-styles('text-lg', false);
-      font-weight: 500;
-      margin-bottom: var(--wp--preset--spacing--105);
-      color: var(--lb-pros-cons-title-color-text);
-    }
-
-    ul {
-      @include font.get-text-styles('text-md', false);
-      display: flex;
-      flex-direction: column;
-      padding-left: 0;
-      row-gap: var(--wp--preset--spacing--90);
-    }
-
-    li {
-      display: flex;
-      column-gap: var(--wp--preset--spacing--60);
-      &::before {
-        font-family: 'lhicon';
-        font-size: 1.25em;
-        speak: never;
-        font-style: normal;
-        font-weight: inherit;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
+      &#{&} {
+        @include font.get-text-styles('text-lg', false);
+        font-weight: 500;
+        margin-bottom: var(--wp--preset--spacing--100);
+        color: var(--lb-pros-cons-title-color-text);
       }
     }
+
+    @extend %item;
   }
 }

@@ -3,7 +3,7 @@
   "name": "lb/disadvantages",
   "title": "Disadvantages",
   "description": "Disadvantages block.",
-  "style": [],
+  "style": ["pros-cons"],
   "category": "formatting",
   "icon": "minus",
   "keywords": ["disadvantages", "cons", "compare"],

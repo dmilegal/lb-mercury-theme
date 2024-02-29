@@ -50,6 +50,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/editor/blocks/styles/group.ts":
+/*!*******************************************!*\
+  !*** ./src/editor/blocks/styles/group.ts ***!
+  \*******************************************/
+/***/ (() => {
+
+wp.domReady(function () {
+  wp.blocks.registerBlockStyle('core/group', {
+    name: 'group-bordered',
+    label: 'Bordered'
+  });
+});
+
+/***/ }),
+
 /***/ "./src/editor/blocks/styles/index.ts":
 /*!*******************************************!*\
   !*** ./src/editor/blocks/styles/index.ts ***!
@@ -58,7 +73,31 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _media_text__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./media-text */ "./src/editor/blocks/styles/media-text.ts");
+/* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./list */ "./src/editor/blocks/styles/list.ts");
+/* harmony import */ var _group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./group */ "./src/editor/blocks/styles/group.ts");
+/* harmony import */ var _group__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_group__WEBPACK_IMPORTED_MODULE_2__);
 
+
+
+
+/***/ }),
+
+/***/ "./src/editor/blocks/styles/list.ts":
+/*!******************************************!*\
+  !*** ./src/editor/blocks/styles/list.ts ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   S: () => (/* binding */ S)
+/* harmony export */ });
+const S = wp.domReady(function () {
+  wp.blocks.registerBlockStyle('core/list', {
+    name: 'list-bordered',
+    label: 'Bordered'
+  });
+});
 
 /***/ }),
 
@@ -111,6 +150,47 @@ const S = wp.domReady(function () {
 
 /***/ }),
 
+/***/ "./src/editor/blocks/variations/group.ts":
+/*!***********************************************!*\
+  !*** ./src/editor/blocks/variations/group.ts ***!
+  \***********************************************/
+/***/ (() => {
+
+wp.domReady(function () {
+  /*wp.blocks.registerBlockVariation('core/group', {
+    name: 'advantages',
+    title: 'Advantages',
+    attributes: {
+      className: 'is-style-group-bordered',
+    },
+    innerBlocks: [
+      [
+        'core/paragraph',
+        {
+          className: 'has-text-lg-font-size has-gray-900-color',
+          placeholder: 'Enter title...',
+        },
+      ],
+      [
+        'core/list',
+        {
+          className: 'is-list-ico-check',
+        },
+        [
+          [
+            'core/list-item',
+            {
+              placeholder: 'Enter Advantages...',
+            },
+          ],
+        ],
+      ],
+    ],
+  })*/
+});
+
+/***/ }),
+
 /***/ "./src/editor/blocks/variations/index.ts":
 /*!***********************************************!*\
   !*** ./src/editor/blocks/variations/index.ts ***!
@@ -120,6 +200,9 @@ const S = wp.domReady(function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./list */ "./src/editor/blocks/variations/list.ts");
 /* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_list__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _group__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./group */ "./src/editor/blocks/variations/group.ts");
+/* harmony import */ var _group__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_group__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /***/ }),
@@ -131,36 +214,20 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (() => {
 
 wp.domReady(function () {
-  /* wp.blocks.registerBlockVariation('core/media-text', {
-    name: 'lb-logo-text',
-    title: 'Logo & Text',
-    //isDefault: true,
+  wp.blocks.registerBlockVariation('core/list', {
+    name: 'list-with-ico-check',
+    title: 'List - ✓ Icon',
     attributes: {
-      className: 'lb-media-text--style_logo',
-      mediaPosition: 'left',
-      mediaSizeSlug: 'medium',
-      verticalAlignment: 'top',
-    },
-    supports: {
-      mediaWidth: false,
-    },
-    innerBlocks: [
-      [
-        'core/heading',
-        {
-          level: 3,
-          size: 'text-lg',
-          placeholder: 'Enter title...',
-        },
-      ],
-      [
-        'core/paragraph',
-        {
-          placeholder: 'Start writing your text...',
-        },
-      ],
-    ],
-  })*/
+      className: 'is-list-ico-check'
+    }
+  });
+  wp.blocks.registerBlockVariation('core/list', {
+    name: 'list-with-ico-cross',
+    title: 'List - ✘ Icon',
+    attributes: {
+      className: 'is-list-ico-cross'
+    }
+  });
 });
 
 /***/ })

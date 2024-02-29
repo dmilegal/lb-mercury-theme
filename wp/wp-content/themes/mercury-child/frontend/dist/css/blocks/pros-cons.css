@@ -7,7 +7,8 @@
 /**
 * font
 **/
-body, .editor-styles-wrapper {
+body,
+.editor-styles-wrapper {
   --lb-pros-cons-color-text: var(--lb-color-text-default);
   --lb-pros-cons-title-color-text: var(--lb-color-text-strong);
   --lb-pros-cons-item-color-background: var(--lb-color-surface);
@@ -26,53 +27,17 @@ body, .editor-styles-wrapper {
     grid-template-columns: 1fr;
   }
 }
-.lb-pros-cons-col {
-  background-color: var(--lb-pros-cons-item-color-background);
-  padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100) var(--wp--preset--spacing--110);
-  color: var(--lb-pros-cons-color-text);
-  border: 1px solid var(--wp--preset--color--gray-200);
-  border-radius: var(--wp--preset--spacing--80);
+.lb-pros-cons .lb-pros-cons-item {
+  margin: 0;
 }
-.lb-pros-cons-col--adv li::before {
-  content: "\e94f";
-  color: var(--wp--preset--color--primary-500);
-}
-.lb-pros-cons-col--dis li::before {
-  content: "\ea27";
-}
-.lb-pros-cons-col__title {
+.lb-pros-cons-item__title.lb-pros-cons-item__title {
   font-size: var(--wp--preset--font-size--text-lg);
   line-height: var(--wp--custom--line-height--text-lg);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
   font-weight: 500;
-  margin-bottom: var(--wp--preset--spacing--105);
+  margin-bottom: var(--wp--preset--spacing--100);
   color: var(--lb-pros-cons-title-color-text);
-}
-.lb-pros-cons-col ul {
-  font-size: var(--wp--preset--font-size--text-md);
-  line-height: var(--wp--custom--line-height--text-md);
-  letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  row-gap: var(--wp--preset--spacing--90);
-}
-.lb-pros-cons-col li {
-  display: flex;
-  column-gap: var(--wp--preset--spacing--60);
-}
-.lb-pros-cons-col li::before {
-  font-family: "lhicon";
-  font-size: 1.25em;
-  speak: never;
-  font-style: normal;
-  font-weight: inherit;
-  font-feature-settings: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
 }
 
 /*# sourceMappingURL=pros-cons.css.map*/

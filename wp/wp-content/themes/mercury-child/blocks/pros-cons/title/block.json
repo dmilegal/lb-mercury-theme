@@ -1,0 +1,11 @@
+{
+  "name": "lb/pros-cons-title",
+  "title": "Title",
+  "icon": "heading",
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "title.php"
+  },
+  "parent": [ "lb/pros-cons-content" ],
+  "align": "full"
+}
