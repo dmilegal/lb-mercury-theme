@@ -9,3 +9,9 @@
     padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--90) var(--wp--preset--spacing--110);
   }
 }
+
+.wp-block-column {
+  & > .wp-block-group {
+    min-height: 100%;
+  }
+}

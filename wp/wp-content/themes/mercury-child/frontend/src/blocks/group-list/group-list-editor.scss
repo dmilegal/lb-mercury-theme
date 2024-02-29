@@ -1,31 +1,18 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+.editor-styles-wrapper {
   --lb-pros-cons-color-text: var(--lb-color-text-default);
   --lb-pros-cons-title-color-text: var(--lb-color-text-strong);
   --lb-pros-cons-item-color-background: var(--lb-color-surface);
 }
 
-.lb-group-list {
+.wp-block-lb-group-list {
   width: 100%;
   display: flex;
   align-items: stretch;
 
-  &__title {
-    &#{&} {
-      @include font.get-text-styles('text-lg', false);
-      font-weight: 500;
-      margin-bottom: var(--wp--preset--spacing--100);
-      color: var(--lb-pros-cons-title-color-text);
-    }
-  }
-
   @at-root .wp-block-column > & {
     min-height: 100%;
-  }
-
-  & > .wp-block-group {
-    width: 100%;
   }
 }

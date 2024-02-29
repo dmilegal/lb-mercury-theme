@@ -3,6 +3,7 @@
   "name": "lb/group-list",
   "title": "Group List",
   "style": ["group-list"],
+  "editorStyle": ["group-list-editor"],
   "category": "formatting",
   "icon": "list-view",
   "keywords": ["advantages", "pros", "cons", "disadvantages", "compare", "list", "group"],

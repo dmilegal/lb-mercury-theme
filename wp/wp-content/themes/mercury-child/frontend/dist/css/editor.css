@@ -2120,6 +2120,10 @@ body,
   }
 }
 
+.wp-block-column > .wp-block-group {
+  min-height: 100%;
+}
+
 body {
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
