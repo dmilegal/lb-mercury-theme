@@ -5,7 +5,7 @@
   "style": ["group-list"],
   "category": "formatting",
   "icon": "list-view",
-  "keywords": ["advantages", "pros", "compare", "list", "group"],
+  "keywords": ["advantages", "pros", "cons", "disadvantages", "compare", "list", "group"],
   "acf": {
       "mode": "preview",
       "renderTemplate": "group-list.php"
