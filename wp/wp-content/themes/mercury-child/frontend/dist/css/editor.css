@@ -1722,6 +1722,8 @@ body :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
   display: flex;
   flex-direction: column;
   row-gap: var(--wp--preset--spacing--90);
+  padding-left: 0;
+  list-style: none;
 }
 body :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) li::marker {
   color: var(--wp-list-ico-color-text);

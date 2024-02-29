@@ -33,6 +33,8 @@ $proseCustomSelector: null !default;
   display: flex;
   flex-direction: column;
   row-gap: var(--wp--preset--spacing--90);
+  padding-left: 0;
+  list-style: none;
   li {
     &::marker, &::before {
       color: var(--wp-list-ico-color-text);
