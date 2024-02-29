@@ -30,28 +30,45 @@ $proseCustomSelector: null !default;
 
 @include typo.make-prose('content', 'ul, ol', $proseCustomSelector) {
   @include font.get-text-styles('text-md');
-  list-style: disc;
-  padding-left: var(--wp--preset--spacing--90);
   display: flex;
   flex-direction: column;
   row-gap: var(--wp--preset--spacing--90);
-}
-
-@include typo.make-prose('content', 'ul,ol', $proseCustomSelector) {
-  padding-left: var(--wp-list-ico-spacing-s);
   li {
-    &::marker {
+    &::marker, &::before {
       color: var(--wp-list-ico-color-text);
     }
   }
 }
 
-@include typo.make-prose('content', 'ul', $proseCustomSelector) {
-  list-style: disc;
+@include typo.make-prose('content', 'ul:not(.is-list-ico-check,.is-list-ico-cross)', $proseCustomSelector) {
+  li {
+    padding-left: var(--wp-list-ico-spacing-s);
+    position: relative;
+    &:before {
+      content: '•';
+      position: absolute;
+      font-size: 1.75em;
+      right: calc(100% - (var(--wp-list-ico-spacing-s) - 0.75em) / 2);
+      top: 0;
+    }
+  }
 }
 
-@include typo.make-prose('content', 'ol', $proseCustomSelector) {
-  list-style: decimal;
+@include typo.make-prose('content', 'ol:not(.is-list-ico-check,.is-list-ico-cross)', $proseCustomSelector) {
+  counter-reset: counter;
+  li {
+    padding-left: var(--wp-list-ico-spacing-s);
+    position: relative;
+    counter-increment: counter;
+    &:before {
+      content: counter(counter);
+      font-weight: 500;
+      position: absolute;
+      right: calc(100% - var(--wp-list-ico-spacing-s) / 2 + 1px);
+      top: 0;
+    }
+  }
+
 }
 
 @include typo.make-prose('content', 'img', $proseCustomSelector) {

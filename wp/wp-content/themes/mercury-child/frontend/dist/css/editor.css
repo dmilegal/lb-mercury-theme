@@ -1342,6 +1342,7 @@
 /*!***********************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/editor/editor.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 /*
 * Project style
 */
@@ -1718,26 +1719,43 @@ body :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
   line-height: var(--lb-line-height-text-md-relative);
   letter-spacing: inherit;
   letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
-  list-style: disc;
-  padding-left: var(--wp--preset--spacing--90);
   display: flex;
   flex-direction: column;
   row-gap: var(--wp--preset--spacing--90);
 }
-
-body :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  padding-left: var(--wp-list-ico-spacing-s);
-}
 body :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) li::marker {
   color: var(--wp-list-ico-color-text);
 }
-
-body :where(ul):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  list-style: disc;
+body :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) li::before {
+  color: var(--wp-list-ico-color-text);
 }
 
-body :where(ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  list-style: decimal;
+body :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) li {
+  padding-left: var(--wp-list-ico-spacing-s);
+  position: relative;
+}
+body :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) li:before {
+  content: "•";
+  position: absolute;
+  font-size: 1.75em;
+  right: calc(100% - (var(--wp-list-ico-spacing-s) - 0.75em) / 2);
+  top: 0;
+}
+
+body :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  counter-reset: counter;
+}
+body :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) li {
+  padding-left: var(--wp-list-ico-spacing-s);
+  position: relative;
+  counter-increment: counter;
+}
+body :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) li:before {
+  content: counter(counter);
+  font-weight: 500;
+  position: absolute;
+  right: calc(100% - var(--wp-list-ico-spacing-s) / 2 + 1px);
+  top: 0;
 }
 
 body :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) {
@@ -2056,7 +2074,7 @@ body, .editor-styles-wrapper {
 body,
 .editor-styles-wrapper {
   --wp-list-ico-color-text: var(--wp--preset--color--primary-500);
-  --wp-list-ico-spacing-s: var(--wp--preset--spacing--120);
+  --wp-list-ico-spacing-s: 2em;
 }
 
 .is-list-ico-check,
@@ -2073,18 +2091,18 @@ body,
 .is-list-ico-cross li:before {
   position: absolute;
   left: 0;
+  right: auto;
   top: 0;
-  transform: translateY(10%);
   font-family: "lhicon";
-  font-size: 1.25em;
+  font-size: 1.5em;
+  width: 1em;
+  text-align: center;
   speak: never;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-feature-settings: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
-  color: var(--wp-list-ico-color-text);
 }
 
 .is-list-ico-check li::before {

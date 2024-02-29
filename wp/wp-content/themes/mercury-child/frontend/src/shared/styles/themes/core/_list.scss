@@ -3,7 +3,7 @@
 body,
 .editor-styles-wrapper {
   --wp-list-ico-color-text: var(--wp--preset--color--primary-500);
-  --wp-list-ico-spacing-s: var(--wp--preset--spacing--120);
+  --wp-list-ico-spacing-s: 2em;
 }
 
 .is-list-ico-check,
@@ -17,17 +17,17 @@ body,
     &:before {
       position: absolute;
       left: 0;
+      right: auto;
       top: 0;
-      transform: translateY(10%);
       font-family: 'lhicon';
-      font-size: 1.25em;
+      font-size: 1.5em;
+      width: 1em;
+      text-align: center;
       speak: never;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 400;
       font-variant: normal;
       text-transform: none;
-      line-height: 1;
-      color: var(--wp-list-ico-color-text);
     }
   }
 }
