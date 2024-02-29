@@ -1347,6 +1347,7 @@
 */
 /*base*/
 body {
+  --wp--style--block-gap: var(--wp--preset--spacing--90);
   --layout-content-spacing: var(--wp--custom--layout--content-spacing-md);
   --layout--content-padding: var(--wp--custom--layout--content-padding-md);
   --lb-color-text-default: var(--wp--preset--color--gray-500);
@@ -1875,11 +1876,16 @@ body {
   width: 100%;
 }
 
-.prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .lb-pros-cons, .lb-pros-cons-item):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+.prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-casino-details, .lb-casino-list, .lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
   margin-top: 0;
 }
-.prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .lb-pros-cons, .lb-pros-cons-item):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+.prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-casino-details, .lb-casino-list, .lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
   margin-bottom: 0;
+}
+
+.prose-spaces :where(.wp-block-columns, .lb-group-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--100);
+  margin-bottom: var(--wp--preset--spacing--100);
 }
 
 .prose-spaces :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
@@ -1912,16 +1918,6 @@ body {
   margin-bottom: var(--wp--preset--spacing--100);
 }
 
-.prose-spaces :where(.lb-pros-cons):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  margin-top: var(--wp--preset--spacing--100);
-  margin-bottom: var(--wp--preset--spacing--100);
-}
-
-.prose-spaces :where(.lb-pros-cons-item):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  margin-top: var(--wp--preset--spacing--100);
-  margin-bottom: var(--wp--preset--spacing--100);
-}
-
 .prose-spaces :where(.lb-post-info):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-top: var(--wp--preset--spacing--100);
   margin-bottom: var(--wp--preset--spacing--100);
@@ -1939,22 +1935,10 @@ body {
   margin-top: var(--wp--preset--spacing--100);
   margin-bottom: var(--wp--preset--spacing--100);
 }
-.prose-spaces :where(.lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
-  margin-bottom: 0;
-}
-.prose-spaces :where(.lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
-  margin-top: 0;
-}
 
 .prose-spaces :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-top: var(--wp--preset--spacing--160);
   margin-bottom: var(--wp--preset--spacing--160);
-}
-.prose-spaces :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
-  margin-bottom: 0;
-}
-.prose-spaces :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
-  margin-top: 0;
 }
 @media (max-width: 767.98px) {
   .prose-spaces :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)) {
@@ -1967,12 +1951,6 @@ body {
   margin-top: var(--wp--preset--spacing--160);
   margin-bottom: var(--wp--preset--spacing--160);
 }
-.prose-spaces :where(.lb-casino-details):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
-  margin-bottom: 0;
-}
-.prose-spaces :where(.lb-casino-details):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
-  margin-top: 0;
-}
 @media (max-width: 767.98px) {
   .prose-spaces :where(.lb-casino-details):not(:where([class~=not-prose], [class~=not-prose] *)) {
     margin-top: var(--wp--preset--spacing--140);
@@ -1983,12 +1961,6 @@ body {
 .prose-spaces :where(.lb-casino-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-top: var(--wp--preset--spacing--140);
   margin-bottom: var(--wp--preset--spacing--140);
-}
-.prose-spaces :where(.lb-casino-list):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
-  margin-bottom: 0;
-}
-.prose-spaces :where(.lb-casino-list):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
-  margin-top: 0;
 }
 @media (max-width: 767.98px) {
   .prose-spaces :where(.lb-casino-list):not(:where([class~=not-prose], [class~=not-prose] *)) {

@@ -60,7 +60,7 @@ $proseCustomSelector: null !default;
 
 @include typo.make-prose(
   'spaces',
-  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.lb-pros-cons,.lb-pros-cons-item',
+  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.wp-block-columns,.lb-group-list,.lb-casino-details,.lb-casino-list,.lb-author-block,[id*="sp_easy_accordion"]',
   $proseCustomSelector
 ) {
   &:first-child {
@@ -69,6 +69,15 @@ $proseCustomSelector: null !default;
   &:last-child {
     margin-block-end: 0;
   }
+}
+
+@include typo.make-prose(
+  'spaces',
+  '.wp-block-columns,.lb-group-list',
+  $proseCustomSelector
+) {
+  margin-block-start: var(--wp--preset--spacing--100);
+  margin-block-end: var(--wp--preset--spacing--100);
 }
 
 @include typo.make-prose('spaces', 'h2', $proseCustomSelector) {
@@ -99,17 +108,6 @@ $proseCustomSelector: null !default;
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-@include typo.make-prose('spaces', '.lb-pros-cons', $proseCustomSelector) {
-  margin-block-start: var(--wp--preset--spacing--100);
-  margin-block-end: var(--wp--preset--spacing--100);
-}
-
-@include typo.make-prose('spaces', '.lb-pros-cons-item', $proseCustomSelector) {
-  margin-block-start: var(--wp--preset--spacing--100);
-  margin-block-end: var(--wp--preset--spacing--100);
-}
-
-
 @include typo.make-prose('spaces', '.lb-post-info', $proseCustomSelector) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
@@ -123,59 +121,39 @@ $proseCustomSelector: null !default;
   --wp-block-media-text-space-y: var(--wp--preset--spacing--100);
 }
 
-
-@include typo.make-prose('spaces', '.lb-author-block, [id*="sp_easy_accordion"]', $proseCustomSelector) {
+@include typo.make-prose(
+  'spaces',
+  '.lb-author-block, [id*="sp_easy_accordion"]',
+  $proseCustomSelector
+) {
   margin-top: var(--wp--preset--spacing--100);
   margin-bottom: var(--wp--preset--spacing--100);
-  &:last-child {
-    margin-bottom: 0;
-  }
-  &:first-child {
-    margin-top: 0;
-  }
 }
 
 @include typo.make-prose('spaces', '.lb-author-block', $proseCustomSelector) {
   margin-top: var(--wp--preset--spacing--160);
   margin-bottom: var(--wp--preset--spacing--160);
-  &:last-child {
-    margin-bottom: 0;
-  }
-  &:first-child {
-    margin-top: 0;
-  }
+
   @include breakpoints.media-breakpoint-down(sm) {
     margin-top: var(--wp--preset--spacing--140);
     margin-bottom: var(--wp--preset--spacing--140);
   }
-
 }
 
 @include typo.make-prose('spaces', '.lb-casino-details', $proseCustomSelector) {
   margin-top: var(--wp--preset--spacing--160);
   margin-bottom: var(--wp--preset--spacing--160);
-  &:last-child {
-    margin-bottom: 0;
-  }
-  &:first-child {
-    margin-top: 0;
-  }
+
   @include breakpoints.media-breakpoint-down(sm) {
     margin-top: var(--wp--preset--spacing--140);
     margin-bottom: var(--wp--preset--spacing--140);
   }
 }
 
-
 @include typo.make-prose('spaces', '.lb-casino-list', $proseCustomSelector) {
   margin-top: var(--wp--preset--spacing--140);
   margin-bottom: var(--wp--preset--spacing--140);
-  &:last-child {
-    margin-bottom: 0;
-  }
-  &:first-child {
-    margin-top: 0;
-  }
+
   @include breakpoints.media-breakpoint-down(sm) {
     margin-top: var(--wp--preset--spacing--120);
     margin-bottom: var(--wp--preset--spacing--120);

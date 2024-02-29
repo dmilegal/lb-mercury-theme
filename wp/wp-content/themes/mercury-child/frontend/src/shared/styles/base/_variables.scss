@@ -5,6 +5,7 @@
 @use 'sass:map';
 
 body {
+  --wp--style--block-gap: var(--wp--preset--spacing--90);
   --layout-content-spacing: var(--wp--custom--layout--content-spacing-md);
   @include breakpoints.media-breakpoint-down('sm') {
     --layout-content-spacing: var(--wp--custom--layout--content-spacing-sm);

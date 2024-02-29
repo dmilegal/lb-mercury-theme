@@ -1,9 +1,9 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ "./src/blocks/pros-cons/pros-cons.scss":
-/*!*********************************************!*\
-  !*** ./src/blocks/pros-cons/pros-cons.scss ***!
-  \*********************************************/
+/***/ "./src/blocks/group-list/group-list.scss":
+/*!***********************************************!*\
+  !*** ./src/blocks/group-list/group-list.scss ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -54,13 +54,13 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!*******************************************!*\
-  !*** ./src/blocks/pros-cons/pros-cons.ts ***!
-  \*******************************************/
+/*!*********************************************!*\
+  !*** ./src/blocks/group-list/group-list.ts ***!
+  \*********************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _pros_cons_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pros-cons.scss */ "./src/blocks/pros-cons/pros-cons.scss");
+/* harmony import */ var _group_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./group-list.scss */ "./src/blocks/group-list/group-list.scss");
 
 })();
 
 
-//# sourceMappingURL=pros-cons.js.map
+//# sourceMappingURL=group-list.js.map

@@ -505,5 +505,10 @@
                 "display-md": "-0.02em"
             }
         }
+    },
+    "styles": {
+        "spacing": {
+            "blockGap": "20px"
+        }
     }
 }

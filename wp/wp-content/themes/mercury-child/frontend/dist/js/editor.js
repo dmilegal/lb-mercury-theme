@@ -150,6 +150,63 @@ const S = wp.domReady(function () {
 
 /***/ }),
 
+/***/ "./src/editor/blocks/variations/group-list.ts":
+/*!****************************************************!*\
+  !*** ./src/editor/blocks/variations/group-list.ts ***!
+  \****************************************************/
+/***/ (() => {
+
+wp.domReady(function () {
+  wp.blocks.registerBlockVariation('lb/group-list', {
+    name: 'advantages',
+    title: 'Advantages',
+    icon: 'plus-alt',
+    keywords: ['advantages', 'list', 'group', 'pros'],
+    attributes: {
+      data: {
+        mark_ico: 'check',
+        title: wp.i18n.__('Advantages', 'mercury-child')
+      }
+    }
+  });
+  wp.blocks.registerBlockVariation('lb/group-list', {
+    name: 'disadvantages',
+    title: 'Disadvantages',
+    icon: 'minus',
+    keywords: ['disadvantages', 'list', 'group', 'cons'],
+    attributes: {
+      data: {
+        mark_ico: 'cross',
+        title: wp.i18n.__('Disadvantages', 'mercury-child')
+      }
+    }
+  });
+  wp.blocks.registerBlockVariation('core/columns', {
+    name: 'pros-cons',
+    title: 'Pros & Cons',
+    icon: 'star-half',
+    keywords: ['pros', 'cons', 'compare', 'advantages', 'disadvantages'],
+    attributes: {
+      className: 'lb-pros-cons',
+      templateLock: 'all',
+      flexWrap: 'nowrap'
+    },
+    innerBlocks: [['core/column', {}, [['lb/group-list', {
+      data: {
+        mark_ico: 'check',
+        title: wp.i18n.__('Advantages', 'mercury-child')
+      }
+    }]]], ['core/column', {}, [['lb/group-list', {
+      data: {
+        mark_ico: 'cross',
+        title: wp.i18n.__('Disadvantages', 'mercury-child')
+      }
+    }]]]]
+  });
+});
+
+/***/ }),
+
 /***/ "./src/editor/blocks/variations/group.ts":
 /*!***********************************************!*\
   !*** ./src/editor/blocks/variations/group.ts ***!
@@ -202,6 +259,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_list__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _group__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./group */ "./src/editor/blocks/variations/group.ts");
 /* harmony import */ var _group__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_group__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _group_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./group-list */ "./src/editor/blocks/variations/group-list.ts");
+/* harmony import */ var _group_list__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_group_list__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 

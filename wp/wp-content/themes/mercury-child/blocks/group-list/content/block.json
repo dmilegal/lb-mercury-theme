@@ -1,11 +1,11 @@
 {
-  "name": "lb/pros-cons-content",
+  "name": "lb/group-list-content",
   "title": "Content",
   "icon": "text",
   "acf": {
       "mode": "preview",
       "renderTemplate": "content.php"
   },
-  "parent": [ "lb/advantages", "lb/disadvantages" ],
+  "parent": [ "lb/group-list"],
   "align": "full"
 }
