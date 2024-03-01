@@ -38,7 +38,7 @@ body,
   z-index: 5;
 }
 .lb-how-to-list-item.lb-how-to-list-item::before {
-  top: -2px;
+  top: 0;
   left: 0;
   width: 31px;
   height: 31px;
