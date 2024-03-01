@@ -77,7 +77,7 @@ $proseCustomSelector: null !default;
 
 @include typo.make-prose(
   'spaces',
-  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.wp-block-columns,.lb-group-list,.lb-casino-details,.lb-casino-list,.lb-author-block,[id*="sp_easy_accordion"],.lb-how-to-list',
+  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.wp-block-columns,.lb-group-list,.lb-casino-details,.lb-casino-list,.lb-author-block,[id*="sp_easy_accordion"],.lb-step-list',
   $proseCustomSelector
 ) {
   &:first-child {
@@ -177,7 +177,7 @@ $proseCustomSelector: null !default;
   }
 }
 
-@include typo.make-prose('spaces', '.lb-how-to-list', $proseCustomSelector) {
+@include typo.make-prose('spaces', '.lb-step-list', $proseCustomSelector) {
   margin-top: var(--wp--preset--spacing--120);
   margin-bottom: var(--wp--preset--spacing--120);
 }

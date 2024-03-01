@@ -13,9 +13,9 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/logo-text/content');
     register_block_type(__DIR__ . '/logo-text/media');
     register_block_type(__DIR__ . '/logo-text/title');
-    register_block_type(__DIR__ . '/how-to-list');
-    register_block_type(__DIR__ . '/how-to-list/item');
-    register_block_type(__DIR__ . '/how-to-list/item-title');
+    register_block_type(__DIR__ . '/step-list');
+    register_block_type(__DIR__ . '/step-list/item');
+    register_block_type(__DIR__ . '/step-list/item-title');
 }
 
 function mg_disable_gutenberg_blocks($allowed_blocks)

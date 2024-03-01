@@ -5,12 +5,12 @@
 
 body,
 .editor-styles-wrapper {
-  --lb-how-to-list-item-title-color-text: var(--lb-color-text-strong);
-  --lb-how-to-list-item-ico-color-background: var(--lb-color-primary-container);
-  --lb-how-to-list-item-line-color-background: var(--lb-color-primary-container);
+  --lb-step-list-item-title-color-text: var(--lb-color-text-strong);
+  --lb-step-list-item-ico-color-background: var(--lb-color-primary-container);
+  --lb-step-list-item-line-color-background: var(--lb-color-primary-container);
 }
 
-.lb-how-to-list {
+.lb-step-list {
   --wp-list-ico-spacing-s: var(--wp--preset--spacing--155);
   row-gap: 0px;
 
@@ -34,7 +34,7 @@ body,
         width: 1px;
         height: calc(100% + 4px);
         position: absolute;
-        background-color: var(--lb-how-to-list-item-line-color-background);
+        background-color: var(--lb-step-list-item-line-color-background);
         z-index: 5;
       }
     }
@@ -50,7 +50,7 @@ body,
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-color: var(--lb-how-to-list-item-ico-color-background);
+        background-color: var(--lb-step-list-item-ico-color-background);
         @include font.font-size-by-name('text-lg', false);
         font-weight: 500;
         z-index: 10;
@@ -60,7 +60,7 @@ body,
 
     &__title {
       &#{&} {
-        color: var(--lb-how-to-list-item-title-color-text);
+        color: var(--lb-step-list-item-title-color-text);
         @include font.get-text-styles('text-xl', false);
         font-weight: 500;
         margin-bottom: var(--wp--preset--spacing--70);

@@ -4,7 +4,7 @@ $template = array(
   array('core/heading', array(
     'placeholder' => __('Enter Title...'),
     'level' => 3,
-    'className' => 'lb-how-to-list-item__title',
+    'className' => 'lb-step-list-item__title',
   ))
 ); ?>
 

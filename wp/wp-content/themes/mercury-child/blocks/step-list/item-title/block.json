@@ -1,11 +1,11 @@
 {
-  "name": "lb/how-to-list-item-title",
+  "name": "lb/step-list-item-title",
   "title": "Title",
   "icon": "heading",
   "acf": {
       "mode": "preview",
       "renderTemplate": "item-title.php"
   },
-  "parent": [ "lb/how-to-list-item" ],
+  "parent": [ "lb/step-list-item" ],
   "align": "full"
 }

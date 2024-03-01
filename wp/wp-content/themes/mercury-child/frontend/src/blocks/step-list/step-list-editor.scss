@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-.lb-how-to-list {
+.lb-step-list {
   & > .acf-innerblocks-container:empty {
     padding: 30px;
     border: 1px solid gray;
@@ -11,10 +11,10 @@
 }
 
 
-.wp-block-lb-how-to-list-item {
+.wp-block-lb-step-list-item {
   
   &:not(:last-child) {
-    :where(.lb-how-to-list-item) {
+    :where(.lb-step-list-item) {
       padding-bottom: var(--wp--preset--spacing--120);
       &::after {
         content: '';
@@ -23,7 +23,7 @@
         width: 1px;
         height: calc(100% + 4px);
         position: absolute;
-        background-color: var(--lb-how-to-list-item-line-color-background);
+        background-color: var(--lb-step-list-item-line-color-background);
         z-index: 5;
       }
     }

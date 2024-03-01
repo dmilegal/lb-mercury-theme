@@ -6,7 +6,7 @@ add_action( 'acf/include_fields', function() {
 
 	acf_add_local_field_group( array(
 	'key' => 'group_65e11c14c9e0c',
-	'title' => 'How To List',
+	'title' => 'Step List',
 	'fields' => array(
 		array(
 			'key' => 'field_65e11c1ddfe35',
@@ -37,7 +37,7 @@ add_action( 'acf/include_fields', function() {
 			array(
 				'param' => 'block',
 				'operator' => '==',
-				'value' => 'lb/how-to-list',
+				'value' => 'lb/step-list',
 			),
 		),
 	),

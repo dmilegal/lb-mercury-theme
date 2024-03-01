@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/step-list",
+  "title": "Step List",
+  "style": ["step-list"],
+  "editorStyle": ["step-list-editor"],
+  "category": "text",
+  "icon": "welcome-learn-more",
+  "keywords": ["how to", "list", "step list", "check list"],
+  "providesContext": {
+      "acf/fields": "data"
+  },
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "step-list.php"
+  }
+}

@@ -1,9 +1,9 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ "./src/blocks/how-to-list/how-to-list-editor.scss":
-/*!********************************************************!*\
-  !*** ./src/blocks/how-to-list/how-to-list-editor.scss ***!
-  \********************************************************/
+/***/ "./src/blocks/step-list/step-list.scss":
+/*!*********************************************!*\
+  !*** ./src/blocks/step-list/step-list.scss ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -54,13 +54,13 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!******************************************************!*\
-  !*** ./src/blocks/how-to-list/how-to-list-editor.ts ***!
-  \******************************************************/
+/*!*******************************************!*\
+  !*** ./src/blocks/step-list/step-list.ts ***!
+  \*******************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _how_to_list_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./how-to-list-editor.scss */ "./src/blocks/how-to-list/how-to-list-editor.scss");
+/* harmony import */ var _step_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./step-list.scss */ "./src/blocks/step-list/step-list.scss");
 
 })();
 
 
-//# sourceMappingURL=how-to-list-editor.js.map
+//# sourceMappingURL=step-list.js.map

@@ -1,5 +1,5 @@
 {
-  "name": "lb/how-to-list-item",
+  "name": "lb/step-list-item",
   "title": "Item",
   "icon": "text",
   "usesContext": ["acf/fields"],
@@ -7,6 +7,6 @@
       "mode": "preview",
       "renderTemplate": "item.php"
   },
-  "parent": [ "lb/how-to-list" ],
+  "parent": [ "lb/step-list" ],
   "align": "full"
 }
