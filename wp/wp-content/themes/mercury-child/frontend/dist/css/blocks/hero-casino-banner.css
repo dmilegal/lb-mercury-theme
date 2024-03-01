@@ -8,8 +8,8 @@
 * font
 **/
 body {
-  --hero-banner-space-top: var(--wp--preset--spacing--140);
-  --hero-banner-space-bottom: var(--wp--preset--spacing--160);
+  --hero-casino-banner-space-top: var(--wp--preset--spacing--140);
+  --hero-casino-banner-space-bottom: var(--wp--preset--spacing--160);
   --hero-casino-banner-color-background: var(--lb-color-surface-high);
   --hero-casino-banner-info-title-color-text: var(--lb-color-primary);
   --hero-casino-banner-info-value-color-text: var(--lb-color-text-strong);
@@ -18,14 +18,14 @@ body {
 }
 @media (max-width: 767.98px) {
   body {
-    --hero-banner-space-top: var(--wp--preset--spacing--110);
-    --hero-banner-space-bottom: var(--wp--preset--spacing--140);
+    --hero-casino-banner-space-top: var(--wp--preset--spacing--110);
+    --hero-casino-banner-space-bottom: var(--wp--preset--spacing--140);
   }
 }
 
 .lb-hero-casino-banner {
-  padding-top: var(--hero-banner-space-top);
-  padding-bottom: var(--hero-banner-space-bottom);
+  padding-top: var(--hero-casino-banner-space-top);
+  padding-bottom: var(--hero-casino-banner-space-bottom);
   background-color: var(--hero-casino-banner-color-background);
 }
 @media (min-width: 992px) {
@@ -167,7 +167,7 @@ body {
     pointer-events: auto;
     grid-column: 9/13;
     padding-top: 0px;
-    padding-top: var(--hero-banner-space-top, 0px);
+    padding-top: var(--hero-casino-banner-space-top, 0px);
   }
 }
 @media (min-width: 992px) {

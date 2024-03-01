@@ -10,6 +10,14 @@
 body {
   --lb-hero-banner-color-background: var(--lb-color-surface-highest);
   --lb-hero-banner-subtitle-color-text: var(--lb-color-text-default);
+  --hero-banner-space-top: var(--wp--preset--spacing--140);
+  --hero-banner-space-bottom: var(--wp--preset--spacing--160);
+}
+@media (max-width: 767.98px) {
+  body {
+    --hero-banner-space-top: var(--wp--preset--spacing--120);
+    --hero-banner-space-bottom: var(--wp--preset--spacing--140);
+  }
 }
 
 .lb-hero-banner {
@@ -17,15 +25,9 @@ body {
   --lb-hero-banner-gap-x: var(--lb-layout-grid-gap-x, var(--layout-content-spacing));
   --lb-hero-banner-grid-col-start: var(--lb-layout-content-grid-col-start, 1);
   --lb-hero-banner-grid-col-end: var(--lb-layout-content-grid-col-end, -1);
-  padding-top: var(--wp--preset--spacing--160);
-  padding-bottom: var(--wp--preset--spacing--175);
+  padding-top: var(--hero-banner-space-top);
+  padding-bottom: var(--hero-banner-space-bottom);
   background-color: var(--lb-hero-banner-color-background);
-}
-@media (max-width: 767.98px) {
-  .lb-hero-banner {
-    padding-top: var(--wp--preset--spacing--120);
-    padding-bottom: var(--wp--preset--spacing--140);
-  }
 }
 .lb-hero-banner.lb-hero-banner {
   width: 100%;
