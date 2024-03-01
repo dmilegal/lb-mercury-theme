@@ -43,7 +43,7 @@ $proseCustomSelector: null !default;
 }
 
 @include typo.make-prose('content', 'ul:not(.is-list-ico-check,.is-list-ico-cross)', $proseCustomSelector) {
-  li {
+  :where(li) {
     padding-left: var(--wp-list-ico-spacing-s);
     position: relative;
     &:before {
@@ -57,7 +57,7 @@ $proseCustomSelector: null !default;
 }
 
 @include typo.make-prose('content', 'ol:not(.is-list-ico-check,.is-list-ico-cross)', $proseCustomSelector) {
-  li {
+  :where(li) {
     padding-left: var(--wp-list-ico-spacing-s);
     position: relative;
     &:before {
@@ -77,7 +77,7 @@ $proseCustomSelector: null !default;
 
 @include typo.make-prose(
   'spaces',
-  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.wp-block-columns,.lb-group-list,.lb-casino-details,.lb-casino-list,.lb-author-block,[id*="sp_easy_accordion"]',
+  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.wp-block-columns,.lb-group-list,.lb-casino-details,.lb-casino-list,.lb-author-block,[id*="sp_easy_accordion"],.lb-how-to-list',
   $proseCustomSelector
 ) {
   &:first-child {
@@ -176,6 +176,12 @@ $proseCustomSelector: null !default;
     margin-bottom: var(--wp--preset--spacing--120);
   }
 }
+
+@include typo.make-prose('spaces', '.lb-how-to-list', $proseCustomSelector) {
+  margin-top: var(--wp--preset--spacing--120);
+  margin-bottom: var(--wp--preset--spacing--120);
+}
+
 
 @include typo.make-prose('colors', 'h1, h2, h3, h4, h5, h6', $proseCustomSelector) {
   color: var(--lb-ui-color-heading-text);

@@ -1,26 +1,31 @@
 <?php
-add_action( 'init', 'register_acf_blocks' );
-function register_acf_blocks() {
-    register_block_type( __DIR__ . '/group-list' );
-    register_block_type( __DIR__ . '/group-list/title' );
-    register_block_type( __DIR__ . '/group-list/content' );
-    register_block_type( __DIR__ . '/our-team' );
-    register_block_type( __DIR__ . '/button' );
-    register_block_type( __DIR__ . '/blockquote' );
-    register_block_type( __DIR__ . '/casino-list' );
-    register_block_type( __DIR__ . '/logo-text' );
-    register_block_type( __DIR__ . '/logo-text/content' );
-    register_block_type( __DIR__ . '/logo-text/media' );
-    register_block_type( __DIR__ . '/logo-text/title' );
+add_action('init', 'register_acf_blocks');
+function register_acf_blocks()
+{
+    register_block_type(__DIR__ . '/group-list');
+    register_block_type(__DIR__ . '/group-list/title');
+    register_block_type(__DIR__ . '/group-list/content');
+    register_block_type(__DIR__ . '/our-team');
+    register_block_type(__DIR__ . '/button');
+    register_block_type(__DIR__ . '/blockquote');
+    register_block_type(__DIR__ . '/casino-list');
+    register_block_type(__DIR__ . '/logo-text');
+    register_block_type(__DIR__ . '/logo-text/content');
+    register_block_type(__DIR__ . '/logo-text/media');
+    register_block_type(__DIR__ . '/logo-text/title');
+    register_block_type(__DIR__ . '/how-to-list');
+    register_block_type(__DIR__ . '/how-to-list/item');
+    register_block_type(__DIR__ . '/how-to-list/item-title');
 }
 
-function mg_disable_gutenberg_blocks($allowed_blocks) {
-    $blocks = array_diff( 
-        array_keys( WP_Block_Type_Registry::get_instance()->get_all_registered() ),
+function mg_disable_gutenberg_blocks($allowed_blocks)
+{
+    $blocks = array_diff(
+        array_keys(WP_Block_Type_Registry::get_instance()->get_all_registered()),
         [
             'core/quote',
         ]
     );
-    return array_values( $blocks );
+    return array_values($blocks);
 }
 add_filter('allowed_block_types', 'mg_disable_gutenberg_blocks', 9999);

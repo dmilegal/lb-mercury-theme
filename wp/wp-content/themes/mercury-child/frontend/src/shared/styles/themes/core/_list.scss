@@ -2,16 +2,16 @@
 
 body,
 .editor-styles-wrapper {
-  --wp-list-ico-color-text: var(--wp--preset--color--primary-500);
+  --wp-list-ico-color-text: var(--lb-color-primary);
   --wp-list-ico-spacing-s: 2em;
 }
 
-.is-list-ico-check,
-.is-list-ico-cross {
+:where(.is-list-ico-check,
+.is-list-ico-cross) {
   padding-left: 0;
   list-style: none;
 
-  li {
+  :where(li) {
     padding-left: var(--wp-list-ico-spacing-s);
     position: relative;
     &:before {

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/how-to-list",
+  "title": "How To List",
+  "style": ["how-to-list"],
+  "editorStyle": ["how-to-list-editor"],
+  "category": "text",
+  "icon": "welcome-learn-more",
+  "keywords": ["how to", "list"],
+  "providesContext": {
+      "acf/fields": "data"
+  },
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "how-to-list.php"
+  }
+}

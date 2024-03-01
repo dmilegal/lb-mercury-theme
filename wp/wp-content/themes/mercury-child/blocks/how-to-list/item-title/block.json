@@ -1,0 +1,11 @@
+{
+  "name": "lb/how-to-list-item-title",
+  "title": "Title",
+  "icon": "heading",
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "item-title.php"
+  },
+  "parent": [ "lb/how-to-list-item" ],
+  "align": "full"
+}

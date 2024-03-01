@@ -169,7 +169,7 @@ body {
     }
 
     @if $name == 'text-md' {
-      @include breakpoints.media-breakpoint-down(sm) {
+      /*@include breakpoints.media-breakpoint-down(sm) {
         --lb-font-size-#{$name}-relative: #{map.get(
             map.get(text.$body-fonts, text-sm),
             'font-size'
@@ -182,7 +182,7 @@ body {
             map.get(text.$body-fonts, text-sm),
             'letter-spacing'
           )};
-      }
+      }*/
     }
   }
 }

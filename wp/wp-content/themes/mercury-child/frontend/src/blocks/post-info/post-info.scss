@@ -24,14 +24,14 @@ body {
 
   &__title {
     display: block;
-    @include font.get-text-styles('text-sm');
+    @include font.get-text-styles('text-sm', false);
     color: var(--lb-post-info-title-color-text);
     font-weight: 500;
   }
 
   &__value {
     display: block;
-    @include font.get-text-styles('text-sm');
+    @include font.get-text-styles('text-sm', false);
     font-weight: 500;
     color: var(--lb-post-info-value-color-text);
   }

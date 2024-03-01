@@ -1,0 +1,74 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+body,
+.editor-styles-wrapper {
+  --lb-how-to-list-item-title-color-text: var(--lb-color-text-strong);
+  --lb-how-to-list-item-ico-color-background: var(--lb-color-primary-container);
+  --lb-how-to-list-item-line-color-background: var(--lb-color-primary-container);
+}
+
+.lb-how-to-list {
+  --wp-list-ico-spacing-s: var(--wp--preset--spacing--155);
+  row-gap: 0px;
+
+  &.is-list-ico-check {
+    %item {
+      &::before {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-item {
+    position: relative;
+
+    &:not(:last-child) {
+      padding-bottom: var(--wp--preset--spacing--120);
+      &::after {
+        content: '';
+        top: 0;
+        left: 15px;
+        width: 1px;
+        height: calc(100% + 4px);
+        position: absolute;
+        background-color: var(--lb-how-to-list-item-line-color-background);
+        z-index: 5;
+      }
+    }
+
+    &#{&} {
+      &::before {
+        top: -2px;
+        left: 0;
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--lb-how-to-list-item-ico-color-background);
+        @include font.font-size-by-name('text-lg', false);
+        font-weight: 500;
+        z-index: 10;
+      }
+    }
+   
+
+    &__title {
+      &#{&} {
+        color: var(--lb-how-to-list-item-title-color-text);
+        @include font.get-text-styles('text-xl', false);
+        font-weight: 500;
+        margin-bottom: var(--wp--preset--spacing--70);
+        & + * {
+          margin-top: 0;
+        }
+      }
+    }
+    @extend %item;
+  }
+}

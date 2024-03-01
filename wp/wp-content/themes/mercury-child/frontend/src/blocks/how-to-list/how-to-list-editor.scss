@@ -1,0 +1,32 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+.lb-how-to-list {
+  & > .acf-innerblocks-container:empty {
+    padding: 30px;
+    border: 1px solid gray;
+  }
+}
+
+
+.wp-block-lb-how-to-list-item {
+  
+  &:not(:last-child) {
+    :where(.lb-how-to-list-item) {
+      padding-bottom: var(--wp--preset--spacing--120);
+      &::after {
+        content: '';
+        top: 0;
+        left: 15px;
+        width: 1px;
+        height: calc(100% + 4px);
+        position: absolute;
+        background-color: var(--lb-how-to-list-item-line-color-background);
+        z-index: 5;
+      }
+    }
+    
+  }
+}

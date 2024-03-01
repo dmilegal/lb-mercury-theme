@@ -1483,6 +1483,11 @@ body {
   --lb-font-size-text-md-relative: var(--wp--preset--font-size--text-md);
   --lb-line-height-text-md-relative: var(--wp--custom--line-height--text-md);
   --lb-letter-spacing-text-md-relative: var(--wp--custom--letter-spacing--text-md);
+  /*@include breakpoints.media-breakpoint-down(sm) {
+    --lb-font-size-text-md-relative: var(--wp--preset--font-size--text-sm);
+    --lb-line-height-text-md-relative: var(--wp--custom--line-height--text-sm);
+    --lb-letter-spacing-text-md-relative: var(--wp--custom--letter-spacing--text-sm);
+  }*/
   --lb-font-size-text-sm-relative: var(--wp--preset--font-size--text-sm);
   --lb-line-height-text-sm-relative: var(--wp--custom--line-height--text-sm);
   --lb-letter-spacing-text-sm-relative: var(--wp--custom--letter-spacing--text-sm);
@@ -1533,13 +1538,6 @@ body {
     --lb-font-size-text-lg-relative: var(--wp--preset--font-size--text-sm);
     --lb-line-height-text-lg-relative: var(--wp--custom--line-height--text-sm);
     --lb-letter-spacing-text-lg-relative: var(--wp--custom--letter-spacing--text-sm);
-  }
-}
-@media (max-width: 767.98px) {
-  body {
-    --lb-font-size-text-md-relative: var(--wp--preset--font-size--text-sm);
-    --lb-line-height-text-md-relative: var(--wp--custom--line-height--text-sm);
-    --lb-letter-spacing-text-md-relative: var(--wp--custom--letter-spacing--text-sm);
   }
 }
 
@@ -1732,11 +1730,11 @@ body :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) li::be
   color: var(--wp-list-ico-color-text);
 }
 
-body :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) li {
+body :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) :where(li) {
   padding-left: var(--wp-list-ico-spacing-s);
   position: relative;
 }
-body :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) li:before {
+body :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) :where(li):before {
   content: "•";
   position: absolute;
   font-size: 1.75em;
@@ -1744,11 +1742,11 @@ body :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([clas
   top: 0;
 }
 
-body :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) li {
+body :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) :where(li) {
   padding-left: var(--wp-list-ico-spacing-s);
   position: relative;
 }
-body :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) li:before {
+body :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) :where(li):before {
   content: counter(list-item);
   font-weight: 500;
   position: absolute;
@@ -1760,10 +1758,10 @@ body :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) {
   width: 100%;
 }
 
-body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-casino-details, .lb-casino-list, .lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-casino-details, .lb-casino-list, .lb-author-block, .lb-how-to-list, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
   margin-top: 0;
 }
-body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-casino-details, .lb-casino-list, .lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-casino-details, .lb-casino-list, .lb-author-block, .lb-how-to-list, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
   margin-bottom: 0;
 }
 
@@ -1851,6 +1849,11 @@ body :where(.lb-casino-list):not(:where([class~=not-prose], [class~=not-prose] *
     margin-top: var(--wp--preset--spacing--120);
     margin-bottom: var(--wp--preset--spacing--120);
   }
+}
+
+body :where(.lb-how-to-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--120);
+  margin-bottom: var(--wp--preset--spacing--120);
 }
 
 body :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
@@ -2071,22 +2074,22 @@ body, .editor-styles-wrapper {
 
 body,
 .editor-styles-wrapper {
-  --wp-list-ico-color-text: var(--wp--preset--color--primary-500);
+  --wp-list-ico-color-text: var(--lb-color-primary);
   --wp-list-ico-spacing-s: 2em;
 }
 
-.is-list-ico-check,
-.is-list-ico-cross {
+:where(.is-list-ico-check,
+.is-list-ico-cross) {
   padding-left: 0;
   list-style: none;
 }
-.is-list-ico-check li,
-.is-list-ico-cross li {
+:where(.is-list-ico-check,
+.is-list-ico-cross) :where(li) {
   padding-left: var(--wp-list-ico-spacing-s);
   position: relative;
 }
-.is-list-ico-check li:before,
-.is-list-ico-cross li:before {
+:where(.is-list-ico-check,
+.is-list-ico-cross) :where(li):before {
   position: absolute;
   left: 0;
   right: auto;

@@ -1,0 +1,12 @@
+{
+  "name": "lb/how-to-list-item",
+  "title": "Item",
+  "icon": "text",
+  "usesContext": ["acf/fields"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "item.php"
+  },
+  "parent": [ "lb/how-to-list" ],
+  "align": "full"
+}
