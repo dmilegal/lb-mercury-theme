@@ -3065,6 +3065,10 @@ body {
   --lb-layout-grid-gap-x: calc(var(--layout-content-spacing) / 2);
   --lb-layout-content-grid-col-start: 1;
   --lb-layout-content-grid-col-end: -1;
+  --lb-layout-inner-grid-col-start: 1;
+  --lb-layout-inner-grid-col-end: -1;
+  --lb-layout-sidebar-grid-col-start: 1;
+  --lb-layout-sidebar-grid-col-end: -1;
   --lb-layout-breadcrumbs-color-border: var(--lb-color-surface-high);
 }
 
@@ -3086,30 +3090,28 @@ body {
   --lb-layout-grid-gap-x: calc(var(--layout-content-spacing) / 2);
   --lb-layout-content-grid-col-start: 2;
   --lb-layout-content-grid-col-end: 20;
+  --lb-layout-inner-grid-col-start: var(--lb-layout-content-grid-col-start);
+  --lb-layout-inner-grid-col-end: 14;
+  --lb-layout-sidebar-grid-col-start: 15;
+  --lb-layout-sidebar-grid-col-end: 20;
 }
 @media (max-width: 991.98px) {
   .lb-layout--with-sidebar {
     --lb-layout-content-grid-col-start: 1;
     --lb-layout-content-grid-col-end: -1;
+    --lb-layout-inner-grid-col-start: var(--lb-layout-content-grid-col-start);
+    --lb-layout-inner-grid-col-end: var(--lb-layout-content-grid-col-end);
+    --lb-layout-sidebar-grid-col-start: var(--lb-layout-content-grid-col-start);
+    --lb-layout-sidebar-grid-col-end: var(--lb-layout-content-grid-col-end);
   }
 }
 .lb-layout--with-sidebar .lb-layout__sidebar {
   grid-row: 1/-1;
-  grid-column: 15/span 5;
-}
-@media (max-width: 991.98px) {
-  .lb-layout--with-sidebar .lb-layout__sidebar {
-    grid-column: var(--lb-layout-content-grid-col-start)/var(--lb-layout-content-grid-col-end);
-  }
+  grid-column: var(--lb-layout-sidebar-grid-col-start)/var(--lb-layout-sidebar-grid-col-end);
 }
 .lb-layout--with-sidebar .lb-layout__inner {
   grid-row: 1/-1;
-  grid-column: var(--lb-layout-content-grid-col-start)/span 12;
-}
-@media (max-width: 991.98px) {
-  .lb-layout--with-sidebar .lb-layout__inner {
-    grid-column: var(--lb-layout-content-grid-col-start)/var(--lb-layout-content-grid-col-end);
-  }
+  grid-column: var(--lb-layout-inner-grid-col-start)/var(--lb-layout-inner-grid-col-end);
 }
 .lb-layout--tight {
   --lb-layout-content-grid-col-start: 4;
