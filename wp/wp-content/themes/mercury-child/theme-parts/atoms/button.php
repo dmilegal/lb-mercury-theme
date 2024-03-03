@@ -22,6 +22,10 @@ $isLoadingBtn =  $args['is_loading'] ?? false;
 
 $tag = $href ? 'a' : 'button';
 
+$is_preview = $args['is_preview'] ?? false;
+
+$isInline = $args['is_inline'] ?? true;
+
 $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'id', 'title', 'data', 'aria'])));
 
 ?>
@@ -33,7 +37,8 @@ $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', '
                       'lb-button--color_' . $color,
                       'lb-button--variant_' . $variant,
                       [
-                        'lb-button--display_icon' => !$content && !!($prefix || $postfix)
+                        'lb-button--display_icon' => !$content && !!($prefix || $postfix),
+                        'lb-button--display_block' => !$isInline
                       ]
 
                     ) ?>" <?= $attrsStr ?> style="<?= stylesValue(
@@ -48,7 +53,12 @@ $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', '
     <span class="lb-button__content">
       <?= $content ?>
     </span>
+  <? } elseif ($is_preview) { ?>
+    <span class="lb-button__content" style="opacity: 0.75">
+      Fill text field
+    </span>
   <? } ?>
+
   <? if ($postfix) { ?>
     <span class="lb-button__postfix">
       <?= $postfix ?>

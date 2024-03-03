@@ -3,14 +3,16 @@
   "name": "lb/button",
   "title": "Button",
   "description": "",
-  "style": [  ],
-  "editorStyle": [],
-  "category": "formatting",
-  "icon": "groups",
+  "style": [ "button" ],
+  "editorStyle": ["button-editor"],
+  "category": "text",
+  "icon": "button",
   "keywords": ["button", "link"],
   "acf": {
       "mode": "preview",
       "renderTemplate": "button.php"
   },
-  "align": "full"
+  "supports": {
+    "align": ["center", "left", "right", "wide"]
+  }
 }

@@ -14,13 +14,21 @@
 
 $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 
-$title = get_field('title');
-$users = get_field('members');
+$text = get_field('text');
+$link = get_field('link');
+$color = get_field('color');
+$variant = get_field('variant');
+$size = get_field('size');
+$isInline = get_field('is_inline');
 
-get_template_part( 'theme-parts/atoms/button', null, [
-	'size' => 'md',
-	'color' => 'brand-50',
-	'content' => 'Button CTA'
- ] );
-?>
-
+get_template_part('theme-parts/atoms/button', null, [
+	'size' => $size,
+	'color' => $color,
+	'variant' => $variant,
+	'content' => $text ? $text : ($link && isset($link['title']) ? $link['title'] : ''),
+	'is_preview' => $is_preview,
+	'target' => $link && isset($link['target']) ? $link['target'] : null,
+	'href' => $link && isset($link['url']) ? $link['url'] : null,
+	'className' => classNames(...$block_opts['className']),
+	'is_inline' => $isInline,
+]);

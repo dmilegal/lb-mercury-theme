@@ -1,0 +1,23 @@
+@use 'sass:math';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+
+.wp-block-lb-button.wp-block-lb-button {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &.alignwide {
+    & > * {
+      width: 100%;
+    }
+  }
+
+  &:has(.lb-button--display_block) {
+    &.alignleft, &.alignright {
+      margin-left: 0;
+      margin-right: 0;
+      float: none;
+      display: block;
+    }
+   
+  }
+}

@@ -24,6 +24,7 @@ function mg_disable_gutenberg_blocks($allowed_blocks)
         array_keys(WP_Block_Type_Registry::get_instance()->get_all_registered()),
         [
             'core/quote',
+            'core/button'
         ]
     );
     return array_values($blocks);
