@@ -35,16 +35,16 @@ body, .editor-styles-wrapper {
 .lb-casino-list--theme_fullwidth .lb-casino-list__inner {
   grid-column: var(--lb-layout-inner-grid-col-start)/var(--lb-layout-inner-grid-col-end);
 }
-.lb-casino-list--theme_fullwidth .lb-casino-list__title {
-  text-align: center;
-}
-.lb-casino-list__title {
+.lb-casino-list__heading {
   margin-bottom: var(--wp--preset--spacing--140);
 }
 @media (max-width: 767.98px) {
-  .lb-casino-list__title {
+  .lb-casino-list__heading {
     margin-bottom: var(--wp--preset--spacing--100);
   }
+}
+.lb-casino-list__title {
+  margin-bottom: var(--wp--preset--spacing--70);
 }
 .lb-casino-list__list {
   display: flex;
