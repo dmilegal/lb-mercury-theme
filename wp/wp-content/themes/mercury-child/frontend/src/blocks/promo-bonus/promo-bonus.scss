@@ -51,6 +51,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     column-gap: var(--wp--preset--spacing--80);
     row-gap: var(--wp--preset--spacing--80);
     margin-bottom: var(--wp--preset--spacing--120);
@@ -58,13 +59,7 @@ body {
       margin-bottom: 0;
     }
     & > * {
-      flex-grow: 1;
-      @include breakpoints.media-breakpoint-down(sm) {
-        width: 100%;
-       }
-    }
-    @include breakpoints.media-breakpoint-down(sm) {
-     flex-wrap: wrap;
+      width: 100%;
     }
   }
 
