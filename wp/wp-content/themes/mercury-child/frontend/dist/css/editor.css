@@ -2143,6 +2143,10 @@ body,
   min-height: 100%;
 }
 
+.widget_block {
+  list-style: none;
+}
+
 body {
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);

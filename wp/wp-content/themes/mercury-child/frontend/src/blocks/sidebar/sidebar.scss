@@ -2,7 +2,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+body, .editor-styles-wrapper {
   --lb-sidebar-color-border: var(--wp--preset--color--gray-200);
   --lb-sidebar-block-title-color-text: var(--wp--preset--color--primary-600);
 }
@@ -11,14 +11,17 @@ body {
   position: sticky;
   top: calc(var(--lb-admin-bar-offset, 0px) + var(--lb-header-height, 0px));
 
-  &__block {
-    border-top: 1px solid var(--lb-sidebar-color-border);
-    padding: var(--wp--preset--spacing--120) 0;
-
-    @include breakpoints.media-breakpoint-down(md) {
-      border-top: none;
-      &:first-child {
-        padding-top: 0;
+  &-block {
+    padding-bottom: var(--wp--preset--spacing--120);
+    &--bordered {
+      border-top: 1px solid var(--lb-sidebar-color-border);
+      padding: var(--wp--preset--spacing--120) 0;
+      
+      @include breakpoints.media-breakpoint-down(md) {
+        border-top: none;
+        &:first-child {
+          padding-top: 0;
+        }
       }
     }
 
@@ -31,18 +34,14 @@ body {
       }
     }
 
-    &-title {
+    &__title {
       width: 100%;
-      display: flex;
-      align-items: center;
-      background-color: transparent;
-      justify-content: space-between;
-      column-gap: var(--wp--preset--spacing--80);
       padding: 0;
       border: none;
       @include font.get-text-styles('text-md', false);
       font-weight: 600;
       color: var(--lb-sidebar-block-title-color-text);
+      margin: 0;
       margin-bottom: var(--wp--preset--spacing--80);
       i {
         font-size: 1.5em;

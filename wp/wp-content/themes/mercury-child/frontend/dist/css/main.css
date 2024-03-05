@@ -2275,6 +2275,10 @@ body,
   min-height: 100%;
 }
 
+.widget_block {
+  list-style: none;
+}
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers

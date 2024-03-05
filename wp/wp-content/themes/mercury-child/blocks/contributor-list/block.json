@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/contributor-list",
+  "title": "Contributor List",
+  "style": ["contributor-list", "user-block"],
+  "editorStyle": [],
+  "category": "text",
+  "icon": "groups",
+  "keywords": ["contributors", "contributor-list", "authors", "co-authors"],
+  "providesContext": {
+    "acf/fields": "data"
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "contributor-list.php"
+  }
+}

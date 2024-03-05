@@ -29,10 +29,13 @@
 						<? get_template_part('theme-parts/organisms/post-footer/post-footer', null); ?>
 					</div>
 				</div>
-
-				<div class="lb-layout__sidebar">
-					<? get_template_part('theme-parts/organisms/sidebar/sidebar', null); ?>
-				</div>
+				<? if (is_active_sidebar('universal_sidebar')) { ?>
+					<div class="lb-layout__sidebar">
+						<? get_template_part('theme-parts/organisms/sidebar/sidebar', null, [
+							'sidebar_variant' => 'universal'
+						]); ?>
+					</div>
+				<? } ?>
 			</div>
 		<?php endwhile; ?>
 	<?php endif; ?>

@@ -16,6 +16,11 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/step-list');
     register_block_type(__DIR__ . '/step-list/item');
     register_block_type(__DIR__ . '/step-list/item-title');
+    register_block_type(__DIR__ . '/sidebar-block');
+    register_block_type(__DIR__ . '/sidebar-block/title');
+    register_block_type(__DIR__ . '/contributor-list');
+    register_block_type(__DIR__ . '/share-links');
+    register_block_type(__DIR__ . '/toc');
 }
 
 function mg_disable_gutenberg_blocks($allowed_blocks)

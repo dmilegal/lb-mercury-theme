@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/share-links",
+  "title": "Share Links",
+  "style": ["share-links", "social-link"],
+  "editorStyle": [],
+  "category": "text",
+  "icon": "align-right",
+  "keywords": ["share links", "share"],
+  "providesContext": {
+      "acf/fields": "data"
+  },
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "share-links.php"
+  }
+}

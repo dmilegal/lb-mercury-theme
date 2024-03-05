@@ -1,0 +1,10 @@
+{
+  "name": "lb/sidebar-block-title",
+  "title": "Title",
+  "icon": "heading",
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "title.php"
+  },
+  "parent": [ "lb/sidebar-block" ]
+}

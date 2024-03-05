@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/sidebar-block",
+  "title": "Sidebar Block",
+  "style": ["sidebar"],
+  "editorStyle": [],
+  "category": "text",
+  "icon": "align-right",
+  "keywords": ["sidebar", "sidebar item"],
+  "providesContext": {
+      "acf/fields": "data"
+  },
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "sidebar-block.php"
+  }
+}

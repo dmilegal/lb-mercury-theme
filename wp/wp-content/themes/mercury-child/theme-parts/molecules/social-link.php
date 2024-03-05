@@ -28,7 +28,7 @@ switch ($icon) {
 <? get_template_part('theme-parts/atoms/button', null, [
   ...$args,
   'variant' => 'outlined',
-  'className' => classNames($className, 'lb-social-link', 'lb-social-link--color_' . $color),
+  'className' => classNames($className, 'lb-social-link not-prose', 'lb-social-link--color_' . $color),
   'prefix' => '<i class="' . $icon  . '"></i>',
   
 ]); ?>

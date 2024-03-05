@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/toc",
+  "title": "Table of contents",
+  "style": ["toc"],
+  "editorStyle": [],
+  "category": "text",
+  "icon": "clipboard",
+  "keywords": ["table of contents", "toc"],
+  "providesContext": {
+      "acf/fields": "data"
+  },
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "toc.php"
+  }
+}

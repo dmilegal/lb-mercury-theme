@@ -25,9 +25,13 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="lb-layout__content">
-				<div class="lb-layout__sidebar">
-					<? get_template_part('theme-parts/organisms/sidebar/sidebar', null); ?>
-				</div>
+				<? if (is_active_sidebar('universal_sidebar')) { ?>
+					<div class="lb-layout__sidebar">
+						<? get_template_part('theme-parts/organisms/sidebar/sidebar', null, [
+							'sidebar_variant' => 'universal'
+						]); ?>
+					</div>
+				<? } ?>
 				<div class="lb-layout__inner">
 					<div class="prose-headings prose-content prose-spaces prose-colors">
 						<? the_content() ?>
