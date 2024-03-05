@@ -6,7 +6,7 @@
   "editorStyle": [],
   "category": "text",
   "icon": "groups",
-  "keywords": ["contributors", "contributor-list", "authors", "co-authors"],
+  "keywords": ["contributors", "contributor list", "authors", "co-authors"],
   "providesContext": {
     "acf/fields": "data"
   },

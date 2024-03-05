@@ -1,2 +1,2 @@
 <?php
-require_once 'universal-sidebar.php';
+require_once 'default-sidebar.php';

@@ -25,10 +25,10 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="lb-layout__content">
-				<? if (is_active_sidebar('universal_sidebar')) { ?>
+				<? if (is_active_sidebar('default_sidebar')) { ?>
 					<div class="lb-layout__sidebar">
 						<? get_template_part('theme-parts/organisms/sidebar/sidebar', null, [
-							'sidebar_variant' => 'universal'
+							'sidebar_variant' => 'default'
 						]); ?>
 					</div>
 				<? } ?>
