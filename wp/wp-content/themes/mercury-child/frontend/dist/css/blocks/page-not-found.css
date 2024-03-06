@@ -1,0 +1,80 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/page-not-found/page-not-found.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+.lb-page-not-found {
+  max-width: 648px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--wp--preset--spacing--100) 0;
+}
+@media (max-width: 767.98px) {
+  .lb-page-not-found {
+    padding: 0 0 var(--wp--preset--spacing--170);
+  }
+}
+.lb-page-not-found__image.lb-page-not-found__image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 292px;
+  margin-bottom: var(--wp--preset--spacing--120);
+}
+.lb-page-not-found__title {
+  text-align: center;
+  margin-bottom: var(--wp--preset--spacing--65);
+  font-weight: 500;
+  font-size: var(--lb-font-size-display-md-relative);
+  line-height: var(--lb-line-height-display-md-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-display-md-relative, inherit);
+}
+.lb-page-not-found__subtitle {
+  text-align: center;
+  font-size: var(--wp--preset--font-size--text-xl);
+  line-height: var(--wp--custom--line-height--text-xl);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xl, inherit);
+}
+@media (max-width: 767.98px) {
+  .lb-page-not-found__subtitle {
+    font-size: var(--wp--preset--font-size--text-md);
+    line-height: var(--wp--custom--line-height--text-md);
+    letter-spacing: inherit;
+    letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  }
+}
+.lb-page-not-found__nav {
+  margin-top: var(--wp--preset--spacing--160);
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  .lb-page-not-found__nav {
+    margin-top: var(--wp--preset--spacing--140);
+  }
+}
+.lb-page-not-found__nav .menu {
+  display: flex;
+  justify-content: center;
+  column-gap: var(--wp--preset--spacing--110);
+  row-gap: var(--wp--preset--spacing--110);
+  flex-wrap: wrap;
+}
+.lb-page-not-found__nav .menu-item {
+  font-size: var(--lb-font-size-text-md-relative);
+  line-height: var(--lb-line-height-text-md-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+  font-weight: 600;
+}
+.lb-page-not-found__nav a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=page-not-found.css.map*/

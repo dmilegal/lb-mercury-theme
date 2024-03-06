@@ -3076,6 +3076,15 @@ body {
   --lb-layout-breadcrumbs-color-border: var(--lb-color-surface-high);
 }
 
+.lb-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+.lb-main__content {
+  flex-grow: 1;
+}
+
 .lb-layout--sticky-box {
   --lb-layout-grid-col-template: repeat(12, 1fr);
   --lb-layout-grid-gap-x: var(--layout-content-spacing);
