@@ -13,6 +13,10 @@ body, .editor-styles-wrapper {
 
   &-block {
     padding-bottom: var(--wp--preset--spacing--120);
+
+    &:has(%header:only-child) {
+      display: none;
+    }
     &--bordered {
       border-top: 1px solid var(--lb-sidebar-color-border);
       padding: var(--wp--preset--spacing--120) 0;
@@ -32,6 +36,10 @@ body, .editor-styles-wrapper {
           margin-bottom: var(--wp--preset--spacing--80);
         }
       }
+    }
+
+    &__header {
+      @extend %header
     }
 
     &__title {

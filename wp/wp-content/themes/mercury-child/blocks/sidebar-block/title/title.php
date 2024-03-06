@@ -8,4 +8,4 @@ $template = array(
   ))
 ); ?>
 
-<InnerBlocks templateLock="all" class="not-prose" allowedBlocks="<?= esc_attr(wp_json_encode($allowed_blocks)) ?>" template="<?= esc_attr(wp_json_encode($template)) ?>" />
+<InnerBlocks templateLock="all" class="lb-sidebar-block__header not-prose" allowedBlocks="<?= esc_attr(wp_json_encode($allowed_blocks)) ?>" template="<?= esc_attr(wp_json_encode($template)) ?>" />

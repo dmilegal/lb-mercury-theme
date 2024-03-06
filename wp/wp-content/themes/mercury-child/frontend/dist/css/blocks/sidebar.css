@@ -20,6 +20,9 @@ body, .editor-styles-wrapper {
 .lb-sidebar-block {
   padding-bottom: var(--wp--preset--spacing--120);
 }
+.lb-sidebar-block:has(.lb-sidebar-block__header:only-child) {
+  display: none;
+}
 .lb-sidebar-block--bordered {
   border-top: 1px solid var(--lb-sidebar-color-border);
   padding: var(--wp--preset--spacing--120) 0;
