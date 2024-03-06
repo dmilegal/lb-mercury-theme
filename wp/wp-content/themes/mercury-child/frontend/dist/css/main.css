@@ -2397,7 +2397,9 @@ body {
   top: var(--lb-admin-bar-offset, 0);
   left: 0;
   width: 100%;
-  background-color: var(--lb-header--background--color);
+  background-color: var(--lb-header-color-background);
+  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--lb-header-color-border, transparent);
   color: var(--lb-header--color);
   z-index: 100;
 }
@@ -2554,7 +2556,7 @@ body {
   }
 }
 .lb-header--color_gray {
-  --lb-header--background--color: var(
+  --lb-header-color-background: var(
     --wp--preset--color--gray-700
   );
   --lb-header--color: var(--wp--preset--color--gray-100);
@@ -2565,7 +2567,7 @@ body {
   );
 }
 .lb-header--color_primary {
-  --lb-header--background--color: var(
+  --lb-header-color-background: var(
     --wp--preset--color--primary-700
   );
   --lb-header--color: var(--wp--preset--color--primary-100);
@@ -2576,7 +2578,7 @@ body {
   );
 }
 .lb-header--color_error {
-  --lb-header--background--color: var(
+  --lb-header-color-background: var(
     --wp--preset--color--error-700
   );
   --lb-header--color: var(--wp--preset--color--error-100);
@@ -2587,7 +2589,7 @@ body {
   );
 }
 .lb-header--color_warning {
-  --lb-header--background--color: var(
+  --lb-header-color-background: var(
     --wp--preset--color--warning-700
   );
   --lb-header--color: var(--wp--preset--color--warning-100);
@@ -2598,7 +2600,7 @@ body {
   );
 }
 .lb-header--color_success {
-  --lb-header--background--color: var(
+  --lb-header-color-background: var(
     --wp--preset--color--success-700
   );
   --lb-header--color: var(--wp--preset--color--success-100);
@@ -2609,7 +2611,8 @@ body {
   );
 }
 .lb-header--color_white {
-  --lb-header--background--color: var(--wp--preset--color--white);
+  --lb-header-color-background: var(--wp--preset--color--white);
+  --lb-header-color-border: var(--wp--preset--color--gray-200);
   --lb-header--color: var(--wp--preset--color--black);
   --lb-header--color--hover: var(--wp--preset--color--gray-700);
   --lb-header--alter--color: var(--lb-header--color);

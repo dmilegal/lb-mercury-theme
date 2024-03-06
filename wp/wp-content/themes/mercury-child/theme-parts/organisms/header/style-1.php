@@ -1,7 +1,7 @@
 <?
 use Shared\Theme\LbThemeService;
 ?>
-<header class="lb-header lb-header--color_<?= LbThemeService::getMainGroupColor() ?>">
+<header class="lb-header lb-header--color_white">
 	<div class="lb-header__inner">
 		<div class="lb-header__grid">
 			<div class="lb-header__head">

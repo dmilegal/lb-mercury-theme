@@ -24,7 +24,8 @@ body {
   left: 0;
   width: 100%;
 
-  background-color: var(--lb-header--background--color);
+  background-color: var(--lb-header-color-background);
+  border-bottom: 1px solid var(--lb-header-color-border, transparent);
   color: var(--lb-header--color);
   z-index: 100;
   &,
@@ -194,7 +195,7 @@ body {
 
   @each $colorName in colors.$colorNames {
     &--color_#{$colorName} {
-      --lb-header--background--color: var(
+      --lb-header-color-background: var(
         --wp--preset--color--#{$colorName}-#{colors.$targetOffsets}
       );
       --lb-header--color: var(--wp--preset--color--#{$colorName}-100);
@@ -208,7 +209,8 @@ body {
   }
 
   &--color_white {
-    --lb-header--background--color: var(--wp--preset--color--white);
+    --lb-header-color-background: var(--wp--preset--color--white);
+    --lb-header-color-border: var(--wp--preset--color--gray-200);
 
     --lb-header--color: var(--wp--preset--color--black);
     --lb-header--color--hover: var(--wp--preset--color--#{colors.$colorGray}-700);
