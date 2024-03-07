@@ -8,7 +8,7 @@
   "script": ["casino-list","casino-card", "button","badge", "promo-button"],
   "category": "formatting",
   "icon": "book",
-  "keywords": ["casino", "list", "selection"],
+  "keywords": ["casino list", "casino selection", "casino cards", "list", "selection"],
   "acf": {
       "mode": "auto",
       "renderTemplate": "casino-list.php"
