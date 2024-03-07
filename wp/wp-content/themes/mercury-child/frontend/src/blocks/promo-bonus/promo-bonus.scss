@@ -21,6 +21,13 @@ body {
     padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100) var(--wp--preset--spacing--140);
   }
 
+  &__header {
+    margin-bottom: var(--wp--preset--spacing--120);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &__title {
     @include font.get-text-styles('text-md', false);
     font-weight: 700;
@@ -38,10 +45,7 @@ body {
     @include font.get-text-styles('display-sm', false);
     font-weight: 500;
     color: var(--lb-promo-bonus-subtitle-color-text);
-    margin-bottom: var(--wp--preset--spacing--120);
-    &:last-child {
-      margin-bottom: 0;
-    }
+  
     @include breakpoints.media-breakpoint-down(sm) {
       @include font.get-text-styles('display-xs', false);
     }

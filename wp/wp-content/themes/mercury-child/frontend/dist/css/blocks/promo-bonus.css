@@ -31,6 +31,12 @@ body {
     padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100) var(--wp--preset--spacing--140);
   }
 }
+.lb-promo-bonus__header {
+  margin-bottom: var(--wp--preset--spacing--120);
+}
+.lb-promo-bonus__header:last-child {
+  margin-bottom: 0;
+}
 .lb-promo-bonus__title {
   font-size: var(--wp--preset--font-size--text-md);
   line-height: var(--wp--custom--line-height--text-md);
@@ -58,10 +64,6 @@ body {
   letter-spacing: var(--wp--custom--letter-spacing--display-sm, inherit);
   font-weight: 500;
   color: var(--lb-promo-bonus-subtitle-color-text);
-  margin-bottom: var(--wp--preset--spacing--120);
-}
-.lb-promo-bonus__subtitle:last-child {
-  margin-bottom: 0;
 }
 @media (max-width: 767.98px) {
   .lb-promo-bonus__subtitle {

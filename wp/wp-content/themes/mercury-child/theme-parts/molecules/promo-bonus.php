@@ -79,15 +79,17 @@ if ($bonus_external_link) {
               ) ?>" style="<?= stylesValue(
                               $style
                             ) ?>">
-
-    <div class="lb-promo-bonus__title">
-      <?= get_the_title($bonusId) ?>
-    </div>
-    <? if ($bonus_short_desc) { ?>
-      <div class="lb-promo-bonus__subtitle">
-        <?php echo wp_kses($bonus_short_desc, $bonus_allowed_html); ?>
+    <div class="lb-promo-bonus__header">
+      <div class="lb-promo-bonus__title">
+        <?= get_the_title($bonusId) ?>
       </div>
-    <? } ?>
+      <? if ($bonus_short_desc) { ?>
+        <div class="lb-promo-bonus__subtitle">
+          <?php echo wp_kses($bonus_short_desc, $bonus_allowed_html); ?>
+        </div>
+      <? } ?>
+    </div>
+
     <? if ($bonus_code || $bonus_external_link) { ?>
       <div class="lb-promo-bonus__actions">
         <?
