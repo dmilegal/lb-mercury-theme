@@ -2695,7 +2695,7 @@ body {
   --lb-mobile-menu--background--color: var(--wp--preset--color--white);
   --lb-mobile-menu--color: var(--wp--preset--color--black);
   --lb-mobile-menu--color--hover: var(--wp--preset--color--gray-700);
-  --lb-mobile-menu--border--color: var(--wp--preset--color--gray-500);
+  --lb-mobile-menu--border--color: var(--wp--preset--color--gray-200);
 }
 .lb-mobile-menu__block {
   display: flex;

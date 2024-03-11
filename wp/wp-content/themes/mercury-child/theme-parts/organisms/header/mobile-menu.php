@@ -24,7 +24,7 @@ use Shared\Theme\LbThemeService;
 				?>
 			</div>
 			<div class="lb-mobile-menu__copy">
-				<?php if(get_theme_mod('footer_copyright') == '') { ?>
+				<?php if(!get_theme_mod('footer_copyright')) { ?>
 					<?php esc_html_e( '&copy; Copyright', 'mercury-child' ); ?> <?php echo esc_html( date( 'Y' ) ) ?> <?php echo esc_html( get_bloginfo( 'name' ) ) ?><br><?php esc_html_e( 'Powered by', 'mercury-child' ); ?> <a href="<?php echo esc_url( __( 'https://wordpress.org', 'mercury-child' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'WordPress', 'mercury-child' ); ?>"><?php esc_html_e( 'WordPress', 'mercury-child' ); ?></a> | <a href="<?php echo esc_url( __( 'https://mercurytheme.com', 'mercury-child' ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Affiliate WordPress Theme', 'mercury-child' ); ?>"><?php esc_html_e( 'Mercury Theme', 'mercury-child' ); ?></a>
 				<?php } else { ?>
 					<?php 
