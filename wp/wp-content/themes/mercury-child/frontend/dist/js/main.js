@@ -106,12 +106,15 @@ function closeMobileMenu() {
 
 // Mobile Children Start
 
-$('.lb-mobile-menu .menu-item-has-children').on('click', function () {
-  $(this).addClass('toggled');
+$('.lb-mobile-menu .menu-item-has-children>a').on('click', function (e) {
+  e.preventDefault();
+  let $parentLi = $(this).parent();
+  $parentLi.addClass('toggled');
   if ($('.lb-mobile-menu .menu-item-has-children').hasClass('toggled')) {
-    $(this).children('ul').toggle();
+    $parentLi.children('ul').toggle();
   }
-  $(this).toggleClass('space-up');
+  $parentLi.toggleClass('space-up');
+  return false;
 });
 
 // Mobile Children End
