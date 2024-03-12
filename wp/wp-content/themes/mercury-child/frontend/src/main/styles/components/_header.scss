@@ -36,7 +36,7 @@ body {
   &__grid {
     height: var(--lb-header-height);
   }
-  &__logo-wrapper,
+
   &__tail {
     padding: var(--wp--preset--spacing--85) 0;
     @include breakpoints.media-breakpoint-down('lg') {
@@ -89,8 +89,15 @@ body {
   }
 
   &__logo {
-    width: auto;
     height: 100%;
+    width: 100%;
+    max-height: var(--wp--preset--spacing--160);
+    max-width: var(--wp--preset--spacing--420);
+    object-fit: contain;
+    object-position: left center;
+    &-wrapper {
+      padding: var(--wp--preset--spacing--70) 0;
+    }
   }
 
   &__navigation {

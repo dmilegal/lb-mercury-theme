@@ -82,6 +82,12 @@ body {
   }
 
   &__logo {
+    height: 100%;
+    width: 100%;
+    max-height: var(--wp--preset--spacing--160);
+    max-width: var(--wp--preset--spacing--420);
+    object-fit: contain;
+    object-position: left center;
   }
 
   &__cp {
