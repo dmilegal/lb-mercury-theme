@@ -1758,10 +1758,10 @@ body :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) {
   width: 100%;
 }
 
-body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-casino-details, .lb-casino-list, .lb-author-block, .lb-step-list, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-casino-details, .lb-casino-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
   margin-top: 0;
 }
-body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-casino-details, .lb-casino-list, .lb-author-block, .lb-step-list, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+body :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-casino-details, .lb-casino-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
   margin-bottom: 0;
 }
 
@@ -1854,6 +1854,11 @@ body :where(.lb-casino-list):not(:where([class~=not-prose], [class~=not-prose] *
 body :where(.lb-step-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-top: var(--wp--preset--spacing--120);
   margin-bottom: var(--wp--preset--spacing--120);
+}
+
+body :where(.wp-block-casino-card):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-top: var(--wp--preset--spacing--100);
+  margin-bottom: var(--wp--preset--spacing--100);
 }
 
 body :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {

@@ -6,7 +6,7 @@
 function getBlockClass($block, $post_id, $is_preview = false)
 {
 
-  $baseClassName = str_replace('acf/', 'wp-block-', $block['name']);
+  $baseClassName = str_replace('lb/', 'wp-block-', $block['name']);
   $containerClassName = $baseClassName;
 
   if (!empty($block['className'])) {

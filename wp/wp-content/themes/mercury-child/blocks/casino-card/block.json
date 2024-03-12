@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/casino-card",
+  "title": "Casino Card",
+  "description": "",
+  "style": ["casino-card", "button", "badge", "promo-button"],
+  "editorStyle": [],
+  "script": ["casino-card", "button","badge", "promo-button"],
+  "category": "formatting",
+  "icon": "portfolio",
+  "keywords": ["casino card", "casino"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "casino-card.php"
+  }
+}

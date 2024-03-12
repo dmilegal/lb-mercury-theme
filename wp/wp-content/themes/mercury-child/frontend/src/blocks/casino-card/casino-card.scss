@@ -48,7 +48,7 @@ body,
   &__inner {
     background-color: var(--lb-casino-card-color-background);
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(14, 1fr);
     border: 1px solid var(--lb-casino-card-color-border);
     border-radius: var(--wp--preset--spacing--80);
     overflow: hidden;
@@ -67,10 +67,13 @@ body,
   }
 
   &__main {
-    grid-column: 1 / 5;
+    grid-column: 1 / 6;
     grid-row: 1 / 2;
     padding: var(--wp--preset--spacing--100) var(--lb-casino-card-padding-x);
     border-bottom: 1px solid var(--lb-casino-card-color-border);
+    &:nth-last-child(2) {
+      border-bottom: none;
+    }
     @include media-containers.media-breakpoint-down(sm) {
       grid-column: 1 / -1;
       grid-row: 1 / 2;
@@ -148,7 +151,7 @@ body,
   }
 
   &__sub {
-    grid-column: 5 / 13;
+    grid-column: 6 / 15;
     grid-row: 1 / 2;
     display: flex;
     justify-content: flex-end;
@@ -157,6 +160,9 @@ body,
     padding: var(--wp--preset--spacing--100) var(--lb-casino-card-padding-x);
     background-color: var(--lb-casino-card-promo-color-background);
     border-bottom: 1px solid var(--lb-casino-card-color-border);
+    &:last-child {
+      border-bottom: none;
+    }
     @include media-containers.media-breakpoint-down(sm) {
       padding: var(--wp--preset--spacing--90) var(--lb-casino-card-padding-x);
       grid-column: 1 / -1;
@@ -219,6 +225,7 @@ body,
       @include media-containers.media-breakpoint-down(sm) {
         display: flex;
         justify-content: space-between;
+        align-items: baseline;
         column-gap: var(--wp--preset--spacing--80);
       }
     }
@@ -240,7 +247,7 @@ body,
 
   &__extra {
     &-actions {
-      grid-column: 9 / 13;
+      grid-column: 9 / 15;
       grid-row: 2/3;
       display: flex;
       justify-content: flex-end;

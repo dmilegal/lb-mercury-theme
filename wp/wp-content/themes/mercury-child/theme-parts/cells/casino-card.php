@@ -1,6 +1,7 @@
 <?
 $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
+$hideFooter = $args['hide_footer'] ?? false;
 
 $casinoId = $args['casino_id'] ?? null;
 
@@ -37,6 +38,7 @@ $bonusId = aces_get_main_casino_bonus_id($casinoId);
 $bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $casino_allowed_html);
 $bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
 $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
+
 $is_locked = get_post_status($casinoId) == 'draft' ||
   get_post_status($casinoId) == 'pending' ||
   get_post_status($casinoId) == 'auto-draft' ||
@@ -70,7 +72,7 @@ if ($casino_permalink_button_title) {
 }
 
 ?>
-<div class="<?= classNames($className, 'lb-casino-card lb-casino-card--mr_closed not-prose') ?>" style="<?= stylesValue($style) ?>">
+<div class="<?= classNames($className, 'lb-casino-card lb-casino-card--mr_closed') ?>" style="<?= stylesValue($style) ?>">
   <div class="lb-casino-card__inner">
     <? if ($is_bst_bonus) { ?>
       <? get_template_part('theme-parts/atoms/badge', null, [
@@ -80,7 +82,7 @@ if ($casino_permalink_button_title) {
         'className' => 'lb-casino-card__label lb-casino-card__label--bst'
       ]); ?>
     <? } ?>
-    <div class="lb-casino-card__main">
+    <div class="lb-casino-card__main not-prose">
       <div class="lb-casino-card__header">
         <?= get_the_post_thumbnail($casinoId, [52, 52], [
           "class" => "lb-casino-card__logo"
@@ -99,13 +101,15 @@ if ($casino_permalink_button_title) {
         </div>
       </div>
     </div>
-    <div class="lb-casino-card__detail-list">
-      <div class="lb-casino-card__detail-item">
-        <div class="lb-casino-card__detail-title"><?= __('License', 'mercury-child') ?></div>
-        <div class="lb-casino-card__detail-value"><?= aces_casino_has_licence($casinoId) ? __('Yes', 'mercury-child') : __('No', 'mercury-child') ?></div>
+    <? if (!$hideFooter) { ?>
+      <div class="lb-casino-card__detail-list not-prose">
+        <div class="lb-casino-card__detail-item">
+          <div class="lb-casino-card__detail-title"><?= __('License', 'mercury-child') ?></div>
+          <div class="lb-casino-card__detail-value"><?= aces_casino_has_licence($casinoId) ? __('Yes', 'mercury-child') : __('No', 'mercury-child') ?></div>
+        </div>
       </div>
-    </div>
-    <div class="lb-casino-card__sub">
+    <? } ?>
+    <div class="lb-casino-card__sub not-prose">
       <? if ($bonus_short_desc) { ?>
         <div class="lb-casino-card__bonus-title">
           <?= $bonus_short_desc ?>
@@ -138,8 +142,8 @@ if ($casino_permalink_button_title) {
           ]); ?>
       </div>
     </div>
-    <?php if ($casino_terms_desc) { ?>
-      <div class="lb-casino-card__extra-actions">
+    <?php if ($casino_terms_desc && !$hideFooter) { ?>
+      <div class="lb-casino-card__extra-actions not-prose">
         <? get_template_part('theme-parts/atoms/button', null, [
           'size' => 'sm',
           'color' => 'gray',
@@ -158,16 +162,19 @@ if ($casino_permalink_button_title) {
         ]); ?>
       </div>
     <? } ?>
-    <div class="lb-casino-card__extra-content">
-      <?php if ($casino_terms_desc) { ?>
-        <div class="lb-casino-card__desc">
-          <?= wp_kses($casino_terms_desc, $casino_allowed_html); ?>
-        </div>
-      <? } ?>
-    </div>
+
+    <? if (!$hideFooter) { ?>
+      <div class="lb-casino-card__extra-content not-prose">
+        <?php if ($casino_terms_desc) { ?>
+          <div class="lb-casino-card__desc">
+            <?= wp_kses($casino_terms_desc, $casino_allowed_html); ?>
+          </div>
+        <? } ?>
+      </div>
+    <? } ?>
   </div>
   <?php if ($casino_detailed_tc) { ?>
-    <div class="lb-casino-card__tc">
+    <div class="lb-casino-card__tc not-prose">
       <?= wp_kses($casino_detailed_tc, $casino_allowed_html); ?>
     </div>
   <? } ?>

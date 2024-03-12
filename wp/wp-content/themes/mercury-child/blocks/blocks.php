@@ -22,6 +22,7 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/share-links');
     register_block_type(__DIR__ . '/toc');
     register_block_type(__DIR__ . '/promo-bonus');
+    register_block_type(__DIR__ . '/casino-card');
 }
 
 function mg_disable_gutenberg_blocks($allowed_blocks)
