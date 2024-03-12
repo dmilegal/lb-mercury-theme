@@ -37,6 +37,11 @@ $bonusId = aces_get_main_casino_bonus_id($casinoId);
 $bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $casino_allowed_html);
 $bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
 $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
+$is_locked = get_post_status($casinoId) == 'draft' ||
+  get_post_status($casinoId) == 'pending' ||
+  get_post_status($casinoId) == 'auto-draft' ||
+  get_post_status($casinoId) == 'private';
+
 
 if ($casino_external_link) {
   $external_link_url = $casino_external_link;
@@ -88,7 +93,7 @@ if ($casino_permalink_button_title) {
               <?= $overall_rating ?>
             </div>
             <div>
-              <a class="lb-casino-card__link" href="<?= get_the_permalink($casinoId) ?>" title="<?php echo esc_attr($permalink_button_title); ?>"><?php echo esc_html($permalink_button_title); ?></a>
+              <a class="lb-casino-card__link" href="<?= $is_locked ? '#0' : get_the_permalink($casinoId) ?>" title="<?php echo esc_attr($permalink_button_title); ?>"><?php echo esc_html($permalink_button_title); ?></a>
             </div>
           </div>
         </div>
@@ -110,15 +115,15 @@ if ($casino_permalink_button_title) {
         <?
         if ($external_link_url) {
           $isExternal = isExternalLink($external_link_url);
-          
+
           get_template_part('theme-parts/atoms/button', null, [
             'size' => 'xl',
             'color' => 'primary',
             'className' => 'lb-casino-card__play',
             'content' => esc_html($button_title),
-            'href' => esc_url($external_link_url),
-            'target' => $isExternal ? "_blank" : '',
-            'rel' => $isExternal ? "nofollow" : ''
+            'href' => $is_locked ? '#0' : esc_url($external_link_url),
+            'target' => $isExternal && !$is_locked ? "_blank" : '',
+            'rel' => $isExternal && !$is_locked ? "nofollow" : ''
           ]);
         }
 

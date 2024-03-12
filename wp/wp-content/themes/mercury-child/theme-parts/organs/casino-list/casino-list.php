@@ -14,7 +14,7 @@ if (!$queryArgs) {
   $queryArgs = array(
     'post_type'      => 'casino',
     'no_found_rows'  => false,
-    'post_status'    => 'publish',
+    'post_status'    => ['draft', 'publish', 'private'],
   );
 
   if ($casinoIds) {
