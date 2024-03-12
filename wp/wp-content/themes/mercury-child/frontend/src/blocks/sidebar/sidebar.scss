@@ -14,9 +14,14 @@ body, .editor-styles-wrapper {
   &-block {
     padding-bottom: var(--wp--preset--spacing--120);
 
-    &:has(%header:only-child) {
+    &:has(%header:only-child):not(%is_preview) {
       display: none;
     }
+
+    &--preview {
+      @extend %is_preview;
+    }
+
     &--bordered {
       border-top: 1px solid var(--lb-sidebar-color-border);
       padding: var(--wp--preset--spacing--120) 0;

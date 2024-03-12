@@ -20,7 +20,7 @@ body, .editor-styles-wrapper {
 .lb-sidebar-block {
   padding-bottom: var(--wp--preset--spacing--120);
 }
-.lb-sidebar-block:has(.lb-sidebar-block__header:only-child) {
+.lb-sidebar-block:has(.lb-sidebar-block__header:only-child):not(.lb-sidebar-block--preview) {
   display: none;
 }
 .lb-sidebar-block--bordered {
