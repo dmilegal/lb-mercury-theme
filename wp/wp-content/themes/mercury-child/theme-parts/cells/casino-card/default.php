@@ -70,13 +70,11 @@ $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
 
 $offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), $casino_allowed_html);
 
-if ($bonus_button_title) {
-  $button_title = $bonus_button_title;
-} else {
+if (!$bonus_button_title) {
   if (get_option('bonuses_get_bonus_title')) {
-    $button_title = esc_html(get_option('bonuses_get_bonus_title'));
+    $bonus_button_title = esc_html(get_option('bonuses_get_bonus_title'));
   } else {
-    $button_title = esc_html__('Get Bonus', 'mercury-child');
+    $bonus_button_title = esc_html__('Get Bonus', 'mercury-child');
   }
 }
 
