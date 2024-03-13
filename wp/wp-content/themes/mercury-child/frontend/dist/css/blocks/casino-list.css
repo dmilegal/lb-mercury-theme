@@ -35,6 +35,9 @@ body, .editor-styles-wrapper {
 .lb-casino-list--theme_fullwidth .lb-casino-list__inner {
   grid-column: var(--lb-layout-inner-grid-col-start)/var(--lb-layout-inner-grid-col-end);
 }
+.lb-casino-list--card-variant_compact-casino-bonus .lb-casino-list__list {
+  row-gap: var(--wp--preset--spacing--90);
+}
 .lb-casino-list__heading {
   margin-bottom: var(--wp--preset--spacing--140);
 }

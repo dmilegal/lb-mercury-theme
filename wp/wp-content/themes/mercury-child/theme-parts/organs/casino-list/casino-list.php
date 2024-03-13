@@ -1,6 +1,7 @@
 <?
 $style = $args['style'] ?? 'default';
 $queryArgs = $args['query_args'] ?? [];
+$disablePagination = $args['disable_pagination'] ?? false;
 /*
 [
   'casino_id' => number
@@ -10,12 +11,17 @@ $casinoListFull = $args['casino_list'] ?? [];
 $casinoIds = array_map(fn ($p) => $p['casino_id'], $casinoListFull);
 $postsPerPage = $args['posts_per_page'] ?? 0;
 
+
 if (!$queryArgs) {
   $queryArgs = array(
     'post_type'      => 'casino',
     'no_found_rows'  => false,
     'post_status'    => ['draft', 'publish', 'private'],
   );
+
+  if ($disablePagination) {
+    $queryArgs['posts_per_page'] = -1;
+  }
 
   if ($casinoIds) {
     $queryArgs['post__in'] = $casinoIds;
@@ -50,6 +56,7 @@ if ($queryArgs) {
       'total_pages' => $maxPages,
       'current_page' => $currentPage,
       'query_args' => $queryArgs,
+      'disable_pagination' => $disablePagination
     ]);
 
     wp_reset_query();

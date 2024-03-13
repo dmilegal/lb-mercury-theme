@@ -1,1 +1,1 @@
-<? get_template_part('theme-parts/cells/casino-card', null, [...$args]);
+<? get_template_part('theme-parts/cells/casino-card/casino-card', null, [...$args]);

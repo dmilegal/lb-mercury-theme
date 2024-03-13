@@ -17,7 +17,7 @@ $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 $casinoId = get_field('casino') ?? null;
 
 if ($casinoId)
-  get_template_part('theme-parts/cells/casino-card', null, [
+  get_template_part('theme-parts/cells/casino-card/casino-card', null, [
     ...$block_opts,
     'casino_id' => $casinoId,
     'hide_footer' => true

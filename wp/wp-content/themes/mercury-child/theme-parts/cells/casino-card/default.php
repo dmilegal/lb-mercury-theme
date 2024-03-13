@@ -34,17 +34,6 @@ $casino_button_title = esc_html(get_post_meta($casinoId, 'casino_button_title', 
 $casino_external_link = esc_url(get_post_meta($casinoId, 'casino_external_link', true));
 $casino_terms_desc = wp_kses(get_post_meta($casinoId, 'casino_terms_desc', true), $casino_allowed_html);
 
-$bonusId = aces_get_main_casino_bonus_id($casinoId);
-$bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $casino_allowed_html);
-$bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
-$is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
-
-$is_locked = get_post_status($casinoId) == 'draft' ||
-  get_post_status($casinoId) == 'pending' ||
-  get_post_status($casinoId) == 'auto-draft' ||
-  get_post_status($casinoId) == 'private';
-
-
 if ($casino_external_link) {
   $external_link_url = $casino_external_link;
 } else {
@@ -70,6 +59,31 @@ if ($casino_permalink_button_title) {
     $permalink_button_title = esc_html__('review', 'aces');
   }
 }
+
+
+$bonusId = aces_get_main_casino_bonus_id($casinoId);
+$bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $casino_allowed_html);
+$bonus_external_link = esc_url(get_post_meta($bonusId, 'bonus_external_link', true));
+$bonus_button_title = esc_html(get_post_meta($bonusId, 'bonus_button_title', true));
+$bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
+$is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
+
+$offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), $casino_allowed_html);
+
+if ($bonus_button_title) {
+  $button_title = $bonus_button_title;
+} else {
+  if (get_option('bonuses_get_bonus_title')) {
+    $button_title = esc_html(get_option('bonuses_get_bonus_title'));
+  } else {
+    $button_title = esc_html__('Get Bonus', 'mercury-child');
+  }
+}
+
+$is_locked = get_post_status($casinoId) == 'draft' ||
+  get_post_status($casinoId) == 'pending' ||
+  get_post_status($casinoId) == 'auto-draft' ||
+  get_post_status($casinoId) == 'private';
 
 ?>
 <div class="<?= classNames($className, 'lb-casino-card lb-casino-card--mr_closed') ?>" style="<?= stylesValue($style) ?>">
@@ -101,14 +115,6 @@ if ($casino_permalink_button_title) {
         </div>
       </div>
     </div>
-    <? if (!$hideFooter) { ?>
-      <div class="lb-casino-card__detail-list not-prose">
-        <div class="lb-casino-card__detail-item">
-          <div class="lb-casino-card__detail-title"><?= __('License', 'mercury-child') ?></div>
-          <div class="lb-casino-card__detail-value"><?= aces_casino_has_licence($casinoId) ? __('Yes', 'mercury-child') : __('No', 'mercury-child') ?></div>
-        </div>
-      </div>
-    <? } ?>
     <div class="lb-casino-card__sub not-prose">
       <? if ($bonus_short_desc) { ?>
         <div class="lb-casino-card__bonus-title">
@@ -142,6 +148,14 @@ if ($casino_permalink_button_title) {
           ]); ?>
       </div>
     </div>
+    <? if (!$hideFooter) { ?>
+      <div class="lb-casino-card__detail-list not-prose">
+        <div class="lb-casino-card__detail-item">
+          <div class="lb-casino-card__detail-title"><?= __('License', 'mercury-child') ?></div>
+          <div class="lb-casino-card__detail-value"><?= aces_casino_has_licence($casinoId) ? __('Yes', 'mercury-child') : __('No', 'mercury-child') ?></div>
+        </div>
+      </div>
+    <? } ?>
     <?php if ($casino_terms_desc && !$hideFooter) { ?>
       <div class="lb-casino-card__extra-actions not-prose">
         <? get_template_part('theme-parts/atoms/button', null, [
@@ -163,7 +177,7 @@ if ($casino_permalink_button_title) {
       </div>
     <? } ?>
 
-    <? if (!$hideFooter) { ?>
+    <? if (!$hideFooter && $casino_terms_desc) { ?>
       <div class="lb-casino-card__extra-content not-prose">
         <?php if ($casino_terms_desc) { ?>
           <div class="lb-casino-card__desc">

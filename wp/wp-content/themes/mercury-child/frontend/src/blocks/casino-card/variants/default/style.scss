@@ -168,9 +168,7 @@ body,
       grid-column: 1 / -1;
       grid-row: 3 / 4;
       flex-direction: column;
-      &:last-child {
-        border-bottom: 0;
-      }
+      border-bottom: 0;
     }
   }
 
@@ -257,6 +255,7 @@ body,
         padding: 0;
         grid-column: 1 / -1;
         grid-row: 5 / 6;
+        border-top: 1px solid var(--lb-casino-card-color-border);
       }
     }
 

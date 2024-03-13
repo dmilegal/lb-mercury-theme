@@ -39,6 +39,14 @@ body, .editor-styles-wrapper {
     }
   }
 
+  &--card-variant {
+    &_compact-casino-bonus {
+      %list {
+        row-gap: var(--wp--preset--spacing--90);
+      }
+    }
+  }
+
   &__wrapper {
     @extend %wrapper;
   }
@@ -63,6 +71,7 @@ body, .editor-styles-wrapper {
     display: flex;
     flex-direction: column;
     row-gap: var(--wp--preset--spacing--100);
+    @extend %list;
   }
 
   &__actions {
