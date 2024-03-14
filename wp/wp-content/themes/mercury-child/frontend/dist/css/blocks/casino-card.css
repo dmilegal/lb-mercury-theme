@@ -338,6 +338,8 @@ body,
   display: flex;
   align-items: center;
   column-gap: var(--wp--preset--spacing--70);
+}
+.lb-compact-casino-bonus-card__link.lb-compact-casino-bonus-card__link {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -362,9 +364,11 @@ body,
   letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
   font-weight: 500;
   color: var(--lb-ccb-casino-card-color-text);
+  margin-bottom: var(--wp--preset--spacing--60);
+}
+.lb-compact-casino-bonus-card__bonus.lb-compact-casino-bonus-card__bonus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin-bottom: var(--wp--preset--spacing--60);
 }
 .lb-compact-casino-bonus-card__bonus:last-child {
   margin-bottom: 0;

@@ -31,7 +31,9 @@ body,
     display: flex;
     align-items: center;
     column-gap: var(--wp--preset--spacing--70);
-    text-decoration: none;
+    &#{&} {
+      text-decoration: none;
+    }
   }
 
   &__logo {
@@ -51,8 +53,10 @@ body,
     @include font.get-text-styles('text-sm', false);
     font-weight: 500;
     color: var(--lb-ccb-casino-card-color-text);
-    text-decoration: none;
     margin-bottom: var(--wp--preset--spacing--60);
+    &#{&} {
+      text-decoration: none;
+    }
     &:last-child {
       margin-bottom: 0;
     }
