@@ -84,7 +84,7 @@ $is_locked = get_post_status($casinoId) == 'draft' ||
 
 
 ?>
-<div class="<?= classNames($className, 'lb-compact-casino-bonus-card') ?>" style="<?= stylesValue($style) ?>">
+<div class="<?= classNames($className, 'lb-compact-casino-bonus-card not-prose') ?>" style="<?= stylesValue($style) ?>">
   <div class="lb-compact-casino-bonus-card__header">
     <a class="lb-compact-casino-bonus-card__link" href="<?= $is_locked ? '#0' : get_the_permalink($casinoId) ?>" title="<?php echo esc_attr($permalink_button_title); ?>">
       <?= get_the_post_thumbnail($casinoId, [28, 28], [
