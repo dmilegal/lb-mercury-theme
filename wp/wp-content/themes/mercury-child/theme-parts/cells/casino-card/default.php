@@ -46,7 +46,7 @@ if ($casino_button_title) {
   if (get_option('casinos_play_now_title')) {
     $button_title = esc_html(get_option('casinos_play_now_title'));
   } else {
-    $button_title = esc_html__('Play Now', 'aces');
+    $button_title = esc_html__('Play Now', 'mercury-child');
   }
 }
 
@@ -56,7 +56,7 @@ if ($casino_permalink_button_title) {
   if (get_option('casinos_read_review_title')) {
     $permalink_button_title = esc_html(get_option('casinos_read_review_title'));
   } else {
-    $permalink_button_title = esc_html__('review', 'aces');
+    $permalink_button_title = esc_html__('review', 'mercury-child');
   }
 }
 
