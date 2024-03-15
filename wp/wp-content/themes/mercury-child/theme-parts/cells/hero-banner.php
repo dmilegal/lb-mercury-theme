@@ -11,6 +11,7 @@ $color = $args['color'] ?? 'gray';
 // 'center'
 $align = $args['align'] ?? 'left';
 
+$is_priview = $args['is_preview'] ?? false;
 
 
 ?>
@@ -30,23 +31,35 @@ $align = $args['align'] ?? 'left';
         </time>
       <? } ?>
       <? if ($title) { ?>
-        <h1 class="lb-hero-banner__title">
+        <h1 class="lb-hero-banner__title not-prose">
           <?= $title  ?>
         </h1>
       <? } ?>
       <? if ($subtitle) { ?>
-        <? get_template_part('theme-parts/cells/clipping', null, [
-          'content' => '<p class="lb-hero-banner__subtitle">
-                ' . $subtitle . '
-              </p>'
-        ]); ?>
+        <?
+        if ($is_priview) {
+          echo $subtitle;
+        } else {
+          get_template_part('theme-parts/cells/clipping', null, [
+            'content' => '<div class="lb-hero-banner__subtitle not-prose">
+                    ' . $subtitle . '
+                  </div>'
+          ]);
+        }
+        ?>
       <? } ?>
       <? if ($textContent) { ?>
-        <? get_template_part('theme-parts/cells/clipping', null, [
-          'content' => '<div class="lb-hero-banner__text-content prose-content prose-spaces prose-colors">
-                ' . $textContent . '
-              </div>'
-        ]); ?>
+        <?
+        if ($is_priview) {
+          echo $textContent;
+        } else {
+          get_template_part('theme-parts/cells/clipping', null, [
+            'content' => '<div class="lb-hero-banner__text-content prose-content prose-spaces prose-colors">
+                  ' . $textContent . '
+                </div>'
+          ]);
+        }
+        ?>
       <? } ?>
     </div>
   </div>

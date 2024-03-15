@@ -5,6 +5,7 @@
 
 body {
   --lb-hero-banner-color-background: var(--lb-color-surface-highest);
+  --lb-hero-banner-title-color-text: var(--lb-ui-color-heading-text);
   --lb-hero-banner-subtitle-color-text: var(--lb-color-text-default);
   --hero-banner-space-top: var(--wp--preset--spacing--140);
   --hero-banner-space-bottom: var(--wp--preset--spacing--160);
@@ -57,6 +58,7 @@ body {
   }
 
   &__inner {
+    box-sizing: border-box;
     @include container.make-container-max-width();
     display: grid;
     grid-template-columns: var(--lb-hero-banner-grid-col-template);
@@ -76,7 +78,9 @@ body {
   }
 
   &__title {
+    margin: 0;
     @include font.get-text-styles('display-lg');
+    color: var(--lb-hero-banner-title-color-text);
     font-weight: 500;
     &:not(:last-child) {
       margin-bottom: var(--wp--preset--spacing--100);
@@ -86,7 +90,17 @@ body {
 
   &__subtitle {
     color: var(--lb-hero-banner-subtitle-color-text);
-    @include font.get-text-styles('text-xl');
+    
+    p {
+      margin: var(--wp--preset--spacing--60) 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include font.get-text-styles('text-xl');
+    }
     @extend %subtitle;
   }
 }

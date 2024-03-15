@@ -1,7 +1,8 @@
 <?
 $content = $args['content'] ?? '';
+$className = $args['className'] ?? '';
 ?>
-<div class="lb-clipping">
+<div class="<?= classNames('lb-clipping', $className) ?>">
   <div class="lb-clipping__content">
     <?= $content ?>
   </div>

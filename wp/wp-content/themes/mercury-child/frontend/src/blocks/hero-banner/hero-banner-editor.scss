@@ -1,0 +1,11 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use "@/shared/styles/mixins/breakpoints";
+
+.wp-block-lb-hero-banner {
+  --layout--content-padding: 0px;
+  
+  max-width: 100%!important;
+  width: 100%;
+}
