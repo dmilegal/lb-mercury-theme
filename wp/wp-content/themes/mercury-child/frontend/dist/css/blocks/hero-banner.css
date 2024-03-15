@@ -7,7 +7,7 @@
 /**
 * font
 **/
-body {
+body, .editor-styles-wrapper {
   --lb-hero-banner-color-background: var(--lb-color-surface-highest);
   --lb-hero-banner-title-color-text: var(--lb-ui-color-heading-text);
   --lb-hero-banner-subtitle-color-text: var(--lb-color-text-default);
@@ -15,7 +15,7 @@ body {
   --hero-banner-space-bottom: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
-  body {
+  body, .editor-styles-wrapper {
     --hero-banner-space-top: var(--wp--preset--spacing--120);
     --hero-banner-space-bottom: var(--wp--preset--spacing--140);
   }
@@ -87,10 +87,8 @@ body {
 .lb-hero-banner__title:not(:last-child) {
   margin-bottom: var(--wp--preset--spacing--100);
 }
-.lb-hero-banner__subtitle {
-  color: var(--lb-hero-banner-subtitle-color-text);
-}
 .lb-hero-banner__subtitle p {
+  color: var(--lb-hero-banner-subtitle-color-text);
   margin: var(--wp--preset--spacing--60) 0;
   font-size: var(--lb-font-size-text-xl-relative);
   line-height: var(--lb-line-height-text-xl-relative);

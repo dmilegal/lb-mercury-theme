@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/font';
 @use "@/shared/styles/mixins/breakpoints";
 
-body {
+body, .editor-styles-wrapper {
   --lb-hero-banner-color-background: var(--lb-color-surface-highest);
   --lb-hero-banner-title-color-text: var(--lb-ui-color-heading-text);
   --lb-hero-banner-subtitle-color-text: var(--lb-color-text-default);
@@ -89,9 +89,8 @@ body {
   }
 
   &__subtitle {
-    color: var(--lb-hero-banner-subtitle-color-text);
-    
     p {
+      color: var(--lb-hero-banner-subtitle-color-text);
       margin: var(--wp--preset--spacing--60) 0;
       &:first-child {
         margin-top: 0;

@@ -36,30 +36,31 @@ $is_priview = $args['is_preview'] ?? false;
         </h1>
       <? } ?>
       <? if ($subtitle) { ?>
-        <?
-        if ($is_priview) {
-          echo $subtitle;
-        } else {
-          get_template_part('theme-parts/cells/clipping', null, [
-            'content' => '<div class="lb-hero-banner__subtitle not-prose">
-                    ' . $subtitle . '
-                  </div>'
-          ]);
-        }
-        ?>
+        <div class="lb-hero-banner__subtitle not-prose">
+          <? if ($is_priview) { ?>
+            <?= $subtitle; ?>
+          <? } else {
+            get_template_part('theme-parts/cells/clipping', null, [
+              'content' =>  $subtitle
+            ]);
+          }
+          ?>
+        </div>
       <? } ?>
       <? if ($textContent) { ?>
-        <?
-        if ($is_priview) {
-          echo $textContent;
-        } else {
-          get_template_part('theme-parts/cells/clipping', null, [
-            'content' => '<div class="lb-hero-banner__text-content prose-content prose-spaces prose-colors">
-                  ' . $textContent . '
-                </div>'
-          ]);
-        }
-        ?>
+        <div class="lb-hero-banner__text-content prose-content prose-spaces prose-colors">
+          <?
+          if ($is_priview) { ?>
+
+            <?= $textContent; ?>
+
+          <? } else {
+            get_template_part('theme-parts/cells/clipping', null, [
+              'content' => $textContent
+            ]);
+          }
+          ?>
+        </div>
       <? } ?>
     </div>
   </div>
