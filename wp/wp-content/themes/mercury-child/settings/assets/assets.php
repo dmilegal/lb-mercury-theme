@@ -21,6 +21,7 @@ add_action('enqueue_block_editor_assets', 'disable_old_assets', 999);
 function enqueue_main_assets()
 {
   enqueue_assets_by_name('main');
+  enqueue_assets_by_name('blocks');
 
   // style ea accordion plugin
   wp_enqueue_style('ea-accordion', '', ['sp-ea-style']);
@@ -47,7 +48,7 @@ function enqueue_components_assets($slug, $name, $args)
 
   enqueue_assets_by_name(end($list));
 }
-add_action('get_template_part', 'enqueue_components_assets', 10, 3);
+//add_action('get_template_part', 'enqueue_components_assets', 10, 3);
 
 // enqueue editor styles
 function add_editor_styles()
@@ -60,6 +61,8 @@ add_action('after_setup_theme', 'add_editor_styles');
 function enqueue_block_editor_styles()
 {
   enqueue_assets_by_name('editor-reset');
+  enqueue_assets_by_name('blocks');
+  enqueue_assets_by_name('editor-blocks');
 }
 add_action('enqueue_block_editor_assets', 'enqueue_block_editor_styles');
 

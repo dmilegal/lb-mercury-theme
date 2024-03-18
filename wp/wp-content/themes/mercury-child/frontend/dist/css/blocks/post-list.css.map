@@ -1,1 +1,0 @@
-{"version":3,"file":"css/blocks/post-list.css","mappings":";;;AAAA;EACE;EACA;EACA;AACF,C","sources":["webpack://@mercury-child/wp/./src/blocks/post-list/post-list.scss"],"sourcesContent":[".lb-post-list {\n  display: flex;\n  flex-direction: column;\n  row-gap: var(--wp--preset--spacing--140);\n}"],"names":[],"sourceRoot":""}

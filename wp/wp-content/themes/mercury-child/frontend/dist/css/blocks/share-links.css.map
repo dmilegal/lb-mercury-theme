@@ -1,1 +1,0 @@
-{"version":3,"file":"css/blocks/share-links.css","mappings":";;;AAAA;EACE;EACA;AACF,C","sources":["webpack://@mercury-child/wp/./src/blocks/share-links/share-links.scss"],"sourcesContent":[".lb-share-links {\n  display: flex;\n  column-gap: var(--wp--preset--spacing--70);\n}"],"names":[],"sourceRoot":""}
