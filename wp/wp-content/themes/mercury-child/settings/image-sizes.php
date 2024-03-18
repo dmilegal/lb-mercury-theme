@@ -1,6 +1,6 @@
 <?
-add_action( 'after_setup_theme', 'remove_plugin_image_sizes', 100 );
-function remove_plugin_image_sizes(){
+add_action( 'after_setup_theme', 'remove_unused_image_sizes', 100 );
+function remove_unused_image_sizes(){
 	remove_image_size( 'mercury-custom-logo');
 	//remove_image_size( 'mercury-50-50' );
 	//remove_image_size( 'mercury-100-100');
@@ -31,4 +31,5 @@ function remove_plugin_image_sizes(){
 	//remove_image_size( 'mercury-9999-32');
 	remove_image_size( 'mercury-9999-80'); //
 	remove_image_size( 'mercury-9999-135'); //
+
 }

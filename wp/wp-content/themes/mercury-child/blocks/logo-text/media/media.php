@@ -1,7 +1,9 @@
 <?
 $allowed_blocks = array('core/image');
 $template = array(
-  array('core/image')
+  array('core/image', [
+    "sizeSlug" => 'medium'
+  ])
 );
 ?>
 
