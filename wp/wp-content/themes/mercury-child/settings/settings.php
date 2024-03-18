@@ -1,4 +1,5 @@
 <?php
+require_once 'image-sizes.php';
 require_once 'assets/assets.php';
 require_once 'acf/acf.php';
 require_once 'cpt/cpt.php';

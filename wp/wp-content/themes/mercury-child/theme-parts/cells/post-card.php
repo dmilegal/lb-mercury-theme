@@ -13,7 +13,7 @@ $thumbId = get_post_thumbnail_id($postId);
   <div class="lb-post-card__inner">
     <? if ($thumbId) { ?>
       <div class="lb-post-card__media">
-        <?= wp_get_attachment_image($thumbId, 'mercury-450-450', "", array(
+        <?= wp_get_attachment_image($thumbId, 'mercury-450-450', false, array(
           "alt" => esc_attr(get_the_title($postId)),
           "class" => "lb-post-card__image"
         )); ?>

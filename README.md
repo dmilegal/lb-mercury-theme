@@ -25,3 +25,7 @@ Run prod container:
 More info about commands:
 
     ./run.sh -h
+
+If you have problems with accessibility of creating/saving files or directories on your local machine, use the following command
+
+    sudo chmod -R a+rwX .
