@@ -21,12 +21,17 @@
 					<?php
 					$site_name = esc_attr(get_bloginfo('name'));
 					$custom_logo_id = get_theme_mod('custom_logo');
+					$logo_footer = get_theme_mod('mercury_footer_logo');
 
-					if (has_custom_logo()) { ?>
+					if ($logo_footer) { ?>
+						<a href="<?= esc_url(home_url('/')) ?>" class="lb-footer__home-link" title="<?= $site_name ?>">
+							<?= wp_get_attachment_image($logo_footer, [260, 0], false, array("alt" => $site_name, 'class' => 'lb-footer__logo')) ?>
+						</a>
+					<?} else if (has_custom_logo()) { ?> 
 						<a href="<?= esc_url(home_url('/')) ?>" class="lb-footer__home-link" title="<?= $site_name ?>">
 							<?= wp_get_attachment_image($custom_logo_id, [260, 0], false, array("alt" => $site_name, 'class' => 'lb-footer__logo')) ?>
 						</a>
-					<? } else { ?>
+						<? } else { ?>
 						<a href="<?= esc_url(home_url('/')) ?>" title="<?= esc_attr(get_bloginfo('name')) ?>" class="lb-footer__home-link">
 							<?= esc_html(get_bloginfo('name')) ?>
 						</a>

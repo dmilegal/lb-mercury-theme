@@ -45,6 +45,22 @@ function legalbet_customizer_init($wp_customize)
         'label' => esc_html__('Footer License Block Text', 'mercury'),
         'description' => esc_html__('Add License Block Text to the footer.', 'mercury'),
     ));
+
+
+    /*  --- Start Footer Logo ---  */
+
+    $wp_customize->add_setting('mercury_footer_logo', array(
+        "transport" => "postMessage"
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'mercury_footer_logo', array(
+        'label' => esc_html__( 'Footer logo', 'mercury' ),
+        'description' => esc_html__( 'If not specified, then the default logo will be displayed.', 'mercury' ),
+        'section' => 'mercury_footer_settings',
+        'settings' => 'mercury_footer_logo'
+    )));
+
+    /*  --- End Footer Logo ---  */
 }
 
 function theme_colors_customize_register($wp_customize)
