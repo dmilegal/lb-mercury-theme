@@ -168,7 +168,6 @@ body,
       grid-column: 1 / -1;
       grid-row: 3 / 4;
       flex-direction: column;
-      border-bottom: 0;
     }
   }
 
@@ -255,16 +254,15 @@ body,
         padding: 0;
         grid-column: 1 / -1;
         grid-row: 5 / 6;
-        border-top: 1px solid var(--lb-casino-card-color-border);
       }
     }
 
     &-content {
       grid-column: 1 / -1;
       grid-row: 3/4;
-      padding: 0 var(--lb-casino-card-padding-x) var(--wp--preset--spacing--90);
+      padding: var(--wp--preset--spacing--50) var(--lb-casino-card-padding-x) var(--wp--preset--spacing--90);
       @include media-containers.media-breakpoint-down(sm) {
-        padding: var(--wp--preset--spacing--70) var(--lb-casino-card-padding-x)
+        padding: var(--wp--preset--spacing--75) var(--lb-casino-card-padding-x)
           var(--wp--preset--spacing--50);
         grid-column: 1 / -1;
         grid-row: 4 / 5;
