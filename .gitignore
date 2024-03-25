@@ -49,7 +49,6 @@ wp/wp-content/plugins/*
 !wp/wp-content/plugins/easy-accordion
 !wp/wp-content/themes
 wp/wp-content/themes/*
-wp/wp-content/themes/mercury-child/frontend/dist
 !wp/wp-content/themes/mercury-child
 xdebug
 https-portal-data
