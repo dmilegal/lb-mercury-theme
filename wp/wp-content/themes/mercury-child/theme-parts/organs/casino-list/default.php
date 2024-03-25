@@ -18,9 +18,9 @@ if ($casinoList) {
         <?php if ($title) { ?>
           <div class="lb-casino-list__heading prose-headings">
             <h2 class="lb-casino-list__title"><?php echo esc_html($title); ?></h2>
-            <div class="lb-casino-list__subtitle">
-              <? get_template_part('theme-parts/organs/post-info', null); ?>
-            </div>
+            <!--<div class="lb-casino-list__subtitle">
+              <? //get_template_part('theme-parts/organs/post-info', null); ?>
+            </div>-->
           </div>
         <?php } ?>
         <div class="lb-casino-list__list">
