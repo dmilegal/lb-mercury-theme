@@ -28,4 +28,4 @@ jobs:
           committer_name: Build Bot
           message: 'bot: build frontend'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This gets generated automatically
+          GITHUB_TOKEN: ${{ secrets.GTH_TOKEN }} # This gets generated automatically
