@@ -36,5 +36,6 @@ jobs:
         with:
           committer_name: Build Bot
           message: 'bot: build frontend'
+          add: -f ./wp/wp-content/themes/mercury-child/frontend/dist
         #env:
         #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This gets generated automatically
