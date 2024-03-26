@@ -1,16 +1,16 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "name": "lb/cpromo-bonus",
-  "title": "Bonus",
+  "name": "lb/bonus-card",
+  "title": "Bonus card",
   "description": "",
-  "style": ["promo-bonus", "button", "promo-button"],
+  "style": ["bonus-card", "button", "promo-button"],
   "editorStyle": [],
-  "script": ["promo-bonus", "button", "promo-button"],
+  "script": ["bonus-card", "button", "promo-button"],
   "category": "formatting",
   "icon": "tickets-alt",
   "keywords": ["bonus", "promo bonus", "promo"],
   "acf": {
       "mode": "auto",
-      "renderTemplate": "promo-bonus.php"
+      "renderTemplate": "bonus-card.php"
   }
 }

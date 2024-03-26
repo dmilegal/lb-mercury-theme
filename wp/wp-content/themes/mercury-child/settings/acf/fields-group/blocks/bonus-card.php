@@ -27,6 +27,7 @@ add_action('acf/include_fields', function () {
         ),
         'post_status' => array(
           0 => 'publish',
+          1 => 'draft',
         ),
         'taxonomy' => '',
         'return_format' => 'id',
@@ -42,7 +43,7 @@ add_action('acf/include_fields', function () {
         array(
           'param' => 'block',
           'operator' => '==',
-          'value' => 'lb/cpromo-bonus',
+          'value' => 'lb/bonus-card',
         ),
       ),
     ),

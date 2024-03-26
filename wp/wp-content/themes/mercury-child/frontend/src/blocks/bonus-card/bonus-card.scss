@@ -1,0 +1,82 @@
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+@use '@/shared/styles/mixins/media-containers';
+
+body,
+.editor-styles-wrapper {
+  --lb-bonus-card-color-border: var(--lb-color-primary-outline-variant-1);
+  --lb-bonus-card-color-background:var(--lb-color-primary-container-low);
+  --lb-bonus-card-title-color-text: var(--lb-color-primary);
+  --lb-bonus-card-subtitle-color-text: var(--lb-color-text-strong);
+  --lb-bonus-card-tc-color-text: var(--lb-color-on-primary-container);
+
+  --lb-bonus-card-tc-extra-color-text: var(--lb-color-text-default);
+}
+
+.lb-bonus-card {
+  display: flex;
+  align-items: center;
+  row-gap: var(--wp--preset--spacing--110);
+  column-gap: var(--wp--preset--spacing--180);
+  background-color: var(--lb-bonus-card-color-background);
+  border: 1px solid var(--lb-bonus-card-color-border);
+  border-radius: var(--wp--preset--spacing--80);
+  padding: var(--wp--preset--spacing--120);
+
+  @include media-containers.media-breakpoint-down(xs) {
+    flex-direction: column;
+    padding: var(--wp--preset--spacing--120) var(--wp--preset--spacing--100);
+  }
+
+  &-container {
+    container-type: inline-size;
+  }
+
+  &__header {
+    flex-grow: 1;
+    @include media-containers.media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include font.get-text-styles('text-md', false);
+    font-weight: 700;
+    color: var(--lb-bonus-card-title-color-text);
+    margin-bottom: var(--wp--preset--spacing--70);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    @include font.get-text-styles('display-xs', false);
+    font-weight: 600;
+    color: var(--lb-bonus-card-subtitle-color-text);
+  }
+
+  &__actions {
+    flex-shrink: 0;
+    width: var(--wp--preset--spacing--460);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: var(--wp--preset--spacing--80);
+    row-gap: var(--wp--preset--spacing--60);
+
+    & > * {
+      width: 100%;
+    }
+    @include media-containers.media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+
+  &__tc-extra {
+    @include font.get-text-styles('text-xs', false);
+    color: var(--lb-bonus-card-tc-extra-color-text);
+    margin-top: var(--wp--preset--spacing--70);
+    padding: 0 var(--wp--preset--spacing--80);
+  }
+}

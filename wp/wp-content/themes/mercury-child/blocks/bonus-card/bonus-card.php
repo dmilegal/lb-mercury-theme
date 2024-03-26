@@ -11,10 +11,13 @@
  *          or the post ID of the post hosting this block.
  * @param   array $context The context provided to the block by the post or it's parent block.
  */
+
+$block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 $bonusId = get_field('bonus');
 
 if (!$bonusId) return;
 
-get_template_part('theme-parts/molecules/promo-bonus', null, [
-  'bonus_id' => $bonusId
+get_template_part('theme-parts/cells/bonus-card', null, [
+  ...$block_opts,
+  'bonus_id' => $bonusId,
 ]);
