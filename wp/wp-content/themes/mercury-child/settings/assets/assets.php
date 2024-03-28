@@ -8,9 +8,11 @@ function disable_old_assets()
   wp_deregister_style('mercury-googlefonts');
   wp_deregister_style('mercury-block-editor-styles');
   wp_deregister_style('aces-style');
+  wp_deregister_style('fontawesome');
 
 
   wp_deregister_script('mercury-global-js');
+  wp_deregister_script('fontawesome');
   wp_deregister_script('mercury-floating-header');
 }
 add_action('wp_enqueue_scripts', 'disable_old_assets', 999);
