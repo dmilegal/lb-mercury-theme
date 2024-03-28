@@ -19,6 +19,18 @@ add_action('wp_enqueue_scripts', 'disable_old_assets', 999);
 add_action('enqueue_block_editor_assets', 'disable_old_assets', 999);
 
 
+add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
+function remove_jquery_migrate( $scripts ) {
+
+	if ( empty( $scripts->registered['jquery'] ) || is_admin() ) {
+		return;
+	}
+
+	$deps = & $scripts->registered['jquery']->deps;
+
+	$deps = array_diff( $deps, [ 'jquery-migrate' ] );
+}
+
 // Enqueue custom css and js
 function enqueue_main_assets()
 {
