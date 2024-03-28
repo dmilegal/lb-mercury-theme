@@ -36,7 +36,8 @@ $job_title = get_field('job_title', 'user_' . $userId);
     <div class="lb-user-block__head">
         <div class="lb-user-block__head-left">
             <?= get_avatar($userId, 56, '', '', [
-                'class' => 'lb-user-block__avatar'
+                'class' => 'lb-user-block__avatar',
+                'loading' => 'lazy'
             ]) ?>
             <div class="<?= classNames("lb-user-block__info", !$job_title ? "lb-user-block__info--one-line" : '') ?>">
                 <? if (!empty($display_name)) { ?>
