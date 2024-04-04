@@ -22,6 +22,26 @@ function getCasinoListGroupParams($postfix)
         'layout' => 'block',
         'sub_fields' => array(
           array(
+            'key' => 'field_65f0a27ba39da' . $postfix,
+            'label' => 'Disable pagination',
+            'name' => 'disable_pagination',
+            'aria-label' => '',
+            'type' => 'true_false',
+            'instructions' => 'Attention! The entire list will be displayed at once.',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'message' => '',
+            'default_value' => 0,
+            'ui' => 0,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
+          ),
+          array(
             'key' => 'field_65d62febc0fdc' . $postfix,
             'label' => 'Casino List',
             'name' => 'casino_list',
