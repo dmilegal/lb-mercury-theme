@@ -115,15 +115,15 @@ if ($bonus_external_link) {
         ?>
       </div>
     <? } ?>
-    <? if (!$offer_popup_hide && $offer_detailed_tc) { ?>
+    <? /*if (!$offer_popup_hide && $offer_detailed_tc) { ?>
       <a class="lb-promo-bonus__tc-link">
-        <?= wp_kses($offer_detailed_tc, $bonus_allowed_html); ?>
+        <?= $offer_detailed_tc; ?>
       </a>
-    <? } ?>
+    <? }*/ ?>
   </div>
-  <?php if (!!$offer_popup_hide && $offer_detailed_tc) { ?>
+  <?php if (/*!!$offer_popup_hide &&*/ $offer_detailed_tc) { ?>
     <div class="lb-promo-bonus__tc-extra">
-      <?= wp_kses($casino_detailed_tc, $bonus_allowed_html); ?>
+      <?= $offer_detailed_tc; ?>
     </div>
   <? } ?>
 
