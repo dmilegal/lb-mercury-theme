@@ -185,9 +185,9 @@ $is_locked = get_post_status($casinoId) == 'draft' ||
       </div>
     <? } ?>
   </div>
-  <?php if ($offer_detailed_tc) { ?>
+  <?php if ($casino_detailed_tc || $offer_detailed_tc) { ?>
     <div class="lb-casino-card__tc not-prose">
-      <?= $offer_detailed_tc ?>
+      <?= $offer_detailed_tc ? $offer_detailed_tc : wp_kses($casino_detailed_tc, $casino_allowed_html); ?>
     </div>
   <? } ?>
 </div>
