@@ -11,6 +11,7 @@ body {
   --hero-casino-banner-info-value-color-text: var(--lb-color-text-strong);
   --hero-casino-banner-desc-color-text: var(--lb-color-text-default);
   --hero-casino-banner-toggle-color-text: var(--lb-color-text-default);
+  --hero-casino-banner-lar-color-text: var(--lb-color-on-surface-min);
 
   @include breakpoints.media-breakpoint-down(sm) {
     --hero-casino-banner-space-top: var(--wp--preset--spacing--110);
@@ -73,6 +74,9 @@ body {
     flex-wrap: wrap;
     column-gap: var(--wp--preset--spacing--70);
     row-gap: var(--wp--preset--spacing--60);
+    &:not(:last-child) {
+      margin-bottom: var(--wp--preset--spacing--70);
+    }
   }
 
   &__info {
@@ -148,6 +152,36 @@ body {
           var(--lb-header-height, 0px) + var(--wp--preset--spacing--80) +
             var(--lb-admin-bar-offset, 0px)
         );
+      }
+    }
+  }
+
+  &__lar {
+    display: flex;
+    align-items: center;
+    column-gap: var(--wp--preset--spacing--70);
+    row-gap: var(--wp--preset--spacing--60);
+    @include breakpoints.media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-text {
+      @include font.get-text-styles('text-xs', false);
+      color: var(--hero-casino-banner-lar-color-text);
+      a {
+        color: currentColor;
+      }
+    }
+    &-mark {
+      flex-shrink: 0;
+      width: auto;
+      height: auto;
+      max-width: 180px;
+      max-height: 32px;
+      opacity: 0.35;
+      transition: opacity 170ms ease-in-out;
+      &:hover {
+        opacity: 1;
       }
     }
   }
