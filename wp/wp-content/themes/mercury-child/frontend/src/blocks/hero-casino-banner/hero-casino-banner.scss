@@ -166,7 +166,7 @@ body {
       align-items: flex-start;
     }
     &-text {
-      @include font.get-text-styles('text-xs', false);
+      @include font.get-text-styles('text-sm', false);
       color: var(--hero-casino-banner-lar-color-text);
       a {
         color: currentColor;
