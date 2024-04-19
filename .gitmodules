@@ -10,3 +10,6 @@
 [submodule "wp/wp-content/plugins/easy-accordion"]
 	path = wp/wp-content/plugins/easy-accordion
 	url = https://github.com/dmilegal/easy-accordion.git
+[submodule "wp/wp-content/plugins/lb-app-cpt-addon"]
+	path = wp/wp-content/plugins/lb-app-cpt-addon
+	url = https://github.com/dmilegal/lb-app-cpt-addon.git
