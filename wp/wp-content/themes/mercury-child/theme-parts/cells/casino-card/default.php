@@ -34,12 +34,6 @@ $casino_button_title = esc_html(get_post_meta($casinoId, 'casino_button_title', 
 $casino_external_link = esc_url(get_post_meta($casinoId, 'casino_external_link', true));
 $casino_terms_desc = wp_kses(get_post_meta($casinoId, 'casino_terms_desc', true), $casino_allowed_html);
 
-if ($casino_external_link) {
-  $external_link_url = $casino_external_link;
-} else {
-  $external_link_url = get_the_permalink($casinoId);
-}
-
 if ($casino_button_title) {
   $button_title = $casino_button_title;
 } else {
@@ -77,6 +71,15 @@ if (!$bonus_button_title) {
     $bonus_button_title = esc_html__('Get Bonus', 'mercury-child');
   }
 }
+
+if ($bonus_external_link) {
+  $external_link_url = $bonus_external_link;
+} elseif ($casino_external_link) {
+  $external_link_url = $casino_external_link;
+} else {
+  $external_link_url = get_the_permalink($casinoId);
+}
+
 
 $is_locked = get_post_status($casinoId) == 'draft' ||
   get_post_status($casinoId) == 'pending' ||
