@@ -14,14 +14,22 @@
 
 $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 
-$casinoId = get_field('casino') ?? null;
 
-if ($casinoId)
-  get_template_part('theme-parts/cells/casino-card/casino-card', null, [
+$postType = get_field('post_type') ?? 'casino';
+
+if ($postType === 'casino') {
+  $postId = get_field('casino') ?? null;
+} else {
+  $postId = get_field('bookmaker') ?? null;
+} 
+
+if ($postId)
+  get_template_part('theme-parts/cells/review-card/review-card', null, [
     ...$block_opts,
-    'casino_id' => $casinoId,
+    'post_id' => $postId,
+    'post_type' => $postType,
     'hide_footer' => true
   ]);
 else if ($is_preview) { ?>
-  <h3 style="padding: 24px 0; text-align: center;">Please select casino</h3>
+  <h3 style="padding: 24px 0; text-align: center;">Please select review post</h3>
 <? } ?>

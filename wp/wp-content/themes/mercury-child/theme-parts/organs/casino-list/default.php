@@ -25,7 +25,7 @@ if ($casinoList) {
         <?php } ?>
         <div class="lb-casino-list__list">
           <? foreach ($casinoList as $casino) {
-            get_template_part('theme-parts/cells/casino-card/casino-card', null, [
+            get_template_part('theme-parts/cells/review-card/review-card', null, [
               'card_variant' => $args['card_variant'] ?? null,
               ...$casino
             ]);

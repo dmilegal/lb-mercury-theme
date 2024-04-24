@@ -32,7 +32,7 @@ add_action('acf/include_fields', function () {
       ),
       'choices' => array(
         'default' => 'Default',
-        'compact-casino-bonus' => 'Compact casino bonus',
+        'compact-review-bonus' => 'Compact review bonus',
       ),
       'default_value' => 'default',
       'return_format' => 'value',

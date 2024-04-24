@@ -3,9 +3,9 @@ $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
 $hideFooter = $args['hide_footer'] ?? false;
 
-$casinoId = $args['casino_id'] ?? null;
+$postId = $args['post_id'] ?? null;
 
-if (!$casinoId) return;
+if (!$postId) return;
 
 $casino_allowed_html = array(
   'a' => array(
@@ -27,12 +27,12 @@ $casino_allowed_html = array(
   'p' => array()
 );
 
-$casino_detailed_tc = wp_kses(get_post_meta($casinoId, 'casino_detailed_tc', true), $casino_allowed_html);
-$overall_rating = esc_html(get_post_meta($casinoId, 'casino_overall_rating', true));
-$casino_permalink_button_title = esc_html(get_post_meta($casinoId, 'casino_permalink_button_title', true));
-$casino_button_title = esc_html(get_post_meta($casinoId, 'casino_button_title', true));
-$casino_external_link = esc_url(get_post_meta($casinoId, 'casino_external_link', true));
-$casino_terms_desc = wp_kses(get_post_meta($casinoId, 'casino_terms_desc', true), $casino_allowed_html);
+$casino_detailed_tc = wp_kses(get_post_meta($postId, 'casino_detailed_tc', true), $casino_allowed_html);
+$overall_rating = esc_html(get_post_meta($postId, 'casino_overall_rating', true));
+$casino_permalink_button_title = esc_html(get_post_meta($postId, 'casino_permalink_button_title', true));
+$casino_button_title = esc_html(get_post_meta($postId, 'casino_button_title', true));
+$casino_external_link = esc_url(get_post_meta($postId, 'casino_external_link', true));
+$casino_terms_desc = wp_kses(get_post_meta($postId, 'casino_terms_desc', true), $casino_allowed_html);
 
 if ($casino_button_title) {
   $button_title = $casino_button_title;
@@ -55,7 +55,7 @@ if ($casino_permalink_button_title) {
 }
 
 
-$bonusId = aces_get_main_casino_bonus_id($casinoId);
+$bonusId = aces_get_main_casino_bonus_id($postId);
 $bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $casino_allowed_html);
 $bonus_external_link = esc_url(get_post_meta($bonusId, 'bonus_external_link', true));
 $bonus_button_title = esc_html(get_post_meta($bonusId, 'bonus_button_title', true));
@@ -77,14 +77,14 @@ if ($bonus_external_link) {
 } elseif ($casino_external_link) {
   $external_link_url = $casino_external_link;
 } else {
-  $external_link_url = get_the_permalink($casinoId);
+  $external_link_url = get_the_permalink($postId);
 }
 
 
-$is_locked = get_post_status($casinoId) == 'draft' ||
-  get_post_status($casinoId) == 'pending' ||
-  get_post_status($casinoId) == 'auto-draft' ||
-  get_post_status($casinoId) == 'private';
+$is_locked = get_post_status($postId) == 'draft' ||
+  get_post_status($postId) == 'pending' ||
+  get_post_status($postId) == 'auto-draft' ||
+  get_post_status($postId) == 'private';
 
 ?>
 <div class="<?= classNames($className, 'lb-casino-card lb-casino-card--mr_closed') ?>" style="<?= stylesValue($style) ?>">
@@ -99,18 +99,18 @@ $is_locked = get_post_status($casinoId) == 'draft' ||
     <? } ?>
     <div class="lb-casino-card__main not-prose">
       <div class="lb-casino-card__header">
-        <?= get_the_post_thumbnail($casinoId, [52, 52], [
+        <?= get_the_post_thumbnail($postId, [52, 52], [
           "class" => "lb-casino-card__logo"
         ]) ?>
         <div>
-          <div class="lb-casino-card__title"><?= get_the_title($casinoId) ?></div>
+          <div class="lb-casino-card__title"><?= get_the_title($postId) ?></div>
           <div class="lb-casino-card__info">
             <div class="lb-casino-card__rating">
               <i class="icon-star"></i>
               <?= $overall_rating ?>
             </div>
             <div>
-              <a class="lb-casino-card__link" href="<?= $is_locked ? '#0' : get_the_permalink($casinoId) ?>" title="<?php echo esc_attr($permalink_button_title); ?>"><?php echo esc_html($permalink_button_title); ?></a>
+              <a class="lb-casino-card__link" href="<?= $is_locked ? '#0' : get_the_permalink($postId) ?>" title="<?php echo esc_attr($permalink_button_title); ?>"><?php echo esc_html($permalink_button_title); ?></a>
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@ $is_locked = get_post_status($casinoId) == 'draft' ||
       <div class="lb-casino-card__detail-list not-prose">
         <div class="lb-casino-card__detail-item">
           <div class="lb-casino-card__detail-title"><?= __('License', 'mercury-child') ?></div>
-          <div class="lb-casino-card__detail-value"><?= aces_casino_has_licence($casinoId) ? __('Yes', 'mercury-child') : __('No', 'mercury-child') ?></div>
+          <div class="lb-casino-card__detail-value"><?= aces_casino_has_licence($postId) ? __('Yes', 'mercury-child') : __('No', 'mercury-child') ?></div>
         </div>
       </div>
     <? } ?>
