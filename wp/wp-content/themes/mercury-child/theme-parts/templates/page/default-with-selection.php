@@ -19,7 +19,7 @@
 		$selectionGroup = get_field('casino_selection_group', get_the_id()) ?? null;
 
 		if ($selectionGroup && $selectionGroup['casino_list'])
-			get_template_part('theme-parts/organs/casino-list/casino-list', null, $selectionGroup);
+			get_template_part('theme-parts/organs/review-list/review-list', null, $selectionGroup);
 		?>
 	</div>
 

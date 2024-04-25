@@ -1,9 +1,9 @@
 <?
-function getCasinoListGroupParams($postfix)
+function getReviewListGroupParams($postfix)
 {
   return array(
     'key' => 'group_65d62feb546ca' . $postfix,
-    'title' => 'Casino Selection',
+    'title' => 'Review List',
     'fields' => array(
       array(
         'key' => 'field_65d64435026b5' . $postfix,
@@ -21,6 +21,29 @@ function getCasinoListGroupParams($postfix)
         ),
         'layout' => 'block',
         'sub_fields' => array(
+          array(
+            'key' => 'field_662a8c530400a' . $postfix,
+            'label' => 'Post Type',
+            'name' => 'post_type',
+            'aria-label' => '',
+            'type' => 'button_group',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'choices' => array(
+              'casino' => 'Casino',
+              'bookmaker' => 'Bookmaker',
+            ),
+            'default_value' => 'casino',
+            'return_format' => 'value',
+            'allow_null' => 0,
+            'layout' => 'horizontal',
+          ),
           array(
             'key' => 'field_65f0a27ba39da' . $postfix,
             'label' => 'Disable pagination',
@@ -71,7 +94,15 @@ function getCasinoListGroupParams($postfix)
                 'type' => 'post_object',
                 'instructions' => '',
                 'required' => 0,
-                'conditional_logic' => 0,
+                'conditional_logic' => array(
+                  array(
+                    array(
+                      'field' => 'field_662a8c530400a' . $postfix,
+                      'operator' => '==',
+                      'value' => 'bookmaker',
+                    ),
+                  ),
+                ),
                 'wrapper' => array(
                   'width' => '',
                   'class' => '',
@@ -91,6 +122,45 @@ function getCasinoListGroupParams($postfix)
                 'bidirectional' => 0,
                 'ui' => 1,
                 'bidirectional_target' => array(),
+                'parent_repeater' => 'field_65d62febc0fdc' . $postfix,
+              ),
+              array(
+                'key' => 'field_662a8c920400b' . $postfix,
+                'label' => 'Bookmaker',
+                'name' => 'bookmaker_id',
+                'aria-label' => '',
+                'type' => 'post_object',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => array(
+                  array(
+                    array(
+                      'field' => 'field_662a8c530400a' . $postfix,
+                      'operator' => '==',
+                      'value' => 'bookmaker',
+                    ),
+                  ),
+                ),
+                'wrapper' => array(
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'post_type' => array(
+                  0 => 'bookmaker',
+                ),
+                'post_status' => array(
+                  0 => 'publish',
+                  1 => 'draft',
+                ),
+                'taxonomy' => '',
+                'return_format' => 'id',
+                'multiple' => 0,
+                'allow_null' => 0,
+                'bidirectional' => 0,
+                'ui' => 1,
+                'bidirectional_target' => array(
+                ),
                 'parent_repeater' => 'field_65d62febc0fdc' . $postfix,
               ),
               array(

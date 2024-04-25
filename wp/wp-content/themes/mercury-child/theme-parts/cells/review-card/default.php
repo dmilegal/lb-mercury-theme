@@ -1,7 +1,8 @@
 <?
 $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
-$hideFooter = $args['hide_footer'] ?? false;
+$hideFooter = isset($args['hide_footer']) &&
+  ($args['hide_footer'] == 1 || $args['hide_footer'] == true || $args['hide_footer'] == 'true') ?: false;
 
 $postId = $args['post_id'] ?? null;
 

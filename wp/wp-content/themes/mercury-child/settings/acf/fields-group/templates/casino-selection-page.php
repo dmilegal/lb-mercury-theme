@@ -4,7 +4,7 @@ add_action('acf/include_fields', function () {
     return;
   }
 
-  $params = getCasinoListGroupParams('_tpl');
+  $params = getReviewListGroupParams('_tpl');
   
   $params['location'] = array(
     array(

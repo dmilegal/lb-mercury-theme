@@ -1,0 +1,1 @@
+<? get_template_part('theme-parts/cells/review-card/review-card', null, $args);

@@ -1,2 +1,2 @@
 <?
-require_once 'casino-list.php';
+require_once 'review-list.php';
