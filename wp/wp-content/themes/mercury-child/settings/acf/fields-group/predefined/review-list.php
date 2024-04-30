@@ -99,7 +99,7 @@ function getReviewListGroupParams($postfix)
                     array(
                       'field' => 'field_662a8c530400a' . $postfix,
                       'operator' => '==',
-                      'value' => 'bookmaker',
+                      'value' => 'casino',
                     ),
                   ),
                 ),
