@@ -73,10 +73,14 @@ if (!$bonus_button_title) {
   }
 }
 
+$is_external_link = false;
+
 if ($bonus_external_link) {
   $external_link_url = $bonus_external_link;
+  $is_external_link = true;
 } elseif ($casino_external_link) {
   $external_link_url = $casino_external_link;
+  $is_external_link = true;
 } else {
   $external_link_url = get_the_permalink($postId);
 }
@@ -126,16 +130,14 @@ $is_locked = get_post_status($postId) == 'draft' ||
       <div class="lb-review-card__actions">
         <?
         if ($external_link_url) {
-          $isExternal = isExternalLink($external_link_url);
-
           get_template_part('theme-parts/atoms/button', null, [
             'size' => 'xl',
             'color' => 'primary',
             'className' => 'lb-review-card__play',
             'content' => esc_html($button_title),
             'href' => $is_locked ? '#0' : esc_url($external_link_url),
-            'target' => $isExternal && !$is_locked ? "_blank" : '',
-            'rel' => $isExternal && !$is_locked ? "nofollow" : ''
+            'target' => $is_external_link && !$is_locked ? "_blank" : '',
+            'rel' => $is_external_link && !$is_locked ? "nofollow" : ''
           ]);
         }
 

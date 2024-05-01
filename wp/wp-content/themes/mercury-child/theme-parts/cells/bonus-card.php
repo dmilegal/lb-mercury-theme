@@ -70,8 +70,11 @@ if ($offer_popup_title) {
   $custom_popup_title = esc_html__('Read about T&C', 'mercury-child');
 }
 
+$is_external_link = false;
+
 if ($bonus_external_link) {
   $external_link_url = $bonus_external_link;
+  $is_external_link = true;
 } else {
   $external_link_url = get_the_permalink($bonusId);
 }
@@ -96,17 +99,17 @@ if ($bonus_external_link) {
       <? } ?>
     </div>
 
-    <? if ($bonus_code || $bonus_external_link) { ?>
+    <? if ($bonus_code || $external_link_url) { ?>
       <div class="lb-bonus-card__actions">
         <?
-        if ($bonus_external_link)
+        if ($external_link_url)
           get_template_part('theme-parts/atoms/button', null, [
             'size' => 'xl',
             'color' => 'primary',
             'content' => $bonus_button_title,
-            'href' => $is_locked ? '#0' : $bonus_external_link,
+            'href' => $is_locked ? '#0' : $external_link_url,
             'target' => "_blank",
-            'rel' => "nofollow"
+            'rel' => $is_external_link ? "nofollow" : ''
           ]);
 
           if ($bonus_code && !$is_locked)

@@ -33,12 +33,6 @@ $casino_button_title = esc_html(get_post_meta($postId, 'casino_button_title', tr
 $casino_external_link = esc_url(get_post_meta($postId, 'casino_external_link', true));
 $casino_terms_desc = wp_kses(get_post_meta($postId, 'casino_terms_desc', true), $casino_allowed_html);
 
-if ($casino_external_link) {
-  $external_link_url = $casino_external_link;
-} else {
-  $external_link_url = get_the_permalink($postId);
-}
-
 if ($casino_button_title) {
   $button_title = $casino_button_title;
 } else {
@@ -69,6 +63,19 @@ $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
 
 $offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), $casino_allowed_html);
 
+$is_external_link = false;
+
+if ($bonus_external_link) {
+  $external_link_url = $bonus_external_link;
+  $is_external_link = true;
+} elseif ($casino_external_link) {
+  $external_link_url = $casino_external_link;
+  $is_external_link = true;
+} else {
+  $external_link_url = get_the_permalink($postId);
+}
+
+
 if (!$bonus_button_title) {
   if (get_option('bonuses_get_bonus_title')) {
     $bonus_button_title = esc_html(get_option('bonuses_get_bonus_title'));
@@ -93,15 +100,15 @@ $is_locked = get_post_status($postId) == 'draft' ||
       <div class="lb-compact-casino-bonus-card__title"><?= get_the_title($postId) ?></div>
     </a>
     <?
-    if ($bonus_button_title && $bonus_external_link)
-      get_template_part('theme-parts/molecules/promo-button', null, [
+    if ($external_link_url)
+      get_template_part('theme-parts/atoms/button', null, [
         'size' => 'sm',
         'variant' => 'contained-light',
         'content' => $bonus_button_title,
         'className' => 'lb-compact-casino-bonus-card__bonus-link',
-        'href' => $is_locked ? '#0' : esc_url($bonus_external_link),
+        'href' => $is_locked ? '#0' : esc_url($external_link_url),
         'target' => !$is_locked ? "_blank" : '',
-        'rel' => !$is_locked ? "nofollow" : ''
+        'rel' => $is_external_link ? "nofollow" : ''
       ]);
     ?>
   </div>
