@@ -70,7 +70,10 @@ if ($offer_popup_title) {
   $custom_popup_title = esc_html__('Read about T&C', 'mercury-child');
 }
 
+$is_external_link = false;
+
 if ($bonus_external_link) {
+  $is_external_link = true;
   $external_link_url = $bonus_external_link;
 } else {
   $external_link_url = get_the_permalink($bonusId);
@@ -106,7 +109,7 @@ if ($bonus_external_link) {
             'content' => $bonus_button_title,
             'href' => $is_locked ? '#0' : $bonus_external_link,
             'target' => "_blank",
-            'rel' => "nofollow"
+            'rel' => $is_external_link ? "nofollow" : ""
           ]);
 
           if ($bonus_code && !$is_locked)
