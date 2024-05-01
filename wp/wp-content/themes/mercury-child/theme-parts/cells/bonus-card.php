@@ -72,6 +72,8 @@ if ($offer_popup_title) {
 
 $is_external_link = false;
 
+$is_external_link = false;
+
 if ($bonus_external_link) {
   $external_link_url = $bonus_external_link;
   $is_external_link = true;
