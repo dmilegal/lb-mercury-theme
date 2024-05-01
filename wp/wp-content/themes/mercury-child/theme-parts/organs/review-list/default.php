@@ -13,19 +13,19 @@ $postType = $args['post_type'] ?? 'casino';
 if ($reviewList) {
 ?>
 
-  <div class="<?= classNames("lb-casino-list", "lb-casino-list--theme_$theme", "lb-casino-list--card-variant_$cardVariant") ?>">
-    <div class="lb-casino-list__wrapper">
-      <div class="lb-casino-list__inner">
+  <div class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
+    <div class="lb-review-list__wrapper">
+      <div class="lb-review-list__inner">
         <?php if ($title) { ?>
-          <div class="lb-casino-list__heading prose-headings">
-            <h2 class="lb-casino-list__title"><?php echo esc_html($title); ?></h2>
-            <!--<div class="lb-casino-list__subtitle">
+          <div class="lb-review-list__heading prose-headings">
+            <h2 class="lb-review-list__title"><?php echo esc_html($title); ?></h2>
+            <!--<div class="lb-review-list__subtitle">
               <? //get_template_part('theme-parts/organs/post-info', null); 
               ?>
             </div>-->
           </div>
         <?php } ?>
-        <div class="lb-casino-list__list">
+        <div class="lb-review-list__list">
           <? foreach ($reviewList as $reviewItem) {
             get_template_part('theme-parts/cells/review-card/review-card', null, [
               'card_variant' => $cardVariant,
@@ -36,7 +36,7 @@ if ($reviewList) {
         </div>
         <?
         if ($currentPage < $totalPages && !$disablePagination) { ?>
-          <div class="lb-casino-list__actions">
+          <div class="lb-review-list__actions">
             <?= get_template_part("theme-parts/organs/review-list/load-more-button", null, [
               'query_string' => http_build_query([
                 'query' => $queryArgs,

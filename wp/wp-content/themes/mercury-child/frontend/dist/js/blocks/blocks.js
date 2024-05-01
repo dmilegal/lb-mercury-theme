@@ -96,54 +96,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/blocks/casino-card/variants/compact-casino-bonus/style.scss":
-/*!*************************************************************************!*\
-  !*** ./src/blocks/casino-card/variants/compact-casino-bonus/style.scss ***!
-  \*************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/blocks/casino-card/variants/default/style.scss":
-/*!************************************************************!*\
-  !*** ./src/blocks/casino-card/variants/default/style.scss ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/blocks/casino-details/casino-details.scss":
-/*!*******************************************************!*\
-  !*** ./src/blocks/casino-details/casino-details.scss ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/blocks/casino-list/casino-list.scss":
-/*!*************************************************!*\
-  !*** ./src/blocks/casino-list/casino-list.scss ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./src/blocks/clipping/clipping.scss":
 /*!*******************************************!*\
   !*** ./src/blocks/clipping/clipping.scss ***!
@@ -240,9 +192,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/blocks/hero-casino-banner/hero-casino-banner.scss":
+/***/ "./src/blocks/hero-review-banner/hero-review-banner.scss":
 /*!***************************************************************!*\
-  !*** ./src/blocks/hero-casino-banner/hero-casino-banner.scss ***!
+  !*** ./src/blocks/hero-review-banner/hero-review-banner.scss ***!
   \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -364,6 +316,54 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************************!*\
   !*** ./src/blocks/promo-button/promo-button.scss ***!
   \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/review-card/variants/compact-review-bonus/style.scss":
+/*!*************************************************************************!*\
+  !*** ./src/blocks/review-card/variants/compact-review-bonus/style.scss ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/review-card/variants/default/style.scss":
+/*!************************************************************!*\
+  !*** ./src/blocks/review-card/variants/default/style.scss ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/review-details/review-details.scss":
+/*!*******************************************************!*\
+  !*** ./src/blocks/review-details/review-details.scss ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/review-list/review-list.scss":
+/*!*************************************************!*\
+  !*** ./src/blocks/review-list/review-list.scss ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -588,158 +588,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/blocks/casino-card/casino-card.ts":
-/*!***********************************************!*\
-  !*** ./src/blocks/casino-card/casino-card.ts ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _variants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./variants */ "./src/blocks/casino-card/variants/index.ts");
-
-
-/***/ }),
-
-/***/ "./src/blocks/casino-card/variants/compact-casino-bonus/index.ts":
-/*!***********************************************************************!*\
-  !*** ./src/blocks/casino-card/variants/compact-casino-bonus/index.ts ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/casino-card/variants/compact-casino-bonus/style.scss");
-
-function init(zone = document.body) {
-  zone.querySelectorAll('.lb-compact-casino-bonus-card:not(.lb-compact-casino-bonus-card--initiated)').forEach(el => {
-    initTcMore(el);
-    el.classList.add('lb-compact-casino-bonus-card--initiated');
-  });
-}
-function initTcMore(el) {
-  const btn = el.querySelector('.lb-compact-casino-bonus-card__tc-more');
-  if (!btn) return;
-  btn.addEventListener('click', show);
-  const content = el.querySelector('.lb-compact-casino-bonus-card__tc-content');
-  if (content.scrollHeight > content.clientHeight) btn.style.display = null;
-}
-function show(e) {
-  const container = e.target.closest('.lb-compact-casino-bonus-card__tc--truncated');
-  container.classList.remove('lb-compact-casino-bonus-card__tc--truncated');
-  e.target.style.display = 'none';
-}
-init();
-
-/***/ }),
-
-/***/ "./src/blocks/casino-card/variants/default/index.ts":
-/*!**********************************************************!*\
-  !*** ./src/blocks/casino-card/variants/default/index.ts ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/casino-card/variants/default/style.scss");
-
-function init(zone = document.body) {
-  zone.querySelectorAll('.lb-casino-card:not(.lb-casino-card--initiated)').forEach(el => {
-    const btns = el.querySelectorAll('.lb-casino-card__read-more, .lb-casino-card__read-less');
-    btns.forEach(btn => btn.addEventListener('click', toggle));
-    el.classList.add('lb-casino-card--initiated');
-  });
-}
-function toggle(e) {
-  const container = e.target.closest('.lb-casino-card');
-  container.classList.toggle('lb-casino-card--mr_closed');
-  container.classList.toggle('lb-casino-card--mr_expanded');
-}
-init();
-window.CasinoCardsInit = init;
-
-/***/ }),
-
-/***/ "./src/blocks/casino-card/variants/index.ts":
-/*!**************************************************!*\
-  !*** ./src/blocks/casino-card/variants/index.ts ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./default */ "./src/blocks/casino-card/variants/default/index.ts");
-/* harmony import */ var _compact_casino_bonus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./compact-casino-bonus */ "./src/blocks/casino-card/variants/compact-casino-bonus/index.ts");
-
-
-
-/***/ }),
-
-/***/ "./src/blocks/casino-details/casino-details.ts":
-/*!*****************************************************!*\
-  !*** ./src/blocks/casino-details/casino-details.ts ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _casino_details_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./casino-details.scss */ "./src/blocks/casino-details/casino-details.scss");
-
-
-/***/ }),
-
-/***/ "./src/blocks/casino-list/casino-list.ts":
-/*!***********************************************!*\
-  !*** ./src/blocks/casino-list/casino-list.ts ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _casino_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./casino-list.scss */ "./src/blocks/casino-list/casino-list.scss");
-
-function init() {
-  const btns = document.querySelectorAll('.lb-casino-list__load-more');
-  btns.forEach(btn => {
-    btn.addEventListener('click', triggetLoad);
-  });
-}
-async function triggetLoad(e) {
-  const btn = e.currentTarget;
-  const container = btn.closest('.lb-casino-list');
-  const preparedQuery = prepareQuery(btn.dataset.query, {
-    paged: (+btn.dataset.currentPage || 1) + 1
-  });
-  btn.classList.add('lb-button--pending');
-  btn.disabled = true;
-  try {
-    const data = await load(preparedQuery);
-    render(data.html, container);
-  } catch (error) {
-    console.error(error);
-  }
-  btn.classList.remove('lb-button--pending');
-  btn.disabled = false;
-}
-async function load(query) {
-  const res = await fetch(`/wp-json/aces/v1/html/reviews?${query || ''}`);
-  const data = await res.json();
-  return data;
-}
-function prepareQuery(query, data) {
-  const params = new URLSearchParams(query);
-  Object.keys(data || {}).forEach(key => {
-    params.set(`query[${key}]`, data[key] + '');
-  });
-  return params.toString();
-}
-function render(html, container) {
-  const listEl = container.querySelector('.lb-casino-list__list');
-  const btn = container.querySelector('.lb-casino-list__load-more');
-  listEl.insertAdjacentHTML('beforeend', html);
-  window.CasinoCardsInit(listEl);
-  window.initPromoButton(listEl);
-  btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + '';
-  if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';
-}
-init();
-
-/***/ }),
-
 /***/ "./src/blocks/clipping/clipping.ts":
 /*!*****************************************!*\
   !*** ./src/blocks/clipping/clipping.ts ***!
@@ -862,14 +710,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/blocks/hero-casino-banner/hero-casino-banner.ts":
+/***/ "./src/blocks/hero-review-banner/hero-review-banner.ts":
 /*!*************************************************************!*\
-  !*** ./src/blocks/hero-casino-banner/hero-casino-banner.ts ***!
+  !*** ./src/blocks/hero-review-banner/hero-review-banner.ts ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _hero_casino_banner_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-casino-banner.scss */ "./src/blocks/hero-casino-banner/hero-casino-banner.scss");
+/* harmony import */ var _hero_review_banner_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-review-banner.scss */ "./src/blocks/hero-review-banner/hero-review-banner.scss");
 
 
 /***/ }),
@@ -1046,6 +894,158 @@ window.initPromoButton = init;
   }
 }*/
 
+init();
+
+/***/ }),
+
+/***/ "./src/blocks/review-card/review-card.ts":
+/*!***********************************************!*\
+  !*** ./src/blocks/review-card/review-card.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _variants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./variants */ "./src/blocks/review-card/variants/index.ts");
+
+
+/***/ }),
+
+/***/ "./src/blocks/review-card/variants/compact-review-bonus/index.ts":
+/*!***********************************************************************!*\
+  !*** ./src/blocks/review-card/variants/compact-review-bonus/index.ts ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/review-card/variants/compact-review-bonus/style.scss");
+
+function init(zone = document.body) {
+  zone.querySelectorAll('.lb-compact-casino-bonus-card:not(.lb-compact-casino-bonus-card--initiated)').forEach(el => {
+    initTcMore(el);
+    el.classList.add('lb-compact-casino-bonus-card--initiated');
+  });
+}
+function initTcMore(el) {
+  const btn = el.querySelector('.lb-compact-casino-bonus-card__tc-more');
+  if (!btn) return;
+  btn.addEventListener('click', show);
+  const content = el.querySelector('.lb-compact-casino-bonus-card__tc-content');
+  if (content.scrollHeight > content.clientHeight) btn.style.display = null;
+}
+function show(e) {
+  const container = e.target.closest('.lb-compact-casino-bonus-card__tc--truncated');
+  container.classList.remove('lb-compact-casino-bonus-card__tc--truncated');
+  e.target.style.display = 'none';
+}
+init();
+
+/***/ }),
+
+/***/ "./src/blocks/review-card/variants/default/index.ts":
+/*!**********************************************************!*\
+  !*** ./src/blocks/review-card/variants/default/index.ts ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/review-card/variants/default/style.scss");
+
+function init(zone = document.body) {
+  zone.querySelectorAll('.lb-review-card:not(.lb-review-card--initiated)').forEach(el => {
+    const btns = el.querySelectorAll('.lb-review-card__read-more, .lb-review-card__read-less');
+    btns.forEach(btn => btn.addEventListener('click', toggle));
+    el.classList.add('lb-review-card--initiated');
+  });
+}
+function toggle(e) {
+  const container = e.target.closest('.lb-review-card');
+  container.classList.toggle('lb-review-card--mr_closed');
+  container.classList.toggle('lb-review-card--mr_expanded');
+}
+init();
+window.CasinoCardsInit = init;
+
+/***/ }),
+
+/***/ "./src/blocks/review-card/variants/index.ts":
+/*!**************************************************!*\
+  !*** ./src/blocks/review-card/variants/index.ts ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./default */ "./src/blocks/review-card/variants/default/index.ts");
+/* harmony import */ var _compact_review_bonus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./compact-review-bonus */ "./src/blocks/review-card/variants/compact-review-bonus/index.ts");
+
+
+
+/***/ }),
+
+/***/ "./src/blocks/review-details/review-details.ts":
+/*!*****************************************************!*\
+  !*** ./src/blocks/review-details/review-details.ts ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _review_details_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./review-details.scss */ "./src/blocks/review-details/review-details.scss");
+
+
+/***/ }),
+
+/***/ "./src/blocks/review-list/review-list.ts":
+/*!***********************************************!*\
+  !*** ./src/blocks/review-list/review-list.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _review_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./review-list.scss */ "./src/blocks/review-list/review-list.scss");
+
+function init() {
+  const btns = document.querySelectorAll('.lb-review-list__load-more');
+  btns.forEach(btn => {
+    btn.addEventListener('click', triggetLoad);
+  });
+}
+async function triggetLoad(e) {
+  const btn = e.currentTarget;
+  const container = btn.closest('.lb-review-list');
+  const preparedQuery = prepareQuery(btn.dataset.query, {
+    paged: (+btn.dataset.currentPage || 1) + 1
+  });
+  btn.classList.add('lb-button--pending');
+  btn.disabled = true;
+  try {
+    const data = await load(preparedQuery);
+    render(data.html, container);
+  } catch (error) {
+    console.error(error);
+  }
+  btn.classList.remove('lb-button--pending');
+  btn.disabled = false;
+}
+async function load(query) {
+  const res = await fetch(`/wp-json/aces/v1/html/reviews?${query || ''}`);
+  const data = await res.json();
+  return data;
+}
+function prepareQuery(query, data) {
+  const params = new URLSearchParams(query);
+  Object.keys(data || {}).forEach(key => {
+    params.set(`query[${key}]`, data[key] + '');
+  });
+  return params.toString();
+}
+function render(html, container) {
+  const listEl = container.querySelector('.lb-review-list__list');
+  const btn = container.querySelector('.lb-review-list__load-more');
+  listEl.insertAdjacentHTML('beforeend', html);
+  window.CasinoCardsInit(listEl);
+  window.initPromoButton(listEl);
+  btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + '';
+  if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';
+}
 init();
 
 /***/ }),
@@ -1771,9 +1771,6 @@ function rectToClientRect(rect) {
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/bonus-card/bonus-card.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/breadcrumbs/breadcrumbs.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/button/button.ts")))
-/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/casino-card/casino-card.ts")))
-/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/casino-details/casino-details.ts")))
-/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/casino-list/casino-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/clipping/clipping.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/contributor-list/contributor-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/cookie-banner/cookie-banner.ts")))
@@ -1782,7 +1779,7 @@ function rectToClientRect(rect) {
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/group-list/group-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/hero-author-banner/hero-author-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/hero-banner/hero-banner.ts")))
-/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/hero-casino-banner/hero-casino-banner.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/hero-review-banner/hero-review-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/logo-text/logo-text.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/page-not-found/page-not-found.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/pagination/pagination.ts")))
@@ -1793,6 +1790,9 @@ function rectToClientRect(rect) {
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/post-list/post-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/promo-bonus/promo-bonus.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/promo-button/promo-button.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/review-card/review-card.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/review-details/review-details.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/review-list/review-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/scroll-to-top/scroll-to-top.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/share-links/share-links.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl"], () => (__webpack_require__("./src/blocks/sidebar/sidebar.ts")))

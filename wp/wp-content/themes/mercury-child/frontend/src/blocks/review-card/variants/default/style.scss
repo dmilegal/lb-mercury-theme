@@ -7,26 +7,26 @@
 
 body,
 .editor-styles-wrapper {
-  --lb-casino-card-color-background: var(--lb-color-surface);
-  --lb-casino-card-color-border: var(--lb-color-primary-outline-variant-1);
-  --lb-casino-card-color-text: var(--lb-color-text-strong);
-  --lb-casino-card-color-text-sub: var(--lb-color-text-default);
-  --lb-casino-card-tc-color-text: var(--lb-color-on-surface-lowest);
-  --lb-casino-card-promo-tc-color-text: var(--lb-color-on-surface-min);
-  --lb-casino-card-desc-color-text: var(--lb-color-on-surface-lowest);
+  --lb-review-card-color-background: var(--lb-color-surface);
+  --lb-review-card-color-border: var(--lb-color-primary-outline-variant-1);
+  --lb-review-card-color-text: var(--lb-color-text-strong);
+  --lb-review-card-color-text-sub: var(--lb-color-text-default);
+  --lb-review-card-tc-color-text: var(--lb-color-on-surface-lowest);
+  --lb-review-card-promo-tc-color-text: var(--lb-color-on-surface-min);
+  --lb-review-card-desc-color-text: var(--lb-color-on-surface-lowest);
 
-  --lb-casino-card-link-color-text: var(--lb-color-action-text-default);
-  --lb-casino-card-promo-color-background: var(--lb-color-primary-container-low);
-  --lb-casino-card-padding-x: var(--wp--preset--spacing--100);
+  --lb-review-card-link-color-text: var(--lb-color-action-text-default);
+  --lb-review-card-promo-color-background: var(--lb-color-primary-container-low);
+  --lb-review-card-padding-x: var(--wp--preset--spacing--100);
 
   @include breakpoints.media-breakpoint-down(xs) {
-    --lb-casino-card-padding-x: var(--wp--preset--spacing--90);
+    --lb-review-card-padding-x: var(--wp--preset--spacing--90);
   }
 }
 
-.lb-casino-card {
+.lb-review-card {
   container-type: inline-size;
-  color: var(--lb-casino-card-color-text);
+  color: var(--lb-review-card-color-text);
 
   &--mr {
     &_closed {
@@ -46,10 +46,10 @@ body,
   }
 
   &__inner {
-    background-color: var(--lb-casino-card-color-background);
+    background-color: var(--lb-review-card-color-background);
     display: grid;
     grid-template-columns: repeat(14, 1fr);
-    border: 1px solid var(--lb-casino-card-color-border);
+    border: 1px solid var(--lb-review-card-color-border);
     border-radius: var(--wp--preset--spacing--80);
     overflow: hidden;
     @include media-containers.media-breakpoint-down(sm) {
@@ -69,8 +69,8 @@ body,
   &__main {
     grid-column: 1 / 6;
     grid-row: 1 / 2;
-    padding: var(--wp--preset--spacing--100) var(--lb-casino-card-padding-x);
-    border-bottom: 1px solid var(--lb-casino-card-color-border);
+    padding: var(--wp--preset--spacing--100) var(--lb-review-card-padding-x);
+    border-bottom: 1px solid var(--lb-review-card-color-border);
     &:nth-last-child(2) {
       border-bottom: none;
     }
@@ -128,13 +128,13 @@ body,
   }
 
   &__link {
-    color: var(--lb-casino-card-color-text);
+    color: var(--lb-review-card-color-text);
     text-decoration: underline;
   }
 
   &__desc {
     @include font.get-text-styles('text-sm', false);
-    color: var(--lb-casino-card-desc-color-text);
+    color: var(--lb-review-card-desc-color-text);
     ul {
       list-style-type: disc;
       padding-left: var(--wp--preset--spacing--90);
@@ -157,14 +157,14 @@ body,
     justify-content: flex-end;
     column-gap: var(--wp--preset--spacing--110);
     row-gap: var(--wp--preset--spacing--110);
-    padding: var(--wp--preset--spacing--100) var(--lb-casino-card-padding-x);
-    background-color: var(--lb-casino-card-promo-color-background);
-    border-bottom: 1px solid var(--lb-casino-card-color-border);
+    padding: var(--wp--preset--spacing--100) var(--lb-review-card-padding-x);
+    background-color: var(--lb-review-card-promo-color-background);
+    border-bottom: 1px solid var(--lb-review-card-color-border);
     &:last-child {
       border-bottom: none;
     }
     @include media-containers.media-breakpoint-down(sm) {
-      padding: var(--wp--preset--spacing--90) var(--lb-casino-card-padding-x);
+      padding: var(--wp--preset--spacing--90) var(--lb-review-card-padding-x);
       grid-column: 1 / -1;
       grid-row: 3 / 4;
       flex-direction: column;
@@ -202,7 +202,7 @@ body,
     &-list {
       grid-column: 1 / 9;
       grid-row: 2/3;
-      padding: var(--wp--preset--spacing--90) var(--lb-casino-card-padding-x);
+      padding: var(--wp--preset--spacing--90) var(--lb-review-card-padding-x);
       display: flex;
       column-gap: var(--wp--preset--spacing--80);
       row-gap: var(--wp--preset--spacing--80);
@@ -210,7 +210,7 @@ body,
         grid-column: 1 / -1;
       }
       @include media-containers.media-breakpoint-down(sm) {
-        padding: var(--wp--preset--spacing--75) var(--lb-casino-card-padding-x)
+        padding: var(--wp--preset--spacing--75) var(--lb-review-card-padding-x)
           var(--wp--preset--spacing--90);
         grid-column: 1 / -1;
         grid-row: 2 / 3;
@@ -230,7 +230,7 @@ body,
     &-title {
       @include font.get-text-styles('text-xs', false);
       margin-bottom: var(--wp--preset--spacing--50);
-      color: var(--lb-casino-card-color-text-sub);
+      color: var(--lb-review-card-color-text-sub);
       @include media-containers.media-breakpoint-down(sm) {
         margin-bottom: 0;
       }
@@ -249,7 +249,7 @@ body,
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      padding: var(--wp--preset--spacing--90) var(--lb-casino-card-padding-x);
+      padding: var(--wp--preset--spacing--90) var(--lb-review-card-padding-x);
       @include media-containers.media-breakpoint-down(sm) {
         padding: 0;
         grid-column: 1 / -1;
@@ -260,9 +260,9 @@ body,
     &-content {
       grid-column: 1 / -1;
       grid-row: 3/4;
-      padding: var(--wp--preset--spacing--50) var(--lb-casino-card-padding-x) var(--wp--preset--spacing--90);
+      padding: var(--wp--preset--spacing--50) var(--lb-review-card-padding-x) var(--wp--preset--spacing--90);
       @include media-containers.media-breakpoint-down(sm) {
-        padding: var(--wp--preset--spacing--75) var(--lb-casino-card-padding-x)
+        padding: var(--wp--preset--spacing--75) var(--lb-review-card-padding-x)
           var(--wp--preset--spacing--50);
         grid-column: 1 / -1;
         grid-row: 4 / 5;
@@ -302,7 +302,7 @@ body,
   &__tc {
     padding: 0 var(--wp--preset--spacing--80);
     @include font.get-text-styles('text-xs', false);
-    color: var(--lb-casino-card-tc-color-text);
+    color: var(--lb-review-card-tc-color-text);
     margin-top: var(--wp--preset--spacing--60);
   }
 }

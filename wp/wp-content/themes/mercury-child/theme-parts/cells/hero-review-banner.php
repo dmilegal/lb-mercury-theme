@@ -45,23 +45,23 @@ $license_ar_marker_for_casino = get_field('license_ar_marker_for_casino', 'optio
 
 ?>
 <div class="<?= classNames(
-              'lb-hero-casino-banner',
+              'lb-hero-review-banner',
               [
-                'lb-hero-casino-banner--col-span' => $enableColSpan
+                'lb-hero-review-banner--col-span' => $enableColSpan
               ],
               $className,
             ) ?>" style="<?= stylesValue(
                             $style
                           ) ?>">
-  <div class="lb-hero-casino-banner__inner">
-    <div class="lb-hero-casino-banner__content">
-      <header class="lb-hero-casino-banner__header">
+  <div class="lb-hero-review-banner__inner">
+    <div class="lb-hero-review-banner__content">
+      <header class="lb-hero-review-banner__header">
         <?= get_the_post_thumbnail($casinoId, [256, 0], [
-          "class" => "lb-hero-casino-banner__logo"
+          "class" => "lb-hero-review-banner__logo"
         ]) ?>
 
         <div>
-          <h1 class="lb-hero-casino-banner__title"><?= get_the_title($casinoId) ?></h1>
+          <h1 class="lb-hero-review-banner__title"><?= get_the_title($casinoId) ?></h1>
           <?
           $record = apply_filters('geoip_object', '');
           $country = $record->country->name;
@@ -69,7 +69,7 @@ $license_ar_marker_for_casino = get_field('license_ar_marker_for_casino', 'optio
 
           if ($country || ($bonus_fields && $bonus_fields['trusted'])) {
           ?>
-            <div class="lb-hero-casino-banner__captions">
+            <div class="lb-hero-review-banner__captions">
               <?
               if ($bonus_fields && $bonus_fields['trusted']) {
                 get_template_part('theme-parts/atoms/badge', null, [
@@ -101,43 +101,43 @@ $license_ar_marker_for_casino = get_field('license_ar_marker_for_casino', 'optio
             </div>
           <? } ?>
           <? if ($license_ar_text_for_casino || $license_ar_marker_for_casino) { ?>
-            <div class="lb-hero-casino-banner__lar">
+            <div class="lb-hero-review-banner__lar">
               <? if ($license_ar_text_for_casino) { ?>
-                <div class="lb-hero-casino-banner__lar-text"><?= $license_ar_text_for_casino ?></div>
+                <div class="lb-hero-review-banner__lar-text"><?= $license_ar_text_for_casino ?></div>
               <? } ?>
               <? if ($license_ar_marker_for_casino) { ?>
                 <?= wp_get_attachment_image($license_ar_marker_for_casino, [0, 32], false, [
-                  'class'  => 'lb-hero-casino-banner__lar-mark'
+                  'class'  => 'lb-hero-review-banner__lar-mark'
                 ]) ?>
               <? } ?>
             </div>
           <? } ?>
         </div>
       </header>
-      <div class="lb-hero-casino-banner__info-list">
-        <div class="lb-hero-casino-banner__info">
-          <div class="lb-hero-casino-banner__info-title">
+      <div class="lb-hero-review-banner__info-list">
+        <div class="lb-hero-review-banner__info">
+          <div class="lb-hero-review-banner__info-title">
             <?= __('Rating', 'mercury-child') ?>
           </div>
-          <div class="lb-hero-casino-banner__info-value">
+          <div class="lb-hero-review-banner__info-value">
             <i class="icon-star"></i>
             <?= $overall_rating ?>
           </div>
         </div>
-        <div class="lb-hero-casino-banner__info">
-          <div class="lb-hero-casino-banner__info-title">
+        <div class="lb-hero-review-banner__info">
+          <div class="lb-hero-review-banner__info-title">
             <?= __('Lisence', 'mercury-child') ?>
           </div>
-          <div class="lb-hero-casino-banner__info-value">
+          <div class="lb-hero-review-banner__info-value">
             <?= count($casino_licences) ?  __('Yes', 'mercury-child') :  __('No', 'mercury-child') ?>
           </div>
         </div>
       </div>
 
       <? if ($mainBonusId = aces_get_main_casino_bonus_id($casinoId)) { ?>
-        <div class="lb-hero-casino-banner-promo">
-          <div class="lb-hero-casino-banner-promo__inner">
-            <div class="lb-hero-casino-banner-promo__sticky">
+        <div class="lb-hero-review-banner-promo">
+          <div class="lb-hero-review-banner-promo__inner">
+            <div class="lb-hero-review-banner-promo__sticky">
               <? get_template_part('theme-parts/molecules/promo-bonus', null, [
                 'bonus_id' => $mainBonusId
               ]); ?>
@@ -150,7 +150,7 @@ $license_ar_marker_for_casino = get_field('license_ar_marker_for_casino', 'optio
 
       <? if ($casino_short_desc) { ?>
         <? get_template_part('theme-parts/cells/clipping', null, [
-          'content' => '<div class="lb-hero-casino-banner__desc prose-content prose-colors">
+          'content' => '<div class="lb-hero-review-banner__desc prose-content prose-colors">
                 ' . wp_kses($casino_short_desc, $casino_allowed_html) . '
               </div>'
         ]); ?>

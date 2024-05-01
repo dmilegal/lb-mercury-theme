@@ -89,20 +89,20 @@ $infoListFiltered = array_filter($infoList, fn ($el) => !!$el);
 
 if (!$infoListFiltered) return; ?>
 
-<div class="<?= classNames($className, 'lb-casino-details') ?>" style="<?= stylesValue($style) ?>">
-  <div class="lb-casino-details__list">
+<div class="<?= classNames($className, 'lb-review-details') ?>" style="<?= stylesValue($style) ?>">
+  <div class="lb-review-details__list">
     <? foreach ($infoListFiltered as $info) { ?>
-      <div class="lb-casino-details-item">
+      <div class="lb-review-details-item">
         <? get_template_part('theme-parts/molecules/featured-icon', null, [
           'size' => 'xl',
           'variant' => 'outlined-bold',
           'color' => 'gray',
           'icon' => $info['ico'],
-          'className' => 'lb-casino-details-item__ico'
+          'className' => 'lb-review-details-item__ico'
         ]); ?>
-        <div class="lb-casino-details-item__content">
-          <div class="lb-casino-details-item__header">
-            <div class="lb-casino-details-item__title">
+        <div class="lb-review-details-item__content">
+          <div class="lb-review-details-item__header">
+            <div class="lb-review-details-item__title">
               <?php if (get_option('casinos_' . $info['slug'] . '_title')) { ?>
                 <?php echo esc_html(get_option('casinos_' . $info['slug'] . '_title')); ?>:
               <?php } else { ?>
@@ -110,15 +110,15 @@ if (!$infoListFiltered) return; ?>
               <?php } ?>
             </div>
           </div>
-          <div class="lb-casino-details-item__tags">
+          <div class="lb-review-details-item__tags">
             <?php foreach ($info['terms'] as $term) {
               $term_logo = get_term_meta($term->term_id, 'taxonomy-image-id', true);
               if ($term_logo) { ?>
-                <span class="lb-casino-details-tag">
-                  <?php echo wp_get_attachment_image($term_logo, 'mercury-9999-32', "", array("class" => "lb-casino-details-tag__logo"));  ?>
+                <span class="lb-review-details-tag">
+                  <?php echo wp_get_attachment_image($term_logo, 'mercury-9999-32', "", array("class" => "lb-review-details-tag__logo"));  ?>
                 </span>
               <?php } else {  ?>
-                <span class="lb-casino-details-tag"><?php echo esc_html($term->name); ?></span>
+                <span class="lb-review-details-tag"><?php echo esc_html($term->name); ?></span>
               <?php } ?>
             <?php } ?>
           </div>

@@ -88,42 +88,42 @@ $is_locked = get_post_status($postId) == 'draft' ||
   get_post_status($postId) == 'private';
 
 ?>
-<div class="<?= classNames($className, 'lb-casino-card lb-casino-card--mr_closed') ?>" style="<?= stylesValue($style) ?>">
-  <div class="lb-casino-card__inner">
+<div class="<?= classNames($className, 'lb-review-card lb-review-card--mr_closed') ?>" style="<?= stylesValue($style) ?>">
+  <div class="lb-review-card__inner">
     <? if ($is_bst_bonus) { ?>
       <? get_template_part('theme-parts/atoms/badge', null, [
         'size' => 'sm',
         'color' => 'gray',
         'content' => '🔥 ' . __('Best bonus online', 'mercury-child'),
-        'className' => 'lb-casino-card__label lb-casino-card__label--bst'
+        'className' => 'lb-review-card__label lb-review-card__label--bst'
       ]); ?>
     <? } ?>
-    <div class="lb-casino-card__main not-prose">
-      <div class="lb-casino-card__header">
+    <div class="lb-review-card__main not-prose">
+      <div class="lb-review-card__header">
         <?= get_the_post_thumbnail($postId, [52, 52], [
-          "class" => "lb-casino-card__logo"
+          "class" => "lb-review-card__logo"
         ]) ?>
         <div>
-          <div class="lb-casino-card__title"><?= get_the_title($postId) ?></div>
-          <div class="lb-casino-card__info">
-            <div class="lb-casino-card__rating">
+          <div class="lb-review-card__title"><?= get_the_title($postId) ?></div>
+          <div class="lb-review-card__info">
+            <div class="lb-review-card__rating">
               <i class="icon-star"></i>
               <?= $overall_rating ?>
             </div>
             <div>
-              <a class="lb-casino-card__link" href="<?= $is_locked ? '#0' : get_the_permalink($postId) ?>" title="<?php echo esc_attr($permalink_button_title); ?>"><?php echo esc_html($permalink_button_title); ?></a>
+              <a class="lb-review-card__link" href="<?= $is_locked ? '#0' : get_the_permalink($postId) ?>" title="<?php echo esc_attr($permalink_button_title); ?>"><?php echo esc_html($permalink_button_title); ?></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="lb-casino-card__sub not-prose">
+    <div class="lb-review-card__sub not-prose">
       <? if ($bonus_short_desc) { ?>
-        <div class="lb-casino-card__bonus-title">
+        <div class="lb-review-card__bonus-title">
           <?= $bonus_short_desc ?>
         </div>
       <? } ?>
-      <div class="lb-casino-card__actions">
+      <div class="lb-review-card__actions">
         <?
         if ($external_link_url) {
           $isExternal = isExternalLink($external_link_url);
@@ -131,7 +131,7 @@ $is_locked = get_post_status($postId) == 'draft' ||
           get_template_part('theme-parts/atoms/button', null, [
             'size' => 'xl',
             'color' => 'primary',
-            'className' => 'lb-casino-card__play',
+            'className' => 'lb-review-card__play',
             'content' => esc_html($button_title),
             'href' => $is_locked ? '#0' : esc_url($external_link_url),
             'target' => $isExternal && !$is_locked ? "_blank" : '',
@@ -146,27 +146,27 @@ $is_locked = get_post_status($postId) == 'draft' ||
             'content' => __('Copy Promo', 'mercury-child'),
             'prefix' => '<i class="icon-copy"></i>',
             'code' => $bonus_code,
-            'className' => 'lb-casino-card__bonus-copy'
+            'className' => 'lb-review-card__bonus-copy'
           ]); ?>
       </div>
     </div>
     <? if (!$hideFooter) { ?>
-      <div class="lb-casino-card__detail-list not-prose">
-        <div class="lb-casino-card__detail-item">
-          <div class="lb-casino-card__detail-title"><?= __('License', 'mercury-child') ?></div>
-          <div class="lb-casino-card__detail-value"><?= aces_casino_has_licence($postId) ? __('Yes', 'mercury-child') : __('No', 'mercury-child') ?></div>
+      <div class="lb-review-card__detail-list not-prose">
+        <div class="lb-review-card__detail-item">
+          <div class="lb-review-card__detail-title"><?= __('License', 'mercury-child') ?></div>
+          <div class="lb-review-card__detail-value"><?= aces_casino_has_licence($postId) ? __('Yes', 'mercury-child') : __('No', 'mercury-child') ?></div>
         </div>
       </div>
     <? } ?>
     <?php if ($casino_terms_desc && !$hideFooter) { ?>
-      <div class="lb-casino-card__extra-actions not-prose">
+      <div class="lb-review-card__extra-actions not-prose">
         <? get_template_part('theme-parts/atoms/button', null, [
           'size' => 'sm',
           'color' => 'gray',
           'variant' => 'inline',
           'postfix' => '<i class="icon-chevron-down"></i>',
           'content' => __('Read more', 'mercury-child'),
-          'className' => "lb-casino-card__read-more",
+          'className' => "lb-review-card__read-more",
         ]); ?>
         <? get_template_part('theme-parts/atoms/button', null, [
           'size' => 'sm',
@@ -174,15 +174,15 @@ $is_locked = get_post_status($postId) == 'draft' ||
           'variant' => 'inline',
           'postfix' => '<i class="icon-chevron-up"></i>',
           'content' => __('Hide', 'mercury-child'),
-          'className' => "lb-casino-card__read-less",
+          'className' => "lb-review-card__read-less",
         ]); ?>
       </div>
     <? } ?>
 
     <? if (!$hideFooter && $casino_terms_desc) { ?>
-      <div class="lb-casino-card__extra-content not-prose">
+      <div class="lb-review-card__extra-content not-prose">
         <?php if ($casino_terms_desc) { ?>
-          <div class="lb-casino-card__desc">
+          <div class="lb-review-card__desc">
             <?= wp_kses($casino_terms_desc, $casino_allowed_html); ?>
           </div>
         <? } ?>
@@ -190,7 +190,7 @@ $is_locked = get_post_status($postId) == 'draft' ||
     <? } ?>
   </div>
   <?php if ($casino_detailed_tc || $offer_detailed_tc) { ?>
-    <div class="lb-casino-card__tc not-prose">
+    <div class="lb-review-card__tc not-prose">
       <?= $offer_detailed_tc ? $offer_detailed_tc : wp_kses($casino_detailed_tc, $casino_allowed_html); ?>
     </div>
   <? } ?>

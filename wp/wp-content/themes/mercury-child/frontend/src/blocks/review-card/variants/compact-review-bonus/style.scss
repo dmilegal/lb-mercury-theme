@@ -7,15 +7,15 @@
 
 body,
 .editor-styles-wrapper {
-  --lb-ccb-casino-card-color-text: var(--lb-color-text-strong);
-  --lb-ccb-casino-card-color-text-sub: var(--lb-color-text-default);
-  --lb-ccb-casino-card-color-border: var(--lb-color-surface-outline-1);
-  --lb-ccb-casino-card-more-color-text: var(--lb-color-on-surface);
+  --lb-ccb-review-card-color-text: var(--lb-color-text-strong);
+  --lb-ccb-review-card-color-text-sub: var(--lb-color-text-default);
+  --lb-ccb-review-card-color-border: var(--lb-color-surface-outline-1);
+  --lb-ccb-review-card-more-color-text: var(--lb-color-on-surface);
 }
 
 .lb-compact-casino-bonus-card {
   padding-bottom: var(--wp--preset--spacing--90);
-  border-bottom: 1px solid var(--lb-ccb-casino-card-color-border);
+  border-bottom: 1px solid var(--lb-ccb-review-card-color-border);
   &__header {
     display: flex;
     justify-content: space-between;
@@ -45,14 +45,14 @@ body,
   &__title {
     @include font.get-text-styles('text-xs', false);
     font-weight: 500;
-    color: var(--lb-ccb-casino-card-color-text);
+    color: var(--lb-ccb-review-card-color-text);
   }
 
   &__bonus {
     display: block;
     @include font.get-text-styles('text-sm', false);
     font-weight: 500;
-    color: var(--lb-ccb-casino-card-color-text);
+    color: var(--lb-ccb-review-card-color-text);
     margin-bottom: var(--wp--preset--spacing--60);
     &#{&} {
       text-decoration: none;
@@ -78,7 +78,7 @@ body,
 
     &-content {
       @include font.get-text-styles('text-xs', false);
-      color: var(--lb-ccb-casino-card-color-text-sub);
+      color: var(--lb-ccb-review-card-color-text-sub);
       @extend %tc_content;
     }
 
@@ -88,7 +88,7 @@ body,
       padding: 0;
       background-color: transparent;
       @include font.get-text-styles('text-xs', false);
-      color: var(--lb-ccb-casino-card-more-color-text);
+      color: var(--lb-ccb-review-card-more-color-text);
 
     }
   }

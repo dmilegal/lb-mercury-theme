@@ -1,4 +1,4 @@
-import './casino-list.scss'
+import './review-list.scss'
 
 interface ResponseData {
   html: string
@@ -6,7 +6,7 @@ interface ResponseData {
 }
 
 function init() {
-  const btns = document.querySelectorAll<HTMLButtonElement>('.lb-casino-list__load-more')
+  const btns = document.querySelectorAll<HTMLButtonElement>('.lb-review-list__load-more')
 
   btns.forEach((btn) => {
     btn.addEventListener('click', triggetLoad)
@@ -15,7 +15,7 @@ function init() {
 
 async function triggetLoad(e: MouseEvent) {
   const btn = e.currentTarget as HTMLButtonElement
-  const container = btn.closest<HTMLElement>('.lb-casino-list')
+  const container = btn.closest<HTMLElement>('.lb-review-list')
 
   const preparedQuery = prepareQuery(btn.dataset.query, {
     paged: (+btn.dataset.currentPage || 1) + 1,
@@ -52,8 +52,8 @@ function prepareQuery(query: string, data?: { paged?: number | string }) {
 }
 
 function render(html: string, container: HTMLElement) {
-  const listEl = container.querySelector<HTMLElement>('.lb-casino-list__list')
-  const btn = container.querySelector<HTMLElement>('.lb-casino-list__load-more')
+  const listEl = container.querySelector<HTMLElement>('.lb-review-list__list')
+  const btn = container.querySelector<HTMLElement>('.lb-review-list__load-more')
 
   listEl.insertAdjacentHTML('beforeend', html)
   ;(window as any).CasinoCardsInit(listEl)
