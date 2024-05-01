@@ -99,15 +99,15 @@ if ($bonus_external_link) {
       <? } ?>
     </div>
 
-    <? if ($bonus_code || $external_link_url) { ?>
+    <? if ($bonus_code || $bonus_external_link) { ?>
       <div class="lb-bonus-card__actions">
         <?
-        if ($external_link_url)
+        if ($bonus_external_link)
           get_template_part('theme-parts/atoms/button', null, [
             'size' => 'xl',
             'color' => 'primary',
             'content' => $bonus_button_title,
-            'href' => $is_locked ? '#0' : $external_link_url,
+            'href' => $is_locked ? '#0' : $bonus_external_link,
             'target' => "_blank",
             'rel' => $is_external_link ? "nofollow" : ''
           ]);
