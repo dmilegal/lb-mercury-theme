@@ -1033,6 +1033,530 @@ body {
   --lb-button--color--disabled: var(--wp--preset--color--gray-300);
   padding: 0;
 }
+<<<<<<< HEAD
+=======
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/casino-card/variants/default/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body,
+.editor-styles-wrapper {
+  --lb-casino-card-color-background: var(--lb-color-surface);
+  --lb-casino-card-color-border: var(--lb-color-primary-outline-variant-1);
+  --lb-casino-card-color-text: var(--lb-color-text-strong);
+  --lb-casino-card-color-text-sub: var(--lb-color-text-default);
+  --lb-casino-card-tc-color-text: var(--lb-color-on-surface-lowest);
+  --lb-casino-card-promo-tc-color-text: var(--lb-color-on-surface-min);
+  --lb-casino-card-desc-color-text: var(--lb-color-on-surface-lowest);
+  --lb-casino-card-link-color-text: var(--lb-color-action-text-default);
+  --lb-casino-card-promo-color-background: var(--lb-color-primary-container-low);
+  --lb-casino-card-padding-x: var(--wp--preset--spacing--100);
+}
+@media (max-width: 575.98px) {
+  body,
+  .editor-styles-wrapper {
+    --lb-casino-card-padding-x: var(--wp--preset--spacing--90);
+  }
+}
+
+.lb-casino-card {
+  container-type: inline-size;
+  color: var(--lb-casino-card-color-text);
+}
+.lb-casino-card--mr_closed .lb-casino-card__extra-content {
+  display: none;
+}
+.lb-casino-card--mr_closed .lb-casino-card__read-less.lb-casino-card__read-less {
+  display: none;
+}
+.lb-casino-card--mr_expanded .lb-casino-card__read-more.lb-casino-card__read-more {
+  display: none;
+}
+.lb-casino-card__inner {
+  background-color: var(--lb-casino-card-color-background);
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  border: 1px solid var(--lb-casino-card-color-border);
+  border-radius: var(--wp--preset--spacing--80);
+  overflow: hidden;
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__inner {
+    grid-template-columns: 1fr;
+  }
+}
+.lb-casino-card__label--bst {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  left: var(--wp--preset--spacing--100);
+}
+.lb-casino-card__main {
+  grid-column: 1/6;
+  grid-row: 1/2;
+  padding: var(--wp--preset--spacing--100) var(--lb-casino-card-padding-x);
+  border-bottom: 1px solid var(--lb-casino-card-color-border);
+}
+.lb-casino-card__main:nth-last-child(2) {
+  border-bottom: none;
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__main {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+}
+.lb-casino-card__header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: var(--wp--preset--spacing--80);
+  column-gap: var(--wp--preset--spacing--80);
+}
+.lb-casino-card__title {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  font-weight: 600;
+  margin-bottom: var(--wp--preset--spacing--50);
+}
+.lb-casino-card__logo {
+  width: var(--wp--preset--spacing--170);
+  height: var(--wp--preset--spacing--170);
+  object-fit: contain;
+  border-radius: var(--wp--preset--spacing--70);
+}
+.lb-casino-card__info {
+  display: flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--70);
+  row-gap: var(--wp--preset--spacing--60);
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__info {
+    column-gap: var(--wp--preset--spacing--60);
+  }
+}
+.lb-casino-card__rating {
+  display: flex;
+  align-items: baseline;
+  font-weight: 500;
+  column-gap: var(--wp--preset--spacing--50);
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__rating {
+    column-gap: var(--wp--preset--spacing--60);
+  }
+}
+.lb-casino-card__rating i {
+  position: relative;
+  font-size: 1.25em;
+  line-height: 0.75em;
+  font-weight: 600;
+  top: 2px;
+}
+.lb-casino-card__link {
+  color: var(--lb-casino-card-color-text);
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+.lb-casino-card__desc {
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  color: var(--lb-casino-card-desc-color-text);
+}
+.lb-casino-card__desc ul {
+  list-style-type: disc;
+  padding-left: var(--wp--preset--spacing--90);
+}
+.lb-casino-card__desc li {
+  margin: var(--wp--preset--spacing--60) 0;
+}
+.lb-casino-card__desc li:last-child {
+  margin-bottom: 0;
+}
+.lb-casino-card__desc li:first-child {
+  margin-top: 0;
+}
+.lb-casino-card__sub {
+  grid-column: 6/15;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: var(--wp--preset--spacing--110);
+  row-gap: var(--wp--preset--spacing--110);
+  padding: var(--wp--preset--spacing--100) var(--lb-casino-card-padding-x);
+  background-color: var(--lb-casino-card-promo-color-background);
+  border-bottom: 1px solid var(--lb-casino-card-color-border);
+}
+.lb-casino-card__sub:last-child {
+  border-bottom: none;
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__sub {
+    padding: var(--wp--preset--spacing--90) var(--lb-casino-card-padding-x);
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    flex-direction: column;
+  }
+}
+.lb-casino-card__actions {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  row-gap: var(--wp--preset--spacing--60);
+  max-width: var(--wp--preset--spacing--410);
+  width: 100%;
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__actions {
+    max-width: 100%;
+  }
+}
+.lb-casino-card__bonus-title {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  font-weight: 600;
+  flex-grow: 1;
+}
+.lb-casino-card__bonus-copy {
+  width: 100%;
+}
+.lb-casino-card__play {
+  width: 100%;
+}
+.lb-casino-card__detail-list {
+  grid-column: 1/9;
+  grid-row: 2/3;
+  padding: var(--wp--preset--spacing--90) var(--lb-casino-card-padding-x);
+  display: flex;
+  column-gap: var(--wp--preset--spacing--80);
+  row-gap: var(--wp--preset--spacing--80);
+}
+.lb-casino-card__detail-list:nth-last-child(2) {
+  grid-column: 1/-1;
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__detail-list {
+    padding: var(--wp--preset--spacing--75) var(--lb-casino-card-padding-x) var(--wp--preset--spacing--90);
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    flex-direction: column;
+  }
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    column-gap: var(--wp--preset--spacing--80);
+  }
+}
+.lb-casino-card__detail-title {
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  margin-bottom: var(--wp--preset--spacing--50);
+  color: var(--lb-casino-card-color-text-sub);
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__detail-title {
+    margin-bottom: 0;
+  }
+}
+.lb-casino-card__detail-value {
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  font-weight: 500;
+}
+.lb-casino-card__extra-actions {
+  grid-column: 9/15;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: var(--wp--preset--spacing--90) var(--lb-casino-card-padding-x);
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__extra-actions {
+    padding: 0;
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
+}
+.lb-casino-card__extra-content {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  padding: var(--wp--preset--spacing--50) var(--lb-casino-card-padding-x) var(--wp--preset--spacing--90);
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__extra-content {
+    padding: var(--wp--preset--spacing--75) var(--lb-casino-card-padding-x) var(--wp--preset--spacing--50);
+    grid-column: 1/-1;
+    grid-row: 4/5;
+  }
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__read-more.lb-casino-card__read-more, .lb-casino-card__read-less.lb-casino-card__read-less {
+    width: 100%;
+    padding-top: var(--wp--preset--spacing--70);
+    padding-bottom: var(--wp--preset--spacing--70);
+  }
+}
+@container (max-width: 719.98px) {
+  .lb-casino-card__read-more.lb-casino-card__read-more--lg-only {
+    display: none;
+  }
+}
+@container (min-width: 720px) {
+  .lb-casino-card__read-more.lb-casino-card__read-more--mb-only {
+    display: none;
+  }
+}
+.lb-casino-card__tc {
+  padding: 0 var(--wp--preset--spacing--80);
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  color: var(--lb-casino-card-tc-color-text);
+  margin-top: var(--wp--preset--spacing--60);
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/casino-card/variants/compact-casino-bonus/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body,
+.editor-styles-wrapper {
+  --lb-ccb-casino-card-color-text: var(--lb-color-text-strong);
+  --lb-ccb-casino-card-color-text-sub: var(--lb-color-text-default);
+  --lb-ccb-casino-card-color-border: var(--lb-color-surface-outline-1);
+  --lb-ccb-casino-card-more-color-text: var(--lb-color-on-surface);
+}
+
+.lb-compact-casino-bonus-card {
+  padding-bottom: var(--wp--preset--spacing--90);
+  border-bottom: 1px solid var(--lb-ccb-casino-card-color-border);
+}
+.lb-compact-casino-bonus-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--110);
+  margin-bottom: var(--wp--preset--spacing--80);
+}
+.lb-compact-casino-bonus-card__header:last-child {
+  margin-bottom: 0;
+}
+.lb-compact-casino-bonus-card__link {
+  display: flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--70);
+}
+.lb-compact-casino-bonus-card__link.lb-compact-casino-bonus-card__link {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+.lb-compact-casino-bonus-card__logo {
+  border-radius: var(--wp--preset--spacing--50);
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.lb-compact-casino-bonus-card__title {
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  font-weight: 500;
+  color: var(--lb-ccb-casino-card-color-text);
+}
+.lb-compact-casino-bonus-card__bonus {
+  display: block;
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  font-weight: 500;
+  color: var(--lb-ccb-casino-card-color-text);
+  margin-bottom: var(--wp--preset--spacing--60);
+}
+.lb-compact-casino-bonus-card__bonus.lb-compact-casino-bonus-card__bonus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+.lb-compact-casino-bonus-card__bonus:last-child {
+  margin-bottom: 0;
+}
+.lb-compact-casino-bonus-card__tc {
+  display: flex;
+  margin-bottom: var(--wp--preset--spacing--80);
+}
+.lb-compact-casino-bonus-card__tc--truncated .lb-compact-casino-bonus-card__tc-content {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.lb-compact-casino-bonus-card__tc-content {
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  color: var(--lb-ccb-casino-card-color-text-sub);
+}
+.lb-compact-casino-bonus-card__tc-more {
+  flex-shrink: 0;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  color: var(--lb-ccb-casino-card-more-color-text);
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/casino-details/casino-details.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+.lb-casino-details__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: var(--wp--preset--spacing--160);
+  column-gap: var(--wp--preset--spacing--160);
+  grid-row-gap: var(--wp--preset--spacing--100);
+  row-gap: var(--wp--preset--spacing--100);
+}
+@media (max-width: 767.98px) {
+  .lb-casino-details__list {
+    grid-template-columns: 1fr;
+  }
+}
+.lb-casino-details-item {
+  display: flex;
+  column-gap: var(--wp--preset--spacing--80);
+}
+.lb-casino-details-item__ico {
+  flex-shrink: 0;
+}
+.lb-casino-details-item__content {
+  padding-top: var(--wp--preset--spacing--65);
+}
+.lb-casino-details-item__title {
+  font-size: var(--wp--preset--font-size--text-lg);
+  line-height: var(--wp--custom--line-height--text-lg);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
+  font-weight: 500;
+  margin-bottom: var(--wp--preset--spacing--60);
+  color: var(--lb-color-text-strong);
+}
+.lb-casino-details-item__tags {
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  color: var(--lb-color-text-default);
+}
+.lb-casino-details-tag:not(:last-child):after {
+  content: ", ";
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/casino-list/casino-list.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+body, .editor-styles-wrapper {
+  --lb-casino-selection-color-background: var(--lb-color-surface-high);
+}
+
+.lb-casino-list--theme_fullwidth {
+  padding: var(--wp--preset--spacing--155) 0 var(--wp--preset--spacing--175);
+  background-color: var(--lb-casino-selection-color-background);
+}
+@media (max-width: 767.98px) {
+  .lb-casino-list--theme_fullwidth {
+    padding: var(--wp--preset--spacing--85) 0 var(--wp--preset--spacing--120);
+  }
+}
+.lb-casino-list--theme_fullwidth .lb-casino-list__wrapper {
+  display: grid;
+  grid-template-columns: var(--lb-layout-grid-col-template);
+  grid-column-gap: var(--lb-layout-grid-gap-x);
+  column-gap: var(--lb-layout-grid-gap-x);
+  width: 100%;
+  padding-left: var(--layout--content-padding);
+  padding-right: var(--layout--content-padding);
+  max-width: calc(var(--wp--style--global--content-size) + 2 * var(--layout--content-padding));
+  margin-left: auto;
+  margin-right: auto;
+}
+.lb-casino-list--theme_fullwidth .lb-casino-list__inner {
+  grid-column: var(--lb-layout-inner-grid-col-start)/var(--lb-layout-inner-grid-col-end);
+}
+.lb-casino-list--card-variant_compact-casino-bonus .lb-casino-list__list {
+  row-gap: var(--wp--preset--spacing--90);
+}
+.lb-casino-list__heading {
+  margin-bottom: var(--wp--preset--spacing--140);
+}
+@media (max-width: 767.98px) {
+  .lb-casino-list__heading {
+    margin-bottom: var(--wp--preset--spacing--100);
+  }
+}
+.lb-casino-list__title {
+  margin-bottom: var(--wp--preset--spacing--70);
+}
+.lb-casino-list__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--wp--preset--spacing--100);
+}
+.lb-casino-list__actions {
+  display: flex;
+  margin-top: var(--wp--preset--spacing--100);
+}
+@media (max-width: 767.98px) {
+  .lb-casino-list__actions {
+    margin-top: var(--wp--preset--spacing--110);
+  }
+}
+.lb-casino-list__actions > *:only-child {
+  width: 100%;
+}
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
 /*!**********************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/clipping/clipping.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************/
@@ -1690,7 +2214,11 @@ body {
   letter-spacing: var(--lb-letter-spacing-text-xl-relative, inherit);
 }
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+<<<<<<< HEAD
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/hero-review-banner/hero-review-banner.scss ***!
+=======
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/hero-casino-banner/hero-casino-banner.scss ***!
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   \******************************************************************************************************************************************************************************************************************************************************************************/
 /**
 * helpers
@@ -1699,6 +2227,7 @@ body {
 * font
 **/
 body {
+<<<<<<< HEAD
   --hero-review-banner-space-top: var(--wp--preset--spacing--140);
   --hero-review-banner-space-bottom: var(--wp--preset--spacing--160);
   --hero-review-banner-color-background: var(--lb-color-surface-high);
@@ -1726,6 +2255,35 @@ body {
   }
 }
 .lb-hero-review-banner__inner {
+=======
+  --hero-casino-banner-space-top: var(--wp--preset--spacing--140);
+  --hero-casino-banner-space-bottom: var(--wp--preset--spacing--160);
+  --hero-casino-banner-color-background: var(--lb-color-surface-high);
+  --hero-casino-banner-info-title-color-text: var(--lb-color-primary);
+  --hero-casino-banner-info-value-color-text: var(--lb-color-text-strong);
+  --hero-casino-banner-desc-color-text: var(--lb-color-text-default);
+  --hero-casino-banner-toggle-color-text: var(--lb-color-text-default);
+  --hero-casino-banner-lar-color-text: var(--lb-color-on-surface-min);
+}
+@media (max-width: 767.98px) {
+  body {
+    --hero-casino-banner-space-top: var(--wp--preset--spacing--110);
+    --hero-casino-banner-space-bottom: var(--wp--preset--spacing--140);
+  }
+}
+
+.lb-hero-casino-banner {
+  padding-top: var(--hero-casino-banner-space-top);
+  padding-bottom: var(--hero-casino-banner-space-bottom);
+  background-color: var(--hero-casino-banner-color-background);
+}
+@media (min-width: 992px) {
+  .lb-hero-casino-banner--col-span .lb-hero-casino-banner__content {
+    grid-column: 1/8;
+  }
+}
+.lb-hero-casino-banner__inner {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   width: 100%;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
@@ -1737,10 +2295,17 @@ body {
   grid-column-gap: var(--layout-content-spacing);
   column-gap: var(--layout-content-spacing);
 }
+<<<<<<< HEAD
 .lb-hero-review-banner__content {
   grid-column: 1/-1;
 }
 .lb-hero-review-banner__header {
+=======
+.lb-hero-casino-banner__content {
+  grid-column: 1/-1;
+}
+.lb-hero-casino-banner__header {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   display: grid;
   grid-template-columns: var(--wp--preset--spacing--330) 1fr;
   grid-column-gap: var(--wp--preset--spacing--120);
@@ -1748,16 +2313,27 @@ body {
   margin-bottom: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
+<<<<<<< HEAD
   .lb-hero-review-banner__header {
+=======
+  .lb-hero-casino-banner__header {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
     column-gap: var(--wp--preset--spacing--70);
     margin-bottom: var(--wp--preset--spacing--85);
     grid-template-columns: var(--wp--preset--spacing--220) 1fr;
   }
 }
+<<<<<<< HEAD
 .lb-hero-review-banner__logo {
   border-radius: var(--wp--preset--spacing--60);
 }
 .lb-hero-review-banner__title {
+=======
+.lb-hero-casino-banner__logo {
+  border-radius: var(--wp--preset--spacing--60);
+}
+.lb-hero-casino-banner__title {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   font-size: var(--wp--preset--font-size--display-lg);
   line-height: var(--wp--custom--line-height--display-lg);
   letter-spacing: inherit;
@@ -1766,30 +2342,49 @@ body {
   margin-bottom: var(--wp--preset--spacing--70);
 }
 @media (max-width: 767.98px) {
+<<<<<<< HEAD
   .lb-hero-review-banner__title {
+=======
+  .lb-hero-casino-banner__title {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
     font-size: var(--wp--preset--font-size--display-xs);
     line-height: var(--wp--custom--line-height--display-xs);
     letter-spacing: inherit;
     letter-spacing: var(--wp--custom--letter-spacing--display-xs, inherit);
   }
 }
+<<<<<<< HEAD
 .lb-hero-review-banner__captions {
+=======
+.lb-hero-casino-banner__captions {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   display: flex;
   flex-wrap: wrap;
   column-gap: var(--wp--preset--spacing--70);
   row-gap: var(--wp--preset--spacing--60);
 }
+<<<<<<< HEAD
 .lb-hero-review-banner__captions:not(:last-child) {
   margin-bottom: var(--wp--preset--spacing--70);
 }
 .lb-hero-review-banner__info {
+=======
+.lb-hero-casino-banner__captions:not(:last-child) {
+  margin-bottom: var(--wp--preset--spacing--70);
+}
+.lb-hero-casino-banner__info {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   font-size: var(--wp--preset--font-size--text-md);
   line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
   font-weight: 500;
 }
+<<<<<<< HEAD
 .lb-hero-review-banner__info-list {
+=======
+.lb-hero-casino-banner__info-list {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   display: flex;
   flex-wrap: wrap;
   column-gap: var(--wp--preset--spacing--200);
@@ -1797,11 +2392,16 @@ body {
   margin-bottom: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
+<<<<<<< HEAD
   .lb-hero-review-banner__info-list {
+=======
+  .lb-hero-casino-banner__info-list {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
     row-gap: var(--wp--preset--spacing--120);
     margin-bottom: var(--wp--preset--spacing--85);
   }
 }
+<<<<<<< HEAD
 .lb-hero-review-banner__info-title {
   color: var(--hero-review-banner-info-title-color-text);
   margin-bottom: var(--wp--preset--spacing--60);
@@ -1810,6 +2410,16 @@ body {
   color: var(--hero-review-banner-info-value-color-text);
 }
 .lb-hero-review-banner__info-value i {
+=======
+.lb-hero-casino-banner__info-title {
+  color: var(--hero-casino-banner-info-title-color-text);
+  margin-bottom: var(--wp--preset--spacing--60);
+}
+.lb-hero-casino-banner__info-value {
+  color: var(--hero-casino-banner-info-value-color-text);
+}
+.lb-hero-casino-banner__info-value i {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   position: relative;
   top: 1px;
   margin-right: var(--wp--preset--spacing--50);
@@ -1820,11 +2430,16 @@ body {
   line-height: 0;
   font-weight: 600;
 }
+<<<<<<< HEAD
 .lb-hero-review-banner__desc {
+=======
+.lb-hero-casino-banner__desc {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   font-size: var(--wp--preset--font-size--text-md);
   line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+<<<<<<< HEAD
   color: var(--hero-review-banner-desc-color-text);
 }
 .lb-hero-review-banner-promo {
@@ -1832,11 +2447,24 @@ body {
 }
 @media (max-width: 767.98px) {
   .lb-hero-review-banner-promo {
+=======
+  color: var(--hero-casino-banner-desc-color-text);
+}
+.lb-hero-casino-banner-promo {
+  margin-bottom: var(--wp--preset--spacing--160);
+}
+@media (max-width: 767.98px) {
+  .lb-hero-casino-banner-promo {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
     margin-bottom: var(--wp--preset--spacing--85);
   }
 }
 @media (min-width: 992px) {
+<<<<<<< HEAD
   .lb-hero-review-banner-promo {
+=======
+  .lb-hero-casino-banner-promo {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
     position: absolute;
     top: 0;
     left: 50%;
@@ -1857,44 +2485,77 @@ body {
   }
 }
 @media (min-width: 992px) {
+<<<<<<< HEAD
   .lb-hero-review-banner-promo__inner {
+=======
+  .lb-hero-casino-banner-promo__inner {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
     position: relative;
     pointer-events: auto;
     grid-column: 9/13;
     padding-top: 0px;
+<<<<<<< HEAD
     padding-top: var(--hero-review-banner-space-top, 0px);
   }
 }
 @media (min-width: 992px) {
   .lb-hero-review-banner-promo__sticky {
+=======
+    padding-top: var(--hero-casino-banner-space-top, 0px);
+  }
+}
+@media (min-width: 992px) {
+  .lb-hero-casino-banner-promo__sticky {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
     position: sticky;
     top: calc(0px + var(--wp--preset--spacing--80) + 0px);
     top: calc(var(--lb-header-height, 0px) + var(--wp--preset--spacing--80) + var(--lb-admin-bar-offset, 0px));
   }
 }
+<<<<<<< HEAD
 .lb-hero-review-banner__lar {
+=======
+.lb-hero-casino-banner__lar {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   display: flex;
   align-items: center;
   column-gap: var(--wp--preset--spacing--70);
   row-gap: var(--wp--preset--spacing--60);
 }
 @media (max-width: 991.98px) {
+<<<<<<< HEAD
   .lb-hero-review-banner__lar {
+=======
+  .lb-hero-casino-banner__lar {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
     flex-direction: column;
     align-items: flex-start;
   }
 }
+<<<<<<< HEAD
 .lb-hero-review-banner__lar-text {
+=======
+.lb-hero-casino-banner__lar-text {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   font-size: var(--wp--preset--font-size--text-sm);
   line-height: var(--wp--custom--line-height--text-sm);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+<<<<<<< HEAD
   color: var(--hero-review-banner-lar-color-text);
 }
 .lb-hero-review-banner__lar-text a {
   color: currentColor;
 }
 .lb-hero-review-banner__lar-mark {
+=======
+  color: var(--hero-casino-banner-lar-color-text);
+}
+.lb-hero-casino-banner__lar-text a {
+  color: currentColor;
+}
+.lb-hero-casino-banner__lar-mark {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   flex-shrink: 0;
   width: auto;
   height: auto;
@@ -1903,7 +2564,11 @@ body {
   opacity: 0.35;
   transition: opacity 170ms ease-in-out;
 }
+<<<<<<< HEAD
 .lb-hero-review-banner__lar-mark:hover {
+=======
+.lb-hero-casino-banner__lar-mark:hover {
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
   opacity: 1;
 }
 /*!************************************************************************************************************************************************************************************************************************************************************!*\
@@ -2515,6 +3180,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
+<<<<<<< HEAD
 /*!***************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/review-card/variants/default/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************************************************/
@@ -3036,6 +3702,8 @@ body, .editor-styles-wrapper {
 .lb-review-list__actions > *:only-child {
   width: 100%;
 }
+=======
+>>>>>>> c09d0ce49f60adc9e6ae6aaccaa2478b4faa9209
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/scroll-to-top/scroll-to-top.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
