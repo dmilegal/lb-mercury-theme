@@ -35,4 +35,8 @@ body {
   .breadcrumb_last {
     color: var(--lb-breadcrumbs-color-text-active);
   }
+
+  &__hidden {
+    display: none;
+  }
 }

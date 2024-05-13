@@ -6,7 +6,7 @@ function wpse_100012_override_yoast_breadcrumb_trail($links)
   foreach ($links as &$link) {
 
     if (str_contains($link['url'], home_url())) {
-      $link['text'] = '<i class="icon-home-solid"></i>';
+      $link['text'] = '<i class="icon-home-solid"><span class="lb-breadcrumbs__hidden">' . $link['text'] . '</span></i>';
       break;
     }
   }
