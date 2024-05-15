@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/casino-list",
+  "title": "Review List",
+  "description": "",
+  "style": ["review-list","review-card", "button", "badge", "promo-button"],
+  "editorStyle": [],
+  "script": ["review-list","review-card", "button","badge", "promo-button"],
+  "category": "formatting",
+  "icon": "book",
+  "keywords": ["review list", "casino list", "casino selection", "casino cards", "list", "selection"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "review-list.php"
+  }
+}

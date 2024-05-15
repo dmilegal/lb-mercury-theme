@@ -1,1 +1,0 @@
-import './casino-details.scss'

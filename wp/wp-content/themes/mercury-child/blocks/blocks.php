@@ -8,7 +8,7 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/our-team');
     register_block_type(__DIR__ . '/button');
     register_block_type(__DIR__ . '/blockquote');
-    register_block_type(__DIR__ . '/casino-list');
+    register_block_type(__DIR__ . '/review-list');
     register_block_type(__DIR__ . '/logo-text');
     register_block_type(__DIR__ . '/logo-text/content');
     register_block_type(__DIR__ . '/logo-text/media');
@@ -22,7 +22,7 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/share-links');
     register_block_type(__DIR__ . '/toc');
     //register_block_type(__DIR__ . '/bonus-card');
-    register_block_type(__DIR__ . '/casino-card');
+    register_block_type(__DIR__ . '/review-card');
 }
 
 function mg_disable_gutenberg_blocks($allowed_blocks)
