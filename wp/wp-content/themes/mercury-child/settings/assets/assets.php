@@ -1,5 +1,4 @@
 <?
-
 remove_editor_styles('style-editor.css');
 function disable_old_assets()
 {
@@ -19,16 +18,17 @@ add_action('wp_enqueue_scripts', 'disable_old_assets', 999);
 add_action('enqueue_block_editor_assets', 'disable_old_assets', 999);
 
 
-add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
-function remove_jquery_migrate( $scripts ) {
+add_filter('wp_default_scripts', 'remove_jquery_migrate');
+function remove_jquery_migrate($scripts)
+{
 
-	if ( empty( $scripts->registered['jquery'] ) || is_admin() ) {
-		return;
-	}
+  if (empty($scripts->registered['jquery']) || is_admin()) {
+    return;
+  }
 
-	$deps = & $scripts->registered['jquery']->deps;
+  $deps = &$scripts->registered['jquery']->deps;
 
-	$deps = array_diff( $deps, [ 'jquery-migrate' ] );
+  $deps = array_diff($deps, ['jquery-migrate']);
 }
 
 // Enqueue custom css and js
@@ -38,14 +38,14 @@ function enqueue_main_assets()
   enqueue_assets_by_name('blocks');
 
   // style ea accordion plugin
-  wp_enqueue_style('ea-accordion', '', ['sp-ea-style']);
+  wp_enqueue_style('ea-accordion', '', ['sp-ea-style'], wp_get_theme()->get('Version'));
 
   // style cmplz plugin
-  wp_enqueue_style('cookie-banner', '', ['cmplz-general']);
+  wp_enqueue_style('cookie-banner', '', ['cmplz-general'], wp_get_theme()->get('Version'));
 
   // style age gate plugin
-  wp_enqueue_style('age-gate-banner', '', ['age-gate']);
-  
+  wp_enqueue_style('age-gate-banner', '', ['age-gate'], wp_get_theme()->get('Version'));
+
   //wp_enqueue_script( 'jquery-fix', get_stylesheet_directory_uri() . '/js/libs/jquery-fix.js', array() );
   //wp_enqueue_script('child-scripts', get_stylesheet_directory_uri() . '/js/child-scripts.js', array('jquery'));
 }
@@ -85,10 +85,10 @@ function enqueue_block_editor_scripts()
   wp_enqueue_script(
     'editor-custom',
     get_stylesheet_directory_uri() . '/frontend/dist/js/editor.js',
-    array( 'wp-blocks' ),
-    wp_get_theme()->get( 'Version' ),
+    array('wp-blocks'),
+    wp_get_theme()->get('Version'),
     false
-);
+  );
 }
 add_action('enqueue_block_editor_assets', 'enqueue_block_editor_scripts');
 
@@ -113,9 +113,9 @@ function enqueue_assets_by_name($name)
     enqueue_assets_by_path($dir . "*chk-" . $name . "-chk*.js");
   }
 
-  wp_enqueue_style($name);
+  wp_enqueue_style($name, '', [], wp_get_theme()->get('Version'));
 
-  wp_enqueue_script($name);
+  wp_enqueue_script($name, '', [], wp_get_theme()->get('Version'));
 
   foreach (['js/commons/', 'css/commons/'] as $path) {
     $dir = get_stylesheet_directory() . '/frontend/dist/' . $path;
@@ -133,9 +133,9 @@ function enqueue_assets_by_path($assetPath)
 
   foreach ($files as $file) {
     if ($isCss)
-      wp_enqueue_style(getAssetName($file));
+      wp_enqueue_style(getAssetName($file), '', [], wp_get_theme()->get('Version'));
     elseif ($isJs)
-      wp_enqueue_script(getAssetName($file));
+      wp_enqueue_script(getAssetName($file), '', [], wp_get_theme()->get('Version'));
   }
 }
 
@@ -148,9 +148,9 @@ function register_assets_by_path($assetPath)
   foreach ($files as $file) {
     $file_url = str_replace(get_template_directory(), get_template_directory_uri(), $file);
     if ($isCss)
-      wp_register_style(getAssetName($file), $file_url, [], filemtime($file));
+      wp_register_style(getAssetName($file), $file_url, [], wp_get_theme()->get('Version'));
     elseif ($isJs)
-      wp_register_script(getAssetName($file), $file_url, [], filemtime($file), [
+      wp_register_script(getAssetName($file), $file_url, [], wp_get_theme()->get('Version'), [
         'in_footer' => true,
         'strategy'  => 'defer',
       ]);
