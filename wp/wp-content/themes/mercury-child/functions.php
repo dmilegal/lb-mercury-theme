@@ -7,6 +7,7 @@ function mercury_child_setup()
 }
 add_action('after_setup_theme', 'mercury_child_setup');
 
+require_once 'dashadm/dashadm.php';
 require_once 'shared/shared.php';
 require_once 'settings/settings.php';
 require_once 'blocks/blocks.php';
