@@ -26,7 +26,7 @@ $casino_allowed_html = array(
   'p' => array()
 );
 
-$casino_detailed_tc = wp_kses(get_post_meta($postId, 'casino_detailed_tc', true), $casino_allowed_html);
+$casino_detailed_tc = wp_kses(get_post_meta($postId, 'casino_detailed_tc', true), 'strip');
 $overall_rating = esc_html(get_post_meta($postId, 'casino_overall_rating', true));
 $casino_permalink_button_title = esc_html(get_post_meta($postId, 'casino_permalink_button_title', true));
 $casino_button_title = esc_html(get_post_meta($postId, 'casino_button_title', true));
@@ -61,7 +61,7 @@ $bonus_button_title = esc_html(get_post_meta($bonusId, 'bonus_button_title', tru
 $bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
 $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
 
-$offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), $casino_allowed_html);
+$offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), 'strip');
 
 $is_external_link = false;
 
@@ -117,10 +117,9 @@ $is_locked = get_post_status($postId) == 'draft' ||
       <?= $bonus_short_desc ?>
     </a>
   <? } ?>
-  <? if ($offer_detailed_tc) { ?>
+  <? if ($offer_detailed_tc || $casino_detailed_tc) { ?>
     <div class="lb-compact-casino-bonus-card__tc lb-compact-casino-bonus-card__tc--truncated">
-      <div class="lb-compact-casino-bonus-card__tc-content">
-        <?= $offer_detailed_tc ?>
+      <div class="lb-compact-casino-bonus-card__tc-content" data-content="<?= esc_attr($offer_detailed_tc ? $offer_detailed_tc : $casino_detailed_tc) ?>">
       </div>
       <button class="lb-compact-casino-bonus-card__tc-more" style="display: none">
         <?= __('Show T&C', 'mercury-child') ?>

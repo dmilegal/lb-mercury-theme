@@ -28,7 +28,7 @@ $casino_allowed_html = array(
   'p' => array()
 );
 
-$casino_detailed_tc = wp_kses(get_post_meta($postId, 'casino_detailed_tc', true), $casino_allowed_html);
+$casino_detailed_tc = wp_kses(get_post_meta($postId, 'casino_detailed_tc', true), 'strip');
 $overall_rating = esc_html(get_post_meta($postId, 'casino_overall_rating', true));
 $casino_permalink_button_title = esc_html(get_post_meta($postId, 'casino_permalink_button_title', true));
 $casino_button_title = esc_html(get_post_meta($postId, 'casino_button_title', true));
@@ -63,7 +63,7 @@ $bonus_button_title = esc_html(get_post_meta($bonusId, 'bonus_button_title', tru
 $bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
 $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
 
-$offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), $casino_allowed_html);
+$offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), 'strip');
 
 if (!$bonus_button_title) {
   if (get_option('bonuses_get_bonus_title')) {
@@ -192,8 +192,7 @@ $is_locked = get_post_status($postId) == 'draft' ||
     <? } ?>
   </div>
   <?php if ($casino_detailed_tc || $offer_detailed_tc) { ?>
-    <div class="lb-review-card__tc not-prose">
-      <?= $offer_detailed_tc ? $offer_detailed_tc : wp_kses($casino_detailed_tc, $casino_allowed_html); ?>
+    <div class="lb-review-card__tc not-prose" data-content="<?= esc_attr($offer_detailed_tc ? $offer_detailed_tc : $casino_detailed_tc) ?>">
     </div>
   <? } ?>
 </div>

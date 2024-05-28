@@ -79,6 +79,9 @@ body,
     &-content {
       @include font.get-text-styles('text-xs', false);
       color: var(--lb-ccb-review-card-color-text-sub);
+      &:after {
+        content: attr(data-content);
+      }
       @extend %tc_content;
     }
 
