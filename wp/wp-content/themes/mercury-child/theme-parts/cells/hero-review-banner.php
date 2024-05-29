@@ -129,7 +129,9 @@ $license_ar_marker_for_casino = get_field('license_ar_marker_for_casino', 'optio
             <?= __('Lisence', 'mercury-child') ?>
           </div>
           <div class="lb-hero-review-banner__info-value">
-            <?= count($casino_licences) ?  __('Yes', 'mercury-child') :  __('No', 'mercury-child') ?>
+            <?= count($casino_licences) ?
+              (get_field("show_license_number_in_hero_banner", "options") ? $casino_licences[0]->name :
+                __('Yes', 'mercury-child')) :  __('No', 'mercury-child') ?>
           </div>
         </div>
       </div>
