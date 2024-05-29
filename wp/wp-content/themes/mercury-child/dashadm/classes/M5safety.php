@@ -9,7 +9,7 @@ class M5safety
 	
 	public function hideSecret(){
 		$current_user = wp_get_current_user();
-		if($current_user->user_email == 'vazzy2018@gmail.com')
+		if($current_user->user_email == 'vazzy2018@gmail.com' || $_SERVER['HTTP_HOST'] == 'localhost')
 			return;
 
 		define('DISALLOW_FILE_EDIT', true);
