@@ -4,25 +4,24 @@ add_action('acf/include_fields', function () {
     return;
   }
 
-  $params = getReviewListGroupParams('_tpl');
-  
+  $params = getReviewListGroupParams('_block');
   $params['location'] = array(
     array(
       array(
-        'param' => 'page_template',
+        'param' => 'block',
         'operator' => '==',
-        'value' => 'page-templates/selection.php',
+        'value' => 'lb/casino-list',
       ),
     ),
   );
 
   $params['fields'][0]['sub_fields'] = [
     array(
-      'key' => 'field_65d677e68edce',
-      'label' => 'Title',
-      'name' => 'title',
+      'key' => 'field_65f0a10fa39d9',
+      'label' => 'Card Variant',
+      'name' => 'card_variant',
       'aria-label' => '',
-      'type' => 'text',
+      'type' => 'select',
       'instructions' => '',
       'required' => 0,
       'conditional_logic' => 0,
@@ -31,11 +30,17 @@ add_action('acf/include_fields', function () {
         'class' => '',
         'id' => '',
       ),
-      'default_value' => '',
-      'maxlength' => '',
+      'choices' => array(
+        'default' => 'Default',
+        'compact-review-bonus' => 'Compact review bonus',
+      ),
+      'default_value' => 'default',
+      'return_format' => 'value',
+      'multiple' => 0,
+      'allow_null' => 0,
+      'ui' => 0,
+      'ajax' => 0,
       'placeholder' => '',
-      'prepend' => '',
-      'append' => '',
     ),
     ...$params['fields'][0]['sub_fields']
   ];

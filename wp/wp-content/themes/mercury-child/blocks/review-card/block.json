@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/casino-card",
+  "title": "Review Card",
+  "description": "",
+  "style": ["review-card", "button", "badge", "promo-button"],
+  "editorStyle": [],
+  "script": ["review-card", "button","badge", "promo-button"],
+  "category": "formatting",
+  "icon": "portfolio",
+  "keywords": ["review card", "bookmaker card", "casino card", "casino", "bookmaker", "review"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "review-card.php"
+  }
+}

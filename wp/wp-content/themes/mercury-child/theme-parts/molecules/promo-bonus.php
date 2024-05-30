@@ -44,7 +44,7 @@ $bonus_dark_style = esc_attr(get_post_meta($bonusId, 'bonus_dark_style', true));
 $offer_popup_hide = esc_attr(get_post_meta($bonusId, 'aces_offer_popup_hide', true));
 
 $offer_popup_title = esc_html(get_post_meta($bonusId, 'aces_offer_popup_title', true));
-$offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), $bonus_allowed_html);
+$offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), "strip");
 
 $offers_disable_more_block = esc_attr(get_post_meta($bonusId, 'offers_disable_more_block', true));
 
@@ -122,8 +122,7 @@ if ($bonus_external_link) {
     <? }*/ ?>
   </div>
   <?php if (/*!!$offer_popup_hide &&*/ $offer_detailed_tc) { ?>
-    <div class="lb-promo-bonus__tc-extra">
-      <?= $offer_detailed_tc; ?>
+    <div class="lb-promo-bonus__tc-extra" data-content="<?= esc_attr($offer_detailed_tc) ?>">
     </div>
   <? } ?>
 

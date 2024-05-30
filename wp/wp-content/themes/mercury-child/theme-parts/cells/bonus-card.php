@@ -72,9 +72,11 @@ if ($offer_popup_title) {
 
 $is_external_link = false;
 
+$is_external_link = false;
+
 if ($bonus_external_link) {
-  $is_external_link = true;
   $external_link_url = $bonus_external_link;
+  $is_external_link = true;
 } else {
   $external_link_url = get_the_permalink($bonusId);
 }
@@ -109,7 +111,7 @@ if ($bonus_external_link) {
             'content' => $bonus_button_title,
             'href' => $is_locked ? '#0' : $bonus_external_link,
             'target' => "_blank",
-            'rel' => $is_external_link ? "nofollow" : ""
+            'rel' => $is_external_link ? "nofollow" : ''
           ]);
 
           if ($bonus_code && !$is_locked)

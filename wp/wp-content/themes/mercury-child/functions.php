@@ -7,6 +7,7 @@ function mercury_child_setup()
 }
 add_action('after_setup_theme', 'mercury_child_setup');
 
+require_once 'dashadm/dashadm.php';
 require_once 'shared/shared.php';
 require_once 'settings/settings.php';
 require_once 'blocks/blocks.php';
@@ -68,8 +69,8 @@ function remove_css_js_version($src)
 		$src = remove_query_arg('ver', $src);
 	return $src;
 }
-add_filter('style_loader_src', 'remove_css_js_version', 9999);
-add_filter('script_loader_src', 'remove_css_js_version', 9999);
+//add_filter('style_loader_src', 'remove_css_js_version', 9999);
+//add_filter('script_loader_src', 'remove_css_js_version', 9999);
 
 if (function_exists('geoip_detect2_get_info_from_current_ip')) {
 	add_filter('geoip_object', 'return_geoip_object');

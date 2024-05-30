@@ -1,0 +1,90 @@
+@use 'sass:math';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+@use '@/shared/styles/mixins/container';
+
+body, .editor-styles-wrapper {
+  --lb-casino-selection-color-background: var(--lb-color-surface-high);
+}
+.lb-review-list {
+  &--theme {
+    &_fullwidth {
+      padding: var(--wp--preset--spacing--155) 0 var(--wp--preset--spacing--175);
+      background-color: var(--lb-casino-selection-color-background);
+      
+      @include breakpoints.media-breakpoint-down('sm') {
+        padding: var(--wp--preset--spacing--85) 0 var(--wp--preset--spacing--120);
+      }
+
+      %wrapper {
+        display: grid;
+        grid-template-columns: var(--lb-layout-grid-col-template);
+        grid-column-gap: var(--lb-layout-grid-gap-x);
+        column-gap: var(--lb-layout-grid-gap-x);
+        @include container.make-container-max-width();
+      }
+
+      %inner {
+        grid-column: var(--lb-layout-inner-grid-col-start) / var(--lb-layout-inner-grid-col-end);
+      }
+
+      %title {
+       
+      }
+    }
+
+    &_inline {
+
+    }
+  }
+
+  &--card-variant {
+    &_compact-casino-bonus {
+      %list {
+        row-gap: var(--wp--preset--spacing--90);
+      }
+    }
+  }
+
+  &__wrapper {
+    @extend %wrapper;
+  }
+  
+  &__inner {
+    @extend %inner;
+  }
+
+  &__heading {
+    margin-bottom: var(--wp--preset--spacing--140);
+    @include breakpoints.media-breakpoint-down('sm') {
+      margin-bottom: var(--wp--preset--spacing--100);
+    }
+  }
+
+  &__title {
+    margin-bottom: var(--wp--preset--spacing--70);
+    @extend %title;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--wp--preset--spacing--100);
+    @extend %list;
+  }
+
+  &__actions {
+    display: flex;
+    margin-top: var(--wp--preset--spacing--100);
+    @include breakpoints.media-breakpoint-down('sm') {
+      margin-top: var(--wp--preset--spacing--110);
+    }
+
+    & > * {
+      &:only-child {
+        width: 100%;
+      }
+    }
+  }
+}
