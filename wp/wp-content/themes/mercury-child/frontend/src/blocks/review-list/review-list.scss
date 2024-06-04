@@ -66,6 +66,10 @@ body, .editor-styles-wrapper {
     margin-bottom: var(--wp--preset--spacing--70);
     @extend %title;
   }
+
+  &__subtitle {
+    @include font.get-text-styles('text-sm', false);
+  }
   
   &__list {
     display: flex;

@@ -9,6 +9,9 @@ body {
 
   --lb-footer-color-text: var(--lb-color-on-surface-highest);
   --lb-footer-color-text-hover: var(--lb-color-on-surface);
+
+  --lb-footer-submenu-color-text: var(--lb-color-on-surface);
+  --lb-footer-submenu-color-text-hover: var(--lb-color-on-surface-highest);
 }
 
 .lb-footer {
@@ -61,6 +64,22 @@ body {
       color: var(--lb-footer-color-text);
       &:hover {
         color: var(--lb-footer-color-text-hover);
+      }
+    }
+  }
+
+  &__submenu {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--wp--preset--spacing--80);
+    row-gap: var(--wp--preset--spacing--60);
+    @include font.get-text-styles('text-xs');
+    a {
+      text-decoration: none;
+      color: var(--lb-footer-submenu-color-text);
+      &:hover {
+        text-decoration: underline;
+        color: var(--lb-footer-submenu-color-text-hover);
       }
     }
   }

@@ -17,12 +17,13 @@ if ($reviewList) {
     <div class="lb-review-list__wrapper">
       <div class="lb-review-list__inner">
         <?php if ($title) { ?>
-          <div class="lb-review-list__heading prose-headings">
+          <div class="lb-review-list__heading prose-headings prose-colors">
             <h2 class="lb-review-list__title"><?php echo esc_html($title); ?></h2>
-            <!--<div class="lb-review-list__subtitle">
-              <? //get_template_part('theme-parts/organs/post-info', null); 
-              ?>
-            </div>-->
+            <? if ($subtitle = get_field("license_ar_text_for_listing", "option")) {?>
+            <div class="lb-review-list__subtitle">
+              <?= $subtitle ?>
+            </div>
+            <? } ?>
           </div>
         <?php } ?>
         <div class="lb-review-list__list">
