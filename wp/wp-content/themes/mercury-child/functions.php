@@ -103,13 +103,16 @@ add_shortcode('show_wpb_author_info_box', 'wpb_author_info_box');
 remove_filter('pre_user_description', 'wp_filter_kses');
 
 
+add_action('acf/init', 'mercury_acf_op_init');
 
+function mercury_acf_op_init() {
+	if( function_exists('acf_add_options_page') ) {
 
-
-
-acf_add_options_page([
-	'network' => true,
-	'post_id' => 'm5netw_opt1',
-	'page_title' => 'Network Options',
-	'menu_title' => 'Network Options'
-]);
+		acf_add_options_page([
+			'network' => true,
+			'post_id' => 'm5netw_opt1',
+			'page_title' => 'Network Options',
+			'menu_title' => 'Network Options'
+		]);
+	}
+}
