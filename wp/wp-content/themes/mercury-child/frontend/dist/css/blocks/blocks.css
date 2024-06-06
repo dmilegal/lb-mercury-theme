@@ -1913,6 +1913,30 @@ body {
 .lb-hero-review-banner__license-logo {
   display: flex;
 }
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/lang-label/lang-label.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+.lb-lang-label {
+  display: inline-flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--60);
+}
+.lb-lang-label__ico {
+  width: 17px;
+  height: 17px;
+}
+.lb-lang-label__title {
+  font-size: var(--lb-font-size-text-sm-relative);
+  line-height: var(--lb-line-height-text-sm-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
+}
 /*!************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/logo-text/logo-text.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************/

@@ -46,12 +46,9 @@
 
 					<?php get_template_part('/theme-parts/organisms/footer/logos'); ?>
 				</div>
-				<? if (has_nav_menu('footer_sub_menu')) { ?>
-					<div>
-						<? wp_nav_menu(array('container' => 'ul', 'menu_class' => 'lb-footer__submenu', 'theme_location' => 'footer_sub_menu', 'depth' => 1, 'fallback_cb' => '__return_empty_string')); ?>
-					</div>
-				<? } ?>
+
 				<div>
+					<?php get_template_part('/theme-parts/organisms/footer/submenu'); ?>
 					<?php get_template_part('/theme-parts/organisms/footer/copyright'); ?>
 					<?php get_template_part('/theme-parts/organisms/footer/disclaimer'); ?>
 				</div>

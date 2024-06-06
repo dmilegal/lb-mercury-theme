@@ -28,7 +28,6 @@ body {
     padding: var(--wp--preset--spacing--140) 0;
     @include breakpoints.media-breakpoint-down(xs) {
       padding: var(--wp--preset--spacing--120) 0;
-      
     }
   }
 
@@ -160,5 +159,27 @@ body {
     @include font.get-text-styles('text-xs');
     color: var(--lb-footer-dis-color-text);
     margin-bottom: var(--wp--preset--spacing--50);
+  }
+
+  &__extra-actions {
+    display: flex;
+    align-items: center;
+    column-gap: var(--wp--preset--spacing--120);
+    row-gap: var(--wp--preset--spacing--100);
+    margin-bottom: var(--wp--preset--spacing--70);
+
+    &--single-column {
+      @include breakpoints.media-breakpoint-up(sm) {
+        justify-content: flex-end;
+      }
+    }
+
+    &--two-column {
+      justify-content: space-between;
+      @include breakpoints.media-breakpoint-down(xs) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   }
 }
