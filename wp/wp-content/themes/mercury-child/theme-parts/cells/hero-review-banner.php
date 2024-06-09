@@ -102,7 +102,7 @@ $license_ar_logos = get_field('license_ar_logos', 'option');
               </div>
           <? }
           } ?>
-          <? if ($license_ar_text_for_casino || $$license_ar_logos) { ?>
+          <? if ($license_ar_text_for_casino || $license_ar_logos) { ?>
             <div class="lb-hero-review-banner__lar">
               <? if ($license_ar_text_for_casino) { ?>
                 <div class="lb-hero-review-banner__lar-text"><?= $license_ar_text_for_casino ?></div>
