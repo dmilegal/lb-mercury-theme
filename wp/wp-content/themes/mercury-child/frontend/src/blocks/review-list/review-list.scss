@@ -4,15 +4,17 @@
 @use '@/shared/styles/mixins/breakpoints';
 @use '@/shared/styles/mixins/container';
 
-body, .editor-styles-wrapper {
+body,
+.editor-styles-wrapper {
   --lb-casino-selection-color-background: var(--lb-color-surface-high);
+  --lb-casino-subtitle-color: var(--lb-color-on-surface-min);
 }
 .lb-review-list {
   &--theme {
     &_fullwidth {
       padding: var(--wp--preset--spacing--155) 0 var(--wp--preset--spacing--175);
       background-color: var(--lb-casino-selection-color-background);
-      
+
       @include breakpoints.media-breakpoint-down('sm') {
         padding: var(--wp--preset--spacing--85) 0 var(--wp--preset--spacing--120);
       }
@@ -26,16 +28,15 @@ body, .editor-styles-wrapper {
       }
 
       %inner {
-        grid-column: var(--lb-layout-inner-grid-col-start) / var(--lb-layout-inner-grid-col-end);
+        grid-column: var(--lb-layout-inner-grid-col-start) /
+          var(--lb-layout-inner-grid-col-end);
       }
 
       %title {
-       
       }
     }
 
     &_inline {
-
     }
   }
 
@@ -50,27 +51,41 @@ body, .editor-styles-wrapper {
   &__wrapper {
     @extend %wrapper;
   }
-  
+
   &__inner {
     @extend %inner;
   }
 
   &__heading {
-    margin-bottom: var(--wp--preset--spacing--140);
-    @include breakpoints.media-breakpoint-down('sm') {
-      margin-bottom: var(--wp--preset--spacing--100);
-    }
   }
 
   &__title {
     margin-bottom: var(--wp--preset--spacing--70);
+    &:only-child {
+      margin-bottom: var(--wp--preset--spacing--140);
+      @include breakpoints.media-breakpoint-down('sm') {
+        margin-bottom: var(--wp--preset--spacing--100);
+      }
+    }
     @extend %title;
   }
 
   &__subtitle {
-    @include font.get-text-styles('text-sm', false);
+    &, p {
+      @include font.get-text-styles('text-xs', false);
+      color: var(--lb-casino-subtitle-color);
+    }
+    
+    margin-bottom: var(--wp--preset--spacing--70);
+
+    &:not(:only-child) {
+      margin-bottom: var(--wp--preset--spacing--140);
+      @include breakpoints.media-breakpoint-down('sm') {
+        margin-bottom: var(--wp--preset--spacing--100);
+      }
+    }
   }
-  
+
   &__list {
     display: flex;
     flex-direction: column;
