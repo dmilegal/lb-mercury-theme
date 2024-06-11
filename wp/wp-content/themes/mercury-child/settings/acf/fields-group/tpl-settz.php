@@ -232,7 +232,7 @@ add_action('acf/include_fields', function () {
 			),
 			array(
 				'key' => 'field_662013340bb20',
-				'label' => 'Regulator, License & Age Rating settings (Casino Page)',
+				'label' => 'Regulator, License & Age Rating settings (Casino/Bookmaker Page)',
 				'name' => '',
 				'aria-label' => '',
 				'type' => 'tab',
@@ -253,7 +253,7 @@ add_action('acf/include_fields', function () {
 				'name' => 'show_license_number_in_hero_banner',
 				'aria-label' => '',
 				'type' => 'true_false',
-				'instructions' => 'The license number will be displayed in each casino in the hero banner. By default it will be displayed yes/no.',
+				'instructions' => 'The license number will be displayed in each casino/bookmaker in the hero banner. By default it will be displayed yes/no.',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -269,11 +269,11 @@ add_action('acf/include_fields', function () {
 			),
 			array(
 				'key' => 'field_6660be30e3c1c',
-				'label' => 'License & AR text for casino',
-				'name' => 'license_ar_text_for_casino',
+				'label' => 'License & AR text for single',
+				'name' => 'license_ar_text_for_single',
 				'aria-label' => '',
 				'type' => 'wysiwyg',
-				'instructions' => 'The text that will be displayed at each casino in the hero banner.',
+				'instructions' => 'The text that will be displayed at each casino/bookmaker in the hero banner.',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -293,7 +293,7 @@ add_action('acf/include_fields', function () {
 				'name' => 'license_ar_logos',
 				'aria-label' => '',
 				'type' => 'repeater',
-				'instructions' => 'Logo list will be displayed at each casino in the hero banner',
+				'instructions' => 'Logo list will be displayed at each casino/bookmaker in the hero banner',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -356,7 +356,7 @@ add_action('acf/include_fields', function () {
 			),
 			array(
 				'key' => 'field_665f7180f2efb',
-				'label' => 'Regulator, License & Age Rating settings (Casino Listing)',
+				'label' => 'Regulator, License & Age Rating settings (Casino/Bookmaker Listing)',
 				'name' => '',
 				'aria-label' => '',
 				'type' => 'tab',

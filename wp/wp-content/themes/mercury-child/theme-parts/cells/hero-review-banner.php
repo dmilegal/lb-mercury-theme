@@ -40,7 +40,7 @@ $casino_detailed_tc = wp_kses(get_post_meta($casinoId, 'casino_detailed_tc', tru
 $overall_rating = esc_html(get_post_meta($casinoId, 'casino_overall_rating', true));
 
 
-$license_ar_text_for_casino = get_field('license_ar_text_for_casino', 'option');
+$license_ar_text_for_single = get_field('license_ar_text_for_single', 'option');
 $license_ar_logos = get_field('license_ar_logos', 'option');
 
 ?>
@@ -102,10 +102,10 @@ $license_ar_logos = get_field('license_ar_logos', 'option');
               </div>
           <? }
           } ?>
-          <? if ($license_ar_text_for_casino || $license_ar_logos) { ?>
+          <? if ($license_ar_text_for_single || $license_ar_logos) { ?>
             <div class="lb-hero-review-banner__lar">
-              <? if ($license_ar_text_for_casino) { ?>
-                <div class="lb-hero-review-banner__lar-text"><?= $license_ar_text_for_casino ?></div>
+              <? if ($license_ar_text_for_single) { ?>
+                <div class="lb-hero-review-banner__lar-text"><?= $license_ar_text_for_single ?></div>
               <? } ?>
               <? if ($license_ar_logos) { ?>
                 <div class="lb-hero-review-banner__license-logos">
