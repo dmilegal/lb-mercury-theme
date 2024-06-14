@@ -48,13 +48,10 @@ body {
     @include font.get-text-styles('text-md');
     font-weight: 600;
 
-    margin-bottom: var(--wp--preset--spacing--160);
-
     @include breakpoints.media-breakpoint-down(sm) {
-      display: block;
-      columns: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       column-gap: var(--wp--preset--spacing--90);
-      margin-bottom: var(--wp--preset--spacing--70);
     }
 
     a {
@@ -63,12 +60,6 @@ body {
         &:hover {
           color: var(--lb-footer-color-text-hover);
         }
-    }
-
-    & > li {
-      @include breakpoints.media-breakpoint-down(sm) {
-        margin-bottom: var(--wp--preset--spacing--130);
-      }
     }
 
     .sub-menu {
@@ -112,6 +103,8 @@ body {
       flex-wrap: wrap;
       column-gap: var(--wp--preset--spacing--120);
       row-gap: var(--wp--preset--spacing--140);
+      margin-bottom: var(--wp--preset--spacing--160);
+
       @include breakpoints.media-breakpoint-down(xs) {
         justify-content: flex-start;
       }
@@ -183,7 +176,7 @@ body {
     display: flex;
     column-gap: var(--wp--preset--spacing--120);
     row-gap: var(--wp--preset--spacing--100);
-    margin-bottom: var(--wp--preset--spacing--70);
+    margin-bottom: var(--wp--preset--spacing--80);
 
     &--single-column {
       @include breakpoints.media-breakpoint-up(sm) {
@@ -206,7 +199,6 @@ body {
 
   &__license {
     display: flex;
-    flex-direction: column;
     align-items: center;
     column-gap: var(--wp--preset--spacing--60);
     row-gap: var(--wp--preset--spacing--60);

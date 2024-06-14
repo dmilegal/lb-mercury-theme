@@ -42,12 +42,8 @@
 						} ?>
 					</div>
 				</div>
-				<div>
-
-					<?php get_template_part('/theme-parts/organisms/footer/logos'); ?>
-					<?php get_template_part('/theme-parts/organisms/footer/submenu'); ?>
-				</div>
-
+				<?php get_template_part('/theme-parts/organisms/footer/logos'); ?>
+				<?php get_template_part('/theme-parts/organisms/footer/submenu'); ?>
 				<div>
 					<?php get_template_part('/theme-parts/organisms/footer/copyright'); ?>
 					<?php get_template_part('/theme-parts/organisms/footer/disclaimer'); ?>
