@@ -44,17 +44,17 @@ body {
     display: flex;
     flex-wrap: wrap;
     column-gap: var(--wp--preset--spacing--120);
-    row-gap: var(--wp--preset--spacing--120);
+    row-gap: var(--wp--preset--spacing--130);
     @include font.get-text-styles('text-md');
     font-weight: 600;
 
     margin-bottom: var(--wp--preset--spacing--160);
 
     @include breakpoints.media-breakpoint-down(sm) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: block;
+      columns: 2;
       column-gap: var(--wp--preset--spacing--90);
-      row-gap: var(--wp--preset--spacing--110);
+      margin-bottom: var(--wp--preset--spacing--70);
     }
 
     a {
@@ -65,6 +65,12 @@ body {
         }
     }
 
+    & > li {
+      @include breakpoints.media-breakpoint-down(sm) {
+        margin-bottom: var(--wp--preset--spacing--130);
+      }
+    }
+
     .sub-menu {
       margin-top: var(--wp--preset--spacing--100);
       display: flex;
@@ -73,6 +79,10 @@ body {
 
       @include font.get-text-styles('text-sm');
       font-weight: 400;
+
+      @include breakpoints.media-breakpoint-down(sm) {
+        margin-top: var(--wp--preset--spacing--80);
+      }
 
     }
     
@@ -102,10 +112,8 @@ body {
       flex-wrap: wrap;
       column-gap: var(--wp--preset--spacing--120);
       row-gap: var(--wp--preset--spacing--140);
-      row-gap: var(--wp--preset--spacing--120);
       @include breakpoints.media-breakpoint-down(xs) {
         justify-content: flex-start;
-        row-gap: var(--wp--preset--spacing--110);
       }
     }
   }
@@ -125,7 +133,7 @@ body {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      row-gap: var(--wp--preset--spacing--90);
+      row-gap: var(--wp--preset--spacing--100);
       column-gap: var(--wp--preset--spacing--100);
       margin-bottom: var(--wp--preset--spacing--140);
     }
@@ -148,9 +156,6 @@ body {
   &__disclaimer {
     @include font.get-text-styles('text-xs');
     color: var(--lb-footer-dis-color-text);
-    @include breakpoints.media-breakpoint-down(xs) {
-      @include font.get-text-styles('caption-md');
-    }
     p {
       margin: 0.5em 0;
       &:first-child {
@@ -176,7 +181,6 @@ body {
 
   &__extra-actions {
     display: flex;
-    align-items: center;
     column-gap: var(--wp--preset--spacing--120);
     row-gap: var(--wp--preset--spacing--100);
     margin-bottom: var(--wp--preset--spacing--70);
@@ -193,6 +197,10 @@ body {
         flex-direction: column;
         align-items: flex-start;
       }
+    }
+
+    .lb-lang-label__title {
+      @include font.get-text-styles('text-xs');
     }
   }
 
