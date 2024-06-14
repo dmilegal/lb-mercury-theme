@@ -21,6 +21,9 @@ class M5safety
 	public function rmvLeftMenu(){
 		remove_menu_page( 'edit.php?post_type=acf-field-group' );
 		remove_menu_page( 'wppusher' );
+		remove_menu_page( 'w3tc_dashboard' );
+		remove_menu_page( 'wsal-auditlog' );
+		
 		remove_menu_page( 'users.php' );
 		remove_menu_page( 'plugins.php' );
 
@@ -37,6 +40,7 @@ class M5safety
 		$wp_admin_bar->remove_node('delete-cache');
 		$wp_admin_bar->remove_node('autoptimize');
 		$wp_admin_bar->remove_node('updraft_admin_node');
+		$wp_admin_bar->remove_node('w3tc');
 	}
 }
 new M5safety();
