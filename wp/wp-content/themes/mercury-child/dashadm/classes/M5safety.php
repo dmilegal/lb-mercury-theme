@@ -23,6 +23,7 @@ class M5safety
 		remove_menu_page( 'wppusher' );
 		remove_menu_page( 'w3tc_dashboard' );
 		remove_menu_page( 'wsal-auditlog' );
+		remove_menu_page( 'wpcode' );
 		
 		remove_menu_page( 'users.php' );
 		remove_menu_page( 'plugins.php' );
