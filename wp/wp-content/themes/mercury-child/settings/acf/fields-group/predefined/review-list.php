@@ -60,7 +60,7 @@ function getReviewListGroupParams($postfix)
               'id' => '',
             ),
             'message' => '',
-            'default_value' => $postfix == '_block' ? 0 : 1,
+            'default_value' => 1,//$postfix == '_block' ? 0 : 1,
             'ui' => 0,
             'ui_on_text' => '',
             'ui_off_text' => '',
