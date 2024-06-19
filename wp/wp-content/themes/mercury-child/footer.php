@@ -1,7 +1,11 @@
 <!-- Footer Start -->
 
 </div>
+<button class="open-modal" data-modal="red">ews</button>
 <?php
+get_template_part('theme-parts/molecules/modal', null, [
+	'id' => "red"
+]);
 /*get_template_part('theme-parts/atoms/button', null, [
 	'size' => 'sm',
 	'prefix' => '<i class="icon-circle"></i>',
