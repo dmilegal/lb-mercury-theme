@@ -14,3 +14,4 @@ require_once 'get-contrast-text-color.php';
 require_once 'is-external-link.php';
 require_once 'theme/theme.php';
 require_once 'get-icon-by-lang-code.php';
+require_once 'get-brand-external-link.php';

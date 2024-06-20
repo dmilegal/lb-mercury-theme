@@ -12,8 +12,7 @@ $postType = $args['post_type'] ?? 'casino';
 
 if ($reviewList) {
 ?>
-
-  <div class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
+  <div data-items="<?= esc_attr(json_encode(array_map(fn ($i) => $i['post_id'], $reviewListFull))) ?>" class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
     <div class="lb-review-list__wrapper">
       <div class="lb-review-list__inner">
         <?php if ($title) { ?>
