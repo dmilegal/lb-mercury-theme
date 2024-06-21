@@ -84,7 +84,7 @@ function render(html: string, container: HTMLElement) {
 async function triggetRefModal(e: MouseEvent) {
   const btn = e.currentTarget as HTMLButtonElement
   const container = btn.closest<HTMLElement>('.lb-review-list')
-  const modalEl = document.querySelector('#ref-review-list')
+  const modalEl = document.querySelector<HTMLElement>('#ref-review-list')
   if (!container || !modalEl) return
 
   const list = container.dataset.refItems

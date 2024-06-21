@@ -65,8 +65,7 @@
   }
 
   &__header {
-    font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: var(--wp--preset--spacing--90);
   }
 
   &__title {
@@ -74,8 +73,13 @@
     font-weight: 700;
     color: var(--lb-color-text-strong);
     &:not(:last-child) {
-      margin-bottom: var(--wp--preset--spacing--90);
+      margin-bottom: var(--wp--preset--spacing--60);
     }
+  }
+
+  &__subtitle {
+    @include font.get-text-styles('text-sm', false);
+    color: var(--lb-color-text-strong);
   }
 
   &__body {
@@ -83,6 +87,7 @@
     color: var(--lb-color-text-strong);
     max-height: 480px;
     overflow: auto;
+    scrollbar-width: thin;
     &:not(:last-child) {
       margin-bottom: var(--wp--preset--spacing--120);
     }

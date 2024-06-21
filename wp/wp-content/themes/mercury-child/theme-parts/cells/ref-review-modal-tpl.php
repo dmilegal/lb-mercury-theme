@@ -12,8 +12,8 @@ ob_end_clean();
 <template id="ref-review-list">
   <? get_template_part("/theme-parts/molecules/modal", null, [
     'title' => get_field("modal_ref_list_title", "options"),
-    'content' => '<p>' . get_field("modal_ref_list_subtitle", "options") . '</p>
-   ' . $list_html,
+    'subtitle' => get_field("modal_ref_list_subtitle", "options"),
+    'content' => $list_html,
     'className' => 'ref-review-modal'
   ]) ?>
 </template>
