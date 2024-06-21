@@ -122,8 +122,8 @@ $is_locked = get_post_status($postId) == 'draft' ||
             'className' => 'lb-review-card__play',
             'content' => esc_html($button_title),
             'href' => $is_locked || !$external_link_url ? '#0' : esc_url($external_link_url),
-            'target' => $is_external_link && !$is_locked ? "_blank" : '',
-            'rel' => $is_external_link && !$is_locked ? "nofollow" : ''
+            'target' => $external_link_url && !$is_locked ? "_blank" : '',
+            'rel' => $external_link_url && !$is_locked ? "nofollow" : ''
           ]);
 
         if ($bonus_code)

@@ -69,9 +69,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_dropdown__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _mobile_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mobile-menu */ "./src/main/scripts/components/mobile-menu.js");
 /* harmony import */ var _mobile_menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mobile_menu__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modal */ "./src/main/scripts/components/modal.ts");
-/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modal__WEBPACK_IMPORTED_MODULE_2__);
-
 
 
 
@@ -121,46 +118,6 @@ $('.lb-mobile-menu .menu-item-has-children>a').on('click', function (e) {
 });
 
 // Mobile Children End
-
-/***/ }),
-
-/***/ "./src/main/scripts/components/modal.ts":
-/*!**********************************************!*\
-  !*** ./src/main/scripts/components/modal.ts ***!
-  \**********************************************/
-/***/ (() => {
-
-document.addEventListener('DOMContentLoaded', () => {
-  const openModalButtons = document.querySelectorAll('.open-modal');
-  const closeModalButtons = document.querySelectorAll('[data-close]');
-  const overlayElements = document.querySelectorAll('.modal__overlay');
-
-  // Open modal
-  openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const modalId = button.getAttribute('data-modal');
-      const modal = document.getElementById(modalId);
-      modal.classList.add('modal--active');
-    });
-  });
-
-  // Close modal
-  closeModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const modal = button.closest('.modal__overlay');
-      modal.classList.remove('modal--active');
-    });
-  });
-
-  // Close modal when clicking outside the content
-  overlayElements.forEach(overlay => {
-    overlay.addEventListener('click', event => {
-      if (event.target === overlay) {
-        overlay.classList.remove('modal--active');
-      }
-    });
-  });
-});
 
 /***/ }),
 
