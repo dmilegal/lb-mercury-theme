@@ -86,7 +86,7 @@
     @include font.get-text-styles('text-sm', false);
     color: var(--lb-color-text-strong);
     max-height: 480px;
-    overflow: auto;
+    overflow-y: auto;
     scrollbar-width: thin;
     &:not(:last-child) {
       margin-bottom: var(--wp--preset--spacing--120);
