@@ -38,7 +38,7 @@ body {
   }
 }
 
-#cmplz-cookiebanner-container:has(> .cmplz-show) {
+#cmplz-cookiebanner-container:has(> .cmplz-show.cmplz-center) {
   &:after {
     content: '';
     position: fixed;

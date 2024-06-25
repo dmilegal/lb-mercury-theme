@@ -1204,7 +1204,7 @@ body.age-restriction #cmplz-cookiebanner-container, body.cb-hide #cmplz-cookieba
   display: none;
 }
 
-#cmplz-cookiebanner-container:has(> .cmplz-show):after {
+#cmplz-cookiebanner-container:has(> .cmplz-show.cmplz-center):after {
   content: "";
   position: fixed;
   z-index: 99995;
