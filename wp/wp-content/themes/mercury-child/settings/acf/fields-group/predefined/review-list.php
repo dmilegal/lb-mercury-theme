@@ -45,6 +45,27 @@ function getReviewListGroupParams($postfix)
             'layout' => 'horizontal',
           ),
           array(
+            'key' => 'field_66676a0fa927c' . $postfix,
+            'label' => 'Show License & AR text for listing',
+            'name' => 'show_license_ar_text_for_listing',
+            'aria-label' => '',
+            'type' => 'true_false',
+            'instructions' => 'Will be shown under the title or instead of it if it is not there.
+  You can customize the text by going to Template Settings ->Regulator, License & Age Rating settings (Casino/Bookmaker Listing)',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'message' => '',
+            'default_value' => 1,//$postfix == '_block' ? 0 : 1,
+            'ui' => 0,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
+          ),
+          array(
             'key' => 'field_65f0a27ba39da' . $postfix,
             'label' => 'Disable pagination',
             'name' => 'disable_pagination',

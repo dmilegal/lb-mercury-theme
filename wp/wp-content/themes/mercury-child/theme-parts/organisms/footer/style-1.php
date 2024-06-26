@@ -27,32 +27,28 @@
 						<a href="<?= esc_url(home_url('/')) ?>" class="lb-footer__home-link" title="<?= $site_name ?>">
 							<?= wp_get_attachment_image($logo_footer, [260, 0], false, array("alt" => $site_name, 'class' => 'lb-footer__logo')) ?>
 						</a>
-					<?} else if (has_custom_logo()) { ?> 
+					<? } else if (has_custom_logo()) { ?>
 						<a href="<?= esc_url(home_url('/')) ?>" class="lb-footer__home-link" title="<?= $site_name ?>">
 							<?= wp_get_attachment_image($custom_logo_id, [260, 0], false, array("alt" => $site_name, 'class' => 'lb-footer__logo')) ?>
 						</a>
-						<? } else { ?>
+					<? } else { ?>
 						<a href="<?= esc_url(home_url('/')) ?>" title="<?= esc_attr(get_bloginfo('name')) ?>" class="lb-footer__home-link">
 							<?= esc_html(get_bloginfo('name')) ?>
 						</a>
 					<? } ?>
 					<div class="lb-footer__navigation">
 						<? if (has_nav_menu('footer-menu')) {
-							wp_nav_menu(array('container' => 'ul', 'menu_class' => 'lb-footer__menu', 'theme_location' => 'footer-menu', 'depth' => 1, 'fallback_cb' => '__return_empty_string'));
+							wp_nav_menu(array('container' => 'ul', 'menu_class' => 'lb-footer__menu', 'theme_location' => 'footer-menu', 'depth' => 2, 'fallback_cb' => '__return_empty_string'));
 						} ?>
 					</div>
 				</div>
-				<div>
-
-					<?php get_template_part('/theme-parts/organisms/footer/logos'); ?>
-				</div>
-
+				<?php get_template_part('/theme-parts/organisms/footer/logos'); ?>
+				<?php get_template_part('/theme-parts/organisms/footer/submenu'); ?>
 				<div>
 					<?php get_template_part('/theme-parts/organisms/footer/copyright'); ?>
 					<?php get_template_part('/theme-parts/organisms/footer/disclaimer'); ?>
 				</div>
 			</div>
-
 		</div>
 	</div>
 	<!--<div class="lb-footer__bot">

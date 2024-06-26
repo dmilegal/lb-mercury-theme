@@ -9,6 +9,8 @@ $currentPage = $args['current_page'] ?? 1;
 $disablePagination = $args['disable_pagination'] ?? false;
 $cardVariant = $args['card_variant'] ?? 'default';
 $postType = $args['post_type'] ?? 'casino';
+$showLicenseText = $args['show_license_ar_text_for_listing'] ?? false;
+$licenseText = get_field("license_ar_text_for_listing", "option");
 
 if ($reviewList) {
 ?>
@@ -16,13 +18,16 @@ if ($reviewList) {
   <div class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
     <div class="lb-review-list__wrapper">
       <div class="lb-review-list__inner">
-        <?php if ($title) { ?>
-          <div class="lb-review-list__heading prose-headings">
-            <h2 class="lb-review-list__title"><?php echo esc_html($title); ?></h2>
-            <!--<div class="lb-review-list__subtitle">
-              <? //get_template_part('theme-parts/organs/post-info', null); 
-              ?>
-            </div>-->
+        <?php if ($title || ($licenseText && $showLicenseText)) { ?>
+          <div class="lb-review-list__heading prose-headings prose-colors">
+            <? if ($title) { ?>
+              <h2 class="lb-review-list__title"><?php echo esc_html($title); ?></h2>
+            <? } ?>
+            <? if ($licenseText && $showLicenseText) { ?>
+              <div class="lb-review-list__subtitle">
+                <?= $licenseText ?>
+              </div>
+            <? } ?>
           </div>
         <?php } ?>
         <div class="lb-review-list__list">
