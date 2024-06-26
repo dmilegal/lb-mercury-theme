@@ -138,7 +138,7 @@ $license_ar_logos = get_field('license_ar_logos', 'option');
         </div>
         <div class="lb-hero-review-banner__info">
           <div class="lb-hero-review-banner__info-title">
-            <?= __('Lisence', 'mercury-child') ?>
+            <?= __('License', 'mercury-child') ?>
           </div>
           <div class="lb-hero-review-banner__info-value">
             <?= count($casino_licences) ?
