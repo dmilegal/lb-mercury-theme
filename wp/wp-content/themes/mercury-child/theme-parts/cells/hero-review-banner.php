@@ -40,8 +40,8 @@ $casino_detailed_tc = wp_kses(get_post_meta($casinoId, 'casino_detailed_tc', tru
 $overall_rating = esc_html(get_post_meta($casinoId, 'casino_overall_rating', true));
 
 
-$license_ar_text_for_casino = get_field('license_ar_text_for_casino', 'option');
-$license_ar_marker_for_casino = get_field('license_ar_marker_for_casino', 'option');
+$license_ar_text_for_single = get_field('license_ar_text_for_single', 'option');
+$license_ar_logos = get_field('license_ar_logos', 'option');
 
 ?>
 <div class="<?= classNames(
@@ -64,55 +64,67 @@ $license_ar_marker_for_casino = get_field('license_ar_marker_for_casino', 'optio
           <h1 class="lb-hero-review-banner__title"><?= get_the_title($casinoId) ?></h1>
           <?
           $record = apply_filters('geoip_object', '');
-          $country = $record->country->name;
-          $flag = $record->extra->flag;
+          if ($record) {
+            $country = $record->country->name;
+            $flag = $record->extra->flag;
 
-          if ($country || ($bonus_fields && $bonus_fields['trusted'])) {
+            if ($country || ($bonus_fields && $bonus_fields['trusted'])) {
           ?>
-            <div class="lb-hero-review-banner__captions">
-              <?
-              if ($bonus_fields && $bonus_fields['trusted']) {
-                get_template_part('theme-parts/atoms/badge', null, [
-                  'size' => 'lg',
-                  'content' => __('Trusted', 'aces'),
-                ]);
-              }
+              <div class="lb-hero-review-banner__captions">
+                <?
+                if ($bonus_fields && $bonus_fields['trusted']) {
+                  get_template_part('theme-parts/atoms/badge', null, [
+                    'size' => 'lg',
+                    'content' => __('Trusted', 'aces'),
+                  ]);
+                }
 
-              if ($country)
-                get_template_part('theme-parts/atoms/badge', null, [
-                  'size' => 'lg',
-                  'prefix' => file_exists(get_stylesheet_directory() . '/img/flags/round/' . strtolower($record->country->isoCode) . '.svg') ?
-                    '<img src="' . get_stylesheet_directory_uri() . '/img/flags/round/' . strtolower($record->country->isoCode) . '.svg' . '">' : $flag,
-                  'content' => in_array($country, array_column($casino_restricted_countries, 'name')) ? esc_html(
-                    sprintf(
-                      __('Users from %s are not accepted', 'aces'),
-                      $country
-                    )
-                  )
-                    : esc_html(
+                if ($country)
+                  get_template_part('theme-parts/atoms/badge', null, [
+                    'size' => 'lg',
+                    'prefix' => file_exists(get_stylesheet_directory() . '/img/flags/round/' . strtolower($record->country->isoCode) . '.svg') ?
+                      '<img src="' . get_stylesheet_directory_uri() . '/img/flags/round/' . strtolower($record->country->isoCode) . '.svg' . '">' : $flag,
+                    'content' => in_array($country, array_column($casino_restricted_countries, 'name')) ? esc_html(
                       sprintf(
-                        __('Users from %s are accepted', 'aces'),
+                        __('Users from %s are not accepted', 'aces'),
                         $country
                       )
-                    ),
-                  'color' => 'gray',
-                ]);
-              ?>
-            </div>
-          <? } ?>
-          <? if ($license_ar_text_for_casino || $license_ar_marker_for_casino) { ?>
+                    )
+                      : esc_html(
+                        sprintf(
+                          __('Users from %s are accepted', 'aces'),
+                          $country
+                        )
+                      ),
+                    'color' => 'gray',
+                  ]);
+                ?>
+              </div>
+          <? }
+          } ?>
+          <? if ($license_ar_text_for_single || $license_ar_logos) { ?>
             <div class="lb-hero-review-banner__lar">
-              <? if ($license_ar_text_for_casino) { ?>
-                <div class="lb-hero-review-banner__lar-text"><?= $license_ar_text_for_casino ?></div>
+              <? if ($license_ar_text_for_single) { ?>
+                <div class="lb-hero-review-banner__lar-text"><?= $license_ar_text_for_single ?></div>
               <? } ?>
-              <? if ($license_ar_marker_for_casino) { ?>
-                <?= wp_get_attachment_image($license_ar_marker_for_casino, [0, 32], false, [
-                  'class'  => 'lb-hero-review-banner__lar-mark'
-                ]) ?>
+              <? if ($license_ar_logos) { ?>
+                <div class="lb-hero-review-banner__license-logos">
+                  <? foreach ($license_ar_logos as $logo) { ?>
+                    <<?= $logo['link'] ? 'a class="lb-hero-review-banner__license-logo" href="' .
+                        $logo['link']['url'] . '"' .
+                        ($logo['link']['title'] ? ' aria-label="' . esc_attr($logo['link']['title']) . '"' : '') .
+                        ($logo['link']['target'] ? ' target="' . esc_attr($logo['link']['target']) . '"' : '')
+                        : 'span class="lb-hero-review-banner__license-logo"' ?>>
+                      <?= wp_get_attachment_image($logo['image'], [0, 32], false, [
+                        'class'  => 'lb-hero-review-banner__lar-mark'
+                      ]) ?>
+                    </<?= $logo['link'] ? 'a' : 'span' ?>>
+                  <? } ?>
+                </div>
               <? } ?>
             </div>
-          <? } ?>
         </div>
+      <? } ?>
       </header>
       <div class="lb-hero-review-banner__info-list">
         <div class="lb-hero-review-banner__info">

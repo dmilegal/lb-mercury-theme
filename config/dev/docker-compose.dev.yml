@@ -3,6 +3,7 @@ version: '3.9'
 services:
   wp:
     build:
+      no_cache: true
       dockerfile: ./config/dev/Dockerfile
       context: .
     #deploy:
