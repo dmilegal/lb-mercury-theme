@@ -157,7 +157,7 @@ body {
 
   &__lar {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     column-gap: var(--wp--preset--spacing--70);
     row-gap: var(--wp--preset--spacing--60);
     @include breakpoints.media-breakpoint-down(md) {
@@ -183,5 +183,15 @@ body {
         opacity: 1;
       }
     }
+  }
+
+  &__license-logos {
+    display: flex;
+    column-gap: var(--wp--preset--spacing--60);
+  }
+
+  &__license-logo {
+    display: flex;
+    
   }
 }

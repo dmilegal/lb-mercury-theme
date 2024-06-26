@@ -5,7 +5,7 @@
 
 body {
   --cmplz_text_color: var(--lb-color-text-strong);
-  --cmplz_content_color: var(--lb-color-text-default);
+  --cmplz_content_color: var(--lb-color-text-strong);
 
   --cmplz_button_accept_background_color: var(--wp--preset--color--primary-600);
   --cmplz_button_accept_border_color: var(--wp--preset--color--primary-600);
@@ -20,29 +20,106 @@ body {
   --cmplz_button_settings_border_color_hover: var(--wp--preset--color--primary-100);
 
   --cmplz_button_deny_background_color: var(--wp--preset--color--primary-50);
-  --cmplz_button_deny_text_color: var(--wp--preset--color--primary-50);
   --cmplz_button_deny_text_color: var(--wp--preset--color--primary-700);
   --cmplz_button_deny_background_color_hover: var(--wp--preset--color--primary-100);
   --cmplz_button_deny_border_color_hover: var(--wp--preset--color--primary-100);
 
   --cmplz_border_color: var(--lb-color-surface-outline-3);
+  --cmplz_banner_border_color: var(--lb-color-surface-outline-3);
+  --cmplz_banner_border_width: 1px;
+  --cmplz_banner_border_radius: var(--wp--preset--spacing--85);
+}
+
+body {
+  &.age-restriction, &.cb-hide {
+    #cmplz-cookiebanner-container {
+      display: none;
+    }
+  }
+}
+
+#cmplz-cookiebanner-container:has(> .cmplz-show.cmplz-center) {
+  &:after {
+    content: '';
+    position: fixed;
+    z-index: 99995;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+  }
 }
 
 .cmplz-cookiebanner.cmplz-cookiebanner {
-  border-radius: var(--wp--preset--spacing--85);
-  border: 1px solid var(--cmplz_border_color);
+  padding: 24px;
+  display: block;
+
+  width: 100% !important;
+  max-width: 528px !important;
+
+  @include breakpoints.media-breakpoint-down('xs') {
+    max-width: 343px !important;
+  }
+
+  .cmplz-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: var(--wp--preset--spacing--90);
+  }
+
+  .cmplz-close {
+    order: 1;
+    align-self: flex-end;
+    font-family: 'lhicon';
+    @include font.get-text-styles('display-xs', false);
+    line-height: 1em;
+    transition: color 170ms ease-in-out;
+    svg {
+      display: none;
+    }
+    &::before {
+      content: '\ea27';
+    }
+    &:hover {
+      color: var(--lb-color-text-default);
+      @include font.get-text-styles('display-xs', false);
+      line-height: 1em;
+    }
+  }
 
   .cmplz-title {
-    @include font.get-text-styles('text-lg');
+    display: block !important;
+    @include font.get-text-styles('display-xs', false);
     font-weight: 700;
+    order: 2;
+  }
+
+  .cmplz-body {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    max-height: 480px;
+    &:not(:last-child) {
+      margin-bottom: var(--wp--preset--spacing--120);
+    }
+    @include breakpoints.media-breakpoint-down('xs') {
+      max-height: 370px;
+    }
   }
 
   .cmplz-message {
+    width: 100%;
     color: var(--cmplz_content_color);
     @include font.get-text-styles('text-sm');
   }
 
   .cmplz-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    &:has(> *:nth-child(2)) {
+      grid-template-columns: 1fr 1fr;
+    }
     .cmplz-btn {
       border-radius: 8px;
       @include font.get-text-styles('text-md');
@@ -60,6 +137,7 @@ body {
       }
 
       &.cmplz-accept {
+        order: 2;
         &:hover,
         &:focus {
           background-color: var(--cmplz_button_accept_background_color_hover);
@@ -67,18 +145,22 @@ body {
         }
       }
       &.cmplz-deny {
+        order: 1;
         &:hover,
         &:focus {
           background-color: var(--cmplz_button_deny_background_color_hover);
           border-color: var(--cmplz_button_deny_border_color_hover);
         }
       }
-      &.cmplz-deny {
-        &:hover,
-        &:focus {
-          background-color: var(--cmplz_button_deny_background_color_hover);
-          border-color: var(--cmplz_button_deny_border_color_hover);
-        }
+
+      &.cmplz-view-preferences {
+        order: 3;
+        grid-column: 1/-1;
+      }
+
+      &.cmplz-save-preferences {
+        order: 3;
+        grid-column: 1/-1;
       }
     }
   }

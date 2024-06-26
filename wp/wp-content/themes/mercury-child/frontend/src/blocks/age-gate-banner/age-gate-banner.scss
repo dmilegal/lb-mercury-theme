@@ -5,32 +5,98 @@
 
 body {
   --ag-border-color: var(--lb-color-surface-outline-3);
+  --ag-form-border-width: 1px;
   --ag-text-heading-color: var(--lb-color-text-strong);
+  --ag-text-color: var(--lb-color-text-strong);
   --ag-content-color: var(--lb-color-text-default);
+  --ag-form-border: 1px solid var(--lb-color-surface-outline-3);
+  --ag-form-radius: var(--wp--preset--spacing--85);
+  --ag-text-align: center;
+  --ag-text-heading-margin: 0px;
+  --ag-form-padding: 24px;
 
-  --ag-button-color-background: var(--wp--preset--color--primary-600);
-  --ag-button-color-hover: var(--wp--preset--color--primary-700);
-  --ag-button-color-text: var(--lb-color-on-primary);
-  --ag-button-color-text-hover: var(--lb-color-on-primary);
+  --ag-background-color: rgba(0, 0, 0, 0.65);
+
   --ag-button-radius: 8px;
   --ag-button-padding: 10px 18px;
-  --ag-button-border: 1px solid var(--wp--preset--color--primary-600);
-  --ag-button-hover-border: 1px solid var(--wp--preset--color--primary-700);
+
+  --ag-background-image-opacity: 0.65;
 }
 
 .age-gate.age-gate {
-  border-radius: var(--wp--preset--spacing--85);
-  border: 1px solid var(--ag-border-color);
-
   .age-gate {
-    &__heading-title {
-      color: var(--ag-text-heading-color);
-      @include font.get-text-styles('display-xs');
-      font-weight: 700;
+    &__form {
+      display: block;
+      max-width: 262px;
+      width: 100%;
+      margin: 0 auto;
     }
 
-    &__button {
-      @include font.get-text-styles('text-md')
+    &__heading {
+      margin-bottom: var(--wp--preset--spacing--100);
+      &-title {
+        @include font.get-text-styles('display-xs');
+        font-weight: 700;
+        &:not(:last-child) {
+          margin-bottom: var(--wp--preset--spacing--60);
+        }
+      }
+    }
+
+    &__subheadline {
+      @include font.get-text-styles('text-xl');
+      font-weight: 500;
+      margin-bottom: var(--wp--preset--spacing--60);
+    }
+
+    &__challenge {
+      @include font.get-text-styles('text-md');
+      margin-bottom: var(--wp--preset--spacing--140);
+    }
+
+    &__buttons {
+      &:not(:last-child) {
+        margin-bottom: var(--wp--preset--spacing--70);
+      }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__submit {
+      transition:
+        color 160ms ease-in-out,
+        background-color 160ms ease-in-out,
+        border-color 160ms ease-in-out;
+      @include font.get-text-styles('text-md');
+
+      &--yes {
+        background-color: var(--wp--preset--color--primary-600);
+        color: var(--wp--preset--color--white);
+        border: 1px solid var(--wp--preset--color--primary-600);
+        &:hover {
+          background-color: var(--wp--preset--color--primary-700);
+          border: 1px solid var(--wp--preset--color--primary-700);
+        }
+      }
+      &--no {
+        background-color: var(--wp--preset--color--primary-50);
+        color: var(--wp--preset--color--primary-700);
+        border: 1px solid var(--wp--preset--color--primary-50);
+        &:hover {
+          background-color: var(--wp--preset--color--primary-100);
+          border: 1px solid var(--wp--preset--color--primary-100);
+        }
+      }
+    }
+
+    &__remember-wrapper {
+      &:has(~ .age-gate__errors:empty) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__remember {
+      
     }
   }
 }

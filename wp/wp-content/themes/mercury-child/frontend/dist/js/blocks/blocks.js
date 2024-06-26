@@ -434,6 +434,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/lang-label/lang-label.scss":
+/*!***********************************************!*\
+  !*** ./src/blocks/lang-label/lang-label.scss ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/logo-text/logo-text.scss":
 /*!*********************************************!*\
   !*** ./src/blocks/logo-text/logo-text.scss ***!
@@ -1234,6 +1246,41 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cookie_banner_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cookie-banner.scss */ "./src/blocks/cookie-banner/cookie-banner.scss");
 
+(function () {
+  const body = document.body;
+  const content = document.getElementById('cmplz-cookiebanner-container');
+  const list = ['age-restriction'];
+  if (!content) return;
+  function checkAgeRestriction() {
+    if (list.some(cl => body.classList.contains(cl))) {
+      // Если класс есть, элемент должен быть скрыт дольше
+      body.classList.add('cb-hide');
+
+      // Начинаем наблюдение за body
+      observer.observe(body, observerOptions);
+    }
+  }
+
+  // Обработчик для наблюдения за изменениями классов на body
+  const observer = new MutationObserver(() => {
+    if (!list.some(cl => body.classList.contains(cl))) {
+      // Если классы удалены, запускаем анимацию через 4с
+      setTimeout(() => {
+        body.classList.remove('cb-hide');
+      }, 4000);
+      observer.disconnect();
+    }
+  });
+
+  // Опции для наблюдения за изменениями атрибутов (классов)
+  const observerOptions = {
+    attributes: true,
+    attributeFilter: ['class']
+  };
+
+  // Проверяем начальное состояние
+  checkAgeRestriction();
+})();
 
 /***/ }),
 
@@ -1305,6 +1352,18 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _hero_review_banner_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-review-banner.scss */ "./src/blocks/hero-review-banner/hero-review-banner.scss");
+
+
+/***/ }),
+
+/***/ "./src/blocks/lang-label/lang-label.ts":
+/*!*********************************************!*\
+  !*** ./src/blocks/lang-label/lang-label.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lang_label_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lang-label.scss */ "./src/blocks/lang-label/lang-label.scss");
 
 
 /***/ }),
@@ -2575,6 +2634,7 @@ function rectToClientRect(rect) {
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/hero-author-banner/hero-author-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/hero-banner/hero-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/hero-review-banner/hero-review-banner.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/lang-label/lang-label.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/logo-text/logo-text.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/page-not-found/page-not-found.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/pagination/pagination.ts")))
