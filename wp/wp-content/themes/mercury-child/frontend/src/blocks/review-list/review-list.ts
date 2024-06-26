@@ -1,3 +1,4 @@
+import { API_URL } from '@/shared/scripts/consts'
 import './review-list.scss'
 
 interface ResponseData {
@@ -36,7 +37,7 @@ async function triggetLoad(e: MouseEvent) {
 }
 
 async function load(query?: string) {
-  const res = await fetch(`/wp-json/aces/v1/html/reviews?${query || ''}`)
+  const res = await fetch(`${API_URL}aces/v1/html/reviews?${query || ''}`)
   const data = (await res.json()) as ResponseData
   return data
 }

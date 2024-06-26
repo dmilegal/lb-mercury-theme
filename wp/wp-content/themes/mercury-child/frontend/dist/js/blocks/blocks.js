@@ -1035,7 +1035,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _review_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./review-list.scss */ "./src/blocks/review-list/review-list.scss");
+/* harmony import */ var _shared_scripts_consts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/shared/scripts/consts */ "./src/shared/scripts/consts.ts");
+/* harmony import */ var _review_list_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./review-list.scss */ "./src/blocks/review-list/review-list.scss");
+
 
 function init() {
   const btns = document.querySelectorAll('.lb-review-list__load-more');
@@ -1061,7 +1063,7 @@ async function triggetLoad(e) {
   btn.disabled = false;
 }
 async function load(query) {
-  const res = await fetch(`/wp-json/aces/v1/html/reviews?${query || ''}`);
+  const res = await fetch(`${_shared_scripts_consts__WEBPACK_IMPORTED_MODULE_0__.API_URL}aces/v1/html/reviews?${query || ''}`);
   const data = await res.json();
   return data;
 }
@@ -1322,6 +1324,20 @@ class LbTooltip {
     this.floating.classList.add('lb-tooltip--hidden');
   }
 }
+
+/***/ }),
+
+/***/ "./src/shared/scripts/consts.ts":
+/*!**************************************!*\
+  !*** ./src/shared/scripts/consts.ts ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   API_URL: () => (/* binding */ API_URL)
+/* harmony export */ });
+const API_URL = document.querySelector('link[rel="https://api.w.org/"]')?.href || '/wp-json/';
 
 /***/ }),
 
