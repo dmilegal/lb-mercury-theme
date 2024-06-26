@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import qs from 'qs'
-=======
 import { API_URL } from '@/shared/scripts/consts'
->>>>>>> 3d239a22a47c7343c2669d97099a7afe374a53f1
 import './review-list.scss'
 import { Modal } from '@/shared/scripts/components/modal'
 

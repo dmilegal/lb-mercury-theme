@@ -2367,7 +2367,7 @@ body,
   letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
   color: var(--lb-color-text-strong);
   max-height: 480px;
-  overflow: auto;
+  overflow-y: auto;
   scrollbar-width: thin;
 }
 .lb-modal__body:not(:last-child) {
