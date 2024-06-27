@@ -2005,14 +2005,15 @@ class Modal {
     this.modal.classList.add('lb-modal--active');
     setTimeout(() => {
       this.modal.classList.add('lb-modal--animating-in');
-      //this.disableScroll()
+      this.modal.focus();
+      this.disableScroll();
     }, 60);
   }
   closeModal() {
     this.modal.classList.remove('lb-modal--animating-in');
     this.modal.classList.add('lb-modal--animating-out');
     this.modal.classList.remove('lb-modal--active');
-    //this.enableScroll()
+    this.enableScroll();
     this.modal.addEventListener('transitionend', () => this.destroy());
   }
   destroy() {
@@ -2029,14 +2030,12 @@ class Modal {
     }
   }
   disableScroll() {
-    document.documentElement.style.overflow = 'hidden';
-    document.documentElement.style.scrollbarGutter = 'stable';
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.scrollbarGutter = 'stable';
   }
   enableScroll() {
-    document.documentElement.style.overflow = '';
-    document.documentElement.style.scrollbarGutter = '';
     document.body.style.overflow = '';
+    document.documentElement.style.scrollbarGutter = '';
   }
 }
 

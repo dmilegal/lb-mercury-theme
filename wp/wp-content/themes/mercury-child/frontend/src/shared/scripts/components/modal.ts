@@ -65,7 +65,8 @@ export class Modal {
 
     setTimeout(() => {
       this.modal.classList.add('lb-modal--animating-in')
-      //this.disableScroll()
+      this.modal.focus()
+      this.disableScroll()
     }, 60)
   }
 
@@ -73,7 +74,7 @@ export class Modal {
     this.modal.classList.remove('lb-modal--animating-in')
     this.modal.classList.add('lb-modal--animating-out')
     this.modal.classList.remove('lb-modal--active')
-    //this.enableScroll()
+    this.enableScroll()
     this.modal.addEventListener('transitionend', () => this.destroy())
   }
 
@@ -95,14 +96,12 @@ export class Modal {
   }
 
   private disableScroll() {
-    document.documentElement.style.overflow = 'hidden'
-    document.documentElement.style.scrollbarGutter = 'stable'
     document.body.style.overflow = 'hidden'
+    document.documentElement.style.scrollbarGutter = 'stable'
   }
 
   private enableScroll() {
-    document.documentElement.style.overflow = ''
-    document.documentElement.style.scrollbarGutter = ''
     document.body.style.overflow = ''
+    document.documentElement.style.scrollbarGutter = ''
   }
 }
