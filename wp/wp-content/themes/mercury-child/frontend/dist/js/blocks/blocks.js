@@ -1681,79 +1681,82 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function init() {
-  const btns = document.querySelectorAll('.lb-review-list__load-more');
-  const refBtns = document.querySelectorAll('.lb-review-card__play[href="#0"]');
-  btns.forEach(btn => {
-    btn.addEventListener('click', triggetLoad);
-  });
-  refBtns.forEach(btn => {
-    btn.addEventListener('click', triggetRefModal);
-  });
-}
-async function triggetLoad(e) {
-  const btn = e.currentTarget;
-  const container = btn.closest('.lb-review-list');
-  const preparedQuery = prepareQuery(btn.dataset.query, {
-    paged: (+btn.dataset.currentPage || 1) + 1
-  });
-  btn.classList.add('lb-button--pending');
-  btn.disabled = true;
-  try {
-    const data = await load(preparedQuery);
-    render(data.html, container);
-  } catch (error) {
-    console.error(error);
+;
+(function () {
+  function init() {
+    const btns = document.querySelectorAll('.lb-review-list__load-more');
+    const refBtns = document.querySelectorAll('.lb-review-card__play[href="#0"]');
+    btns.forEach(btn => {
+      btn.addEventListener('click', triggetLoad);
+    });
+    refBtns.forEach(btn => {
+      btn.addEventListener('click', triggetRefModal);
+    });
   }
-  btn.classList.remove('lb-button--pending');
-  btn.disabled = false;
-}
-async function load(query) {
-  const res = await fetch(`${_shared_scripts_consts__WEBPACK_IMPORTED_MODULE_0__.API_URL}aces/v1/html/reviews?${query || ''}`);
-  const data = await res.json();
-  return data;
-}
-function prepareQuery(query, queryData, data) {
-  let params = qs__WEBPACK_IMPORTED_MODULE_3___default().parse(query);
-  params.query = {
-    ...params?.query,
-    ...queryData
-  };
-  params = {
-    ...params,
-    ...data
-  };
-  return qs__WEBPACK_IMPORTED_MODULE_3___default().stringify(params);
-}
-function render(html, container) {
-  const listEl = container.querySelector('.lb-review-list__list');
-  const btn = container.querySelector('.lb-review-list__load-more');
-  listEl.insertAdjacentHTML('beforeend', html);
-  window.CasinoCardsInit(listEl);
-  window.initPromoButton(listEl);
-  btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + '';
-  if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';
-}
-async function triggetRefModal(e) {
-  const btn = e.currentTarget;
-  const container = btn.closest('.lb-review-list');
-  const modalEl = document.querySelector('#ref-review-list');
-  if (!container || !modalEl) return;
-  const list = container.dataset.refItems;
-  const type = container.dataset.type;
-  if (!list || !JSON.parse(list).length) return;
-  const modal = new _shared_scripts_components_modal__WEBPACK_IMPORTED_MODULE_2__.Modal(modalEl);
-  modal.openModal();
-  const data = await load(prepareQuery('', {
-    post__in: JSON.parse(list),
-    post_type: type,
-    posts_per_page: -1
-  }, {
-    card_variant: 'compact-bet'
-  }));
-  modal.setBody(data.html, '.lb-review-list__list');
-}
-init();
+  async function triggetLoad(e) {
+    const btn = e.currentTarget;
+    const container = btn.closest('.lb-review-list');
+    const preparedQuery = prepareQuery(btn.dataset.query, {
+      paged: (+btn.dataset.currentPage || 1) + 1
+    });
+    btn.classList.add('lb-button--pending');
+    btn.disabled = true;
+    try {
+      const data = await load(preparedQuery);
+      render(data.html, container);
+    } catch (error) {
+      console.error(error);
+    }
+    btn.classList.remove('lb-button--pending');
+    btn.disabled = false;
+  }
+  async function load(query) {
+    const res = await fetch(`${_shared_scripts_consts__WEBPACK_IMPORTED_MODULE_0__.API_URL}aces/v1/html/reviews?${query || ''}`);
+    const data = await res.json();
+    return data;
+  }
+  function prepareQuery(query, queryData, data) {
+    let params = qs__WEBPACK_IMPORTED_MODULE_3___default().parse(query);
+    params.query = {
+      ...params?.query,
+      ...queryData
+    };
+    params = {
+      ...params,
+      ...data
+    };
+    return qs__WEBPACK_IMPORTED_MODULE_3___default().stringify(params);
+  }
+  function render(html, container) {
+    const listEl = container.querySelector('.lb-review-list__list');
+    const btn = container.querySelector('.lb-review-list__load-more');
+    listEl.insertAdjacentHTML('beforeend', html);
+    window.CasinoCardsInit(listEl);
+    window.initPromoButton(listEl);
+    btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + '';
+    if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';
+  }
+  async function triggetRefModal(e) {
+    const btn = e.currentTarget;
+    const container = btn.closest('.lb-review-list');
+    const modalEl = document.querySelector('#ref-review-list');
+    if (!container || !modalEl) return;
+    const list = container.dataset.refItems;
+    const type = container.dataset.type;
+    if (!list || !JSON.parse(list).length) return;
+    const modal = new _shared_scripts_components_modal__WEBPACK_IMPORTED_MODULE_2__.Modal(modalEl);
+    modal.openModal();
+    const data = await load(prepareQuery('', {
+      post__in: JSON.parse(list),
+      post_type: type,
+      posts_per_page: -1
+    }, {
+      card_variant: 'compact-bet'
+    }));
+    modal.setBody(data.html, '.lb-review-list__list');
+  }
+  init();
+})();
 
 /***/ }),
 
