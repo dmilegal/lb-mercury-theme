@@ -19,7 +19,7 @@ function init() {
   listEls.forEach((el) => {
     el.addEventListener('click', (e) => {
       if ((e.target as HTMLElement).closest('.lb-review-card__play[href="#0"]'))
-        triggetRefModal(e)
+        triggetRefModal(el)
     })
   })
 }
@@ -83,9 +83,7 @@ function render(html: string, container: HTMLElement) {
   if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none'
 }
 
-async function triggetRefModal(e: MouseEvent) {
-  const btn = e.currentTarget as HTMLButtonElement
-  const container = btn.closest<HTMLElement>('.lb-review-list')
+async function triggetRefModal(container: HTMLElement) {
   const modalEl = document.querySelector<HTMLElement>('#ref-review-list')
   if (!container || !modalEl) return
 

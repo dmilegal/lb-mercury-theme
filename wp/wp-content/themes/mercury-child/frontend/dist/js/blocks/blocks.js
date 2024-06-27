@@ -1689,7 +1689,7 @@ function init() {
   });
   listEls.forEach(el => {
     el.addEventListener('click', e => {
-      if (e.target.closest('.lb-review-card__play[href="#0"]')) triggetRefModal(e);
+      if (e.target.closest('.lb-review-card__play[href="#0"]')) triggetRefModal(el);
     });
   });
 }
@@ -1736,9 +1736,7 @@ function render(html, container) {
   btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + '';
   if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';
 }
-async function triggetRefModal(e) {
-  const btn = e.currentTarget;
-  const container = btn.closest('.lb-review-list');
+async function triggetRefModal(container) {
   const modalEl = document.querySelector('#ref-review-list');
   if (!container || !modalEl) return;
   const list = container.dataset.refItems;
