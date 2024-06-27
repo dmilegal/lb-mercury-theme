@@ -10,16 +10,17 @@ interface ResponseData {
 
 function init() {
   const btns = document.querySelectorAll<HTMLButtonElement>('.lb-review-list__load-more')
-  const refBtns = document.querySelectorAll<HTMLButtonElement>(
-    '.lb-review-card__play[href="#0"]'
-  )
+  const listEls = document.querySelectorAll<HTMLButtonElement>('.lb-review-list')
 
   btns.forEach((btn) => {
     btn.addEventListener('click', triggetLoad)
   })
 
-  refBtns.forEach((btn) => {
-    btn.addEventListener('click', triggetRefModal)
+  listEls.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('.lb-review-card__play[href="#0"]'))
+        triggetRefModal(e)
+    })
   })
 }
 
