@@ -1689,7 +1689,7 @@ function init() {
   });
   listEls.forEach(el => {
     el.addEventListener('click', e => {
-      if (e.target.closest('.lb-review-card__play[href="#0"]')) triggetRefModal(el);
+      if (e.target.closest('button.lb-review-card__play')) triggetRefModal(el);
     });
   });
 }

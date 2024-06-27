@@ -30,7 +30,6 @@ $casino_detailed_tc = wp_kses(get_post_meta($postId, 'casino_detailed_tc', true)
 $overall_rating = esc_html(get_post_meta($postId, 'casino_overall_rating', true));
 $casino_permalink_button_title = esc_html(get_post_meta($postId, 'casino_permalink_button_title', true));
 $casino_button_title = esc_html(get_post_meta($postId, 'casino_button_title', true));
-$casino_external_link = esc_url(get_post_meta($postId, 'casino_external_link', true));
 $casino_terms_desc = wp_kses(get_post_meta($postId, 'casino_terms_desc', true), $casino_allowed_html);
 
 if ($casino_button_title) {
@@ -56,25 +55,13 @@ if ($casino_permalink_button_title) {
 
 $bonusId = aces_get_main_casino_bonus_id($postId);
 $bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $casino_allowed_html);
-$bonus_external_link = esc_url(get_post_meta($bonusId, 'bonus_external_link', true));
 $bonus_button_title = esc_html(get_post_meta($bonusId, 'bonus_button_title', true));
 $bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
 $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
 
 $offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), 'strip');
 
-$is_external_link = false;
-
-if ($bonus_external_link) {
-  $external_link_url = $bonus_external_link;
-  $is_external_link = true;
-} elseif ($casino_external_link) {
-  $external_link_url = $casino_external_link;
-  $is_external_link = true;
-} else {
-  $external_link_url = get_the_permalink($postId);
-}
-
+$external_link_url = getBrandExternalLink($postId);
 
 if (!$bonus_button_title) {
   if (get_option('bonuses_get_bonus_title')) {
@@ -84,10 +71,7 @@ if (!$bonus_button_title) {
   }
 }
 
-$is_locked = get_post_status($postId) == 'draft' ||
-  get_post_status($postId) == 'pending' ||
-  get_post_status($postId) == 'auto-draft' ||
-  get_post_status($postId) == 'private';
+$is_locked = isBrandLocked($postId);
 
 
 ?>
@@ -106,9 +90,9 @@ $is_locked = get_post_status($postId) == 'draft' ||
         'variant' => 'contained-light',
         'content' => $bonus_button_title,
         'className' => 'lb-compact-casino-bonus-card__bonus-link',
-        'href' => $is_locked ? '#0' : esc_url($external_link_url),
-        'target' => !$is_locked ? "_blank" : '',
-        'rel' => $is_external_link ? "nofollow" : ''
+        'href' => $is_locked || !$external_link_url ? '' : esc_url($external_link_url),
+        'target' => $external_link_url && !$is_locked ? "_blank" : '',
+        'rel' => $external_link_url && !$is_locked ? "nofollow" : ''
       ]);
     ?>
   </div>

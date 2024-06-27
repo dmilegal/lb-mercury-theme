@@ -18,7 +18,7 @@ function init() {
 
   listEls.forEach((el) => {
     el.addEventListener('click', (e) => {
-      if ((e.target as HTMLElement).closest('.lb-review-card__play[href="#0"]'))
+      if ((e.target as HTMLElement).closest('button.lb-review-card__play'))
         triggetRefModal(el)
     })
   })

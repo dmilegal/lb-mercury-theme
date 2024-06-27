@@ -73,10 +73,7 @@ if (!$bonus_button_title) {
 
 $external_link_url = getBrandExternalLink($postId);
 
-$is_locked = get_post_status($postId) == 'draft' ||
-  get_post_status($postId) == 'pending' ||
-  get_post_status($postId) == 'auto-draft' ||
-  get_post_status($postId) == 'private';
+$is_locked = isBrandLocked($postId);
 
 ?>
 <div class="<?= classNames($className, 'lb-review-card lb-review-card--mr_closed') ?>" style="<?= stylesValue($style) ?>">
@@ -121,7 +118,7 @@ $is_locked = get_post_status($postId) == 'draft' ||
             'color' => 'primary',
             'className' => 'lb-review-card__play',
             'content' => esc_html($button_title),
-            'href' => $is_locked || !$external_link_url ? '#0' : esc_url($external_link_url),
+            'href' => $is_locked || !$external_link_url ? '' : esc_url($external_link_url),
             'target' => $external_link_url && !$is_locked ? "_blank" : '',
             'rel' => $external_link_url && !$is_locked ? "nofollow" : ''
           ]);
