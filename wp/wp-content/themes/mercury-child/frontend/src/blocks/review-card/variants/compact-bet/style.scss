@@ -24,9 +24,11 @@ body, .lb-review-compact
     align-items: center;
     column-gap: var(--wp--preset--spacing--60);
     margin-right: var(--wp--preset--spacing--110);
-    flex-basis: 40%;
+    flex-basis: 30%;
+    flex-shrink: 0;
     @include breakpoints.media-breakpoint-down(xs) {
-      flex-basis: auto
+      flex-basis: auto;
+      margin-right: var(--wp--preset--spacing--85);
     }
   }
 
