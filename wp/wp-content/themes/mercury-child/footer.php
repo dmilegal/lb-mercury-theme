@@ -2,6 +2,9 @@
 
 </div>
 <?php
+get_template_part('theme-parts/molecules/modal', null, [
+	'id' => "red"
+]);
 /*get_template_part('theme-parts/atoms/button', null, [
 	'size' => 'sm',
 	'prefix' => '<i class="icon-circle"></i>',

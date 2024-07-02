@@ -1,0 +1,119 @@
+@use 'sass:math';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+.lb-modal {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: var(--layout--content-padding);
+
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &--animating-in {
+    display: flex;
+    opacity: 1;
+
+    %content {
+      transform: translateY(0);
+    }
+  }
+
+  &--animating-out {
+    display: flex;
+    opacity: 0;
+
+    %content {
+      transform: translateY(-50px);
+    }
+  }
+
+  &--active {
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    background: var(--lb-color-surface);
+    padding: var(--wp--preset--spacing--100);
+    max-width: 528px;
+    max-height: 100%;
+    width: 100%;
+    border-radius: 24px;
+    border: 1px solid var(--lb-color-surface-outline-3);
+
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-in-out;
+
+    @include breakpoints.media-breakpoint-down('xs') {
+      max-width: 343px;
+    }
+
+    @extend %content;
+  }
+
+  &__header {
+    margin-bottom: var(--wp--preset--spacing--90);
+  }
+
+  &__title {
+    @include font.get-text-styles('display-xs', false);
+    font-weight: 700;
+    color: var(--lb-color-text-strong);
+    &:not(:last-child) {
+      margin-bottom: var(--wp--preset--spacing--60);
+    }
+  }
+
+  &__subtitle {
+    @include font.get-text-styles('text-sm', false);
+    color: var(--lb-color-text-strong);
+  }
+
+  &__body {
+    @include font.get-text-styles('text-sm', false);
+    color: var(--lb-color-text-strong);
+    max-height: 480px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    &:not(:last-child) {
+      margin-bottom: var(--wp--preset--spacing--120);
+    }
+    @include breakpoints.media-breakpoint-down('xs') {
+      max-height: 370px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__close {
+    cursor: pointer;
+    background: none;
+    border: none;
+    @include font.get-text-styles('display-xs');
+    line-height: 1em;
+    padding: 0;
+    margin-left: auto;
+    color: var(--lb-color-text-strong);
+    display: flex;
+    transition: color 170ms ease-in-out;
+    &:hover {
+      color: var(--lb-color-text-default);
+    }
+  }
+}

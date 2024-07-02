@@ -391,6 +391,100 @@ add_action('acf/include_fields', function () {
 				'media_upload' => 1,
 				'delay' => 0,
 			),
+			array(
+				'key' => 'field_6675ac9db3cdd',
+				'label' => 'Brand Ref',
+				'name' => '',
+				'aria-label' => '',
+				'type' => 'tab',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'placement' => 'top',
+				'endpoint' => 0,
+				'selected' => 0,
+			),
+			array(
+				'key' => 'field_6675acb5b3cde',
+				'label' => 'Enable Modal Ref List',
+				'name' => 'enable_modal_ref_list',
+				'aria-label' => '',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 1,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
+			),
+			array(
+				'key' => 'field_6675aceeb3cdf',
+				'label' => 'Modal Ref List Title',
+				'name' => 'modal_ref_list_title',
+				'aria-label' => '',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6675acb5b3cde',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'maxlength' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+			),
+			array(
+				'key' => 'field_6675ad4bb3ce0',
+				'label' => 'Modal Ref List Subtitle',
+				'name' => 'modal_ref_list_subtitle',
+				'aria-label' => '',
+				'type' => 'textarea',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6675acb5b3cde',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'placeholder' => '',
+				'new_lines' => '',
+			),
 		),
 		'location' => array(
 			array(
@@ -413,6 +507,14 @@ add_action('acf/include_fields', function () {
 	));
 });
 
+add_action('acf/init', function () {
+	acf_add_options_page(array(
+		'page_title' => 'Template Settings',
+		'menu_slug' => 'tpl-settz',
+		'position' => '',
+		'redirect' => false,
+	));
+});
 add_action('acf/init', function () {
 	acf_add_options_page(array(
 		'page_title' => 'Template Settings',

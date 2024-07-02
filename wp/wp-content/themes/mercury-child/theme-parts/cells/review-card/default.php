@@ -32,7 +32,6 @@ $casino_detailed_tc = wp_kses(get_post_meta($postId, 'casino_detailed_tc', true)
 $overall_rating = esc_html(get_post_meta($postId, 'casino_overall_rating', true));
 $casino_permalink_button_title = esc_html(get_post_meta($postId, 'casino_permalink_button_title', true));
 $casino_button_title = esc_html(get_post_meta($postId, 'casino_button_title', true));
-$casino_external_link = esc_url(get_post_meta($postId, 'casino_external_link', true));
 $casino_terms_desc = wp_kses(get_post_meta($postId, 'casino_terms_desc', true), $casino_allowed_html);
 
 if ($casino_button_title) {
@@ -58,7 +57,6 @@ if ($casino_permalink_button_title) {
 
 $bonusId = aces_get_main_casino_bonus_id($postId);
 $bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $casino_allowed_html);
-$bonus_external_link = esc_url(get_post_meta($bonusId, 'bonus_external_link', true));
 $bonus_button_title = esc_html(get_post_meta($bonusId, 'bonus_button_title', true));
 $bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
 $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
@@ -73,23 +71,9 @@ if (!$bonus_button_title) {
   }
 }
 
-$is_external_link = false;
+$external_link_url = getBrandExternalLink($postId);
 
-if ($bonus_external_link) {
-  $external_link_url = $bonus_external_link;
-  $is_external_link = true;
-} elseif ($casino_external_link) {
-  $external_link_url = $casino_external_link;
-  $is_external_link = true;
-} else {
-  $external_link_url = get_the_permalink($postId);
-}
-
-
-$is_locked = get_post_status($postId) == 'draft' ||
-  get_post_status($postId) == 'pending' ||
-  get_post_status($postId) == 'auto-draft' ||
-  get_post_status($postId) == 'private';
+$is_locked = isBrandLocked($postId);
 
 ?>
 <div class="<?= classNames($className, 'lb-review-card lb-review-card--mr_closed') ?>" style="<?= stylesValue($style) ?>">
@@ -129,17 +113,15 @@ $is_locked = get_post_status($postId) == 'draft' ||
       <? } ?>
       <div class="lb-review-card__actions">
         <?
-        if ($external_link_url) {
           get_template_part('theme-parts/atoms/button', null, [
             'size' => 'xl',
             'color' => 'primary',
             'className' => 'lb-review-card__play',
             'content' => esc_html($button_title),
-            'href' => $is_locked ? '#0' : esc_url($external_link_url),
-            'target' => $is_external_link && !$is_locked ? "_blank" : '',
-            'rel' => $is_external_link && !$is_locked ? "nofollow" : ''
+            'href' => $is_locked || !$external_link_url ? '' : esc_url($external_link_url),
+            'target' => $external_link_url && !$is_locked ? "_blank" : '',
+            'rel' => $external_link_url && !$is_locked ? "nofollow" : ''
           ]);
-        }
 
         if ($bonus_code)
           get_template_part('theme-parts/molecules/promo-button', null, [

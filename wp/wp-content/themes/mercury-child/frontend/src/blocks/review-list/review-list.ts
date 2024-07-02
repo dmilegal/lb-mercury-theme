@@ -1,5 +1,7 @@
+import qs from 'qs'
 import { API_URL } from '@/shared/scripts/consts'
 import './review-list.scss'
+import { Modal } from '@/shared/scripts/components/modal'
 
 interface ResponseData {
   html: string
@@ -8,9 +10,17 @@ interface ResponseData {
 
 function init() {
   const btns = document.querySelectorAll<HTMLButtonElement>('.lb-review-list__load-more')
+  const listEls = document.querySelectorAll<HTMLButtonElement>('.lb-review-list')
 
   btns.forEach((btn) => {
     btn.addEventListener('click', triggetLoad)
+  })
+
+  listEls.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('button.lb-review-card__play'))
+        triggetRefModal(el)
+    })
   })
 }
 
@@ -42,14 +52,22 @@ async function load(query?: string) {
   return data
 }
 
-function prepareQuery(query: string, data?: { paged?: number | string }) {
-  const params = new URLSearchParams(query)
+function prepareQuery(
+  query: string,
+  queryData?: Record<string, any>,
+  data?: Record<string, any>
+) {
+  let params = qs.parse(query)
+  params.query = {
+    ...(params as Record<any, any>)?.query,
+    ...queryData,
+  }
+  params = {
+    ...params,
+    ...data,
+  }
 
-  Object.keys(data || {}).forEach((key) => {
-    params.set(`query[${key}]`, data[key] + '')
-  })
-
-  return params.toString()
+  return qs.stringify(params)
 }
 
 function render(html: string, container: HTMLElement) {
@@ -63,6 +81,34 @@ function render(html: string, container: HTMLElement) {
   btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + ''
 
   if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none'
+}
+
+async function triggetRefModal(container: HTMLElement) {
+  const modalEl = document.querySelector<HTMLElement>('#ref-review-list')
+  if (!container || !modalEl) return
+
+  const list = container.dataset.refItems
+  const type = container.dataset.type
+  if (!list || !JSON.parse(list).length) return
+
+  const modal = new Modal(modalEl)
+  modal.openModal()
+
+  const data = await load(
+    prepareQuery(
+      '',
+      {
+        post__in: JSON.parse(list),
+        post_type: type,
+        posts_per_page: -1,
+      },
+      {
+        card_variant: 'compact-bet',
+      }
+    )
+  )
+
+  modal.setBody(data.html, '.lb-review-list__list')
 }
 
 init()

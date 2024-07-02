@@ -56,6 +56,8 @@ if ($queryArgs) {
 
     endwhile;
 
+    $refReviewList = array_map(fn ($i) => $i['post_id'], array_values(array_filter($reviewListFull, fn ($c) => !!getBrandExternalLink($c['post_id']))));
+
     $maxPages = $wp_query->max_num_pages;
     $currentPage = $queryArgs['paged'] ?? 1;
 
@@ -64,6 +66,7 @@ if ($queryArgs) {
       'post_type' => $postType,
       'review_list' => $reviewList,
       'review_list_full' => $reviewListFull,
+      'ref_review_list' => $refReviewList,
       'total_pages' => $maxPages,
       'current_page' => $currentPage,
       'query_args' => $queryArgs,
@@ -71,5 +74,8 @@ if ($queryArgs) {
     ]);
 
     wp_reset_query();
+
+    if ($refReviewList && get_field("enable_modal_ref_list", "options"))
+      add_action('wp_footer', fn () => get_template_part('/theme-parts/cells/ref-review-modal-tpl'));
   }
 }

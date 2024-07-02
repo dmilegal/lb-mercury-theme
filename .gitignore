@@ -50,7 +50,7 @@ wp/wp-content/plugins/*
 !wp/wp-content/plugins/lb-app-cpt-addon
 !wp/wp-content/themes
 wp/wp-content/themes/*
-wp/wp-content/themes/mercury-child/frontend/dist
+!wp/wp-content/themes/mercury-child/frontend/dist
 !wp/wp-content/themes/mercury-child
 xdebug
 https-portal-data

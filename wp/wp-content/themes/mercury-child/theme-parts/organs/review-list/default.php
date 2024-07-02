@@ -1,21 +1,23 @@
 <?
 $theme = $args['theme'] ?? 'fullwidth';
+$list_theme = $args['list_theme'] ?? 'default';
 $queryArgs = $args['query_args'] ?? [];
 $title = $args['title'] ?? '';
 $reviewList = $args['review_list'] ?? [];
 $reviewListFull = $args['review_list_full'] ?? [];
+$refReviewList = $args['ref_review_list'] ?? [];
 $totalPages = $args['total_pages'] ?? 1;
 $currentPage = $args['current_page'] ?? 1;
 $disablePagination = $args['disable_pagination'] ?? false;
 $cardVariant = $args['card_variant'] ?? 'default';
 $postType = $args['post_type'] ?? 'casino';
+$asyncLoading = $args['async_loading'] ?? false;
 $showLicenseText = $args['show_license_ar_text_for_listing'] ?? false;
 $licenseText = get_field("license_ar_text_for_listing", "option");
 
-if ($reviewList) {
+if ($reviewList || $asyncLoading) {
 ?>
-
-  <div class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
+  <div data-type="<?= $postType ?>" data-ref-items="<?= esc_attr(json_encode($refReviewList)) ?>" class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
     <div class="lb-review-list__wrapper">
       <div class="lb-review-list__inner">
         <?php if ($title || ($licenseText && $showLicenseText)) { ?>
@@ -30,7 +32,12 @@ if ($reviewList) {
             <? } ?>
           </div>
         <?php } ?>
-        <div class="lb-review-list__list">
+        <div class="lb-review-list__list lb-review-list__list--theme_<?= $list_theme ?>">
+          <? if ($asyncLoading) { ?>
+            <div class="lb-review-list__loading">
+              <img class="lb-review-list__loading-ico" width="45" height="45" src="<?= get_stylesheet_directory_uri() ?>/img/loading.svg">
+            </div>
+          <? } ?>
           <? foreach ($reviewList as $reviewItem) {
             get_template_part('theme-parts/cells/review-card/review-card', null, [
               'card_variant' => $cardVariant,
