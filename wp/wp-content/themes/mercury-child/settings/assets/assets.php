@@ -115,7 +115,10 @@ function enqueue_assets_by_name($name)
 
   wp_enqueue_style($name, '', [], wp_get_theme()->get('Version'));
 
-  wp_enqueue_script($name, '', [], wp_get_theme()->get('Version'));
+  wp_enqueue_script($name, '', [], wp_get_theme()->get('Version'), [
+    'in_footer' => true,
+    'strategy'  => 'async',
+  ]);
 
   foreach (['js/commons/', 'css/commons/'] as $path) {
     $dir = get_stylesheet_directory() . '/frontend/dist/' . $path;
@@ -135,7 +138,10 @@ function enqueue_assets_by_path($assetPath)
     if ($isCss)
       wp_enqueue_style(getAssetName($file), '', [], wp_get_theme()->get('Version'));
     elseif ($isJs)
-      wp_enqueue_script(getAssetName($file), '', [], wp_get_theme()->get('Version'));
+      wp_enqueue_script(getAssetName($file), '', [], wp_get_theme()->get('Version'), [
+        'in_footer' => true,
+        'strategy'  => 'defer',
+      ]);
   }
 }
 
