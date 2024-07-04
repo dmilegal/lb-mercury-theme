@@ -13,3 +13,6 @@
 [submodule "wp/wp-content/plugins/lb-app-cpt-addon"]
 	path = wp/wp-content/plugins/lb-app-cpt-addon
 	url = https://github.com/dmilegal/lb-app-cpt-addon.git
+[submodule "wp/wp-content/plugins/lb-breadcrumb"]
+	path = wp/wp-content/plugins/lb-breadcrumb
+	url = https://github.com/dmilegal/lb-breadcrumb.git
