@@ -162,3 +162,5 @@ function register_assets_by_path($assetPath)
       ]);
   }
 }
+
+require_once "emoji-fix.php";
