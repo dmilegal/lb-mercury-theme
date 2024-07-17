@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --hero-review-banner-space-top: var(--wp--preset--spacing--140);
   --hero-review-banner-space-bottom: var(--wp--preset--spacing--160);
   --hero-review-banner-color-background: var(--lb-color-surface-high);

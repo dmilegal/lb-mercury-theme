@@ -5,7 +5,7 @@
 @use '@/shared/styles/mixins/media-containers';
 @use '@/shared/styles/mixins/container';
 
-body, .lb-review-compact
+:root, .lb-review-compact
 {
   --lb-review-compact-color-text: var(--lb-color-text-strong);
 }

@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/breakpoints';
 
 
-body, .editor-styles-wrapper {
+:root, .editor-styles-wrapper {
   --lb-user-block-name-color: var(--lb-color-text-strong);
   --lb-user-block-job-color: var(--lb-color-text-default);
   --lb-user-block-bio-color: var(--lb-color-text-default);

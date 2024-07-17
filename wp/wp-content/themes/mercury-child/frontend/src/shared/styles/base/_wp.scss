@@ -4,7 +4,7 @@ $wrapperSelector: null !default;
 @use "@/shared/styles/mixins/container";
 @use "@/shared/styles/mixins/font";
 
-body {
+:root {
   --lb--caption-color-text: var(--lb-color-text-default);
 }
 

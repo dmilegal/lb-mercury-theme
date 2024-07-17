@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/container';
 @use '@/shared/styles/mixins/font';
 
-body {
+:root {
   --lb-footer-color-background: var(--lb-color-surface-max);
   --lb-footer-dis-color-text: var(--lb-color-on-surface-min);
 

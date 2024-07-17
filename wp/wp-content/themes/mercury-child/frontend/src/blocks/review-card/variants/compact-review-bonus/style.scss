@@ -5,7 +5,7 @@
 @use '@/shared/styles/mixins/media-containers';
 @use '@/shared/styles/mixins/container';
 
-body,
+:root,
 .editor-styles-wrapper {
   --lb-ccb-review-card-color-text: var(--lb-color-text-strong);
   --lb-ccb-review-card-color-text-sub: var(--lb-color-text-default);

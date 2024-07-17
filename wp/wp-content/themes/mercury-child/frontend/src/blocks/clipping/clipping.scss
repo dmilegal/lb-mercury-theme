@@ -2,7 +2,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --lb-clipping-clip-line-count: 3;
   --lb-clipping-toggle-color-text: var(--lb-color-text-default);
 }

@@ -2,7 +2,7 @@
 @use '@/shared/styles/mixins/breakpoints';
 @use '@/shared/styles/mixins/font';
 
-body {
+:root {
   --lb-archive-nf-title-color-text: var(--lb-color-text-strong);
   --lb-archive-nf-subtitle-color-text: var(--lb-color-text-default);
 }

@@ -5,7 +5,7 @@
 @use '@/shared/styles/mixins/media-containers';
 @use '@/shared/styles/mixins/container';
 
-body,
+:root,
 .editor-styles-wrapper {
   --lb-review-card-color-background: var(--lb-color-surface);
   --lb-review-card-color-border: var(--lb-color-primary-outline-variant-1);

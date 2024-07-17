@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/breakpoints';
 @use '@/shared/styles/mixins/container';
 
-body, .editor-styles-wrapper {
+:root, .editor-styles-wrapper {
   --wp-block-media-text-space-y: 0px;
 }
 

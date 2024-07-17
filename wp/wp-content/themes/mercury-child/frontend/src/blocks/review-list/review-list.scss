@@ -4,7 +4,7 @@
 @use '@/shared/styles/mixins/breakpoints';
 @use '@/shared/styles/mixins/container';
 
-body,
+:root,
 .editor-styles-wrapper {
   --lb-casino-selection-color-background: var(--lb-color-surface-high);
   --lb-casino-subtitle-color: var(--lb-color-on-surface-min);

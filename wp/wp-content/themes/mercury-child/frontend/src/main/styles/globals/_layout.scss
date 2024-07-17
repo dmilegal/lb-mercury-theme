@@ -1,7 +1,7 @@
 @use '@/shared/styles/mixins/container';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --lb-layout-grid-col-template: repeat(20, 1fr);
   --lb-layout-grid-gap-x: calc(var(--layout-content-spacing) / 2);
   --lb-layout-content-grid-col-start: 1;

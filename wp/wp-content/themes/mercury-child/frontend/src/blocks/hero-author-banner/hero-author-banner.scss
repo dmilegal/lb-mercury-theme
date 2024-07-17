@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --lb-hero-author-banner-color-background: var(--lb-color-surface-high);
   --lb-hero-author-banner-name-color-text: var(--lb-color-text-strong);
   --lb-hero-author-banner-bio-color-text: var(--lb-color-text-default);

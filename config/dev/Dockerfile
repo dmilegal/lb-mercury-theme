@@ -1,4 +1,4 @@
-FROM wordpress:6.5.3-php8.1-apache
+FROM wordpress:6.6.0-php8.1-apache
 # Install packages under Debian
 RUN apt-get update && \
     apt-get -y install git

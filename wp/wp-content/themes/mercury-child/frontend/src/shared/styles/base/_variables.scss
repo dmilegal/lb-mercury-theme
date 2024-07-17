@@ -4,7 +4,7 @@
 
 @use 'sass:map';
 
-body {
+:root {
   --wp--style--block-gap: var(--wp--preset--spacing--90);
   --layout-content-spacing: var(--wp--custom--layout--content-spacing-md);
   @include breakpoints.media-breakpoint-down('sm') {
@@ -60,7 +60,7 @@ body {
   --lb-color-on-surface-min: var(--wp--preset--color--gray-400);
 }
 
-body {
+:root {
   @each $name, $params in text.$body-fonts {
     --lb-font-size-#{$name}-relative: #{map.get($params, 'font-size')};
     --lb-line-height-#{$name}-relative: #{map.get($params, 'line-height')};

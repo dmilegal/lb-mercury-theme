@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --cmplz_text_color: var(--lb-color-text-strong);
   --cmplz_content_color: var(--lb-color-text-strong);
 
@@ -30,7 +30,7 @@ body {
   --cmplz_banner_border_radius: var(--wp--preset--spacing--85);
 }
 
-body {
+:root {
   &.age-restriction, &.cb-hide {
     #cmplz-cookiebanner-container {
       display: none;
