@@ -5,8 +5,7 @@
       {
         "targets": {
           "browsers": [
-            "last 2 versions",
-            "safari 11"
+            "last 6 versions"
           ]
         }
       }

@@ -55,11 +55,12 @@ $proseCustomSelector: null !default;
 }
 
 @include typo.make-prose('spaces', '.wp-block-table', $proseCustomSelector) {
-  margin: var(--wp--preset--spacing--160) 0;
+  margin-block-start: var(--wp--preset--spacing--160);
+  margin-block-end: var(--wp--preset--spacing--160);
   &:first-child {
-    margin-top: 0;
+    margin-block-start: 0;
   }
   &:last-child {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }

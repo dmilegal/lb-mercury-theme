@@ -55,11 +55,11 @@
     }
 
     &__buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       &:not(:last-child) {
         margin-bottom: var(--wp--preset--spacing--70);
       }
-      display: grid;
-      grid-template-columns: 1fr 1fr;
     }
 
     &__submit {

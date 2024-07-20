@@ -1,5 +1,6 @@
 $globalSelector: ':root' !default;
 $proseCustomSelector: null !default;
+$isEditor: false !default;
 
 @use 'sass:map';
 @use '@/shared/styles/abstracts/text';
@@ -77,8 +78,9 @@ $proseCustomSelector: null !default;
 
 @include typo.make-prose(
   'spaces',
-  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.wp-block-columns,.lb-group-list,.lb-review-details,.lb-review-list,.lb-author-block,[id*="sp_easy_accordion"],.lb-step-list,.wp-block-casino-card,.wp-block-bonus-card',
-  $proseCustomSelector
+  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.wp-block-columns,.lb-group-list,.lb-review-details,.lb-review-list,.lb-author-block,[id*="sp_easy_accordion"],.lb-step-list,.wp-block-casino-card,.wp-block-lb-casino-card,.wp-block-bonus-card',
+  $proseCustomSelector,
+  $isEditor
 ) {
   &:first-child {
     margin-block-start: 0;
@@ -91,18 +93,19 @@ $proseCustomSelector: null !default;
 @include typo.make-prose(
   'spaces',
   '.wp-block-columns,.lb-group-list',
-  $proseCustomSelector
+  $proseCustomSelector,
+  $isEditor
 ) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-@include typo.make-prose('spaces', 'h2', $proseCustomSelector) {
+@include typo.make-prose('spaces', 'h2', $proseCustomSelector, $isEditor) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-@include typo.make-prose('spaces', 'h3', $proseCustomSelector) {
+@include typo.make-prose('spaces', 'h3', $proseCustomSelector, $isEditor) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--80);
   @include breakpoints.media-breakpoint-down(sm) {
@@ -110,86 +113,87 @@ $proseCustomSelector: null !default;
   }
 }
 
-@include typo.make-prose('spaces', 'p,.wp-block-image', $proseCustomSelector) {
+@include typo.make-prose('spaces', 'p,.wp-block-image', $proseCustomSelector, $isEditor) {
   margin-block-start: var(--wp--preset--spacing--80);
   margin-block-end: var(--wp--preset--spacing--80);
 }
 
-@include typo.make-prose('spaces', 'ul,ol', $proseCustomSelector) {
+@include typo.make-prose('spaces', 'ul,ol', $proseCustomSelector, $isEditor) {
   margin-block-start: var(--wp--preset--spacing--90);
   margin-block-end: var(--wp--preset--spacing--90);
 }
 
-@include typo.make-prose('spaces', 'blockquote', $proseCustomSelector) {
+@include typo.make-prose('spaces', 'blockquote', $proseCustomSelector, $isEditor) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-@include typo.make-prose('spaces', '.lb-post-info', $proseCustomSelector) {
+@include typo.make-prose('spaces', '.lb-post-info', $proseCustomSelector, $isEditor) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-@include typo.make-prose('spaces', '.lb-logo-text', $proseCustomSelector) {
+@include typo.make-prose('spaces', '.lb-logo-text', $proseCustomSelector, $isEditor) {
   --lb-logo-text-space-y: var(--wp--preset--spacing--100);
 }
 
-@include typo.make-prose('spaces', '.wp-block-media-text', $proseCustomSelector) {
+@include typo.make-prose('spaces', '.wp-block-media-text', $proseCustomSelector, $isEditor) {
   --wp-block-media-text-space-y: var(--wp--preset--spacing--100);
 }
 
 @include typo.make-prose(
   'spaces',
   '.lb-author-block, [id*="sp_easy_accordion"]',
-  $proseCustomSelector
+  $proseCustomSelector,
+  $isEditor
 ) {
-  margin-top: var(--wp--preset--spacing--100);
-  margin-bottom: var(--wp--preset--spacing--100);
+  margin-block-start: var(--wp--preset--spacing--100);
+  margin-block-end: var(--wp--preset--spacing--100);
 }
 
-@include typo.make-prose('spaces', '.lb-author-block', $proseCustomSelector) {
-  margin-top: var(--wp--preset--spacing--160);
-  margin-bottom: var(--wp--preset--spacing--160);
+@include typo.make-prose('spaces', '.lb-author-block', $proseCustomSelector, $isEditor) {
+  margin-block-start: var(--wp--preset--spacing--160);
+  margin-block-end: var(--wp--preset--spacing--160);
 
   @include breakpoints.media-breakpoint-down(sm) {
-    margin-top: var(--wp--preset--spacing--140);
-    margin-bottom: var(--wp--preset--spacing--140);
+    margin-block-start: var(--wp--preset--spacing--140);
+    margin-block-end: var(--wp--preset--spacing--140);
   }
 }
 
-@include typo.make-prose('spaces', '.lb-review-details', $proseCustomSelector) {
-  margin-top: var(--wp--preset--spacing--160);
-  margin-bottom: var(--wp--preset--spacing--160);
+@include typo.make-prose('spaces', '.lb-review-details', $proseCustomSelector, $isEditor) {
+  margin-block-start: var(--wp--preset--spacing--160);
+  margin-block-end: var(--wp--preset--spacing--160);
 
   @include breakpoints.media-breakpoint-down(sm) {
-    margin-top: var(--wp--preset--spacing--140);
-    margin-bottom: var(--wp--preset--spacing--140);
+    margin-block-start: var(--wp--preset--spacing--140);
+    margin-block-end: var(--wp--preset--spacing--140);
   }
 }
 
-@include typo.make-prose('spaces', '.lb-review-list', $proseCustomSelector) {
-  margin-top: var(--wp--preset--spacing--140);
-  margin-bottom: var(--wp--preset--spacing--140);
+@include typo.make-prose('spaces', '.lb-review-list', $proseCustomSelector, $isEditor) {
+  margin-block-start: var(--wp--preset--spacing--140);
+  margin-block-end: var(--wp--preset--spacing--140);
 
   @include breakpoints.media-breakpoint-down(sm) {
-    margin-top: var(--wp--preset--spacing--120);
-    margin-bottom: var(--wp--preset--spacing--120);
+    margin-block-start: var(--wp--preset--spacing--120);
+    margin-block-end: var(--wp--preset--spacing--120);
   }
 }
 
-@include typo.make-prose('spaces', '.lb-step-list', $proseCustomSelector) {
-  margin-top: var(--wp--preset--spacing--120);
-  margin-bottom: var(--wp--preset--spacing--120);
+@include typo.make-prose('spaces', '.lb-step-list', $proseCustomSelector, $isEditor) {
+  margin-block-start: var(--wp--preset--spacing--120);
+  margin-block-end: var(--wp--preset--spacing--120);
 }
 
-@include typo.make-prose('spaces', '.wp-block-casino-card', $proseCustomSelector) {
-  margin-top: var(--wp--preset--spacing--100);
-  margin-bottom: var(--wp--preset--spacing--100);
+@include typo.make-prose('spaces', '.wp-block-casino-card,.wp-block-lb-casino-card', $proseCustomSelector, $isEditor) {
+  margin-block-start: var(--wp--preset--spacing--100);
+  margin-block-end: var(--wp--preset--spacing--100);
 }
 
-@include typo.make-prose('spaces', '.wp-block-bonus-card', $proseCustomSelector) {
-  margin-top: var(--wp--preset--spacing--100);
-  margin-bottom: var(--wp--preset--spacing--100);
+@include typo.make-prose('spaces', '.wp-block-bonus-card', $proseCustomSelector, $isEditor) {
+  margin-block-start: var(--wp--preset--spacing--100);
+  margin-block-end: var(--wp--preset--spacing--100);
 }
 
 
