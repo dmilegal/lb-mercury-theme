@@ -3292,15 +3292,15 @@
     margin-bottom: var(--wp--preset--spacing--100);
   }
 }
-.lb-review-list__subtitle {
-  margin-bottom: var(--wp--preset--spacing--70);
-}
 .lb-review-list__subtitle, .lb-review-list__subtitle p {
   font-size: var(--wp--preset--font-size--text-xs);
   line-height: var(--wp--custom--line-height--text-xs);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
   color: var(--lb-casino-subtitle-color);
+}
+.lb-review-list__subtitle {
+  margin-bottom: var(--wp--preset--spacing--70);
 }
 .lb-review-list__subtitle:not(:only-child) {
   margin-bottom: var(--wp--preset--spacing--140);
@@ -3564,8 +3564,8 @@
 }
 .ez-toc-link {
   color: var(--lb-toc-link-color-text);
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
   transition: color 170ms ease-in-out;
 }
 .ez-toc-link:hover {
