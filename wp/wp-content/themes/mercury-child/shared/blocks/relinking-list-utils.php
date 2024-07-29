@@ -7,7 +7,8 @@ function relinkingListTransform($list)
 function relinkingListItemTransform($item)
 {
   return [
-    ...$item,
+    'key' => uniqid(),
+    'link' => get_permalink($item['link']),
     'title' => $item['custom_title'] ?? $item['custom_title'] ? $item['custom_title'] : get_the_title($item['link'])
   ];
 }

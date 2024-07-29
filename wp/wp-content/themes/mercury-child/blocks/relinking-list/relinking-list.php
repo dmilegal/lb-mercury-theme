@@ -18,7 +18,8 @@ if (get_field('list') || get_field('title'))
   get_template_part('theme-parts/cells/relinking-list/relinking-list', null, [
     ...$block_opts,
     'title' => get_field('title'),
-    'limit' => get_field('limit'),
+    'enable_limit' => get_field('enable_limit'),
+    'number_to_show' => get_field('number_to_show'),
     'list' => get_field('list'),
     'theme' => get_field('theme')
   ]);

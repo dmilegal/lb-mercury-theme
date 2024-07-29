@@ -107,7 +107,7 @@ export default function common(mode) {
       },
       clean: true,
     },
-    optimization: {
+    /*optimization: {
       splitChunks: {
         cacheGroups: {
           cssVendor: {
@@ -128,9 +128,9 @@ export default function common(mode) {
               // together by ~.  We can then determine which chunk/file
               // needs to be loaded by each entry point.
               const allChunksNames = chunks
-                .map((item) => `chk-${item.name}-chk`)
+                .map((item) => `chk-${item.name}-chk.lib`)
                 .join('~')
-              return `libs/${allChunksNames}-mdl-${moduleFileName}-mdl`
+              return `libs/${allChunksNames}`
             },
             chunks: 'initial',
             priority: -10,
@@ -151,9 +151,9 @@ export default function common(mode) {
               // together by ~.  We can then determine which chunk/file
               // needs to be loaded by each entry point.
               const allChunksNames = chunks
-                .map((item) => `chk-${item.name}-chk`)
+                .map((item) => `chk-${item.name}-chk.lib`)
                 .join('~')
-              return `libs/${allChunksNames}-mdl-${moduleFileName}-mdl`
+              return `libs/${allChunksNames}`
             },
             chunks: 'all',
             priority: -10,
@@ -162,7 +162,7 @@ export default function common(mode) {
           default: false,
         },
       },
-    },
+    },*/
     module: {
       rules: [
         {
@@ -174,14 +174,14 @@ export default function common(mode) {
               loader: 'babel-loader',
               options: {
                 presets: [
-                  [
+                  /*[
                     '@babel/preset-env',
                     {
                       targets: {
-                        node: '17.6.0',
+                        node: '22',
                       },
                     },
-                  ],
+                  ],*/
                   '@babel/preset-react',
                   '@babel/preset-typescript',
                 ],
