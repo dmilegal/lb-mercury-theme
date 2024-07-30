@@ -58,7 +58,8 @@
     transition: transform 0.3s ease-in-out;
 
     @include breakpoints.media-breakpoint-down('xs') {
-      max-width: 343px;
+      max-width: 100%;
+      padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--80);
     }
 
     @extend %content;
