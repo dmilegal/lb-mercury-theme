@@ -14,6 +14,7 @@ $postType = $args['post_type'] ?? 'casino';
 $asyncLoading = $args['async_loading'] ?? false;
 $showLicenseText = $args['show_license_ar_text_for_listing'] ?? false;
 $licenseText = get_field("license_ar_text_for_listing", "option");
+$listBonusCategory = $args['bonus_category'] ?? false;
 
 if ($reviewList || $asyncLoading) {
 ?>
@@ -42,6 +43,7 @@ if ($reviewList || $asyncLoading) {
             get_template_part('theme-parts/cells/review-card/review-card', null, [
               'card_variant' => $cardVariant,
               'post_type' => $postType,
+              'list_bonus_category' => $listBonusCategory,
               ...$reviewItem
             ]);
           } ?>
