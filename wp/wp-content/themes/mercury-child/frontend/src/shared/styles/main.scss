@@ -1,6 +1,7 @@
 $globalSelector: null !default;
 $proseCustomSelector: null !default;
 $disableNormalize: null !default;
+$isEditor: false !default;
 /*
 * Project style
 */
@@ -8,13 +9,15 @@ $disableNormalize: null !default;
 @use 'base' with (
   $globalSelector: $globalSelector,
   $proseCustomSelector: $proseCustomSelector,
-  $disableNormalize: $disableNormalize
+  $disableNormalize: $disableNormalize,
+  $isEditor: $isEditor
 );
 
 /*themes*/
 @use 'themes' with (
   $globalSelector: $globalSelector,
-  $proseCustomSelector: $proseCustomSelector
+  $proseCustomSelector: $proseCustomSelector,
+  $isEditor: $isEditor
 );
 
 @use 'components';

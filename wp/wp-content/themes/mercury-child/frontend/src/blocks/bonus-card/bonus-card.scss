@@ -2,7 +2,7 @@
 @use '@/shared/styles/mixins/breakpoints';
 @use '@/shared/styles/mixins/media-containers';
 
-body,
+:root,
 .editor-styles-wrapper {
   --lb-bonus-card-color-border: var(--lb-color-primary-outline-variant-1);
   --lb-bonus-card-color-background:var(--lb-color-primary-container-low);

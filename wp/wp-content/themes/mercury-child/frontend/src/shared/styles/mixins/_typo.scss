@@ -1,7 +1,7 @@
 /**
 * itertors
 **/
-@mixin make-prose($groupName, $selectorList, $customProseSelector) {
+@mixin make-prose($groupName, $selectorList, $customProseSelector, $isEditor: false) {
   @if $customProseSelector {
     @if $selectorList != '' {
       #{$customProseSelector}
@@ -11,6 +11,16 @@
             )
         ) {
         @content;
+      }
+
+      @if ($groupName == 'spaces' and $isEditor) {
+        .editor-styles-wrapper .is-layout-flow > :is(
+          :where(#{$selectorList}):not(
+              :where([class~='not-prose'], [class~='not-prose'] *)
+            )
+        ) {
+          @content;
+        }
       }
     } @else {
       #{$customProseSelector}:not(

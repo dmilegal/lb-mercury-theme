@@ -1,6 +1,6 @@
 @use '@/shared/styles/mixins/container';
 
-body {
+:root {
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
 }

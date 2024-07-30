@@ -2,7 +2,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body, .editor-styles-wrapper {
+:root, .editor-styles-wrapper {
   --lb-sidebar-color-border: var(--wp--preset--color--gray-200);
   --lb-sidebar-block-title-color-text: var(--wp--preset--color--primary-600);
 }

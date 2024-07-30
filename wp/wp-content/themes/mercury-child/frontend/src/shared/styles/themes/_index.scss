@@ -1,9 +1,11 @@
 $globalSelector: null !default;
 $proseCustomSelector: null !default;
+$isEditor: false !default;
 
 @use 'text' with (
   $globalSelector: $globalSelector,
-  $proseCustomSelector: $proseCustomSelector
+  $proseCustomSelector: $proseCustomSelector,
+  $isEditor: $isEditor
 );
 @use 'table' with (
   $globalSelector: $globalSelector,

@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body,
+:root,
 .editor-styles-wrapper {
   --lb-step-list-item-title-color-text: var(--lb-color-text-strong);
   --lb-step-list-item-ico-color-background: var(--lb-color-primary-container);

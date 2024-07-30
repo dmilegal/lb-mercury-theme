@@ -2,7 +2,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/typo';
 
-body {
+:root {
   --lb-author-block-border-color: var(--wp--preset--color--gray-200);
 }
 

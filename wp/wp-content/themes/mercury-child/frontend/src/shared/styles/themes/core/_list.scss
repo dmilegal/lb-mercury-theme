@@ -1,6 +1,6 @@
 @use '@/shared/styles/mixins/breakpoints';
 
-body,
+:root,
 .editor-styles-wrapper {
   --wp-list-ico-color-text: var(--lb-color-primary);
   --wp-list-ico-spacing-s: 2em;

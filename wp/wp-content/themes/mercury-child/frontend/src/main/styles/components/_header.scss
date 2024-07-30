@@ -10,7 +10,7 @@
   }
 }
 
-body {
+:root {
   --lb-header-height: var(--wp--preset--spacing--220);
   @include breakpoints.media-breakpoint-down('sm') {
     --lb-header-height: var(--wp--preset--spacing--185);

@@ -4,7 +4,7 @@
 @use '@/shared/styles/mixins/breakpoints';
 @use '@/shared/styles/mixins/container';
 
-body,
+:root,
 .editor-styles-wrapper {
   --lb-casino-selection-color-background: var(--lb-color-surface-high);
   --lb-casino-subtitle-color: var(--lb-color-on-surface-min);
@@ -75,9 +75,10 @@ body,
       @include font.get-text-styles('text-xs', false);
       color: var(--lb-casino-subtitle-color);
     }
+    & {
+      margin-bottom: var(--wp--preset--spacing--70);
+    }
     
-    margin-bottom: var(--wp--preset--spacing--70);
-
     &:not(:only-child) {
       margin-bottom: var(--wp--preset--spacing--140);
       @include breakpoints.media-breakpoint-down('sm') {

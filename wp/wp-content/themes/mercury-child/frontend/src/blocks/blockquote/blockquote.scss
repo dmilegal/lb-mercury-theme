@@ -1,7 +1,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body, .editor-styles-wrapper {
+:root, .editor-styles-wrapper {
   --lb-blockquote-color-text: var(--lb-color-text-strong);
   --lb-blockquote-cite-color-text: var(--lb-color-text-default);
   --lb-blockquote-color-outline: var(--lb-color-primary-high);

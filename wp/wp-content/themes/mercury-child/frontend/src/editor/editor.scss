@@ -1,8 +1,9 @@
 @use "sass:meta";
 @use '@/shared/styles/main' with (
-  $globalSelector: 'body',
-  $proseCustomSelector: 'body',
+  $globalSelector: ':root',
+  $proseCustomSelector: ':root',
   $disableNormalize: true,
+  $isEditor: true
 );
 @use 'styles';
 

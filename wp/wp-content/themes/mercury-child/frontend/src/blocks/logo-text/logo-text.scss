@@ -4,7 +4,7 @@
 @use '@/shared/styles/mixins/breakpoints';
 @use '@/shared/styles/mixins/media-containers';
 
-body, .editor-styles-wrapper {
+:root, .editor-styles-wrapper {
   --lb-logo-text-space-y: 0px;
 }
 

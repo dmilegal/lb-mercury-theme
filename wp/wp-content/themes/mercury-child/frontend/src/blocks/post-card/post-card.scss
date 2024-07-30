@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --lb-post-card-info-color-text: var(--lb-color-text-default);
   --lb-post-card-title-color-text: var(--lb-color-text-strong);
   --lb-post-card-title-color-text-hover: var(--lb-color-text-default);

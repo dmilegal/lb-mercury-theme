@@ -209,7 +209,11 @@ export default function common(mode) {
                     [
                       'postcss-preset-env',
                       {
-                        browsers: 'last 2 versions',
+                        //stage: '3',
+                        //browsers: 'defaults',
+                        features: {
+                          'logical-properties-and-values': false,
+                        },
                         autoprefixer: false,
                       },
                     ],
