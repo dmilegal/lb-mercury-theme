@@ -107,7 +107,7 @@ export default function common(mode) {
       },
       clean: true,
     },
-    /*optimization: {
+    optimization: {
       splitChunks: {
         cacheGroups: {
           cssVendor: {
@@ -162,7 +162,7 @@ export default function common(mode) {
           default: false,
         },
       },
-    },*/
+    },
     module: {
       rules: [
         {
@@ -174,16 +174,26 @@ export default function common(mode) {
               loader: 'babel-loader',
               options: {
                 presets: [
-                  /*[
-                    '@babel/preset-env',
-                    {
-                      targets: {
-                        node: '22',
-                      },
-                    },
-                  ],*/
+                  '@babel/preset-env',
                   '@babel/preset-react',
                   '@babel/preset-typescript',
+                  '@wordpress/babel-preset-default',
+                ],
+                plugins: [
+                  [
+                    '@babel/plugin-transform-react-jsx',
+                    {
+                      pragma: 'h', // Для Preact
+                      pragmaFrag: 'Fragment',
+                      throwIfNamespace: false, // Если используется JSX в том числе и в TS/TSX
+                    },
+                  ],
+                  [
+                    '@babel/plugin-transform-runtime',
+                    {
+                      regenerator: true,
+                    },
+                  ],
                 ],
               },
             },
@@ -209,7 +219,11 @@ export default function common(mode) {
                     [
                       'postcss-preset-env',
                       {
-                        browsers: 'last 2 versions',
+                        //stage: '3',
+                        //browsers: 'defaults',
+                        features: {
+                          'logical-properties-and-values': false,
+                        },
                         autoprefixer: false,
                       },
                     ],

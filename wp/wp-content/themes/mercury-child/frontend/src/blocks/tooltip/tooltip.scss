@@ -1,7 +1,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --lb-tooltip-color-text: var(--lb-color-text-strong);
   --lb-tooltip-color-background: var(--lb-color-surface);
   --lb-tooltip-color-border: var(--lb-color-surface-outline-highest);

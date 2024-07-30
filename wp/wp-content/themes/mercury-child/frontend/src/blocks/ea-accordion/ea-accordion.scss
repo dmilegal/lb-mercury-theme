@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body,
+:root,
 .editor-styles-wrapper {
   --ea-color-border: var(--lb-color-surface-outline-1);
   --ea-color-text: var(--lb-color-text-strong);

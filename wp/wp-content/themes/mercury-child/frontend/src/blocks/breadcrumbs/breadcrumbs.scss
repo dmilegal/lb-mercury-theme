@@ -1,7 +1,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --lb-breadcrumbs-color-text: var(--lb-color-on-surface-min);
   --lb-breadcrumbs-color-text-active: var(--lb-color-on-surface-highest);
 }

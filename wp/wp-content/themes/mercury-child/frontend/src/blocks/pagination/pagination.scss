@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --lb-pagination-num-color-background: transparent;
   --lb-pagination-num-color-text: var(--lb-color-on-surface-lowest);
   --lb-pagination-num-color-background-active: var(--lb-color-primary-container-low);

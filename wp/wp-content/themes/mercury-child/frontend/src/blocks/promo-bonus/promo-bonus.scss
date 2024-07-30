@@ -1,7 +1,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --lb-promo-bonus-color-border: var(--lb-color-primary-outline-variant-1);
   --lb-promo-bonus-color-background:var(--lb-color-primary-container-low);
   --lb-promo-bonus-title-color-text: var(--lb-color-primary);

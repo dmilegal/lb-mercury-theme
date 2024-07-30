@@ -2,7 +2,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --lb-dropdown-header-title-color-text: var(--lb-color-text-strong);
   --lb-dropdown-ico-opened-title-color-text: var(--lb-color-on-surface-min);
   --lb-dropdown-ico-closed-title-color-text: var(--lb-color-primary);

@@ -31,7 +31,7 @@
   }
   &-link {
     color: var(--lb-toc-link-color-text);
-    text-decoration: none;
+    text-decoration: none!important;
     transition: color 170ms ease-in-out;
     &:hover {
       color: var(--lb-toc-link-color-text-hover);

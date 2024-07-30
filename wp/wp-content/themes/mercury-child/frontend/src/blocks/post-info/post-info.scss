@@ -2,7 +2,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --lb-post-info-title-color-text: var(--lb-color-primary);
   --lb-post-info-value-color-text: var(--lb-color-on-surface-highest);
 }

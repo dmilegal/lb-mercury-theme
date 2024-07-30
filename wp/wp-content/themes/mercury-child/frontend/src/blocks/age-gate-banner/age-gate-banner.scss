@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-body {
+:root {
   --ag-border-color: var(--lb-color-surface-outline-3);
   --ag-form-border-width: 1px;
   --ag-text-heading-color: var(--lb-color-text-strong);
@@ -55,11 +55,11 @@ body {
     }
 
     &__buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       &:not(:last-child) {
         margin-bottom: var(--wp--preset--spacing--70);
       }
-      display: grid;
-      grid-template-columns: 1fr 1fr;
     }
 
     &__submit {

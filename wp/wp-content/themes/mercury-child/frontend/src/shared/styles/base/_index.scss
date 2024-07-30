@@ -2,6 +2,7 @@ $globalSelector: null !default;
 $proseCustomSelector: null !default;
 $disableNormalize: null !default;
 $disableWpDefaultStyles: null !default;
+$isEditor: false !default;
 
 @use 'variables';
 @use 'normalize' with (

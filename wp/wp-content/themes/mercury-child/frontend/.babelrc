@@ -1,15 +1,12 @@
 {
   "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "browsers": [
-            "last 2 versions",
-            "safari 11"
-          ]
-        }
-      }
-    ]
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript",
+    "@wordpress/babel-preset-default"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-react-jsx",
+    "@babel/plugin-transform-runtime"
   ]
 }
