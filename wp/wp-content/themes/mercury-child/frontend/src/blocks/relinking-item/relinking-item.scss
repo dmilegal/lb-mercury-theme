@@ -11,10 +11,13 @@
 }
 
 .lb-relinking-item {
-  text-decoration: none;
   transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
   color: var(--lb-relinking-color-text);
   cursor: pointer;
+
+  &#{&} {
+    text-decoration: none;
+  }
   
   &:hover {
     color: var(--lb-relinking-color-text-hover);
@@ -24,21 +27,29 @@
     &_with-icon,
     &_with-image,
     &_with-arrow,
-    &_only-text {
-      
-      border: 1px solid var(--lb-relinking-item-color-border);
-      border-radius: var(--lb-relinking-item-radius);
-      padding: var(--wp--preset--spacing--75) var(--wp--preset--spacing--70);
-
+    &_only-text,
+    &_with-primary-image {
       %text {
         display: -webkit-box;
-        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        word-break: break-all;
       }
 
       &:hover {
         border-color: var(--lb-relinking-item-color-border-hover);
+      }
+    }
+
+    &_with-icon,
+    &_with-image,
+    &_with-arrow,
+    &_only-text {
+      border: 1px solid var(--lb-relinking-item-color-border);
+      border-radius: var(--lb-relinking-item-radius);
+      padding: var(--wp--preset--spacing--75) var(--wp--preset--spacing--70);
+      %text {
+        -webkit-line-clamp: 1;
       }
     }
 
@@ -62,6 +73,23 @@
 
     &_only-text {
       padding: var(--wp--preset--spacing--70);
+    }
+
+    &_with-primary-image {
+      width: 128px;
+      border: 1px solid var(--lb-relinking-item-color-border);
+      border-radius: var(--wp--preset--spacing--75);
+      padding: var(--wp--preset--spacing--90) var(--wp--preset--spacing--80);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      %text {
+        text-align: center;
+        -webkit-line-clamp: 2;
+        font-weight: 500;
+        @include font.get-text-styles('text-sm', false);
+        height: calc(2 * #{font.line-height-by-name('text-sm', false)});
+      }
     }
   }
 
@@ -89,8 +117,23 @@
     border: 1px solid var(--lb-color-surface-outline-low);
     border-radius: var(--wp--preset--spacing--50);
   }
+  &__primary-frame {
+    width: 88px;
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--wp--preset--spacing--80);
+  }
 
   &__image {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__primary-image {
     flex-shrink: 0;
     width: 100%;
     height: 100%;

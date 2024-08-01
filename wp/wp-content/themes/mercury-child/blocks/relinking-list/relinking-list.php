@@ -15,7 +15,7 @@
 $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 
 if (get_field('list') || get_field('title'))
-  get_template_part('theme-parts/cells/relinking-list/relinking-list', null, [
+  get_template_part('theme-parts/organs/relinking-list/relinking-list', null, [
     ...$block_opts,
     'title' => get_field('title'),
     'enable_limit' => get_field('enable_limit'),

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /******/ var __webpack_modules__ = ({
 
 /***/ "./public/fonts/lhicon/stylesheet.css":
@@ -220,6 +219,3 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //# sourceMappingURL=main.js.map
-=======
-var e={3768:()=>{(document.querySelectorAll(".lb-dropdown")??[]).forEach((e=>{e.querySelector(".lb-dropdown__header").addEventListener("click",(()=>{e.classList.contains("lb-dropdown--state_opened")?(e.classList.remove("lb-dropdown--state_opened"),e.classList.add("lb-dropdown--state_closed")):(e.classList.remove("lb-dropdown--state_closed"),e.classList.add("lb-dropdown--state_opened"))}))}))},2355:()=>{const e=jQuery;function o(){e(".lb-mobile-menu").removeClass("lb-mobile-menu--active"),e("#mobile-header-trigger").removeClass("is-active"),e("body").css("overflow-y","")}e("#mobile-header-trigger").on("click",(function(){e(".lb-mobile-menu").addClass("lb-mobile-menu--active"),e("#mobile-header-trigger").addClass("is-active"),e("body").css("overflow-y","hidden")})),e(".lb-mobile-menu__close-button").on("click",o),e(".lb-mobile-menu").on("click",(function(e){e.target===this&&o()})),e(".menu-item-has-children > a").on("click",(function(e){e.preventDefault()})),e(".lb-mobile-menu .menu-item-has-children>a").on("click",(function(o){o.preventDefault();let l=e(this).parent();return l.addClass("toggled"),e(".lb-mobile-menu .menu-item-has-children").hasClass("toggled")&&l.children("ul").toggle(),l.toggleClass("space-up"),!1}))}},o={};function l(t){var s=o[t];if(void 0!==s)return s.exports;var n=o[t]={exports:{}};return e[t](n,n.exports,l),n.exports}l(3768),l(2355);
->>>>>>> a1bedd194c5e5fc7bcde65aad0fd8a24ae369fdf

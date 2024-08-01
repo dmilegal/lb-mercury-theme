@@ -1,11 +1,34 @@
 import { store, getElement, getContext } from '@wordpress/interactivity'
 import './relinking-list.scss'
+import Swiper from 'swiper'
+import { Navigation } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
 
 export interface RelinkingListContextProps {
   isLimited: boolean
 }
 
 store('relinkingList', {
+  callbacks: {
+    initSlider() {
+      const { ref } = getElement()
+
+      const container = ref.querySelector<HTMLElement>('.lb-relinking-list__slider')
+      const nextEl = ref.querySelector<HTMLElement>('.lb-relinking-list__slider-next')
+      const prevEl = ref.querySelector<HTMLElement>('.lb-relinking-list__slider-prev')
+      console.log(nextEl, prevEl)
+      new Swiper(container, {
+        slidesPerView: 'auto',
+        modules: [Navigation],
+        // Navigation arrows
+        navigation: {
+          nextEl: nextEl,
+          prevEl: prevEl,
+        },
+      })
+    },
+  },
   actions: {
     showMore() {
       const context = getContext<RelinkingListContextProps>()
@@ -14,9 +37,10 @@ store('relinkingList', {
 
       el.ref
         ?.closest('[data-wp-interactive="relinkingList"]')
-        .querySelectorAll<HTMLElement>('.lb-relinking-item[hidden]')
+        .querySelectorAll<HTMLElement>('.lb-relinking-item')
         .forEach((el) => {
           el.hidden = false
+          el.style.display = ''
         })
     },
   },

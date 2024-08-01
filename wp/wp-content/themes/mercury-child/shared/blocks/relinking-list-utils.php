@@ -10,7 +10,7 @@ function relinkingListItemTransform($item)
     'href' => isset($item['link']) ? (is_numeric($item['link']) ? get_permalink($item['link']) : $item['link']) : '',
     'title' => $item['custom_title'] ?? $item['custom_title'] ? $item['custom_title'] : get_the_title($item['link'])
   ];
-  
+
   if (isset($item['icon'])) {
     $params['icon'] = $item["icon"] ?? '';
   }
@@ -34,6 +34,14 @@ function relinkingListParams($args)
   $params['className']  = $args['className'] ?? '';
   $params['style']  = $args['style'] ?? '';
   $params['list'] = relinkingListTransform($args['list'] ?? []);
+
+  if ($params['theme'] === 'with-icon' || $params['theme'] === 'with-image' || $params['theme'] === 'with-arrow' || $params['theme'] === 'with-arrow') {
+    $params['theme_list'] = $params['theme_list'] ?? 'grid';
+    $params['col_count'] = $params['col_count'] ?? 4;
+
+  } elseif ($params['theme'] === 'only-text') {
+    $params['theme_list'] = $params['theme_list'] ?? 'list';
+  } elseif ($params['theme'] === )
 
   if ($params['theme'] != 'with-large-image' && $params['theme'] != 'block-links') {
     $params['enable_limit'] = $args['enable_limit'] ?? false;

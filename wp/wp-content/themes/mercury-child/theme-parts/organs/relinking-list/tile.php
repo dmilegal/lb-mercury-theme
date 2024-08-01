@@ -11,10 +11,9 @@ $params = isset($args['prepared']) ? $args : relinkingListParams($args);
   <? } ?>
   <div class="<?= classNames("lb-relinking-list__list") ?>">
     <? foreach ($params['list'] as $ind => $item) {
-      get_template_part("theme-parts/molecules/relinking-item/relinking-item", null, [
+      get_template_part("theme-parts/cells/relinking-item/relinking-item", null, [
         'theme' => $params['theme'],
-        'className' => '',
-        'hidden' => $params['is_limited'] ? $ind >= $params['number_to_show'] : false,
+        ...($params['is_limited'] && $ind >= $params['number_to_show'] ? ['style' => 'display: none;'] : []),
         ...$item
       ]);
     } ?>

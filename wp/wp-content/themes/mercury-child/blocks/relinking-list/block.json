@@ -9,6 +9,11 @@
   "category": "formatting",
   "icon": "portfolio",
   "keywords": ["relinking list", "перелинковка", "list"],
+  "supports": {
+		"align": false,
+		"mode": false,
+    "interactivity": true
+	},
   "acf": {
       "mode": "auto",
       "renderTemplate": "relinking-list.php"
