@@ -1082,44 +1082,55 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/interactivity */ "./node_modules/@wordpress/interactivity/build-module/index.js");
-/* harmony import */ var _relinking_list_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./relinking-list.scss */ "./src/blocks/relinking-list/relinking-list.scss");
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
-/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
-/* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _wordpress_interactivity__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/interactivity */ "./node_modules/@wordpress/interactivity/build-module/index.js");
+/* harmony import */ var _relinking_list_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./relinking-list.scss */ "./src/blocks/relinking-list/relinking-list.scss");
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
+
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 
 
 
 
 
 
-(0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('relinkingList', {
+(0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_1__.store)('relinkingList', {
   callbacks: {
     initSlider: function initSlider() {
-      var _getElement = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)(),
+      var _getElement = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_1__.getElement)(),
         ref = _getElement.ref;
       var container = ref.querySelector('.lb-relinking-list__slider');
       var nextEl = ref.querySelector('.lb-relinking-list__slider-next');
       var prevEl = ref.querySelector('.lb-relinking-list__slider-prev');
       console.log(nextEl, prevEl);
-      new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](container, {
+      new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](container, _objectSpread({
         slidesPerView: 'auto',
-        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Navigation],
+        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_4__.Navigation],
         // Navigation arrows
         navigation: {
           nextEl: nextEl,
           prevEl: prevEl
         }
-      });
+      }, ref.classList.contains('lb-relinking-list--mod_only-mobile-slider') ? {
+        breakpoints: {
+          // when window width is >= 320px
+          576: {
+            enabled: false
+          }
+        }
+      } : {}));
     }
   },
   actions: {
     showMore: function showMore() {
       var _el$ref;
-      var context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+      var context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_1__.getContext)();
       context.isLimited = false;
-      var el = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)();
+      var el = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_1__.getElement)();
       (_el$ref = el.ref) === null || _el$ref === void 0 || _el$ref.closest('[data-wp-interactive="relinkingList"]').querySelectorAll('.lb-relinking-item').forEach(function (el) {
         el.hidden = false;
         el.style.display = '';

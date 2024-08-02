@@ -7,22 +7,74 @@
   --lb-relinking-list-gap-x: var(--wp--preset--spacing--60);
   --lb-relinking-list-gap-y: var(--wp--preset--spacing--60);
   --lb-relinking-list-actions-margin-top: var(--wp--preset--spacing--60);
+  --lb-relinking-list-col-count: 4;
 }
 
 .lb-relinking-list {
   container-type: inline-size;
 
   &--theme {
-    &_tile {
-      %list {
-        display: grid;
-        column-gap: var(--lb-relinking-list-gap-x);
-        row-gap: var(--lb-relinking-list-gap-y);
-        grid-template-columns: repeat(4, 1fr);
-        @include media-containers.media-breakpoint-down('sm') {
-          grid-template-columns: repeat(2, 1fr);
+    &_grid {
+      &:not(%col-auto) {
+        %list {
+          display: grid;
+          column-gap: var(--lb-relinking-list-gap-x);
+          row-gap: var(--lb-relinking-list-gap-y);
+          grid-template-columns: repeat(var(--lb-relinking-list-col-count), 1fr);
         }
       }
+      &%col-auto {
+        %list {
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: var(--lb-relinking-list-gap-x);
+          row-gap: var(--lb-relinking-list-gap-y);
+        }
+      }
+    }
+
+    &_slider {
+      .swiper-slide {
+        width: auto;
+      }
+
+      .swiper-wrapper {
+        margin-bottom: calc(-1 * var(--lb-relinking-list-gap-y));
+      }
+
+      .swiper-slide {
+        margin-bottom: var(--lb-relinking-list-gap-y);
+        &:where(:not(:last-child)) {
+          margin-right: var(--lb-relinking-list-gap-x);
+        }
+      }
+    }
+  }
+
+  &--col-count {
+    &_3 {
+      --lb-relinking-list-col-count: 3;
+      @include breakpoints.media-breakpoint-down('sm') {
+        --lb-relinking-list-col-count: 2;
+      }
+    }
+
+    &_4 {
+      --lb-relinking-list-col-count: 4;
+      @include breakpoints.media-breakpoint-down('sm') {
+        --lb-relinking-list-col-count: 2;
+      }
+    }
+
+    &_5 {
+      --lb-relinking-list-col-count: 5;
+      @include breakpoints.media-breakpoint-down('sm') {
+        ---lb-relinking-list-col-count: 2;
+      }
+    }
+
+    &_auto {
+      @extend %col-auto;
     }
   }
 
@@ -45,17 +97,6 @@
   }
 
   &__slider {
-    .swiper-slide {
-      width: auto;
-      &:not(:last-child) {
-        margin-right: var(--wp--preset--spacing--90);
-        @include breakpoints.media-breakpoint-down('sm') {
-          margin-right: var(--wp--preset--spacing--60);
-        }
-      }
-     
-    }
-
     &-wrapper {
       position: relative;
     }
@@ -67,6 +108,7 @@
       @include breakpoints.media-breakpoint-down('sm') {
         display: none;
       }
+      @extend %nav-btn;
     }
 
     &-prev {
@@ -77,6 +119,65 @@
     &-next {
       right: 0px;
       transform: translate(50%, -30%);
+    }
+    @extend %slider;
+  }
+
+  &--mod {
+    &_only-mobile-slider {
+      @include breakpoints.media-breakpoint-up('sm') {
+        %slider {
+          overflow: visible;
+        }
+
+        %nav-btn {
+          display: none;
+        }
+
+        .swiper-wrapper {
+          margin: 0;
+        }
+
+        .swiper-slide {
+          margin: 0;
+        }
+
+        &:not(%col-auto) {
+          .swiper-wrapper {
+            display: grid;
+            grid-template-columns: repeat(var(--lb-relinking-list-col-count), 1fr);
+            column-gap: var(--lb-relinking-list-gap-x);
+            row-gap: var(--lb-relinking-list-gap-y);
+          }
+
+          .swiper-slide {
+            & > * {
+              width: 100%;
+            }
+          }
+        }
+        &%col-auto {
+          .swiper-wrapper {
+            flex-wrap: wrap;
+            column-gap: var(--lb-relinking-list-gap-x);
+            row-gap: var(--lb-relinking-list-gap-y);
+          }
+        }
+      }
+    }
+  }
+
+  &--gap {
+    /*&_md {
+      @extend %gap-md;
+    }*/
+    &_lg {
+      --lb-relinking-list-gap-x: var(--wp--preset--spacing--90);
+      --lb-relinking-list-gap-y: var(--wp--preset--spacing--90);
+      @include breakpoints.media-breakpoint-down('sm') {
+        --lb-relinking-list-gap-x: var(--wp--preset--spacing--60);
+        --lb-relinking-list-gap-y: var(--wp--preset--spacing--60);
+      }
     }
   }
 

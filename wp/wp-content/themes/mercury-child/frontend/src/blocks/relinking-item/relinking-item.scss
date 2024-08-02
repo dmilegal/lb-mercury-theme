@@ -118,12 +118,14 @@
     border-radius: var(--wp--preset--spacing--50);
   }
   &__primary-frame {
-    width: 88px;
-    height: 88px;
+    width: 100%;
+
+    aspect-ratio: 1/1;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: var(--wp--preset--spacing--80);
+    margin: 0 var(--wp--preset--spacing--50) var(--wp--preset--spacing--80);
   }
 
   &__image {

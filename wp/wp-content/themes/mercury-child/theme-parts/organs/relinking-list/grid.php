@@ -3,7 +3,11 @@ $params = isset($args['prepared']) ? $args : relinkingListParams($args);
 ?>
 <section data-wp-interactive="relinkingList" <?= wp_interactivity_data_wp_context([
                                                 'isLimited' => $params['is_limited'],
-                                              ]); ?> class="<?= classNames("lb-relinking-list", "not-prose", "lb-relinking-list--theme_tile", $params['className']) ?>" style="<?= stylesValue($params['style']) ?>">
+                                              ]); ?> class="<?= classNames("lb-relinking-list", 
+                                              "not-prose", 
+                                              "lb-relinking-list--theme_grid", 
+                                              "lb-relinking-list--gap_{$params['gap']}",
+                                              "lb-relinking-list--col-count_{$params['col_count']}",                                              $params['className']) ?>" style="<?= stylesValue($params['style']) ?>">
   <? if ($params['title']) { ?>
     <header class="lb-relinking-list__header">
       <h2 class="lb-relinking-list__title"><?= $params['title'] ?></h2>

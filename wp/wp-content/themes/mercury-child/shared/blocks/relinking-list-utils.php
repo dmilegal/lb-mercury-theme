@@ -30,18 +30,42 @@ function relinkingListParams($args)
   ];
 
   $params['theme'] = $args['theme'] ?? 'only-text';
+  $params['gap'] = $args['gap'] ?? 'md';
   $params['title'] = $args['title'] ?? '';
   $params['className']  = $args['className'] ?? '';
   $params['style']  = $args['style'] ?? '';
   $params['list'] = relinkingListTransform($args['list'] ?? []);
+  $params['only_mobile_slider'] = $args['only_mobile_slider'] ?? false;
 
-  if ($params['theme'] === 'with-icon' || $params['theme'] === 'with-image' || $params['theme'] === 'with-arrow' || $params['theme'] === 'with-arrow') {
-    $params['theme_list'] = $params['theme_list'] ?? 'grid';
-    $params['col_count'] = $params['col_count'] ?? 4;
 
-  } elseif ($params['theme'] === 'only-text') {
-    $params['theme_list'] = $params['theme_list'] ?? 'list';
-  } elseif ($params['theme'] === )
+  if (
+    (($params['theme'] === 'with-icon' ||
+      $params['theme'] === 'with-image' ||
+      $params['theme'] === 'with-arrow' ||
+      $params['theme'] === 'only-text') && !$params['only_mobile_slider'])
+  ) {
+    $params['theme_list'] = $args['theme_list'] ?? 'grid';
+
+    if ($params['theme'] === 'with-primary-image') {
+      $params['gap'] = $args['gap'] ?? 'lg';
+    }
+
+    if ($params['theme_list'] === 'grid') {
+      if ($params['theme'] === 'with-icon' || $params['theme'] === 'with-image') {
+        $params['col_count'] = $args['col_count'] ?? 4;
+      } elseif ($params['theme'] === 'with-arrow') {
+        $params['col_count'] = $args['col_count'] ?? 3;
+      } elseif ($params['theme'] === 'with-primary-image') {
+        $params['col_count'] = $args['col_count'] ?? 5;
+      } elseif ($params['theme'] === 'only-text') {
+        $params['col_count'] = $args['col_count'] ?? 'auto';
+      }
+    }
+  } elseif ($params['theme'] === 'with-primary-image') {
+    $params['theme_list'] = $args['theme_list'] ?? 'slider';
+    $params['gap'] = $args['gap'] ?? 'lg';
+    $params['col_count'] = $args['col_count'] ?? 5;
+  }
 
   if ($params['theme'] != 'with-large-image' && $params['theme'] != 'block-links') {
     $params['enable_limit'] = $args['enable_limit'] ?? false;
