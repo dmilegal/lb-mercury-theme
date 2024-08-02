@@ -348,6 +348,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/relinking-item/relinking-block.scss":
+/*!********************************************************!*\
+  !*** ./src/blocks/relinking-item/relinking-block.scss ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/relinking-item/relinking-item.scss":
 /*!*******************************************************!*\
   !*** ./src/blocks/relinking-item/relinking-item.scss ***!
@@ -1071,6 +1083,8 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _relinking_item_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./relinking-item.scss */ "./src/blocks/relinking-item/relinking-item.scss");
+/* harmony import */ var _relinking_block_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./relinking-block.scss */ "./src/blocks/relinking-item/relinking-block.scss");
+
 
 
 /***/ }),

@@ -4,11 +4,18 @@ function relinkingListTransform($list)
   return array_map(fn ($item) => relinkingListItemTransform($item), $list);
 }
 
+function relinkingGroupListTransform($groupList)
+{
+  return array_map(fn ($group) => [
+    ...$group,
+    'link_list' => array_map(fn ($item) => relinkingListItemTransform($item), $group['link_list'] ?? [])
+  ], $groupList);
+}
+
 function relinkingListItemTransform($item)
 {
   $params = [
-    'href' => isset($item['link']) ? (is_numeric($item['link']) ? get_permalink($item['link']) : $item['link']) : '',
-    'title' => $item['custom_title'] ?? $item['custom_title'] ? $item['custom_title'] : get_the_title($item['link'])
+    ...linkItemTransform($item['link'] ?? [], $item['custom_title'] ?? '')
   ];
 
   if (isset($item['icon'])) {
@@ -22,6 +29,44 @@ function relinkingListItemTransform($item)
   return $params;
 }
 
+function linkItemTransform($link, $custom_title = '')
+{
+  $params = [
+    'href' => '',
+    'title' => ''
+  ];
+
+  if (!isset($link) || !$link) return $params;
+
+  if ($link['link_type'] == 'post-link') {
+    $params['href'] = isset($link['post_link']) ? (is_numeric($link['post_link']) ? get_permalink($link['post_link']) : $link['post_link']) : '';
+
+    if ($custom_title) {
+      $params['title'] = $custom_title;
+    } elseif (isset($link['post_link']) && is_numeric($link['post_link'])) {
+      $params['title'] = get_the_title($link['post_link']);
+    }
+  } elseif ($link['link_type'] == 'tax-link') {
+
+    $params['href'] = '';
+    if (isset($link['taxonomy_link'])) {
+      if (is_numeric($link['taxonomy_link'])) {
+        $term = get_term($link['taxonomy_link']);
+        $params['href'] =  get_term_link($term->term_id, $term->taxonomy);
+      } else {
+        $params['href'] = $link['taxonomy_link'];
+      }
+    }
+
+    if ($custom_title) {
+      $params['title'] = $custom_title;
+    } elseif (isset($link['taxonomy_link']) && is_numeric($link['taxonomy_link'])) {
+      $params['title'] = get_term($link['taxonomy_link'])->name;
+    }
+  }
+
+  return $params;
+}
 
 function relinkingListParams($args)
 {
@@ -34,9 +79,17 @@ function relinkingListParams($args)
   $params['title'] = $args['title'] ?? '';
   $params['className']  = $args['className'] ?? '';
   $params['style']  = $args['style'] ?? '';
-  $params['list'] = relinkingListTransform($args['list'] ?? []);
+  $params['list'] = [];
+  $params['block_list'] = [];
   $params['only_mobile_slider'] = $args['only_mobile_slider'] ?? false;
 
+  if (isset($args['list']) && $args['list']) {
+    $params['list'] = relinkingListTransform($args['list']);
+    unset($params['block_list']);
+  } elseif (isset($args['block_list']) && $args['block_list']) {
+    $params['block_list'] = relinkingGroupListTransform($args['block_list']);
+    unset($params['list']);
+  }
 
   if (
     (($params['theme'] === 'with-icon' ||
@@ -64,6 +117,10 @@ function relinkingListParams($args)
   } elseif ($params['theme'] === 'with-primary-image') {
     $params['theme_list'] = $args['theme_list'] ?? 'slider';
     $params['gap'] = $args['gap'] ?? 'lg';
+    $params['col_count'] = $args['col_count'] ?? 5;
+  } elseif ($params['theme'] === 'block-links') {
+    $params['theme_list'] = $args['theme_list'] ?? 'block-list';
+    $params['gap'] = $args['gap'] ?? 'md';
     $params['col_count'] = $args['col_count'] ?? 5;
   }
 

@@ -21,6 +21,7 @@ if (get_field('list') || get_field('title'))
     'enable_limit' => get_field('enable_limit'),
     'number_to_show' => get_field('number_to_show'),
     'list' => get_field('list'),
+    'block_list' => get_field('block_list'),
     'theme' => get_field('theme'),
     //'enable_slider' => get_field('enable_slider'),
     'only_mobile_slider' => get_field('only_mobile_slider'),

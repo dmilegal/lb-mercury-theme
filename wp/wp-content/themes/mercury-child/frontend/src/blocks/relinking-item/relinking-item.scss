@@ -11,6 +11,7 @@
 }
 
 .lb-relinking-item {
+  box-sizing: border-box;
   transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
   color: var(--lb-relinking-color-text);
   cursor: pointer;
@@ -72,6 +73,7 @@
     }
 
     &_only-text {
+      max-width: 100%;
       padding: var(--wp--preset--spacing--70);
     }
 
