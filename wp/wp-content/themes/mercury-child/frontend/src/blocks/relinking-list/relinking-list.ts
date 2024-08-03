@@ -26,7 +26,7 @@ store('relinkingList', {
           nextEl: nextEl,
           prevEl: prevEl,
         },
-        ...(ref.classList.contains('lb-relinking-list--mod_only-mobile-slider')
+        ...(!!ref.querySelector('.lb-relinking-list__slider--only-mobile')
           ? {
               breakpoints: {
                 // when window width is >= 320px

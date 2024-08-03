@@ -7,7 +7,7 @@ $image = $args['image'] ?? '';
 $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'id', 'title', 'data', 'aria', 'hidden', 'style'])));
 
 ?>
-<a <?= $attrsStr ?> data-wp-interactive="relinkingItem" class="<?= classNames("lb-relinking-item", "lb-relinking-item--theme_with-image", $className) ?>">
+<a <?= $attrsStr ?> data-wp-interactive="relinkingItem" class="<?= classNames("not-prose", "lb-relinking-item", "lb-relinking-item--theme_with-image", $className) ?>">
   <? if ($image) { ?>
     <span class="lb-relinking-item__frame">
       <?= wp_get_attachment_image($image, [34, 24], true, [

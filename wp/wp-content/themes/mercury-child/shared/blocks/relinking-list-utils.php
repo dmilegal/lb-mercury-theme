@@ -77,6 +77,8 @@ function relinkingListParams($args)
   $params['theme'] = $args['theme'] ?? 'only-text';
   $params['gap'] = $args['gap'] ?? 'md';
   $params['title'] = $args['title'] ?? '';
+  $params['title_size'] = $args['title_size'] ?? 'lg';
+  $params['title_color'] = $args['title_color'] ?? 'dark';
   $params['className']  = $args['className'] ?? '';
   $params['style']  = $args['style'] ?? '';
   $params['list'] = [];
@@ -97,6 +99,10 @@ function relinkingListParams($args)
       $params['theme'] === 'with-arrow' ||
       $params['theme'] === 'only-text') && !$params['only_mobile_slider'])
   ) {
+    if ($params['theme'] === 'only-text') {
+      $params['title_size'] = 'md';
+    }
+    
     $params['theme_list'] = $args['theme_list'] ?? 'grid';
 
     if ($params['theme'] === 'with-primary-image') {
@@ -122,6 +128,7 @@ function relinkingListParams($args)
     $params['theme_list'] = $args['theme_list'] ?? 'block-list';
     $params['gap'] = $args['gap'] ?? 'md';
     $params['col_count'] = $args['col_count'] ?? 5;
+    $params['title_color'] = 'light';
   }
 
   if ($params['theme'] != 'with-large-image' && $params['theme'] != 'block-links') {
@@ -133,4 +140,17 @@ function relinkingListParams($args)
   }
 
   return $params;
+}
+
+function getRelinkingPostOpts($id) {
+  return [
+    'title' => get_field('title', $id),
+    'enable_limit' => get_field('enable_limit', $id),
+    'number_to_show' => get_field('number_to_show', $id),
+    'list' => get_field('list', $id),
+    'block_list' => get_field('block_list', $id),
+    'theme' => get_field('theme', $id),
+    //'enable_slider' => get_field('enable_slider'),
+    'only_mobile_slider' => get_field('only_mobile_slider', $id),
+  ];
 }

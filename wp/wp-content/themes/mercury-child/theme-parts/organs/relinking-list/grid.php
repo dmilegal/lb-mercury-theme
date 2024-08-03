@@ -5,18 +5,24 @@ $params = isset($args['prepared']) ? $args : relinkingListParams($args);
                                                 'isLimited' => $params['is_limited'],
                                               ]); ?> class="<?= classNames(
                                                               "lb-relinking-list",
-                                                              "not-prose",
                                                               "lb-relinking-list--theme_grid",
-                                                              "lb-relinking-list--gap_{$params['gap']}",
-                                                              "lb-relinking-list--col-count_{$params['col_count']}",
                                                               $params['className']
                                                             ) ?>" style="<?= stylesValue($params['style']) ?>">
   <? if ($params['title']) { ?>
     <header class="lb-relinking-list__header">
-      <h2 class="lb-relinking-list__title"><?= $params['title'] ?></h2>
+      <h2 class="<?= classNames(
+                    "not-prose",
+                    "lb-relinking-list__title",
+                    "lb-relinking-list__title--size_{$params['title_size']}",
+                    "lb-relinking-list__title--color_{$params['title_color']}",
+                  ) ?>"><?= $params['title'] ?></h2>
     </header>
   <? } ?>
-  <div class="<?= classNames("lb-relinking-list__list") ?>">
+  <div class="<?= classNames(
+                "lb-relinking-list__list",
+                "lb-relinking-list__list--gap_{$params['gap']}",
+                "lb-relinking-list__list--col-count_{$params['col_count']}",
+              ) ?>">
     <? foreach ($params['list'] as $ind => $item) {
       get_template_part("theme-parts/cells/relinking-item/relinking-item", null, [
         'theme' => $params['theme'],

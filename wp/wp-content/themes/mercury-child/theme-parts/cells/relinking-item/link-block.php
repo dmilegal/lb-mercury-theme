@@ -4,7 +4,7 @@ $title = $args['title'] ?? '';
 $linkList = $args['link_list'] ?? [];
 ?>
 
-<div class="<?= classNames("lb-relinking-block", $className) ?>">
+<div class="<?= classNames("not-prose", "lb-relinking-block", $className) ?>">
   <? if ($title) { ?>
     <header class="lb-relinking-block__header">
       <div class="lb-relinking-block__title"><?= $title ?></div>
