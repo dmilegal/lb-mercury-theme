@@ -10,7 +10,7 @@ $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', '
 <a <?= $attrsStr ?> data-wp-interactive="relinkingItem" class="<?= classNames("not-prose", "lb-relinking-item", "lb-relinking-item--theme_with-primary-image", $className) ?>">
   <? if ($image) { ?>
     <span class="lb-relinking-item__primary-frame">
-      <?= wp_get_attachment_image($image, [88, 88], true, [
+      <?= wp_get_attachment_image($image, [120, 120], false, [
         'class' => 'lb-relinking-item__primary-image',
       ]); ?>
     </span>

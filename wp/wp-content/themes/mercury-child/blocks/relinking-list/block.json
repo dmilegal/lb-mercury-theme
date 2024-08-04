@@ -7,7 +7,7 @@
   "editorStyle": [],
   "script": ["relinking-list", "relinking-item"],
   "category": "formatting",
-  "icon": "portfolio",
+  "icon": "admin-links",
   "keywords": ["relinking list", "перелинковка", "list"],
   "supports": {
 		"align": false,

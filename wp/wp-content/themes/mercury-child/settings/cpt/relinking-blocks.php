@@ -40,7 +40,7 @@ add_action('init', function () {
     'hierarchical'       => false,
     'menu_position'      => null,
     'supports'           => array('title'),
-    'menu_icon'          => 'dashicons-admin-generic',
+    'menu_icon'          => 'dashicons-admin-links',
   );
 
   register_post_type('relinking_block', $args);

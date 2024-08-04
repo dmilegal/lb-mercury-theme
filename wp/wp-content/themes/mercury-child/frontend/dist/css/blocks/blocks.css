@@ -2793,9 +2793,22 @@
   flex-shrink: 0;
 }
 .lb-relinking-item__icon {
-  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-.lb-relinking-item__frame {
+.lb-relinking-item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.lb-relinking-item__primary-image {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.lb-relinking-item__image-frame {
   padding: 3px 5px;
   width: 34px;
   height: 24px;
@@ -2815,17 +2828,13 @@
   align-items: center;
   margin: 0 var(--wp--preset--spacing--50) var(--wp--preset--spacing--80);
 }
-.lb-relinking-item__image {
+.lb-relinking-item__icon-frame {
+  width: 24px;
+  aspect-ratio: 1/1;
   flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.lb-relinking-item__primary-image {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*!***********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/relinking-item/relinking-block.scss ***!
