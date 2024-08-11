@@ -67,7 +67,7 @@ function linkItemTransform($link, $custom_title = '')
 
     $params['href'] = $link['simple_link']['url'];
     $params['title'] = $custom_title ?: $link['simple_link']['title'];
-    $params['target'] = $link['target'] ? $link['simple_link']['target'] : '_self';
+    $params['target'] = $link['simple_link']['target'] ?? '_self';
   }
 
   if (isset($link['anchor']) && $link['anchor'])
