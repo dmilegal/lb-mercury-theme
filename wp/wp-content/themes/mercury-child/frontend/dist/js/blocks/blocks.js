@@ -1120,7 +1120,6 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       var container = ref.querySelector('.lb-relinking-list__slider');
       var nextEl = ref.querySelector('.lb-relinking-list__slider-next');
       var prevEl = ref.querySelector('.lb-relinking-list__slider-prev');
-      console.log(nextEl, prevEl);
       new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](container, _objectSpread({
         slidesPerView: 'auto',
         modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_4__.Navigation],

@@ -2715,14 +2715,14 @@
   --lb-relinking-item-color-border: var(--lb-color-surface-outline-1);
   --lb-relinking-item-color-border-hover: var(--lb-color-primary);
   --lb-relinking-item-radius: var(--wp--preset--spacing--60);
-  --lb-relinking-color-text: var(--lb-color-text-strong);
-  --lb-relinking-color-text-hover: var(--lb-color-primary);
+  --lb-relinking-item-color-text: var(--lb-color-text-strong);
+  --lb-relinking-item-color-text-hover: var(--lb-color-primary);
 }
 
 .lb-relinking-item {
   box-sizing: border-box;
   transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
-  color: var(--lb-relinking-color-text);
+  color: var(--lb-relinking-item-color-text);
   cursor: pointer;
 }
 .lb-relinking-item.lb-relinking-item {
@@ -2730,7 +2730,7 @@
   text-decoration: none;
 }
 .lb-relinking-item:hover {
-  color: var(--lb-relinking-color-text-hover);
+  color: var(--lb-relinking-item-color-text-hover);
 }
 .lb-relinking-item--theme_with-icon .lb-relinking-item__text, .lb-relinking-item--theme_with-image .lb-relinking-item__text, .lb-relinking-item--theme_with-arrow .lb-relinking-item__text, .lb-relinking-item--theme_only-text .lb-relinking-item__text, .lb-relinking-item--theme_with-primary-image .lb-relinking-item__text {
   display: -webkit-box;
@@ -2826,7 +2826,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 var(--wp--preset--spacing--50) var(--wp--preset--spacing--80);
+  padding: 0 var(--wp--preset--spacing--50);
+  margin: 0 0 var(--wp--preset--spacing--80);
 }
 .lb-relinking-item__icon-frame {
   width: 24px;
@@ -2846,9 +2847,9 @@
 * font
 **/
 :root, .editor-styles-wrapper {
-  --lb-relinking-color-text: var(--lb-color-text-medium);
-  --lb-relinking-color-link: var(--lb-color-text-default);
-  --lb-relinking-color-link-hover: var(--lb-color-primary);
+  --lb-relinking-block-color-text: var(--lb-color-text-medium);
+  --lb-relinking-block-color-link: var(--lb-color-text-default);
+  --lb-relinking-block-color-link-hover: var(--lb-color-primary);
 }
 
 .lb-relinking-block {
@@ -2862,7 +2863,7 @@
   line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
-  color: var(--lb-relinking-color-text);
+  color: var(--lb-relinking-block-color-text);
   font-weight: 500;
 }
 .lb-relinking-block__list {
@@ -2882,10 +2883,10 @@
 .lb-relinking-block__link.lb-relinking-block__link {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: var(--lb-relinking-color-link);
+  color: var(--lb-relinking-block-color-link);
 }
 .lb-relinking-block__link.lb-relinking-block__link:hover {
-  color: var(--lb-relinking-color-link-hover);
+  color: var(--lb-relinking-block-color-link-hover);
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/relinking-list/relinking-list.scss ***!
@@ -3043,7 +3044,7 @@
 }
 @media (max-width: 767.98px) {
   .lb-relinking-list__slider--col-count_5 {
-    --lb-relinking-list-col-count: 2;
+    --lb-relinking-list-col-count: 3;
   }
 }
 @media (min-width: 576px) {

@@ -17,7 +17,7 @@ store('relinkingList', {
       const container = ref.querySelector<HTMLElement>('.lb-relinking-list__slider')
       const nextEl = ref.querySelector<HTMLElement>('.lb-relinking-list__slider-next')
       const prevEl = ref.querySelector<HTMLElement>('.lb-relinking-list__slider-prev')
-      console.log(nextEl, prevEl)
+
       new Swiper(container, {
         slidesPerView: 'auto',
         modules: [Navigation],

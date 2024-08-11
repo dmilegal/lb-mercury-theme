@@ -3,9 +3,9 @@
 @use '@/shared/styles/mixins/breakpoints';
 
 :root, .editor-styles-wrapper {
-  --lb-relinking-color-text: var(--lb-color-text-medium);
-  --lb-relinking-color-link: var(--lb-color-text-default);
-  --lb-relinking-color-link-hover: var(--lb-color-primary);
+  --lb-relinking-block-color-text: var(--lb-color-text-medium);
+  --lb-relinking-block-color-link: var(--lb-color-text-default);
+  --lb-relinking-block-color-link-hover: var(--lb-color-primary);
   
 }
 
@@ -19,7 +19,7 @@
 
   &__title {
     @include font.get-text-styles('text-md', false);
-    color: var(--lb-relinking-color-text);
+    color: var(--lb-relinking-block-color-text);
     font-weight: 500;
   }
 
@@ -40,9 +40,9 @@
   &__link {
     &#{&} {
       text-decoration: none;
-      color: var(--lb-relinking-color-link);
+      color: var(--lb-relinking-block-color-link);
       &:hover {
-        color: var(--lb-relinking-color-link-hover);
+        color: var(--lb-relinking-block-color-link-hover);
       }
     }
     

@@ -1,14 +1,14 @@
 <?
 function relinkingListTransform($list)
 {
-  return array_map(fn ($item) => relinkingListItemTransform($item), $list);
+  return array_map(fn($item) => relinkingListItemTransform($item), $list);
 }
 
 function relinkingGroupListTransform($groupList)
 {
-  return array_map(fn ($group) => [
+  return array_map(fn($group) => [
     ...$group,
-    'link_list' => array_map(fn ($item) => relinkingListItemTransform($item), $group['link_list'] ?? [])
+    'link_list' => array_map(fn($item) => relinkingListItemTransform($item), $group['link_list'] ?? [])
   ], $groupList);
 }
 
@@ -63,7 +63,15 @@ function linkItemTransform($link, $custom_title = '')
     } elseif (isset($link['taxonomy_link']) && is_numeric($link['taxonomy_link'])) {
       $params['title'] = get_term($link['taxonomy_link'])->name;
     }
+  } elseif ($link['link_type'] == 'simple-link') {
+
+    $params['href'] = $link['simple_link']['url'];
+    $params['title'] = $custom_title ?: $link['simple_link']['title'];
+    $params['target'] = $link['target'] ? $link['simple_link']['target'] : '_self';
   }
+
+  if (isset($link['anchor']) && $link['anchor'])
+    $params['href'] .= $link['anchor'];
 
   return $params;
 }
@@ -102,7 +110,7 @@ function relinkingListParams($args)
     if ($params['theme'] === 'only-text') {
       $params['title_size'] = 'md';
     }
-    
+
     $params['theme_list'] = $args['theme_list'] ?? 'grid';
 
     if ($params['theme'] === 'with-primary-image') {
@@ -142,7 +150,8 @@ function relinkingListParams($args)
   return $params;
 }
 
-function getRelinkingPostOpts($id) {
+function getRelinkingPostOpts($id)
+{
   return [
     'title' => get_field('title', $id),
     'enable_limit' => get_field('enable_limit', $id),

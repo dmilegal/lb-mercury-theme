@@ -1,6 +1,6 @@
 <?
 add_action('acf/include_fields', function () {
-  if (!function_exists('acf_add_local_field_group')) {
+  if (! function_exists('acf_add_local_field_group')) {
     return;
   }
 
@@ -304,6 +304,7 @@ add_action('acf/include_fields', function () {
                 'choices' => array(
                   'post-link' => 'Post Link',
                   'tax-link' => 'Taxonomy Link',
+                  'simple-link' => 'Simple Link',
                 ),
                 'default_value' => 'post-link',
                 'return_format' => 'value',
@@ -386,6 +387,50 @@ add_action('acf/include_fields', function () {
                 'toggle' => 0,
                 'allow_custom' => 0,
                 'other_choice' => 0,
+              ),
+              array(
+                'key' => 'field_66b8d93d4bc0c',
+                'label' => 'Simple Link',
+                'name' => 'simple_link',
+                'aria-label' => '',
+                'type' => 'link',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => array(
+                  array(
+                    array(
+                      'field' => 'field_66acbe1fd0add',
+                      'operator' => '==',
+                      'value' => 'simple-link',
+                    ),
+                  ),
+                ),
+                'wrapper' => array(
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'return_format' => 'array',
+              ),
+              array(
+                'key' => 'field_66b8e16c37947',
+                'label' => 'Anchor',
+                'name' => 'anchor',
+                'aria-label' => '',
+                'type' => 'text',
+                'instructions' => 'Write format #yourachor',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'default_value' => '',
+                'maxlength' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
               ),
             ),
             'acfe_seamless_style' => 0,
@@ -532,6 +577,7 @@ add_action('acf/include_fields', function () {
                     'choices' => array(
                       'post-link' => 'Post Link',
                       'tax-link' => 'Taxonomy Link',
+                      'simple-link' => 'Simple Link',
                     ),
                     'default_value' => 'post-link',
                     'return_format' => 'value',
@@ -614,6 +660,50 @@ add_action('acf/include_fields', function () {
                     'toggle' => 0,
                     'allow_custom' => 0,
                     'other_choice' => 0,
+                  ),
+                  array(
+                    'key' => 'field_66b8d99b4bc0d',
+                    'label' => 'Simple Link',
+                    'name' => 'simple_link',
+                    'aria-label' => '',
+                    'type' => 'link',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => array(
+                      array(
+                        array(
+                          'field' => 'field_66acbda4e14cf',
+                          'operator' => '==',
+                          'value' => 'simple-link',
+                        ),
+                      ),
+                    ),
+                    'wrapper' => array(
+                      'width' => '',
+                      'class' => '',
+                      'id' => '',
+                    ),
+                    'return_format' => 'array',
+                  ),
+                  array(
+                    'key' => 'field_66b8e1db948db',
+                    'label' => 'Anchor',
+                    'name' => 'anchor',
+                    'aria-label' => '',
+                    'type' => 'text',
+                    'instructions' => 'Write format #yourachor',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                      'width' => '',
+                      'class' => '',
+                      'id' => '',
+                    ),
+                    'default_value' => '',
+                    'maxlength' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
                   ),
                 ),
                 'acfe_seamless_style' => 0,

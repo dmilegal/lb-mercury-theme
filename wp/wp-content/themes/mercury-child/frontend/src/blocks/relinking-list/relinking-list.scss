@@ -177,7 +177,7 @@
       &_5 {
         --lb-relinking-list-col-count: 5;
         @include breakpoints.media-breakpoint-down('sm') {
-          --lb-relinking-list-col-count: 2;
+          --lb-relinking-list-col-count: 3;
         }
       }
 
