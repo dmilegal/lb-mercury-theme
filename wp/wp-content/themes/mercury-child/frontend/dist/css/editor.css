@@ -1558,6 +1558,11 @@
   --lb-letter-spacing-text-xs-relative: var(--wp--custom--letter-spacing--text-xs);
 }
 :root {
+  --lb-font-size-text-xxs-relative: var(--wp--preset--font-size--text-xxs);
+  --lb-line-height-text-xxs-relative: var(--wp--custom--line-height--text-xxs);
+  --lb-letter-spacing-text-xxs-relative: var(--wp--custom--letter-spacing--text-xxs);
+}
+:root {
   --lb-font-size-caption-md-relative: var(--wp--preset--font-size--caption-md);
   --lb-line-height-caption-md-relative: var(--wp--custom--line-height--caption-md);
   --lb-letter-spacing-caption-md-relative: var(--wp--custom--letter-spacing--caption-md);
@@ -1621,10 +1626,10 @@
   padding: 0;
   margin-bottom: 0;
   font-style: italic;
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
 }
 
 .wp-caption.alignleft p.wp-caption-text {
@@ -1662,10 +1667,10 @@ ul.wp-block-gallery.alignwide {
   margin-bottom: 0;
   text-align: center;
   color: var(--lb--caption-color-text);
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
 }
 
 .wp-block-image.aligncenter {
@@ -2098,6 +2103,12 @@ ul.wp-block-gallery.alignwide {
   font-size: var(--wp--preset--font-size--text-xs);
   line-height: var(--wp--custom--line-height--text-xs);
   letter-spacing: var(--wp--custom--letter-spacing--text-xs);
+}
+
+.has-text-xxs-font-size {
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs);
 }
 
 .has-caption-md-font-size {

@@ -159,10 +159,10 @@
   margin: 2px;
 }
 .lb-badge--size_sm:where(:not(.lb-badge--only_icon)) {
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
   padding: 2px 8px;
 }
 .lb-badge--size_sm:where(.lb-badge--only_icon) {
@@ -189,70 +189,90 @@
   padding: 6px;
 }
 .lb-badge--theme_light:where(.lb-badge--color_gray) {
-  --lb-badge--color: var(--wp--preset--color--gray-700);
+  --lb-badge--color: var(
+    --wp--preset--color--gray-700
+  );
   --lb-badge--background--color: var(--wp--preset--color--white);
   --lb-badge--icon--color: var(
     --wp--preset--color--gray-600
   );
 }
 .lb-badge--theme_light:where(.lb-badge--color_primary) {
-  --lb-badge--color: var(--wp--preset--color--primary-700);
+  --lb-badge--color: var(
+    --wp--preset--color--primary-700
+  );
   --lb-badge--background--color: var(--wp--preset--color--white);
   --lb-badge--icon--color: var(
     --wp--preset--color--primary-600
   );
 }
 .lb-badge--theme_light:where(.lb-badge--color_error) {
-  --lb-badge--color: var(--wp--preset--color--error-700);
+  --lb-badge--color: var(
+    --wp--preset--color--error-700
+  );
   --lb-badge--background--color: var(--wp--preset--color--white);
   --lb-badge--icon--color: var(
     --wp--preset--color--error-600
   );
 }
 .lb-badge--theme_light:where(.lb-badge--color_warning) {
-  --lb-badge--color: var(--wp--preset--color--warning-700);
+  --lb-badge--color: var(
+    --wp--preset--color--warning-700
+  );
   --lb-badge--background--color: var(--wp--preset--color--white);
   --lb-badge--icon--color: var(
     --wp--preset--color--warning-600
   );
 }
 .lb-badge--theme_light:where(.lb-badge--color_success) {
-  --lb-badge--color: var(--wp--preset--color--success-700);
+  --lb-badge--color: var(
+    --wp--preset--color--success-700
+  );
   --lb-badge--background--color: var(--wp--preset--color--white);
   --lb-badge--icon--color: var(
     --wp--preset--color--success-600
   );
 }
 .lb-badge--theme_medium:where(.lb-badge--color_gray) {
-  --lb-badge--color: var(--wp--preset--color--gray-700);
+  --lb-badge--color: var(
+    --wp--preset--color--gray-700
+  );
   --lb-badge--background--color: var(--wp--preset--color--gray-100);
   --lb-badge--icon--color: var(
     --wp--preset--color--gray-600
   );
 }
 .lb-badge--theme_medium:where(.lb-badge--color_primary) {
-  --lb-badge--color: var(--wp--preset--color--primary-700);
+  --lb-badge--color: var(
+    --wp--preset--color--primary-700
+  );
   --lb-badge--background--color: var(--wp--preset--color--primary-50);
   --lb-badge--icon--color: var(
     --wp--preset--color--primary-600
   );
 }
 .lb-badge--theme_medium:where(.lb-badge--color_error) {
-  --lb-badge--color: var(--wp--preset--color--error-700);
+  --lb-badge--color: var(
+    --wp--preset--color--error-700
+  );
   --lb-badge--background--color: var(--wp--preset--color--error-50);
   --lb-badge--icon--color: var(
     --wp--preset--color--error-600
   );
 }
 .lb-badge--theme_medium:where(.lb-badge--color_warning) {
-  --lb-badge--color: var(--wp--preset--color--warning-700);
+  --lb-badge--color: var(
+    --wp--preset--color--warning-700
+  );
   --lb-badge--background--color: var(--wp--preset--color--warning-50);
   --lb-badge--icon--color: var(
     --wp--preset--color--warning-600
   );
 }
 .lb-badge--theme_medium:where(.lb-badge--color_success) {
-  --lb-badge--color: var(--wp--preset--color--success-700);
+  --lb-badge--color: var(
+    --wp--preset--color--success-700
+  );
   --lb-badge--background--color: var(--wp--preset--color--success-50);
   --lb-badge--icon--color: var(
     --wp--preset--color--success-600
@@ -515,7 +535,7 @@
 :root,
 .editor-styles-wrapper {
   --lb-bonus-card-color-border: var(--lb-color-primary-outline-variant-1);
-  --lb-bonus-card-color-background:var(--lb-color-primary-container-low);
+  --lb-bonus-card-color-background: var(--lb-color-primary-container-low);
   --lb-bonus-card-title-color-text: var(--lb-color-primary);
   --lb-bonus-card-subtitle-color-text: var(--lb-color-text-strong);
   --lb-bonus-card-tc-color-text: var(--lb-color-on-primary-container);
@@ -588,10 +608,10 @@
   }
 }
 .lb-bonus-card__tc-extra {
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
   color: var(--lb-bonus-card-tc-extra-color-text);
   margin-top: var(--wp--preset--spacing--70);
   padding: 0 var(--wp--preset--spacing--80);
@@ -611,10 +631,10 @@
 }
 
 .lb-breadcrumbs {
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
   color: var(--lb-breadcrumbs-color-text);
 }
 .lb-breadcrumbs a {
@@ -642,7 +662,7 @@
   line-height: var(--wp--custom--line-height--text-md);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
-  line-height: var(--lb-line-height-text-xs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
 }
 .lb-breadcrumbs .breadcrumb_last {
   color: var(--lb-breadcrumbs-color-text-active);
@@ -2406,10 +2426,10 @@
   column-gap: var(--wp--preset--spacing--80);
   row-gap: var(--wp--preset--spacing--50);
   color: var(--lb-post-card-info-color-text);
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
   margin-bottom: var(--wp--preset--spacing--60);
 }
 .lb-post-card__info-item {
@@ -2592,7 +2612,7 @@
 **/
 :root {
   --lb-promo-bonus-color-border: var(--lb-color-primary-outline-variant-1);
-  --lb-promo-bonus-color-background:var(--lb-color-primary-container-low);
+  --lb-promo-bonus-color-background: var(--lb-color-primary-container-low);
   --lb-promo-bonus-title-color-text: var(--lb-color-primary);
   --lb-promo-bonus-subtitle-color-text: var(--lb-color-text-strong);
   --lb-promo-bonus-tc-color-text: var(--lb-color-on-primary-container);
@@ -2679,10 +2699,10 @@
   color: var(--lb-promo-bonus-tc-color-text);
 }
 .lb-promo-bonus__tc-extra {
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
   color: var(--lb-promo-bonus-tc-extra-color-text);
   margin-top: var(--wp--preset--spacing--60);
 }
@@ -2859,10 +2879,10 @@
   margin-bottom: var(--wp--preset--spacing--80);
 }
 .lb-relinking-block__title {
-  font-size: var(--wp--preset--font-size--text-md);
-  line-height: var(--wp--custom--line-height--text-md);
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
   color: var(--lb-relinking-block-color-text);
   font-weight: 500;
 }
@@ -2872,10 +2892,10 @@
   margin: 0;
 }
 .lb-relinking-block__item {
-  font-size: var(--wp--preset--font-size--text-sm);
-  line-height: var(--wp--custom--line-height--text-sm);
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
 }
 .lb-relinking-block__item:not(:last-child) {
   margin-block-end: var(--wp--preset--spacing--80);
@@ -3379,10 +3399,10 @@
   }
 }
 .lb-review-card__detail-title {
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
   margin-bottom: var(--wp--preset--spacing--50);
   color: var(--lb-review-card-color-text-sub);
 }
@@ -3444,10 +3464,10 @@
 }
 .lb-review-card__tc {
   padding: 0 var(--wp--preset--spacing--80);
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
   color: var(--lb-review-card-tc-color-text);
   margin-top: var(--wp--preset--spacing--60);
 }
@@ -3500,10 +3520,10 @@
   flex-shrink: 0;
 }
 .lb-compact-casino-bonus-card__title {
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
   font-weight: 500;
   color: var(--lb-ccb-review-card-color-text);
 }
@@ -3536,10 +3556,10 @@
   overflow: hidden;
 }
 .lb-compact-casino-bonus-card__tc-content {
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
   color: var(--lb-ccb-review-card-color-text-sub);
 }
 .lb-compact-casino-bonus-card__tc-content:after {
@@ -3550,10 +3570,10 @@
   border: none;
   padding: 0;
   background-color: transparent;
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
   color: var(--lb-ccb-review-card-more-color-text);
 }
 /*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
@@ -3738,11 +3758,12 @@
     margin-bottom: var(--wp--preset--spacing--100);
   }
 }
-.lb-review-list__subtitle, .lb-review-list__subtitle p {
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+.lb-review-list__subtitle,
+.lb-review-list__subtitle p {
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
   color: var(--lb-casino-subtitle-color);
 }
 .lb-review-list__subtitle {
@@ -4075,10 +4096,10 @@
   display: block;
 }
 .lb-tooltip--size_sm {
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
   padding: var(--wp--preset--spacing--60) var(--wp--preset--spacing--70);
 }
 /*!**************************************************************************************************************************************************************************************************************************************************************!*\
@@ -4090,7 +4111,8 @@
 /**
 * font
 **/
-:root, .editor-styles-wrapper {
+:root,
+.editor-styles-wrapper {
   --lb-user-block-name-color: var(--lb-color-text-strong);
   --lb-user-block-job-color: var(--lb-color-text-default);
   --lb-user-block-bio-color: var(--lb-color-text-default);
@@ -4113,10 +4135,10 @@
   letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
 }
 .lb-user-block--size_sm .lb-user-block__job {
-  font-size: var(--wp--preset--font-size--text-xs);
-  line-height: var(--wp--custom--line-height--text-xs);
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
   letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
 }
 .lb-user-block--size_md .lb-user-block__avatar {
   width: var(--wp--preset--spacing--140);

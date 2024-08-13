@@ -18,7 +18,7 @@
   }
 
   &__title {
-    @include font.get-text-styles('text-md', false);
+    @include font.get-text-styles('text-sm', false);
     color: var(--lb-relinking-block-color-text);
     font-weight: 500;
   }
@@ -30,7 +30,7 @@
   }
 
   &__item {
-    @include font.get-text-styles('text-sm', false);
+    @include font.get-text-styles('text-xs', false);
     &:not(:last-child) {
       margin-block-end: var(--wp--preset--spacing--80);
     }

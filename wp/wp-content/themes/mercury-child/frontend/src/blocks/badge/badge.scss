@@ -46,7 +46,7 @@
 
   &--size_sm {
     &:where(:not(#{$onlyIcon})) {
-      @include font.get-text-styles('text-xs');
+      @include font.get-text-styles('text-xxs');
       padding: 2px 8px;
     }
     &:where(#{$onlyIcon}) {
@@ -76,13 +76,17 @@
     @each $colorName in colors.$colorNames {
       &--theme_#{$theme}:where(#{'&--color_' + $colorName}) {
         @if $theme == 'light' {
-          --lb-badge--color: var(--wp--preset--color--#{$colorName}-#{colors.$targetOffsets});
+          --lb-badge--color: var(
+            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets}
+          );
           --lb-badge--background--color: var(--wp--preset--color--white);
           --lb-badge--icon--color: var(
             --wp--preset--color--#{$colorName}-#{colors.$targetOffsets - 100}
           );
         } @else if $theme == 'medium' {
-          --lb-badge--color: var(--wp--preset--color--#{$colorName}-#{colors.$targetOffsets});
+          --lb-badge--color: var(
+            --wp--preset--color--#{$colorName}-#{colors.$targetOffsets}
+          );
           @if $colorName == colors.$colorGray {
             --lb-badge--background--color: var(--wp--preset--color--#{$colorName}-100);
           } @else {

@@ -3,7 +3,7 @@
 
 :root {
   --lb-promo-bonus-color-border: var(--lb-color-primary-outline-variant-1);
-  --lb-promo-bonus-color-background:var(--lb-color-primary-container-low);
+  --lb-promo-bonus-color-background: var(--lb-color-primary-container-low);
   --lb-promo-bonus-title-color-text: var(--lb-color-primary);
   --lb-promo-bonus-subtitle-color-text: var(--lb-color-text-strong);
   --lb-promo-bonus-tc-color-text: var(--lb-color-on-primary-container);
@@ -15,10 +15,12 @@
   background-color: var(--lb-promo-bonus-color-background);
   border: 1px solid var(--lb-promo-bonus-color-border);
   border-radius: var(--wp--preset--spacing--80);
-  padding: var(--wp--preset--spacing--120) var(--wp--preset--spacing--120) var(--wp--preset--spacing--140);
+  padding: var(--wp--preset--spacing--120) var(--wp--preset--spacing--120)
+    var(--wp--preset--spacing--140);
   @include breakpoints.media-breakpoint-down(sm) {
     @include font.get-text-styles('text-sm', false);
-    padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100) var(--wp--preset--spacing--140);
+    padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--100)
+      var(--wp--preset--spacing--140);
   }
 
   &__header {
@@ -45,7 +47,7 @@
     @include font.get-text-styles('display-sm', false);
     font-weight: 500;
     color: var(--lb-promo-bonus-subtitle-color-text);
-  
+
     @include breakpoints.media-breakpoint-down(sm) {
       @include font.get-text-styles('display-xs', false);
     }
@@ -73,7 +75,7 @@
   }
 
   &__tc-extra {
-    @include font.get-text-styles('text-xs', false);
+    @include font.get-text-styles('text-xxs', false);
     color: var(--lb-promo-bonus-tc-extra-color-text);
     margin-top: var(--wp--preset--spacing--60);
     &:after {

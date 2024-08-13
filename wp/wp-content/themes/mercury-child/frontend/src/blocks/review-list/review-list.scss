@@ -71,14 +71,15 @@
   }
 
   &__subtitle {
-    &, p {
-      @include font.get-text-styles('text-xs', false);
+    &,
+    p {
+      @include font.get-text-styles('text-xxs', false);
       color: var(--lb-casino-subtitle-color);
     }
     & {
       margin-bottom: var(--wp--preset--spacing--70);
     }
-    
+
     &:not(:only-child) {
       margin-bottom: var(--wp--preset--spacing--140);
       @include breakpoints.media-breakpoint-down('sm') {

@@ -2,8 +2,8 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-
-:root, .editor-styles-wrapper {
+:root,
+.editor-styles-wrapper {
   --lb-user-block-name-color: var(--lb-color-text-strong);
   --lb-user-block-job-color: var(--lb-color-text-default);
   --lb-user-block-bio-color: var(--lb-color-text-default);
@@ -28,7 +28,7 @@
       }
 
       %job {
-        @include font.get-text-styles('text-xs', false);
+        @include font.get-text-styles('text-xxs', false);
       }
     }
 
@@ -64,7 +64,7 @@
       %name {
         @include font.get-text-styles('text-md', false);
       }
-      
+
       %job {
         @include font.get-text-styles('text-md', false);
       }
@@ -83,7 +83,7 @@
       %name {
         @include font.get-text-styles('text-lg', false);
       }
-      
+
       %job {
         @include font.get-text-styles('text-md', false);
       }

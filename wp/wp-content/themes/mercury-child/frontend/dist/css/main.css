@@ -1558,6 +1558,11 @@
   --lb-letter-spacing-text-xs-relative: var(--wp--custom--letter-spacing--text-xs);
 }
 :root {
+  --lb-font-size-text-xxs-relative: var(--wp--preset--font-size--text-xxs);
+  --lb-line-height-text-xxs-relative: var(--wp--custom--line-height--text-xxs);
+  --lb-letter-spacing-text-xxs-relative: var(--wp--custom--letter-spacing--text-xxs);
+}
+:root {
   --lb-font-size-caption-md-relative: var(--wp--preset--font-size--caption-md);
   --lb-line-height-caption-md-relative: var(--wp--custom--line-height--caption-md);
   --lb-letter-spacing-caption-md-relative: var(--wp--custom--letter-spacing--caption-md);
@@ -1753,10 +1758,10 @@ Make elements with the HTML hidden attribute stay hidden by default.
   padding: 0;
   margin-bottom: 0;
   font-style: italic;
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
 }
 
 .wp-caption.alignleft p.wp-caption-text {
@@ -1794,10 +1799,10 @@ ul.wp-block-gallery.alignwide {
   margin-bottom: 0;
   text-align: center;
   color: var(--lb--caption-color-text);
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
 }
 
 .wp-block-image.aligncenter {
@@ -2111,6 +2116,12 @@ ul.wp-block-gallery.alignwide {
   font-size: var(--wp--preset--font-size--text-xs);
   line-height: var(--wp--custom--line-height--text-xs);
   letter-spacing: var(--wp--custom--letter-spacing--text-xs);
+}
+
+.has-text-xxs-font-size {
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs);
 }
 
 .has-caption-md-font-size {
@@ -2961,10 +2972,10 @@ ul.wp-block-gallery.alignwide {
   margin-top: var(--wp--preset--spacing--100);
   padding: 20px 0 0;
   border-top: 1px solid var(--lb-mobile-menu--border--color);
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
 }
 .lb-mobile-menu__close-button {
   color: inherit;
@@ -3090,10 +3101,10 @@ ul.wp-block-gallery.alignwide {
   flex-wrap: wrap;
   column-gap: var(--wp--preset--spacing--80);
   row-gap: var(--wp--preset--spacing--60);
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
 }
 .lb-footer__submenu a {
   -webkit-text-decoration: none;
@@ -3149,10 +3160,10 @@ ul.wp-block-gallery.alignwide {
   cursor: pointer;
 }
 .lb-footer__disclaimer {
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
   color: var(--lb-footer-dis-color-text);
 }
 .lb-footer__disclaimer p {
@@ -3167,16 +3178,16 @@ ul.wp-block-gallery.alignwide {
 .lb-footer__bot {
   margin-top: var(--wp--preset--spacing--60);
   padding: var(--wp--preset--spacing--80) 0;
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
 }
 .lb-footer__copy {
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
   color: var(--lb-footer-dis-color-text);
   margin-bottom: var(--wp--preset--spacing--50);
 }
@@ -3201,10 +3212,10 @@ ul.wp-block-gallery.alignwide {
   }
 }
 .lb-footer__extra-actions .lb-lang-label__title {
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
 }
 .lb-footer__license {
   display: flex;
@@ -3212,18 +3223,18 @@ ul.wp-block-gallery.alignwide {
   column-gap: var(--wp--preset--spacing--60);
   row-gap: var(--wp--preset--spacing--60);
   margin-bottom: var(--wp--preset--spacing--120);
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
 }
 
 .lb-lang-switcher {
   position: relative;
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
   letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
   font-weight: 500;
   color: var(--wp--preset--color--black);
 }
@@ -3238,19 +3249,29 @@ ul.wp-block-gallery.alignwide {
   visibility: visible;
 }
 .lb-lang-switcher--color_gray {
-  --lb-lang-switcher--color--hover: var(--wp--preset--color--gray-700);
+  --lb-lang-switcher--color--hover: var(
+    --wp--preset--color--gray-700
+  );
 }
 .lb-lang-switcher--color_primary {
-  --lb-lang-switcher--color--hover: var(--wp--preset--color--primary-700);
+  --lb-lang-switcher--color--hover: var(
+    --wp--preset--color--primary-700
+  );
 }
 .lb-lang-switcher--color_error {
-  --lb-lang-switcher--color--hover: var(--wp--preset--color--error-700);
+  --lb-lang-switcher--color--hover: var(
+    --wp--preset--color--error-700
+  );
 }
 .lb-lang-switcher--color_warning {
-  --lb-lang-switcher--color--hover: var(--wp--preset--color--warning-700);
+  --lb-lang-switcher--color--hover: var(
+    --wp--preset--color--warning-700
+  );
 }
 .lb-lang-switcher--color_success {
-  --lb-lang-switcher--color--hover: var(--wp--preset--color--success-700);
+  --lb-lang-switcher--color--hover: var(
+    --wp--preset--color--success-700
+  );
 }
 .lb-lang-switcher__list {
   background-color: var(--wp--preset--color--white);
