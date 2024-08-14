@@ -3116,7 +3116,11 @@
     grid-template-columns: repeat(--lb-relinking-list-col-count, 192px);
     grid-template-columns: repeat(var(--lb-relinking-list-col-count-real, --lb-relinking-list-col-count), 192px);
     overflow: auto;
-    padding-bottom: var(--wp--preset--spacing--60);
+    padding-bottom: var(--wp--preset--spacing--80);
+    margin-bottom: 0;
+  }
+  .lb-relinking-list__blocks > * {
+    margin-bottom: 0;
   }
 }
 .lb-relinking-list__blocks::-webkit-scrollbar {

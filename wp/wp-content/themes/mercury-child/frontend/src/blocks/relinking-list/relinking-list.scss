@@ -108,7 +108,6 @@
   }
 
   &__slider {
-
     &-wrapper {
       position: relative;
     }
@@ -234,9 +233,16 @@
     margin-bottom: calc(-1 * var(--lb-relinking-list-gap-y));
 
     @include breakpoints.media-breakpoint-down('sm') {
-      grid-template-columns: repeat(var(--lb-relinking-list-col-count-real, --lb-relinking-list-col-count), 192px);
+      grid-template-columns: repeat(
+        var(--lb-relinking-list-col-count-real, --lb-relinking-list-col-count),
+        192px
+      );
       overflow: auto;
-      padding-bottom: var(--wp--preset--spacing--60);
+      padding-bottom: var(--wp--preset--spacing--80);
+      margin-bottom: 0;
+      & > * {
+        margin-bottom: 0;
+      }
     }
 
     &::-webkit-scrollbar {
