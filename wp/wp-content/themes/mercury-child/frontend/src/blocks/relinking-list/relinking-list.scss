@@ -229,17 +229,14 @@
   &__blocks {
     display: grid;
     column-gap: var(--lb-relinking-list-gap-x);
-    row-gap: var(--lb-relinking-list-gap-y);
+    row-gap: 0px;
     grid-template-columns: repeat(var(--lb-relinking-list-col-count), 1fr);
+    margin-bottom: calc(-1 * var(--lb-relinking-list-gap-y));
 
     @include breakpoints.media-breakpoint-down('sm') {
-      display: flex;
+      grid-template-columns: repeat(var(--lb-relinking-list-col-count-real, --lb-relinking-list-col-count), 192px);
       overflow: auto;
       padding-bottom: var(--wp--preset--spacing--60);
-      & > * {
-        width: 192px;
-        flex-shrink: 0;
-      }
     }
 
     &::-webkit-scrollbar {

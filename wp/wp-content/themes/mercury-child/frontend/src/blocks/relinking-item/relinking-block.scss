@@ -11,10 +11,13 @@
 
 .lb-relinking-block {
   box-sizing: border-box;
-  
+  grid-template-rows: subgrid;
+  display: grid;
+  margin-bottom: var(--lb-relinking-list-gap-y);
+  grid-row: span 30;
+
   &__header {
     margin-bottom: var(--wp--preset--spacing--80);
-
   }
 
   &__title {
@@ -24,6 +27,7 @@
   }
 
   &__list {
+    display: contents;
     list-style: none;
     padding: 0;
     margin: 0;

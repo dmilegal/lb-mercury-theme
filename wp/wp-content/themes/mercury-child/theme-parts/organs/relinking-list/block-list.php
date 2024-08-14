@@ -5,7 +5,7 @@ $params = isset($args['prepared']) ? $args : relinkingListParams($args);
                                                       "lb-relinking-list",
                                                       "lb-relinking-list--theme_blocks",
                                                       $params['className']
-                                                    ) ?>" style="<?= stylesValue($params['style']) ?>">
+                                                    ) ?>" style="<?= stylesValue($params['style']) ?>--lb-relinking-list-col-count-real:<?= isset($params['block_list']) ? count($params['block_list']) : 1 ?>">
   <? if ($params['title']) { ?>
     <header class="<?= classNames("not-prose", "lb-relinking-list__header ") ?>">
       <h2 class="<?= classNames(
