@@ -13,10 +13,6 @@ $('.lb-mobile-menu').on('click', function (e) {
   closeMobileMenu()
 })
 
-$('.menu-item-has-children > a').on('click', function (e) {
-  e.preventDefault()
-})
-
 function closeMobileMenu() {
   $('.lb-mobile-menu').removeClass('lb-mobile-menu--active')
   $('#mobile-header-trigger').removeClass('is-active')
@@ -27,7 +23,7 @@ function closeMobileMenu() {
 
 // Mobile Children Start
 
-$('.lb-mobile-menu .menu-item-has-children>a').on('click', function (e) {
+$('.lb-mobile-menu .lb-mobile-menu__toggle-button').on('click', function (e) {
   e.preventDefault()
   let $parentLi = $(this).parent()
   $parentLi.addClass('toggled')
