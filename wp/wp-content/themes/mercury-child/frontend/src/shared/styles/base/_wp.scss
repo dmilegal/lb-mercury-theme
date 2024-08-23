@@ -1,8 +1,8 @@
 $disableWpDefaultStyles: false !default;
 $wrapperSelector: null !default;
 
-@use "@/shared/styles/mixins/container";
-@use "@/shared/styles/mixins/font";
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
 
 :root {
   --lb--caption-color-text: var(--lb-color-text-default);
@@ -57,7 +57,7 @@ $wrapperSelector: null !default;
     padding: 0;
     margin-bottom: 0;
     font-style: italic;
-    @include font.get-text-styles('text-xs');
+    @include font.get-text-styles('text-xxs');
   }
 
   .wp-caption.alignleft p.wp-caption-text {
@@ -92,7 +92,7 @@ $wrapperSelector: null !default;
     margin-bottom: 0;
     text-align: center;
     color: var(--lb--caption-color-text);
-    @include font.get-text-styles('text-xs');
+    @include font.get-text-styles('text-xxs');
   }
   .wp-block-image.aligncenter {
     margin-left: auto;
@@ -126,7 +126,6 @@ $wrapperSelector: null !default;
     padding: 0 30px;
   }
 }
-
 
 @if not $disableWpDefaultStyles {
   @if $wrapperSelector {

@@ -30,7 +30,7 @@
 
   &--size {
     &_sm {
-      @include font.get-text-styles('text-xs');
+      @include font.get-text-styles('text-xxs');
       padding: var(--wp--preset--spacing--60) var(--wp--preset--spacing--70);
     }
   }

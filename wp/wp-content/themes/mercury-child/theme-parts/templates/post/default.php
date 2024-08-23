@@ -22,6 +22,6 @@
 			</div>
 		<?php endwhile; ?>
 	<?php endif; ?>
-
+	<? get_template_part('theme-parts/organisms/before-footer-content/style-1'); ?>
 </div>
 <?php get_footer(); ?>

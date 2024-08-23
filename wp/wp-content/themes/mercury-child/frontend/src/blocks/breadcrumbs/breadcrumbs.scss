@@ -7,7 +7,7 @@
 }
 
 .lb-breadcrumbs {
-  @include font.get-text-styles('text-xs', false);
+  @include font.get-text-styles('text-xxs', false);
   color: var(--lb-breadcrumbs-color-text);
   a {
     color: var(--lb-breadcrumbs-color-text);
@@ -30,7 +30,7 @@
     position: relative;
     top: 1px;
     @include font.get-text-styles('text-md', false);
-    line-height: font.line-height-by-name('text-xs');
+    line-height: font.line-height-by-name('text-xxs');
   }
   .breadcrumb_last {
     color: var(--lb-breadcrumbs-color-text-active);

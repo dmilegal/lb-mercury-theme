@@ -1,0 +1,20 @@
+.lb-slider {
+  &-nav {
+    &--theme {
+      &_rsm {
+        &#{&} {
+          --lb-featured-icon-size-border: 1px;
+          --lb-featured-icon-color-border: var(--lb-color-surface-outline-1);
+          &:hover {
+            --lb-featured-icon-color-border: var(--lb-color-primary);
+            --lb-featured-icon-color-text: var(--lb-color-primary);
+          }
+
+          &.swiper-button-disabled {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

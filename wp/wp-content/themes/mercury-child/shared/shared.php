@@ -16,3 +16,4 @@ require_once 'theme/theme.php';
 require_once 'get-icon-by-lang-code.php';
 require_once 'get-brand-external-link.php';
 require_once 'is-brand-locked.php';
+require_once 'blocks/blocks.php';
