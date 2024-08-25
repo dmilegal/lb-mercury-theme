@@ -98,6 +98,9 @@ function closeMobileMenu() {
   $('#mobile-header-trigger').removeClass('is-active');
   $('body').css('overflow-y', '');
 }
+$('.menu-item-has-children > a[href="#"],.menu-item-has-children > a[href=""]').on('click', function (e) {
+  e.preventDefault();
+});
 
 // Mobile Menu Open End
 
