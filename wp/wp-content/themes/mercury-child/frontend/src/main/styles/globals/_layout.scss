@@ -2,8 +2,12 @@
 @use '@/shared/styles/mixins/breakpoints';
 
 :root {
-  --lb-layout-grid-col-template: repeat(20, 1fr);
-  --lb-layout-grid-gap-x: calc(var(--layout-content-spacing) / 2);
+  --lb-layout-gap-x: var(--wp--preset--spacing--280);
+  --lb-layout-content-size: 720px;
+  --lb-layout-sidebar-size: 280px;
+  --lb-layout-grid-col-template: minmax(280px, var(--lb-layout-content-size))
+    var(--lb-layout-sidebar-size);
+
   --lb-layout-content-grid-col-start: 1;
   --lb-layout-content-grid-col-end: -1;
   --lb-layout-inner-grid-col-start: 1;
@@ -24,56 +28,45 @@
 
 .lb-layout {
   &--sticky-box {
-    --lb-layout-grid-col-template: repeat(12, 1fr);
-    --lb-layout-grid-gap-x: var(--layout-content-spacing);
     --lb-layout-content-grid-col-start: 1;
     --lb-layout-content-grid-col-end: -1;
 
     @include breakpoints.media-breakpoint-up(lg) {
-      --lb-layout-content-grid-col-start: 1;
-      --lb-layout-content-grid-col-end: 8;
-
       position: relative;
     }
   }
 
   &--with-sidebar {
-    --lb-layout-grid-col-template: repeat(20, 1fr);
-    --lb-layout-grid-gap-x: calc(var(--layout-content-spacing) / 2);
-    
-    --lb-layout-content-grid-col-start: 2;
-    --lb-layout-content-grid-col-end: 20;
-    
-    --lb-layout-inner-grid-col-start: var(--lb-layout-content-grid-col-start);
-    --lb-layout-inner-grid-col-end: 14;
+    --lb-layout-inner-grid-col-start: 1;
+    --lb-layout-inner-grid-col-end: 2;
 
-    --lb-layout-sidebar-grid-col-start: 15;
-    --lb-layout-sidebar-grid-col-end: 20;
+    --lb-layout-sidebar-grid-col-start: 2;
+    --lb-layout-sidebar-grid-col-end: 3;
 
     @include breakpoints.media-breakpoint-down(md) {
-      --lb-layout-content-grid-col-start: 1;
-      --lb-layout-content-grid-col-end: -1;
-      --lb-layout-inner-grid-col-start: var(--lb-layout-content-grid-col-start);
-      --lb-layout-inner-grid-col-end: var(--lb-layout-content-grid-col-end);
-      --lb-layout-sidebar-grid-col-start: var(--lb-layout-content-grid-col-start);
-    --lb-layout-sidebar-grid-col-end: var(--lb-layout-content-grid-col-end);
+      --lb-layout-grid-col-template: 1fr;
+
+      --lb-layout-sidebar-grid-col-start: 1;
+      --lb-layout-sidebar-grid-col-end: 2;
     }
 
     %sidebar {
       grid-row: 1 / -1;
-      grid-column: var(--lb-layout-sidebar-grid-col-start) / var(--lb-layout-sidebar-grid-col-end);
+      grid-column: var(--lb-layout-sidebar-grid-col-start) /
+        var(--lb-layout-sidebar-grid-col-end);
     }
 
     %inner {
       grid-row: 1 / -1;
-      grid-column: var(--lb-layout-inner-grid-col-start) / var(--lb-layout-inner-grid-col-end);
+      grid-column: var(--lb-layout-inner-grid-col-start) /
+        var(--lb-layout-inner-grid-col-end);
     }
   }
 
   &--tight {
     --lb-layout-content-grid-col-start: 4;
     --lb-layout-content-grid-col-end: 18;
-    
+
     @include breakpoints.media-breakpoint-down(lg) {
       --lb-layout-content-grid-col-start: 3;
       --lb-layout-content-grid-col-end: 19;
@@ -86,19 +79,7 @@
   }
 
   &--tight-content {
-    %inner {
-      --lb-layout-content-grid-col-start: 4;
-      --lb-layout-content-grid-col-end: 18;
-      @include breakpoints.media-breakpoint-down(lg) {
-        --lb-layout-content-grid-col-start: 3;
-        --lb-layout-content-grid-col-end: 19;
-      }
 
-      @include breakpoints.media-breakpoint-down(md) {
-        --lb-layout-content-grid-col-start: 1;
-        --lb-layout-content-grid-col-end: -1;
-      }
-    }
   }
 
   &__relative {
@@ -113,7 +94,7 @@
   &__precontent {
     display: grid;
     grid-template-columns: var(--lb-layout-grid-col-template);
-    column-gap: var(--lb-layout-grid-gap-x);
+    column-gap: var(--lb-layout-gap-x);
     @include container.make-container-max-width();
   }
 
@@ -146,22 +127,13 @@
   }
 
   &__inner {
-    grid-column: var(--lb-layout-content-grid-col-start) /
-      var(--lb-layout-content-grid-col-end);
     @extend %inner;
   }
 
   &__breadcrumbs {
-    display: grid;
-    grid-template-columns: var(--lb-layout-grid-col-template);
-    column-gap: var(--lb-layout-grid-gap-x);
-
     padding-top: var(--wp--preset--spacing--85);
     padding-bottom: var(--wp--preset--spacing--85);
     border-bottom: 1px solid var(--lb-layout-breadcrumbs-color-border);
     @include container.make-container-max-width();
-    & > * {
-      grid-column: 1 / -1;
-    }
   }
 }
