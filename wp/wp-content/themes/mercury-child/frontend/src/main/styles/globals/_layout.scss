@@ -2,12 +2,6 @@
 @use '@/shared/styles/mixins/breakpoints';
 
 :root {
-  --lb-layout-gap-x: var(--wp--preset--spacing--280);
-  --lb-layout-content-size: 720px;
-  --lb-layout-sidebar-size: 280px;
-  --lb-layout-grid-col-template: minmax(280px, var(--lb-layout-content-size))
-    var(--lb-layout-sidebar-size);
-
   --lb-layout-content-grid-col-start: 1;
   --lb-layout-content-grid-col-end: -1;
   --lb-layout-inner-grid-col-start: 1;
@@ -64,18 +58,7 @@
   }
 
   &--tight {
-    --lb-layout-content-grid-col-start: 4;
-    --lb-layout-content-grid-col-end: 18;
-
-    @include breakpoints.media-breakpoint-down(lg) {
-      --lb-layout-content-grid-col-start: 3;
-      --lb-layout-content-grid-col-end: 19;
-    }
-
-    @include breakpoints.media-breakpoint-down(md) {
-      --lb-layout-content-grid-col-start: 1;
-      --lb-layout-content-grid-col-end: -1;
-    }
+    
   }
 
   &--tight-content {
@@ -84,10 +67,6 @@
 
   &__relative {
     position: relative;
-  }
-
-  &__banner {
-    background-color: var(--lb-layout-banner-color-background);
   }
 
   &__content,

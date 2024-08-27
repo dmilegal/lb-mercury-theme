@@ -446,6 +446,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/layout/layout.scss":
+/*!***************************************!*\
+  !*** ./src/blocks/layout/layout.scss ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/logo-text/logo-text.scss":
 /*!*********************************************!*\
   !*** ./src/blocks/logo-text/logo-text.scss ***!
@@ -1364,6 +1376,18 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lang_label_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lang-label.scss */ "./src/blocks/lang-label/lang-label.scss");
+
+
+/***/ }),
+
+/***/ "./src/blocks/layout/layout.ts":
+/*!*************************************!*\
+  !*** ./src/blocks/layout/layout.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layout_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layout.scss */ "./src/blocks/layout/layout.scss");
 
 
 /***/ }),
@@ -2634,6 +2658,7 @@ function rectToClientRect(rect) {
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/hero-banner/hero-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/hero-review-banner/hero-review-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/lang-label/lang-label.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/layout/layout.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/logo-text/logo-text.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/page-not-found/page-not-found.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk-mdl-index-mdl","libs/chk-blocks-chk-mdl-floating-ui.dom-mdl","libs/chk-blocks-chk-mdl-floating-ui.core-mdl","libs/chk-blocks-chk-mdl-stringify-mdl","libs/chk-blocks-chk-mdl-parse-mdl"], () => (__webpack_require__("./src/blocks/pagination/pagination.ts")))

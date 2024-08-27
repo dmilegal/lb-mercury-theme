@@ -17,6 +17,26 @@ add_action('acf/include_fields', function () {
 
   $params['fields'][0]['sub_fields'] = [
     array(
+      'key' => 'field_65d677e68edeb',
+      'label' => 'Title',
+      'name' => 'title',
+      'aria-label' => '',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array(
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'maxlength' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+    ),
+    array(
       'key' => 'field_65f0a10fa39d9',
       'label' => 'Card Variant',
       'name' => 'card_variant',
