@@ -27,7 +27,7 @@
                 {
                     "name": "Gray 200",
                     "slug": "gray-200",
-                    "color": "#E4E7EC",
+                    "color": "#EAECF0",
                     "group": "gray"
                 },
                 {
@@ -395,6 +395,11 @@
                 {
                     "name": "Text xs",
                     "slug": "text-xs",
+                    "size": "0.8125rem"
+                },
+                {
+                    "name": "Text xxs",
+                    "slug": "text-xxs",
                     "size": "0.75rem"
                 },
                 {
@@ -498,6 +503,7 @@
                 "text-md": "1.5rem",
                 "text-sm": "1.25rem",
                 "text-xs": "1.125rem",
+                "text-xxs": "1.125rem",
                 "caption-md": "1rem"
             },
             "letterSpacing": {

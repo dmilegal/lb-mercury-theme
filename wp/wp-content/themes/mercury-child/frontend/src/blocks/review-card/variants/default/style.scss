@@ -228,7 +228,7 @@
     }
 
     &-title {
-      @include font.get-text-styles('text-xs', false);
+      @include font.get-text-styles('text-xxs', false);
       margin-bottom: var(--wp--preset--spacing--50);
       color: var(--lb-review-card-color-text-sub);
       @include media-containers.media-breakpoint-down(sm) {
@@ -260,7 +260,8 @@
     &-content {
       grid-column: 1 / -1;
       grid-row: 3/4;
-      padding: var(--wp--preset--spacing--50) var(--lb-review-card-padding-x) var(--wp--preset--spacing--90);
+      padding: var(--wp--preset--spacing--50) var(--lb-review-card-padding-x)
+        var(--wp--preset--spacing--90);
       @include media-containers.media-breakpoint-down(sm) {
         padding: var(--wp--preset--spacing--75) var(--lb-review-card-padding-x)
           var(--wp--preset--spacing--50);
@@ -301,7 +302,7 @@
 
   &__tc {
     padding: 0 var(--wp--preset--spacing--80);
-    @include font.get-text-styles('text-xs', false);
+    @include font.get-text-styles('text-xxs', false);
     color: var(--lb-review-card-tc-color-text);
     margin-top: var(--wp--preset--spacing--60);
     &:after {

@@ -90,7 +90,7 @@
     margin-top: var(--wp--preset--spacing--100);
     padding: 20px 0 0;
     border-top: 1px solid var(--lb-mobile-menu--border--color);
-    @include font.get-text-styles('text-xs');
+    @include font.get-text-styles('text-xxs');
   }
 
   &__close-button {

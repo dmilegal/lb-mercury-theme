@@ -59,10 +59,14 @@ $body-fonts: (
     line-height: var(--wp--custom--line-height--text-xs),
     letter-spacing: var(--wp--custom--letter-spacing--text-xs),
   ),
+  text-xxs: (
+    font-size: var(--wp--preset--font-size--text-xxs),
+    line-height: var(--wp--custom--line-height--text-xxs),
+    letter-spacing: var(--wp--custom--letter-spacing--text-xxs),
+  ),
   caption-md: (
     font-size: var(--wp--preset--font-size--caption-md),
     line-height: var(--wp--custom--line-height--caption-md),
     letter-spacing: var(--wp--custom--letter-spacing--caption-md),
   ),
 );
-

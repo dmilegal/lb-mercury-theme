@@ -128,9 +128,9 @@ export default function common(mode) {
               // together by ~.  We can then determine which chunk/file
               // needs to be loaded by each entry point.
               const allChunksNames = chunks
-                .map((item) => `chk-${item.name}-chk`)
+                .map((item) => `chk-${item.name}-chk.lib`)
                 .join('~')
-              return `libs/${allChunksNames}-mdl-${moduleFileName}-mdl`
+              return `libs/${allChunksNames}`
             },
             chunks: 'initial',
             priority: -10,
@@ -151,9 +151,9 @@ export default function common(mode) {
               // together by ~.  We can then determine which chunk/file
               // needs to be loaded by each entry point.
               const allChunksNames = chunks
-                .map((item) => `chk-${item.name}-chk`)
+                .map((item) => `chk-${item.name}-chk.lib`)
                 .join('~')
-              return `libs/${allChunksNames}-mdl-${moduleFileName}-mdl`
+              return `libs/${allChunksNames}`
             },
             chunks: 'all',
             priority: -10,
@@ -174,16 +174,26 @@ export default function common(mode) {
               loader: 'babel-loader',
               options: {
                 presets: [
-                  [
-                    '@babel/preset-env',
-                    {
-                      targets: {
-                        node: '17.6.0',
-                      },
-                    },
-                  ],
+                  '@babel/preset-env',
                   '@babel/preset-react',
                   '@babel/preset-typescript',
+                  '@wordpress/babel-preset-default',
+                ],
+                plugins: [
+                  [
+                    '@babel/plugin-transform-react-jsx',
+                    {
+                      pragma: 'h', // Для Preact
+                      pragmaFrag: 'Fragment',
+                      throwIfNamespace: false, // Если используется JSX в том числе и в TS/TSX
+                    },
+                  ],
+                  [
+                    '@babel/plugin-transform-runtime',
+                    {
+                      regenerator: true,
+                    },
+                  ],
                 ],
               },
             },
