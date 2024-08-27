@@ -25,13 +25,15 @@
     &--bordered {
       border-top: 1px solid var(--lb-sidebar-color-border);
       padding: var(--wp--preset--spacing--120) 0;
-      
+
       @include breakpoints.media-breakpoint-down(md) {
         border-top: none;
         &:first-child {
           padding-top: 0;
         }
       }
+
+      @extend %sidebar-bordered;
     }
 
     &--contributors {
@@ -63,5 +65,13 @@
       @extend %block-title
     }
 
+  }
+}
+
+.widget_block {
+  &:last-child {
+    %sidebar-bordered {
+      padding-bottom: 0;
+    }
   }
 }
