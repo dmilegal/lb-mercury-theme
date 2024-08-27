@@ -92,7 +92,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   S: () => (/* binding */ S)
 /* harmony export */ });
-const S = wp.domReady(function () {
+var S = wp.domReady(function () {
   wp.blocks.registerBlockStyle('core/list', {
     name: 'list-bordered',
     label: 'Bordered'
@@ -111,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   S: () => (/* binding */ S)
 /* harmony export */ });
-const S = wp.domReady(function () {
+var S = wp.domReady(function () {
   wp.blocks.registerBlockStyle('core/media-text', {
     name: 'media-text-bordered',
     label: 'Bordered'

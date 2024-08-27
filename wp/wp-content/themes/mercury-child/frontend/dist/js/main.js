@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /******/ var __webpack_modules__ = ({
 
 /***/ "./public/fonts/lhicon/stylesheet.css":
@@ -43,10 +42,11 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************************/
 /***/ (() => {
 
+var _document$querySelect;
 ;
-(document.querySelectorAll('.lb-dropdown') ?? []).forEach(container => {
-  const btnEl = container.querySelector('.lb-dropdown__header');
-  btnEl.addEventListener('click', () => {
+((_document$querySelect = document.querySelectorAll('.lb-dropdown')) !== null && _document$querySelect !== void 0 ? _document$querySelect : []).forEach(function (container) {
+  var btnEl = container.querySelector('.lb-dropdown__header');
+  btnEl.addEventListener('click', function () {
     if (container.classList.contains('lb-dropdown--state_opened')) {
       container.classList.remove('lb-dropdown--state_opened');
       container.classList.add('lb-dropdown--state_closed');
@@ -82,7 +82,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (() => {
 
 // Search Block End
-const $ = jQuery;
+var $ = jQuery;
 // Mobile Menu Open Start
 $('#mobile-header-trigger').on('click', function () {
   $('.lb-mobile-menu').addClass('lb-mobile-menu--active');
@@ -109,7 +109,7 @@ $('.menu-item-has-children > a[href="#"],.menu-item-has-children > a[href=""]').
 
 $('.lb-mobile-menu .lb-mobile-menu__toggle-button').on('click', function (e) {
   e.preventDefault();
-  let $parentLi = $(this).parent();
+  var $parentLi = $(this).parent();
   $parentLi.addClass('toggled');
   if ($('.lb-mobile-menu .menu-item-has-children').hasClass('toggled')) {
     $parentLi.children('ul').toggle();
@@ -219,6 +219,3 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //# sourceMappingURL=main.js.map
-=======
-var e={3768:()=>{var e;(null!==(e=document.querySelectorAll(".lb-dropdown"))&&void 0!==e?e:[]).forEach((function(e){e.querySelector(".lb-dropdown__header").addEventListener("click",(function(){e.classList.contains("lb-dropdown--state_opened")?(e.classList.remove("lb-dropdown--state_opened"),e.classList.add("lb-dropdown--state_closed")):(e.classList.remove("lb-dropdown--state_closed"),e.classList.add("lb-dropdown--state_opened"))}))}))},2355:()=>{var e=jQuery;function o(){e(".lb-mobile-menu").removeClass("lb-mobile-menu--active"),e("#mobile-header-trigger").removeClass("is-active"),e("body").css("overflow-y","")}e("#mobile-header-trigger").on("click",(function(){e(".lb-mobile-menu").addClass("lb-mobile-menu--active"),e("#mobile-header-trigger").addClass("is-active"),e("body").css("overflow-y","hidden")})),e(".lb-mobile-menu__close-button").on("click",o),e(".lb-mobile-menu").on("click",(function(e){e.target===this&&o()})),e(".menu-item-has-children > a").on("click",(function(e){e.preventDefault()})),e(".lb-mobile-menu .menu-item-has-children>a").on("click",(function(o){o.preventDefault();var l=e(this).parent();return l.addClass("toggled"),e(".lb-mobile-menu .menu-item-has-children").hasClass("toggled")&&l.children("ul").toggle(),l.toggleClass("space-up"),!1}))}},o={};function l(t){var n=o[t];if(void 0!==n)return n.exports;var s=o[t]={exports:{}};return e[t](s,s.exports,l),s.exports}l(3768),l(2355);
->>>>>>> 1f5d16e59daa952a1e1f7659417d8233711b4ff4
