@@ -8,3 +8,4 @@ require_once 'sidebar-block.php';
 require_once 'bonus-card.php';
 require_once 'review-card.php';
 require_once 'relinking-block.php';
+require_once 'layout.php';
