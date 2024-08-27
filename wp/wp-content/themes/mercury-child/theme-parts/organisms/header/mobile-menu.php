@@ -23,7 +23,7 @@ use Shared\Theme\LbThemeService;
 					function lb_add_button_to_mobile_menu_item($item_output, $item, $depth, $args)
 					{
 						// Только для первого уровня меню
-						if ($depth === 0) {
+						if ($depth === 0 && in_array('menu-item-has-children', $item->classes)) {
 							// Добавляем вашу кнопку после ссылки
 							$button = '<button class="lb-mobile-menu__toggle-button">
 							<i class="icon-chevron-down"></i>
