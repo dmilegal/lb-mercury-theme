@@ -9,6 +9,9 @@
   "category": "formatting",
   "icon": "portfolio",
   "keywords": ["review card", "bookmaker card", "casino card", "casino", "bookmaker", "review"],
+  "supports": {
+		"interactivity": true
+	},
   "acf": {
       "mode": "auto",
       "renderTemplate": "review-card.php"

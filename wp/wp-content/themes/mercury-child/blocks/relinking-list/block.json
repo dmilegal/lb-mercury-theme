@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/relinking-list",
+  "title": "Relinking List",
+  "description": "",
+  "style": ["relinking-list", "relinking-item"],
+  "editorStyle": [],
+  "script": ["relinking-list", "relinking-item"],
+  "category": "formatting",
+  "icon": "admin-links",
+  "keywords": ["relinking list", "перелинковка", "list"],
+  "supports": {
+		"align": false,
+		"mode": false,
+    "interactivity": true
+	},
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "relinking-list.php"
+  }
+}

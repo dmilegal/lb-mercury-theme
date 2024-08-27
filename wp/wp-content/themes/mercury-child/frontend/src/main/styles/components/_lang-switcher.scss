@@ -1,10 +1,10 @@
-@use "@/shared/styles/abstracts/colors";
-@use "@/shared/styles/mixins/font";
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
 .lb-lang-switcher {
   position: relative;
-  @include font.get-text-styles('text-xs');
+  @include font.get-text-styles('text-xxs');
   font-weight: 500;
   color: var(--wp--preset--color--black);
 
@@ -24,7 +24,9 @@
 
   @each $colorName in colors.$colorNames {
     &--color_#{$colorName} {
-      --lb-lang-switcher--color--hover: var(--wp--preset--color--#{$colorName}-#{colors.$targetOffsets});
+      --lb-lang-switcher--color--hover: var(
+        --wp--preset--color--#{$colorName}-#{colors.$targetOffsets}
+      );
     }
   }
 
@@ -52,12 +54,9 @@
       height: 24px;
       bottom: 100%;
       left: 0;
-
     }
 
     @extend %lng-sw-list;
-
-   
   }
   &__trigger {
     cursor: pointer;

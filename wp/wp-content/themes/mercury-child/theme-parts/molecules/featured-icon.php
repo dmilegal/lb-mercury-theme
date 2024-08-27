@@ -13,9 +13,9 @@ $rounded = $args['rounded'] ?? false;
  */
 $variant = $args['variant'] ?? 'contained';
 $color = $args['color'] ?? 'primary';
-
+$tag =  $args['tag'] ?? 'div';
 ?>
-<div class=" <?= classNames(
+<<?= $tag ?> class=" <?= classNames(
                 $className,
                 'lb-featured-icon',
                 $size ? 'lb-featured-icon--size_' . $size : '',
@@ -27,4 +27,4 @@ $color = $args['color'] ?? 'primary';
 
               ) ?>">
   <i class="<?= 'icon-' . $icon ?> lb-featured-icon__icon"></i>
-</div>
+</<?= $tag ?>>

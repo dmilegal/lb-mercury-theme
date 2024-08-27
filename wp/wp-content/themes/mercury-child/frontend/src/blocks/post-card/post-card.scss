@@ -48,7 +48,7 @@
     column-gap: var(--wp--preset--spacing--80);
     row-gap: var(--wp--preset--spacing--50);
     color: var(--lb-post-card-info-color-text);
-    @include font.get-text-styles('text-xs', false);
+    @include font.get-text-styles('text-xxs', false);
     margin-bottom: var(--wp--preset--spacing--60);
     &-item {
       display: flex;

@@ -17,6 +17,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.9",
+    "@babel/plugin-transform-react-jsx": "^7.24.7",
+    "@babel/plugin-transform-runtime": "^7.24.7",
     "@babel/preset-env": "^7.24.8",
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
@@ -61,8 +63,11 @@
   },
   "dependencies": {
     "@floating-ui/dom": "^1.6.1",
+    "@wordpress/babel-preset-default": "^8.4.0",
     "@wordpress/core-data": "^6.29.0",
     "@wordpress/data": "^9.22.0",
+    "@wordpress/interactivity": "^6.4.0",
+    "@wordpress/scripts": "^28.4.0",
     "hamburgers": "^1.2.1",
     "qs": "^6.12.1",
     "swiper": "^11.0.5"

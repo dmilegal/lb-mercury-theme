@@ -43,7 +43,7 @@
   }
 
   &__title {
-    @include font.get-text-styles('text-xs', false);
+    @include font.get-text-styles('text-xxs', false);
     font-weight: 500;
     color: var(--lb-ccb-review-card-color-text);
   }
@@ -73,11 +73,10 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
-      
     }
 
     &-content {
-      @include font.get-text-styles('text-xs', false);
+      @include font.get-text-styles('text-xxs', false);
       color: var(--lb-ccb-review-card-color-text-sub);
       &:after {
         content: attr(data-content);
@@ -90,9 +89,8 @@
       border: none;
       padding: 0;
       background-color: transparent;
-      @include font.get-text-styles('text-xs', false);
+      @include font.get-text-styles('text-xxs', false);
       color: var(--lb-ccb-review-card-more-color-text);
-
     }
   }
 }
