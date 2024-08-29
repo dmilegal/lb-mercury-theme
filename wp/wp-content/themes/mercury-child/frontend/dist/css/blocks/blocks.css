@@ -1824,6 +1824,14 @@
   font-weight: 600;
   margin-bottom: var(--wp--preset--spacing--70);
 }
+.lb-hero-banner__title:not(:last-child), .lb-hero-banner__subtitle:not(:last-child), .lb-hero-banner__text-content:not(:last-child) {
+  margin-bottom: var(--wp--preset--spacing--110);
+}
+@media (max-width: 767.98px) {
+  .lb-hero-banner__title:not(:last-child), .lb-hero-banner__subtitle:not(:last-child), .lb-hero-banner__text-content:not(:last-child) {
+    margin-bottom: var(--wp--preset--spacing--85);
+  }
+}
 .lb-hero-banner__title {
   font-size: var(--lb-font-size-display-lg-relative);
   line-height: var(--lb-line-height-display-lg-relative);
@@ -1831,15 +1839,15 @@
   letter-spacing: var(--lb-letter-spacing-display-lg-relative, inherit);
   font-weight: 500;
 }
-.lb-hero-banner__title:not(:last-child) {
-  margin-bottom: var(--wp--preset--spacing--100);
-}
 .lb-hero-banner__subtitle {
   color: var(--lb-hero-banner-subtitle-color-text);
   font-size: var(--lb-font-size-text-xl-relative);
   line-height: var(--lb-line-height-text-xl-relative);
   letter-spacing: inherit;
   letter-spacing: var(--lb-letter-spacing-text-xl-relative, inherit);
+}
+.lb-hero-banner__footer-content:not(:first-child) {
+  margin-top: var(--wp--preset--spacing--110);
 }
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/hero-review-banner/hero-review-banner.scss ***!
@@ -1875,6 +1883,8 @@
 .lb-hero-review-banner__inner {
   display: grid;
   grid-template-columns: var(--lb-layout-grid-col-template);
+  grid-column-gap: var(--lb-layout-gap-x);
+  column-gap: var(--lb-layout-gap-x);
   width: 100%;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);

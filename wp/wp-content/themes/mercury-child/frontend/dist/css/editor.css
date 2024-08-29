@@ -1363,6 +1363,9 @@
   --lb-layout-grid-col-template: minmax(280px, var(--lb-layout-content-size))
     var(--lb-layout-sidebar-size);
 }
+:root:has(.lb-promo-bonus) {
+  --lb-layout-sidebar-size: 384px;
+}
 :root {
   --layout--content-padding: var(--wp--custom--layout--content-padding-md);
 }

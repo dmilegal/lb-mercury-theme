@@ -34,18 +34,18 @@ $footerContent = $args['footer_content'] ?? '';
         </h1>
       <? } ?>
       <? if ($subtitle) { ?>
-        <? get_template_part('theme-parts/cells/clipping', null, [
-          'content' => '<p class="lb-hero-banner__subtitle">
-                ' . $subtitle . '
-              </p>'
-        ]); ?>
+        <div class="lb-hero-banner__subtitle">
+          <? get_template_part('theme-parts/cells/clipping', null, [
+            'content' => $subtitle
+          ]); ?>
+        </div>
       <? } ?>
       <? if ($textContent) { ?>
-        <? get_template_part('theme-parts/cells/clipping', null, [
-          'content' => '<div class="lb-hero-banner__text-content prose-content prose-spaces prose-colors">
-                ' . $textContent . '
-              </div>'
-        ]); ?>
+        <div class="lb-hero-banner__text-content prose-content prose-spaces prose-colors">
+          <? get_template_part('theme-parts/cells/clipping', null, [
+            'content' => $textContent
+          ]); ?>
+        </div>
       <? } ?>
       <? if ($footerContent) { ?>
         <div class="lb-hero-banner__footer-content">

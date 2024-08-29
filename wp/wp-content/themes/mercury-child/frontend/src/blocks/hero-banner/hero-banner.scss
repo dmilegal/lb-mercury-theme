@@ -63,12 +63,20 @@
     margin-bottom: var(--wp--preset--spacing--70);
   }
 
+
+  &__title, &__subtitle, &__text-content {
+    &:not(:last-child) {
+      margin-bottom: var(--wp--preset--spacing--110);
+      @include breakpoints.media-breakpoint-down(sm) {
+        margin-bottom: var(--wp--preset--spacing--85);
+      }
+    }
+  }
+
   &__title {
     @include font.get-text-styles('display-lg');
     font-weight: 500;
-    &:not(:last-child) {
-      margin-bottom: var(--wp--preset--spacing--100);
-    }
+    
     @extend %title;
   }
 
@@ -76,5 +84,11 @@
     color: var(--lb-hero-banner-subtitle-color-text);
     @include font.get-text-styles('text-xl');
     @extend %subtitle;
+  }
+
+  &__footer-content {
+    &:not(:first-child) {
+      margin-top: var(--wp--preset--spacing--110);
+    }
   }
 }
