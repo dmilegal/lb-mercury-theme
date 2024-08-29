@@ -25,6 +25,7 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/review-card');
     register_block_type(__DIR__ . '/layout');
     register_block_type(__DIR__ . '/relinking-list');
+    register_block_type(__DIR__ . '/hero-banner');
 }
 
 function mg_disable_gutenberg_blocks($allowed_blocks)

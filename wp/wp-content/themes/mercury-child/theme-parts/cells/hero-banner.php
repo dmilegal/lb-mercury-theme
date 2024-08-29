@@ -10,8 +10,7 @@ $enablePublishedDate = $args['enable_published_date'] ?? true;
 $color = $args['color'] ?? 'gray';
 // 'center'
 $align = $args['align'] ?? 'left';
-
-
+$footerContent = $args['footer_content'] ?? '';
 
 ?>
 <div class="<?= classNames(
@@ -47,6 +46,11 @@ $align = $args['align'] ?? 'left';
                 ' . $textContent . '
               </div>'
         ]); ?>
+      <? } ?>
+      <? if ($footerContent) { ?>
+        <div class="lb-hero-banner__footer-content">
+          <?= $footerContent ?>
+        </div>
       <? } ?>
     </div>
   </div>

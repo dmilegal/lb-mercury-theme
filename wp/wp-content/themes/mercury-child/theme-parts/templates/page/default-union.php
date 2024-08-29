@@ -6,13 +6,6 @@
       <?php get_template_part('/theme-parts/molecules/breadcrumbs'); ?>
     </div>
   <? } ?>
-  <? get_template_part('theme-parts/cells/hero-banner', null, [
-    'post_id' => get_the_id(),
-    'enable_published_date' => false,
-    'color' => 'white',
-  ]);
-
-  ?>
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <?
        ob_start();
