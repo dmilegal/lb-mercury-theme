@@ -1,7 +1,7 @@
 <?
 
 /**
- * Blockquote Block Template.
+ * Post Info Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -14,21 +14,4 @@
 
 $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 
-get_template_part('theme-parts/organs/link-with-icon-list', null, [
-  ...$block_opts,
-  'list' => array_map(function ($item) {
-    $title = $item['link']['title'] ?? '';
-
-    if (!$title && isset($item['link']['name']))
-      $title = $item['link']['name'];
-    
-
-    return [
-      'icon' => $item['icon'] ?? '',
-      'title' =>  $title,
-      'href' => $item['href'] ?? '',
-      'target' => $item['target'] ?? '',
-      'rel' => $item['rel'] ?? '',
-    ];
-  }, get_field('list'))
-]);
+get_template_part('theme-parts/organs/post-info', null, [...$block_opts]);

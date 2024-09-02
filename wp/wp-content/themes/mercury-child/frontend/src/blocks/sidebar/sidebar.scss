@@ -5,11 +5,16 @@
 :root, .editor-styles-wrapper {
   --lb-sidebar-color-border: var(--wp--preset--color--gray-200);
   --lb-sidebar-block-title-color-text: var(--wp--preset--color--primary-600);
+  --lb-sidebar-top-correction: 0px;
 }
 
 .lb-sidebar {
   position: sticky;
-  top: calc(var(--lb-admin-bar-offset, 0px) + var(--lb-header-height, 0px));
+  top: calc(var(--lb-admin-bar-offset, 0px) + var(--lb-header-height, 0px) + var(--lb-sidebar-top-correction, 0px));
+  
+  &:has(.widget_block:first-child > .lb-sidebar-block:not(.lb-sidebar-block--bordered)) {
+    --lb-sidebar-top-correction: var(--wp--preset--spacing--120)
+  }
 
   &-block {
     padding-bottom: var(--wp--preset--spacing--120);

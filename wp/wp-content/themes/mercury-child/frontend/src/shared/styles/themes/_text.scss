@@ -129,7 +129,7 @@ $isEditor: false !default;
 }
 
 @include typo.make-prose('spaces', '.lb-post-info', $proseCustomSelector, $isEditor) {
-  margin-block-start: var(--wp--preset--spacing--100);
+  margin-block-start: calc(var(--wp--preset--spacing--70) * -1);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 

@@ -28,6 +28,7 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/hero-banner');
     register_block_type(__DIR__ . '/author');
     register_block_type(__DIR__ . '/link-with-icon-list');
+    register_block_type(__DIR__ . '/post-info');
 }
 
 function mg_disable_gutenberg_blocks($allowed_blocks)

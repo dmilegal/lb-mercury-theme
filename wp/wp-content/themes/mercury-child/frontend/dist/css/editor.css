@@ -1896,12 +1896,12 @@ ul.wp-block-gallery.alignwide {
 }
 
 :root :where(.lb-post-info):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  margin-block-start: var(--wp--preset--spacing--100);
+  margin-block-start: calc(var(--wp--preset--spacing--70) * -1);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
 .editor-styles-wrapper .is-layout-flow > :where(.lb-post-info):not(:where([class~=not-prose], [class~=not-prose] *)) {
-  margin-block-start: var(--wp--preset--spacing--100);
+  margin-block-start: calc(var(--wp--preset--spacing--70) * -1);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 

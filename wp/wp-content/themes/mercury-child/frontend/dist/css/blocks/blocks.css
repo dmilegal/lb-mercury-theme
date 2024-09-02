@@ -1769,14 +1769,14 @@
 /**
 * font
 **/
-:root {
+:root, .editor-styles-wrapper {
   --lb-hero-banner-color-background: var(--lb-color-surface-highest);
   --lb-hero-banner-subtitle-color-text: var(--lb-color-text-default);
   --hero-banner-space-top: var(--wp--preset--spacing--140);
   --hero-banner-space-bottom: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
-  :root {
+  :root, .editor-styles-wrapper {
     --hero-banner-space-top: var(--wp--preset--spacing--120);
     --hero-banner-space-bottom: var(--wp--preset--spacing--140);
   }
@@ -2211,6 +2211,60 @@
   .lb-ui-layout__sidebar--hide-mobile {
     display: none;
   }
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/link-with-icon/link-with-icon.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root,
+.editor-styles-wrapper {
+  --lb-link-with-icon-color-text: var(--lb-color-text-strong);
+}
+
+.lb-link-with-icon {
+  display: flex;
+  align-items: start;
+  column-gap: var(--wp--preset--spacing--60);
+  font-size: var(--lb-font-size-text-md-relative);
+  line-height: var(--lb-line-height-text-md-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+  font-weight: 500;
+  color: var(--lb-link-with-icon-color-text);
+}
+.lb-link-with-icon.lb-link-with-icon {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+.lb-link-with-icon__icon {
+  flex-shrink: 0;
+}
+.lb-link-with-icon__title {
+  padding-top: var(--wp--preset--spacing--70);
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/link-with-icon-list/link-with-icon-list.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+.lb-link-with-icon-list__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--wp--preset--spacing--80);
+}
+.lb-link-with-icon-list__inner.lb-link-with-icon-list__inner {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 /*!************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/logo-text/logo-text.scss ***!
@@ -2667,7 +2721,8 @@
 /**
 * font
 **/
-:root {
+:root,
+.editor-styles-wrapper {
   --lb-post-info-title-color-text: var(--lb-color-primary);
   --lb-post-info-value-color-text: var(--lb-color-on-surface-highest);
 }
@@ -2676,7 +2731,6 @@
   display: flex;
   column-gap: var(--wp--preset--spacing--120);
   row-gap: var(--wp--preset--spacing--60);
-  margin-bottom: var(--wp--preset--spacing--100);
 }
 @media (max-width: 767.98px) {
   .lb-post-info {
@@ -3961,12 +4015,16 @@
 :root, .editor-styles-wrapper {
   --lb-sidebar-color-border: var(--wp--preset--color--gray-200);
   --lb-sidebar-block-title-color-text: var(--wp--preset--color--primary-600);
+  --lb-sidebar-top-correction: 0px;
 }
 
 .lb-sidebar {
   position: sticky;
-  top: calc(0px + 0px);
-  top: calc(var(--lb-admin-bar-offset, 0px) + var(--lb-header-height, 0px));
+  top: calc(0px + 0px + 0px);
+  top: calc(var(--lb-admin-bar-offset, 0px) + var(--lb-header-height, 0px) + var(--lb-sidebar-top-correction, 0px));
+}
+.lb-sidebar:has(.widget_block:first-child > .lb-sidebar-block:not(.lb-sidebar-block--bordered)) {
+  --lb-sidebar-top-correction: var(--wp--preset--spacing--120) ;
 }
 .lb-sidebar-block {
   padding-bottom: var(--wp--preset--spacing--120);

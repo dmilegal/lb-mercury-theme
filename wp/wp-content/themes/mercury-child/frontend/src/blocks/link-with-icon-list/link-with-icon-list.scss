@@ -1,0 +1,20 @@
+@use 'sass:math';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+@use '@/shared/styles/mixins/media-containers';
+
+.lb-link-with-icon-list {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--wp--preset--spacing--80);
+
+    &#{&} {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+ 
+}
