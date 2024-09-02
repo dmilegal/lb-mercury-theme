@@ -1592,11 +1592,17 @@
   .wp-block-hide-on-desktop {
     display: none;
   }
+  .wp-block-hide-on-desktop.wp-block-hide-on-desktop + * {
+    margin-block-start: 0;
+  }
 }
 
 @media (max-width: 991.98px) {
   .wp-block-hide-on-mobile {
     display: none;
+  }
+  .wp-block-hide-on-mobile.wp-block-hide-on-mobile + * {
+    margin-block-start: 0;
   }
 }
 

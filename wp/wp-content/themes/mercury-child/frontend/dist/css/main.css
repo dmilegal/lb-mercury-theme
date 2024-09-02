@@ -1724,11 +1724,17 @@ Make elements with the HTML hidden attribute stay hidden by default.
   .wp-block-hide-on-desktop {
     display: none;
   }
+  .wp-block-hide-on-desktop.wp-block-hide-on-desktop + * {
+    margin-block-start: 0;
+  }
 }
 
 @media (max-width: 991.98px) {
   .wp-block-hide-on-mobile {
     display: none;
+  }
+  .wp-block-hide-on-mobile.wp-block-hide-on-mobile + * {
+    margin-block-start: 0;
   }
 }
 
@@ -3387,11 +3393,25 @@ ul.wp-block-gallery.alignwide {
   font-weight: 500;
   color: var(--lb-dropdown-header-title-color-text);
 }
+@media (max-width: 767.98px) {
+  .lb-dropdown__header {
+    font-size: var(--wp--preset--font-size--text-md);
+    line-height: var(--wp--custom--line-height--text-md);
+    letter-spacing: inherit;
+    letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  }
+}
 .lb-dropdown__ico {
   position: relative;
   font-size: var(--wp--preset--font-size--display-xs);
   font-weight: normal;
   top: 3px;
+}
+@media (max-width: 767.98px) {
+  .lb-dropdown__ico {
+    font-size: var(--wp--preset--font-size--text-xl);
+    top: 0px;
+  }
 }
 .lb-dropdown__ico--opened {
   color: var(--lb-dropdown-ico-opened-title-color-text);

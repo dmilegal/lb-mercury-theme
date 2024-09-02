@@ -131,12 +131,18 @@ $wrapperSelector: null !default;
 .wp-block-hide-on-desktop {
   @include breakpoints.media-breakpoint-up(lg) {
     display: none;
+    &#{&} + * {
+      margin-block-start: 0;
+    }
   }
 }
 
 .wp-block-hide-on-mobile {
   @include breakpoints.media-breakpoint-down(md) {
     display: none;
+    &#{&} + * {
+      margin-block-start: 0;
+    }
   }
 }
 

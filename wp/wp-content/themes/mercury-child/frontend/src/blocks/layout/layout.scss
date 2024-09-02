@@ -37,7 +37,7 @@
       --lb-layout-sidebar-grid-col-end: 3;
 
       @include breakpoints.media-breakpoint-down(md) {
-        --lb-layout-grid-col-template: 1fr;
+        --lb-layout-grid-col-template: 100%;
 
         --lb-layout-sidebar-grid-col-start: 1;
         --lb-layout-sidebar-grid-col-end: 2;
