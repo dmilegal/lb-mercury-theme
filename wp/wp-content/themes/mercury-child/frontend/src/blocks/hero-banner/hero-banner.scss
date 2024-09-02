@@ -15,6 +15,10 @@
   }
 }
 
+.wp-block-lb-hero-banner {
+  max-width: 100%!important;
+}
+
 .lb-hero-banner {
   padding-top: var(--hero-banner-space-top);
   padding-bottom: var(--hero-banner-space-bottom);
@@ -87,6 +91,13 @@
   }
 
   &__footer-content {
+    @include breakpoints.media-breakpoint-up(lg) {
+      .lb-relinking-list {
+        max-width: var(--lb-layout-content-size);
+        margin-right: calc(var(--lb-layout-gap-x) + var(--lb-layout-sidebar-size));
+      }
+    }
+    
     &:not(:first-child) {
       margin-top: var(--wp--preset--spacing--110);
     }

@@ -3,6 +3,7 @@ $wrapperSelector: null !default;
 
 @use '@/shared/styles/mixins/container';
 @use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
 
 :root {
   --lb--caption-color-text: var(--lb-color-text-default);
@@ -124,6 +125,18 @@ $wrapperSelector: null !default;
     float: right;
     margin: 8px 0 20px 30px;
     padding: 0 30px;
+  }
+}
+
+.wp-block-hide-on-desktop {
+  @include breakpoints.media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.wp-block-hide-on-mobile {
+  @include breakpoints.media-breakpoint-down(md) {
+    display: none;
   }
 }
 

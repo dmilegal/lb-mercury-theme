@@ -13,18 +13,22 @@
  */
 
 $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
-$variant = get_field('variant');
-$backgroundColor = get_field('background_color');
-$widgetId = get_field('widget_id');
 
-
-get_template_part('theme-parts/templates/layout/layout', null, [
+get_template_part('theme-parts/molecules/link-with-icon-list', null, [
   ...$block_opts,
-  'content' => '<InnerBlocks />',
-  'background_color' => $backgroundColor,
-  'widget_id' => $widgetId,
-  'variant' => $variant,
-  'hide_sidebar_on_mobile'  => !!get_field('hide_sidebar_on_mobile'),
+  'list' => array_map(function ($item) {
+    $title = $item['link']['title'] ?? '';
 
-  'is_preview' => $is_preview
+    if (!$title && isset($item['link']['name']))
+      $title = $item['link']['name'];
+    
+
+    return [
+      'icon' => $item['icon'] ?? '',
+      'title' =>  $title,
+      'href' => $item['href'] ?? '',
+      'target' => $item['target'] ?? '',
+      'rel' => $item['rel'] ?? '',
+    ];
+  }, get_field('list'))
 ]);

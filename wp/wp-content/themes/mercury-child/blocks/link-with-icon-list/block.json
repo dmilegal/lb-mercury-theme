@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/link-with-icon-list",
+  "title": "Link With Icon List",
+  "description": "",
+  "style": ["link-with-icon-list"],
+  "editorStyle": [],
+  "script": ["link-with-icon-list"],
+  "category": "formatting",
+  "icon": "menu-alt3",
+  "keywords": ["link With icon List", "icons", "links"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "link-with-icon-list.php"
+  }
+}

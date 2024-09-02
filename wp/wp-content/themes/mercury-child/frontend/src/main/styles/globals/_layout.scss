@@ -25,6 +25,8 @@
     --lb-layout-content-grid-col-start: 1;
     --lb-layout-content-grid-col-end: -1;
 
+
+
     @include breakpoints.media-breakpoint-up(lg) {
       position: relative;
     }
@@ -62,6 +64,14 @@
   }
 
   &--tight-content {
+    --lb-layout-grid-col-template: min(var(--lb-layout-content-size), 100%);
+    
+    %content {
+      justify-content: center;
+    }
+
+    %inner {
+    }
 
   }
 
@@ -76,6 +86,10 @@
     grid-template-columns: var(--lb-layout-grid-col-template);
     column-gap: var(--lb-layout-gap-x);
     @include container.make-container-max-width();
+
+    @include breakpoints.media-breakpoint-down(md) {
+      display: block;
+    }
   }
 
   &__precontent {
@@ -113,6 +127,8 @@
     &-footer {
       margin-top: var(--wp--preset--spacing--140);
     }
+
+    @extend %content;
   }
 
   &__sidebar {

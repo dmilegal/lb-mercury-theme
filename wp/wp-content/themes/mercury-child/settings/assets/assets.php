@@ -163,4 +163,11 @@ function register_assets_by_path($assetPath)
   }
 }
 
+function register_admin_scripts_enqueue() {
+  enqueue_assets_by_name('admin');
+}
+
+add_action('admin_enqueue_scripts', 'register_admin_scripts_enqueue');
+
+
 require_once "emoji-fix.php";

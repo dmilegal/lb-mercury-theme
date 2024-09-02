@@ -27,7 +27,7 @@ add_action('acf/include_fields', function () {
           'full-content' => 'Full Size Content',
           'with-sidebar' => 'With Sidebar',
         ),
-        'default_value' => 'thin-content',
+        'default_value' => 'with-sidebar',
         'return_format' => 'value',
         'multiple' => 0,
         'allow_null' => 0,
@@ -72,6 +72,34 @@ add_action('acf/include_fields', function () {
         'placeholder' => '',
         'allow_custom' => 0,
         'search_placeholder' => '',
+      ),
+      array(
+        'key' => 'field_66d452eb8ee58',
+        'label' => 'Hide Sidebar on Mobile',
+        'name' => 'hide_sidebar_on_mobile',
+        'aria-label' => '',
+        'type' => 'true_false',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => array(
+          array(
+            array(
+              'field' => 'field_66ccf0cb2524a',
+              'operator' => '==',
+              'value' => 'with-sidebar',
+            ),
+          ),
+        ),
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'message' => '',
+        'default_value' => 0,
+        'ui' => 0,
+        'ui_on_text' => '',
+        'ui_off_text' => '',
       ),
       array(
         'key' => 'field_66ccf24bfb29e',

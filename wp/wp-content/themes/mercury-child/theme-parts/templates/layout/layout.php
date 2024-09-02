@@ -6,6 +6,7 @@ $content = $args['content'] ?? '';
 $widgetId = $args['widget_id'] ?? '';
 $backgroundColor = $args['background_color'] ?? 'white';
 $isPreview = $args['is_preview'] ?? false;
+$hideSidebarOnMobile = $args['hide_sidebar_on_mobile'] ?? false;
 
 $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['style'])));
 
@@ -16,7 +17,9 @@ $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['style'])
       <?= $content ?>
     </div>
     <? if ($widgetId && $variant === 'with-sidebar' && !$isPreview) { ?>
-      <div class="lb-ui-layout__sidebar">
+      <div class="<?= classNames("lb-ui-layout__sidebar", [
+        'lb-ui-layout__sidebar--hide-mobile' => $hideSidebarOnMobile
+      ]) ?>">
       [_lb_sidebar name='<?= $widgetId ?>']
       </div>
     <? } ?>

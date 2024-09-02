@@ -75,6 +75,9 @@ export default function common(mode) {
       main: {
         import: [`${paths.src}/main/main.ts`],
       },
+      admin: {
+        import: [`${paths.src}/admin/admin.ts`],
+      },
       editor: {
         import: [`${paths.src}/editor/editor.ts`],
       },

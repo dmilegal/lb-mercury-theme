@@ -1,4 +1,5 @@
 <?php
+require_once 'icon-list.php';
 require_once 'reset-plugins-and-theme/reset.php';
 require_once 'image-sizes.php';
 require_once 'assets/assets.php';

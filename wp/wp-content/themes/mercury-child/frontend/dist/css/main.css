@@ -1720,6 +1720,18 @@ Make elements with the HTML hidden attribute stay hidden by default.
   --lb--caption-color-text: var(--lb-color-text-default);
 }
 
+@media (min-width: 992px) {
+  .wp-block-hide-on-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .wp-block-hide-on-mobile {
+    display: none;
+  }
+}
+
 .wp-caption {
   max-width: 100%;
   padding: 1.45em 0 2.9em;
@@ -1931,10 +1943,10 @@ ul.wp-block-gallery.alignwide {
   width: 100%;
 }
 
-.prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+.prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
   margin-block-start: 0;
 }
-.prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+.prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
   margin-block-end: 0;
 }
 
@@ -2048,6 +2060,11 @@ ul.wp-block-gallery.alignwide {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
   }
+}
+
+.prose-spaces :where(.wp-block-toc):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-block-start: var(--wp--preset--spacing--140);
+  margin-block-end: var(--wp--preset--spacing--140);
 }
 
 .prose-colors :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
@@ -3437,6 +3454,12 @@ ul.wp-block-gallery.alignwide {
   grid-column: 1/-1;
   grid-column: var(--lb-layout-inner-grid-col-start)/var(--lb-layout-inner-grid-col-end);
 }
+.lb-layout--tight-content {
+  --lb-layout-grid-col-template: min(var(--lb-layout-content-size), 100%);
+}
+.lb-layout--tight-content .lb-layout__content {
+  justify-content: center;
+}
 .lb-layout__relative {
   position: relative;
 }
@@ -3453,6 +3476,11 @@ ul.wp-block-gallery.alignwide {
   max-width: calc(var(--wp--style--global--content-size) + 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 991.98px) {
+  .lb-layout__content, .lb-layout__precontent, .lb-layout__aftercontent {
+    display: block;
+  }
 }
 .lb-layout__precontent-inner {
   grid-column: 1/-1;

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/author",
+  "title": "LB Author",
+  "description": "",
+  "style": ["author-block", "social-link"],
+  "editorStyle": [],
+  "category": "text",
+  "icon": "id",
+  "keywords": ["author-block", "social-link"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "author.php"
+  }
+}
