@@ -2224,6 +2224,7 @@
 :root,
 .editor-styles-wrapper {
   --lb-link-with-icon-color-text: var(--lb-color-text-strong);
+  --lb-link-with-icon-color-text-hover: var(--lb-color-primary);
 }
 
 .lb-link-with-icon {
@@ -2240,6 +2241,12 @@
 .lb-link-with-icon.lb-link-with-icon {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+.lb-link-with-icon:hover {
+  transition: ease-in-out 170ms;
+}
+.lb-link-with-icon:hover .lb-link-with-icon__title {
+  color: var(--lb-link-with-icon-color-text-hover);
 }
 .lb-link-with-icon__icon {
   flex-shrink: 0;

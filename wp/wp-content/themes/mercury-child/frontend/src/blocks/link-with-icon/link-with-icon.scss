@@ -7,6 +7,7 @@
 :root,
 .editor-styles-wrapper {
   --lb-link-with-icon-color-text: var(--lb-color-text-strong);
+  --lb-link-with-icon-color-text-hover: var(--lb-color-primary);
 }
 
 .lb-link-with-icon {
@@ -19,12 +20,21 @@
   &#{&}{
     text-decoration: none;
   }
+
+  &:hover {
+    transition: ease-in-out 170ms;
+    %title {
+      color: var(--lb-link-with-icon-color-text-hover)
+    }
+  }
   
   &__icon {
     flex-shrink: 0;
   }
   &__title {
     padding-top: var(--wp--preset--spacing--70);
+
+    @extend %title;
   }
 
 }
