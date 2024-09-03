@@ -15,7 +15,9 @@
 
 .lb-compact-casino-bonus-card {
   padding-bottom: var(--wp--preset--spacing--90);
-  border-bottom: 1px solid var(--lb-ccb-review-card-color-border);
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--lb-ccb-review-card-color-border);
+  }
   &__header {
     display: flex;
     justify-content: space-between;
