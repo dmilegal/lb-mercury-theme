@@ -51,6 +51,9 @@
     }
 
     &__header {
+      &:has(.lb-sidebar-block__title:empty) {
+        display: none;
+      }
       @extend %header
     }
 

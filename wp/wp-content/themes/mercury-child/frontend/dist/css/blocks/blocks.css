@@ -4056,6 +4056,9 @@
     margin-bottom: var(--wp--preset--spacing--80);
   }
 }
+.lb-sidebar-block__header:has(.lb-sidebar-block__title:empty) {
+  display: none;
+}
 .lb-sidebar-block__title {
   width: 100%;
   padding: 0;
