@@ -117,7 +117,7 @@ function enqueue_assets_by_name($name)
 
   wp_enqueue_script($name, '', [], wp_get_theme()->get('Version'), [
     'in_footer' => true,
-    'strategy'  => 'async',
+    'strategy'  => 'defer',
   ]);
 
   foreach (['js/commons/', 'css/commons/'] as $path) {
