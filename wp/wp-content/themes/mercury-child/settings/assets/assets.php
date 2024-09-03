@@ -117,7 +117,7 @@ function enqueue_assets_by_name($name)
 
   wp_enqueue_script($name, '', [], wp_get_theme()->get('Version'), [
     'in_footer' => true,
-    'strategy'  => 'async',
+    'strategy'  => 'defer',
   ]);
 
   foreach (['js/commons/', 'css/commons/'] as $path) {
@@ -162,5 +162,12 @@ function register_assets_by_path($assetPath)
       ]);
   }
 }
+
+function register_admin_scripts_enqueue() {
+  enqueue_assets_by_name('admin');
+}
+
+add_action('admin_enqueue_scripts', 'register_admin_scripts_enqueue');
+
 
 require_once "emoji-fix.php";
