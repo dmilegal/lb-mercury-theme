@@ -3665,11 +3665,9 @@
   --lb-ccb-review-card-more-color-text: var(--lb-color-on-surface);
 }
 
-.lb-compact-casino-bonus-card {
-  padding-bottom: var(--wp--preset--spacing--90);
-}
 .lb-compact-casino-bonus-card:not(:last-child) {
   border-bottom: 1px solid var(--lb-ccb-review-card-color-border);
+  padding-bottom: var(--wp--preset--spacing--90);
 }
 .lb-compact-casino-bonus-card__header {
   display: flex;
