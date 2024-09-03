@@ -67,6 +67,9 @@
   &__tc {
     display: flex;
     margin-bottom: var(--wp--preset--spacing--80);
+    &:last-child {
+      margin-bottom: 0;
+    }
     &--truncated {
       %tc_content {
         display: -webkit-box;

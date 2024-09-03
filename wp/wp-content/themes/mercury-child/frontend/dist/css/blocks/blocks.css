@@ -3722,6 +3722,9 @@
   display: flex;
   margin-bottom: var(--wp--preset--spacing--80);
 }
+.lb-compact-casino-bonus-card__tc:last-child {
+  margin-bottom: 0;
+}
 .lb-compact-casino-bonus-card__tc--truncated .lb-compact-casino-bonus-card__tc-content {
   display: -webkit-box;
   text-overflow: ellipsis;
