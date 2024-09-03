@@ -14,6 +14,7 @@
   box-sizing: border-box;
   transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
   color: var(--lb-relinking-item-color-text);
+  background-color: var(--wp--preset--color--white);
   cursor: pointer;
 
   &#{&} {
