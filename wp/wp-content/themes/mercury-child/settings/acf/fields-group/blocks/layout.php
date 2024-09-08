@@ -129,6 +129,29 @@ add_action('acf/include_fields', function () {
         'allow_custom' => 0,
         'search_placeholder' => '',
       ),
+      array(
+        'key' => 'field_66dda2cb27343',
+        'label' => 'Block Spacing Size',
+        'name' => 'block_spacing_size',
+        'aria-label' => '',
+        'type' => 'button_group',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'choices' => array(
+          'md' => 'md',
+          'lg' => 'lg',
+        ),
+        'default_value' => 'md',
+        'return_format' => 'value',
+        'allow_null' => 0,
+        'layout' => 'horizontal',
+      ),
     ),
     'location' => array(
       array(

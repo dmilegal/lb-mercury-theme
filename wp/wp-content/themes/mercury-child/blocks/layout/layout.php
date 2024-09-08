@@ -16,7 +16,7 @@ $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 $variant = get_field('variant');
 $backgroundColor = get_field('background_color');
 $widgetId = get_field('widget_id');
-
+$blockSpacingSize = get_field('block_spacing_size');
 
 get_template_part('theme-parts/templates/layout/layout', null, [
   ...$block_opts,
@@ -25,6 +25,6 @@ get_template_part('theme-parts/templates/layout/layout', null, [
   'widget_id' => $widgetId,
   'variant' => $variant,
   'hide_sidebar_on_mobile'  => !!get_field('hide_sidebar_on_mobile'),
-
+  'block_spacing_size' => $blockSpacingSize,
   'is_preview' => $is_preview
 ]);

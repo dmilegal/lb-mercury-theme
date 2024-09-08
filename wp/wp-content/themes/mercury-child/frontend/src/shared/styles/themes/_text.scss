@@ -196,13 +196,23 @@ $isEditor: false !default;
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-@include typo.make-prose('spaces', '.lb-relinking-list', $proseCustomSelector, $isEditor) {
+@include typo.make-prose('spaces', '.wp-block-relinking-list', $proseCustomSelector, $isEditor) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
 
   @include breakpoints.media-breakpoint-down(sm) {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
+  }
+}
+
+@include typo.make-prose('spaces-lg', '.wp-block-relinking-list', $proseCustomSelector, $isEditor) {
+  margin-block-start: var(--wp--preset--spacing--200);
+  margin-block-end: var(--wp--preset--spacing--200);
+
+  @include breakpoints.media-breakpoint-down(sm) {
+    margin-block-start: var(--wp--preset--spacing--160);
+    margin-block-end: var(--wp--preset--spacing--160);
   }
 }
 

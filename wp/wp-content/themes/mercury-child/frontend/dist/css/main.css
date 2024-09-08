@@ -2057,14 +2057,25 @@ ul.wp-block-gallery.alignwide {
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-.prose-spaces :where(.lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.prose-spaces :where(.wp-block-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
-  .prose-spaces :where(.lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  .prose-spaces :where(.wp-block-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
+  }
+}
+
+.prose-spaces-lg :where(.wp-block-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-block-start: var(--wp--preset--spacing--200);
+  margin-block-end: var(--wp--preset--spacing--200);
+}
+@media (max-width: 767.98px) {
+  .prose-spaces-lg :where(.wp-block-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+    margin-block-start: var(--wp--preset--spacing--160);
+    margin-block-end: var(--wp--preset--spacing--160);
   }
 }
 

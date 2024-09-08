@@ -2033,25 +2033,36 @@ ul.wp-block-gallery.alignwide {
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-:root :where(.lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.wp-block-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
-  :root :where(.lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  :root :where(.wp-block-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
   }
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.wp-block-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
-  .editor-styles-wrapper .is-layout-flow > :where(.lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  .editor-styles-wrapper .is-layout-flow > :where(.wp-block-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
+  }
+}
+
+:root :where(.wp-block-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  margin-block-start: var(--wp--preset--spacing--200);
+  margin-block-end: var(--wp--preset--spacing--200);
+}
+@media (max-width: 767.98px) {
+  :root :where(.wp-block-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+    margin-block-start: var(--wp--preset--spacing--160);
+    margin-block-end: var(--wp--preset--spacing--160);
   }
 }
 
