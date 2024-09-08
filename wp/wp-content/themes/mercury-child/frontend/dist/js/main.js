@@ -94,20 +94,20 @@ $('.lb-mobile-menu').on('click', function (e) {
   if (e.target !== this) return;
   closeMobileMenu();
 });
-$('.menu-item-has-children > a').on('click', function (e) {
-  e.preventDefault();
-});
 function closeMobileMenu() {
   $('.lb-mobile-menu').removeClass('lb-mobile-menu--active');
   $('#mobile-header-trigger').removeClass('is-active');
   $('body').css('overflow-y', '');
 }
+$('.menu-item-has-children > a[href="#"],.menu-item-has-children > a[href=""]').on('click', function (e) {
+  e.preventDefault();
+});
 
 // Mobile Menu Open End
 
 // Mobile Children Start
 
-$('.lb-mobile-menu .menu-item-has-children>a').on('click', function (e) {
+$('.lb-mobile-menu .lb-mobile-menu__toggle-button').on('click', function (e) {
   e.preventDefault();
   var $parentLi = $(this).parent();
   $parentLi.addClass('toggled');
