@@ -2,34 +2,53 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-:root, .editor-styles-wrapper {
+:root,
+.editor-styles-wrapper {
   --lb-relinking-item-color-border: var(--lb-color-surface-outline-1);
   --lb-relinking-item-color-border-hover: var(--lb-color-primary);
   --lb-relinking-item-radius: var(--wp--preset--spacing--60);
   --lb-relinking-item-color-text: var(--lb-color-text-strong);
   --lb-relinking-item-color-text-hover: var(--lb-color-primary);
+  --lb-relinking-item-color-text-active: var(--lb-color-primary);
+  --lb-relinking-item-background-color: var(--lb-color-surface);
+  --lb-relinking-item-background-color-active: var(--lb-color-primary-container-low);
 }
 
 .lb-relinking-item {
   box-sizing: border-box;
-  transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
+  transition:
+    color 170ms ease-in-out,
+    border-color 170ms ease-in-out;
   color: var(--lb-relinking-item-color-text);
   cursor: pointer;
 
   &#{&} {
     text-decoration: none;
   }
-  
+
   &:hover {
     color: var(--lb-relinking-item-color-text-hover);
   }
- 
+
+  %active {
+    background-color: var(--lb-relinking-item-background-color-active);
+    border-color: var(--lb-relinking-item-background-color-active);
+    color: var(--lb-relinking-item-color-text-active);
+  }
+
+  &--active {
+    background-color: var(--lb-relinking-item-background-color-active);
+    border-color: var(--lb-relinking-item-background-color-active);
+    color: var(--lb-relinking-item-color-text-active);
+  }
+
   &--theme {
     &_with-icon,
     &_with-image,
     &_with-arrow,
     &_only-text,
     &_with-primary-image {
+      background-color: var(--lb-relinking-item-background-color);
       %text {
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -39,6 +58,12 @@
 
       &:hover {
         border-color: var(--lb-relinking-item-color-border-hover);
+      }
+
+      &:active {
+        background-color: var(--lb-relinking-item-background-color-active);
+        border-color: var(--lb-relinking-item-background-color-active);
+        color: var(--lb-relinking-item-color-text-active);
       }
     }
 
@@ -73,8 +98,10 @@
     }
 
     &_only-text {
+      display: inline-block;
       max-width: 100%;
       padding: var(--wp--preset--spacing--70);
+      background-color: var();
     }
 
     &_with-primary-image {
@@ -149,11 +176,11 @@
   }
 
   &__icon-frame {
-      width: 24px;
-      aspect-ratio: 1/1;
-      flex-shrink: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    width: 24px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

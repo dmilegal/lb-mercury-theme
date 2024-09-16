@@ -18,3 +18,4 @@ require_once 'get-brand-external-link.php';
 require_once 'is-brand-locked.php';
 require_once 'get-review-data.php';
 require_once 'blocks/blocks.php';
+require_once 'get-bonuses-cats-by-review-ids.php';

@@ -15,12 +15,43 @@ $asyncLoading = $args['async_loading'] ?? false;
 $showLicenseText = $args['show_license_ar_text_for_listing'] ?? false;
 $licenseText = get_field("license_ar_text_for_listing", "option");
 $listBonusCategory = $args['bonus_category'] ?? false;
+$bonusCategories = $args['bonus_categories'] ?? [];
 
 if ($reviewList || $asyncLoading) {
 ?>
   <div data-type="<?= $postType ?>" data-ref-items="<?= esc_attr(json_encode($refReviewList)) ?>" class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
     <div class="lb-review-list__wrapper">
       <div class="lb-review-list__inner">
+        <? if ($bonusCategories) { ?>
+          <div class="lb-review-list__cat-filter not-prose">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <? foreach ($bonusCategories as $catId) {
+                  $cat = get_term($catId, 'bonus-category');
+                ?>
+                  <div class="swiper-slide">
+                    <? get_template_part('theme-parts/cells/relinking-item/relinking-item', null, [
+                      'theme' => 'only-text',
+                      'className' => 'lb-review-list__cat-filter-item-link',
+                      'title' => $cat->name,
+                      'data' => [
+                        'category' => $catId
+                      ]
+                    ]); ?>
+                  </div>
+                <? } ?>
+              </div>
+            </div>
+            <? get_template_part('theme-parts/cells/slider/nav-button-sm', null, [
+              'icon' => 'arrow-left',
+              'className' => 'lb-review-list__cat-filter-nav lb-review-list__cat-filter-nav-prev',
+            ]);
+            get_template_part('theme-parts/cells/slider/nav-button-sm', null, [
+              'icon' => 'arrow-right',
+              'className' => 'lb-review-list__cat-filter-nav lb-review-list__cat-filter-nav-next',
+            ]); ?>
+          </div>
+        <? } ?>
         <?php if ($title || ($licenseText && $showLicenseText)) { ?>
           <div class="lb-review-list__heading prose-headings prose-colors">
             <? if ($title) { ?>

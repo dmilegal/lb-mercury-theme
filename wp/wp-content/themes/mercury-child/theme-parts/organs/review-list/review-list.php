@@ -7,10 +7,12 @@ $postsPerPage = $args['posts_per_page'] ?? 0;
 $reviewList = $args['casino_list'] ?? [];
 $postType = $args['post_type'] ?? 'casino';
 
+
 [$reviewList, $reviewListFull, $refReviewList, $maxPages, $currentPage] = getReviewData($postType, $queryArgs, $reviewList, $disablePagination, $postsPerPage);
 
-if ($enableSortByBonusCategory) {
-  
+$bonusCategories = [];
+if (!$enableSortByBonusCategory) {
+  $bonusCategories = getBonusesCatsByReviewIds(array_map(fn($i) => $i['post_id'], $reviewList));
 }
 
 if ($reviewList) {
@@ -20,6 +22,7 @@ if ($reviewList) {
     'review_list' => $reviewList,
     'review_list_full' => $reviewListFull,
     'ref_review_list' => $refReviewList,
+    'bonus_categories' => $bonusCategories,
     'total_pages' => $maxPages,
     'current_page' => $currentPage,
     'query_args' => $queryArgs,
