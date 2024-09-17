@@ -384,6 +384,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/review-card/variants/bonus-card/style.scss":
+/*!***************************************************************!*\
+  !*** ./src/blocks/review-card/variants/bonus-card/style.scss ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/review-card/variants/compact-bet/style.scss":
 /*!****************************************************************!*\
   !*** ./src/blocks/review-card/variants/compact-bet/style.scss ***!
@@ -1166,6 +1178,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/review-card/variants/bonus-card/index.ts":
+/*!*************************************************************!*\
+  !*** ./src/blocks/review-card/variants/bonus-card/index.ts ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/review-card/variants/bonus-card/style.scss");
+
+
+/***/ }),
+
 /***/ "./src/blocks/review-card/variants/compact-bet/index.ts":
 /*!**************************************************************!*\
   !*** ./src/blocks/review-card/variants/compact-bet/index.ts ***!
@@ -1249,6 +1273,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./default */ "./src/blocks/review-card/variants/default/index.ts");
 /* harmony import */ var _compact_review_bonus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./compact-review-bonus */ "./src/blocks/review-card/variants/compact-review-bonus/index.ts");
 /* harmony import */ var _compact_bet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./compact-bet */ "./src/blocks/review-card/variants/compact-bet/index.ts");
+/* harmony import */ var _bonus_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bonus-card */ "./src/blocks/review-card/variants/bonus-card/index.ts");
+
 
 
 
@@ -1278,16 +1304,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js");
-/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js");
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/shared/scripts/consts */ "./src/shared/scripts/consts.ts");
 /* harmony import */ var _review_list_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./review-list.scss */ "./src/blocks/review-list/review-list.scss");
 /* harmony import */ var _shared_scripts_components_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/shared/scripts/components/modal */ "./src/shared/scripts/components/modal.ts");
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
 
 
 
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+
+
 
 
 
@@ -1302,6 +1332,7 @@ function init() {
     el.addEventListener('click', function (e) {
       if (e.target.closest('button.lb-review-card__play')) triggetRefModal(el);
     });
+    initCatFilterSlider(el);
   });
 }
 function triggetLoad(_x) {
@@ -1371,10 +1402,10 @@ function _load() {
 }
 function prepareQuery(query, queryData, data) {
   var _params;
-  var params = qs__WEBPACK_IMPORTED_MODULE_6___default().parse(query);
+  var params = qs__WEBPACK_IMPORTED_MODULE_8___default().parse(query);
   params.query = _objectSpread(_objectSpread({}, (_params = params) === null || _params === void 0 ? void 0 : _params.query), queryData);
   params = _objectSpread(_objectSpread({}, params), data);
-  return qs__WEBPACK_IMPORTED_MODULE_6___default().stringify(params);
+  return qs__WEBPACK_IMPORTED_MODULE_8___default().stringify(params);
 }
 function render(html, container) {
   var listEl = container.querySelector('.lb-review-list__list');
@@ -1429,6 +1460,21 @@ function _triggetRefModal() {
     }, _callee3);
   }));
   return _triggetRefModal.apply(this, arguments);
+}
+function initCatFilterSlider(container) {
+  var catContainer = container.querySelector('.lb-review-list__cat-filter > .swiper');
+  if (!catContainer) return;
+  var nextEl = container.querySelector('.lb-review-list__cat-filter-nav-next');
+  var prevEl = container.querySelector('.lb-review-list__cat-filter-nav-prev');
+  new swiper__WEBPACK_IMPORTED_MODULE_6__["default"](catContainer, {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_7__.Navigation],
+    navigation: {
+      nextEl: nextEl,
+      prevEl: prevEl
+    }
+  });
 }
 init();
 

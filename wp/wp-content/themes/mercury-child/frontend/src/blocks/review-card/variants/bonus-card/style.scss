@@ -1,0 +1,43 @@
+@use 'sass:math';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+@use '@/shared/styles/mixins/media-containers';
+@use '@/shared/styles/mixins/container';
+
+
+:root,
+.editor-styles-wrapper {
+  --lb-review-card-bonus-cats-color: var(--wp--preset--color--primary-600);
+  --lb-review-card-bonus-parameter-title-color: var(--lb-color-text-default);
+  --lb-review-card-bonus-parameter-value-color: var(--lb-color-text-strong);
+}
+
+.lb-review-card {
+  &__bonus-cats {
+    @include font.get-text-styles('text-xs', false);
+    color: var(--lb-review-card-bonus-cats-color);
+    font-weight: 400;
+    margin-bottom: var(--wp--preset--spacing--60);
+  }
+
+  &__bonus-details {
+    grid-column: 1/-1;
+    padding: var(--wp--preset--spacing--90) var(--wp--preset--spacing--100);
+    display: flex;
+    column-gap: var(--wp--preset--spacing--140);
+  }
+
+  &__bonus-detail {
+    &-title {
+      @include font.get-text-styles('text-xs', false);
+      margin-bottom: var(--wp--preset--spacing--50);
+      color: var(--lb-review-card-bonus-parameter-title-color);
+    }
+    &-value {
+      @include font.get-text-styles('text-sm', false);
+      font-weight: 500;
+      color: var(--lb-review-card-bonus-parameter-value-color);
+    }
+  }
+}

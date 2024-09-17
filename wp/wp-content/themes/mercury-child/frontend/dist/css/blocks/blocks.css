@@ -3680,6 +3680,53 @@
     min-width: 108px;
   }
 }
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/review-card/variants/bonus-card/style.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root,
+.editor-styles-wrapper {
+  --lb-review-card-bonus-cats-color: var(--wp--preset--color--primary-600);
+  --lb-review-card-bonus-parameter-title-color: var(--lb-color-text-default);
+  --lb-review-card-bonus-parameter-value-color: var(--lb-color-text-strong);
+}
+
+.lb-review-card__bonus-cats {
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  color: var(--lb-review-card-bonus-cats-color);
+  font-weight: 400;
+  margin-bottom: var(--wp--preset--spacing--60);
+}
+.lb-review-card__bonus-details {
+  grid-column: 1/-1;
+  padding: var(--wp--preset--spacing--90) var(--wp--preset--spacing--100);
+  display: flex;
+  column-gap: var(--wp--preset--spacing--140);
+}
+.lb-review-card__bonus-detail-title {
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  margin-bottom: var(--wp--preset--spacing--50);
+  color: var(--lb-review-card-bonus-parameter-title-color);
+}
+.lb-review-card__bonus-detail-value {
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  font-weight: 500;
+  color: var(--lb-review-card-bonus-parameter-value-color);
+}
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/review-details/review-details.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************/
@@ -3797,7 +3844,7 @@
 }
 .lb-review-list__cat-filter-nav-next {
   right: 0;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(50%) translateY(-50%);
 }
 @media (max-width: 767.98px) {
   .lb-review-list__cat-filter {

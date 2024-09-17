@@ -33,6 +33,7 @@ add_action('acf/include_fields', function () {
       'choices' => array(
         'default' => 'Default',
         'compact-review-bonus' => 'Compact review bonus',
+        'bonus-card' => 'Bonus card',
       ),
       'default_value' => 'default',
       'return_format' => 'value',

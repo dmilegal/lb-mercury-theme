@@ -78,7 +78,7 @@
       }
       &-next {
         right: 0;
-        transform: translateX(-50%) translateY(-50%);
+        transform: translateX(50%) translateY(-50%);
       }
     }
     @include breakpoints.media-breakpoint-down('sm') {

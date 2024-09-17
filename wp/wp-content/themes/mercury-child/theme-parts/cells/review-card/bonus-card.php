@@ -60,7 +60,9 @@ $bonusCategory = $args['bonus_category'] ?? null;
 $bonusId = aces_get_casino_bonus_id($postId, array_filter([$bonusCategory, $listBonusCategory], fn($i) => !!$i));
 $bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $casino_allowed_html);
 $bonus_button_title = esc_html(get_post_meta($bonusId, 'bonus_button_title', true));
+$bonus_cats = getBonuseCats($bonusId);
 $bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
+$bonus_parameters = aces_get_bonus_parameters($bonusId);
 $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
 
 $offer_detailed_tc = wp_kses(get_post_meta($bonusId, 'offer_detailed_tc', true), 'strip');
@@ -110,20 +112,28 @@ $is_locked = isBrandLocked($postId);
     <div class="lb-review-card__sub not-prose">
       <? if ($bonus_short_desc) { ?>
         <div class="lb-review-card__bonus-title">
-          <?= $bonus_short_desc ?>
+          <? if ($bonus_cats) { ?>
+            <? $cats_names = array_map(fn($i) => esc_html($i->name), $bonus_cats); ?>
+            <div class="lb-review-card__bonus-cats">
+              <?= implode(', ', $cats_names) ?>
+            </div>
+          <? } ?>
+          <div>
+            <?= $bonus_short_desc ?>
+          </div>
         </div>
       <? } ?>
       <div class="lb-review-card__actions">
         <?
-          get_template_part('theme-parts/atoms/button', null, [
-            'size' => 'xl',
-            'color' => 'primary',
-            'className' => 'lb-review-card__play',
-            'content' => esc_html($button_title),
-            'href' => $is_locked || !$external_link_url ? '' : esc_url($external_link_url),
-            'target' => $external_link_url && !$is_locked ? "_blank" : '',
-            'rel' => $external_link_url && !$is_locked ? "nofollow" : ''
-          ]);
+        get_template_part('theme-parts/atoms/button', null, [
+          'size' => 'xl',
+          'color' => 'primary',
+          'className' => 'lb-review-card__play',
+          'content' => esc_html($button_title),
+          'href' => $is_locked || !$external_link_url ? '' : esc_url($external_link_url),
+          'target' => $external_link_url && !$is_locked ? "_blank" : '',
+          'rel' => $external_link_url && !$is_locked ? "nofollow" : ''
+        ]);
 
         if ($bonus_code)
           get_template_part('theme-parts/molecules/promo-button', null, [
@@ -136,32 +146,14 @@ $is_locked = isBrandLocked($postId);
           ]); ?>
       </div>
     </div>
-    <? if (!$hideFooter) { ?>
-      <div class="lb-review-card__detail-list not-prose">
-        <div class="lb-review-card__detail-item">
-          <div class="lb-review-card__detail-title"><?= __('License', 'mercury-child') ?></div>
-          <div class="lb-review-card__detail-value"><?= aces_casino_has_licence($postId) ? __('Yes', 'mercury-child') : __('No', 'mercury-child') ?></div>
-        </div>
-      </div>
-    <? } ?>
-    <?php if ($casino_terms_desc && !$hideFooter) { ?>
-      <div class="lb-review-card__extra-actions not-prose">
-        <? get_template_part('theme-parts/atoms/button', null, [
-          'size' => 'sm',
-          'color' => 'gray',
-          'variant' => 'inline',
-          'postfix' => '<i class="icon-chevron-down"></i>',
-          'content' => __('Read more', 'mercury-child'),
-          'className' => "lb-review-card__read-more",
-        ]); ?>
-        <? get_template_part('theme-parts/atoms/button', null, [
-          'size' => 'sm',
-          'color' => 'gray',
-          'variant' => 'inline',
-          'postfix' => '<i class="icon-chevron-up"></i>',
-          'content' => __('Hide', 'mercury-child'),
-          'className' => "lb-review-card__read-less",
-        ]); ?>
+    <? if (!$hideFooter && $bonus_parameters) { ?>
+      <div class="lb-review-card__bonus-details not-prose">
+        <? foreach ($bonus_parameters as $param) { ?>
+          <div class="lb-review-card__bonus-detail">
+            <div class="lb-review-card__bonus-detail-title"><?= $param['name'] ?></div>
+            <div class="lb-review-card__bonus-detail-value"><?= $param['value'] ?></div>
+          </div>
+        <? } ?>
       </div>
     <? } ?>
 

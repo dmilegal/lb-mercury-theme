@@ -8,10 +8,18 @@ function getBonusesCatsByReviewIds($reviewIds = [])
     $b_cats = get_the_terms($bonusId, 'bonus-category');
     if (!$b_cats) continue;
     $cats = [...$cats, ...$b_cats];
+
+    
   }
 
-  $cats = array_unique($cats, SORT_REGULAR);
+  $cats = array_unique_call($cats, fn($i) => $i->term_id);
   usort($cats, fn($a, $b) => $a->name <=> $b->name);
 
   return array_map(fn($i) => $i->term_id, $cats);
+}
+
+function getBonuseCats($bonusId) {
+  $cats = get_the_terms($bonusId, 'bonus-category');
+  if (!$cats) return [];
+  return  $cats;
 }

@@ -2,6 +2,8 @@ import qs from 'qs'
 import { API_URL } from '@/shared/scripts/consts'
 import './review-list.scss'
 import { Modal } from '@/shared/scripts/components/modal'
+import Swiper from 'swiper'
+import { Navigation } from 'swiper/modules'
 
 interface ResponseData {
   html: string
@@ -21,6 +23,8 @@ function init() {
       if ((e.target as HTMLElement).closest('button.lb-review-card__play'))
         triggetRefModal(el)
     })
+
+    initCatFilterSlider(el)
   })
 }
 
@@ -109,6 +113,29 @@ async function triggetRefModal(container: HTMLElement) {
   )
 
   modal.setBody(data.html, '.lb-review-list__list')
+}
+
+function initCatFilterSlider(container: HTMLElement) {
+  const catContainer = container.querySelector<HTMLElement>(
+    '.lb-review-list__cat-filter > .swiper'
+  )
+  if (!catContainer) return
+  const nextEl = container.querySelector<HTMLButtonElement>(
+    '.lb-review-list__cat-filter-nav-next'
+  )
+  const prevEl = container.querySelector<HTMLButtonElement>(
+    '.lb-review-list__cat-filter-nav-prev'
+  )
+
+  new Swiper(catContainer, {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    modules: [Navigation],
+    navigation: {
+      nextEl: nextEl,
+      prevEl: prevEl,
+    },
+  })
 }
 
 init()
