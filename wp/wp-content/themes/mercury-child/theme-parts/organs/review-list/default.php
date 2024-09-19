@@ -57,12 +57,14 @@ if ($reviewList || $asyncLoading) {
           <div class="lb-review-list__heading prose-headings prose-colors">
             <? if ($title) { ?>
               <h2 class="lb-review-list__title"><?php echo esc_html($title); ?></h2>
+              <? get_template_part('theme-parts/organs/post-info', null); ?>
             <? } ?>
             <? if ($licenseText && $showLicenseText) { ?>
               <div class="lb-review-list__subtitle">
                 <?= $licenseText ?>
               </div>
             <? } ?>
+           
           </div>
         <?php } ?>
         <div class="lb-review-list__list lb-review-list__list--theme_<?= $list_theme ?>">

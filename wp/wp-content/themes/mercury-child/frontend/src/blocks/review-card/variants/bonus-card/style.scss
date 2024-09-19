@@ -26,6 +26,12 @@
     padding: var(--wp--preset--spacing--90) var(--wp--preset--spacing--100);
     display: flex;
     column-gap: var(--wp--preset--spacing--140);
+    row-gap: var(--wp--preset--spacing--85);
+    @include media-containers.media-breakpoint-down(sm) {
+      column-gap: var(--wp--preset--spacing--100);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__bonus-detail {
