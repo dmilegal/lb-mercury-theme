@@ -36,7 +36,7 @@
     color: var(--lb-relinking-item-color-text-active);
   }
 
-  &--active {
+  &--active, input:checked + & {
     background-color: var(--lb-relinking-item-background-color-active);
     border-color: var(--lb-relinking-item-background-color-active);
     color: var(--lb-relinking-item-color-text-active);
@@ -101,7 +101,6 @@
       display: inline-block;
       max-width: 100%;
       padding: var(--wp--preset--spacing--70);
-      background-color: var();
     }
 
     &_with-primary-image {

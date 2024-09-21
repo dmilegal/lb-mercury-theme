@@ -55,12 +55,11 @@ if ($casino_permalink_button_title) {
 }
 
 
-$listBonusCategory = $args['list_bonus_category'] ?? null;
-$bonusCategory = $args['bonus_category'] ?? null;
-$bonusId = aces_get_casino_bonus_id($postId, array_filter([$bonusCategory, $listBonusCategory], fn($i) => !!$i));
+$bonusCategories = $args['bonus_category'] ?? [];
+$bonusId = aces_get_casino_bonus_id($postId, $bonusCategories);
 $bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $casino_allowed_html);
 $bonus_button_title = esc_html(get_post_meta($bonusId, 'bonus_button_title', true));
-$bonus_cats = getBonuseCats($bonusId);
+$bonus_cats = aces_get_bonus_categories($bonusId);
 $bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
 $bonus_parameters = aces_get_bonus_parameters($bonusId);
 $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
@@ -152,16 +151,6 @@ $is_locked = isBrandLocked($postId);
           <div class="lb-review-card__bonus-detail">
             <div class="lb-review-card__bonus-detail-title"><?= $param['name'] ?></div>
             <div class="lb-review-card__bonus-detail-value"><?= $param['value'] ?></div>
-          </div>
-        <? } ?>
-      </div>
-    <? } ?>
-
-    <? if (!$hideFooter && $casino_terms_desc) { ?>
-      <div class="lb-review-card__extra-content not-prose">
-        <?php if ($casino_terms_desc) { ?>
-          <div class="lb-review-card__desc">
-            <?= wp_kses($casino_terms_desc, $casino_allowed_html); ?>
           </div>
         <? } ?>
       </div>

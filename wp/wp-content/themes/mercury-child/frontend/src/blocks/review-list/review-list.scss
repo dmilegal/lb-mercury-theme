@@ -68,10 +68,18 @@
         margin-right: var(--wp--preset--spacing--60);
       }
     }
+    @include breakpoints.media-breakpoint-down('sm') {
+      margin-bottom: var(--wp--preset--spacing--120);
+    }
+
     &-nav {
       position: absolute;
       top: 50%;
       z-index: 5;
+      @include breakpoints.media-breakpoint-down('sm') {
+        display: none;
+      }
+  
       &-prev {
         left: 0;
         transform: translateX(-50%) translateY(-50%);
@@ -81,9 +89,14 @@
         transform: translateX(50%) translateY(-50%);
       }
     }
-    @include breakpoints.media-breakpoint-down('sm') {
-      margin-bottom: var(--wp--preset--spacing--120);
+
+    &-inp {
+      &#{&} {
+        display: none;
+      }
+
     }
+    
   }
 
   &__heading {

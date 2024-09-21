@@ -8,14 +8,29 @@ import { Navigation } from 'swiper/modules'
 interface ResponseData {
   html: string
   message: string
+  page: number
+  total_pages: number
 }
 
 function init() {
   const btns = document.querySelectorAll<HTMLButtonElement>('.lb-review-list__load-more')
+  const filterForm = document.querySelectorAll<HTMLFormElement>(
+    '.lb-review-list__cat-filter'
+  )
   const listEls = document.querySelectorAll<HTMLButtonElement>('.lb-review-list')
 
   btns.forEach((btn) => {
-    btn.addEventListener('click', triggetLoad)
+    btn.addEventListener('click', () => {
+      const container = btn.closest<HTMLElement>('.lb-review-list')
+      nextPaga(container)
+    })
+  })
+
+  filterForm.forEach((form) => {
+    form.addEventListener('change', () => {
+      const container = form.closest<HTMLElement>('.lb-review-list')
+      filter(container)
+    })
   })
 
   listEls.forEach((el) => {
@@ -28,20 +43,32 @@ function init() {
   })
 }
 
-async function triggetLoad(e: MouseEvent) {
-  const btn = e.currentTarget as HTMLButtonElement
-  const container = btn.closest<HTMLElement>('.lb-review-list')
+function nextPaga(container: HTMLElement) {
+  const btn = container.querySelector<HTMLButtonElement>('.lb-review-list__load-more')
+  triggerLoad(container, (+btn.dataset.currentPage || 1) + 1)
+}
 
-  const preparedQuery = prepareQuery(btn.dataset.query, {
-    paged: (+btn.dataset.currentPage || 1) + 1,
-  })
+function filter(container: HTMLElement) {
+  triggerLoad(container, 1)
+}
+
+async function triggerLoad(container: HTMLElement, page = 1) {
+  const btn = container.querySelector<HTMLButtonElement>('.lb-review-list__load-more')
+
+  const preparedQuery = prepareQuery(
+    btn.dataset.query,
+    {
+      paged: page,
+    },
+    getFilterData(container)
+  )
 
   btn.classList.add('lb-button--pending')
   btn.disabled = true
 
   try {
     const data = await load(preparedQuery)
-    render(data.html, container)
+    render(container, data.html, data.page, data.total_pages)
   } catch (error) {
     console.error(error)
   }
@@ -74,17 +101,22 @@ function prepareQuery(
   return qs.stringify(params)
 }
 
-function render(html: string, container: HTMLElement) {
+function render(container: HTMLElement, html: string, page: number, total_pages: number) {
   const listEl = container.querySelector<HTMLElement>('.lb-review-list__list')
   const btn = container.querySelector<HTMLElement>('.lb-review-list__load-more')
 
+  if (page == 1) {
+    listEl.innerHTML = ''
+  }
   listEl.insertAdjacentHTML('beforeend', html)
   ;(window as any).CasinoCardsInit(listEl)
   ;(window as any).initPromoButton(listEl)
 
-  btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + ''
+  btn.dataset.currentPage = page + ''
+  btn.dataset.totalPages = total_pages + ''
 
   if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none'
+  else btn.style.display = ''
 }
 
 async function triggetRefModal(container: HTMLElement) {
@@ -113,6 +145,16 @@ async function triggetRefModal(container: HTMLElement) {
   )
 
   modal.setBody(data.html, '.lb-review-list__list')
+}
+
+function getFilterData(container: HTMLElement) {
+  const form = container.querySelector<HTMLFormElement>('.lb-review-list__cat-filter')
+
+  if (!form) return {}
+
+  const filterData = Object.fromEntries(new FormData(form))
+
+  return filterData
 }
 
 function initCatFilterSlider(container: HTMLElement) {

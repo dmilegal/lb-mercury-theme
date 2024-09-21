@@ -6,13 +6,20 @@ $enableSortByBonusCategory = $args['enable_sort_by_bonus_category'] ?? false;
 $postsPerPage = $args['posts_per_page'] ?? 0;
 $reviewList = $args['casino_list'] ?? [];
 $postType = $args['post_type'] ?? 'casino';
+$bonusCategory = $args['bonus_category'] ?? false;
 
-
-[$reviewList, $reviewListFull, $refReviewList, $maxPages, $currentPage] = getReviewData($postType, $queryArgs, $reviewList, $disablePagination, $postsPerPage);
+[$reviewList, $reviewListFull, $refReviewList, $maxPages, $currentPage, $queryArgs] = getReviewData(
+  $postType,
+  $queryArgs,
+  $reviewList,
+  $disablePagination,
+  $postsPerPage,
+  $bonusCategory,
+);
 
 $bonusCategories = [];
 if (!$enableSortByBonusCategory) {
-  $bonusCategories = getBonusesCatsByReviewIds(array_map(fn($i) => $i['post_id'], $reviewList));
+  $bonusCategories = aces_get_bonuses_categories_by_review_ids(array_map(fn($i) => $i['post_id'], $reviewList));
 }
 
 if ($reviewList) {
@@ -22,7 +29,9 @@ if ($reviewList) {
     'review_list' => $reviewList,
     'review_list_full' => $reviewListFull,
     'ref_review_list' => $refReviewList,
-    'bonus_categories' => $bonusCategories,
+    'filter' => [
+      'bonus_categories' => $bonusCategories
+    ],
     'total_pages' => $maxPages,
     'current_page' => $currentPage,
     'query_args' => $queryArgs,

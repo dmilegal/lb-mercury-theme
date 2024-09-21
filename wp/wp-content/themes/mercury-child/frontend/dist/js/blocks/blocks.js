@@ -1324,9 +1324,19 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 function init() {
   var btns = document.querySelectorAll('.lb-review-list__load-more');
+  var filterForm = document.querySelectorAll('.lb-review-list__cat-filter');
   var listEls = document.querySelectorAll('.lb-review-list');
   btns.forEach(function (btn) {
-    btn.addEventListener('click', triggetLoad);
+    btn.addEventListener('click', function () {
+      var container = btn.closest('.lb-review-list');
+      nextPaga(container);
+    });
+  });
+  filterForm.forEach(function (form) {
+    form.addEventListener('change', function () {
+      var container = form.closest('.lb-review-list');
+      filter(container);
+    });
   });
   listEls.forEach(function (el) {
     el.addEventListener('click', function (e) {
@@ -1335,20 +1345,31 @@ function init() {
     initCatFilterSlider(el);
   });
 }
-function triggetLoad(_x) {
-  return _triggetLoad.apply(this, arguments);
+function nextPaga(container) {
+  var btn = container.querySelector('.lb-review-list__load-more');
+  triggerLoad(container, (+btn.dataset.currentPage || 1) + 1);
 }
-function _triggetLoad() {
-  _triggetLoad = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee(e) {
-    var btn, container, preparedQuery, data;
+function filter(container) {
+  triggerLoad(container, 1);
+}
+function triggerLoad(_x) {
+  return _triggerLoad.apply(this, arguments);
+}
+function _triggerLoad() {
+  _triggerLoad = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee(container) {
+    var page,
+      btn,
+      preparedQuery,
+      data,
+      _args = arguments;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          btn = e.currentTarget;
-          container = btn.closest('.lb-review-list');
+          page = _args.length > 1 && _args[1] !== undefined ? _args[1] : 1;
+          btn = container.querySelector('.lb-review-list__load-more');
           preparedQuery = prepareQuery(btn.dataset.query, {
-            paged: (+btn.dataset.currentPage || 1) + 1
-          });
+            paged: page
+          }, getFilterData(container));
           btn.classList.add('lb-button--pending');
           btn.disabled = true;
           _context.prev = 5;
@@ -1356,7 +1377,7 @@ function _triggetLoad() {
           return load(preparedQuery);
         case 8:
           data = _context.sent;
-          render(data.html, container);
+          render(container, data.html, data.page, data.total_pages);
           _context.next = 15;
           break;
         case 12:
@@ -1372,7 +1393,7 @@ function _triggetLoad() {
       }
     }, _callee, null, [[5, 12]]);
   }));
-  return _triggetLoad.apply(this, arguments);
+  return _triggerLoad.apply(this, arguments);
 }
 function load(_x2) {
   return _load.apply(this, arguments);
@@ -1407,14 +1428,18 @@ function prepareQuery(query, queryData, data) {
   params = _objectSpread(_objectSpread({}, params), data);
   return qs__WEBPACK_IMPORTED_MODULE_8___default().stringify(params);
 }
-function render(html, container) {
+function render(container, html, page, total_pages) {
   var listEl = container.querySelector('.lb-review-list__list');
   var btn = container.querySelector('.lb-review-list__load-more');
+  if (page == 1) {
+    listEl.innerHTML = '';
+  }
   listEl.insertAdjacentHTML('beforeend', html);
   window.CasinoCardsInit(listEl);
   window.initPromoButton(listEl);
-  btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + '';
-  if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';
+  btn.dataset.currentPage = page + '';
+  btn.dataset.totalPages = total_pages + '';
+  if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';else btn.style.display = '';
 }
 function triggetRefModal(_x3) {
   return _triggetRefModal.apply(this, arguments);
@@ -1460,6 +1485,12 @@ function _triggetRefModal() {
     }, _callee3);
   }));
   return _triggetRefModal.apply(this, arguments);
+}
+function getFilterData(container) {
+  var form = container.querySelector('.lb-review-list__cat-filter');
+  if (!form) return {};
+  var filterData = Object.fromEntries(new FormData(form));
+  return filterData;
 }
 function initCatFilterSlider(container) {
   var catContainer = container.querySelector('.lb-review-list__cat-filter > .swiper');

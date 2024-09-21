@@ -1,11 +1,11 @@
 <?
-function getReviewData($postType = 'casino', $queryArgs = [], $casinoList = [], $disablePagination = false, $postsPerPage = 0)
+function getReviewData($postType = 'casino', $queryArgs = [], $casinoList = [], $disablePagination = false, $postsPerPage = 0, $listingBonusCategory = false)
 {
   global $wp_query;
 
-  $reviewListFull = array_map(function ($p) use ($postType) {
+  $reviewListFull = array_map(function ($p) use ($postType, $listingBonusCategory) {
     $item = [...$p];
-  
+    $item['bonus_category'] = array_filter([$reviewItem['bonus_category'] ?? false, $listingBonusCategory], fn($i) => !!$i);
     if ($postType === 'casino')
       $item['post_id'] = $p['casino_id'];
     else {
@@ -57,7 +57,7 @@ function getReviewData($postType = 'casino', $queryArgs = [], $casinoList = [], 
 
     wp_reset_query();
 
-    return [$reviewList, $reviewListFull, $refReviewList, $maxPages, $currentPage];
+    return [$reviewList, $reviewListFull, $refReviewList, $maxPages, $currentPage, $queryArgs];
   }
 
   return [[], [], 0, 1];

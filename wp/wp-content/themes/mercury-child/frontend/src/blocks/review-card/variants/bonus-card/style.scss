@@ -27,6 +27,9 @@
     display: flex;
     column-gap: var(--wp--preset--spacing--140);
     row-gap: var(--wp--preset--spacing--85);
+    &:empty {
+      display: none;
+    }
     @include media-containers.media-breakpoint-down(sm) {
       column-gap: var(--wp--preset--spacing--100);
       display: grid;
