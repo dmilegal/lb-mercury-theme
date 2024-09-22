@@ -3870,6 +3870,9 @@
 .lb-review-list__cat-filter-inp.lb-review-list__cat-filter-inp {
   display: none;
 }
+.lb-review-list__heading .lb-post-info {
+  margin: 0;
+}
 .lb-review-list__title {
   margin-bottom: var(--wp--preset--spacing--70);
 }
@@ -3890,6 +3893,7 @@
   color: var(--lb-casino-subtitle-color);
 }
 .lb-review-list__subtitle {
+  margin-top: var(--wp--preset--spacing--70);
   margin-bottom: var(--wp--preset--spacing--70);
 }
 .lb-review-list__subtitle:not(:only-child) {

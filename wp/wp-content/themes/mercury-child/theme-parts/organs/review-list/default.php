@@ -16,13 +16,15 @@ $showLicenseText = $args['show_license_ar_text_for_listing'] ?? false;
 $licenseText = get_field("license_ar_text_for_listing", "option");
 $istingBonusCategory = $args['bonus_category'] ?? false;
 $filterParams = $args['filter'] ?? [];
+$showPostInfo = $args['show_post_info'] ?? false;
+$showBonusFilter = $args['show_bonus_filter'] ?? false;
 
 if ($reviewList || $asyncLoading) {
 ?>
   <div data-type="<?= $postType ?>" data-ref-items="<?= esc_attr(json_encode($refReviewList)) ?>" class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
     <div class="lb-review-list__wrapper">
       <div class="lb-review-list__inner">
-        <? if ($filterParams && isset($filterParams['bonus_categories'])) { ?>
+        <? if ($showBonusFilter && $filterParams && isset($filterParams['bonus_categories']) && $filterParams['bonus_categories']) { ?>
           <? get_template_part('theme-parts/organs/review-list/bonus-category-filter', null, [
             'bonus_categories' => $filterParams['bonus_categories']
           ]); ?>
@@ -31,14 +33,17 @@ if ($reviewList || $asyncLoading) {
           <div class="lb-review-list__heading prose-headings prose-colors">
             <? if ($title) { ?>
               <h2 class="lb-review-list__title"><?php echo esc_html($title); ?></h2>
-              <? get_template_part('theme-parts/organs/post-info', null); ?>
+              <?
+              if ($showPostInfo)
+                get_template_part('theme-parts/organs/post-info', null);
+              ?>
             <? } ?>
             <? if ($licenseText && $showLicenseText) { ?>
               <div class="lb-review-list__subtitle">
                 <?= $licenseText ?>
               </div>
             <? } ?>
-           
+
           </div>
         <?php } ?>
         <div class="lb-review-list__list lb-review-list__list--theme_<?= $list_theme ?>">
@@ -51,10 +56,8 @@ if ($reviewList || $asyncLoading) {
             get_template_part('theme-parts/cells/review-card/review-card', null, [
               'card_variant' => $cardVariant,
               'post_type' => $postType,
-              
+
               ...$reviewItem,
-              
-              'bonus_category' => array_filter([$reviewItem['bonus_category'] ?? false, $istingBonusCategory], fn($i) => !!$i),
             ]);
           } ?>
         </div>

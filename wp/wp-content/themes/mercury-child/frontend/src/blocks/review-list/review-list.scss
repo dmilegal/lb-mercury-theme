@@ -100,6 +100,9 @@
   }
 
   &__heading {
+    .lb-post-info {
+      margin: 0;
+    }
   }
 
   &__title {
@@ -120,6 +123,7 @@
       color: var(--lb-casino-subtitle-color);
     }
     & {
+      margin-top: var(--wp--preset--spacing--70);
       margin-bottom: var(--wp--preset--spacing--70);
     }
 

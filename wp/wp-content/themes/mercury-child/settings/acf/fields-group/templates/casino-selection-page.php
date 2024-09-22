@@ -37,6 +37,26 @@ add_action('acf/include_fields', function () {
       'prepend' => '',
       'append' => '',
     ),
+    array(
+      'key' => 'field_643ta27b45kda',
+      'label' => 'Show Post Info',
+      'name' => 'show_post_info',
+      'aria-label' => '',
+      'type' => 'true_false',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array(
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'message' => '',
+      'default_value' => 0,
+      'ui' => 0,
+      'ui_on_text' => '',
+      'ui_off_text' => '',
+    ),
     ...$params['fields'][0]['sub_fields']
   ];
 
