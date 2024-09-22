@@ -24,24 +24,17 @@
   padding-bottom: var(--hero-review-banner-space-bottom);
   background-color: var(--hero-review-banner-color-background);
 
-  &--col-span {
-    @include breakpoints.media-breakpoint-up(lg) {
-      %content {
-        grid-column: 1/8;
-      }
+  &__inner {
+    display: grid;
+    grid-template-columns: var(--lb-layout-grid-col-template);
+    column-gap: var(--lb-layout-gap-x);
+    @include container.make-container-max-width();
+    @include breakpoints.media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
     }
   }
 
-  &__inner {
-    @include container.make-container-max-width();
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: var(--layout-content-spacing);
-  }
-
   &__content {
-    grid-column: 1 / -1;
-    @extend %content;
   }
 
   &__header {
@@ -132,15 +125,15 @@
       pointer-events: none;
       @include container.make-container-max-width();
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: 384px;
       column-gap: var(--layout-content-spacing);
+      justify-content: flex-end;
     }
 
     &__inner {
       @include breakpoints.media-breakpoint-up(lg) {
         position: relative;
         pointer-events: auto;
-        grid-column: 9/13;
         padding-top: var(--hero-review-banner-space-top, 0px);
       }
     }

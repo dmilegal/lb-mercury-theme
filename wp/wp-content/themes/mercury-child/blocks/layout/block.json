@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/layout",
+  "title": "Layout",
+  "description": "",
+  "style": ["layout"],
+  "editorStyle": [],
+  "script": ["layout"],
+  "category": "formatting",
+  "icon": "media-document",
+  "keywords": ["layout", "шаблон"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "layout.php"
+  }
+}

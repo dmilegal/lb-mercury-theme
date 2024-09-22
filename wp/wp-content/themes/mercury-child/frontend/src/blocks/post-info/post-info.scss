@@ -2,7 +2,8 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-:root {
+:root,
+.editor-styles-wrapper {
   --lb-post-info-title-color-text: var(--lb-color-primary);
   --lb-post-info-value-color-text: var(--lb-color-on-surface-highest);
 }
@@ -11,7 +12,6 @@
   display: flex;
   column-gap: var(--wp--preset--spacing--120);
   row-gap: var(--wp--preset--spacing--60);
-  margin-bottom: var(--wp--preset--spacing--100);
 
   @include breakpoints.media-breakpoint-down('sm') {
     flex-direction: column;

@@ -216,6 +216,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "./src/blocks/layout/layout.scss":
+/*!***************************************!*\
+  !*** ./src/blocks/layout/layout.scss ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/link-with-icon-list/link-with-icon-list.scss":
+/*!*****************************************************************!*\
+  !*** ./src/blocks/link-with-icon-list/link-with-icon-list.scss ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/link-with-icon/link-with-icon.scss":
+/*!*******************************************************!*\
+  !*** ./src/blocks/link-with-icon/link-with-icon.scss ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
 /***/ "./src/blocks/logo-text/logo-text.scss":
 /*!*********************************************!*\
   !*** ./src/blocks/logo-text/logo-text.scss ***!
@@ -384,6 +423,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./src/blocks/review-card/variants/bonus-card/style.scss":
 /*!***************************************************************!*\
   !*** ./src/blocks/review-card/variants/bonus-card/style.scss ***!
@@ -396,6 +436,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+=======
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
 /***/ "./src/blocks/review-card/variants/compact-bet/style.scss":
 /*!****************************************************************!*\
   !*** ./src/blocks/review-card/variants/compact-bet/style.scss ***!
@@ -859,6 +901,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "./src/blocks/layout/layout.ts":
+/*!*************************************!*\
+  !*** ./src/blocks/layout/layout.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layout_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layout.scss */ "./src/blocks/layout/layout.scss");
+
+
+/***/ }),
+
+/***/ "./src/blocks/link-with-icon-list/link-with-icon-list.ts":
+/*!***************************************************************!*\
+  !*** ./src/blocks/link-with-icon-list/link-with-icon-list.ts ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _link_with_icon_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./link-with-icon-list.scss */ "./src/blocks/link-with-icon-list/link-with-icon-list.scss");
+
+
+/***/ }),
+
+/***/ "./src/blocks/link-with-icon/link-with-icon.ts":
+/*!*****************************************************!*\
+  !*** ./src/blocks/link-with-icon/link-with-icon.ts ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _link_with_icon_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./link-with-icon.scss */ "./src/blocks/link-with-icon/link-with-icon.scss");
+
+
+/***/ }),
+
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
 /***/ "./src/blocks/logo-text/logo-text.ts":
 /*!*******************************************!*\
   !*** ./src/blocks/logo-text/logo-text.ts ***!
@@ -1178,6 +1259,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./src/blocks/review-card/variants/bonus-card/index.ts":
 /*!*************************************************************!*\
   !*** ./src/blocks/review-card/variants/bonus-card/index.ts ***!
@@ -1190,6 +1272,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+=======
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
 /***/ "./src/blocks/review-card/variants/compact-bet/index.ts":
 /*!**************************************************************!*\
   !*** ./src/blocks/review-card/variants/compact-bet/index.ts ***!
@@ -1273,8 +1357,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./default */ "./src/blocks/review-card/variants/default/index.ts");
 /* harmony import */ var _compact_review_bonus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./compact-review-bonus */ "./src/blocks/review-card/variants/compact-review-bonus/index.ts");
 /* harmony import */ var _compact_bet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./compact-bet */ "./src/blocks/review-card/variants/compact-bet/index.ts");
+<<<<<<< HEAD
 /* harmony import */ var _bonus_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bonus-card */ "./src/blocks/review-card/variants/bonus-card/index.ts");
 
+=======
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
 
 
 
@@ -1304,6 +1391,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
+<<<<<<< HEAD
 /* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js");
 /* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/shared/scripts/consts */ "./src/shared/scripts/consts.ts");
@@ -1311,6 +1399,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_scripts_components_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/shared/scripts/components/modal */ "./src/shared/scripts/components/modal.ts");
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+=======
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js");
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/shared/scripts/consts */ "./src/shared/scripts/consts.ts");
+/* harmony import */ var _review_list_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./review-list.scss */ "./src/blocks/review-list/review-list.scss");
+/* harmony import */ var _shared_scripts_components_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/shared/scripts/components/modal */ "./src/shared/scripts/components/modal.ts");
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
 
 
 
@@ -1320,6 +1415,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 
 
+<<<<<<< HEAD
 
 
 function init() {
@@ -1337,11 +1433,19 @@ function init() {
       var container = form.closest('.lb-review-list');
       filter(container);
     });
+=======
+function init() {
+  var btns = document.querySelectorAll('.lb-review-list__load-more');
+  var listEls = document.querySelectorAll('.lb-review-list');
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', triggetLoad);
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
   });
   listEls.forEach(function (el) {
     el.addEventListener('click', function (e) {
       if (e.target.closest('button.lb-review-card__play')) triggetRefModal(el);
     });
+<<<<<<< HEAD
     initCatFilterSlider(el);
   });
 }
@@ -1370,6 +1474,24 @@ function _triggerLoad() {
           preparedQuery = prepareQuery(btn.dataset.query, {
             paged: page
           }, getFilterData(container));
+=======
+  });
+}
+function triggetLoad(_x) {
+  return _triggetLoad.apply(this, arguments);
+}
+function _triggetLoad() {
+  _triggetLoad = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee(e) {
+    var btn, container, preparedQuery, data;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          btn = e.currentTarget;
+          container = btn.closest('.lb-review-list');
+          preparedQuery = prepareQuery(btn.dataset.query, {
+            paged: (+btn.dataset.currentPage || 1) + 1
+          });
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
           btn.classList.add('lb-button--pending');
           btn.disabled = true;
           _context.prev = 5;
@@ -1377,7 +1499,11 @@ function _triggerLoad() {
           return load(preparedQuery);
         case 8:
           data = _context.sent;
+<<<<<<< HEAD
           render(container, data.html, data.page, data.total_pages);
+=======
+          render(data.html, container);
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
           _context.next = 15;
           break;
         case 12:
@@ -1393,7 +1519,11 @@ function _triggerLoad() {
       }
     }, _callee, null, [[5, 12]]);
   }));
+<<<<<<< HEAD
   return _triggerLoad.apply(this, arguments);
+=======
+  return _triggetLoad.apply(this, arguments);
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
 }
 function load(_x2) {
   return _load.apply(this, arguments);
@@ -1423,6 +1553,7 @@ function _load() {
 }
 function prepareQuery(query, queryData, data) {
   var _params;
+<<<<<<< HEAD
   var params = qs__WEBPACK_IMPORTED_MODULE_8___default().parse(query);
   params.query = _objectSpread(_objectSpread({}, (_params = params) === null || _params === void 0 ? void 0 : _params.query), queryData);
   params = _objectSpread(_objectSpread({}, params), data);
@@ -1440,6 +1571,21 @@ function render(container, html, page, total_pages) {
   btn.dataset.currentPage = page + '';
   btn.dataset.totalPages = total_pages + '';
   if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';else btn.style.display = '';
+=======
+  var params = qs__WEBPACK_IMPORTED_MODULE_6___default().parse(query);
+  params.query = _objectSpread(_objectSpread({}, (_params = params) === null || _params === void 0 ? void 0 : _params.query), queryData);
+  params = _objectSpread(_objectSpread({}, params), data);
+  return qs__WEBPACK_IMPORTED_MODULE_6___default().stringify(params);
+}
+function render(html, container) {
+  var listEl = container.querySelector('.lb-review-list__list');
+  var btn = container.querySelector('.lb-review-list__load-more');
+  listEl.insertAdjacentHTML('beforeend', html);
+  window.CasinoCardsInit(listEl);
+  window.initPromoButton(listEl);
+  btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + '';
+  if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
 }
 function triggetRefModal(_x3) {
   return _triggetRefModal.apply(this, arguments);
@@ -1486,6 +1632,7 @@ function _triggetRefModal() {
   }));
   return _triggetRefModal.apply(this, arguments);
 }
+<<<<<<< HEAD
 function getFilterData(container) {
   var form = container.querySelector('.lb-review-list__cat-filter');
   if (!form) return {};
@@ -1507,6 +1654,8 @@ function initCatFilterSlider(container) {
     }
   });
 }
+=======
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
 init();
 
 /***/ }),
@@ -2193,6 +2342,12 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-banner/hero-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-review-banner/hero-review-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/lang-label/lang-label.ts")))
+<<<<<<< HEAD
+=======
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/layout/layout.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/link-with-icon/link-with-icon.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/link-with-icon-list/link-with-icon-list.ts")))
+>>>>>>> c1a49d27baf8b720c2707dd30cf18472f8ddf55c
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/logo-text/logo-text.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/page-not-found/page-not-found.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/pagination/pagination.ts")))

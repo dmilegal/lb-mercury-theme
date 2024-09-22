@@ -3,7 +3,7 @@
 @use '@/shared/styles/mixins/font';
 @use "@/shared/styles/mixins/breakpoints";
 
-:root {
+:root, .editor-styles-wrapper {
   --lb-hero-banner-color-background: var(--lb-color-surface-highest);
   --lb-hero-banner-subtitle-color-text: var(--lb-color-text-default);
   --hero-banner-space-top: var(--wp--preset--spacing--140);
@@ -15,12 +15,11 @@
   }
 }
 
-.lb-hero-banner {
-  --lb-hero-banner-grid-col-template: var(--lb-layout-grid-col-template, repeat(12, 1fr));
-  --lb-hero-banner-gap-x: var(--lb-layout-grid-gap-x, var(--layout-content-spacing));
-  --lb-hero-banner-grid-col-start: var(--lb-layout-content-grid-col-start, 1);
-  --lb-hero-banner-grid-col-end: var(--lb-layout-content-grid-col-end, -1);
+.wp-block-lb-hero-banner {
+  max-width: 100%!important;
+}
 
+.lb-hero-banner {
   padding-top: var(--hero-banner-space-top);
   padding-bottom: var(--hero-banner-space-bottom);
   background-color: var(--lb-hero-banner-color-background);
@@ -45,26 +44,19 @@
       @include breakpoints.media-breakpoint-up(md) {
         :where(%title) {
           text-align: center;
-  
         }
         :where(%subtitle) {
           text-align: center;
         }
       }
-      
     }
-
   }
 
   &__inner {
     @include container.make-container-max-width();
-    display: grid;
-    grid-template-columns: var(--lb-hero-banner-grid-col-template);
-    column-gap: var(--lb-hero-banner-gap-x);
   }
 
   &__content {
-    grid-column: var(--lb-hero-banner-grid-col-start) / var(--lb-hero-banner-grid-col-end);
   }
 
   &__publish-date {
@@ -75,12 +67,20 @@
     margin-bottom: var(--wp--preset--spacing--70);
   }
 
+
+  &__title, &__subtitle, &__text-content {
+    &:not(:last-child) {
+      margin-bottom: var(--wp--preset--spacing--110);
+      @include breakpoints.media-breakpoint-down(sm) {
+        margin-bottom: var(--wp--preset--spacing--85);
+      }
+    }
+  }
+
   &__title {
     @include font.get-text-styles('display-lg');
     font-weight: 500;
-    &:not(:last-child) {
-      margin-bottom: var(--wp--preset--spacing--100);
-    }
+    
     @extend %title;
   }
 
@@ -88,5 +88,18 @@
     color: var(--lb-hero-banner-subtitle-color-text);
     @include font.get-text-styles('text-xl');
     @extend %subtitle;
+  }
+
+  &__footer-content {
+    @include breakpoints.media-breakpoint-up(lg) {
+      .lb-relinking-list {
+        max-width: var(--lb-layout-content-size);
+        margin-right: calc(var(--lb-layout-gap-x) + var(--lb-layout-sidebar-size));
+      }
+    }
+    
+    &:not(:first-child) {
+      margin-top: var(--wp--preset--spacing--110);
+    }
   }
 }

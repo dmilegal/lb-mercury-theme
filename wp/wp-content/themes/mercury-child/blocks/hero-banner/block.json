@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/hero-banner",
+  "title": "Hero Banner",
+  "description": "",
+  "style": ["hero-banner"],
+  "editorStyle": [],
+  "script": ["hero-banner"],
+  "category": "formatting",
+  "icon": "align-wide",
+  "keywords": ["hero banner", "главный баннер"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "hero-banner.php"
+  }
+}

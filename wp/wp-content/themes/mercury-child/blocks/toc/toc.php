@@ -11,11 +11,13 @@
  *          or the post ID of the post hosting this block.
  * @param   array $context The context provided to the block by the post or it's parent block.
  */
+$block_opts = getCommonBlockProps($block, $post_id, $is_preview, get_field('block_hide_on_desktop'), get_field('block_hide_on_mobile'));
 
-if ($is_preview && !$post_id) { ?>
+
+if ($is_preview || !$post_id) { ?>
   <div>
-    <p>No preview available.</p>
+    <p>TOC: No preview available.</p>
   </div>
 <? } else {
-  get_template_part('theme-parts/molecules/toc');
+  get_template_part('theme-parts/molecules/toc', null, [...$block_opts, 'is_collapsible' => get_field('is_collapsible')]);
 }

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/post-info",
+  "title": "Post Info",
+  "description": "",
+  "style": ["post-info"],
+  "editorStyle": [],
+  "script": ["post-info"],
+  "category": "formatting",
+  "icon": "info-outline",
+  "keywords": ["post info", "инфо"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "post-info.php"
+  }
+}

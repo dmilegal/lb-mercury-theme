@@ -13,7 +13,7 @@
  */
 
 $allowed_blocks = array('lb/sidebar-block-title', 'core/paragraph', 
-'core/heading', 'lb/contributor-list', 'lb/share-links', 'lb/toc', 'lb/casino-list');
+'core/heading', 'lb/contributor-list', 'lb/share-links', 'lb/toc', 'lb/casino-list', 'lb/link-with-icon-list');
 $template = array(
   array('lb/sidebar-block-title')
 );

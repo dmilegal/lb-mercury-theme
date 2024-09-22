@@ -38,6 +38,10 @@
     @include font.get-text-styles('text-lg', false);
     font-weight: 500;
     color: var(--lb-dropdown-header-title-color-text);
+
+    @include breakpoints.media-breakpoint-down(sm) {
+      @include font.get-text-styles('text-md', false);
+    }
   }
 
   &__ico {
@@ -45,6 +49,10 @@
     font-size: font.font-size-by-name('display-xs', false);
     font-weight: normal;
     top: 3px;
+    @include breakpoints.media-breakpoint-down(sm) {
+      font-size: font.font-size-by-name('text-xl', false);
+      top: 0px;
+    }
     &--opened {
       color: var(--lb-dropdown-ico-opened-title-color-text);
       @extend %ico-opened;
