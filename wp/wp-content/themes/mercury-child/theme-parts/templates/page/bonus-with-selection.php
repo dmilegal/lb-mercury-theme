@@ -28,7 +28,7 @@
 				<? if (is_active_sidebar('default_sidebar')) { ?>
 					<div class="lb-layout__sidebar">
 						<? get_template_part('theme-parts/organisms/sidebar/sidebar', null, [
-							'sidebar_variant' => 'bonus_listing'
+							'sidebar_variant' => 'bonus-listing'
 						]); ?>
 					</div>
 				<? } ?>
