@@ -79,7 +79,7 @@ $external_link_url = getBrandExternalLink($postId);
 $is_locked = isBrandLocked($postId);
 
 ?>
-<div class="<?= classNames($className, 'lb-review-card lb-review-card--mr_closed') ?>" style="<?= stylesValue($style) ?>">
+<div class="<?= classNames($className, 'lb-review-card lb-review-card--theme_bonus lb-review-card--mr_closed') ?>" style="<?= stylesValue($style) ?>">
   <div class="lb-review-card__inner">
     <? if ($is_bst_bonus) { ?>
       <? get_template_part('theme-parts/atoms/badge', null, [
@@ -153,6 +153,14 @@ $is_locked = isBrandLocked($postId);
             <div class="lb-review-card__bonus-detail-value"><?= $param['value'] ?></div>
           </div>
         <? } ?>
+      </div>
+    <? } ?>
+    <? if (false && $bonusId) { ?>
+      <div class="lb-review-card__bonus-more">
+        <a href="<?= get_the_permalink($bonusId) ?>" class="lb-review-card__bonus-more-link">
+          <?= __('More details', 'mercury-child') ?>
+          <i class="icon-chevron-right"></i>
+        </a>
       </div>
     <? } ?>
   </div>

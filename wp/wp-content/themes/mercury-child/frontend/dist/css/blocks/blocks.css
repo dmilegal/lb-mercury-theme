@@ -3872,6 +3872,12 @@
   --lb-review-card-bonus-parameter-value-color: var(--lb-color-text-strong);
 }
 
+@container (max-width: 719.98px) {
+  .lb-review-card--theme_bonus .lb-review-card__sub {
+    grid-row: 4/5;
+    border-bottom: 0;
+  }
+}
 .lb-review-card__bonus-cats {
   font-size: var(--wp--preset--font-size--text-xs);
   line-height: var(--wp--custom--line-height--text-xs);
@@ -3893,6 +3899,7 @@
 }
 @container (max-width: 719.98px) {
   .lb-review-card__bonus-details {
+    padding: var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
     grid-column-gap: var(--wp--preset--spacing--100);
     column-gap: var(--wp--preset--spacing--100);
     display: grid;
@@ -3914,6 +3921,33 @@
   letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
   font-weight: 500;
   color: var(--lb-review-card-bonus-parameter-value-color);
+}
+.lb-review-card__bonus-more {
+  padding: 0 var(--wp--preset--spacing--100) var(--wp--preset--spacing--85);
+  grid-column: 1/-1;
+}
+@container (max-width: 719.98px) {
+  .lb-review-card__bonus-more {
+    padding-top: var(--wp--preset--spacing--60);
+    grid-row: 3/4;
+  }
+}
+.lb-review-card__bonus-more-link {
+  display: inline-flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--60);
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  font-weight: 500;
+  color: var(--lb-review-card-color-text);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+.lb-review-card__bonus-more-link:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/review-details/review-details.scss ***!
