@@ -58,8 +58,8 @@ add_action('acf/include_fields', function () {
     ),
     array(
       'key' => 'field_888fg54b17kga_block',
-      'label' => 'Show Bonus Filter',
-      'name' => 'show_bonus_filter',
+      'label' => 'Show Bonus Category Filter',
+      'name' => 'show_bonus_category_filter',
       'aria-label' => '',
       'type' => 'true_false',
       'instructions' => '',

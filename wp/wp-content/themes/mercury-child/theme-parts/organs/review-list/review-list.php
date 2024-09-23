@@ -8,7 +8,7 @@ $reviewList = $args['casino_list'] ?? [];
 $postType = $args['post_type'] ?? 'casino';
 $bonusCategory = $args['bonus_category'] ?? false;
 $showPostInfo = $args['show_post_info'] ?? false;
-$showBonusFilter = $args['show_bonus_filter'] ?? false;
+$showBonusCategoryFilter = $args['show_bonus_category_filter'] ?? false;
 
 [$reviewList, $reviewListFull, $refReviewList, $maxPages, $currentPage, $queryArgs] = getReviewData(
   $postType,
@@ -32,7 +32,7 @@ if ($reviewList) {
     'review_list_full' => $reviewListFull,
     'ref_review_list' => $refReviewList,
     'show_post_info' => $showPostInfo,
-    'show_bonus_filter' => $showBonusFilter,
+    'show_bonus_category_filter' => $showBonusCategoryFilter,
     'filter' => [
       'bonus_categories' => $bonusCategories
     ],

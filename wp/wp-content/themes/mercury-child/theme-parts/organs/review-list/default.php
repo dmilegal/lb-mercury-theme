@@ -17,14 +17,14 @@ $licenseText = get_field("license_ar_text_for_listing", "option");
 $istingBonusCategory = $args['bonus_category'] ?? false;
 $filterParams = $args['filter'] ?? [];
 $showPostInfo = $args['show_post_info'] ?? false;
-$showBonusFilter = $args['show_bonus_filter'] ?? false;
+$showBonusCategoryFilter = $args['show_bonus_category_filter'] ?? false;
 
 if ($reviewList || $asyncLoading) {
 ?>
   <div data-type="<?= $postType ?>" data-ref-items="<?= esc_attr(json_encode($refReviewList)) ?>" class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
     <div class="lb-review-list__wrapper">
       <div class="lb-review-list__inner">
-        <? if ($showBonusFilter && $filterParams && isset($filterParams['bonus_categories']) && $filterParams['bonus_categories']) { ?>
+        <? if ($showBonusCategoryFilter && $filterParams && isset($filterParams['bonus_categories']) && $filterParams['bonus_categories']) { ?>
           <? get_template_part('theme-parts/organs/review-list/bonus-category-filter', null, [
             'bonus_categories' => $filterParams['bonus_categories']
           ]); ?>
