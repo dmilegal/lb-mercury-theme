@@ -5,7 +5,7 @@ $icon = $args['icon'] ?? '';
 $title = $args['title'] ?? '';
 $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', 'target', 'rel', 'aria'])));
 ?>
-<a href="<?= $link ?>" class="<?= classNames("lb-link-with-icon", $className) ?>" <?= $attrsStr ?>>
+<a class="<?= classNames("lb-link-with-icon", $className) ?>" <?= $attrsStr ?>>
   <? if ($icon)
   get_template_part('theme-parts/molecules/featured-icon', null, [
     'size' => '2xl',
