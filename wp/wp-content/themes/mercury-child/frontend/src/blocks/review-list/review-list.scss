@@ -48,6 +48,13 @@
     }
   }
 
+  &--loading {
+    %cat-filter, %list {
+      opacity: 0.7;
+    }
+
+  }
+
   &__wrapper {
     @extend %wrapper;
   }
@@ -96,7 +103,7 @@
       }
 
     }
-    
+    @extend %cat-filter;
   }
 
   &__heading {

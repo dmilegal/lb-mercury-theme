@@ -1394,6 +1394,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 
 
+var signal = null;
 function init() {
   var btns = document.querySelectorAll('.lb-review-list__load-more');
   var filterForm = document.querySelectorAll('.lb-review-list__cat-filter');
@@ -1432,6 +1433,7 @@ function _triggerLoad() {
     var page,
       btn,
       preparedQuery,
+      continueLoad,
       data,
       _args = arguments;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee$(_context) {
@@ -1442,28 +1444,38 @@ function _triggerLoad() {
           preparedQuery = prepareQuery(btn.dataset.query, {
             paged: page
           }, getFilterData(container));
+          continueLoad = false;
           btn.classList.add('lb-button--pending');
+          container.classList.add('lb-review-list--loading');
           btn.disabled = true;
-          _context.prev = 5;
-          _context.next = 8;
+          _context.prev = 7;
+          _context.next = 10;
           return load(preparedQuery);
-        case 8:
+        case 10:
           data = _context.sent;
           render(container, data.html, data.page, data.total_pages);
-          _context.next = 15;
+          _context.next = 18;
           break;
-        case 12:
-          _context.prev = 12;
-          _context.t0 = _context["catch"](5);
+        case 14:
+          _context.prev = 14;
+          _context.t0 = _context["catch"](7);
+          if (_context.t0.name === 'AbortError') continueLoad = true;
           console.error(_context.t0);
-        case 15:
+        case 18:
+          if (!continueLoad) {
+            _context.next = 20;
+            break;
+          }
+          return _context.abrupt("return");
+        case 20:
+          container.classList.remove('lb-review-list--loading');
           btn.classList.remove('lb-button--pending');
           btn.disabled = false;
-        case 17:
+        case 23:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[5, 12]]);
+    }, _callee, null, [[7, 14]]);
   }));
   return _triggerLoad.apply(this, arguments);
 }
@@ -1472,20 +1484,25 @@ function load(_x2) {
 }
 function _load() {
   _load = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee2(query) {
+    var _signal;
     var res, data;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
-          _context2.next = 2;
-          return fetch("".concat(_shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__.API_URL, "aces/v1/html/reviews?").concat(query || ''));
-        case 2:
+          (_signal = signal) === null || _signal === void 0 || _signal.abort();
+          signal = new AbortController();
+          _context2.next = 4;
+          return fetch("".concat(_shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__.API_URL, "aces/v1/html/reviews?").concat(query || ''), {
+            signal: signal.signal
+          });
+        case 4:
           res = _context2.sent;
-          _context2.next = 5;
+          _context2.next = 7;
           return res.json();
-        case 5:
+        case 7:
           data = _context2.sent;
           return _context2.abrupt("return", data);
-        case 7:
+        case 9:
         case "end":
           return _context2.stop();
       }

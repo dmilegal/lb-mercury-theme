@@ -5,6 +5,7 @@ import { Modal } from '@/shared/scripts/components/modal'
 import Swiper from 'swiper'
 import { Navigation } from 'swiper/modules'
 
+let signal = null
 interface ResponseData {
   html: string
   message: string
@@ -54,7 +55,6 @@ function filter(container: HTMLElement) {
 
 async function triggerLoad(container: HTMLElement, page = 1) {
   const btn = container.querySelector<HTMLButtonElement>('.lb-review-list__load-more')
-
   const preparedQuery = prepareQuery(
     btn.dataset.query,
     {
@@ -62,23 +62,34 @@ async function triggerLoad(container: HTMLElement, page = 1) {
     },
     getFilterData(container)
   )
+  let continueLoad = false
 
   btn.classList.add('lb-button--pending')
+  container.classList.add('lb-review-list--loading')
   btn.disabled = true
 
   try {
     const data = await load(preparedQuery)
     render(container, data.html, data.page, data.total_pages)
   } catch (error) {
+    if (error.name === 'AbortError') continueLoad = true
+
     console.error(error)
   }
 
+  if (continueLoad) return
+
+  container.classList.remove('lb-review-list--loading')
   btn.classList.remove('lb-button--pending')
   btn.disabled = false
 }
 
 async function load(query?: string) {
-  const res = await fetch(`${API_URL}aces/v1/html/reviews?${query || ''}`)
+  signal?.abort()
+  signal = new AbortController()
+  const res = await fetch(`${API_URL}aces/v1/html/reviews?${query || ''}`, {
+    signal: signal.signal,
+  })
   const data = (await res.json()) as ResponseData
   return data
 }
