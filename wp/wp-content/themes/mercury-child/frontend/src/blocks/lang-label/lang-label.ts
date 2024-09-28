@@ -1,1 +1,0 @@
-import './lang-label.scss'

@@ -1,6 +1,3 @@
-<?
-use Shared\Theme\LbThemeService;
-?>
 <header class="lb-header lb-header--color_white">
 	<div class="lb-header__inner">
 		<div class="lb-header__grid">
@@ -43,7 +40,7 @@ use Shared\Theme\LbThemeService;
 					</div>
 				</div>
 				<div class="lb-header__lng-switcher">
-					<? get_template_part('theme-parts/molecules/lang-switcher', null); ?>
+					<? get_template_part('theme-parts/molecules/lang-switcher/lang-switcher', null); ?>
 				</div>
 
 				<div id="mobile-header-trigger" class="lb-header__hamburger hamburger hamburger--slider" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
