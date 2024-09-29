@@ -3357,6 +3357,7 @@ ul.wp-block-gallery.alignwide {
   top: 100%;
 }
 .lb-lang-switcher__list--only-text {
+  padding: 8px 4px;
   row-gap: 0px;
 }
 .lb-lang-switcher__list--only-text .lb-lang-switcher__link {
