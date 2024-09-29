@@ -109,6 +109,7 @@ async function triggetRefModal(container: HTMLElement) {
   )
 
   modal.setBody(data.html, '.lb-review-list__list')
+  window.initCompactReviewBonus(modal.modal)
 }
 
 init()

@@ -3,7 +3,7 @@ ob_start();
 get_template_part('theme-parts/organs/review-list/default', null, [
   'theme' => 'inline', 
   'async_loading' => true,
-  'list_theme' => '1'
+  'list_theme' => '2'
 ]);
 $list_html = ob_get_contents();
 ob_end_clean();

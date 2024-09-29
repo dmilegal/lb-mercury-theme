@@ -1,5 +1,5 @@
 export class Modal {
-  private modal: HTMLElement
+  public modal: HTMLElement
   private templateContent: DocumentFragment | null = null
   private overlay: HTMLElement | null = null
   private body: HTMLElement | null = null

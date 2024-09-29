@@ -93,6 +93,7 @@
       flex-shrink: 0;
       border: none;
       padding: 0;
+      margin-left: var(--wp--preset--spacing--50);
       background-color: transparent;
       @include font.get-text-styles('text-xxs', false);
       color: var(--lb-ccb-review-card-more-color-text);
