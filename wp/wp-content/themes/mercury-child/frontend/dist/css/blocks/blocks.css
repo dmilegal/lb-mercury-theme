@@ -2869,7 +2869,6 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/ref-review-modal/ref-review-modal.scss ***!
   \**************************************************************************************************************************************************************************************************************************************************************************/
 .ref-review-modal .lb-modal__header {
-<<<<<<< HEAD
   margin-bottom: var(--wp--preset--spacing--110);
 }
 .ref-review-modal .lb-modal__content {
@@ -2877,9 +2876,6 @@
 }
 .ref-review-modal .lb-compact-casino-bonus-card.lb-compact-casino-bonus-card {
   padding-bottom: var(--wp--preset--spacing--80);
-=======
-  margin-bottom: var(--wp--preset--spacing--120);
->>>>>>> c51a9b663eefef8b41f7496bfc491269bfa668a5
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/relinking-item/relinking-item.scss ***!
@@ -3757,10 +3753,7 @@
   flex-shrink: 0;
   border: none;
   padding: 0;
-<<<<<<< HEAD
   margin-left: var(--wp--preset--spacing--50);
-=======
->>>>>>> c51a9b663eefef8b41f7496bfc491269bfa668a5
   background-color: transparent;
   font-size: var(--wp--preset--font-size--text-xxs);
   line-height: var(--wp--custom--line-height--text-xxs);
@@ -4122,14 +4115,11 @@
   padding-bottom: var(--wp--preset--spacing--70);
   border-bottom: 1px solid var(--lb-color-gray-low);
 }
-<<<<<<< HEAD
 .lb-review-list__list--theme_2 {
   display: flex;
   flex-direction: column;
   row-gap: var(--wp--preset--spacing--120);
 }
-=======
->>>>>>> c51a9b663eefef8b41f7496bfc491269bfa668a5
 .lb-review-list__loading {
   width: 100%;
   display: flex;
