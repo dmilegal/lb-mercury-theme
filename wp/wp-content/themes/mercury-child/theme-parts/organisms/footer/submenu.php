@@ -7,9 +7,11 @@
       $ico_link = getIconByLangCode($current_subsite->get_language());
       $title = $current_subsite->get_description() && $current_subsite->get_description() != $current_subsite->get_language() ? $current_subsite->get_description() : get_blog_details(['blog_id' => $current_subsite->userblog_id])->blogname;
     ?>
-      <? get_template_part('/theme-parts/molecules/lang-label', null, [
-        'title' => $title,
-        'ico_link' => $ico_link
+      <? get_template_part('/theme-parts/molecules/lang-switcher/lang-switcher', null, [
+        'size' => 'sm',
+        'with_label' => true,
+        'dropdown_position' => 'top',
+        'dropdown_no_icon' => true
       ]); ?>
     <? } ?>
     <? wp_nav_menu(array('container' => 'ul', 'menu_class' => 'lb-footer__submenu', 'theme_location' => 'footer_sub_menu', 'depth' => 1, 'fallback_cb' => '__return_empty_string')); ?>

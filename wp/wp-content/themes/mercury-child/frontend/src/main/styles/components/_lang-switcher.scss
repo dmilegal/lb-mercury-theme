@@ -2,6 +2,12 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
+:root,
+.editor-styles-wrapper {
+  --lb-lang-switcher-link-color: var(--lb-color-text-default);
+  --lb-lang-switcher-link-bg: var(--lb-color-gray-low);
+}
+
 .lb-lang-switcher {
   position: relative;
   @include font.get-text-styles('text-xxs');
@@ -15,7 +21,8 @@
     margin: 0;
   }
 
-  &:hover {
+  &:hover,
+  &:has(%lang-sw-btn-trigger:focus) {
     %lng-sw-list {
       opacity: 1;
       visibility: visible;
@@ -30,15 +37,34 @@
     }
   }
 
+  &--size {
+    &_sm {
+      %icon-main {
+        width: var(--wp--preset--spacing--85);
+        height: var(--wp--preset--spacing--85);
+      }
+    }
+    &_md {
+      %icon-main {
+        width: var(--wp--preset--spacing--120);
+        height: var(--wp--preset--spacing--120);
+        @include breakpoints.media-breakpoint-down(sm) {
+          width: var(--wp--preset--spacing--100);
+          height: var(--wp--preset--spacing--100);
+        }
+      }
+    }
+  }
+
   &__list {
     background-color: var(--wp--preset--color--white);
     position: absolute;
     width: max-content;
     min-width: 100px;
     max-width: 160px;
-    padding: 6px;
-    top: calc(100% + 6px);
-    left: -6px;
+    padding: 12px 8px;
+    top: calc(100% + 12px);
+    left: -8px;
     display: flex;
     flex-direction: column;
     row-gap: var(--wp--preset--spacing--60);
@@ -56,32 +82,63 @@
       left: 0;
     }
 
+    &--top {
+      top: auto;
+      bottom: calc(100% + 12px);
+      &:before {
+        bottom: auto;
+        top: 100%;
+      }
+    }
+
+    &--only-text {
+      padding: 8px 4px;
+      row-gap: 0px;
+      %lang-sw-link {
+        padding: 6px 8px;
+        &:hover {
+          background-color: var(--lb-lang-switcher-link-bg);
+        }
+      }
+    }
+
     @extend %lng-sw-list;
   }
   &__trigger {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
     cursor: pointer;
     position: relative;
     z-index: 10;
+    display: flex;
+    column-gap: var(--wp--preset--spacing--60);
+    @extend %lang-sw-btn-trigger;
+  }
+  &__label {
+    @include font.get-text-styles('text-xs');
+    font-weight: 400;
   }
   &__link {
+    color: var(--lb-lang-switcher-link-color);
     display: flex;
     column-gap: var(--wp--preset--spacing--60);
     align-items: center;
     padding: 2px 0;
     cursor: pointer;
-    transition: color 170ms ease-in-out;
+    transition:
+      color 170ms ease-in-out,
+      background-color 170ms ease-in-out;
+    text-decoration: none;
     &:hover {
       color: var(--lb-lang-switcher--color--hover);
     }
+
+    @extend %lang-sw-link;
   }
   &__ico {
     &--main {
-      width: var(--wp--preset--spacing--120);
-      height: var(--wp--preset--spacing--120);
-      @include breakpoints.media-breakpoint-down(sm) {
-        width: var(--wp--preset--spacing--100);
-        height: var(--wp--preset--spacing--100);
-      }
+      @extend %icon-main;
     }
     &--sub {
       width: 20px;

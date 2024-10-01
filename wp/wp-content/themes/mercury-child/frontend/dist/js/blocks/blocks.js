@@ -1254,7 +1254,10 @@ function show(e) {
   container.classList.remove('lb-compact-casino-bonus-card__tc--truncated');
   e.target.style.display = 'none';
 }
+<<<<<<< HEAD
 window.initCompactReviewBonus = init;
+=======
+>>>>>>> c51a9b663eefef8b41f7496bfc491269bfa668a5
 init();
 
 /***/ }),
@@ -1439,8 +1442,12 @@ function triggetRefModal(_x3) {
 }
 function _triggetRefModal() {
   _triggetRefModal = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee3(container) {
+<<<<<<< HEAD
     var _config$limit;
     var modalEl, list, type, config, modal, listIn, limit, data;
+=======
+    var modalEl, list, type, modal, data;
+>>>>>>> c51a9b663eefef8b41f7496bfc491269bfa668a5
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
@@ -1453,6 +1460,7 @@ function _triggetRefModal() {
         case 3:
           list = container.dataset.refItems;
           type = container.dataset.type;
+<<<<<<< HEAD
           config = JSON.parse(container.dataset.refConfig);
           if (!(!list || !JSON.parse(list).length)) {
             _context3.next = 8;
@@ -1483,6 +1491,28 @@ function _triggetRefModal() {
           modal.setBody(data.html, '.lb-review-list__list');
           window.initCompactReviewBonus(modal.modal);
         case 21:
+=======
+          if (!(!list || !JSON.parse(list).length)) {
+            _context3.next = 7;
+            break;
+          }
+          return _context3.abrupt("return");
+        case 7:
+          modal = new _shared_scripts_components_modal__WEBPACK_IMPORTED_MODULE_5__.Modal(modalEl);
+          modal.openModal();
+          _context3.next = 11;
+          return load(prepareQuery('', {
+            post__in: JSON.parse(list),
+            post_type: type,
+            posts_per_page: -1
+          }, {
+            card_variant: 'compact-bet'
+          }));
+        case 11:
+          data = _context3.sent;
+          modal.setBody(data.html, '.lb-review-list__list');
+        case 13:
+>>>>>>> c51a9b663eefef8b41f7496bfc491269bfa668a5
         case "end":
           return _context3.stop();
       }
@@ -1755,7 +1785,10 @@ var Modal = /*#__PURE__*/function () {
   function Modal(element) {
     var _this = this;
     (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Modal);
+<<<<<<< HEAD
     (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "content", null);
+=======
+>>>>>>> c51a9b663eefef8b41f7496bfc491269bfa668a5
     (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "templateContent", null);
     (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "overlay", null);
     (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "body", null);
@@ -1804,7 +1837,10 @@ var Modal = /*#__PURE__*/function () {
         }
       });
       this.body = this.modal.querySelector('.lb-modal__body');
+<<<<<<< HEAD
       this.content = this.modal.querySelector('.lb-modal__content');
+=======
+>>>>>>> c51a9b663eefef8b41f7496bfc491269bfa668a5
     }
   }, {
     key: "attachModal",
@@ -1853,6 +1889,7 @@ var Modal = /*#__PURE__*/function () {
       }
     }
   }, {
+<<<<<<< HEAD
     key: "setTitle",
     value: function setTitle(title) {
       var titleEl = this.content.querySelector('.lb-modal__title');
@@ -1903,6 +1940,8 @@ var Modal = /*#__PURE__*/function () {
       }
     }
   }, {
+=======
+>>>>>>> c51a9b663eefef8b41f7496bfc491269bfa668a5
     key: "disableScroll",
     value: function disableScroll() {
       document.body.style.overflow = 'hidden';
