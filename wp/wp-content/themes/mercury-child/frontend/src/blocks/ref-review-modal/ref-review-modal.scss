@@ -1,5 +1,12 @@
 .ref-review-modal {
   .lb-modal__header {
-    margin-bottom: var(--wp--preset--spacing--120);
+    margin-bottom: var(--wp--preset--spacing--110);
+  }
+  .lb-modal__content {
+    max-width: 432px;
+  }
+
+  .lb-compact-casino-bonus-card.lb-compact-casino-bonus-card {
+    padding-bottom: var(--wp--preset--spacing--80);
   }
 }

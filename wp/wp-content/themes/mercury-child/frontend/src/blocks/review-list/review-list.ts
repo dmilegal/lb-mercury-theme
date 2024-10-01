@@ -89,18 +89,33 @@ async function triggetRefModal(container: HTMLElement) {
 
   const list = container.dataset.refItems
   const type = container.dataset.type
+
+  const config = JSON.parse(container.dataset.refConfig)
+
   if (!list || !JSON.parse(list).length) return
 
   const modal = new Modal(modalEl)
+
+  if (config.title) modal.setTitle(config.title)
+  if (config.subtitle) modal.setSubtitle(config.subtitle)
+  if (config.hideTitle) modal.removeTitle()
+  if (config.hideSubtitle) modal.removeSubtitle()
+
   modal.openModal()
+
+  const listIn = JSON.parse(list)
+
+  const limit = config.limit ?? -1
 
   const data = await load(
     prepareQuery(
       '',
       {
-        post__in: JSON.parse(list),
+        post__in: listIn,
         post_type: type,
-        posts_per_page: -1,
+        post_status: ['publish', 'draft', 'private'],
+        posts_per_page: limit,
+        orderby: limit != -1 && listIn.length > limit ? 'rand' : '',
       },
       {
         card_variant: 'compact-bet',
@@ -109,6 +124,7 @@ async function triggetRefModal(container: HTMLElement) {
   )
 
   modal.setBody(data.html, '.lb-review-list__list')
+  window.initCompactReviewBonus(modal.modal)
 }
 
 init()

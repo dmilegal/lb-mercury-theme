@@ -18,6 +18,24 @@ add_action('acf/include_fields', function () {
 
   $params['fields'][0]['sub_fields'] = [
     array(
+      'key' => 'field_66fb48ceb3cff4',
+      'label' => 'Listing',
+      'name' => '',
+      'aria-label' => '',
+      'type' => 'tab',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array(
+        'width' => '200px',
+        'class' => '',
+        'id' => '',
+      ),
+      'placement' => 'top',
+      'endpoint' => 0,
+      'selected' => 0,
+    ),
+    array(
       'key' => 'field_65d677e68edce',
       'label' => 'Title',
       'name' => 'title',

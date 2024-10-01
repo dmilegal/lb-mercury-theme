@@ -1,5 +1,6 @@
 export class Modal {
-  private modal: HTMLElement
+  public modal: HTMLElement
+  private content: HTMLElement | null = null
   private templateContent: DocumentFragment | null = null
   private overlay: HTMLElement | null = null
   private body: HTMLElement | null = null
@@ -47,6 +48,7 @@ export class Modal {
     })
 
     this.body = this.modal.querySelector('.lb-modal__body')
+    this.content = this.modal.querySelector('.lb-modal__content')
   }
 
   private attachModal() {
@@ -92,6 +94,85 @@ export class Modal {
       container.innerHTML = content
     } else {
       container.appendChild(content)
+    }
+  }
+
+  public setTitle(title: string) {
+    const titleEl = this.content.querySelector<HTMLElement>('.lb-modal__title')
+    const subtitleEl = this.content.querySelector<HTMLElement>('.lb-modal__subtitle')
+    const headerEl = this.content.querySelector<HTMLElement>('.lb-modal__header')
+
+    if (!titleEl) {
+      const newHeader = `<div class="lb-modal__header">
+      <div class="lb-modal__title">
+      ${title}
+      </div>
+      ${
+        subtitleEl?.innerHTML
+          ? `<div class="lb-modal__subtitle">
+      ${subtitleEl.innerHTML}
+      </div>`
+          : ''
+      }
+      </div>`
+
+      headerEl?.remove()
+
+      this.content.insertAdjacentHTML('afterbegin', newHeader)
+    }
+
+    titleEl.innerHTML = title
+  }
+
+  public removeTitle() {
+    const titleEl = this.content.querySelector<HTMLElement>('.lb-modal__title')
+    const subtitleEl = this.content.querySelector<HTMLElement>('.lb-modal__subtitle')
+    const headerEl = this.content.querySelector<HTMLElement>('.lb-modal__header')
+
+    if (titleEl && !subtitleEl) {
+      headerEl?.remove()
+    } else if (titleEl) {
+      titleEl.remove()
+    }
+  }
+
+  public setSubtitle(subtitle: string) {
+    const titleEl = this.content.querySelector<HTMLElement>('.lb-modal__title')
+    const subtitleEl = this.content.querySelector<HTMLElement>('.lb-modal__subtitle')
+    const headerEl = this.content.querySelector<HTMLElement>('.lb-modal__header')
+
+    if (!subtitleEl) {
+      const newHeader = `<div class="lb-modal__header">
+      ${
+        titleEl?.innerHTML
+          ? `<div class="lb-modal__title">
+      ${titleEl.title}
+      </div>`
+          : ''
+      }
+    
+       <div class="lb-modal__subtitle">
+      ${subtitle}
+      </div>
+      </div>`
+
+      headerEl?.remove()
+
+      this.content.insertAdjacentHTML('afterbegin', newHeader)
+    }
+
+    subtitleEl.innerHTML = subtitle
+  }
+
+  public removeSubtitle() {
+    const titleEl = this.content.querySelector<HTMLElement>('.lb-modal__title')
+    const subtitleEl = this.content.querySelector<HTMLElement>('.lb-modal__subtitle')
+    const headerEl = this.content.querySelector<HTMLElement>('.lb-modal__header')
+
+    if (!titleEl && subtitleEl) {
+      headerEl?.remove()
+    } else if (subtitleEl) {
+      subtitleEl.remove()
     }
   }
 
