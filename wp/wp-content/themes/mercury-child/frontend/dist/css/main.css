@@ -2079,6 +2079,7 @@ ul.wp-block-gallery.alignwide {
   }
 }
 
+<<<<<<< HEAD
 .prose-spaces :where(.wp-block-toc, .lb-toc):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
@@ -2088,6 +2089,11 @@ ul.wp-block-gallery.alignwide {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
   }
+=======
+.prose-spaces :where(.wp-block-toc):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
+  margin-block-start: var(--wp--preset--spacing--140);
+  margin-block-end: var(--wp--preset--spacing--140);
+>>>>>>> f933be2 (up)
 }
 
 .prose-colors :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {

@@ -3049,6 +3049,7 @@
 }
 .ref-review-modal .lb-compact-casino-bonus-card.lb-compact-casino-bonus-card {
   padding-bottom: var(--wp--preset--spacing--80);
+<<<<<<< HEAD
 }
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/related-posts/related-posts.scss ***!
@@ -3080,6 +3081,8 @@
   .lb-related-posts__item {
     width: 220px;
   }
+=======
+>>>>>>> f933be2 (up)
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/relinking-item/relinking-item.scss ***!
