@@ -4,6 +4,8 @@ $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
 $title = $args['title'] ?? '';
 $dropdownPosition = $args['dropdown_position'] ?? 'bottom';
+
+if (!$title || !$list) return;
 ?>
 <ul class="<?= classNames(
               'lb-sites-linking not-prose',
