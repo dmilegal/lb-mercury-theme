@@ -103,7 +103,7 @@ async function triggetRefModal(container: HTMLElement) {
 
   modal.openModal()
 
-  const listIn = JSON.parse(list).slice(0, 3)
+  const listIn = JSON.parse(list)
 
   const limit = config.limit ?? -1
 
