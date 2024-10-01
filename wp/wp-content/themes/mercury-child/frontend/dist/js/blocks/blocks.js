@@ -204,6 +204,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/lang-label/lang-label.scss":
+/*!***********************************************!*\
+  !*** ./src/blocks/lang-label/lang-label.scss ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/layout/layout.scss":
 /*!***************************************!*\
   !*** ./src/blocks/layout/layout.scss ***!
@@ -859,6 +871,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/lang-label/lang-label.ts":
+/*!*********************************************!*\
+  !*** ./src/blocks/lang-label/lang-label.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lang_label_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lang-label.scss */ "./src/blocks/lang-label/lang-label.scss");
+
+
+/***/ }),
+
 /***/ "./src/blocks/layout/layout.ts":
 /*!*************************************!*\
   !*** ./src/blocks/layout/layout.ts ***!
@@ -1466,7 +1490,7 @@ function _triggetRefModal() {
           if (config.hideTitle) modal.removeTitle();
           if (config.hideSubtitle) modal.removeSubtitle();
           modal.openModal();
-          listIn = JSON.parse(list).slice(0, 3);
+          listIn = JSON.parse(list);
           limit = (_config$limit = config.limit) !== null && _config$limit !== void 0 ? _config$limit : -1;
           _context3.next = 18;
           return load(prepareQuery('', {
@@ -2227,6 +2251,7 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-author-banner/hero-author-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-banner/hero-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-review-banner/hero-review-banner.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/lang-label/lang-label.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/layout/layout.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/link-with-icon/link-with-icon.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/link-with-icon-list/link-with-icon-list.ts")))
