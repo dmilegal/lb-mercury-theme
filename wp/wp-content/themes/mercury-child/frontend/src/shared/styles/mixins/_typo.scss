@@ -7,7 +7,8 @@
       #{$customProseSelector}
         :is(
           :where(#{$selectorList}):not(
-              :where([class~='not-prose'], [class~='not-prose'] *)
+              :where([class~='not-prose'], [class~='not-prose'] *),
+              :where([class~='acf-fields'], [class~='acf-fields'] *)
             )
         ) {
         @content;
@@ -16,7 +17,8 @@
       @if ($groupName == 'spaces' and $isEditor) {
         .editor-styles-wrapper .is-layout-flow > :is(
           :where(#{$selectorList}):not(
-              :where([class~='not-prose'], [class~='not-prose'] *)
+              :where([class~='not-prose'], [class~='not-prose'] *),
+              :where([class~='acf-fields'], [class~='acf-fields'] *)
             )
         ) {
           @content;
@@ -24,7 +26,8 @@
       }
     } @else {
       #{$customProseSelector}:not(
-        :where([class~='not-prose'], [class~='not-prose'] *)
+        :where([class~='not-prose'], [class~='not-prose'] *),
+        :where([class~='acf-fields'], [class~='acf-fields'] *)
       ) {
         @content;
       }
@@ -34,14 +37,16 @@
       .prose-#{$groupName}
         :is(
           :where(#{$selectorList}):not(
-              :where([class~='not-prose'], [class~='not-prose'] *)
+              :where([class~='not-prose'], [class~='not-prose'] *),
+              :where([class~='acf-fields'], [class~='acf-fields'] *)
             )
         ) {
         @content;
       }
     } @else {
       .prose-#{$groupName}:not(
-        :where([class~='not-prose'], [class~='not-prose'] *)
+        :where([class~='not-prose'], [class~='not-prose'] *),
+        :where([class~='acf-fields'], [class~='acf-fields'] *)
       ) {
         @content;
       }

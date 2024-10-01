@@ -16,9 +16,20 @@ $showLicenseText = $args['show_license_ar_text_for_listing'] ?? false;
 $licenseText = get_field("license_ar_text_for_listing", "option");
 $listBonusCategory = $args['bonus_category'] ?? false;
 
+$refConfig = [
+  'title' => $args['ref_modal_title'] ?? '',
+  'subtitle' =>  $args['ref_modal_subtitle'] ?? '',
+  'hideTitle' => !!($args['hide_ref_modal_title'] ?? false),
+  'hideSubtitle' => !!($args['hide_ref_modal_subtitle'] ?? false),
+  'limit' => $args['ref_items_shows'] ?? 5,
+];
+
 if ($reviewList || $asyncLoading) {
 ?>
-  <div data-type="<?= $postType ?>" data-ref-items="<?= esc_attr(json_encode($refReviewList)) ?>" class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
+  <div data-type="<?= $postType ?>"
+    data-ref-items="<?= esc_attr(json_encode($refReviewList)) ?>"
+    data-ref-config="<?= esc_attr(json_encode($refConfig)) ?>"
+    class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
     <div class="lb-review-list__wrapper">
       <div class="lb-review-list__inner">
         <?php if ($title || ($licenseText && $showLicenseText)) { ?>

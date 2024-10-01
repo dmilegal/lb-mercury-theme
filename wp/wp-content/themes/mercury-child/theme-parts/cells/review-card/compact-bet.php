@@ -74,35 +74,41 @@ if (!$bonus_button_title) {
 }
 
 $is_locked = isBrandLocked($postId);
+
+
 ?>
-
-<div class="lb-review-compact">
-  <diva class="lb-review-compact__header">
-    <?= get_the_post_thumbnail($postId, [32, 32], [
-      "class" => "lb-review-compact__logo"
-    ]) ?>
-    <div class="lb-review-compact__title">
-      <?= get_the_title($postId) ?>
-    </div>
-  </diva>
-
+<div class="<?= classNames($className, 'lb-compact-casino-bonus-card not-prose') ?>" style="<?= stylesValue($style) ?>">
+  <div class="lb-compact-casino-bonus-card__header">
+    <a class="lb-compact-casino-bonus-card__link" href="<?= $is_locked ? '#0' : get_the_permalink($postId) ?>" title="<?php echo esc_attr($permalink_button_title); ?>">
+      <?= get_the_post_thumbnail($postId, [28, 28], [
+        "class" => "lb-compact-casino-bonus-card__logo"
+      ]) ?>
+      <div class="lb-compact-casino-bonus-card__title"><?= get_the_title($postId) ?></div>
+    </a>
+    <?
+    if ($external_link_url)
+      get_template_part('theme-parts/atoms/button', null, [
+        'size' => 'sm',
+        'content' => $bonus_button_title,
+        'className' => 'lb-compact-casino-bonus-card__bonus-link',
+        'href' => $is_locked || !$external_link_url ? '' : esc_url($external_link_url),
+        'target' => $external_link_url && !$is_locked ? "_blank" : '',
+        'rel' => $external_link_url && !$is_locked ? "nofollow" : ''
+      ]);
+    ?>
+  </div>
   <? if ($bonus_short_desc) { ?>
-    <div class="lb-review-compact__bonus-title">
-      <i class="icon-gift lb-review-compact__bonus-ico"></i>
-      <div>
-        <?= $bonus_short_desc ?>
+    <a href="<?= $is_locked ? '#0' : get_the_permalink($postId) ?>" title="<?php echo esc_attr($permalink_button_title); ?>" class="lb-compact-casino-bonus-card__bonus">
+      <?= $bonus_short_desc ?>
+    </a>
+  <? } ?>
+  <? if ($offer_detailed_tc || $casino_detailed_tc) { ?>
+    <div class="lb-compact-casino-bonus-card__tc lb-compact-casino-bonus-card__tc--truncated">
+      <div class="lb-compact-casino-bonus-card__tc-content" data-content="<?= esc_attr($offer_detailed_tc ? $offer_detailed_tc : $casino_detailed_tc) ?>">
       </div>
+      <button class="lb-compact-casino-bonus-card__tc-more" style="display: none">
+        <?= __('Show T&C', 'mercury-child') ?>
+      </button>
     </div>
   <? } ?>
-  <div class="lb-review-compact__actions">
-    <? get_template_part('theme-parts/atoms/button', null, [
-      'size' => 'sm',
-      'color' => 'primary',
-      'className' => 'lb-review-compact__play',
-      'content' => __('Bet', 'mercury-child'),
-      'href' => $is_locked || !$external_link_url ? '' : esc_url($external_link_url),
-      'target' => $external_link_url && !$is_locked ? "_blank" : '',
-      'rel' => $external_link_url && !$is_locked ? "nofollow" : ''
-    ]); ?>
-  </div>
 </div>

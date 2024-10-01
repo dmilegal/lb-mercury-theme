@@ -33,4 +33,12 @@ function show(e: MouseEvent) {
   ;(e.target as HTMLElement).style.display = 'none'
 }
 
+declare global {
+  interface Window {
+    initCompactReviewBonus: typeof init;
+  }
+}
+
+window.initCompactReviewBonus = init
+
 init()
