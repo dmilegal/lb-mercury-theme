@@ -204,18 +204,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/blocks/lang-label/lang-label.scss":
-/*!***********************************************!*\
-  !*** ./src/blocks/lang-label/lang-label.scss ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./src/blocks/layout/layout.scss":
 /*!***************************************!*\
   !*** ./src/blocks/layout/layout.scss ***!
@@ -871,18 +859,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/blocks/lang-label/lang-label.ts":
-/*!*********************************************!*\
-  !*** ./src/blocks/lang-label/lang-label.ts ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lang_label_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lang-label.scss */ "./src/blocks/lang-label/lang-label.scss");
-
-
-/***/ }),
-
 /***/ "./src/blocks/layout/layout.ts":
 /*!*************************************!*\
   !*** ./src/blocks/layout/layout.ts ***!
@@ -1463,7 +1439,8 @@ function triggetRefModal(_x3) {
 }
 function _triggetRefModal() {
   _triggetRefModal = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee3(container) {
-    var modalEl, list, type, modal, data;
+    var _config$limit;
+    var modalEl, list, type, config, modal, listIn, limit, data;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
@@ -1476,27 +1453,36 @@ function _triggetRefModal() {
         case 3:
           list = container.dataset.refItems;
           type = container.dataset.type;
+          config = JSON.parse(container.dataset.refConfig);
           if (!(!list || !JSON.parse(list).length)) {
-            _context3.next = 7;
+            _context3.next = 8;
             break;
           }
           return _context3.abrupt("return");
-        case 7:
+        case 8:
           modal = new _shared_scripts_components_modal__WEBPACK_IMPORTED_MODULE_5__.Modal(modalEl);
+          if (config.title) modal.setTitle(config.title);
+          if (config.subtitle) modal.setSubtitle(config.subtitle);
+          if (config.hideTitle) modal.removeTitle();
+          if (config.hideSubtitle) modal.removeSubtitle();
           modal.openModal();
-          _context3.next = 11;
+          listIn = JSON.parse(list).slice(0, 3);
+          limit = (_config$limit = config.limit) !== null && _config$limit !== void 0 ? _config$limit : -1;
+          _context3.next = 18;
           return load(prepareQuery('', {
-            post__in: JSON.parse(list),
+            post__in: listIn,
             post_type: type,
-            posts_per_page: -1
+            post_status: ['publish', 'draft', 'private'],
+            posts_per_page: limit,
+            orderby: limit != -1 && listIn.length > limit ? 'rand' : ''
           }, {
             card_variant: 'compact-bet'
           }));
-        case 11:
+        case 18:
           data = _context3.sent;
           modal.setBody(data.html, '.lb-review-list__list');
           window.initCompactReviewBonus(modal.modal);
-        case 14:
+        case 21:
         case "end":
           return _context3.stop();
       }
@@ -1769,6 +1755,7 @@ var Modal = /*#__PURE__*/function () {
   function Modal(element) {
     var _this = this;
     (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Modal);
+    (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "content", null);
     (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "templateContent", null);
     (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "overlay", null);
     (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "body", null);
@@ -1817,6 +1804,7 @@ var Modal = /*#__PURE__*/function () {
         }
       });
       this.body = this.modal.querySelector('.lb-modal__body');
+      this.content = this.modal.querySelector('.lb-modal__content');
     }
   }, {
     key: "attachModal",
@@ -1862,6 +1850,56 @@ var Modal = /*#__PURE__*/function () {
         container.innerHTML = content;
       } else {
         container.appendChild(content);
+      }
+    }
+  }, {
+    key: "setTitle",
+    value: function setTitle(title) {
+      var titleEl = this.content.querySelector('.lb-modal__title');
+      var subtitleEl = this.content.querySelector('.lb-modal__subtitle');
+      var headerEl = this.content.querySelector('.lb-modal__header');
+      if (!titleEl) {
+        var newHeader = "<div class=\"lb-modal__header\">\n      <div class=\"lb-modal__title\">\n      ".concat(title, "\n      </div>\n      ").concat(subtitleEl !== null && subtitleEl !== void 0 && subtitleEl.innerHTML ? "<div class=\"lb-modal__subtitle\">\n      ".concat(subtitleEl.innerHTML, "\n      </div>") : '', "\n      </div>");
+        headerEl === null || headerEl === void 0 || headerEl.remove();
+        this.content.insertAdjacentHTML('afterbegin', newHeader);
+      }
+      titleEl.innerHTML = title;
+    }
+  }, {
+    key: "removeTitle",
+    value: function removeTitle() {
+      var titleEl = this.content.querySelector('.lb-modal__title');
+      var subtitleEl = this.content.querySelector('.lb-modal__subtitle');
+      var headerEl = this.content.querySelector('.lb-modal__header');
+      if (titleEl && !subtitleEl) {
+        headerEl === null || headerEl === void 0 || headerEl.remove();
+      } else if (titleEl) {
+        titleEl.remove();
+      }
+    }
+  }, {
+    key: "setSubtitle",
+    value: function setSubtitle(subtitle) {
+      var titleEl = this.content.querySelector('.lb-modal__title');
+      var subtitleEl = this.content.querySelector('.lb-modal__subtitle');
+      var headerEl = this.content.querySelector('.lb-modal__header');
+      if (!subtitleEl) {
+        var newHeader = "<div class=\"lb-modal__header\">\n      ".concat(titleEl !== null && titleEl !== void 0 && titleEl.innerHTML ? "<div class=\"lb-modal__title\">\n      ".concat(titleEl.title, "\n      </div>") : '', "\n    \n       <div class=\"lb-modal__subtitle\">\n      ").concat(subtitle, "\n      </div>\n      </div>");
+        headerEl === null || headerEl === void 0 || headerEl.remove();
+        this.content.insertAdjacentHTML('afterbegin', newHeader);
+      }
+      subtitleEl.innerHTML = subtitle;
+    }
+  }, {
+    key: "removeSubtitle",
+    value: function removeSubtitle() {
+      var titleEl = this.content.querySelector('.lb-modal__title');
+      var subtitleEl = this.content.querySelector('.lb-modal__subtitle');
+      var headerEl = this.content.querySelector('.lb-modal__header');
+      if (!titleEl && subtitleEl) {
+        headerEl === null || headerEl === void 0 || headerEl.remove();
+      } else if (subtitleEl) {
+        subtitleEl.remove();
       }
     }
   }, {
@@ -2189,7 +2227,6 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-author-banner/hero-author-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-banner/hero-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-review-banner/hero-review-banner.ts")))
-/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/lang-label/lang-label.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/layout/layout.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/link-with-icon/link-with-icon.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/link-with-icon-list/link-with-icon-list.ts")))

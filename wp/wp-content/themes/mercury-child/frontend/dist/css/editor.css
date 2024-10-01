@@ -1744,7 +1744,7 @@ ul.wp-block-gallery.alignwide {
   --lb-ui-color-link-text: var(--lb-color-action-text-default);
 }
 
-:root :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   font-size: var(--lb-font-size-display-sm-relative);
   line-height: var(--lb-line-height-display-sm-relative);
   letter-spacing: inherit;
@@ -1752,7 +1752,7 @@ ul.wp-block-gallery.alignwide {
   font-weight: 600;
 }
 
-:root :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   font-size: var(--lb-font-size-display-xs-relative);
   line-height: var(--lb-line-height-display-xs-relative);
   letter-spacing: inherit;
@@ -1760,14 +1760,14 @@ ul.wp-block-gallery.alignwide {
   font-weight: 600;
 }
 
-:root :where(p):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(p):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   font-size: var(--lb-font-size-text-md-relative);
   line-height: var(--lb-line-height-text-md-relative);
   letter-spacing: inherit;
   letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
 }
 
-:root :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   font-size: var(--lb-font-size-text-md-relative);
   line-height: var(--lb-line-height-text-md-relative);
   letter-spacing: inherit;
@@ -1778,19 +1778,19 @@ ul.wp-block-gallery.alignwide {
   padding-left: 0;
   list-style: none;
 }
-:root :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) li::marker {
+:root :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) li::marker {
   color: var(--wp-list-ico-color-text);
 }
-:root :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) li::before {
+:root :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) li::before {
   color: var(--wp-list-ico-color-text);
 }
 
-:root :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) :where(li) {
+:root :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) :where(li) {
   padding-left: 2em;
   padding-left: var(--wp-list-ico-spacing-s);
   position: relative;
 }
-:root :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) :where(li):before {
+:root :where(ul:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) :where(li):before {
   content: "•";
   position: absolute;
   font-size: 1.75em;
@@ -1799,12 +1799,12 @@ ul.wp-block-gallery.alignwide {
   top: 0;
 }
 
-:root :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) :where(li) {
+:root :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) :where(li) {
   padding-left: 2em;
   padding-left: var(--wp-list-ico-spacing-s);
   position: relative;
 }
-:root :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)) :where(li):before {
+:root :where(ol:not(.is-list-ico-check):not(.is-list-ico-cross)):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) :where(li):before {
   content: counter(list-item);
   font-weight: 500;
   position: absolute;
@@ -1813,278 +1813,278 @@ ul.wp-block-gallery.alignwide {
   top: 0;
 }
 
-:root :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(img):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   width: 100%;
 }
 
-:root :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+:root :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)):first-child {
   margin-block-start: 0;
 }
-:root :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+:root :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)):last-child {
   margin-block-end: 0;
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+.editor-styles-wrapper .is-layout-flow > :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)):first-child {
   margin-block-start: 0;
 }
-.editor-styles-wrapper .is-layout-flow > :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+.editor-styles-wrapper .is-layout-flow > :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)):last-child {
   margin-block-end: 0;
 }
 
-:root :where(.wp-block-columns, .lb-group-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.wp-block-columns, .lb-group-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.wp-block-columns, .lb-group-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.wp-block-columns, .lb-group-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-:root :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(h2):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-:root :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--80);
 }
 @media (max-width: 767.98px) {
-  :root :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  :root :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
     margin-block-start: var(--wp--preset--spacing--140);
   }
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--80);
 }
 @media (max-width: 767.98px) {
-  .editor-styles-wrapper .is-layout-flow > :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  .editor-styles-wrapper .is-layout-flow > :where(h3):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
     margin-block-start: var(--wp--preset--spacing--140);
   }
 }
 
-:root :where(p, .wp-block-image):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(p, .wp-block-image):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--80);
   margin-block-end: var(--wp--preset--spacing--80);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(p, .wp-block-image):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(p, .wp-block-image):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--80);
   margin-block-end: var(--wp--preset--spacing--80);
 }
 
-:root :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--90);
   margin-block-end: var(--wp--preset--spacing--90);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--90);
   margin-block-end: var(--wp--preset--spacing--90);
 }
 
-:root :where(blockquote):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(blockquote):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(blockquote):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(blockquote):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-:root :where(.lb-post-info):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.lb-post-info):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: calc(var(--wp--preset--spacing--70) * -1);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.lb-post-info):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.lb-post-info):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: calc(var(--wp--preset--spacing--70) * -1);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-:root :where(.lb-logo-text):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.lb-logo-text):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   --lb-logo-text-space-y: var(--wp--preset--spacing--100);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.lb-logo-text):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.lb-logo-text):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   --lb-logo-text-space-y: var(--wp--preset--spacing--100);
 }
 
-:root :where(.wp-block-media-text):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.wp-block-media-text):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   --wp-block-media-text-space-y: var(--wp--preset--spacing--100);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.wp-block-media-text):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.wp-block-media-text):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   --wp-block-media-text-space-y: var(--wp--preset--spacing--100);
 }
 
-:root :where(.lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.lb-author-block, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-:root :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
-  :root :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  :root :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
   }
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
-  .editor-styles-wrapper .is-layout-flow > :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  .editor-styles-wrapper .is-layout-flow > :where(.lb-author-block):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
   }
 }
 
-:root :where(.lb-review-details):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.lb-review-details):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
-  :root :where(.lb-review-details):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  :root :where(.lb-review-details):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
   }
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.lb-review-details):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.lb-review-details):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
-  .editor-styles-wrapper .is-layout-flow > :where(.lb-review-details):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  .editor-styles-wrapper .is-layout-flow > :where(.lb-review-details):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
   }
 }
 
-:root :where(.lb-review-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.lb-review-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--140);
   margin-block-end: var(--wp--preset--spacing--140);
 }
 @media (max-width: 767.98px) {
-  :root :where(.lb-review-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  :root :where(.lb-review-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
     margin-block-start: var(--wp--preset--spacing--120);
     margin-block-end: var(--wp--preset--spacing--120);
   }
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.lb-review-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.lb-review-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--140);
   margin-block-end: var(--wp--preset--spacing--140);
 }
 @media (max-width: 767.98px) {
-  .editor-styles-wrapper .is-layout-flow > :where(.lb-review-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  .editor-styles-wrapper .is-layout-flow > :where(.lb-review-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
     margin-block-start: var(--wp--preset--spacing--120);
     margin-block-end: var(--wp--preset--spacing--120);
   }
 }
 
-:root :where(.lb-step-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.lb-step-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--120);
   margin-block-end: var(--wp--preset--spacing--120);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.lb-step-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.lb-step-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--120);
   margin-block-end: var(--wp--preset--spacing--120);
 }
 
-:root :where(.wp-block-casino-card, .wp-block-lb-casino-card):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.wp-block-casino-card, .wp-block-lb-casino-card):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.wp-block-casino-card, .wp-block-lb-casino-card):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.wp-block-casino-card, .wp-block-lb-casino-card):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-:root :where(.wp-block-bonus-card):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.wp-block-bonus-card):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.wp-block-bonus-card):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.wp-block-bonus-card):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--100);
   margin-block-end: var(--wp--preset--spacing--100);
 }
 
-:root :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
-  :root :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  :root :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
   }
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
-  .editor-styles-wrapper .is-layout-flow > :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  .editor-styles-wrapper .is-layout-flow > :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
   }
 }
 
-:root :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--200);
   margin-block-end: var(--wp--preset--spacing--200);
 }
 @media (max-width: 767.98px) {
-  :root :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)) {
+  :root :where(.wp-block-relinking-list, .lb-relinking-list):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
     margin-block-start: var(--wp--preset--spacing--160);
     margin-block-end: var(--wp--preset--spacing--160);
   }
 }
 
-:root :where(.wp-block-toc):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.wp-block-toc):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--140);
   margin-block-end: var(--wp--preset--spacing--140);
 }
 
-.editor-styles-wrapper .is-layout-flow > :where(.wp-block-toc):not(:where([class~=not-prose], [class~=not-prose] *)) {
+.editor-styles-wrapper .is-layout-flow > :where(.wp-block-toc):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--140);
   margin-block-end: var(--wp--preset--spacing--140);
 }
 
-:root :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   color: var(--lb-ui-color-heading-text);
 }
 
-:root :where(a):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(a):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   color: var(--lb-ui-color-link-text);
 }
 
-:root :where(p, ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(p, ul, ol):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   color: var(--lb-ui-color-text);
 }
 
@@ -2172,10 +2172,10 @@ ul.wp-block-gallery.alignwide {
   --lb-table-title-color-text: var(--lb-color-on-surface);
 }
 
-:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   overflow: auto;
 }
-:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table {
+:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) table {
   background-color: var(--lb-table-color-background);
   border: 1px solid var(--wp--preset--color--gray-200);
   color: var(--lb-table-color-text);
@@ -2183,13 +2183,13 @@ ul.wp-block-gallery.alignwide {
   border-spacing: 0;
   border-collapse: separate !important;
 }
-:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table thead {
+:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) table thead {
   border: none;
 }
-:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table :where(tr):last-child td {
+:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) table :where(tr):last-child td {
   border-bottom: 0;
 }
-:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table td {
+:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) table td {
   padding: var(--wp--preset--spacing--85) var(--wp--preset--spacing--100);
   font-size: var(--lb-font-size-text-sm-relative);
   line-height: var(--lb-line-height-text-sm-relative);
@@ -2198,7 +2198,7 @@ ul.wp-block-gallery.alignwide {
   border: none;
   border-bottom: 1px solid var(--wp--preset--color--gray-200);
 }
-:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table th {
+:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) table th {
   padding: var(--wp--preset--spacing--85) var(--wp--preset--spacing--100);
   font-size: var(--lb-font-size-text-sm-relative);
   line-height: var(--lb-line-height-text-sm-relative);
@@ -2207,22 +2207,22 @@ ul.wp-block-gallery.alignwide {
   border: none;
   border-bottom: 1px solid var(--wp--preset--color--gray-200);
 }
-:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) table :where(th) {
+:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) table :where(th) {
   color: var(--lb-table-title-color-text);
   font-weight: 500;
 }
-:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) :where(th):not([class*=has-text-align]) {
+:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) :where(th):not([class*=has-text-align]) {
   text-align: left;
 }
 
-:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
 }
-:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):first-child {
+:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)):first-child {
   margin-block-start: 0;
 }
-:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):last-child {
+:root :where(.wp-block-table):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)):last-child {
   margin-block-end: 0;
 }
 
@@ -2250,7 +2250,7 @@ ul.wp-block-gallery.alignwide {
   &--text {
   }
 }*/
-:root :where(img):not(:where([class~=not-prose], [class~=not-prose] *)) {
+:root :where(img):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   max-width: 100%;
   height: auto;
 }
