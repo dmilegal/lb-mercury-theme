@@ -22,13 +22,21 @@ get_template_part('theme-parts/organs/link-with-icon-list', null, [
     if (!$title && isset($item['link']['name']))
       $title = $item['link']['name'];
     
+    $link = [];
+    if (isset($item['link'])) {
+      $link['href'] = $item['link']['url'] ?? '';
+      $link['target'] = $item['link']['target'] ?? '';
+      $link['rel'] = $item['link']['rel'] ?? '';
+    } else {
+      $link['href'] = $item['href'] ?? '';
+      $link['target'] = $item['target'] ?? '';
+      $link['rel'] = $item['rel'] ?? '';
+    }
 
     return [
       'icon' => $item['icon'] ?? '',
       'title' =>  $title,
-      'href' => $item['href'] ?? '',
-      'target' => $item['target'] ?? '',
-      'rel' => $item['rel'] ?? '',
+      ...$link
     ];
   }, get_field('list'))
 ]);
