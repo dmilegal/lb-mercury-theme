@@ -4063,6 +4063,105 @@
 .widget_block:last-child .lb-sidebar-block--bordered {
   padding-bottom: 0;
 }
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/sites-linking/sites-linking.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root,
+.editor-styles-wrapper {
+  --lb-sites-linking-link-color: var(--lb-color-text-default);
+  --lb-sites-linking-link-bg: var(--lb-color-gray-low);
+}
+
+.lb-sites-linking {
+  position: relative;
+  font-size: var(--lb-font-size-text-xxs-relative);
+  line-height: var(--lb-line-height-text-xxs-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
+  font-weight: 500;
+  color: var(--wp--preset--color--black);
+}
+.lb-sites-linking,
+.lb-sites-linking :where(ul) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lb-sites-linking:hover .lb-sites-linking__list, .lb-sites-linking:has(.lb-sites-linking__trigger:focus) .lb-sites-linking__list {
+  opacity: 1;
+  visibility: visible;
+}
+.lb-sites-linking__trigger {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  column-gap: var(--wp--preset--spacing--60);
+}
+.lb-sites-linking__label {
+  font-size: var(--lb-font-size-text-xs-relative);
+  line-height: var(--lb-line-height-text-xs-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  font-weight: 400;
+}
+.lb-sites-linking__link {
+  color: var(--lb-sites-linking-link-color);
+  display: flex;
+  column-gap: var(--wp--preset--spacing--60);
+  align-items: center;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+.lb-sites-linking__link:hover {
+  background-color: var(--lb-sites-linking-link-bg);
+}
+.lb-sites-linking__list {
+  background-color: var(--wp--preset--color--white);
+  position: absolute;
+  width: max-content;
+  min-width: 100px;
+  max-width: 160px;
+  padding: 8px 4px;
+  top: calc(100% + 12px);
+  left: -8px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  opacity: 0;
+  border-radius: 6px;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 4px 10px 0px rgba(57, 60, 63, 0.33);
+}
+.lb-sites-linking__list:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 24px;
+  bottom: 100%;
+  left: 0;
+}
+.lb-sites-linking__list--top {
+  top: auto;
+  bottom: calc(100% + 12px);
+}
+.lb-sites-linking__list--top:before {
+  bottom: auto;
+  top: 100%;
+}
 /*!****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/social-link/social-link.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************/

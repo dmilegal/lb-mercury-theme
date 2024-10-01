@@ -1,0 +1,102 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+:root,
+.editor-styles-wrapper {
+  --lb-sites-linking-link-color: var(--lb-color-text-default);
+  --lb-sites-linking-link-bg: var(--lb-color-gray-low);
+}
+
+.lb-sites-linking {
+  position: relative;
+  @include font.get-text-styles('text-xxs');
+  font-weight: 500;
+  color: var(--wp--preset--color--black);
+
+  &,
+  :where(ul) {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &:hover,
+  &:has(%sl-btn-trigger:focus) {
+    %sl-list {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__trigger {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    column-gap: var(--wp--preset--spacing--60);
+    @extend %sl-btn-trigger;
+  }
+  &__label {
+    @include font.get-text-styles('text-xs');
+    font-weight: 400;
+  }
+  &__link {
+    color: var(--lb-sites-linking-link-color);
+    display: flex;
+    column-gap: var(--wp--preset--spacing--60);
+    align-items: center;
+    padding: 6px 8px;
+    cursor: pointer;
+    transition:
+      color 170ms ease-in-out,
+      background-color 170ms ease-in-out;
+    text-decoration: none;
+   
+    &:hover {
+      background-color: var(--lb-sites-linking-link-bg);
+    }
+
+  }
+
+  &__list {
+    background-color: var(--wp--preset--color--white);
+    position: absolute;
+    width: max-content;
+    min-width: 100px;
+    max-width: 160px;
+    padding: 8px 4px;
+    top: calc(100% + 12px);
+    left: -8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    opacity: 0;
+    border-radius: 6px;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 4px 10px 0px rgb(57 60 63 / 33%);
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      bottom: 100%;
+      left: 0;
+    }
+
+    &--top {
+      top: auto;
+      bottom: calc(100% + 12px);
+      &:before {
+        bottom: auto;
+        top: 100%;
+      }
+    }
+
+    @extend %sl-list;
+  }
+}
