@@ -113,7 +113,7 @@ function getReviewListGroupParams($postfix)
           ),
           array(
             'key' => 'field_65d62febc0fdc' . $postfix,
-            'label' => 'Casino List',
+            'label' => 'Review List',
             'name' => 'casino_list',
             'aria-label' => '',
             'type' => 'repeater',

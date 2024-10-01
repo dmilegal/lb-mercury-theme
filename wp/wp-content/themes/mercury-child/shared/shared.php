@@ -1,4 +1,5 @@
 <?php
+require_once 'array-unique-call.php';
 require_once 'get-asset-name.php';
 require_once 'get-user-soc-links.php';
 require_once 'get-ld-object-id.php';
@@ -16,4 +17,5 @@ require_once 'theme/theme.php';
 require_once 'get-icon-by-lang-code.php';
 require_once 'get-brand-external-link.php';
 require_once 'is-brand-locked.php';
+require_once 'get-review-data.php';
 require_once 'blocks/blocks.php';

@@ -1,0 +1,90 @@
+@use 'sass:math';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+@use '@/shared/styles/mixins/media-containers';
+@use '@/shared/styles/mixins/container';
+
+
+:root,
+.editor-styles-wrapper {
+  --lb-review-card-bonus-cats-color: var(--wp--preset--color--primary-600);
+  --lb-review-card-bonus-parameter-title-color: var(--lb-color-text-default);
+  --lb-review-card-bonus-parameter-value-color: var(--lb-color-text-strong);
+}
+
+.lb-review-card {
+  &--theme_bonus {
+    %card__sub {
+      @include media-containers.media-breakpoint-down(sm) {
+        grid-row: 4 / 5;
+        border-bottom: 0;
+      }
+    }
+
+  }
+
+  &__sub {
+    @extend %card__sub;
+  }
+  &__bonus-cats {
+    @include font.get-text-styles('text-xs', false);
+    color: var(--lb-review-card-bonus-cats-color);
+    font-weight: 400;
+    margin-bottom: var(--wp--preset--spacing--60);
+    // @include media-containers.media-breakpoint-down(sm) {
+    //   display: none;
+    // }
+  }
+
+  &__bonus-details {
+    grid-column: 1/-1;
+    padding: var(--wp--preset--spacing--90) var(--wp--preset--spacing--100);
+    display: flex;
+    column-gap: var(--wp--preset--spacing--140);
+    row-gap: var(--wp--preset--spacing--85);
+    &:empty {
+      display: none;
+    }
+    @include media-containers.media-breakpoint-down(sm) {
+      padding: var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
+      column-gap: var(--wp--preset--spacing--100);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__bonus-detail {
+    &-title {
+      @include font.get-text-styles('text-xs', false);
+      margin-bottom: var(--wp--preset--spacing--50);
+      color: var(--lb-review-card-bonus-parameter-title-color);
+    }
+    &-value {
+      @include font.get-text-styles('text-sm', false);
+      font-weight: 500;
+      color: var(--lb-review-card-bonus-parameter-value-color);
+    }
+  }
+
+  &__bonus-more {
+    padding: 0 var(--wp--preset--spacing--100) var(--wp--preset--spacing--85);
+    grid-column: 1/-1;
+    @include media-containers.media-breakpoint-down(sm) {
+      padding-top: var(--wp--preset--spacing--60);
+      grid-row: 3 / 4;
+    }
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      column-gap: var(--wp--preset--spacing--60);
+      @include font.get-text-styles('text-sm', false);
+      font-weight: 500;
+      color: var(--lb-review-card-color-text);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

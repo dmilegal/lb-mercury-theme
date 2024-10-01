@@ -408,6 +408,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/review-card/variants/bonus-card/style.scss":
+/*!***************************************************************!*\
+  !*** ./src/blocks/review-card/variants/bonus-card/style.scss ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/review-card/variants/compact-bet/style.scss":
 /*!****************************************************************!*\
   !*** ./src/blocks/review-card/variants/compact-bet/style.scss ***!
@@ -1214,6 +1226,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/review-card/variants/bonus-card/index.ts":
+/*!*************************************************************!*\
+  !*** ./src/blocks/review-card/variants/bonus-card/index.ts ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/review-card/variants/bonus-card/style.scss");
+
+
+/***/ }),
+
 /***/ "./src/blocks/review-card/variants/compact-bet/index.ts":
 /*!**************************************************************!*\
   !*** ./src/blocks/review-card/variants/compact-bet/index.ts ***!
@@ -1301,6 +1325,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./default */ "./src/blocks/review-card/variants/default/index.ts");
 /* harmony import */ var _compact_review_bonus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./compact-review-bonus */ "./src/blocks/review-card/variants/compact-review-bonus/index.ts");
 /* harmony import */ var _compact_bet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./compact-bet */ "./src/blocks/review-card/variants/compact-bet/index.ts");
+/* harmony import */ var _bonus_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bonus-card */ "./src/blocks/review-card/variants/bonus-card/index.ts");
+
 
 
 
@@ -1330,11 +1356,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js");
-/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js");
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/shared/scripts/consts */ "./src/shared/scripts/consts.ts");
 /* harmony import */ var _review_list_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./review-list.scss */ "./src/blocks/review-list/review-list.scss");
 /* harmony import */ var _shared_scripts_components_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/shared/scripts/components/modal */ "./src/shared/scripts/components/modal.ts");
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
 
 
 
@@ -1344,76 +1372,117 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 
 
+
+
+var signal = null;
 function init() {
   var btns = document.querySelectorAll('.lb-review-list__load-more');
+  var filterForm = document.querySelectorAll('.lb-review-list__cat-filter');
   var listEls = document.querySelectorAll('.lb-review-list');
   btns.forEach(function (btn) {
-    btn.addEventListener('click', triggetLoad);
+    btn.addEventListener('click', function () {
+      var container = btn.closest('.lb-review-list');
+      nextPaga(container);
+    });
+  });
+  filterForm.forEach(function (form) {
+    form.addEventListener('change', function () {
+      var container = form.closest('.lb-review-list');
+      filter(container);
+    });
   });
   listEls.forEach(function (el) {
     el.addEventListener('click', function (e) {
       if (e.target.closest('button.lb-review-card__play')) triggetRefModal(el);
     });
+    initCatFilterSlider(el);
   });
 }
-function triggetLoad(_x) {
-  return _triggetLoad.apply(this, arguments);
+function nextPaga(container) {
+  var btn = container.querySelector('.lb-review-list__load-more');
+  triggerLoad(container, (+btn.dataset.currentPage || 1) + 1);
 }
-function _triggetLoad() {
-  _triggetLoad = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee(e) {
-    var btn, container, preparedQuery, data;
+function filter(container) {
+  triggerLoad(container, 1);
+}
+function triggerLoad(_x) {
+  return _triggerLoad.apply(this, arguments);
+}
+function _triggerLoad() {
+  _triggerLoad = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee(container) {
+    var page,
+      btn,
+      preparedQuery,
+      continueLoad,
+      data,
+      _args = arguments;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          btn = e.currentTarget;
-          container = btn.closest('.lb-review-list');
+          page = _args.length > 1 && _args[1] !== undefined ? _args[1] : 1;
+          btn = container.querySelector('.lb-review-list__load-more');
           preparedQuery = prepareQuery(btn.dataset.query, {
-            paged: (+btn.dataset.currentPage || 1) + 1
-          });
+            paged: page
+          }, getFilterData(container));
+          continueLoad = false;
           btn.classList.add('lb-button--pending');
+          container.classList.add('lb-review-list--loading');
           btn.disabled = true;
-          _context.prev = 5;
-          _context.next = 8;
+          _context.prev = 7;
+          _context.next = 10;
           return load(preparedQuery);
-        case 8:
+        case 10:
           data = _context.sent;
-          render(data.html, container);
-          _context.next = 15;
+          render(container, data.html, data.page, data.total_pages);
+          _context.next = 18;
           break;
-        case 12:
-          _context.prev = 12;
-          _context.t0 = _context["catch"](5);
+        case 14:
+          _context.prev = 14;
+          _context.t0 = _context["catch"](7);
+          if (_context.t0.name === 'AbortError') continueLoad = true;
           console.error(_context.t0);
-        case 15:
+        case 18:
+          if (!continueLoad) {
+            _context.next = 20;
+            break;
+          }
+          return _context.abrupt("return");
+        case 20:
+          container.classList.remove('lb-review-list--loading');
           btn.classList.remove('lb-button--pending');
           btn.disabled = false;
-        case 17:
+        case 23:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[5, 12]]);
+    }, _callee, null, [[7, 14]]);
   }));
-  return _triggetLoad.apply(this, arguments);
+  return _triggerLoad.apply(this, arguments);
 }
 function load(_x2) {
   return _load.apply(this, arguments);
 }
 function _load() {
   _load = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee2(query) {
+    var _signal;
     var res, data;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
-          _context2.next = 2;
-          return fetch("".concat(_shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__.API_URL, "aces/v1/html/reviews?").concat(query || ''));
-        case 2:
+          (_signal = signal) === null || _signal === void 0 || _signal.abort();
+          signal = new AbortController();
+          _context2.next = 4;
+          return fetch("".concat(_shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__.API_URL, "aces/v1/html/reviews?").concat(query || ''), {
+            signal: signal.signal
+          });
+        case 4:
           res = _context2.sent;
-          _context2.next = 5;
+          _context2.next = 7;
           return res.json();
-        case 5:
+        case 7:
           data = _context2.sent;
           return _context2.abrupt("return", data);
-        case 7:
+        case 9:
         case "end":
           return _context2.stop();
       }
@@ -1423,19 +1492,23 @@ function _load() {
 }
 function prepareQuery(query, queryData, data) {
   var _params;
-  var params = qs__WEBPACK_IMPORTED_MODULE_6___default().parse(query);
+  var params = qs__WEBPACK_IMPORTED_MODULE_8___default().parse(query);
   params.query = _objectSpread(_objectSpread({}, (_params = params) === null || _params === void 0 ? void 0 : _params.query), queryData);
   params = _objectSpread(_objectSpread({}, params), data);
-  return qs__WEBPACK_IMPORTED_MODULE_6___default().stringify(params);
+  return qs__WEBPACK_IMPORTED_MODULE_8___default().stringify(params);
 }
-function render(html, container) {
+function render(container, html, page, total_pages) {
   var listEl = container.querySelector('.lb-review-list__list');
   var btn = container.querySelector('.lb-review-list__load-more');
+  if (page == 1) {
+    listEl.innerHTML = '';
+  }
   listEl.insertAdjacentHTML('beforeend', html);
   window.CasinoCardsInit(listEl);
   window.initPromoButton(listEl);
-  btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + '';
-  if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';
+  btn.dataset.currentPage = page + '';
+  btn.dataset.totalPages = total_pages + '';
+  if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';else btn.style.display = '';
 }
 function triggetRefModal(_x3) {
   return _triggetRefModal.apply(this, arguments);
@@ -1519,6 +1592,27 @@ function _triggetRefModal() {
     }, _callee3);
   }));
   return _triggetRefModal.apply(this, arguments);
+}
+function getFilterData(container) {
+  var form = container.querySelector('.lb-review-list__cat-filter');
+  if (!form) return {};
+  var filterData = Object.fromEntries(new FormData(form));
+  return filterData;
+}
+function initCatFilterSlider(container) {
+  var catContainer = container.querySelector('.lb-review-list__cat-filter > .swiper');
+  if (!catContainer) return;
+  var nextEl = container.querySelector('.lb-review-list__cat-filter-nav-next');
+  var prevEl = container.querySelector('.lb-review-list__cat-filter-nav-prev');
+  new swiper__WEBPACK_IMPORTED_MODULE_6__["default"](catContainer, {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_7__.Navigation],
+    navigation: {
+      nextEl: nextEl,
+      prevEl: prevEl
+    }
+  });
 }
 init();
 

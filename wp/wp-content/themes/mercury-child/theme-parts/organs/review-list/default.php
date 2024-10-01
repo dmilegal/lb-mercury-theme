@@ -14,7 +14,10 @@ $postType = $args['post_type'] ?? 'casino';
 $asyncLoading = $args['async_loading'] ?? false;
 $showLicenseText = $args['show_license_ar_text_for_listing'] ?? false;
 $licenseText = get_field("license_ar_text_for_listing", "option");
-$listBonusCategory = $args['bonus_category'] ?? false;
+$istingBonusCategory = $args['bonus_category'] ?? false;
+$filterParams = $args['filter'] ?? [];
+$showPostInfo = $args['show_post_info'] ?? false;
+$showBonusCategoryFilter = $args['show_bonus_category_filter'] ?? false;
 
 $refConfig = [
   'title' => $args['ref_modal_title'] ?? '',
@@ -32,16 +35,26 @@ if ($reviewList || $asyncLoading) {
     class="<?= classNames("lb-review-list", "lb-review-list--theme_$theme", "lb-review-list--card-variant_$cardVariant") ?>">
     <div class="lb-review-list__wrapper">
       <div class="lb-review-list__inner">
+        <? if ($showBonusCategoryFilter && $filterParams && isset($filterParams['bonus_categories']) && $filterParams['bonus_categories']) { ?>
+          <? get_template_part('theme-parts/organs/review-list/bonus-category-filter', null, [
+            'bonus_categories' => $filterParams['bonus_categories']
+          ]); ?>
+        <? } ?>
         <?php if ($title || ($licenseText && $showLicenseText)) { ?>
           <div class="lb-review-list__heading prose-headings prose-colors">
             <? if ($title) { ?>
               <h2 class="lb-review-list__title"><?php echo esc_html($title); ?></h2>
+              <?
+              if ($showPostInfo)
+                get_template_part('theme-parts/organs/post-info', null);
+              ?>
             <? } ?>
             <? if ($licenseText && $showLicenseText) { ?>
               <div class="lb-review-list__subtitle">
                 <?= $licenseText ?>
               </div>
             <? } ?>
+
           </div>
         <?php } ?>
         <div class="lb-review-list__list lb-review-list__list--theme_<?= $list_theme ?>">
@@ -54,8 +67,8 @@ if ($reviewList || $asyncLoading) {
             get_template_part('theme-parts/cells/review-card/review-card', null, [
               'card_variant' => $cardVariant,
               'post_type' => $postType,
-              'list_bonus_category' => $listBonusCategory,
-              ...$reviewItem
+
+              ...$reviewItem,
             ]);
           } ?>
         </div>
