@@ -1539,7 +1539,7 @@ function _triggetRefModal() {
           if (config.hideTitle) modal.removeTitle();
           if (config.hideSubtitle) modal.removeSubtitle();
           modal.openModal();
-          listIn = JSON.parse(list).slice(0, 3);
+          listIn = JSON.parse(list);
           limit = (_config$limit = config.limit) !== null && _config$limit !== void 0 ? _config$limit : -1;
           _context3.next = 18;
           return load(prepareQuery('', {
