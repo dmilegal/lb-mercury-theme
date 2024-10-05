@@ -16,6 +16,7 @@ $block_opts = getCommonBlockProps($block, $post_id, $is_preview);
 
 
 $postType = get_field('post_type') ?? 'casino';
+$customTitle = get_field('custom_title') ?? '';
 
 if ($postType === 'casino') {
   $postId = get_field('casino') ?? null;
@@ -28,6 +29,7 @@ if ($postId)
     ...$block_opts,
     'post_id' => $postId,
     'post_type' => $postType,
+    'custom_title' => $customTitle,
     'hide_footer' => true
   ]);
 else if ($is_preview) { ?>

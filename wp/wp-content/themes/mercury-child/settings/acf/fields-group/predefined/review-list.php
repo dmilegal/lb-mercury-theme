@@ -134,6 +134,26 @@ function getReviewListGroupParams($postfix)
             'rows_per_page' => 20,
             'sub_fields' => array(
               array(
+                'key' => 'field_76fgkj3056wak',
+                'label' => 'Custom Title',
+                'name' => 'custom_title',
+                'aria-label' => '',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'default_value' => '',
+                'maxlength' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+              ),
+              array(
                 'key' => 'field_65d6302ac0fdd' . $postfix,
                 'label' => 'Casino',
                 'name' => 'casino_id',
