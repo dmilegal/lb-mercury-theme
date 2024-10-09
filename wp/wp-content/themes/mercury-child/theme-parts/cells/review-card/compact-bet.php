@@ -6,6 +6,8 @@ $postId = $args['post_id'] ?? null;
 
 if (!$postId) return;
 
+$title = getReviewCardTitle($postId, $args['custom_title'] ?? '');
+
 $casino_allowed_html = array(
   'a' => array(
     'href' => true,
@@ -83,7 +85,7 @@ $is_locked = isBrandLocked($postId);
       <?= get_the_post_thumbnail($postId, [28, 28], [
         "class" => "lb-compact-casino-bonus-card__logo"
       ]) ?>
-      <div class="lb-compact-casino-bonus-card__title"><?= get_the_title($postId) ?></div>
+      <div class="lb-compact-casino-bonus-card__title"><?= $title ?></div>
     </a>
     <?
     if ($external_link_url)
