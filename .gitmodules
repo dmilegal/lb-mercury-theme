@@ -16,3 +16,6 @@
 [submodule "wp/wp-content/plugins/lb-breadcrumb"]
 	path = wp/wp-content/plugins/lb-breadcrumb
 	url = https://github.com/dmilegal/lb-breadcrumb.git
+[submodule "wp/wp-content/plugins/acf-country"]
+	path = wp/wp-content/plugins/acf-country
+	url = https://github.com/dmilegal/acf-country.git
