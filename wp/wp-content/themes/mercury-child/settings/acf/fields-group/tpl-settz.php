@@ -524,6 +524,29 @@ add_action('acf/include_fields', function () {
 				'append' => '',
 			),
 			array(
+				'key' => 'field_6705c833d68f6',
+				'label' => 'Current Site Flag',
+				'name' => 'sites_linking_current_flag',
+				'aria-label' => '',
+				'type' => 'country',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => false,
+				'return_format' => 'array',
+				'multiple' => 0,
+				'allow_null' => 0,
+				'ui' => 1,
+				'layout' => 'vertical',
+				'ajax' => 0,
+				'placeholder' => '',
+			),
+			array(
 				'key' => 'field_66fbe6b7f3a2c',
 				'label' => 'Sites',
 				'name' => 'sites_linking_list',
@@ -563,6 +586,30 @@ add_action('acf/include_fields', function () {
 						'return_format' => 'array',
 						'parent_repeater' => 'field_66fbe6b7f3a2c',
 					),
+					array(
+						'key' => 'field_6705a6c45577d',
+						'label' => 'Flag',
+						'name' => 'flag',
+						'aria-label' => '',
+						'type' => 'country',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => false,
+						'return_format' => 'array',
+						'multiple' => 0,
+						'allow_null' => 0,
+						'ui' => 1,
+						'layout' => 'vertical',
+						'ajax' => 0,
+						'placeholder' => '',
+						'parent_repeater' => 'field_66fbe6b7f3a2c',
+					),
 				),
 			),
 		),
@@ -587,14 +634,6 @@ add_action('acf/include_fields', function () {
 	));
 });
 
-add_action('acf/init', function () {
-	acf_add_options_page(array(
-		'page_title' => 'Template Settings',
-		'menu_slug' => 'tpl-settz',
-		'position' => '',
-		'redirect' => false,
-	));
-});
 add_action('acf/init', function () {
 	acf_add_options_page(array(
 		'page_title' => 'Template Settings',

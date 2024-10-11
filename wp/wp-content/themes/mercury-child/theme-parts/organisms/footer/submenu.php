@@ -3,6 +3,7 @@
     <? get_template_part('/theme-parts/molecules/sites-linking', null, [
       'title' => get_field('sites_linking_current_name', 'option'),
       'sites_list' => get_field('sites_linking_list', 'option'),
+      'flag' => get_field('sites_linking_current_flag', 'option'),
       'dropdown_position' => 'top',
     ]); ?>
     <? wp_nav_menu(array('container' => 'ul', 'menu_class' => 'lb-footer__submenu', 'theme_location' => 'footer_sub_menu', 'depth' => 1, 'fallback_cb' => '__return_empty_string')); ?>
