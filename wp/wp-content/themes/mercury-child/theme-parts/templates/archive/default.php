@@ -1,5 +1,9 @@
 <?php
 $bannerTitle = $args['banner_title'] ?? get_the_archive_title();
+if (is_home() ) {
+  $page_for_posts_id = get_option('page_for_posts');
+  $bannerTitle = get_the_title($page_for_posts_id);
+}
 $bannerSubtitle = $args['banner_subtitle'] ?? '';
 $bannerTextContent = $args['banner_text_content'] ?? '';
 get_header();
