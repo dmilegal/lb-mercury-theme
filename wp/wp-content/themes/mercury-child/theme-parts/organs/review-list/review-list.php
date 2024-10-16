@@ -21,7 +21,12 @@ $showBonusCategoryFilter = $args['show_bonus_category_filter'] ?? false;
 
 $bonusCategories = [];
 if (!$enableSortByBonusCategory) {
-  $bonusCategories = aces_get_bonuses_categories_by_review_ids(array_map(fn($i) => $i['post_id'], $reviewList));
+  $bonusCategories = array_unique(
+    array_filter(
+      array_map(fn($i) => $i['bonus_category'], $reviewListFull),
+      fn($id) => !!$id
+    )
+  );
 }
 
 if ($reviewList) {
