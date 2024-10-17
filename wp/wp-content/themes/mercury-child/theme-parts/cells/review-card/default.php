@@ -56,8 +56,8 @@ if ($casino_permalink_button_title) {
   }
 }
 
-$bonusCategories = $args['bonus_category'] ?? [];
-$bonusId = aces_get_casino_bonus_id($postId, $bonusCategories);
+$bonusCategory = $args['bonus_category'] ?? null;
+$bonusId = !empty($args['bonus']) ? $args['bonus'] : aces_get_casino_bonus_id($postId, !empty($bonusCategory) ? [$bonusCategory] : []);
 $bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $casino_allowed_html);
 $bonus_button_title = esc_html(get_post_meta($bonusId, 'bonus_button_title', true));
 $bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));

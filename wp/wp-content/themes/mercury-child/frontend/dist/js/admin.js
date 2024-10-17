@@ -10,6 +10,49 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
+<<<<<<< HEAD
+=======
+/***/ }),
+
+/***/ "./src/admin/listing-bonus-category-bonus.ts":
+/*!***************************************************!*\
+  !*** ./src/admin/listing-bonus-category-bonus.ts ***!
+  \***************************************************/
+/***/ (() => {
+
+(function ($) {
+  if (!acf) return;
+  // Добавляем фильтр для модификации данных AJAX-запроса select2
+  acf.add_filter('select2_ajax_data', function (data, args, $input, field, instance) {
+    var _instance$data, _instance$data2;
+    // Проверяем, что это поле 'bonus_category' (замените на ваш ключ поля)
+    if (((_instance$data = instance.data) === null || _instance$data === void 0 || (_instance$data = _instance$data.field) === null || _instance$data === void 0 ? void 0 : _instance$data.get('key')) === 'field_668d9b8bce1ad_block' || ((_instance$data2 = instance.data) === null || _instance$data2 === void 0 || (_instance$data2 = _instance$data2.field) === null || _instance$data2 === void 0 ? void 0 : _instance$data2.get('key')) === 'field_668d9b8bce1ad_tpl') {
+      var bonusEls = acf.findFields({
+        key: 'field_670ea17e4269d_block',
+        sibling: field
+      });
+      if (!bonusEls.length) {
+        bonusEls = acf.findFields({
+          key: 'field_670ea17e4269d_tpl',
+          sibling: field
+        });
+      }
+      if (!bonusEls.length) return;
+
+      // Получаем значение из поля 'bonus' (замените на ваш ключ поля)
+      var bonusField = $(bonusEls[0]).data('acf');
+      if (!bonusField) return;
+      var bonusValue = bonusField.val();
+      // Добавляем параметр 'bonus' в данные AJAX-запроса
+      data.bonus = bonusValue || '';
+    }
+
+    // Возвращаем измененные данные
+    return data;
+  });
+})(jQuery);
+
+>>>>>>> 4b0a32e5823f712df77c0f866e6717c02afc3d60
 /***/ })
 
 /******/ });
@@ -39,6 +82,38 @@ __webpack_require__.r(__webpack_exports__);
 /******/ }
 /******/ 
 /************************************************************************/
+<<<<<<< HEAD
+=======
+/******/ /* webpack/runtime/compat get default export */
+/******/ (() => {
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = (module) => {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			() => (module['default']) :
+/******/ 			() => (module);
+/******/ 		__webpack_require__.d(getter, { a: getter });
+/******/ 		return getter;
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/define property getters */
+/******/ (() => {
+/******/ 	// define getter functions for harmony exports
+/******/ 	__webpack_require__.d = (exports, definition) => {
+/******/ 		for(var key in definition) {
+/******/ 			if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			}
+/******/ 		}
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/hasOwnProperty shorthand */
+/******/ (() => {
+/******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ })();
+/******/ 
+>>>>>>> 4b0a32e5823f712df77c0f866e6717c02afc3d60
 /******/ /* webpack/runtime/make namespace object */
 /******/ (() => {
 /******/ 	// define __esModule on exports
@@ -57,6 +132,12 @@ var __webpack_exports__ = {};
   \****************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var fonts_lhicon_stylesheet_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fonts/lhicon/stylesheet.css */ "./public/fonts/lhicon/stylesheet.css");
+<<<<<<< HEAD
+=======
+/* harmony import */ var _listing_bonus_category_bonus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./listing-bonus-category-bonus */ "./src/admin/listing-bonus-category-bonus.ts");
+/* harmony import */ var _listing_bonus_category_bonus__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_listing_bonus_category_bonus__WEBPACK_IMPORTED_MODULE_1__);
+
+>>>>>>> 4b0a32e5823f712df77c0f866e6717c02afc3d60
 
 
 //# sourceMappingURL=admin.js.map

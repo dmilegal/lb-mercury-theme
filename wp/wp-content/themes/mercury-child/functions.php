@@ -58,8 +58,9 @@ remove_filter('pre_user_description', 'wp_filter_kses');
 
 add_action('acf/init', 'mercury_acf_op_init');
 
-function mercury_acf_op_init() {
-	if( function_exists('acf_add_options_page') ) {
+function mercury_acf_op_init()
+{
+	if (function_exists('acf_add_options_page')) {
 
 		acf_add_options_page([
 			'network' => true,
