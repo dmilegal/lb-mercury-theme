@@ -252,7 +252,7 @@ function getReviewListGroupParams($postfix)
                 'multiple' => 0,
                 'save_custom' => 0,
                 'save_post_status' => 'publish',
-                'allow_null' => 0,
+                'allow_null' => 1,
                 'bidirectional' => 0,
                 'ui' => 1,
                 'save_post_type' => '',
