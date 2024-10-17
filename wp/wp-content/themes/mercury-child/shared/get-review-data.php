@@ -19,7 +19,7 @@ function getReviewData($postType = 'casino', $queryArgs = [], $reviewList = [], 
       ) {
         $item['bonus_category'] = $realBonusCategories[0];
       } elseif (
-        $realBonusCategories && $listingBonusCategory &&
+        !$item['bonus_category'] && $realBonusCategories && $listingBonusCategory &&
         !in_array($listingBonusCategory, $realBonusCategories)
       ) {
         $item['bonus_category'] = $realBonusCategories[0];
