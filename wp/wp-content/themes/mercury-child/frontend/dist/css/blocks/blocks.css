@@ -2886,16 +2886,23 @@
 /**
 * font
 **/
+<<<<<<< HEAD
 :root,
 .editor-styles-wrapper {
+=======
+:root, .editor-styles-wrapper {
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
   --lb-relinking-item-color-border: var(--lb-color-surface-outline-1);
   --lb-relinking-item-color-border-hover: var(--lb-color-primary);
   --lb-relinking-item-radius: var(--wp--preset--spacing--60);
   --lb-relinking-item-color-text: var(--lb-color-text-strong);
   --lb-relinking-item-color-text-hover: var(--lb-color-primary);
+<<<<<<< HEAD
   --lb-relinking-item-color-text-active: var(--lb-color-primary);
   --lb-relinking-item-background-color: var(--lb-color-surface);
   --lb-relinking-item-background-color-active: var(--lb-color-primary-container-low);
+=======
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 }
 
 .lb-relinking-item {
@@ -2912,6 +2919,7 @@
 .lb-relinking-item:hover {
   color: var(--lb-relinking-item-color-text-hover);
 }
+<<<<<<< HEAD
 .lb-relinking-item--active, input:checked + .lb-relinking-item {
   background-color: var(--lb-relinking-item-background-color-active);
   border-color: var(--lb-relinking-item-background-color-active);
@@ -2920,6 +2928,8 @@
 .lb-relinking-item--theme_with-icon, .lb-relinking-item--theme_with-image, .lb-relinking-item--theme_with-arrow, .lb-relinking-item--theme_only-text, .lb-relinking-item--theme_with-primary-image {
   background-color: var(--lb-relinking-item-background-color);
 }
+=======
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 .lb-relinking-item--theme_with-icon .lb-relinking-item__text, .lb-relinking-item--theme_with-image .lb-relinking-item__text, .lb-relinking-item--theme_with-arrow .lb-relinking-item__text, .lb-relinking-item--theme_only-text .lb-relinking-item__text, .lb-relinking-item--theme_with-primary-image .lb-relinking-item__text {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -2929,11 +2939,14 @@
 .lb-relinking-item--theme_with-icon:hover, .lb-relinking-item--theme_with-image:hover, .lb-relinking-item--theme_with-arrow:hover, .lb-relinking-item--theme_only-text:hover, .lb-relinking-item--theme_with-primary-image:hover {
   border-color: var(--lb-relinking-item-color-border-hover);
 }
+<<<<<<< HEAD
 .lb-relinking-item--theme_with-icon:active, .lb-relinking-item--theme_with-image:active, .lb-relinking-item--theme_with-arrow:active, .lb-relinking-item--theme_only-text:active, .lb-relinking-item--theme_with-primary-image:active {
   background-color: var(--lb-relinking-item-background-color-active);
   border-color: var(--lb-relinking-item-background-color-active);
   color: var(--lb-relinking-item-color-text-active);
 }
+=======
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 .lb-relinking-item--theme_with-icon, .lb-relinking-item--theme_with-image, .lb-relinking-item--theme_with-arrow, .lb-relinking-item--theme_only-text {
   border: 1px solid var(--lb-relinking-item-color-border);
   border-radius: var(--lb-relinking-item-radius);
@@ -2955,7 +2968,10 @@
   column-gap: var(--wp--preset--spacing--70);
 }
 .lb-relinking-item--theme_only-text {
+<<<<<<< HEAD
   display: inline-block;
+=======
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
   max-width: 100%;
   padding: var(--wp--preset--spacing--70);
 }
@@ -3509,7 +3525,11 @@
   display: flex;
   justify-content: flex-end;
   column-gap: var(--wp--preset--spacing--110);
+<<<<<<< HEAD
   row-gap: var(--wp--preset--spacing--85);
+=======
+  row-gap: var(--wp--preset--spacing--110);
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
   padding: var(--wp--preset--spacing--100) var(--lb-review-card-padding-x);
   background-color: var(--lb-review-card-promo-color-background);
   border-bottom: 1px solid var(--lb-review-card-color-border);
@@ -3539,10 +3559,17 @@
   }
 }
 .lb-review-card__bonus-title {
+<<<<<<< HEAD
   font-size: var(--wp--preset--font-size--text-lg);
   line-height: var(--wp--custom--line-height--text-lg);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
+=======
+  font-size: var(--wp--preset--font-size--text-md);
+  line-height: var(--wp--custom--line-height--text-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
   font-weight: 600;
   flex-grow: 1;
 }
@@ -3839,6 +3866,7 @@
     min-width: 108px;
   }
 }
+<<<<<<< HEAD
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/review-card/variants/bonus-card/style.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************************************/
@@ -3932,6 +3960,8 @@
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
+=======
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/review-details/review-details.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************/
@@ -4025,6 +4055,7 @@
 .lb-review-list--card-variant_compact-casino-bonus .lb-review-list__list {
   row-gap: var(--wp--preset--spacing--90);
 }
+<<<<<<< HEAD
 .lb-review-list--loading .lb-review-list__cat-filter, .lb-review-list--loading .lb-review-list__list {
   opacity: 0.7;
 }
@@ -4070,6 +4101,8 @@
 .lb-review-list__heading .lb-post-info {
   margin: 0;
 }
+=======
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 .lb-review-list__title {
   margin-bottom: var(--wp--preset--spacing--70);
 }
@@ -4090,7 +4123,10 @@
   color: var(--lb-casino-subtitle-color);
 }
 .lb-review-list__subtitle {
+<<<<<<< HEAD
   margin-top: var(--wp--preset--spacing--70);
+=======
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
   margin-bottom: var(--wp--preset--spacing--70);
 }
 .lb-review-list__subtitle:not(:only-child) {
@@ -4438,6 +4474,17 @@
 /**
 * font
 **/
+<<<<<<< HEAD
+=======
+:root,
+.editor-styles-wrapper {
+  --lb-toc-color-background: var(--lb-color-surface-high);
+  --lb-toc-header-title-color-text: var(--lb-color-text-strong);
+  --lb-toc-ico-closed-color-text: var(--lb-color-primary);
+  --lb-toc-ico-opened-color-text: var(--lb-color-on-surface-min);
+}
+
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 .lb-toc--variant_default {
   --lb-toc-link-color-text: var(--lb-color-text-default);
   --lb-toc-link-color-text-hover: var(--wp--preset--color--primary-600);
@@ -4448,11 +4495,50 @@
     --lb-toc-item-gap-y: var(--wp--preset--spacing--80);
   }
 }
+<<<<<<< HEAD
+=======
+.lb-toc--variant_default .ez-toc-list {
+  padding-top: var(--wp--preset--spacing--80);
+}
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 .lb-toc--variant_contrast {
   --lb-toc-link-color-text: var(--lb-color-on-surface);
   --lb-toc-link-color-text-hover: var(--wp--preset--color--primary-600);
   --lb-toc-item-gap-y: var(--wp--preset--spacing--90);
 }
+<<<<<<< HEAD
+=======
+.lb-toc--variant_contained {
+  --lb-toc-link-color-text: var(--wp--preset--color--primary-600);
+  --lb-toc-link-color-text-hover: var(--wp--preset--color--primary-800);
+  --lb-toc-item-gap-y: var(--wp--preset--spacing--70);
+  border-radius: var(--wp--preset--spacing--70);
+  background-color: var(--lb-toc-color-background);
+  padding: 0 var(--wp--preset--spacing--100);
+}
+@media (max-width: 767.98px) {
+  .lb-toc--variant_contained {
+    --lb-toc-item-gap-y: var(--wp--preset--spacing--80);
+    padding: 0 var(--wp--preset--spacing--80);
+  }
+}
+.lb-toc--variant_contained .ez-toc-cssicon-toggle-label {
+  padding: var(--wp--preset--spacing--80) 0;
+}
+.lb-toc--variant_contained .ez-toc-list {
+  padding-left: var(--wp--preset--spacing--80);
+  padding-bottom: var(--wp--preset--spacing--85);
+}
+.lb-toc--variant_contained:not(:has(.ez-toc-cssicon-toggle-label)) .ez-toc-list {
+  padding-top: var(--wp--preset--spacing--85);
+}
+.lb-toc:has(input:checked) .ez-toc-icon-opened {
+  display: none;
+}
+.lb-toc:has(input:not(:checked)) .ez-toc-icon-closed {
+  display: none;
+}
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 
 .ez-toc-counter {
   font-size: var(--lb-font-size-text-md-relative);
@@ -4468,6 +4554,21 @@
     letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
   }
 }
+<<<<<<< HEAD
+=======
+.ez-toc-cssicon-toggle-label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--lb-font-size-text-md-relative);
+  line-height: var(--lb-line-height-text-md-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+  font-weight: 500;
+  color: var(--lb-toc-header-title-color-text);
+}
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 .ez-toc-link {
   color: var(--lb-toc-link-color-text);
   -webkit-text-decoration: none !important;
@@ -4477,6 +4578,15 @@
 .ez-toc-link:hover {
   color: var(--lb-toc-link-color-text-hover);
 }
+<<<<<<< HEAD
+=======
+.ez-toc-list {
+  font-size: var(--lb-font-size-text-md-relative);
+  line-height: var(--lb-line-height-text-md-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+}
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 .ez-toc-list-level-3, .ez-toc-list-level-4, .ez-toc-list-level-5 {
   margin-top: var(--wp--preset--spacing--70);
 }
@@ -4498,6 +4608,23 @@
   padding-top: var(--wp--preset--spacing--70);
   padding-left: var(--wp--preset--spacing--70);
 }
+<<<<<<< HEAD
+=======
+.ez-toc-icon-closed, .ez-toc-icon-opened {
+  position: relative;
+  font-size: var(--wp--preset--font-size--display-xs);
+  font-weight: normal;
+}
+.ez-toc-icon-closed {
+  color: var(--lb-toc-ico-closed-color-text);
+}
+.ez-toc-icon-opened {
+  color: var(--lb-toc-ico-opened-color-text);
+}
+.ez-toc-icon-toggle-span {
+  display: none;
+}
+>>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 /*!********************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/tooltip/tooltip.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************/

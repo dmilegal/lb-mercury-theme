@@ -4,3 +4,4 @@ require_once 'post/post.php';
 require_once 'breadcrumbs/breadcrumbs.php';
 require_once 'blocks/blocks.php';
 require_once 'acf-filter/acf-filter.php';
+require_once 'tocwp/tocwp.php';
