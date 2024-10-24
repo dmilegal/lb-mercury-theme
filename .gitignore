@@ -49,6 +49,7 @@ wp/wp-content/plugins/*
 !wp/wp-content/plugins/easy-accordion
 !wp/wp-content/plugins/lb-app-cpt-addon
 !wp/wp-content/plugins/lb-breadcrumb
+!wp/wp-content/plugins/acf-country
 !wp/wp-content/themes
 wp/wp-content/themes/*
 !wp/wp-content/themes/mercury-child/frontend/dist
