@@ -1949,17 +1949,10 @@ ul.wp-block-gallery.alignwide {
   width: 100%;
 }
 
-<<<<<<< HEAD
-.prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)):first-child {
-  margin-block-start: 0;
-}
-.prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)):last-child {
-=======
 .prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, .lb-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)):first-child {
   margin-block-start: 0;
 }
 .prose-spaces :where(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, .wp-block-image, .wp-block-columns, .lb-group-list, .lb-review-details, .lb-review-list, .lb-author-block, .lb-step-list, .wp-block-casino-card, .wp-block-lb-casino-card, .wp-block-bonus-card, .wp-block-relinking-list, .lb-relinking-list, .wp-block-toc, .lb-toc, [id*=sp_easy_accordion]):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)):last-child {
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
   margin-block-end: 0;
 }
 
@@ -2086,11 +2079,6 @@ ul.wp-block-gallery.alignwide {
   }
 }
 
-<<<<<<< HEAD
-.prose-spaces :where(.wp-block-toc):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
-  margin-block-start: var(--wp--preset--spacing--140);
-  margin-block-end: var(--wp--preset--spacing--140);
-=======
 .prose-spaces :where(.wp-block-toc, .lb-toc):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   margin-block-start: var(--wp--preset--spacing--160);
   margin-block-end: var(--wp--preset--spacing--160);
@@ -2100,7 +2088,6 @@ ul.wp-block-gallery.alignwide {
     margin-block-start: var(--wp--preset--spacing--140);
     margin-block-end: var(--wp--preset--spacing--140);
   }
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 }
 
 .prose-colors :where(h1, h2, h3, h4, h5, h6):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {

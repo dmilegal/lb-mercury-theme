@@ -10,7 +10,6 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-<<<<<<< HEAD
 /***/ }),
 
 /***/ "./src/admin/listing-bonus-category-bonus.ts":
@@ -51,8 +50,6 @@ __webpack_require__.r(__webpack_exports__);
   });
 })(jQuery);
 
-=======
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 /***/ })
 
 /******/ });
@@ -82,7 +79,6 @@ __webpack_require__.r(__webpack_exports__);
 /******/ }
 /******/ 
 /************************************************************************/
-<<<<<<< HEAD
 /******/ /* webpack/runtime/compat get default export */
 /******/ (() => {
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -112,8 +108,6 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ })();
 /******/ 
-=======
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 /******/ /* webpack/runtime/make namespace object */
 /******/ (() => {
 /******/ 	// define __esModule on exports
@@ -132,12 +126,9 @@ var __webpack_exports__ = {};
   \****************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var fonts_lhicon_stylesheet_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fonts/lhicon/stylesheet.css */ "./public/fonts/lhicon/stylesheet.css");
-<<<<<<< HEAD
 /* harmony import */ var _listing_bonus_category_bonus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./listing-bonus-category-bonus */ "./src/admin/listing-bonus-category-bonus.ts");
 /* harmony import */ var _listing_bonus_category_bonus__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_listing_bonus_category_bonus__WEBPACK_IMPORTED_MODULE_1__);
 
-=======
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 
 
 //# sourceMappingURL=admin.js.map

@@ -408,7 +408,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./src/blocks/review-card/variants/bonus-card/style.scss":
 /*!***************************************************************!*\
   !*** ./src/blocks/review-card/variants/bonus-card/style.scss ***!
@@ -421,8 +420,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-=======
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 /***/ "./src/blocks/review-card/variants/compact-bet/style.scss":
 /*!****************************************************************!*\
   !*** ./src/blocks/review-card/variants/compact-bet/style.scss ***!
@@ -1241,7 +1238,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./src/blocks/review-card/variants/bonus-card/index.ts":
 /*!*************************************************************!*\
   !*** ./src/blocks/review-card/variants/bonus-card/index.ts ***!
@@ -1254,8 +1250,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-=======
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 /***/ "./src/blocks/review-card/variants/compact-bet/index.ts":
 /*!**************************************************************!*\
   !*** ./src/blocks/review-card/variants/compact-bet/index.ts ***!
@@ -1340,11 +1334,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./default */ "./src/blocks/review-card/variants/default/index.ts");
 /* harmony import */ var _compact_review_bonus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./compact-review-bonus */ "./src/blocks/review-card/variants/compact-review-bonus/index.ts");
 /* harmony import */ var _compact_bet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./compact-bet */ "./src/blocks/review-card/variants/compact-bet/index.ts");
-<<<<<<< HEAD
 /* harmony import */ var _bonus_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bonus-card */ "./src/blocks/review-card/variants/bonus-card/index.ts");
 
-=======
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 
 
 
@@ -1374,7 +1365,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
-<<<<<<< HEAD
 /* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js");
 /* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/shared/scripts/consts */ "./src/shared/scripts/consts.ts");
@@ -1382,13 +1372,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_scripts_components_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/shared/scripts/components/modal */ "./src/shared/scripts/components/modal.ts");
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-=======
-/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js");
-/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/shared/scripts/consts */ "./src/shared/scripts/consts.ts");
-/* harmony import */ var _review_list_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./review-list.scss */ "./src/blocks/review-list/review-list.scss");
-/* harmony import */ var _shared_scripts_components_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/shared/scripts/components/modal */ "./src/shared/scripts/components/modal.ts");
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 
 
 
@@ -1398,7 +1381,6 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 
 
-<<<<<<< HEAD
 
 
 var signal = null;
@@ -1417,19 +1399,11 @@ function init() {
       var container = form.closest('.lb-review-list');
       filter(container);
     });
-=======
-function init() {
-  var btns = document.querySelectorAll('.lb-review-list__load-more');
-  var listEls = document.querySelectorAll('.lb-review-list');
-  btns.forEach(function (btn) {
-    btn.addEventListener('click', triggetLoad);
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
   });
   listEls.forEach(function (el) {
     el.addEventListener('click', function (e) {
       if (e.target.closest('button.lb-review-card__play')) triggetRefModal(el);
     });
-<<<<<<< HEAD
     initCatFilterSlider(el);
   });
 }
@@ -1493,63 +1467,17 @@ function _triggerLoad() {
     }, _callee, null, [[7, 14]]);
   }));
   return _triggerLoad.apply(this, arguments);
-=======
-  });
-}
-function triggetLoad(_x) {
-  return _triggetLoad.apply(this, arguments);
-}
-function _triggetLoad() {
-  _triggetLoad = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee(e) {
-    var btn, container, preparedQuery, data;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee$(_context) {
-      while (1) switch (_context.prev = _context.next) {
-        case 0:
-          btn = e.currentTarget;
-          container = btn.closest('.lb-review-list');
-          preparedQuery = prepareQuery(btn.dataset.query, {
-            paged: (+btn.dataset.currentPage || 1) + 1
-          });
-          btn.classList.add('lb-button--pending');
-          btn.disabled = true;
-          _context.prev = 5;
-          _context.next = 8;
-          return load(preparedQuery);
-        case 8:
-          data = _context.sent;
-          render(data.html, container);
-          _context.next = 15;
-          break;
-        case 12:
-          _context.prev = 12;
-          _context.t0 = _context["catch"](5);
-          console.error(_context.t0);
-        case 15:
-          btn.classList.remove('lb-button--pending');
-          btn.disabled = false;
-        case 17:
-        case "end":
-          return _context.stop();
-      }
-    }, _callee, null, [[5, 12]]);
-  }));
-  return _triggetLoad.apply(this, arguments);
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 }
 function load(_x2) {
   return _load.apply(this, arguments);
 }
 function _load() {
   _load = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee2(query) {
-<<<<<<< HEAD
     var _signal;
-=======
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
     var res, data;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
-<<<<<<< HEAD
           (_signal = signal) === null || _signal === void 0 || _signal.abort();
           signal = new AbortController();
           _context2.next = 4;
@@ -1564,18 +1492,6 @@ function _load() {
           data = _context2.sent;
           return _context2.abrupt("return", data);
         case 9:
-=======
-          _context2.next = 2;
-          return fetch("".concat(_shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__.API_URL, "aces/v1/html/reviews?").concat(query || ''));
-        case 2:
-          res = _context2.sent;
-          _context2.next = 5;
-          return res.json();
-        case 5:
-          data = _context2.sent;
-          return _context2.abrupt("return", data);
-        case 7:
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
         case "end":
           return _context2.stop();
       }
@@ -1585,7 +1501,6 @@ function _load() {
 }
 function prepareQuery(query, queryData, data) {
   var _params;
-<<<<<<< HEAD
   var params = qs__WEBPACK_IMPORTED_MODULE_8___default().parse(query);
   params.query = _objectSpread(_objectSpread({}, (_params = params) === null || _params === void 0 ? void 0 : _params.query), queryData);
   params = _objectSpread(_objectSpread({}, params), data);
@@ -1603,21 +1518,6 @@ function render(container, html, page, total_pages) {
   btn.dataset.currentPage = page + '';
   btn.dataset.totalPages = total_pages + '';
   if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';else btn.style.display = '';
-=======
-  var params = qs__WEBPACK_IMPORTED_MODULE_6___default().parse(query);
-  params.query = _objectSpread(_objectSpread({}, (_params = params) === null || _params === void 0 ? void 0 : _params.query), queryData);
-  params = _objectSpread(_objectSpread({}, params), data);
-  return qs__WEBPACK_IMPORTED_MODULE_6___default().stringify(params);
-}
-function render(html, container) {
-  var listEl = container.querySelector('.lb-review-list__list');
-  var btn = container.querySelector('.lb-review-list__load-more');
-  listEl.insertAdjacentHTML('beforeend', html);
-  window.CasinoCardsInit(listEl);
-  window.initPromoButton(listEl);
-  btn.dataset.currentPage = (+btn.dataset.currentPage || 1) + 1 + '';
-  if (+btn.dataset.currentPage >= +btn.dataset.totalPages) btn.style.display = 'none';
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 }
 function triggetRefModal(_x3) {
   return _triggetRefModal.apply(this, arguments);
@@ -1675,7 +1575,6 @@ function _triggetRefModal() {
   }));
   return _triggetRefModal.apply(this, arguments);
 }
-<<<<<<< HEAD
 function getFilterData(container) {
   var form = container.querySelector('.lb-review-list__cat-filter');
   if (!form) return {};
@@ -1697,8 +1596,6 @@ function initCatFilterSlider(container) {
     }
   });
 }
-=======
->>>>>>> 57d70fee8b74d0fa47a0c42d7285ec7998db655f
 init();
 
 /***/ }),
