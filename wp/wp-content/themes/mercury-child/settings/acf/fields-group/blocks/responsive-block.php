@@ -51,11 +51,11 @@ add_action('acf/include_fields', function () {
     ),
     'location' => array(
       array(
-        array(
-          'param' => 'block',
-          'operator' => '==',
-          'value' => 'lb/toc',
-        ),
+        // array(
+        //   'param' => 'block',
+        //   'operator' => '==',
+        //   'value' => 'lb/toc',
+        // ),
       ),
     ),
     'menu_order' => 100,
