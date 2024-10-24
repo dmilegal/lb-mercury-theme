@@ -1,16 +1,15 @@
 <?php
 // Получаем значения полей из $args
 $header_label = $args['header_label'] ?? '';
-$display_header_label = isset($args['display_header_label']) ? $args['display_header_label'] : true;
-$toggle_view = isset($args['toggle_view']) ? $args['toggle_view'] : true;
-$initial_view = $args['initial_view'] ?? 'show';
-$display_counter = isset($args['display_counter']) ? $args['display_counter'] : true;
+$display_header_label = !empty($args['display_header_label']) ? $args['display_header_label'] : 'inherit';
+$toggle_view = !empty($args['toggle_view']) ? $args['toggle_view'] : 'inherit';
+$initial_view = !empty($args['initial_view']) ? $args['initial_view'] : 'inherit';
+// $display_counter = !empty($args['display_counter']) ? $args['display_counter'] : true;
 // $post_types = $args['post_types'] ?? array('post', 'page');
 // $post_in = $args['post_in'] ?? '';
 $device_target = $args['device_target'] ?? 'both';
-$view_more = $args['view_more'] ?? 5;
-$isCollapsible = isset($args['is_collapsible']) ? $args['is_collapsible'] : false;
-$isOpened = isset($args['is_opened']) ? $args['is_opened'] : false;
+// $view_more = $args['view_more'] ?? 5;
+
 
 // Формируем атрибуты шорткода
 $shortcode_atts = array();
@@ -19,22 +18,16 @@ if (!empty($header_label)) {
     $shortcode_atts[] = 'header_label="' . esc_attr($header_label) . '"';
 }
 
-if (!$display_header_label) {
-    $shortcode_atts[] = 'display_header_label="no"';
-} else {
-    $shortcode_atts[] = 'display_header_label="yes"';
+if ($display_header_label == 'yes' || $display_header_label == 'no') {
+    $shortcode_atts[] = 'display_header_label="' . esc_attr($display_header_label) . '"';
 }
 
-if (!$toggle_view) {
-    $shortcode_atts[] = 'toggle_view="no"';
-} else {
-    $shortcode_atts[] = 'toggle_view="yes"';
+if ( $toggle_view == 'yes' || $toggle_view == 'no') {
+    $shortcode_atts[] = 'toggle_view="' . esc_attr($toggle_view) . '"';
 }
 
-if ($initial_view === 'hide') {
-    $shortcode_atts[] = 'initial_view="hide"';
-} else {
-    $shortcode_atts[] = 'initial_view="show"';
+if ($initial_view === 'hide' || $initial_view === 'show') {
+    $shortcode_atts[] = 'initial_view="' . esc_attr($initial_view) . '"';
 }
 
 // if (!$display_counter) {
@@ -60,9 +53,9 @@ if ($device_target && $device_target !== 'both') {
     $shortcode_atts[] = 'device_target="' . esc_attr($device_target) . '"';
 }
 
-if ($view_more && $view_more != 5) {
-    $shortcode_atts[] = 'view_more="' . intval($view_more) . '"';
-}
+// if ($view_more && $view_more != 5) {
+//     $shortcode_atts[] = 'view_more="' . intval($view_more) . '"';
+// }
 
 // Объединяем атрибуты шорткода
 $shortcode_str = implode(' ', $shortcode_atts);
