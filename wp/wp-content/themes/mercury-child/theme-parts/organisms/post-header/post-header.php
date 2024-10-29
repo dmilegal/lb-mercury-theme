@@ -27,9 +27,9 @@ if (empty($display_name))
         <span class="lb-post-header__pub-date">
           <?php if (get_theme_mod('mercury_time_ago_format')) {
           ?>
-            <?php printf(esc_html_x('%s ago', '%s = human-readable time difference', 'mercury-child'), human_time_diff(get_the_time('U', $postId), current_time('timestamp'))); ?>
+            <?php printf(esc_html_x('%s ago', '%s = human-readable time difference', 'mercury-child'), human_time_diff(get_the_time('U', $post->ID), current_time('timestamp'))); ?>
           <?php } else {
-            echo get_the_date('', $postId);
+            echo get_the_date('', $post->ID);
           } ?></span>
       <?php } ?>
     </div>

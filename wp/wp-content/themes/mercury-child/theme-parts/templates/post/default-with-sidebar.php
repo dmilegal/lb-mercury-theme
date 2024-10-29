@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="lb-layout lb-layout--with-sidebar">
+<div class="lb-layout lb-layout--post">
 	<div class="lb-layout__breadcrumbs">
 		<?php get_template_part('/theme-parts/molecules/breadcrumbs'); ?>
 	</div>
