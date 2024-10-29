@@ -156,7 +156,7 @@
     display: flex;
     justify-content: flex-end;
     column-gap: var(--wp--preset--spacing--110);
-    row-gap: var(--wp--preset--spacing--110);
+    row-gap: var(--wp--preset--spacing--85);
     padding: var(--wp--preset--spacing--100) var(--lb-review-card-padding-x);
     background-color: var(--lb-review-card-promo-color-background);
     border-bottom: 1px solid var(--lb-review-card-color-border);
@@ -185,7 +185,7 @@
 
   &__bonus {
     &-title {
-      @include font.get-text-styles('text-md', false);
+      @include font.get-text-styles('text-lg', false);
       font-weight: 600;
       flex-grow: 1;
     }
