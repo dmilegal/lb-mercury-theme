@@ -11,6 +11,7 @@ $authorId = $args['author_id'] ?? $post->post_author;
         'user_id' => $authorId,
         'show_bio' => true,
         'show_socials' => true,
+        'show_job' => true,
         'size' => 'xl'
     ]); ?>
 </div>

@@ -17,6 +17,12 @@
   }
 }
 
+body:has(.lb-layout__breadcrumbs) {
+  .lb-header {
+    border-bottom: none;
+  }
+}
+
 .lb-header {
   position: sticky;
   display: flex;

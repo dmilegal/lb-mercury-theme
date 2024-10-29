@@ -10,22 +10,12 @@ get_header();
 
 ?>
 
-<div class="lb-layout lb-layout--tight-content">
+<div class="lb-layout lb-layout--archive">
   <? if (!is_front_page()) { ?>
     <div class="lb-layout__breadcrumbs">
       <?php get_template_part('/theme-parts/molecules/breadcrumbs'); ?>
     </div>
   <? } ?>
-
-  <div class="lb-layout__banner">
-    <? get_template_part('theme-parts/cells/hero-banner', null, [
-      'title' => $bannerTitle,
-      'subtitle' => $bannerSubtitle,
-      'align' => $bannerTextContent ? 'left' : 'center',
-      'text_content' => $bannerTextContent,
-      'enable_published_date' => false,
-    ]); ?>
-  </div>
 
   <div class="lb-layout__content">
     <div class="lb-layout__inner">
@@ -64,6 +54,12 @@ get_header();
 
         <?php endif; ?>
       </div>
+    </div>
+    <div class="lb-layout__sidebar">
+    <? get_template_part('theme-parts/organisms/sidebar/sidebar', null, [
+							'sidebar_variant' => 'default',
+              'widget_id' => 'archive_sidebar'
+						]); ?>
     </div>
   </div>
 

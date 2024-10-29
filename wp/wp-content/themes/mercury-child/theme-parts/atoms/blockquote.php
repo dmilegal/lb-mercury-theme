@@ -23,7 +23,8 @@ $attrsStr = getAttributesString(array_intersect_key($args, array_flip(['href', '
         <div class="lb-blockquote__author not-prose">
           <? get_template_part('theme-parts/cells/user-block', null, [
             'user_id' => $authorId,
-            'size' => $userBlockSize
+            'size' => $userBlockSize,
+            'show_job' => true
           ]); ?>
         </div>
       <? } elseif ($cite) { ?>

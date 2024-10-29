@@ -8,24 +8,32 @@
   --lb-post-card-title-color-text: var(--lb-color-text-strong);
   --lb-post-card-title-color-text-hover: var(--lb-color-text-default);
   --lb-post-card-excerpt-color-text: var(--lb-color-text-default);
+  --lb-post-card-border-color: var(--lb-color-surface-outline-2);
+  
 }
 
 .lb-post-card {
+  padding: var(--wp--preset--spacing--110) 0;
+  border-bottom: 1px solid var(--lb-post-card-border-color);
+  @include breakpoints.media-breakpoint-down(xs) {
+    padding: var(--wp--preset--spacing--85) 0;
+  }
+ 
   &--grid {
     %inner {
       display: grid;
-      grid-template-columns: var(--wp--preset--spacing--560) 1fr;
-      column-gap: var(--wp--preset--spacing--100);
-      row-gap: var(--wp--preset--spacing--80);
+      grid-template-columns: 1fr 172px;
+      column-gap: var(--wp--preset--spacing--140);
       @include breakpoints.media-breakpoint-down(xs) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 83px;
+        column-gap: var(--wp--preset--spacing--120);
       }
     }
   }
 
   &--no-thumb {
     %inner {
-      display: block;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -49,7 +57,6 @@
     row-gap: var(--wp--preset--spacing--50);
     color: var(--lb-post-card-info-color-text);
     @include font.get-text-styles('text-xxs', false);
-    margin-bottom: var(--wp--preset--spacing--60);
     &-item {
       display: flex;
       column-gap: var(--wp--preset--spacing--55);
@@ -61,10 +68,25 @@
     }
   }
 
+  &__author {
+    display: flex;
+    align-items: center;
+    column-gap: var(--wp--preset--spacing--60);
+    margin-bottom: var(--wp--preset--spacing--70);
+    &-avatar {
+      border-radius: 50%;
+    }
+    &-name {
+      @include font.get-text-styles('text-sm', false);
+      color: var(--lb-post-card-title-color-text);
+      font-weight: 500;
+    }
+  }
+
   &__title {
     display: block;
-    @include font.get-text-styles('display-xs', false);
-    font-weight: 500;
+    @include font.get-text-styles('text-lg', false);
+    font-weight: 600;
     color: var(--lb-post-card-title-color-text);
     margin-bottom: var(--wp--preset--spacing--70);
     text-decoration: none;
@@ -75,9 +97,9 @@
   }
 
   &__excerpt {
-    @include font.get-text-styles('text-md', false);
+    @include font.get-text-styles('text-sm', false);
     color: var(--lb-post-card-excerpt-color-text);
-    margin-bottom: var(--wp--preset--spacing--80);
+    margin-bottom: var(--wp--preset--spacing--70);
   }
 
   &__read-more {

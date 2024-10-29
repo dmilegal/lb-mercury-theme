@@ -11,7 +11,8 @@ if (!$userIds) return;
   <? foreach ($userIds as $userId) {
     get_template_part('theme-parts/cells/user-block', null, [
       'user_id' => $userId,
-      'size' => $size
+      'size' => $size,
+      'show_job' => true
     ]);
   } ?>
 </div>

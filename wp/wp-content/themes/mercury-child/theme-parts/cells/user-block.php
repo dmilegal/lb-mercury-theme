@@ -8,6 +8,7 @@ $userId = $args['user_id'] ?? null;
 $size = $args['size'] ?? 'md';
 $showBio = $args['show_bio'] ?? false;
 $showSocials = $args['show_socials'] ?? false;
+$showJob = $args['show_job'] ?? false;
 
 // Detect if it is a single post with a post author
 if (!$userId)
@@ -43,7 +44,7 @@ $job_title = get_field('job_title', 'user_' . $userId);
                 <? if (!empty($display_name)) { ?>
                     <span class="lb-user-block__name"><?= $display_name ?></span>
                 <? } ?>
-                <? if ($job_title) { ?>
+                <? if ($showJob && $job_title) { ?>
                     <span class="lb-user-block__job"><?= $job_title ?></span>
                 <? } ?>
             </div>

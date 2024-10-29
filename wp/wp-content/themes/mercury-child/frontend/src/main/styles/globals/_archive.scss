@@ -11,7 +11,12 @@
 .lb-archive {
   &__pag {
     text-align: center;
-    margin-top: var(--wp--preset--spacing--130);
+    margin-top: var(--wp--preset--spacing--160);
+
+    @include breakpoints.media-breakpoint-down(xs) {
+      margin-top: var(--wp--preset--spacing--140)
+    }
+
   }
 
   &-not-found {
