@@ -141,6 +141,12 @@
       padding-bottom: var(--wp--preset--spacing--140);
       border-bottom: 1px solid var(--lb-layout-inner-color-border);
     }
+
+    %sidebar {
+      @include breakpoints.media-breakpoint-up(lg) {
+        padding-top: var(--wp--preset--spacing--120);
+      }
+    }
     
   }
 

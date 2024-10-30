@@ -9,7 +9,7 @@
 				<div class="lb-layout__inner">
 					<? get_template_part('theme-parts/organisms/post-header/post-header', null); ?>
 
-					<div class="prose-headings prose-content prose-spaces prose-colors">
+					<div class="prose-headings prose-content prose-spaces prose-colors prose-images">
 						<? the_content() ?>
 					</div>
 
