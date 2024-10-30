@@ -33,7 +33,6 @@ if (empty($display_name))
           } ?></span>
       <?php } ?>
     </div>
-
   </div>
   <div class="lb-post-header__block lb-post-header__block--toc lb-post-header__block--on_md">
     <?

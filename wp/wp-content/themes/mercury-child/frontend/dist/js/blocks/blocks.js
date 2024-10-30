@@ -288,6 +288,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/post-card/post-outlined-card.scss":
+/*!******************************************************!*\
+  !*** ./src/blocks/post-card/post-outlined-card.scss ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/post-footer/post-footer.scss":
 /*!*************************************************!*\
   !*** ./src/blocks/post-footer/post-footer.scss ***!
@@ -364,6 +376,18 @@ __webpack_require__.r(__webpack_exports__);
 /*!***********************************************************!*\
   !*** ./src/blocks/ref-review-modal/ref-review-modal.scss ***!
   \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/related-posts/related-posts.scss":
+/*!*****************************************************!*\
+  !*** ./src/blocks/related-posts/related-posts.scss ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -963,6 +987,8 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _post_card_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./post-card.scss */ "./src/blocks/post-card/post-card.scss");
+/* harmony import */ var _post_outlined_card_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./post-outlined-card.scss */ "./src/blocks/post-card/post-outlined-card.scss");
+
 
 
 /***/ }),
@@ -1144,6 +1170,40 @@ init();
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ref_review_modal_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ref-review-modal.scss */ "./src/blocks/ref-review-modal/ref-review-modal.scss");
 
+
+/***/ }),
+
+/***/ "./src/blocks/related-posts/related-posts.ts":
+/*!***************************************************!*\
+  !*** ./src/blocks/related-posts/related-posts.ts ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _related_posts_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./related-posts.scss */ "./src/blocks/related-posts/related-posts.scss");
+/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+
+
+
+function initRelatedPosts() {
+  var containers = document.querySelectorAll('.lb-related-posts');
+  containers.forEach(function (container) {
+    new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](container, {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      freeMode: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          freeMode: false,
+          spaceBetween: 20
+        }
+      }
+    });
+  });
+}
+initRelatedPosts();
 
 /***/ }),
 
@@ -2359,6 +2419,7 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/promo-bonus/promo-bonus.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/promo-button/promo-button.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/ref-review-modal/ref-review-modal.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/related-posts/related-posts.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/relinking-item/relinking-item.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/relinking-list/relinking-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/review-card/review-card.ts")))

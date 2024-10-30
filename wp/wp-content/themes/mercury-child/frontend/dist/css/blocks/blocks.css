@@ -2622,6 +2622,60 @@
   -webkit-text-decoration: none;
   text-decoration: none;
 }
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/post-card/post-outlined-card.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root {
+  --lb-post-outlined-card-info-color-text: var(--lb-color-text-default);
+  --lb-post-outlined-card-title-color-text: var(--lb-color-text-strong);
+  --lb-post-outlined-card-title-color-text-hover: var(--lb-color-text-default);
+  --lb-post-outlined-card-color-border: var(--lb-author-block-border-color);
+}
+
+.lb-post-outlined-card {
+  overflow: hidden;
+  display: block;
+  border-radius: var(--wp--preset--spacing--75);
+  border: 1px solid var(--lb-post-outlined-card-color-border);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+}
+.lb-post-outlined-card:hover {
+  opacity: 0.85;
+}
+.lb-post-outlined-card__image {
+  aspect-ratio: 228/132;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.lb-post-outlined-card__content {
+  padding: var(--wp--preset--spacing--80);
+}
+.lb-post-outlined-card__pub-date {
+  display: block;
+  font-size: var(--wp--preset--font-size--text-xxs);
+  line-height: var(--wp--custom--line-height--text-xxs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xxs, inherit);
+  color: var(--lb-post-outlined-card-info-color-text);
+  margin-bottom: var(--wp--preset--spacing--50);
+}
+.lb-post-outlined-card__title {
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  font-weight: 600;
+  color: var(--lb-post-outlined-card-title-color-text);
+}
 /*!****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/post-footer/post-footer.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************/
@@ -2931,6 +2985,37 @@
 }
 .ref-review-modal .lb-compact-casino-bonus-card.lb-compact-casino-bonus-card {
   padding-bottom: var(--wp--preset--spacing--80);
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/related-posts/related-posts.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+.lb-related-posts:not(.swiper-initialized) .swiper-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: var(--wp--preset--spacing--90);
+  column-gap: var(--wp--preset--spacing--90);
+}
+@media (max-width: 767.98px) {
+  .lb-related-posts:not(.swiper-initialized) .swiper-wrapper {
+    column-gap: var(--wp--preset--spacing--60);
+  }
+}
+.lb-related-posts:not(.swiper-initialized) .lb-related-posts__item {
+  width: auto;
+}
+.lb-related-posts:not(.swiper-initialized) .lb-related-posts__item:last-child {
+  margin-right: 0;
+}
+.lb-related-posts__item {
+  display: flex;
+}
+.lb-related-posts__item.lb-related-posts__item {
+  height: auto;
+}
+@media (max-width: 767.98px) {
+  .lb-related-posts__item {
+    width: 220px;
+  }
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/relinking-item/relinking-item.scss ***!
