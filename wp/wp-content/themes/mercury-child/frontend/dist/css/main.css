@@ -3678,7 +3678,7 @@ ul.wp-block-gallery.alignwide {
   line-height: var(--lb-line-height-display-sm-relative);
   letter-spacing: inherit;
   letter-spacing: var(--lb-letter-spacing-display-sm-relative, inherit);
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: var(--wp--preset--spacing--100);
 }
 
