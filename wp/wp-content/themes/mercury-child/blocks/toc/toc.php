@@ -13,11 +13,25 @@
  */
 $block_opts = getCommonBlockProps($block, $post_id, $is_preview, get_field('block_hide_on_desktop'), get_field('block_hide_on_mobile'));
 
-
 if ($is_preview || !$post_id) { ?>
   <div>
     <p>TOC: No preview available.</p>
   </div>
-<? } else {
-  get_template_part('theme-parts/molecules/toc', null, [...$block_opts, 'is_collapsible' => get_field('is_collapsible')]);
-}
+<? } else { ?>
+    <? get_template_part(
+      'theme-parts/molecules/toc',
+      null,
+      [
+        ...$block_opts,
+        'header_label' => get_field('header_label'),
+        'display_header_label' => get_field('display_header_label'),
+        'toggle_view' => get_field('toggle_view'),
+        'initial_view' => get_field('initial_view'),
+        // 'display_counter' => get_field('display_counter'),
+        // 'post_types' => get_field('post_types'),
+        // 'post_in' => get_field('post_in'),
+        'device_target' => get_field('device_target'),
+        // 'view_more' => get_field('view_more'),
+      ]
+    ); ?>
+<? }

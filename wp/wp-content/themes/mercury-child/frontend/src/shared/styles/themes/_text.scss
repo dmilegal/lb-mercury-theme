@@ -78,7 +78,7 @@ $isEditor: false !default;
 
 @include typo.make-prose(
   'spaces',
-  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.wp-block-columns,.lb-group-list,.lb-review-details,.lb-review-list,.lb-author-block,[id*="sp_easy_accordion"],.lb-step-list,.wp-block-casino-card,.wp-block-lb-casino-card,.wp-block-bonus-card,.wp-block-relinking-list,.lb-relinking-list,.wp-block-toc',
+  'h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote,.wp-block-image,.wp-block-columns,.lb-group-list,.lb-review-details,.lb-review-list,.lb-author-block,[id*="sp_easy_accordion"],.lb-step-list,.wp-block-casino-card,.wp-block-lb-casino-card,.wp-block-bonus-card,.wp-block-relinking-list,.lb-relinking-list,.wp-block-toc,.lb-toc',
   $proseCustomSelector,
   $isEditor
 ) {
@@ -216,9 +216,14 @@ $isEditor: false !default;
   }
 }
 
-@include typo.make-prose('spaces', '.wp-block-toc', $proseCustomSelector, $isEditor) {
-  margin-block-start: var(--wp--preset--spacing--140);
-  margin-block-end: var(--wp--preset--spacing--140);
+@include typo.make-prose('spaces', '.wp-block-toc,.lb-toc', $proseCustomSelector, $isEditor) {
+  margin-block-start: var(--wp--preset--spacing--160);
+  margin-block-end: var(--wp--preset--spacing--160);
+  @include breakpoints.media-breakpoint-down(sm) {
+    margin-block-start: var(--wp--preset--spacing--140);
+    margin-block-end: var(--wp--preset--spacing--140);
+  }
+  
 }
 
 @include typo.make-prose('colors', 'h1, h2, h3, h4, h5, h6', $proseCustomSelector) {
