@@ -2081,6 +2081,9 @@
   display: flex;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ce6b1b9 (up)
 /*!******************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/latest-posts/latest-posts.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************************/
@@ -2090,13 +2093,18 @@
 /**
 * font
 **/
+<<<<<<< HEAD
 :root,
 .editor-styles-wrapper {
+=======
+:root, .editor-styles-wrapper {
+>>>>>>> ce6b1b9 (up)
   --lb-latest-posts-title-color-text: var(--lb-color-text-strong);
   --lb-latest-posts-title-color-text-hover: var(--lb-color-text-medium);
   --lb-latest-posts-pub-date-color-text: var(--lb-color-text-default);
 }
 
+<<<<<<< HEAD
 .wp-block-latest-posts__list.wp-block-latest-posts__list {
   list-style: none;
   display: block;
@@ -2105,22 +2113,31 @@
   padding: 0;
   list-style: none;
 }
+=======
+>>>>>>> ce6b1b9 (up)
 .wp-block-latest-posts li {
   display: flex;
   flex-direction: column-reverse;
   row-gap: var(--wp--preset--spacing--50);
   margin: var(--wp--preset--spacing--110) 0;
 }
+<<<<<<< HEAD
 .wp-block-latest-posts li:before {
   content: none;
 }
+=======
+>>>>>>> ce6b1b9 (up)
 .wp-block-latest-posts li:first-child {
   margin-top: 0;
 }
 .wp-block-latest-posts li:last-child {
   margin-bottom: 0;
 }
+<<<<<<< HEAD
 .wp-block-latest-posts__post-title.wp-block-latest-posts__post-title {
+=======
+.wp-block-latest-posts__post-title {
+>>>>>>> ce6b1b9 (up)
   font-size: var(--lb-font-size-text-md-relative);
   line-height: var(--lb-line-height-text-md-relative);
   letter-spacing: inherit;
@@ -2131,7 +2148,11 @@
   text-decoration: none;
   transition: color 170ms ease-in-out;
 }
+<<<<<<< HEAD
 .wp-block-latest-posts__post-title.wp-block-latest-posts__post-title:hover {
+=======
+.wp-block-latest-posts__post-title:hover {
+>>>>>>> ce6b1b9 (up)
   color: var(--lb-latest-posts-title-color-text-hover);
 }
 .wp-block-latest-posts__post-date {
@@ -2141,12 +2162,15 @@
   letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
   color: var(--lb-latest-posts-pub-date-color-text);
 }
+<<<<<<< HEAD
 
 .lb-sidebar-block:has(.wp-block-latest-posts) .lb-sidebar-block__title {
   margin-bottom: var(--wp--preset--spacing--90);
 }
 =======
 >>>>>>> 271f1c1 (up)
+=======
+>>>>>>> ce6b1b9 (up)
 /*!******************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/layout/layout.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************/
@@ -3055,6 +3079,9 @@
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ce6b1b9 (up)
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/related-posts/related-posts.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
@@ -3085,11 +3112,15 @@
   .lb-related-posts__item {
     width: 220px;
   }
+<<<<<<< HEAD
 =======
 >>>>>>> f933be2 (up)
 }
 =======
 >>>>>>> 271f1c1 (up)
+=======
+}
+>>>>>>> ce6b1b9 (up)
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/relinking-item/relinking-item.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************/
