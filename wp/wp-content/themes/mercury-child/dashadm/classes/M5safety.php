@@ -9,7 +9,7 @@ class M5safety
 
 		add_action( 'admin_init', array( $this, 'setDefines' ) );
 		add_action( 'admin_init', array( $this, 'rmvLeftMenu' ) );
-		add_action( 'admin_bar_menu', array( $this, 'rmvTopMenu' ), 999 );
+		add_action( 'wp_before_admin_bar_render', array( $this, 'rmvTopMenu' ), 999 );
 		
 	}
 
@@ -42,6 +42,9 @@ class M5safety
 		$wp_admin_bar->remove_node('autoptimize');
 		$wp_admin_bar->remove_node('updraft_admin_node');
 		$wp_admin_bar->remove_node('w3tc');
+		$wp_admin_bar->remove_node('wp-rocket');
+		$wp_admin_bar->remove_node('comments');
+		$wp_admin_bar->remove_node('query-monitor');
 	}
 }
 new M5safety();
