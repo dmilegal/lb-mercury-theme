@@ -1,5 +1,6 @@
 @use '@/shared/styles/mixins/container';
 @use '@/shared/styles/mixins/breakpoints';
+@use '@/shared/styles/mixins/font';
 
 :root {
   --lb-layout-content-grid-col-start: 1;
@@ -9,6 +10,7 @@
   --lb-layout-sidebar-grid-col-start: 1;
   --lb-layout-sidebar-grid-col-end: -1;
   --lb-layout-breadcrumbs-color-border: var(--lb-color-surface-high);
+  --lb-layout-inner-color-border: var(--lb-color-surface-outline-1);
 }
 
 .lb-main {
@@ -25,7 +27,11 @@
     --lb-layout-content-grid-col-start: 1;
     --lb-layout-content-grid-col-end: -1;
 
-
+    %sidebar {
+    @include breakpoints.media-breakpoint-down(md) {
+      display: none;
+    }
+  }
 
     @include breakpoints.media-breakpoint-up(lg) {
       position: relative;
@@ -50,6 +56,10 @@
       grid-row: 1 / -1;
       grid-column: var(--lb-layout-sidebar-grid-col-start) /
         var(--lb-layout-sidebar-grid-col-end);
+
+        @include breakpoints.media-breakpoint-down(md) {
+          display: none;
+        }
     }
 
     %inner {
@@ -60,7 +70,11 @@
   }
 
   &--tight {
-    
+    %sidebar {
+      @include breakpoints.media-breakpoint-down(md) {
+        display: none;
+      }
+    }
   }
 
   &--tight-content {
@@ -70,9 +84,70 @@
       justify-content: center;
     }
 
-    %inner {
+    %sidebar {
+      @include breakpoints.media-breakpoint-down(md) {
+        display: none;
+      }
     }
 
+  }
+
+  &--post {
+    --lb-layout-gap-x: var(--wp--preset--spacing--200);
+    --lb-layout-grid-col-template: calc(100% - 280px - var(--lb-layout-gap-x)) 280px;
+
+    
+
+    @include breakpoints.media-breakpoint-down(md) {
+      --lb-layout-grid-col-template: 1fr;
+    }
+
+    %content, %related-posts {
+      @include breakpoints.media-breakpoint-up(xl) {
+        padding-left: calc(
+          var(--wp--preset--spacing--230) + var(--layout--content-padding)
+        );
+        padding-right: calc(
+          var(--wp--preset--spacing--230) + var(--layout--content-padding)
+        );
+      }
+    }
+    
+    %content {
+      padding-top: var(--wp--preset--spacing--155);
+      padding-bottom: var(--wp--preset--spacing--280);
+      row-gap: var(--wp--preset--spacing--140);
+
+      @include breakpoints.media-breakpoint-down(sm) {
+        padding-top: var(--wp--preset--spacing--120);
+        padding-bottom: var(--wp--preset--spacing--120);
+      }
+    }
+
+    &:has(%related-posts) {
+      %content {
+        padding-bottom: 0;
+      }
+    }
+
+    %related-posts {
+      padding-bottom: var(--wp--preset--spacing--280);
+      @include breakpoints.media-breakpoint-down(sm) {
+        padding-bottom: var(--wp--preset--spacing--120);
+      }
+    }
+
+    %inner {
+      padding-bottom: var(--wp--preset--spacing--140);
+      border-bottom: 1px solid var(--lb-layout-inner-color-border);
+    }
+
+    %sidebar {
+      @include breakpoints.media-breakpoint-up(lg) {
+        padding-top: var(--wp--preset--spacing--120);
+      }
+    }
+    
   }
 
   &__relative {
@@ -81,14 +156,16 @@
 
   &__content,
   &__precontent,
-  &__aftercontent {
+  &__aftercontent,
+  &__related-posts {
     display: grid;
     grid-template-columns: var(--lb-layout-grid-col-template);
     column-gap: var(--lb-layout-gap-x);
     @include container.make-container-max-width();
 
     @include breakpoints.media-breakpoint-down(md) {
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -132,9 +209,6 @@
   }
 
   &__sidebar {
-    @include breakpoints.media-breakpoint-down(md) {
-      display: none;
-    }
     @extend %sidebar;
   }
 
@@ -147,5 +221,20 @@
     padding-bottom: var(--wp--preset--spacing--85);
     border-bottom: 1px solid var(--lb-layout-breadcrumbs-color-border);
     @include container.make-container-max-width();
+  }
+
+  &__related-posts {
+    margin-top: var(--wp--preset--spacing--240);
+
+    @include breakpoints.media-breakpoint-down(md) {
+      margin-top: var(--wp--preset--spacing--140);
+    }
+    &-title {
+      @include font.get-text-styles('display-sm');
+      font-weight: 500;
+      margin-bottom: var(--wp--preset--spacing--100);
+    }
+
+    @extend %related-posts;
   }
 }

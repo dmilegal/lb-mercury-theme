@@ -1,0 +1,47 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+:root {
+  --lb-post-outlined-card-info-color-text: var(--lb-color-text-default);
+  --lb-post-outlined-card-title-color-text: var(--lb-color-text-strong);
+  --lb-post-outlined-card-title-color-text-hover: var(--lb-color-text-default);
+  --lb-post-outlined-card-color-border: var(--lb-author-block-border-color);
+}
+
+.lb-post-outlined-card {
+  overflow: hidden;
+  display: block;
+  border-radius: var(--wp--preset--spacing--75);
+  border: 1px solid var(--lb-post-outlined-card-color-border);
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &__image {
+    aspect-ratio: 228/132;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: var(--wp--preset--spacing--80);
+  }
+
+  &__pub-date {
+    display: block;
+    @include font.get-text-styles('text-xxs', false);
+    color: var(--lb-post-outlined-card-info-color-text);
+    margin-bottom: var(--wp--preset--spacing--50);
+  }
+
+  &__title {
+    @include font.get-text-styles('text-sm', false);
+    font-weight: 600;
+    color: var(--lb-post-outlined-card-title-color-text);
+  }
+}
