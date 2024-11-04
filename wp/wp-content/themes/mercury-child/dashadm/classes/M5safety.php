@@ -33,6 +33,9 @@ class M5safety
 		remove_submenu_page( 'options-general.php', 'aFhfc_options' );
 		remove_submenu_page( 'options-general.php', 'updraftplus' );
 		remove_submenu_page( 'options-general.php', 'wpsupercache' );
+		remove_submenu_page( 'options-general.php', 'wprocket' );
+		remove_submenu_page( 'options-general.php', 'whl_settings' );
+		remove_submenu_page( 'options-general.php', 'acfe-options' );
 	}
 
 	public function rmvTopMenu(){
