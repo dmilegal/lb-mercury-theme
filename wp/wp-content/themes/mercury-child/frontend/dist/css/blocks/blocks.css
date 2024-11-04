@@ -2080,54 +2080,6 @@
 .lb-hero-review-banner__license-logo {
   display: flex;
 }
-/*!******************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/latest-posts/latest-posts.scss ***!
-  \******************************************************************************************************************************************************************************************************************************************************************/
-/**
-* helpers
-**/
-/**
-* font
-**/
-:root, .editor-styles-wrapper {
-  --lb-latest-posts-title-color-text: var(--lb-color-text-strong);
-  --lb-latest-posts-title-color-text-hover: var(--lb-color-text-medium);
-  --lb-latest-posts-pub-date-color-text: var(--lb-color-text-default);
-}
-
-.wp-block-latest-posts li {
-  display: flex;
-  flex-direction: column-reverse;
-  row-gap: var(--wp--preset--spacing--50);
-  margin: var(--wp--preset--spacing--110) 0;
-}
-.wp-block-latest-posts li:first-child {
-  margin-top: 0;
-}
-.wp-block-latest-posts li:last-child {
-  margin-bottom: 0;
-}
-.wp-block-latest-posts__post-title {
-  font-size: var(--lb-font-size-text-md-relative);
-  line-height: var(--lb-line-height-text-md-relative);
-  letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
-  font-weight: 600;
-  color: var(--lb-latest-posts-title-color-text);
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  transition: color 170ms ease-in-out;
-}
-.wp-block-latest-posts__post-title:hover {
-  color: var(--lb-latest-posts-title-color-text-hover);
-}
-.wp-block-latest-posts__post-date {
-  font-size: var(--lb-font-size-text-xxs-relative);
-  line-height: var(--lb-line-height-text-xxs-relative);
-  letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
-  color: var(--lb-latest-posts-pub-date-color-text);
-}
 /*!******************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/layout/layout.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************/
@@ -3033,37 +2985,6 @@
 }
 .ref-review-modal .lb-compact-casino-bonus-card.lb-compact-casino-bonus-card {
   padding-bottom: var(--wp--preset--spacing--80);
-}
-/*!********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/related-posts/related-posts.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************/
-.lb-related-posts:not(.swiper-initialized) .swiper-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: var(--wp--preset--spacing--90);
-  column-gap: var(--wp--preset--spacing--90);
-}
-@media (max-width: 767.98px) {
-  .lb-related-posts:not(.swiper-initialized) .swiper-wrapper {
-    column-gap: var(--wp--preset--spacing--60);
-  }
-}
-.lb-related-posts:not(.swiper-initialized) .lb-related-posts__item {
-  width: auto;
-}
-.lb-related-posts:not(.swiper-initialized) .lb-related-posts__item:last-child {
-  margin-right: 0;
-}
-.lb-related-posts__item {
-  display: flex;
-}
-.lb-related-posts__item.lb-related-posts__item {
-  height: auto;
-}
-@media (max-width: 767.98px) {
-  .lb-related-posts__item {
-    width: 220px;
-  }
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/relinking-item/relinking-item.scss ***!
