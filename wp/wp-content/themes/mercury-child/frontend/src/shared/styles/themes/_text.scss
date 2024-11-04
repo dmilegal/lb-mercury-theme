@@ -238,10 +238,6 @@ $isEditor: false !default;
   color: var(--lb-ui-color-text);
 }
 
-@include typo.make-prose('images', '.wp-block-image img', $proseCustomSelector) {
-  border-radius: var(--wp--preset--spacing--85);
-}
-
 @each $name, $params in text.$body-fonts {
   .has-#{$name}-font-size {
     font-size: map.get($params, 'font-size');

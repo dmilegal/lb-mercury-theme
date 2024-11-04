@@ -21,4 +21,3 @@ require_once 'blocks/blocks.php';
 require_once 'get-review-card-title.php';
 require_once 'get-review-data.php';
 require_once 'blocks/blocks.php';
-require_once 'get-related-posts.php';
