@@ -2089,17 +2089,29 @@
 /**
 * font
 **/
-:root, .editor-styles-wrapper {
+:root,
+.editor-styles-wrapper {
   --lb-latest-posts-title-color-text: var(--lb-color-text-strong);
   --lb-latest-posts-title-color-text-hover: var(--lb-color-text-medium);
   --lb-latest-posts-pub-date-color-text: var(--lb-color-text-default);
 }
 
+.wp-block-latest-posts__list.wp-block-latest-posts__list {
+  list-style: none;
+  display: block;
+}
+.wp-block-latest-posts.wp-block-latest-posts li {
+  padding: 0;
+  list-style: none;
+}
 .wp-block-latest-posts li {
   display: flex;
   flex-direction: column-reverse;
   row-gap: var(--wp--preset--spacing--50);
   margin: var(--wp--preset--spacing--110) 0;
+}
+.wp-block-latest-posts li:before {
+  content: none;
 }
 .wp-block-latest-posts li:first-child {
   margin-top: 0;
@@ -2107,7 +2119,7 @@
 .wp-block-latest-posts li:last-child {
   margin-bottom: 0;
 }
-.wp-block-latest-posts__post-title {
+.wp-block-latest-posts__post-title.wp-block-latest-posts__post-title {
   font-size: var(--lb-font-size-text-md-relative);
   line-height: var(--lb-line-height-text-md-relative);
   letter-spacing: inherit;
@@ -2118,7 +2130,7 @@
   text-decoration: none;
   transition: color 170ms ease-in-out;
 }
-.wp-block-latest-posts__post-title:hover {
+.wp-block-latest-posts__post-title.wp-block-latest-posts__post-title:hover {
   color: var(--lb-latest-posts-title-color-text-hover);
 }
 .wp-block-latest-posts__post-date {
@@ -2127,6 +2139,10 @@
   letter-spacing: inherit;
   letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
   color: var(--lb-latest-posts-pub-date-color-text);
+}
+
+.lb-sidebar-block:has(.wp-block-latest-posts) .lb-sidebar-block__title {
+  margin-bottom: var(--wp--preset--spacing--90);
 }
 /*!******************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/layout/layout.scss ***!
