@@ -1,0 +1,6 @@
+{
+  "disallowed_blocks": [
+    "core/quote",
+    "core/button"
+  ]
+}
