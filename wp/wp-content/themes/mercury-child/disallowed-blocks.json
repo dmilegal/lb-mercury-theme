@@ -1,6 +1,13 @@
 {
   "disallowed_blocks": [
     "core/quote",
-    "core/button"
+    "core/button",
+    "yarpp/yarpp-block",
+    "core/legacy-widget",
+    "yoast-seo/breadcrumbs",
+    "yoast/faq-block",
+    "yoast/how-to-block",
+    "core/buttons"
+
   ]
 }
