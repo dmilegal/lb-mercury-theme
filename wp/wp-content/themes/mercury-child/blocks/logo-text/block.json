@@ -4,9 +4,9 @@
   "description": "Block Logo and Text",
   "style": [ "logo-text" ],
   "editorStyle": ["logo-text-editor"],
-  "category": "formatting",
+  "category": "lb-main",
   "icon": "align-pull-left",
-  "keywords": ["logo & text", "image & text","media & text", "media"],
+  "keywords": ["lb","logo & text", "image & text","media & text", "media", "логотип & текст", "изображение & текст", "медиа & текст", "медиа"],
   "acf": {
       "mode": "preview",
       "renderTemplate": "logo-text.php"

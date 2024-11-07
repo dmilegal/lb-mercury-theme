@@ -4,9 +4,9 @@
   "title": "Sidebar Block",
   "style": ["sidebar"],
   "editorStyle": [],
-  "category": "text",
+  "category": "lb-main",
   "icon": "align-right",
-  "keywords": ["sidebar", "sidebar item"],
+  "keywords": ["lb", "sidebar", "sidebar item", "сайдбар", "сайдбар блок", "сайдбар элемент"],
   "providesContext": {
       "acf/fields": "data"
   },

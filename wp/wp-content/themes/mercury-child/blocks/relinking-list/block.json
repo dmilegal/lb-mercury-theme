@@ -6,9 +6,9 @@
   "style": ["relinking-list", "relinking-item"],
   "editorStyle": [],
   "script": ["relinking-list", "relinking-item"],
-  "category": "formatting",
+  "category": "lb-main",
   "icon": "admin-links",
-  "keywords": ["relinking list", "перелинковка", "list"],
+  "keywords": ["lb", "relinking list", "перелинковка", "list", "перелинковка ссылок", "ссылки", "перелинковка"],
   "supports": {
 		"align": false,
 		"mode": false,

@@ -6,9 +6,9 @@
   "style": ["post-info"],
   "editorStyle": [],
   "script": ["post-info"],
-  "category": "formatting",
+  "category": "lb-main",
   "icon": "info-outline",
-  "keywords": ["post info", "инфо"],
+  "keywords": ["lb", "post info", "инфо", "пост инфо"],
   "acf": {
       "mode": "preview",
       "renderTemplate": "post-info.php"
