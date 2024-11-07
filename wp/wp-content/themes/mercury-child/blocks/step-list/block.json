@@ -4,9 +4,9 @@
   "title": "Step List",
   "style": ["step-list"],
   "editorStyle": ["step-list-editor"],
-  "category": "text",
+  "category": "lb-main",
   "icon": "welcome-learn-more",
-  "keywords": ["how to", "list", "step list", "check list"],
+  "keywords": ["lb", "how to", "list", "step list", "check list", "как сделать", "список", "список шагов", "контрольный список"],
   "providesContext": {
       "acf/fields": "data"
   },

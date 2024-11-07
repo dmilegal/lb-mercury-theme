@@ -6,9 +6,9 @@
   "style": ["review-list","review-card", "button", "badge", "promo-button"],
   "editorStyle": [],
   "script": ["review-list","review-card", "button","badge", "promo-button"],
-  "category": "formatting",
+  "category": "lb-main",
   "icon": "book",
-  "keywords": ["review list", "casino list", "casino selection", "casino cards", "list", "selection"],
+  "keywords": ["lb", "review list", "casino list", "casino selection", "casino cards", "list", "selection", "список обзоров", "список казино", "список бонусов", "список букмейкеров", "выбор казино", "карточки казино", "карточки бонусов", "карточки обзоров", "карточки букмейкеров", "список", "выбор"],
   "acf": {
       "mode": "auto",
       "renderTemplate": "review-list.php"

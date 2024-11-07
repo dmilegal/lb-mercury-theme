@@ -6,9 +6,9 @@
   "style": ["bonus-card", "button", "promo-button"],
   "editorStyle": [],
   "script": ["bonus-card", "button", "promo-button"],
-  "category": "formatting",
+  "category": "lb-main",
   "icon": "tickets-alt",
-  "keywords": ["bonus", "promo bonus", "promo"],
+  "keywords": ["bonus", "promo bonus", "promo", "бонус", "промо", "промо бонус"],
   "acf": {
       "mode": "auto",
       "renderTemplate": "bonus-card.php"

@@ -4,9 +4,9 @@
   "description": "Our Team block.",
   "style": [ "our-team-css" ],
   "editorStyle": ["our-team-editor-css", "member-block-css"],
-  "category": "formatting",
+  "category": "lb-main",
   "icon": "groups",
-  "keywords": ["team", "users"],
+  "keywords": ["lb", "team", "users", "команда", "пользователи"],
   "acf": {
       "mode": "preview",
       "renderTemplate": "our-team.php"

@@ -4,9 +4,9 @@
   "title": "Group List",
   "style": ["group-list"],
   "editorStyle": ["group-list-editor"],
-  "category": "formatting",
+  "category": "lb-main",
   "icon": "list-view",
-  "keywords": ["advantages", "pros", "cons", "disadvantages", "compare", "list", "group"],
+  "keywords": ["lb", "advantages", "pros", "cons", "disadvantages", "compare", "list", "group", "преимущества", "недостатки", "сравнение", "группа", "список"],
   "acf": {
       "mode": "preview",
       "renderTemplate": "group-list.php"

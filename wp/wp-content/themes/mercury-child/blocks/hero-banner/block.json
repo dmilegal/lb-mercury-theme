@@ -6,9 +6,9 @@
   "style": ["hero-banner"],
   "editorStyle": [],
   "script": ["hero-banner"],
-  "category": "formatting",
+  "category": "lb-main",
   "icon": "align-wide",
-  "keywords": ["hero banner", "главный баннер"],
+  "keywords": ["lb","hero banner", "главный баннер"],
   "acf": {
       "mode": "auto",
       "renderTemplate": "hero-banner.php"

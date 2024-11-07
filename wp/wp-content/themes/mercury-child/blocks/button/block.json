@@ -5,9 +5,9 @@
   "description": "",
   "style": [ "button" ],
   "editorStyle": ["button-editor"],
-  "category": "text",
+  "category": "lb-main",
   "icon": "button",
-  "keywords": ["button", "link"],
+  "keywords": ["lb", "button", "link", "кнопка", "ссылка"],
   "acf": {
       "mode": "preview",
       "renderTemplate": "button.php"

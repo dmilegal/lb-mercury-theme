@@ -5,9 +5,9 @@
   "description": "",
   "style": ["author-block", "social-link"],
   "editorStyle": [],
-  "category": "text",
+  "category": "lb-main",
   "icon": "id",
-  "keywords": ["author-block", "social-link"],
+  "keywords": ["lb", "author block", "social link", "авторский блок", "социальная ссылка"],
   "acf": {
       "mode": "preview",
       "renderTemplate": "author.php"

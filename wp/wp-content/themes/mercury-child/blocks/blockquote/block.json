@@ -5,9 +5,9 @@
   "description": "",
   "style": ["blockquote", "user-block"],
   "editorStyle": [],
-  "category": "text",
+  "category": "lb-main",
   "icon": "format-quote",
-  "keywords": ["blockquote", "cite", "quote"],
+  "keywords": ["lb","blockquote", "cite", "quote", "цитата", "цитат", "кавычки"],
   "acf": {
       "mode": "preview",
       "renderTemplate": "blockquote.php"

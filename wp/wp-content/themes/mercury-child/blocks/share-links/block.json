@@ -4,9 +4,9 @@
   "title": "Share Links",
   "style": ["share-links", "social-link"],
   "editorStyle": [],
-  "category": "text",
+  "category": "lb-main",
   "icon": "align-right",
-  "keywords": ["share links", "share"],
+  "keywords": ["lb", "share links", "share", "делиться ссылками", "делиться"],
   "providesContext": {
       "acf/fields": "data"
   },
