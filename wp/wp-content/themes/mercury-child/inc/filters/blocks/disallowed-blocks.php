@@ -38,4 +38,5 @@ function lb_disallowed_block_types_from_json( $allowed_blocks ) {
   // В случае ошибки возвращаем все блоки по умолчанию
   return $allowed_blocks;
 }
-add_filter( 'allowed_block_types', 'lb_disallowed_block_types_from_json', priority: 9999 );
+//add_filter( 'allowed_block_types', 'lb_disallowed_block_types_from_json', priority: 9999 );
+add_filter( 'allowed_block_types_all', 'lb_disallowed_block_types_from_json', priority: 9999 );
