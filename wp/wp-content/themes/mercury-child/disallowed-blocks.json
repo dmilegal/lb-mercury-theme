@@ -7,7 +7,10 @@
     "yoast-seo/breadcrumbs",
     "yoast/faq-block",
     "yoast/how-to-block",
-    "core/buttons"
-
+    "core/buttons",
+    "lloc/msls-widget-block",
+    "core/avatar",
+    "core/social-links",
+    "contact-form-7/contact-form-selector"
   ]
 }
