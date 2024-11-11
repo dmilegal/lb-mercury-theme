@@ -4,9 +4,9 @@
   "title": "Table of contents",
   "style": ["toc"],
   "editorStyle": [],
-  "category": "text",
+  "category": "lb-main",
   "icon": "clipboard",
-  "keywords": ["table of contents", "toc"],
+  "keywords": ["lb", "toc", "table of contents", "содержание", "содержание страницы"],
   "providesContext": {
       "acf/fields": "data"
   },

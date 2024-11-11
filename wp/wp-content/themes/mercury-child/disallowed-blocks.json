@@ -1,0 +1,16 @@
+{
+  "disallowed_blocks": [
+    "core/quote",
+    "core/button",
+    "yarpp/yarpp-block",
+    "core/legacy-widget",
+    "yoast-seo/breadcrumbs",
+    "yoast/faq-block",
+    "yoast/how-to-block",
+    "core/buttons",
+    "lloc/msls-widget-block",
+    "core/avatar",
+    "core/social-links",
+    "contact-form-7/contact-form-selector"
+  ]
+}

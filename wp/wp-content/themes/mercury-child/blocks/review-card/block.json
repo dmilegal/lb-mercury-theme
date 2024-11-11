@@ -6,9 +6,9 @@
   "style": ["review-card", "button", "badge", "promo-button"],
   "editorStyle": [],
   "script": ["review-card", "button","badge", "promo-button"],
-  "category": "formatting",
+  "category": "lb-main",
   "icon": "portfolio",
-  "keywords": ["review card", "bookmaker card", "casino card", "casino", "bookmaker", "review"],
+  "keywords": ["lb", "review card", "bookmaker card", "casino card", "casino", "bookmaker", "review", "казино", "карточка казино", "бонус", "карточка бонуса", "карточка букмейкера", "карточка", "бонус", "букмейкер", "обзор", "карточка обзора"],
   "supports": {
 		"interactivity": true
 	},

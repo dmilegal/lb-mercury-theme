@@ -4,9 +4,9 @@
   "title": "Contributor List",
   "style": ["contributor-list", "user-block"],
   "editorStyle": [],
-  "category": "text",
+  "category": "lb-main",
   "icon": "groups",
-  "keywords": ["contributors", "contributor list", "authors", "co-authors"],
+  "keywords": ["lb", "contributors", "contributor list", "authors", "co-authors", "авторы", "соавторы", "авторы статей", "соавторы статей"],
   "providesContext": {
     "acf/fields": "data"
   },

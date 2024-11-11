@@ -6,9 +6,9 @@
   "style": ["layout"],
   "editorStyle": [],
   "script": ["layout"],
-  "category": "formatting",
+  "category": "lb-main",
   "icon": "media-document",
-  "keywords": ["layout", "шаблон"],
+  "keywords": ["lb","layout", "шаблон"],
   "acf": {
       "mode": "preview",
       "renderTemplate": "layout.php"

@@ -6,9 +6,9 @@
   "style": ["link-with-icon-list", "link-with-icon"],
   "editorStyle": [],
   "script": ["link-with-icon-list", "link-with-icon"],
-  "category": "formatting",
+  "category": "lb-main",
   "icon": "menu-alt3",
-  "keywords": ["link With icon List", "icons", "links"],
+  "keywords": ["lb", "link With icon List", "icons", "links", "ссылки с иконками", "иконки", "ссылки"],
   "acf": {
       "mode": "auto",
       "renderTemplate": "link-with-icon-list.php"
