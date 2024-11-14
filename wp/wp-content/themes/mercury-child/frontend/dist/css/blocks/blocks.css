@@ -2080,6 +2080,7 @@
 .lb-hero-review-banner__license-logo {
   display: flex;
 }
+<<<<<<< HEAD
 /*!******************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/latest-posts/latest-posts.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************************/
@@ -2144,6 +2145,8 @@
 .lb-sidebar-block:has(.wp-block-latest-posts) .lb-sidebar-block__title {
   margin-bottom: var(--wp--preset--spacing--90);
 }
+=======
+>>>>>>> 2396287800a394a0b7f5eb3d8bbfa5d830653870
 /*!******************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/layout/layout.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************/
@@ -2686,6 +2689,7 @@
   -webkit-text-decoration: none;
   text-decoration: none;
 }
+<<<<<<< HEAD
 /*!*********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/post-card/post-outlined-card.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************************/
@@ -2740,6 +2744,8 @@
   font-weight: 600;
   color: var(--lb-post-outlined-card-title-color-text);
 }
+=======
+>>>>>>> 2396287800a394a0b7f5eb3d8bbfa5d830653870
 /*!****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/post-footer/post-footer.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************/
@@ -2789,6 +2795,7 @@
 :root {
   --lb-post-header-block-title-color-text: var(--lb-color-on-surface);
   --lb-post-header-soc-color-border: var(--lb-color-surface-outline-1);
+<<<<<<< HEAD
   --lb-post-header-title-color-text: var(--lb-color-text-strong);
   --lb-post-header-author-name-color-text: var(--lb-color-text-strong);
   --lb-post-header-pub-date-color-text: var(--lb-color-text-default);
@@ -2797,6 +2804,14 @@
 
 .lb-post-header {
   margin-bottom: var(--wp--preset--spacing--100);
+=======
+}
+
+.lb-post-header {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--wp--preset--spacing--140);
+>>>>>>> 2396287800a394a0b7f5eb3d8bbfa5d830653870
 }
 .lb-post-header__block--toc {
   padding: var(--wp--preset--spacing--120) 0 0;
@@ -2815,6 +2830,7 @@
   font-weight: 600;
   margin-bottom: var(--wp--preset--spacing--75);
 }
+<<<<<<< HEAD
 .lb-post-header__to-archive {
   font-size: var(--lb-font-size-text-sm-relative);
   line-height: var(--lb-line-height-text-sm-relative);
@@ -2868,6 +2884,8 @@
   letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
   color: var(--lb-post-header-pub-date-color-text);
 }
+=======
+>>>>>>> 2396287800a394a0b7f5eb3d8bbfa5d830653870
 /*!************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/post-info/post-info.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************/
@@ -3050,6 +3068,7 @@
 .ref-review-modal .lb-compact-casino-bonus-card.lb-compact-casino-bonus-card {
   padding-bottom: var(--wp--preset--spacing--80);
 }
+<<<<<<< HEAD
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/related-posts/related-posts.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
@@ -3081,6 +3100,8 @@
     width: 220px;
   }
 }
+=======
+>>>>>>> 2396287800a394a0b7f5eb3d8bbfa5d830653870
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/relinking-item/relinking-item.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************/
@@ -4094,6 +4115,10 @@
   }
 }
 .lb-review-card__bonus-detail-title {
+<<<<<<< HEAD
+=======
+  white-space: nowrap;
+>>>>>>> 2396287800a394a0b7f5eb3d8bbfa5d830653870
   font-size: var(--wp--preset--font-size--text-xs);
   line-height: var(--wp--custom--line-height--text-xs);
   letter-spacing: inherit;
