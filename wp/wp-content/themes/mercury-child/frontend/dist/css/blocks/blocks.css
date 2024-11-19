@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :root{--ag-border-color: var(--lb-color-surface-outline-3);--ag-form-border-width: 1px;--ag-text-heading-color: var(--lb-color-text-strong);--ag-text-color: var(--lb-color-text-strong);--ag-content-color: var(--lb-color-text-default);--ag-form-border: 1px solid var(--lb-color-surface-outline-3);--ag-form-radius: var(--wp--preset--spacing--85);--ag-text-align: center;--ag-text-heading-margin: 0px;--ag-form-padding: 24px;--ag-background-color: rgba(0, 0, 0, 0.65);--ag-button-radius: 8px;--ag-button-padding: 10px 18px;--ag-background-image-opacity: 0.65}.age-gate.age-gate .age-gate__form{display:block;max-width:262px;width:100%;margin:0 auto}.age-gate.age-gate .age-gate__heading{margin-bottom:var(--wp--preset--spacing--100)}.age-gate.age-gate .age-gate__heading-title{font-size:var(--lb-font-size-display-xs-relative);line-height:var(--lb-line-height-display-xs-relative);letter-spacing:inherit;letter-spacing:var(--lb-letter-spacing-display-xs-relative, inherit);font-weight:700}.age-gate.age-gate .age-gate__heading-title:not(:last-child){margin-bottom:var(--wp--preset--spacing--60)}.age-gate.age-gate .age-gate__subheadline{font-size:var(--lb-font-size-text-xl-relative);line-height:var(--lb-line-height-text-xl-relative);letter-spacing:inherit;letter-spacing:var(--lb-letter-spacing-text-xl-relative, inherit);font-weight:500;margin-bottom:var(--wp--preset--spacing--60)}.age-gate.age-gate .age-gate__challenge{font-size:var(--lb-font-size-text-md-relative);line-height:var(--lb-line-height-text-md-relative);letter-spacing:inherit;letter-spacing:var(--lb-letter-spacing-text-md-relative, inherit);margin-bottom:var(--wp--preset--spacing--140)}.age-gate.age-gate .age-gate__buttons{display:grid;grid-template-columns:1fr 1fr}.age-gate.age-gate .age-gate__buttons:not(:last-child){margin-bottom:var(--wp--preset--spacing--70)}.age-gate.age-gate .age-gate__submit{transition:color 160ms ease-in-out,background-color 160ms ease-in-out,border-color 160ms ease-in-out;font-size:var(--lb-font-size-text-md-relative);line-height:var(--lb-line-height-text-md-relative);letter-spacing:inherit;letter-spacing:var(--lb-letter-spacing-text-md-relative, inherit)}.age-gate.age-gate .age-gate__submit--yes{background-color:var(--wp--preset--color--primary-600);color:var(--wp--preset--color--white);border:1px solid var(--wp--preset--color--primary-600)}.age-gate.age-gate .age-gate__submit--yes:hover{background-color:var(--wp--preset--color--primary-700);border:1px solid var(--wp--preset--color--primary-700)}.age-gate.age-gate .age-gate__submit--no{background-color:var(--wp--preset--color--primary-50);color:var(--wp--preset--color--primary-700);border:1px solid var(--wp--preset--color--primary-50)}.age-gate.age-gate .age-gate__submit--no:hover{background-color:var(--wp--preset--color--primary-100);border:1px solid var(--wp--preset--color--primary-100)}.age-gate.age-gate .age-gate__remember-wrapper:has(~.age-gate__errors:empty){margin-bottom:0}
 :root{--lb-author-block-border-color: var(--wp--preset--color--gray-200)}.lb-author-block{padding:0 0 var(--wp--preset--spacing--100);border-bottom:1px solid var(--lb-author-block-border-color);width:100%}
 .lb-badge{display:inline-flex;color:var(--lb-badge--color);border-radius:16px;justify-content:center;align-items:center;text-align:left;font-weight:500;column-gap:calc(var(--wp--preset--spacing--70)/2);background-color:var(--lb-badge--background--color);-webkit-text-decoration:none;text-decoration:none}.lb-badge__postfix,.lb-badge__prefix{display:flex;align-items:center;flex-shrink:0}.lb-badge__postfix>:where([class^=icon-],[class*=" icon-"]),.lb-badge__prefix>:where([class^=icon-],[class*=" icon-"]){font-size:font-size(12px);font-weight:bold;color:var(--lb-badge--icon--color)}.lb-badge__postfix>:where(svg,img),.lb-badge__prefix>:where(svg,img){width:16px;height:16px;border-radius:50%;overflow:hidden}.lb-badge--only_icon{line-height:1em}.lb-badge--only_icon :where(.lb-badge__postfix>:where([class^=icon-],[class*=" icon-"]),.lb-badge__prefix>:where([class^=icon-],[class*=" icon-"])){margin:2px}.lb-badge--size_sm:where(:not(.lb-badge--only_icon)){font-size:var(--lb-font-size-text-xxs-relative);line-height:var(--lb-line-height-text-xxs-relative);letter-spacing:inherit;letter-spacing:var(--lb-letter-spacing-text-xxs-relative, inherit);padding:2px 8px}.lb-badge--size_sm:where(.lb-badge--only_icon){padding:3px}.lb-badge--size_md:where(:not(.lb-badge--only_icon)){font-size:var(--lb-font-size-text-sm-relative);line-height:var(--lb-line-height-text-sm-relative);letter-spacing:inherit;letter-spacing:var(--lb-letter-spacing-text-sm-relative, inherit);padding:2px 10px}.lb-badge--size_md:where(.lb-badge--only_icon){padding:4px}.lb-badge--size_lg:where(:not(.lb-badge--only_icon)){font-size:var(--lb-font-size-text-sm-relative);line-height:var(--lb-line-height-text-sm-relative);letter-spacing:inherit;letter-spacing:var(--lb-letter-spacing-text-sm-relative, inherit);padding:4px 12px}.lb-badge--size_lg:where(.lb-badge--only_icon){padding:6px}.lb-badge--theme_light:where(.lb-badge--color_gray){--lb-badge--color: var( --wp--preset--color--gray-700 );--lb-badge--background--color: var(--wp--preset--color--white);--lb-badge--icon--color: var( --wp--preset--color--gray-600 )}.lb-badge--theme_light:where(.lb-badge--color_primary){--lb-badge--color: var( --wp--preset--color--primary-700 );--lb-badge--background--color: var(--wp--preset--color--white);--lb-badge--icon--color: var( --wp--preset--color--primary-600 )}.lb-badge--theme_light:where(.lb-badge--color_error){--lb-badge--color: var( --wp--preset--color--error-700 );--lb-badge--background--color: var(--wp--preset--color--white);--lb-badge--icon--color: var( --wp--preset--color--error-600 )}.lb-badge--theme_light:where(.lb-badge--color_warning){--lb-badge--color: var( --wp--preset--color--warning-700 );--lb-badge--background--color: var(--wp--preset--color--white);--lb-badge--icon--color: var( --wp--preset--color--warning-600 )}.lb-badge--theme_light:where(.lb-badge--color_success){--lb-badge--color: var( --wp--preset--color--success-700 );--lb-badge--background--color: var(--wp--preset--color--white);--lb-badge--icon--color: var( --wp--preset--color--success-600 )}.lb-badge--theme_medium:where(.lb-badge--color_gray){--lb-badge--color: var( --wp--preset--color--gray-700 );--lb-badge--background--color: var(--wp--preset--color--gray-100);--lb-badge--icon--color: var( --wp--preset--color--gray-600 )}.lb-badge--theme_medium:where(.lb-badge--color_primary){--lb-badge--color: var( --wp--preset--color--primary-700 );--lb-badge--background--color: var(--wp--preset--color--primary-50);--lb-badge--icon--color: var( --wp--preset--color--primary-600 )}.lb-badge--theme_medium:where(.lb-badge--color_error){--lb-badge--color: var( --wp--preset--color--error-700 );--lb-badge--background--color: var(--wp--preset--color--error-50);--lb-badge--icon--color: var( --wp--preset--color--error-600 )}.lb-badge--theme_medium:where(.lb-badge--color_warning){--lb-badge--color: var( --wp--preset--color--warning-700 );--lb-badge--background--color: var(--wp--preset--color--warning-50);--lb-badge--icon--color: var( --wp--preset--color--warning-600 )}.lb-badge--theme_medium:where(.lb-badge--color_success){--lb-badge--color: var( --wp--preset--color--success-700 );--lb-badge--background--color: var(--wp--preset--color--success-50);--lb-badge--icon--color: var( --wp--preset--color--success-600 )}.lb-badge--theme_dark:where(.lb-badge--color_gray){--lb-badge--color: var(--wp--preset--color--white);--lb-badge--background--color: var( --wp--preset--color--gray-700 );--lb-badge--icon--color: var(--wp--preset--color--white)}.lb-badge--theme_dark:where(.lb-badge--color_primary){--lb-badge--color: var(--wp--preset--color--white);--lb-badge--background--color: var( --wp--preset--color--primary-700 );--lb-badge--icon--color: var(--wp--preset--color--white)}.lb-badge--theme_dark:where(.lb-badge--color_error){--lb-badge--color: var(--wp--preset--color--white);--lb-badge--background--color: var( --wp--preset--color--error-700 );--lb-badge--icon--color: var(--wp--preset--color--white)}.lb-badge--theme_dark:where(.lb-badge--color_warning){--lb-badge--color: var(--wp--preset--color--white);--lb-badge--background--color: var( --wp--preset--color--warning-700 );--lb-badge--icon--color: var(--wp--preset--color--white)}.lb-badge--theme_dark:where(.lb-badge--color_success){--lb-badge--color: var(--wp--preset--color--white);--lb-badge--background--color: var( --wp--preset--color--success-700 );--lb-badge--icon--color: var(--wp--preset--color--white)}
@@ -51,6 +52,8 @@
 :root,.editor-styles-wrapper{--lb-user-block-name-color: var(--lb-color-text-strong);--lb-user-block-job-color: var(--lb-color-text-default);--lb-user-block-bio-color: var(--lb-color-text-default)}.lb-user-block{width:100%}.lb-user-block--size_sm .lb-user-block__avatar{width:var(--wp--preset--spacing--120);height:var(--wp--preset--spacing--120)}.lb-user-block--size_sm .lb-user-block__head-left{column-gap:var(--wp--preset--spacing--65)}.lb-user-block--size_sm .lb-user-block__name{font-size:var(--wp--preset--font-size--text-sm);line-height:var(--wp--custom--line-height--text-sm);letter-spacing:inherit;letter-spacing:var(--wp--custom--letter-spacing--text-sm, inherit)}.lb-user-block--size_sm .lb-user-block__job{font-size:var(--wp--preset--font-size--text-xxs);line-height:var(--wp--custom--line-height--text-xxs);letter-spacing:inherit;letter-spacing:var(--wp--custom--letter-spacing--text-xxs, inherit)}.lb-user-block--size_md .lb-user-block__avatar{width:var(--wp--preset--spacing--140);height:var(--wp--preset--spacing--140)}.lb-user-block--size_md .lb-user-block__head-left{column-gap:var(--wp--preset--spacing--70)}.lb-user-block--size_md .lb-user-block__name{font-size:var(--wp--preset--font-size--text-sm);line-height:var(--wp--custom--line-height--text-sm);letter-spacing:inherit;letter-spacing:var(--wp--custom--letter-spacing--text-sm, inherit)}.lb-user-block--size_md .lb-user-block__job{font-size:var(--wp--preset--font-size--text-sm);line-height:var(--wp--custom--line-height--text-sm);letter-spacing:inherit;letter-spacing:var(--wp--custom--letter-spacing--text-sm, inherit)}.lb-user-block--size_lg .lb-user-block__avatar{width:var(--wp--preset--spacing--160);height:var(--wp--preset--spacing--160)}.lb-user-block--size_lg .lb-user-block__head-left{column-gap:var(--wp--preset--spacing--70)}.lb-user-block--size_lg .lb-user-block__name{font-size:var(--wp--preset--font-size--text-md);line-height:var(--wp--custom--line-height--text-md);letter-spacing:inherit;letter-spacing:var(--wp--custom--letter-spacing--text-md, inherit)}.lb-user-block--size_lg .lb-user-block__job{font-size:var(--wp--preset--font-size--text-md);line-height:var(--wp--custom--line-height--text-md);letter-spacing:inherit;letter-spacing:var(--wp--custom--letter-spacing--text-md, inherit)}.lb-user-block--size_xl .lb-user-block__avatar{width:var(--wp--preset--spacing--180);height:var(--wp--preset--spacing--180)}.lb-user-block--size_xl .lb-user-block__head-left{column-gap:var(--wp--preset--spacing--80)}.lb-user-block--size_xl .lb-user-block__name{font-size:var(--wp--preset--font-size--text-lg);line-height:var(--wp--custom--line-height--text-lg);letter-spacing:inherit;letter-spacing:var(--wp--custom--letter-spacing--text-lg, inherit)}.lb-user-block--size_xl .lb-user-block__job{font-size:var(--wp--preset--font-size--text-md);line-height:var(--wp--custom--line-height--text-md);letter-spacing:inherit;letter-spacing:var(--wp--custom--letter-spacing--text-md, inherit)}.lb-user-block__head{display:flex;column-gap:var(--wp--preset--spacing--80);row-gap:var(--wp--preset--spacing--100);align-items:flex-start}@media(max-width: 767.98px){.lb-user-block__head{flex-direction:column}}.lb-user-block__head-left{display:flex;flex-grow:1}.lb-user-block__avatar{flex-shrink:0;border-radius:50%}.lb-user-block__info{display:flex;flex-direction:column}.lb-user-block__info--one-line{justify-content:center}.lb-user-block__name{display:block;font-weight:600;color:var(--lb-user-block-name-color)}.lb-user-block__job{display:block;color:var(--lb-user-block-job-color)}.lb-user-block__socs{display:flex;column-gap:var(--wp--preset--spacing--70)}.lb-user-block__bio{margin-top:var(--wp--preset--spacing--80);font-size:var(--lb-font-size-text-md-relative);line-height:var(--lb-line-height-text-md-relative);letter-spacing:inherit;letter-spacing:var(--lb-letter-spacing-text-md-relative, inherit);color:var(--lb-user-block-bio-color)}
 .wp-block-width-container__inner--left{float:left}.wp-block-width-container__inner--right{float:right}.wp-block-width-container__inner--center{clear:both;display:block;margin-left:auto;margin-right:auto}
 =======
+=======
+>>>>>>> parent of 9aca037 (Revert "Merge branch 'csd-216-single' of https://github.com/dmilegal/lb-mercury-theme into redisign")
 /*!************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/age-gate-banner/age-gate-banner.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************************/
@@ -2142,13 +2145,18 @@
 /**
 * font
 **/
+<<<<<<< HEAD
 :root,
 .editor-styles-wrapper {
+=======
+:root, .editor-styles-wrapper {
+>>>>>>> parent of 9aca037 (Revert "Merge branch 'csd-216-single' of https://github.com/dmilegal/lb-mercury-theme into redisign")
   --lb-latest-posts-title-color-text: var(--lb-color-text-strong);
   --lb-latest-posts-title-color-text-hover: var(--lb-color-text-medium);
   --lb-latest-posts-pub-date-color-text: var(--lb-color-text-default);
 }
 
+<<<<<<< HEAD
 .wp-block-latest-posts__list.wp-block-latest-posts__list {
   list-style: none;
   display: block;
@@ -2157,22 +2165,31 @@
   padding: 0;
   list-style: none;
 }
+=======
+>>>>>>> parent of 9aca037 (Revert "Merge branch 'csd-216-single' of https://github.com/dmilegal/lb-mercury-theme into redisign")
 .wp-block-latest-posts li {
   display: flex;
   flex-direction: column-reverse;
   row-gap: var(--wp--preset--spacing--50);
   margin: var(--wp--preset--spacing--110) 0;
 }
+<<<<<<< HEAD
 .wp-block-latest-posts li:before {
   content: none;
 }
+=======
+>>>>>>> parent of 9aca037 (Revert "Merge branch 'csd-216-single' of https://github.com/dmilegal/lb-mercury-theme into redisign")
 .wp-block-latest-posts li:first-child {
   margin-top: 0;
 }
 .wp-block-latest-posts li:last-child {
   margin-bottom: 0;
 }
+<<<<<<< HEAD
 .wp-block-latest-posts__post-title.wp-block-latest-posts__post-title {
+=======
+.wp-block-latest-posts__post-title {
+>>>>>>> parent of 9aca037 (Revert "Merge branch 'csd-216-single' of https://github.com/dmilegal/lb-mercury-theme into redisign")
   font-size: var(--lb-font-size-text-md-relative);
   line-height: var(--lb-line-height-text-md-relative);
   letter-spacing: inherit;
@@ -2183,7 +2200,11 @@
   text-decoration: none;
   transition: color 170ms ease-in-out;
 }
+<<<<<<< HEAD
 .wp-block-latest-posts__post-title.wp-block-latest-posts__post-title:hover {
+=======
+.wp-block-latest-posts__post-title:hover {
+>>>>>>> parent of 9aca037 (Revert "Merge branch 'csd-216-single' of https://github.com/dmilegal/lb-mercury-theme into redisign")
   color: var(--lb-latest-posts-title-color-text-hover);
 }
 .wp-block-latest-posts__post-date {
@@ -2193,10 +2214,13 @@
   letter-spacing: var(--lb-letter-spacing-text-xxs-relative, inherit);
   color: var(--lb-latest-posts-pub-date-color-text);
 }
+<<<<<<< HEAD
 
 .lb-sidebar-block:has(.wp-block-latest-posts) .lb-sidebar-block__title {
   margin-bottom: var(--wp--preset--spacing--90);
 }
+=======
+>>>>>>> parent of 9aca037 (Revert "Merge branch 'csd-216-single' of https://github.com/dmilegal/lb-mercury-theme into redisign")
 /*!******************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/layout/layout.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************/
@@ -5030,5 +5054,9 @@
   margin-right: auto;
 }
 
+<<<<<<< HEAD
 /*# sourceMappingURL=blocks.css.map*/
 >>>>>>> csd-216-single
+=======
+/*# sourceMappingURL=blocks.css.map*/
+>>>>>>> parent of 9aca037 (Revert "Merge branch 'csd-216-single' of https://github.com/dmilegal/lb-mercury-theme into redisign")
