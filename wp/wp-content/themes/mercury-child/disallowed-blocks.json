@@ -12,5 +12,8 @@
     "core/avatar",
     "core/social-links",
     "contact-form-7/contact-form-selector"
+  ],
+  "disallowed_variants": [
+    ["core/embed", "ted"]
   ]
 }

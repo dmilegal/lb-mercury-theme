@@ -2102,10 +2102,13 @@ ul.wp-block-gallery.alignwide {
   color: var(--lb-ui-color-text);
 }
 
+<<<<<<< HEAD
 .prose-images :where(.wp-block-image img):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   border-radius: var(--wp--preset--spacing--85);
 }
 
+=======
+>>>>>>> ce5771807c05a0c21b09b1ced23bf032ff2d3267
 .has-display-2xl-font-size {
   font-size: var(--wp--preset--font-size--display-2xl);
   line-height: var(--wp--custom--line-height--display-2xl);
@@ -3480,7 +3483,10 @@ ul.wp-block-gallery.alignwide {
   --lb-layout-sidebar-grid-col-start: 1;
   --lb-layout-sidebar-grid-col-end: -1;
   --lb-layout-breadcrumbs-color-border: var(--lb-color-surface-high);
+<<<<<<< HEAD
   --lb-layout-inner-color-border: var(--lb-color-surface-outline-1);
+=======
+>>>>>>> ce5771807c05a0c21b09b1ced23bf032ff2d3267
 }
 
 .lb-main {
@@ -3496,11 +3502,14 @@ ul.wp-block-gallery.alignwide {
   --lb-layout-content-grid-col-start: 1;
   --lb-layout-content-grid-col-end: -1;
 }
+<<<<<<< HEAD
 @media (max-width: 991.98px) {
   .lb-layout--sticky-box .lb-layout__sidebar {
     display: none;
   }
 }
+=======
+>>>>>>> ce5771807c05a0c21b09b1ced23bf032ff2d3267
 @media (min-width: 992px) {
   .lb-layout--sticky-box {
     position: relative;
@@ -3524,27 +3533,34 @@ ul.wp-block-gallery.alignwide {
   grid-column: 1/-1;
   grid-column: var(--lb-layout-sidebar-grid-col-start)/var(--lb-layout-sidebar-grid-col-end);
 }
+<<<<<<< HEAD
 @media (max-width: 991.98px) {
   .lb-layout--with-sidebar .lb-layout__sidebar {
     display: none;
   }
 }
+=======
+>>>>>>> ce5771807c05a0c21b09b1ced23bf032ff2d3267
 .lb-layout--with-sidebar .lb-layout__inner {
   grid-row: 1/-1;
   grid-column: 1/-1;
   grid-column: var(--lb-layout-inner-grid-col-start)/var(--lb-layout-inner-grid-col-end);
 }
+<<<<<<< HEAD
 @media (max-width: 991.98px) {
   .lb-layout--tight .lb-layout__sidebar {
     display: none;
   }
 }
+=======
+>>>>>>> ce5771807c05a0c21b09b1ced23bf032ff2d3267
 .lb-layout--tight-content {
   --lb-layout-grid-col-template: min(var(--lb-layout-content-size), 100%);
 }
 .lb-layout--tight-content .lb-layout__content {
   justify-content: center;
 }
+<<<<<<< HEAD
 @media (max-width: 991.98px) {
   .lb-layout--tight-content .lb-layout__sidebar {
     display: none;
@@ -3600,6 +3616,12 @@ ul.wp-block-gallery.alignwide {
   position: relative;
 }
 .lb-layout__content, .lb-layout__precontent, .lb-layout__aftercontent, .lb-layout__related-posts {
+=======
+.lb-layout__relative {
+  position: relative;
+}
+.lb-layout__content, .lb-layout__precontent, .lb-layout__aftercontent {
+>>>>>>> ce5771807c05a0c21b09b1ced23bf032ff2d3267
   display: grid;
   grid-template-columns: minmax(280px, 720px)
     292px;
@@ -3614,9 +3636,14 @@ ul.wp-block-gallery.alignwide {
   margin-right: auto;
 }
 @media (max-width: 991.98px) {
+<<<<<<< HEAD
   .lb-layout__content, .lb-layout__precontent, .lb-layout__aftercontent, .lb-layout__related-posts {
     display: flex;
     flex-direction: column;
+=======
+  .lb-layout__content, .lb-layout__precontent, .lb-layout__aftercontent {
+    display: block;
+>>>>>>> ce5771807c05a0c21b09b1ced23bf032ff2d3267
   }
 }
 .lb-layout__precontent-inner {
@@ -3654,6 +3681,14 @@ ul.wp-block-gallery.alignwide {
 .lb-layout__content-footer {
   margin-top: var(--wp--preset--spacing--140);
 }
+<<<<<<< HEAD
+=======
+@media (max-width: 991.98px) {
+  .lb-layout__sidebar {
+    display: none;
+  }
+}
+>>>>>>> ce5771807c05a0c21b09b1ced23bf032ff2d3267
 .lb-layout__breadcrumbs {
   padding-top: var(--wp--preset--spacing--85);
   padding-bottom: var(--wp--preset--spacing--85);
@@ -3665,6 +3700,7 @@ ul.wp-block-gallery.alignwide {
   margin-left: auto;
   margin-right: auto;
 }
+<<<<<<< HEAD
 .lb-layout__related-posts {
   margin-top: var(--wp--preset--spacing--240);
 }
@@ -3681,6 +3717,8 @@ ul.wp-block-gallery.alignwide {
   font-weight: 500;
   margin-bottom: var(--wp--preset--spacing--100);
 }
+=======
+>>>>>>> ce5771807c05a0c21b09b1ced23bf032ff2d3267
 
 :root {
   --lb-archive-nf-title-color-text: var(--lb-color-text-strong);

@@ -2100,10 +2100,13 @@ ul.wp-block-gallery.alignwide {
   color: var(--lb-ui-color-text);
 }
 
+<<<<<<< HEAD
 :root :where(.wp-block-image img):not(:where([class~=not-prose], [class~=not-prose] *)):not(:where([class~=acf-fields], [class~=acf-fields] *)) {
   border-radius: var(--wp--preset--spacing--85);
 }
 
+=======
+>>>>>>> ce5771807c05a0c21b09b1ced23bf032ff2d3267
 .has-display-2xl-font-size {
   font-size: var(--wp--preset--font-size--display-2xl);
   line-height: var(--wp--custom--line-height--display-2xl);
