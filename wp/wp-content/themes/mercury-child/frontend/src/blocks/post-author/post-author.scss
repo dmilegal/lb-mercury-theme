@@ -1,0 +1,34 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+:root, .editor-styles-wrapper {
+  --lb-post-author-name-color-text: var(--lb-color-text-strong);
+  --lb-post-author-pub-date-color-text: var(--lb-color-text-default);
+}
+
+.lb-post-author {
+  display: flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--70);
+
+  &__avatar {
+    border-radius: 50%;
+  }
+
+  &__name {
+    @include font.get-text-styles('text-sm');
+    font-weight: 600;
+    color: var(--lb-post-author-name-color-text);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__pub-date {
+    @include font.get-text-styles('text-xs');
+    color: var(--lb-post-author-pub-date-color-text);
+  }
+}
