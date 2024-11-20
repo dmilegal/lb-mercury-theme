@@ -1565,7 +1565,12 @@ function _load() {
           (_signal = signal) === null || _signal === void 0 || _signal.abort();
           signal = new AbortController();
           _context2.next = 4;
-          return fetch("".concat(_shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__.API_URL, "aces/v1/html/reviews?").concat(query || ''), {
+          return fetch("".concat(_shared_scripts_consts__WEBPACK_IMPORTED_MODULE_3__.API_URL, "aces/v1/html/reviews"), {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(query),
             signal: signal.signal
           });
         case 4:
@@ -1588,7 +1593,7 @@ function prepareQuery(query, queryData, data) {
   var params = qs__WEBPACK_IMPORTED_MODULE_8___default().parse(query);
   params.query = _objectSpread(_objectSpread({}, (_params = params) === null || _params === void 0 ? void 0 : _params.query), queryData);
   params = _objectSpread(_objectSpread({}, params), data);
-  return qs__WEBPACK_IMPORTED_MODULE_8___default().stringify(params);
+  return params; //qs.stringify(params)
 }
 function render(container, html, page, total_pages) {
   var listEl = container.querySelector('.lb-review-list__list');
