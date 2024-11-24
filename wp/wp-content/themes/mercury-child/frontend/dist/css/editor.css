@@ -1480,6 +1480,13 @@
   --lb-line-height-display-xl-relative: var(--wp--custom--line-height--display-xl);
   --lb-letter-spacing-display-xl-relative: var(--wp--custom--letter-spacing--display-xl);
 }
+@media (max-width: 767.98px) {
+  :root {
+    --lb-font-size-display-xl-relative: var(--wp--preset--font-size--display-md);
+    --lb-line-height-display-xl-relative: var(--wp--custom--line-height--display-md);
+    --lb-letter-spacing-display-xl-relative: var(--wp--custom--letter-spacing--display-md);
+  }
+}
 :root {
   --lb-font-size-display-lg-relative: var(--wp--preset--font-size--display-lg);
   --lb-line-height-display-lg-relative: var(--wp--custom--line-height--display-lg);

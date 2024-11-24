@@ -1859,6 +1859,95 @@
 .lb-hero-banner__footer-content:not(:first-child) {
   margin-top: var(--wp--preset--spacing--110);
 }
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/hero-features-banner/hero-features-banner.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root,
+.editor-styles-wrapper {
+  --lb-hero-featured-banner-background-color: var(--wp--preset--color--primary-50);
+  --lb-hero-featured-banner-feature-background-color: var(--lb-color-surface);
+  --lb-hero-featured-banner-feature-title-color: var(--lb-color-primary-high);
+  --lb-hero-featured-banner-feature-subtitle-color: var(--lb-color-on-surface-lowest);
+}
+
+.lb-hero-featured-banner {
+  padding: var(--wp--preset--spacing--170) 0 var(--wp--preset--spacing--120);
+  background-color: var(--lb-hero-featured-banner-background-color);
+}
+@media (max-width: 575.98px) {
+  .lb-hero-featured-banner {
+    padding: var(--wp--preset--spacing--140) 0 var(--wp--preset--spacing--115);
+  }
+}
+.lb-hero-featured-banner__container {
+  width: 100%;
+  padding-left: var(--layout--content-padding);
+  padding-right: var(--layout--content-padding);
+  max-width: calc(var(--lb-layout-content-size) + 2 * var(--layout--content-padding));
+  margin-left: auto;
+  margin-right: auto;
+}
+.lb-hero-featured-banner__header:not(:last-child) {
+  margin-bottom: var(--wp--preset--spacing--175);
+}
+@media (max-width: 575.98px) {
+  .lb-hero-featured-banner__header:not(:last-child) {
+    margin-bottom: var(--wp--preset--spacing--140);
+  }
+}
+.lb-hero-featured-banner__title {
+  font-size: var(--lb-font-size-display-xl-relative);
+  line-height: var(--lb-line-height-display-xl-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-display-xl-relative, inherit);
+  font-weight: 700;
+  text-align: center;
+}
+.lb-hero-featured-banner__features {
+  display: flex;
+  column-gap: var(--wp--preset--spacing--115);
+}
+.lb-hero-featured-banner__features:not(:last-child) {
+  margin-bottom: var(--wp--preset--spacing--210);
+}
+@media (max-width: 575.98px) {
+  .lb-hero-featured-banner__features:not(:last-child) {
+    margin-bottom: var(--wp--preset--spacing--160);
+  }
+}
+.lb-hero-featured-banner__feature {
+  padding: var(--wp--preset--spacing--80);
+  background-color: var(--lb-hero-featured-banner-feature-background-color);
+  border-radius: var(--wp--preset--spacing--60);
+  flex-grow: 1;
+  text-align: center;
+}
+.lb-hero-featured-banner__feature-title {
+  display: block;
+  font-size: var(--lb-font-size-display-md-relative);
+  line-height: var(--lb-line-height-display-md-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-display-md-relative, inherit);
+  font-weight: 700;
+  color: var(--lb-hero-featured-banner-feature-title-color);
+}
+.lb-hero-featured-banner__feature-subtitle {
+  display: block;
+  font-size: var(--lb-font-size-text-md-relative);
+  line-height: var(--lb-line-height-text-md-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-md-relative, inherit);
+  color: var(--lb-hero-featured-banner-feature-subtitle-color);
+}
+.lb-hero-featured-banner__image-container {
+  text-align: center;
+}
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/hero-review-banner/hero-review-banner.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************************************/

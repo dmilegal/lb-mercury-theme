@@ -85,6 +85,23 @@
       --lb-letter-spacing-#{$name}-relative: #{map.get($params, 'letter-spacing')};
     }
 
+    @if $name == 'display-xl' {
+      @include breakpoints.media-breakpoint-down(sm) {
+        --lb-font-size-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-md),
+            'font-size'
+          )};
+        --lb-line-height-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-md),
+            'line-height'
+          )};
+        --lb-letter-spacing-#{$name}-relative: #{map.get(
+            map.get(text.$body-fonts, display-md),
+            'letter-spacing'
+          )};
+      }
+    }
+
     @if $name == 'display-lg' {
       @include breakpoints.media-breakpoint-down(sm) {
         --lb-font-size-#{$name}-relative: #{map.get(

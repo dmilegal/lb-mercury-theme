@@ -192,6 +192,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/hero-features-banner/hero-features-banner.scss":
+/*!*******************************************************************!*\
+  !*** ./src/blocks/hero-features-banner/hero-features-banner.scss ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/hero-review-banner/hero-review-banner.scss":
 /*!***************************************************************!*\
   !*** ./src/blocks/hero-review-banner/hero-review-banner.scss ***!
@@ -903,6 +915,18 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _hero_banner_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-banner.scss */ "./src/blocks/hero-banner/hero-banner.scss");
+
+
+/***/ }),
+
+/***/ "./src/blocks/hero-features-banner/hero-features-banner.ts":
+/*!*****************************************************************!*\
+  !*** ./src/blocks/hero-features-banner/hero-features-banner.ts ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _hero_features_banner_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-features-banner.scss */ "./src/blocks/hero-features-banner/hero-features-banner.scss");
 
 
 /***/ }),
@@ -2428,6 +2452,7 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/group-list/group-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-author-banner/hero-author-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-banner/hero-banner.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-features-banner/hero-features-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-review-banner/hero-review-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/latest-posts/latest-posts.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/layout/layout.ts")))
