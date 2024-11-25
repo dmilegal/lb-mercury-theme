@@ -1698,7 +1698,7 @@
   width: 100%;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
-  max-width: calc(var(--wp--style--global--content-size) + 2 * var(--layout--content-padding));
+  max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -1814,7 +1814,7 @@
   width: 100%;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
-  max-width: calc(var(--wp--style--global--content-size) + 2 * var(--layout--content-padding));
+  max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
 }
@@ -1889,7 +1889,7 @@
   width: 100%;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
-  max-width: calc(var(--lb-layout-content-size) + 2 * var(--layout--content-padding));
+  max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
 }
@@ -1913,6 +1913,17 @@
   display: flex;
   column-gap: var(--wp--preset--spacing--115);
 }
+@media (max-width: 767.98px) {
+  .lb-hero-featured-banner__features {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+}
+@media (max-width: 575.98px) {
+  .lb-hero-featured-banner__features {
+    column-gap: var(--wp--preset--spacing--60);
+  }
+}
 .lb-hero-featured-banner__features:not(:last-child) {
   margin-bottom: var(--wp--preset--spacing--210);
 }
@@ -1927,6 +1938,12 @@
   border-radius: var(--wp--preset--spacing--60);
   flex-grow: 1;
   text-align: center;
+  scroll-snap-align: center;
+}
+@media (max-width: 767.98px) {
+  .lb-hero-featured-banner__feature {
+    min-width: 220px;
+  }
 }
 .lb-hero-featured-banner__feature-title {
   display: block;
@@ -1987,7 +2004,7 @@
   width: 100%;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
-  max-width: calc(var(--wp--style--global--content-size) + 2 * var(--layout--content-padding));
+  max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
 }
@@ -2103,7 +2120,7 @@
     width: 100%;
     padding-left: var(--layout--content-padding);
     padding-right: var(--layout--content-padding);
-    max-width: calc(var(--wp--style--global--content-size) + 2 * var(--layout--content-padding));
+    max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -2327,7 +2344,7 @@
   width: 100%;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
-  max-width: calc(var(--wp--style--global--content-size) + 2 * var(--layout--content-padding));
+  max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
 }
@@ -4308,7 +4325,7 @@
   width: 100%;
   padding-left: var(--layout--content-padding);
   padding-right: var(--layout--content-padding);
-  max-width: calc(var(--wp--style--global--content-size) + 2 * var(--layout--content-padding));
+  max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
 }
@@ -4721,6 +4738,58 @@
   flex-wrap: wrap;
   row-gap: var(--wp--preset--spacing--60);
   column-gap: var(--wp--preset--spacing--60);
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/text-banner/text-banner.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root,
+.editor-styles-wrapper {
+  --lb-text-banner-background-color: var(--lb-color-surface-high);
+  --lb-text-banner-content-color: var(--lb-color-text-strong);
+}
+
+.lb-text-banner {
+  padding: var(--wp--preset--spacing--220) 0;
+  background-color: var(--lb-text-banner-background-color);
+}
+.lb-text-banner {
+  font-size: var(--lb-font-size-display-xs-relative);
+  line-height: var(--lb-line-height-display-xs-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-display-xs-relative, inherit);
+  color: var(--lb-text-banner-content-color);
+}
+@media (max-width: 575.98px) {
+  .lb-text-banner {
+    font-size: var(--lb-font-size-text-lg-relative);
+    line-height: var(--lb-line-height-text-lg-relative);
+    letter-spacing: inherit;
+    letter-spacing: var(--lb-letter-spacing-text-lg-relative, inherit);
+  }
+}
+@media (max-width: 991.98px) {
+  .lb-text-banner {
+    padding: var(--wp--preset--spacing--180) 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .lb-text-banner {
+    padding: var(--wp--preset--spacing--120) 0;
+  }
+}
+.lb-text-banner__container {
+  width: 100%;
+  padding-left: var(--layout--content-padding);
+  padding-right: var(--layout--content-padding);
+  max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
+  margin-left: auto;
+  margin-right: auto;
 }
 /*!************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/toc/toc.scss ***!

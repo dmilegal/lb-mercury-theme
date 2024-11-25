@@ -1350,6 +1350,9 @@
 :root {
   --wp--style--block-gap: var(--wp--preset--spacing--90);
   --layout-content-spacing: var(--wp--custom--layout--content-spacing-md);
+  --lb-layout-container-size-sm: 720px;
+  --lb-layout-container-size-md: 1216px;
+  --lb-layout-container-size: var(--lb-layout-container-size-md);
 }
 @media (max-width: 767.98px) {
   :root {
@@ -1358,7 +1361,7 @@
 }
 :root {
   --lb-layout-gap-x: var(--wp--preset--spacing--280);
-  --lb-layout-content-size: 720px;
+  --lb-layout-content-size: var(--lb-layout-container-size-sm);
   --lb-layout-sidebar-size: 292px;
   --lb-layout-grid-col-template: minmax(280px, var(--lb-layout-content-size))
     var(--lb-layout-sidebar-size);
@@ -2280,6 +2283,13 @@ ul.wp-block-gallery.alignwide {
 
 .size-full:not(:where(.alignleft, .alignright)) {
   width: 100%;
+}
+
+.lb-layout-container-size--sm {
+  --lb-layout-container-size: var(--lb-layout-container-size-sm);
+}
+.lb-layout-container-size--md {
+  --lb-layout-container-size: var(--lb-layout-container-size-md);
 }
 
 :root, .editor-styles-wrapper {

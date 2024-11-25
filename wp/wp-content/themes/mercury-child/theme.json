@@ -481,7 +481,7 @@
             ]
         },
         "layout": {
-            "contentSize": "calc(1280px - 2 * var(--layout--content-padding))",
+            "contentSize": "var(--lb-layout-container-size-md)",
             "wideSize": "100%"
         },
         "custom": {

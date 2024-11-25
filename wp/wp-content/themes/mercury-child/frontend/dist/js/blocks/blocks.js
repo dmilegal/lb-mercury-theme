@@ -612,6 +612,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/text-banner/text-banner.scss":
+/*!*************************************************!*\
+  !*** ./src/blocks/text-banner/text-banner.scss ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/toc/toc.scss":
 /*!*********************************!*\
   !*** ./src/blocks/toc/toc.scss ***!
@@ -1892,6 +1904,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/text-banner/text-banner.ts":
+/*!***********************************************!*\
+  !*** ./src/blocks/text-banner/text-banner.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _text_banner_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text-banner.scss */ "./src/blocks/text-banner/text-banner.scss");
+
+
+/***/ }),
+
 /***/ "./src/blocks/toc/toc.ts":
 /*!*******************************!*\
   !*** ./src/blocks/toc/toc.ts ***!
@@ -2482,6 +2506,7 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/social-link/social-link.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/step-list/step-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/tag-list/tag-list.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/text-banner/text-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/toc/toc.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/tooltip/tooltip.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/user-block/user-block.ts")))

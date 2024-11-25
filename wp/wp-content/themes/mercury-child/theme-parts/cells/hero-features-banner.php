@@ -8,6 +8,7 @@ $featureImage = $args['feature_image'] ?? '';
 ?>
 <div class="<?= classNames(
               'lb-hero-featured-banner',
+              'not-prose',
               $className,
 
             ) ?>" style="<?= stylesValue($style) ?>">

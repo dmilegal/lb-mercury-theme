@@ -20,7 +20,7 @@
   }
 
   &__container {
-    @include container.make-container-max-width(var(--lb-layout-content-size));
+    @include container.make-container-max-width();
   }
 
   &__header {
@@ -41,6 +41,16 @@
   &__features {
     display: flex;
     column-gap: var(--wp--preset--spacing--115);
+    
+    @include breakpoints.media-breakpoint-down(sm) {
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    }
+
+    @include breakpoints.media-breakpoint-down(xs) {
+      column-gap: var(--wp--preset--spacing--60);
+    }
+    
     &:not(:last-child) {
       margin-bottom: var(--wp--preset--spacing--210);
       @include breakpoints.media-breakpoint-down(xs) {
@@ -55,6 +65,11 @@
     border-radius: var(--wp--preset--spacing--60);
     flex-grow: 1;
     text-align: center;
+    scroll-snap-align: center;
+
+    @include breakpoints.media-breakpoint-down(sm) {
+      min-width: 220px;
+    }
 
     &-title {
       display: block;

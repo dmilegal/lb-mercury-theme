@@ -1,3 +1,13 @@
 .size-full:not(:where(.alignleft,.alignright)) {
   width: 100%;
 }
+
+.lb-layout-container-size {
+  &--sm {
+    --lb-layout-container-size: var(--lb-layout-container-size-sm);
+  }
+
+  &--md {
+    --lb-layout-container-size: var(--lb-layout-container-size-md);
+  }
+}
