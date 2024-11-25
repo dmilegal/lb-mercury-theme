@@ -288,6 +288,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/post-author/post-author.scss":
+/*!*************************************************!*\
+  !*** ./src/blocks/post-author/post-author.scss ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/post-card/post-card.scss":
 /*!*********************************************!*\
   !*** ./src/blocks/post-card/post-card.scss ***!
@@ -999,6 +1011,18 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pagination_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pagination.scss */ "./src/blocks/pagination/pagination.scss");
+
+
+/***/ }),
+
+/***/ "./src/blocks/post-author/post-author.ts":
+/*!***********************************************!*\
+  !*** ./src/blocks/post-author/post-author.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _post_author_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./post-author.scss */ "./src/blocks/post-author/post-author.scss");
 
 
 /***/ }),
@@ -2436,6 +2460,7 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/logo-text/logo-text.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/page-not-found/page-not-found.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/pagination/pagination.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/post-author/post-author.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/post-card/post-card.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/post-footer/post-footer.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/post-header/post-header.ts")))

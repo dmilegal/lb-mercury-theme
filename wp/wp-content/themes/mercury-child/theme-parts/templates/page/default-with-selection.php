@@ -11,6 +11,7 @@
 			'post_id' => get_the_id(),
 			'enable_published_date' => false,
 			'color' => 'white',
+			'show_author' => true
 		]); ?>
 	</div>
 

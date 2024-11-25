@@ -1796,6 +1796,9 @@
   padding-left: 0;
   padding-right: 0;
 }
+.lb-hero-banner:has(.lb-hero-banner__author) .lb-hero-banner__title {
+  margin-bottom: var(--wp--preset--spacing--70);
+}
 .lb-hero-banner--color_white {
   --lb-hero-banner-color-background: var(--lb-color-surface);
 }
@@ -1842,6 +1845,14 @@
   letter-spacing: inherit;
   letter-spacing: var(--lb-letter-spacing-display-lg-relative, inherit);
   font-weight: 500;
+}
+.lb-hero-banner__author {
+  margin-bottom: var(--wp--preset--spacing--110);
+}
+@media (max-width: 767.98px) {
+  .lb-hero-banner__author {
+    margin-bottom: var(--wp--preset--spacing--100);
+  }
 }
 .lb-hero-banner__subtitle {
   color: var(--lb-hero-banner-subtitle-color-text);
@@ -2594,6 +2605,47 @@
   outline: none;
   box-shadow: 0px 0px 0px 4px var(--lb-pagination-num-color-outline);
 }
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/post-author/post-author.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root, .editor-styles-wrapper {
+  --lb-post-author-name-color-text: var(--lb-color-text-strong);
+  --lb-post-author-pub-date-color-text: var(--lb-color-text-default);
+}
+
+.lb-post-author {
+  display: flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--70);
+}
+.lb-post-author__avatar {
+  border-radius: 50%;
+}
+.lb-post-author__name {
+  font-size: var(--lb-font-size-text-sm-relative);
+  line-height: var(--lb-line-height-text-sm-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
+  font-weight: 600;
+  color: var(--lb-post-author-name-color-text);
+}
+.lb-post-author__info {
+  display: flex;
+  flex-direction: column;
+}
+.lb-post-author__pub-date {
+  font-size: var(--lb-font-size-text-xs-relative);
+  line-height: var(--lb-line-height-text-xs-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
+  color: var(--lb-post-author-pub-date-color-text);
+}
 /*!************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/post-card/post-card.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************/
@@ -2840,33 +2892,6 @@
   font-weight: 500;
   color: var(--lb-post-header-title-color-text);
   margin-bottom: var(--wp--preset--spacing--80);
-}
-.lb-post-header__author {
-  display: flex;
-  align-items: center;
-  column-gap: var(--wp--preset--spacing--70);
-}
-.lb-post-header__author-avatar {
-  border-radius: 50%;
-}
-.lb-post-header__author-name {
-  font-size: var(--lb-font-size-text-sm-relative);
-  line-height: var(--lb-line-height-text-sm-relative);
-  letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-sm-relative, inherit);
-  font-weight: 600;
-  color: var(--lb-post-header-author-name-color-text);
-}
-.lb-post-header__author-info {
-  display: flex;
-  flex-direction: column;
-}
-.lb-post-header__pub-date {
-  font-size: var(--lb-font-size-text-xs-relative);
-  line-height: var(--lb-line-height-text-xs-relative);
-  letter-spacing: inherit;
-  letter-spacing: var(--lb-letter-spacing-text-xs-relative, inherit);
-  color: var(--lb-post-header-pub-date-color-text);
 }
 /*!************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/post-info/post-info.scss ***!

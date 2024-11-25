@@ -150,6 +150,22 @@ var S = wp.domReady(function () {
 
 /***/ }),
 
+/***/ "./src/editor/blocks/variations/disable-variations.ts":
+/*!************************************************************!*\
+  !*** ./src/editor/blocks/variations/disable-variations.ts ***!
+  \************************************************************/
+/***/ (() => {
+
+wp.domReady(function () {
+  if (typeof WP_BLOCKS_DISALLOWED_VARIANTS != 'undefined') {
+    WP_BLOCKS_DISALLOWED_VARIANTS.forEach(function (variant) {
+      wp.blocks.unregisterBlockVariation(variant[0], variant[1]);
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/editor/blocks/variations/group-list.ts":
 /*!****************************************************!*\
   !*** ./src/editor/blocks/variations/group-list.ts ***!
@@ -261,6 +277,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _group__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_group__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _group_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./group-list */ "./src/editor/blocks/variations/group-list.ts");
 /* harmony import */ var _group_list__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_group_list__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _disable_variations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./disable-variations */ "./src/editor/blocks/variations/disable-variations.ts");
+/* harmony import */ var _disable_variations__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_disable_variations__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
