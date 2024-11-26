@@ -6,7 +6,7 @@ $featuresList = $args['features_list'] ?? [];
 $featureImage = $args['feature_image'] ?? '';
 
 ?>
-<div class="<?= classNames(
+<section class="<?= classNames(
               'lb-hero-featured-banner',
               'not-prose',
               $className,
@@ -40,4 +40,4 @@ $featureImage = $args['feature_image'] ?? '';
       </div>
     <? } ?>
   </div>
-</div>
+</section>

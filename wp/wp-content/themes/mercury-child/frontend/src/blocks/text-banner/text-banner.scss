@@ -15,11 +15,12 @@
   background-color: var(--lb-text-banner-background-color);
 
   & {
-    @include font.get-text-styles('display-xs');
+    @include font.get-text-styles('display-xs', false);
     color: var(--lb-text-banner-content-color);
 
     @include breakpoints.media-breakpoint-down('xs') {
-      @include font.get-text-styles('text-lg');
+      text-align: center;
+      @include font.get-text-styles('text-lg', false);
     }
   }
 
