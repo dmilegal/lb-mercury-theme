@@ -5,7 +5,7 @@ $user = get_userdata($authorId);
 
 $displayName = $user->display_name;
 
-if (empty($display_name))
+if (empty($displayName))
   $displayName = $user->nickname;
 ?>
 <div class="lb-post-author">
