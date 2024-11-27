@@ -43,7 +43,7 @@
     column-gap: var(--wp--preset--spacing--115);
     
     @include breakpoints.media-breakpoint-down(sm) {
-      overflow-x: scroll;
+      overflow-x: auto;
       scroll-snap-type: x mandatory;
     }
 

@@ -14,3 +14,4 @@ require_once 'link-with-icon-list.php';
 require_once 'responsive-block.php';
 require_once 'toc.php';
 require_once 'hero-features-banner.php';
+require_once 'feature-grid.php';

@@ -32,5 +32,6 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/hero-features-banner');
     register_block_type(__DIR__ . '/text-banner');
     register_block_type(__DIR__ . '/feature-grid');
+    register_block_type(__DIR__ . '/latest-posts-section');
 }
 
