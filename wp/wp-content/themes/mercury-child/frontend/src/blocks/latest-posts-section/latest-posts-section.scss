@@ -5,10 +5,7 @@
 
 :root,
 .editor-styles-wrapper {
-  --lb-hero-featured-banner-background-color: var(--wp--preset--color--primary-50);
-  --lb-hero-featured-banner-feature-background-color: var(--lb-color-surface);
-  --lb-hero-featured-banner-feature-title-color: var(--lb-color-primary-high);
-  --lb-hero-featured-banner-feature-subtitle-color: var(--lb-color-on-surface-lowest);
+  --lb-latest-posts-section-title-color: var(--lb-color-text-strong);
 }
 
 .lb-latest-posts-section {
@@ -28,7 +25,7 @@
 
   &__title {
     @include font.get-text-styles('display-md', false);
-    color: var(--lb-feature-grid-title-color);
+    color: var(--lb-latest-posts-section-title-color);
     font-weight: 600;
 
     @include breakpoints.media-breakpoint-down(xs) {

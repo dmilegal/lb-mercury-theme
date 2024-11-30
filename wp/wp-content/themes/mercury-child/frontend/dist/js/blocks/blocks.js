@@ -108,6 +108,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/contact-info-section/contact-info-section.scss":
+/*!*******************************************************************!*\
+  !*** ./src/blocks/contact-info-section/contact-info-section.scss ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/contributor-list/contributor-list.scss":
 /*!***********************************************************!*\
   !*** ./src/blocks/contributor-list/contributor-list.scss ***!
@@ -841,6 +853,18 @@ function showReadMoreButton(element) {
   }
 }
 init();
+
+/***/ }),
+
+/***/ "./src/blocks/contact-info-section/contact-info-section.ts":
+/*!*****************************************************************!*\
+  !*** ./src/blocks/contact-info-section/contact-info-section.ts ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _contact_info_section_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contact-info-section.scss */ "./src/blocks/contact-info-section/contact-info-section.scss");
+
 
 /***/ }),
 
@@ -2541,6 +2565,7 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/breadcrumbs/breadcrumbs.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/button/button.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/clipping/clipping.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/contact-info-section/contact-info-section.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/contributor-list/contributor-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/cookie-banner/cookie-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/ea-accordion/ea-accordion.ts")))

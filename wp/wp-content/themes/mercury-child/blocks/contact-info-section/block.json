@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/contact-info-section",
+  "title": "Contact Info Section",
+  "description": "",
+  "style": ["contact-info-section"],
+  "editorStyle": [],
+  "script": ["contact-info-section"],
+  "category": "lb-main",
+  "icon": "info",
+  "keywords": ["lb","contact info", "section", "контакты",  "почта", "телефоны", "адрес"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "contact-info-section.php"
+  }
+}

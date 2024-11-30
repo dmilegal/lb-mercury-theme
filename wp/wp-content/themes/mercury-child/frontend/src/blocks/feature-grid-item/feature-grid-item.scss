@@ -5,8 +5,8 @@
 
 :root,
 .editor-styles-wrapper {
-  --lb-feature-grid-title-color: var(--lb-color-text-strong);
-  --lb-feature-grid-background-color: var(--lb-color-primary-container-low);
+  --lb-feature-grid-item-title-color: var(--lb-color-text-strong);
+  --lb-feature-grid-item-background-color: var(--lb-color-primary-container-low);
   
 }
 
@@ -17,7 +17,7 @@
 
   &__variant {
     &--shaded {
-      background-color: var(--lb-feature-grid-background-color);
+      background-color: var(--lb-feature-grid-item-background-color);
       padding: var(--wp--preset--spacing--100);
       border-radius: var(--wp--preset--spacing--70);
 
@@ -54,7 +54,7 @@
   &__title {
     @include font.get-text-styles('text-lg', false);
     font-weight: 500;
-    color: var(--lb-feature-grid-title-color);
+    color: var(--lb-feature-grid-item-title-color);
     
     &:not(:last-child) {
       margin-bottom: var(--wp--preset--spacing--60);

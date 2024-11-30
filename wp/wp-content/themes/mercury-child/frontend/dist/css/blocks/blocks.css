@@ -1174,6 +1174,149 @@
 .lb-clipping__ico {
   font-size: var(--wp--preset--font-size--text-lg);
 }
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/contact-info-section/contact-info-section.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root,
+.editor-styles-wrapper {
+  --lb-contact-info-section-title-color: var(--lb-color-text-strong);
+  --lb-contact-info-section-background-color: var(--lb-color-surface-high);
+  --lb-contact-info-section-email-color: var(--lb-color-action-text-default);
+  --lb-contact-info-section-alt-color: var(--lb-color-text-strong);
+  --lb-contact-info-section-desc-color: var(--lb-color-on-surface-lowest);
+}
+
+.lb-contact-info-section {
+  padding: var(--wp--preset--spacing--160) 0 var(--wp--preset--spacing--280);
+  background-color: var(--lb-contact-info-section-background-color);
+}
+@media (max-width: 575.98px) {
+  .lb-contact-info-section {
+    padding: var(--wp--preset--spacing--160) 0;
+  }
+}
+.lb-contact-info-section__container {
+  width: 100%;
+  padding-left: var(--layout--content-padding);
+  padding-right: var(--layout--content-padding);
+  max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
+  margin-left: auto;
+  margin-right: auto;
+}
+.lb-contact-info-section__header {
+  margin-bottom: var(--wp--preset--spacing--110);
+}
+.lb-contact-info-section__title {
+  font-size: var(--wp--preset--font-size--display-md);
+  line-height: var(--wp--custom--line-height--display-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--display-md, inherit);
+  color: var(--lb-contact-info-section-title-color);
+  font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  .lb-contact-info-section__title {
+    text-align: center;
+  }
+}
+.lb-contact-info-section__emails {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--wp--preset--spacing--120);
+  row-gap: var(--wp--preset--spacing--100);
+}
+.lb-contact-info-section__emails:not(:last-child) {
+  margin-bottom: var(--wp--preset--spacing--110);
+}
+@media (max-width: 575.98px) {
+  .lb-contact-info-section__emails:not(:last-child) {
+    padding-bottom: var(--wp--preset--spacing--110);
+    border-bottom: 1px solid var(--lb-color-surface-outline-1);
+  }
+}
+@media (max-width: 575.98px) {
+  .lb-contact-info-section__emails {
+    flex-direction: column;
+  }
+}
+.lb-contact-info-section__email {
+  flex-grow: 1;
+}
+.lb-contact-info-section__email-link {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--lb-contact-info-section-email-color);
+}
+.lb-contact-info-section__email-desc {
+  display: block;
+  margin-top: var(--wp--preset--spacing--60);
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  color: var(--lb-contact-info-section-desc-color);
+}
+.lb-contact-info-section__address {
+  width: 100%;
+}
+.lb-contact-info-section__address:not(:last-child) {
+  margin-bottom: var(--wp--preset--spacing--80);
+}
+.lb-contact-info-section__address-map {
+  width: 100%;
+  height: 424px;
+  border-radius: var(--wp--preset--spacing--70);
+}
+@media (max-width: 575.98px) {
+  .lb-contact-info-section__address-map {
+    height: 183px;
+  }
+}
+.lb-contact-info-section__address-detail {
+  color: var(--lb-contact-info-section-desc-color);
+  margin-top: var(--wp--preset--spacing--85);
+}
+.lb-contact-info-section__address-full {
+  display: block;
+  font-weight: 500;
+  color: var(--lb-contact-info-section-alt-color);
+}
+.lb-contact-info-section__address-caption {
+  display: block;
+  color: var(--lb-contact-info-section-desc-color);
+  margin-top: var(--wp--preset--spacing--60);
+}
+.lb-contact-info-section__phones {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--wp--preset--spacing--120);
+  row-gap: var(--wp--preset--spacing--100);
+}
+.lb-contact-info-section__phone {
+  flex-grow: 1;
+}
+.lb-contact-info-section__phone-link {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--lb-contact-info-section-alt-color);
+}
+.lb-contact-info-section__phone-desc {
+  display: block;
+  margin-top: var(--wp--preset--spacing--60);
+  font-size: var(--wp--preset--font-size--text-sm);
+  line-height: var(--wp--custom--line-height--text-sm);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  color: var(--lb-contact-info-section-desc-color);
+}
 /*!**************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/contributor-list/contributor-list.scss ***!
   \**************************************************************************************************************************************************************************************************************************************************************************/
@@ -1531,8 +1674,8 @@
 **/
 :root,
 .editor-styles-wrapper {
-  --lb-feature-grid-title-color: var(--lb-color-text-strong);
-  --lb-feature-grid-background-color: var(--lb-color-primary-container-low);
+  --lb-feature-grid-item-title-color: var(--lb-color-text-strong);
+  --lb-feature-grid-item-background-color: var(--lb-color-primary-container-low);
 }
 
 @media (max-width: 575.98px) {
@@ -1541,7 +1684,7 @@
   }
 }
 .lb-feature-grid-item__variant--shaded {
-  background-color: var(--lb-feature-grid-background-color);
+  background-color: var(--lb-feature-grid-item-background-color);
   padding: var(--wp--preset--spacing--100);
   border-radius: var(--wp--preset--spacing--70);
 }
@@ -1567,7 +1710,7 @@
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
   font-weight: 500;
-  color: var(--lb-feature-grid-title-color);
+  color: var(--lb-feature-grid-item-title-color);
 }
 .lb-feature-grid-item__title:not(:last-child) {
   margin-bottom: var(--wp--preset--spacing--60);
@@ -2396,10 +2539,7 @@
 **/
 :root,
 .editor-styles-wrapper {
-  --lb-hero-featured-banner-background-color: var(--wp--preset--color--primary-50);
-  --lb-hero-featured-banner-feature-background-color: var(--lb-color-surface);
-  --lb-hero-featured-banner-feature-title-color: var(--lb-color-primary-high);
-  --lb-hero-featured-banner-feature-subtitle-color: var(--lb-color-on-surface-lowest);
+  --lb-latest-posts-section-title-color: var(--lb-color-text-strong);
 }
 
 .lb-latest-posts-section {
@@ -2426,7 +2566,7 @@
   line-height: var(--wp--custom--line-height--display-md);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--display-md, inherit);
-  color: var(--lb-feature-grid-title-color);
+  color: var(--lb-latest-posts-section-title-color);
   font-weight: 600;
 }
 @media (max-width: 575.98px) {
