@@ -44,9 +44,11 @@
   }
 
   &__icon {
-    width: var(--wp--preset--spacing--200);
-    height: var(--wp--preset--spacing--200);
-    object-fit: contain;
+    &#{&} {
+      width: var(--wp--preset--spacing--200);
+      height: var(--wp--preset--spacing--200);
+      object-fit: contain;
+    }
 
     @extend %feature-grid-item-icon;
   }

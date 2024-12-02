@@ -9,7 +9,7 @@
   --lb-contact-info-section-email-color: var(--lb-color-action-text-default);
   --lb-contact-info-section-alt-color: var(--lb-color-text-strong);
   --lb-contact-info-section-desc-color: var(--lb-color-on-surface-lowest);
-
+  --lb-contact-info-section-map-background-color: var(--lb-color-surface-max);
 }
 
 .lb-contact-info-section {
@@ -50,9 +50,11 @@
   &__email {
     flex-grow: 1;
     &-link {
-      font-weight: 500;
-      text-decoration: none;
-      color: var(--lb-contact-info-section-email-color);
+      &#{&} {
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--lb-contact-info-section-email-color);
+      }
     }
     &-desc {
       display: block;
@@ -72,6 +74,7 @@
       width: 100%;
       height: 424px;
       border-radius: var(--wp--preset--spacing--70);
+      background-color: var(--lb-contact-info-section-map-background-color);
       @include breakpoints.media-breakpoint-down(xs) {
         height: 183px;
       }
@@ -105,9 +108,11 @@
   &__phone {
     flex-grow: 1;
     &-link {
-      font-weight: 500;
-      text-decoration: none;
-      color: var(--lb-contact-info-section-alt-color);
+      &#{&} {
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--lb-contact-info-section-alt-color);
+      }
     }
     &-desc {
       display: block;

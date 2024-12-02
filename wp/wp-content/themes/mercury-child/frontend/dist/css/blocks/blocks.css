@@ -1189,6 +1189,7 @@
   --lb-contact-info-section-email-color: var(--lb-color-action-text-default);
   --lb-contact-info-section-alt-color: var(--lb-color-text-strong);
   --lb-contact-info-section-desc-color: var(--lb-color-on-surface-lowest);
+  --lb-contact-info-section-map-background-color: var(--lb-color-surface-max);
 }
 
 .lb-contact-info-section {
@@ -1231,7 +1232,7 @@
 .lb-contact-info-section__email {
   flex-grow: 1;
 }
-.lb-contact-info-section__email-link {
+.lb-contact-info-section__email-link.lb-contact-info-section__email-link {
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1256,6 +1257,7 @@
   width: 100%;
   height: 424px;
   border-radius: var(--wp--preset--spacing--70);
+  background-color: var(--lb-contact-info-section-map-background-color);
 }
 @media (max-width: 575.98px) {
   .lb-contact-info-section__address-map {
@@ -1285,7 +1287,7 @@
 .lb-contact-info-section__phone {
   flex-grow: 1;
 }
-.lb-contact-info-section__phone-link {
+.lb-contact-info-section__phone-link.lb-contact-info-section__phone-link {
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1682,7 +1684,7 @@
 .lb-feature-grid-item__variant--plain .lb-feature-grid-item__icon:not(:last-child) {
   margin-bottom: var(--wp--preset--spacing--80);
 }
-.lb-feature-grid-item__icon {
+.lb-feature-grid-item__icon.lb-feature-grid-item__icon {
   width: var(--wp--preset--spacing--200);
   height: var(--wp--preset--spacing--200);
   object-fit: contain;
@@ -3103,7 +3105,8 @@
 /**
 * font
 **/
-:root {
+:root,
+.editor-styles-wrapper {
   --lb-post-outlined-card-info-color-text: var(--lb-color-text-default);
   --lb-post-outlined-card-title-color-text: var(--lb-color-text-strong);
   --lb-post-outlined-card-title-color-text-hover: var(--lb-color-text-default);
@@ -3115,9 +3118,11 @@
   display: block;
   border-radius: var(--wp--preset--spacing--75);
   border: 1px solid var(--lb-post-outlined-card-color-border);
+  transition: opacity 0.2s ease-in-out;
+}
+.lb-post-outlined-card.lb-post-outlined-card {
   -webkit-text-decoration: none;
   text-decoration: none;
-  transition: opacity 0.2s ease-in-out;
 }
 .lb-post-outlined-card:hover {
   opacity: 0.85;
@@ -5076,7 +5081,7 @@
   max-width: 132px;
   margin: 0 auto;
 }
-.lb-team-member-card__link {
+.lb-team-member-card__link.lb-team-member-card__link {
   display: block;
   -webkit-text-decoration: none;
   text-decoration: none;

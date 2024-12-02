@@ -29,7 +29,7 @@ $address = $args['address'] ?? [];
         <? } ?>
       </div>
     <? } ?>
-    <? if ($address) { ?>
+    <? if ($address && !empty($address['address'])) { ?>
       <div class="lb-contact-info-section__address">
         <div class="lb-contact-info-section__address-map" data-map="<?= esc_attr(json_encode($address)) ?>"></div>
         <div class="lb-contact-info-section__address-detail">

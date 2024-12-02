@@ -3,7 +3,8 @@
 @use '@/shared/styles/mixins/font';
 @use '@/shared/styles/mixins/breakpoints';
 
-:root {
+:root,
+.editor-styles-wrapper {
   --lb-post-outlined-card-info-color-text: var(--lb-color-text-default);
   --lb-post-outlined-card-title-color-text: var(--lb-color-text-strong);
   --lb-post-outlined-card-title-color-text-hover: var(--lb-color-text-default);
@@ -15,8 +16,10 @@
   display: block;
   border-radius: var(--wp--preset--spacing--75);
   border: 1px solid var(--lb-post-outlined-card-color-border);
-  text-decoration: none;
   transition: opacity 0.2s ease-in-out;
+  &#{&} {
+    text-decoration: none;
+  }
   &:hover {
     opacity: 0.85;
   }

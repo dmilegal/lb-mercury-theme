@@ -8,3 +8,4 @@ require_once 'pages/pages.php';
 require_once 'blocks/blocks.php';
 require_once 'co-authors.php';
 require_once 'templates/templates.php';
+require_once 'container-size.php';

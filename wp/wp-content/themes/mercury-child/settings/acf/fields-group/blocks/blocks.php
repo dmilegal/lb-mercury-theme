@@ -15,3 +15,6 @@ require_once 'responsive-block.php';
 require_once 'toc.php';
 require_once 'hero-features-banner.php';
 require_once 'feature-grid.php';
+require_once 'team-section.php';
+require_once 'contact-info-section.php';
+require_once 'latest-posts-section.php';

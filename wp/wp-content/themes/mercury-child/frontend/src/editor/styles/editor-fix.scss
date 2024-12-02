@@ -8,3 +8,15 @@
 .aligncenter > .components-resizable-box__container {
   display: inline-block!important;
 }
+
+.wp-block-lb-feature-grid,
+.wp-block-lb-hero-features-banner,
+.wp-block-lb-text-banner,
+.wp-block-lb-latest-posts-section,
+.wp-block-lb-contact-info-section,
+.wp-block-lb-team-section
+ {
+
+    max-width: 100%!important;
+  
+}

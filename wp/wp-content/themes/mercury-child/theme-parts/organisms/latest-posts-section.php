@@ -14,6 +14,7 @@ else
     'post_status' => 'publish',
   ), ARRAY_A));
 
+if (!$postIds) return;
 ?>
 <section class="<?= classNames(
                   'lb-latest-posts-section',

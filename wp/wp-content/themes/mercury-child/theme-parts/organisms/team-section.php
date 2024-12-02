@@ -4,7 +4,9 @@ $style = $args['style'] ?? '';
 $title = $args['title'] ?? '';
 $subtitle = $args['subtitle'] ?? '';
 $teamMemberIds = $args['member_ids'] ?? [];
+$disableMemberLink = $args['disable_member_link'] ?? false;
 
+if (!$teamMemberIds) return;
 ?>
 
 <section class="<?= classNames(
@@ -26,6 +28,7 @@ $teamMemberIds = $args['member_ids'] ?? [];
       <? foreach ($teamMemberIds as $teamMemberId) {
         get_template_part('theme-parts/cells/team-member-card/team-member-card', null, [
           'member_id' => $teamMemberId,
+          'disable_member_link' => $disableMemberLink,
         ]);
       } ?>
     </div>
