@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /******/ var __webpack_modules__ = ({
 
 /***/ "./public/fonts/lhicon/stylesheet.css":
@@ -400,3 +401,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //# sourceMappingURL=editor.js.map
+=======
+var e={8588:()=>{wp.domReady((function(){wp.blocks.registerBlockStyle("core/group",{name:"group-bordered",label:"Bordered"})}))},8578:()=>{wp.domReady((function(){"undefined"!=typeof WP_BLOCKS_DISALLOWED_VARIANTS&&WP_BLOCKS_DISALLOWED_VARIANTS.forEach((function(e){wp.blocks.unregisterBlockVariation(e[0],e[1])}))}))},5461:()=>{wp.domReady((function(){wp.blocks.registerBlockVariation("lb/group-list",{name:"advantages",title:"Advantages",icon:"plus-alt",keywords:["advantages","list","group","pros"],attributes:{data:{mark_ico:"check",title:wp.i18n.__("Advantages","mercury-child")}}}),wp.blocks.registerBlockVariation("lb/group-list",{name:"disadvantages",title:"Disadvantages",icon:"minus",keywords:["disadvantages","list","group","cons"],attributes:{data:{mark_ico:"cross",title:wp.i18n.__("Disadvantages","mercury-child")}}}),wp.blocks.registerBlockVariation("core/columns",{name:"pros-cons",title:"Pros & Cons",icon:"star-half",keywords:["pros","cons","compare","advantages","disadvantages"],attributes:{className:"lb-pros-cons",templateLock:"all",flexWrap:"nowrap"},innerBlocks:[["core/column",{},[["lb/group-list",{data:{mark_ico:"check",title:wp.i18n.__("Advantages","mercury-child")}}]]],["core/column",{},[["lb/group-list",{data:{mark_ico:"cross",title:wp.i18n.__("Disadvantages","mercury-child")}}]]]]})}))},8560:()=>{wp.domReady((function(){}))},3195:()=>{wp.domReady((function(){wp.blocks.registerBlockVariation("core/list",{name:"list-with-ico-check",title:"List - ✓ Icon",attributes:{className:"is-list-ico-check"}}),wp.blocks.registerBlockVariation("core/list",{name:"list-with-ico-cross",title:"List - ✘ Icon",attributes:{className:"is-list-ico-cross"}})}))}},t={};function o(a){var r=t[a];if(void 0!==r)return r.exports;var i=t[a]={exports:{}};return e[a](i,i.exports,o),i.exports}o(3195),o(8560),o(5461),o(8578),wp.domReady((function(){wp.blocks.registerBlockStyle("core/media-text",{name:"media-text-bordered",label:"Bordered"})})),wp.domReady((function(){wp.blocks.registerBlockStyle("core/list",{name:"list-bordered",label:"Bordered"})})),o(8588);
+>>>>>>> ec3b1bd329ca4206a55ec63a646502cdcd848db3
