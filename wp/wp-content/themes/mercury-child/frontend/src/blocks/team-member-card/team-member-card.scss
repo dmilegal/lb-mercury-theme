@@ -7,17 +7,33 @@
 .editor-styles-wrapper {
   --lb-team-member-card-name-color: var(--lb-color-text-strong);
   --lb-team-member-card-pos-color: var(--lb-color-text-default);
-  --lb-team-member-card-border-color: linear-gradient(to right, var(--wp--preset--color--primary-200), var(--wp--preset--color--primary-200));
-  --lb-team-member-card-border-color-hover: linear-gradient(to right, var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-500));
+  --lb-team-member-card-border-color: var(--wp--preset--color--primary-200);
+  --lb-team-member-card-border-color-hover: var(--wp--preset--color--primary-600);
 }
 
 .lb-team-member-card {
   padding: var(--wp--preset--spacing--100);
   border-radius: var(--wp--preset--spacing--60);
   border: 1px solid var(--lb-team-member-card-border-color);
-
+  transition: border-color 0.2s ease-in-out;
   &:hover {
     border-color: var(--lb-team-member-card-border-color-hover);
+  }
+  @include breakpoints.media-breakpoint-down('xs') {
+    padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--80);
+  }
+
+  &__inner {
+    max-width: 132px;
+    margin: 0 auto;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    &:not(:last-child) {
+      margin-bottom: var(--wp--preset--spacing--100);
+    }
   }
 
   &__avatar {
@@ -43,11 +59,11 @@
   &__pos {
     text-align: center;
     @include font.get-text-styles('text-xs', false);
-    font-weight: 500;
     color: var(--lb-team-member-card-pos-color);
   }
 
   &__soclinks {
-
+    display: flex;
+    justify-content: space-between;
   }
 }

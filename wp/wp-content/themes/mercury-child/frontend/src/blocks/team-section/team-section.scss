@@ -25,13 +25,27 @@
   }
 
   &__subtitle {
+    @include breakpoints.media-breakpoint-down(xs) {
+      margin-bottom: var(--wp--preset--spacing--85);
+    }
   }
 
   &__teams {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+    margin: 0 auto;
     column-gap: var(--wp--preset--spacing--90);
     row-gap: var(--wp--preset--spacing--90);
+    justify-content: center;
+
+    &:has(> *:nth-child(3)) {
+      max-width: none;
+      grid-template-columns: repeat(3, 1fr);
+      @include breakpoints.media-breakpoint-down('xs') {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
     @include breakpoints.media-breakpoint-down('xs') {
       column-gap: var(--wp--preset--spacing--60);

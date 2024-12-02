@@ -5054,17 +5054,35 @@
 .editor-styles-wrapper {
   --lb-team-member-card-name-color: var(--lb-color-text-strong);
   --lb-team-member-card-pos-color: var(--lb-color-text-default);
-  --lb-team-member-card-border-color: linear-gradient(to right, var(--wp--preset--color--primary-200), var(--wp--preset--color--primary-200));
-  --lb-team-member-card-border-color-hover: linear-gradient(to right, var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-500));
+  --lb-team-member-card-border-color: var(--wp--preset--color--primary-200);
+  --lb-team-member-card-border-color-hover: var(--wp--preset--color--primary-600);
 }
 
 .lb-team-member-card {
   padding: var(--wp--preset--spacing--100);
   border-radius: var(--wp--preset--spacing--60);
   border: 1px solid var(--lb-team-member-card-border-color);
+  transition: border-color 0.2s ease-in-out;
 }
 .lb-team-member-card:hover {
   border-color: var(--lb-team-member-card-border-color-hover);
+}
+@media (max-width: 575.98px) {
+  .lb-team-member-card {
+    padding: var(--wp--preset--spacing--100) var(--wp--preset--spacing--80);
+  }
+}
+.lb-team-member-card__inner {
+  max-width: 132px;
+  margin: 0 auto;
+}
+.lb-team-member-card__link {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+.lb-team-member-card__link:not(:last-child) {
+  margin-bottom: var(--wp--preset--spacing--100);
 }
 .lb-team-member-card__avatar {
   display: block;
@@ -5089,8 +5107,11 @@
   line-height: var(--wp--custom--line-height--text-xs);
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
-  font-weight: 500;
   color: var(--lb-team-member-card-pos-color);
+}
+.lb-team-member-card__soclinks {
+  display: flex;
+  justify-content: space-between;
 }
 /*!******************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/team-section/team-section.scss ***!
@@ -5117,13 +5138,30 @@
   margin-left: auto;
   margin-right: auto;
 }
+@media (max-width: 575.98px) {
+  .lb-team-section__subtitle {
+    margin-bottom: var(--wp--preset--spacing--85);
+  }
+}
 .lb-team-section__teams {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 500px;
+  margin: 0 auto;
   grid-column-gap: var(--wp--preset--spacing--90);
   column-gap: var(--wp--preset--spacing--90);
   grid-row-gap: var(--wp--preset--spacing--90);
   row-gap: var(--wp--preset--spacing--90);
+  justify-content: center;
+}
+.lb-team-section__teams:has(> *:nth-child(3)) {
+  max-width: none;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 575.98px) {
+  .lb-team-section__teams:has(> *:nth-child(3)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 575.98px) {
   .lb-team-section__teams {

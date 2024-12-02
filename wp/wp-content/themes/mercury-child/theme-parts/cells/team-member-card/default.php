@@ -1,6 +1,7 @@
 <?
 $className = $args['className'] ?? '';
 $userId = $args['member_id'] ?? null;
+$disableMemberLink = $args['disable_member_link'] ?? false;
 
 $user = get_userdata($userId);
 // Get author's display name
@@ -17,22 +18,29 @@ $job_title = get_field('job_title', 'user_' . $userId);
 ?>
 <div class="<?= classNames("lb-team-member-card", $className) ?>">
   <div class="lb-team-member-card__inner">
-    <?= get_avatar($userId, 64, '', '', [
-      'class' => 'lb-team-member-card__avatar',
-      'loading' => 'lazy'
-    ]) ?>
-    <div class="lb-team-member-card__info">
-      <? if ($display_name) { ?>
-        <div class="lb-team-member-card__name">
-          <?= $display_name ?>
-        </div>
+    <? if (!$disableMemberLink) { ?>
+      <a class="lb-team-member-card__link" href="<?= get_author_posts_url($userId); ?>">
       <? } ?>
-      <? if ($job_title) { ?>
-        <div class="lb-team-member-card__pos">
-          <?= $job_title ?>
-        </div>
-      <? } ?>
-    </div>
+      <?= get_avatar($userId, 64, '', '', [
+        'class' => 'lb-team-member-card__avatar',
+        'loading' => 'lazy'
+      ]) ?>
+      <div class="lb-team-member-card__info">
+        <? if ($display_name) { ?>
+          <div class="lb-team-member-card__name">
+            <?= $display_name ?>
+          </div>
+        <? } ?>
+        <? if ($job_title) { ?>
+          <div class="lb-team-member-card__pos">
+            <?= $job_title ?>
+          </div>
+        <? } ?>
+      </div>
+      <? if (!$disableMemberLink) { ?>
+      </a>
+    <? } ?>
+
     <? if ($soc_links) { ?>
       <div class="lb-team-member-card__soclinks">
         <? foreach ($soc_links as $link) {
@@ -42,6 +50,8 @@ $job_title = get_field('job_title', 'user_' . $userId);
             'title' => $link[2] ?? '',
             'rel' => "nofollow",
             'target' => "_blank",
+            'variant' => 'inline',
+            'size' => '2xl',
           ]);
         } ?>
       </div>
