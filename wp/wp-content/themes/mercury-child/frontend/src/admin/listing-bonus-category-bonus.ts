@@ -1,7 +1,7 @@
 declare const acf: any
 declare const jQuery: any
 ;(function ($) {
-  if (!acf) return
+  if (typeof acf === 'undefined') return
   // Добавляем фильтр для модификации данных AJAX-запроса select2
   acf.add_filter('select2_ajax_data', function (data, args, $input, field, instance) {
     // Проверяем, что это поле 'bonus_category' (замените на ваш ключ поля)

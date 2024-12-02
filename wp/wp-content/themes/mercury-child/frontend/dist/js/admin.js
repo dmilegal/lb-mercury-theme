@@ -19,7 +19,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (() => {
 
 (function ($) {
-  if (!acf) return;
+  if (typeof acf === 'undefined') return;
   // Добавляем фильтр для модификации данных AJAX-запроса select2
   acf.add_filter('select2_ajax_data', function (data, args, $input, field, instance) {
     var _instance$data, _instance$data2;

@@ -84,10 +84,15 @@ async function triggerLoad(container: HTMLElement, page = 1) {
   btn.disabled = false
 }
 
-async function load(query?: string) {
+async function load(query?: Record<string, unknown>) {
   signal?.abort()
   signal = new AbortController()
-  const res = await fetch(`${API_URL}aces/v1/html/reviews?${query || ''}`, {
+  const res = await fetch(`${API_URL}aces/v1/html/reviews`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(query),
     signal: signal.signal,
   })
   const data = (await res.json()) as ResponseData
@@ -109,7 +114,7 @@ function prepareQuery(
     ...data,
   }
 
-  return qs.stringify(params)
+  return params //qs.stringify(params)
 }
 
 function render(container: HTMLElement, html: string, page: number, total_pages: number) {
