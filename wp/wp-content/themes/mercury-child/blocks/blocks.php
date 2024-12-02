@@ -34,5 +34,6 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/feature-grid');
     register_block_type(__DIR__ . '/latest-posts-section');
     register_block_type(__DIR__ . '/contact-info-section');
+    register_block_type(__DIR__ . '/team-section');
 }
 

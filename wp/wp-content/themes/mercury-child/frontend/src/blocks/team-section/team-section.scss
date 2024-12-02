@@ -5,10 +5,9 @@
 
 :root,
 .editor-styles-wrapper {
-
 }
 
-.lb-latest-posts-section {
+.lb-team-section {
   padding: var(--wp--preset--spacing--160) 0 var(--wp--preset--spacing--280);
 
   @include breakpoints.media-breakpoint-down(xs) {
@@ -25,25 +24,18 @@
   &__title {
   }
 
-  &__list {
-    display: flex;
-    
+  &__subtitle {
+  }
+
+  &__teams {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     column-gap: var(--wp--preset--spacing--90);
+    row-gap: var(--wp--preset--spacing--90);
 
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-
-  }
-
-  &__item {
-    flex: 1;
-    min-width: 220px;
-    scroll-snap-align: center;
-  }
-
-  &__more {
-    --lb-button--border--color: var(--lb-post-outlined-card-color-border);
-    width: 100%;
-    margin-top: var(--wp--preset--spacing--70);
+    @include breakpoints.media-breakpoint-down('xs') {
+      column-gap: var(--wp--preset--spacing--60);
+      row-gap: var(--wp--preset--spacing--60);
+    }
   }
 }

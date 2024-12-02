@@ -1185,7 +1185,6 @@
 **/
 :root,
 .editor-styles-wrapper {
-  --lb-contact-info-section-title-color: var(--lb-color-text-strong);
   --lb-contact-info-section-background-color: var(--lb-color-surface-high);
   --lb-contact-info-section-email-color: var(--lb-color-action-text-default);
   --lb-contact-info-section-alt-color: var(--lb-color-text-strong);
@@ -1208,22 +1207,6 @@
   max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
-}
-.lb-contact-info-section__header {
-  margin-bottom: var(--wp--preset--spacing--110);
-}
-.lb-contact-info-section__title {
-  font-size: var(--wp--preset--font-size--display-md);
-  line-height: var(--wp--custom--line-height--display-md);
-  letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--display-md, inherit);
-  color: var(--lb-contact-info-section-title-color);
-  font-weight: 600;
-}
-@media (max-width: 575.98px) {
-  .lb-contact-info-section__title {
-    text-align: center;
-  }
 }
 .lb-contact-info-section__emails {
   display: flex;
@@ -2537,11 +2520,6 @@
 /**
 * font
 **/
-:root,
-.editor-styles-wrapper {
-  --lb-latest-posts-section-title-color: var(--lb-color-text-strong);
-}
-
 .lb-latest-posts-section {
   padding: var(--wp--preset--spacing--160) 0 var(--wp--preset--spacing--280);
 }
@@ -2557,22 +2535,6 @@
   max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
-}
-.lb-latest-posts-section__header {
-  margin-bottom: var(--wp--preset--spacing--110);
-}
-.lb-latest-posts-section__title {
-  font-size: var(--wp--preset--font-size--display-md);
-  line-height: var(--wp--custom--line-height--display-md);
-  letter-spacing: inherit;
-  letter-spacing: var(--wp--custom--letter-spacing--display-md, inherit);
-  color: var(--lb-latest-posts-section-title-color);
-  font-weight: 600;
-}
-@media (max-width: 575.98px) {
-  .lb-latest-posts-section__title {
-    text-align: center;
-  }
 }
 .lb-latest-posts-section__list {
   display: flex;
@@ -5078,6 +5040,96 @@
   flex-wrap: wrap;
   row-gap: var(--wp--preset--spacing--60);
   column-gap: var(--wp--preset--spacing--60);
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/team-member-card/team-member-card.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root,
+.editor-styles-wrapper {
+  --lb-team-member-card-name-color: var(--lb-color-text-strong);
+  --lb-team-member-card-pos-color: var(--lb-color-text-default);
+  --lb-team-member-card-border-color: linear-gradient(to right, var(--wp--preset--color--primary-200), var(--wp--preset--color--primary-200));
+  --lb-team-member-card-border-color-hover: linear-gradient(to right, var(--wp--preset--color--primary-600), var(--wp--preset--color--primary-500));
+}
+
+.lb-team-member-card {
+  padding: var(--wp--preset--spacing--100);
+  border-radius: var(--wp--preset--spacing--60);
+  border: 1px solid var(--lb-team-member-card-border-color);
+}
+.lb-team-member-card:hover {
+  border-color: var(--lb-team-member-card-border-color-hover);
+}
+.lb-team-member-card__avatar {
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto var(--wp--preset--spacing--80);
+}
+.lb-team-member-card__info:not(:last-child) {
+  margin-bottom: var(--wp--preset--spacing--100);
+}
+.lb-team-member-card__name {
+  text-align: center;
+  font-size: var(--wp--preset--font-size--text-lg);
+  line-height: var(--wp--custom--line-height--text-lg);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
+  font-weight: 500;
+  color: var(--lb-team-member-card-name-color);
+}
+.lb-team-member-card__pos {
+  text-align: center;
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  font-weight: 500;
+  color: var(--lb-team-member-card-pos-color);
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/team-section/team-section.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+.lb-team-section {
+  padding: var(--wp--preset--spacing--160) 0 var(--wp--preset--spacing--280);
+}
+@media (max-width: 575.98px) {
+  .lb-team-section {
+    padding: var(--wp--preset--spacing--160) 0;
+  }
+}
+.lb-team-section__container {
+  width: 100%;
+  padding-left: var(--layout--content-padding);
+  padding-right: var(--layout--content-padding);
+  max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
+  margin-left: auto;
+  margin-right: auto;
+}
+.lb-team-section__teams {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: var(--wp--preset--spacing--90);
+  column-gap: var(--wp--preset--spacing--90);
+  grid-row-gap: var(--wp--preset--spacing--90);
+  row-gap: var(--wp--preset--spacing--90);
+}
+@media (max-width: 575.98px) {
+  .lb-team-section__teams {
+    column-gap: var(--wp--preset--spacing--60);
+    row-gap: var(--wp--preset--spacing--60);
+  }
 }
 /*!****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/text-banner/text-banner.scss ***!

@@ -2572,6 +2572,33 @@ ul.wp-block-gallery.alignwide {
   display: none;
 }
 
+:root,
+.editor-styles-wrapper {
+  --lb-section-title-color: var(--lb-color-text-strong);
+  --lb-section-subtitle-color: var(--lb-color-on-surface-lowest);
+}
+
+.lb-section__header {
+  margin-bottom: var(--wp--preset--spacing--110);
+}
+.lb-section__title {
+  font-size: var(--wp--preset--font-size--display-md);
+  line-height: var(--wp--custom--line-height--display-md);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--display-md, inherit);
+  color: var(--lb-section-title-color);
+  font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  .lb-section__title {
+    text-align: center;
+  }
+}
+.lb-section__subtitle {
+  color: var(--lb-section-subtitle-color);
+  margin-bottom: var(--wp--preset--spacing--110);
+}
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers

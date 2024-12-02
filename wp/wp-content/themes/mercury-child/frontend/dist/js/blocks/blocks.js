@@ -660,6 +660,30 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/team-member-card/team-member-card.scss":
+/*!***********************************************************!*\
+  !*** ./src/blocks/team-member-card/team-member-card.scss ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/team-section/team-section.scss":
+/*!***************************************************!*\
+  !*** ./src/blocks/team-section/team-section.scss ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/text-banner/text-banner.scss":
 /*!*************************************************!*\
   !*** ./src/blocks/text-banner/text-banner.scss ***!
@@ -863,8 +887,111 @@ init();
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contact_info_section_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contact-info-section.scss */ "./src/blocks/contact-info-section/contact-info-section.scss");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _contact_info_section_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact-info-section.scss */ "./src/blocks/contact-info-section/contact-info-section.scss");
+/* harmony import */ var _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @googlemaps/js-api-loader */ "./node_modules/@googlemaps/js-api-loader/dist/index.mjs");
 
+
+
+
+function initContactInfoSection() {
+  return _initContactInfoSection.apply(this, arguments);
+}
+function _initContactInfoSection() {
+  _initContactInfoSection = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee2() {
+    var loader, els, _yield$loader$importL, Map, _yield$loader$importL2, PlacesService, _yield$loader$importL3, AdvancedMarkerElement, PinElement, createMarker;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee2$(_context2) {
+      while (1) switch (_context2.prev = _context2.next) {
+        case 0:
+          createMarker = function _createMarker(place, map) {
+            if (!place.geometry || !place.geometry.location) return;
+            var pinBackground = new PinElement({
+              background: 'var(--wp--preset--color--primary-600)',
+              borderColor: 'var(--wp--preset--color--primary-600)',
+              glyphColor: 'white'
+            });
+            new AdvancedMarkerElement({
+              map: map,
+              position: place.geometry.location,
+              content: pinBackground.element
+            });
+          };
+          loader = new _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_3__.Loader({
+            apiKey: LB_GMAP_SETTINGS.gmap_api_key,
+            version: 'weekly'
+          });
+          els = document.querySelectorAll('.lb-contact-info-section__address-map');
+          if (els.length) {
+            _context2.next = 5;
+            break;
+          }
+          return _context2.abrupt("return");
+        case 5:
+          _context2.next = 7;
+          return loader.importLibrary('maps');
+        case 7:
+          _yield$loader$importL = _context2.sent;
+          Map = _yield$loader$importL.Map;
+          _context2.next = 11;
+          return loader.importLibrary('places');
+        case 11:
+          _yield$loader$importL2 = _context2.sent;
+          PlacesService = _yield$loader$importL2.PlacesService;
+          _context2.next = 15;
+          return loader.importLibrary('marker');
+        case 15:
+          _yield$loader$importL3 = _context2.sent;
+          AdvancedMarkerElement = _yield$loader$importL3.AdvancedMarkerElement;
+          PinElement = _yield$loader$importL3.PinElement;
+          document.querySelectorAll('.lb-contact-info-section__address-map').forEach( /*#__PURE__*/function () {
+            var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee(el) {
+              var data, map, service, request;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+                while (1) switch (_context.prev = _context.next) {
+                  case 0:
+                    data = JSON.parse(el.getAttribute('data-map') || '');
+                    map = new Map(el, {
+                      center: {
+                        lat: data.lat,
+                        lng: data.lng
+                      },
+                      zoom: 16,
+                      mapId: LB_GMAP_SETTINGS.map_id
+                    });
+                    service = new PlacesService(map);
+                    request = {
+                      query: data.address,
+                      fields: ['name', 'geometry']
+                    };
+                    service.findPlaceFromQuery(request, function (results, status) {
+                      if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+                        for (var i = 0; i < 1; i++) {
+                          createMarker(results[i], map);
+                        }
+                        map.setCenter(results[0].geometry.location);
+                      }
+                    });
+                  case 5:
+                  case "end":
+                    return _context.stop();
+                }
+              }, _callee);
+            }));
+            return function (_x) {
+              return _ref.apply(this, arguments);
+            };
+          }());
+        case 19:
+        case "end":
+          return _context2.stop();
+      }
+    }, _callee2);
+  }));
+  return _initContactInfoSection.apply(this, arguments);
+}
+initContactInfoSection();
 
 /***/ }),
 
@@ -2000,6 +2127,30 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/team-member-card/team-member-card.ts":
+/*!*********************************************************!*\
+  !*** ./src/blocks/team-member-card/team-member-card.ts ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _team_member_card_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./team-member-card.scss */ "./src/blocks/team-member-card/team-member-card.scss");
+
+
+/***/ }),
+
+/***/ "./src/blocks/team-section/team-section.ts":
+/*!*************************************************!*\
+  !*** ./src/blocks/team-section/team-section.ts ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _team_section_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./team-section.scss */ "./src/blocks/team-section/team-section.scss");
+
+
+/***/ }),
+
 /***/ "./src/blocks/text-banner/text-banner.ts":
 /*!***********************************************!*\
   !*** ./src/blocks/text-banner/text-banner.ts ***!
@@ -2606,6 +2757,8 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/social-link/social-link.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/step-list/step-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/tag-list/tag-list.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/team-member-card/team-member-card.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/team-section/team-section.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/text-banner/text-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/toc/toc.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/tooltip/tooltip.ts")))

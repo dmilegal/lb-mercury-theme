@@ -5,7 +5,6 @@
 
 :root,
 .editor-styles-wrapper {
-  --lb-contact-info-section-title-color: var(--lb-color-text-strong);
   --lb-contact-info-section-background-color: var(--lb-color-surface-high);
   --lb-contact-info-section-email-color: var(--lb-color-action-text-default);
   --lb-contact-info-section-alt-color: var(--lb-color-text-strong);
@@ -26,17 +25,9 @@
   }
 
   &__header {
-    margin-bottom: var(--wp--preset--spacing--110);
   }
 
   &__title {
-    @include font.get-text-styles('display-md', false);
-    color: var(--lb-contact-info-section-title-color);
-    font-weight: 600;
-
-    @include breakpoints.media-breakpoint-down(xs) {
-      text-align: center;
-    }
   }
 
   &__emails {

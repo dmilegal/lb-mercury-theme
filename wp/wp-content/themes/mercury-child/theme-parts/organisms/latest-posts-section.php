@@ -23,8 +23,8 @@ else
                 ) ?>" style="<?= stylesValue($style) ?>">
   <div class="lb-latest-posts-section__container">
     <? if ($title) { ?>
-      <header class="lb-latest-posts-section__header">
-        <h2 class="lb-latest-posts-section__title"><?= $title ?></h2>
+      <header class="lb-latest-posts-section__header lb-section__header">
+        <h2 class="lb-latest-posts-section__title lb-section__title"><?= $title ?></h2>
       </header>
     <? } ?>
     <? if ($postIds) { ?>

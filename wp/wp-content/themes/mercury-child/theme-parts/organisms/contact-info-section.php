@@ -15,8 +15,8 @@ $address = $args['address'] ?? [];
                 ) ?>" style="<?= stylesValue($style) ?>">
   <div class="lb-contact-info-section__container">
     <? if ($title) { ?>
-      <header class="lb-contact-info-section__header">
-        <h2 class="lb-contact-info-section__title"><?= $title ?></h2>
+      <header class="lb-contact-info-section__header lb-section__header">
+        <h2 class="lb-contact-info-section__title lb-section__title"><?= $title ?></h2>
       </header>
     <? } ?>
     <? if ($emails) { ?>
@@ -31,15 +31,7 @@ $address = $args['address'] ?? [];
     <? } ?>
     <? if ($address) { ?>
       <div class="lb-contact-info-section__address">
-        <iframe class="lb-contact-info-section__address-map"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          frameborder="0"
-          style="border:0"
-          src="https://www.google.com/maps/embed/v1/place?key=<?= get_field('gmap_api_key', 'option') ?>
-    &q=<?= esc_attr($address['address']) ?>"></iframe>
-        </iframe>
+        <div class="lb-contact-info-section__address-map" data-map="<?= esc_attr(json_encode($address)) ?>"></div>
         <div class="lb-contact-info-section__address-detail">
           <span class="lb-contact-info-section__address-full"><?= $address['address'] ?></span>
           <span class="lb-contact-info-section__address-caption"><?= __('Address', 'mercury-child') ?></span>
