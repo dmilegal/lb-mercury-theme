@@ -204,6 +204,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./src/blocks/latest-posts/latest-posts.scss":
 /*!***************************************************!*\
   !*** ./src/blocks/latest-posts/latest-posts.scss ***!
@@ -216,6 +217,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+=======
+>>>>>>> 4548395d599ed0afee292f54b4b076f9f041e1a1
 /***/ "./src/blocks/layout/layout.scss":
 /*!***************************************!*\
   !*** ./src/blocks/layout/layout.scss ***!
@@ -300,6 +303,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./src/blocks/post-card/post-outlined-card.scss":
 /*!******************************************************!*\
   !*** ./src/blocks/post-card/post-outlined-card.scss ***!
@@ -312,6 +316,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+=======
+>>>>>>> 4548395d599ed0afee292f54b4b076f9f041e1a1
 /***/ "./src/blocks/post-footer/post-footer.scss":
 /*!*************************************************!*\
   !*** ./src/blocks/post-footer/post-footer.scss ***!
@@ -396,6 +402,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./src/blocks/related-posts/related-posts.scss":
 /*!*****************************************************!*\
   !*** ./src/blocks/related-posts/related-posts.scss ***!
@@ -408,6 +415,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+=======
+>>>>>>> 4548395d599ed0afee292f54b4b076f9f041e1a1
 /***/ "./src/blocks/relinking-item/relinking-block.scss":
 /*!********************************************************!*\
   !*** ./src/blocks/relinking-item/relinking-block.scss ***!
@@ -919,6 +928,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./src/blocks/latest-posts/latest-posts.ts":
 /*!*************************************************!*\
   !*** ./src/blocks/latest-posts/latest-posts.ts ***!
@@ -931,6 +941,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+=======
+>>>>>>> 4548395d599ed0afee292f54b4b076f9f041e1a1
 /***/ "./src/blocks/layout/layout.ts":
 /*!*************************************!*\
   !*** ./src/blocks/layout/layout.ts ***!
@@ -1011,8 +1023,11 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _post_card_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./post-card.scss */ "./src/blocks/post-card/post-card.scss");
+<<<<<<< HEAD
 /* harmony import */ var _post_outlined_card_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./post-outlined-card.scss */ "./src/blocks/post-card/post-outlined-card.scss");
 
+=======
+>>>>>>> 4548395d599ed0afee292f54b4b076f9f041e1a1
 
 
 /***/ }),
@@ -1197,6 +1212,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./src/blocks/related-posts/related-posts.ts":
 /*!***************************************************!*\
   !*** ./src/blocks/related-posts/related-posts.ts ***!
@@ -1231,6 +1247,8 @@ initRelatedPosts();
 
 /***/ }),
 
+=======
+>>>>>>> 4548395d599ed0afee292f54b4b076f9f041e1a1
 /***/ "./src/blocks/relinking-item/relinking-item.ts":
 /*!*****************************************************!*\
   !*** ./src/blocks/relinking-item/relinking-item.ts ***!
@@ -2429,7 +2447,10 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-author-banner/hero-author-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-banner/hero-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/hero-review-banner/hero-review-banner.ts")))
+<<<<<<< HEAD
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/latest-posts/latest-posts.ts")))
+=======
+>>>>>>> 4548395d599ed0afee292f54b4b076f9f041e1a1
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/layout/layout.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/link-with-icon/link-with-icon.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/link-with-icon-list/link-with-icon-list.ts")))
@@ -2444,7 +2465,10 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/promo-bonus/promo-bonus.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/promo-button/promo-button.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/ref-review-modal/ref-review-modal.ts")))
+<<<<<<< HEAD
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/related-posts/related-posts.ts")))
+=======
+>>>>>>> 4548395d599ed0afee292f54b4b076f9f041e1a1
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/relinking-item/relinking-item.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/relinking-list/relinking-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/review-card/review-card.ts")))
