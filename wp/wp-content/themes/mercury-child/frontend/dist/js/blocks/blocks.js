@@ -456,6 +456,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/regulator-section/regulator-section.scss":
+/*!*************************************************************!*\
+  !*** ./src/blocks/regulator-section/regulator-section.scss ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/related-posts/related-posts.scss":
 /*!*****************************************************!*\
   !*** ./src/blocks/related-posts/related-posts.scss ***!
@@ -1452,6 +1464,18 @@ init();
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ref_review_modal_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ref-review-modal.scss */ "./src/blocks/ref-review-modal/ref-review-modal.scss");
+
+
+/***/ }),
+
+/***/ "./src/blocks/regulator-section/regulator-section.ts":
+/*!***********************************************************!*\
+  !*** ./src/blocks/regulator-section/regulator-section.ts ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _regulator_section_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./regulator-section.scss */ "./src/blocks/regulator-section/regulator-section.scss");
 
 
 /***/ }),
@@ -2744,6 +2768,7 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/promo-bonus/promo-bonus.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/promo-button/promo-button.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/ref-review-modal/ref-review-modal.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/regulator-section/regulator-section.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/related-posts/related-posts.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/relinking-item/relinking-item.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/relinking-list/relinking-list.ts")))

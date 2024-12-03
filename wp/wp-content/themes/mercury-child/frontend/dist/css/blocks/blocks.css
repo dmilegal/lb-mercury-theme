@@ -3463,6 +3463,45 @@
 .ref-review-modal .lb-compact-casino-bonus-card.lb-compact-casino-bonus-card {
   padding-bottom: var(--wp--preset--spacing--80);
 }
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/regulator-section/regulator-section.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+.lb-regulator-section {
+  padding: var(--wp--preset--spacing--200) 0;
+}
+@media (max-width: 575.98px) {
+  .lb-regulator-section {
+    padding: var(--wp--preset--spacing--120) 0;
+  }
+}
+.lb-regulator-section__container {
+  width: 100%;
+  padding-left: var(--layout--content-padding);
+  padding-right: var(--layout--content-padding);
+  max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
+  margin-left: auto;
+  margin-right: auto;
+}
+.lb-regulator-section__regulators {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: var(--wp--preset--spacing--140);
+  row-gap: var(--wp--preset--spacing--100);
+  margin-top: var(--wp--preset--spacing--160);
+}
+@media (max-width: 575.98px) {
+  .lb-regulator-section__regulators {
+    margin-top: var(--wp--preset--spacing--120);
+    row-gap: var(--wp--preset--spacing--85);
+  }
+}
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/related-posts/related-posts.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************/

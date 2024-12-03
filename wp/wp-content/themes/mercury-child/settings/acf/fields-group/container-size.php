@@ -80,6 +80,13 @@ add_action('acf/include_fields', function () {
           'value' => 'lb/team-section',
         ),
       ),
+      array(
+        array(
+          'param' => 'block',
+          'operator' => '==',
+          'value' => 'lb/regulator-section',
+        ),
+      ),
     ),
     'menu_order' => 100,
     'position' => 'side',

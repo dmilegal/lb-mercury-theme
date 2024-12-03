@@ -18,3 +18,4 @@ require_once 'feature-grid.php';
 require_once 'team-section.php';
 require_once 'contact-info-section.php';
 require_once 'latest-posts-section.php';
+require_once 'regulator-section.php';

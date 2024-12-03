@@ -42,7 +42,7 @@ add_action('acf/include_fields', function () {
           'class' => '',
           'id' => '',
         ),
-        'message' => 'To set the list of team members please go to Template Settings -> <a href="/wp-admin/admin.php?page=tpl-settz" target="_blank">Company Info</a>.',
+        'message' => 'To set the contact info please go to Template Settings -> <a href="/wp-admin/admin.php?page=tpl-settz" target="_blank">Company Info</a>.',
         'new_lines' => 'wpautop',
         'esc_html' => 0,
       ),

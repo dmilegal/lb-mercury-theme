@@ -1,0 +1,1 @@
+import './regulator-section.scss'
