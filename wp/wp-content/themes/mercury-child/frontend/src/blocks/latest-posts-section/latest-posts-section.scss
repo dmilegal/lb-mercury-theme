@@ -1,0 +1,49 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+:root,
+.editor-styles-wrapper {
+
+}
+
+.lb-latest-posts-section {
+  padding: var(--wp--preset--spacing--160) 0 var(--wp--preset--spacing--280);
+
+  @include breakpoints.media-breakpoint-down(xs) {
+    padding: var(--wp--preset--spacing--160) 0;
+  }
+
+  &__container {
+    @include container.make-container-max-width();
+  }
+
+  &__header {
+  }
+
+  &__title {
+  }
+
+  &__list {
+    display: flex;
+    
+    column-gap: var(--wp--preset--spacing--90);
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+  }
+
+  &__item {
+    flex: 1;
+    min-width: 220px;
+    scroll-snap-align: center;
+  }
+
+  &__more {
+    --lb-button--border--color: var(--lb-post-outlined-card-color-border);
+    width: 100%;
+    margin-top: var(--wp--preset--spacing--70);
+  }
+}

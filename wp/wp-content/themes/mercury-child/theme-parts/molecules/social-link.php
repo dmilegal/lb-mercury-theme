@@ -2,6 +2,8 @@
 $className = $args['className'] ?? '';
 $color = $args['color'] ?? 'gray';
 $icon = $args['icon'] ?? '';
+$variant = $args['variant'] ?? 'outlined';
+$size = $args['size'] ?? 'md';
 
 switch ($icon) {
   case 'facebook':
@@ -27,8 +29,8 @@ switch ($icon) {
 ?>
 <? get_template_part('theme-parts/atoms/button', null, [
   ...$args,
-  'variant' => 'outlined',
   'className' => classNames($className, 'lb-social-link not-prose', 'lb-social-link--color_' . $color),
   'prefix' => '<i class="' . $icon  . '"></i>',
-  
+  'variant' => $variant,
+  'size' => $size
 ]); ?>

@@ -1,0 +1,39 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+:root,
+.editor-styles-wrapper {
+}
+
+.lb-regulator-section {
+  padding: var(--wp--preset--spacing--200) 0;
+
+  @include breakpoints.media-breakpoint-down(xs) {
+    padding: var(--wp--preset--spacing--120) 0;
+  }
+
+  &__container {
+    @include container.make-container-max-width();
+  }
+
+  &__header {
+  }
+
+  &__title {
+  }
+
+  &__regulators {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: var(--wp--preset--spacing--140);
+    row-gap: var(--wp--preset--spacing--100);
+    margin-top: var(--wp--preset--spacing--160);
+    @include breakpoints.media-breakpoint-down(xs) {
+      margin-top: var(--wp--preset--spacing--120);
+      row-gap: var(--wp--preset--spacing--85);
+    }
+  }
+}

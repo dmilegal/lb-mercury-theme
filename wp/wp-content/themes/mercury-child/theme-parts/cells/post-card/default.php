@@ -6,7 +6,7 @@ $postId = $args['post_id'] ?? null;
 $thumbId = get_post_thumbnail_id($postId);
 
 ?>
-<div class="<?= classNames($className, 'lb-post-card', [
+<div class="<?= classNames('lb-post-card', $className, [
   'lb-post-card--no-thumb' => !$thumbId,
   'lb-post-card--grid' => !!$thumbId,
 ]) ?>" style="<?= stylesValue($style) ?>">

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/feature-grid",
+  "title": "Feature Grid",
+  "style": ["feature-grid"],
+  "editorStyle": [],
+  "category": "lb-main",
+  "icon": "excerpt-view",
+  "keywords": [
+    "features",
+    "grid",
+    "feature grid",
+    "feature list",
+    "сетка характеристик",
+    "список характеристик"
+  ],
+  "supports": {
+    "color": {
+      "text": false,
+      "background": true
+    }
+  },
+  "providesContext": {
+    "acf/fields": "data"
+  },
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "feature-grid.php"
+  }
+}
