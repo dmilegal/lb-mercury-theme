@@ -57,29 +57,5 @@
     margin-bottom: var(--wp--preset--spacing--80);
   }
 
-  &__author {
-    display: flex;
-    align-items: center;
-    column-gap: var(--wp--preset--spacing--70);
 
-    &-avatar {
-      border-radius: 50%;
-    }
-
-    &-name {
-      @include font.get-text-styles('text-sm');
-      font-weight: 600;
-      color: var(--lb-post-header-author-name-color-text);
-    }
-
-    &-info {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  &__pub-date {
-    @include font.get-text-styles('text-xs');
-    color: var(--lb-post-header-pub-date-color-text);
-  }
 }

@@ -10,6 +10,7 @@
 		<? get_template_part('theme-parts/cells/hero-banner', null, [
 			'post_id' => get_the_id(),
 			'enable_published_date' => false,
+			'show_author' => true
 		]); ?>
 	</div>
 

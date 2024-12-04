@@ -30,6 +30,12 @@
     padding-right: 0;
   }
 
+  &:has(%hb-author) {
+    %title {
+      margin-bottom: var(--wp--preset--spacing--70);
+    }
+  }
+
   &--color {
     &_white {
       --lb-hero-banner-color-background: var(--lb-color-surface);
@@ -84,6 +90,15 @@
     @extend %title;
   }
 
+  &__author {
+    margin-bottom: var(--wp--preset--spacing--110);
+    @include breakpoints.media-breakpoint-down(sm) {
+      margin-bottom: var(--wp--preset--spacing--100);
+    }
+
+    @extend %hb-author;
+  }
+
   &__subtitle {
     color: var(--lb-hero-banner-subtitle-color-text);
     @include font.get-text-styles('text-xl');
@@ -102,4 +117,5 @@
       margin-top: var(--wp--preset--spacing--110);
     }
   }
+
 }

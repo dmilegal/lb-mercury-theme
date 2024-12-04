@@ -32,8 +32,8 @@ get_template_part('theme-parts/cells/hero-banner', null, [
   'subtitle' => get_field('subtitle') ?: '',
   'align' => get_field('text_align') ?: 'center',
   'text_content' => get_field('content') ?: '',
-  'publishedDate' => get_the_date('Y-m-d', $post_id),
   'enable_published_date' => !!get_field('show_published_date'),
+  'show' => get_field('show_author') ?: true,
   'color' => get_field('background_color') ?: 'white',
   'footer_content' => $relinkingBlockHtml,
 ]);

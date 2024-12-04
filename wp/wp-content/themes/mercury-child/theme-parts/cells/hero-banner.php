@@ -11,6 +11,7 @@ $color = $args['color'] ?? 'gray';
 // 'center'
 $align = $args['align'] ?? 'left';
 $footerContent = $args['footer_content'] ?? '';
+$showAuthor = $args['show_author'] ?? false;
 
 ?>
 <div class="<?= classNames(
@@ -32,6 +33,13 @@ $footerContent = $args['footer_content'] ?? '';
         <h1 class="lb-hero-banner__title">
           <?= $title  ?>
         </h1>
+      <? } ?>
+      <? if ($showAuthor) { ?>
+        <div class="lb-hero-banner__author">
+          <? get_template_part('theme-parts/cells/post-author-block', null, [
+            'post_id' => $post->ID
+          ]); ?>
+        </div>
       <? } ?>
       <? if ($subtitle) { ?>
         <div class="lb-hero-banner__subtitle">
