@@ -28,6 +28,9 @@
   }
 
   &__title {
+    @include breakpoints.media-breakpoint-down(xs) {
+      text-align: left;
+    }
   }
 
   &__emails {
@@ -102,7 +105,6 @@
     flex-wrap: wrap;
     column-gap: var(--wp--preset--spacing--120);
     row-gap: var(--wp--preset--spacing--100);
-    
   }
 
   &__phone {

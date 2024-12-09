@@ -1209,6 +1209,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+@media (max-width: 575.98px) {
+  .lb-contact-info-section__title {
+    text-align: left;
+  }
+}
 .lb-contact-info-section__emails {
   display: flex;
   flex-wrap: wrap;
@@ -1625,6 +1630,11 @@
 }
 .lb-feature-grid__header {
   margin-bottom: var(--wp--preset--spacing--140);
+}
+@media (max-width: 575.98px) {
+  .lb-feature-grid__header {
+    margin-bottom: var(--wp--preset--spacing--120);
+  }
 }
 .lb-feature-grid__title {
   font-size: var(--wp--preset--font-size--display-md);
@@ -2548,6 +2558,11 @@
   max-width: calc(var(--lb-layout-container-size) + 2 * var(--layout--content-padding));
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 575.98px) {
+  .lb-latest-posts-section__title {
+    text-align: left;
+  }
 }
 .lb-latest-posts-section__list {
   display: flex;
@@ -5197,7 +5212,7 @@
 }
 @media (max-width: 575.98px) {
   .lb-team-section {
-    padding: var(--wp--preset--spacing--160) 0;
+    padding: var(--wp--preset--spacing--140) 0;
   }
 }
 .lb-team-section__container {
@@ -5210,6 +5225,7 @@
 }
 @media (max-width: 575.98px) {
   .lb-team-section__subtitle {
+    text-align: center;
     margin-bottom: var(--wp--preset--spacing--85);
   }
 }

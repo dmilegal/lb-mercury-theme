@@ -47,6 +47,9 @@
 
   &__header {
     margin-bottom: var(--wp--preset--spacing--140);
+    @include breakpoints.media-breakpoint-down(xs) {
+      margin-bottom: var(--wp--preset--spacing--120);
+    }
   }
 
   &__title {
