@@ -23,6 +23,9 @@
   }
 
   &__title {
+    @include breakpoints.media-breakpoint-down(xs) {
+      text-align: left;
+    }
   }
 
   &__list {
