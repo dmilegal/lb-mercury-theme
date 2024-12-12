@@ -2,6 +2,7 @@
 $postId =  $args['post_id'] ?? null;
 $authorId = get_post_field('post_author', $post_id);
 $user = get_userdata($authorId);
+$dateVariant = $args['date_variant'] ?? 'published_date';
 
 $displayName = $user->display_name;
 
@@ -23,7 +24,7 @@ if (empty($displayName))
         ?>
           <?php printf(esc_html_x('%s ago', '%s = human-readable time difference', 'mercury-child'), human_time_diff(get_the_time('U', $postId), current_time('timestamp'))); ?>
         <?php } else {
-          echo get_the_date('', $postId);
+          echo $dateVariant == 'published_date' ? get_the_date('', $postId) : get_the_modified_date('', $postId);
         } ?>
       </time>
     <?php } ?>

@@ -9,7 +9,8 @@ global $post;
   <h1 class="lb-post-header__title"><?= get_the_title($post->ID) ?></h1>
   <div class="lb-post-header__author">
     <? get_template_part('theme-parts/cells/post-author-block', null,[
-      'post_id' => $post->ID
+      'post_id' => $post->ID,
+      'date_variant' => get_field('public_date_variant', 'option')
     ]); ?>
   </div>
   <div class="lb-post-header__block lb-post-header__block--toc lb-post-header__block--on_md">
