@@ -40,5 +40,9 @@ function getBlockClass($block, $post_id, $is_preview = false)
     }
   }
 
+  $containerSizeClassName = getLayoutContainerSizeClassName();
+  if ($containerSizeClassName)
+    $containerClassName .= " " . getLayoutContainerSizeClassName();
+
   return [$baseClassName, $containerClassName];
 }

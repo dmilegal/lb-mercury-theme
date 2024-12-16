@@ -1,0 +1,1 @@
+import './team-section.scss'

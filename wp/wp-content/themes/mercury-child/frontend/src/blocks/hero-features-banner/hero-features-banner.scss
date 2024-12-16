@@ -1,0 +1,93 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+:root,
+.editor-styles-wrapper {
+  --lb-hero-featured-banner-background-color: var(--wp--preset--color--primary-50);
+  --lb-hero-featured-banner-feature-background-color: var(--lb-color-surface);
+  --lb-hero-featured-banner-feature-title-color: var(--lb-color-primary-high);
+  --lb-hero-featured-banner-feature-subtitle-color: var(--lb-color-on-surface-lowest);
+}
+
+.lb-hero-featured-banner {
+  padding: var(--wp--preset--spacing--170) 0 var(--wp--preset--spacing--120);
+  background-color: var(--lb-hero-featured-banner-background-color);
+
+  @include breakpoints.media-breakpoint-down(xs) {
+    padding: var(--wp--preset--spacing--140) 0 var(--wp--preset--spacing--115);
+  }
+
+  &__container {
+    @include container.make-container-max-width();
+  }
+
+  &__header {
+    &:not(:last-child) {
+      margin-bottom: var(--wp--preset--spacing--175);
+      @include breakpoints.media-breakpoint-down(xs) {
+        margin-bottom: var(--wp--preset--spacing--140);
+      }
+    }
+  }
+
+  &__title {
+    @include font.get-text-styles('display-xl');
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__features {
+    display: flex;
+    column-gap: var(--wp--preset--spacing--115);
+    
+    @include breakpoints.media-breakpoint-down(sm) {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+
+    @include breakpoints.media-breakpoint-down(xs) {
+      column-gap: var(--wp--preset--spacing--60);
+    }
+    
+    &:not(:last-child) {
+      margin-bottom: var(--wp--preset--spacing--210);
+      @include breakpoints.media-breakpoint-down(xs) {
+        margin-bottom: var(--wp--preset--spacing--160);
+      }
+    }
+  }
+
+  &__feature {
+    padding: var(--wp--preset--spacing--80);
+    background-color: var(--lb-hero-featured-banner-feature-background-color);
+    border-radius: var(--wp--preset--spacing--60);
+    flex-grow: 1;
+    text-align: center;
+    scroll-snap-align: center;
+
+    @include breakpoints.media-breakpoint-down(sm) {
+      min-width: 220px;
+    }
+
+    &-title {
+      display: block;
+      @include font.get-text-styles('display-md');
+      font-weight: 700;
+      color: var(--lb-hero-featured-banner-feature-title-color);
+    }
+
+    &-subtitle {
+      display: block;
+      @include font.get-text-styles('text-md');
+      color: var(--lb-hero-featured-banner-feature-subtitle-color);
+    }
+  }
+
+  &__image {
+    &-container {
+      text-align: center;
+    }
+  }
+}

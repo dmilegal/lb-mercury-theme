@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/team-section",
+  "title": "Team Section",
+  "style": ["team-section", "team-member-card"],
+  "editorStyle": [],
+  "category": "lb-main",
+  "icon": "clipboard",
+  "keywords": ["lb", "teams", "teams section", "команда", "раздел команды"],
+  "providesContext": {
+      "acf/fields": "data"
+  },
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "team-section.php"
+  }
+}

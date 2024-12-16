@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/latest-posts-section",
+  "title": "Latest Posts Section",
+  "description": "",
+  "style": ["latest-posts-section"],
+  "editorStyle": [],
+  "script": ["latest-posts-section"],
+  "category": "lb-main",
+  "icon": "align-wide",
+  "keywords": ["lb","latest posts section", "section", "последние посты"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "latest-posts-section.php"
+  }
+}
