@@ -4570,7 +4570,7 @@
   grid-column: 1/-1;
   padding: var(--wp--preset--spacing--90) var(--wp--preset--spacing--100);
   display: flex;
-  column-gap: var(--wp--preset--spacing--140);
+  column-gap: var(--wp--preset--spacing--120);
   row-gap: var(--wp--preset--spacing--85);
 }
 .lb-review-card__bonus-details:empty {
@@ -4586,7 +4586,10 @@
   }
 }
 .lb-review-card__bonus-detail-title {
+<<<<<<< HEAD
   white-space: nowrap;
+=======
+>>>>>>> 92b93511f69c181dc31a0a243978b8b19082765a
   font-size: var(--wp--preset--font-size--text-xs);
   line-height: var(--wp--custom--line-height--text-xs);
   letter-spacing: inherit;

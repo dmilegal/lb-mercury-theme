@@ -41,7 +41,7 @@
     grid-column: 1/-1;
     padding: var(--wp--preset--spacing--90) var(--wp--preset--spacing--100);
     display: flex;
-    column-gap: var(--wp--preset--spacing--140);
+    column-gap: var(--wp--preset--spacing--120);
     row-gap: var(--wp--preset--spacing--85);
     &:empty {
       display: none;
@@ -56,7 +56,6 @@
 
   &__bonus-detail {
     &-title {
-      white-space: nowrap;
       @include font.get-text-styles('text-xs', false);
       margin-bottom: var(--wp--preset--spacing--50);
       color: var(--lb-review-card-bonus-parameter-title-color);
