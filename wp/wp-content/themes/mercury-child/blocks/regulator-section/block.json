@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/regulator-section",
+  "title": "Regulator Section",
+  "description": "",
+  "style": ["regulator-section"],
+  "editorStyle": [],
+  "script": ["regulator-section"],
+  "category": "lb-main",
+  "icon": "portfolio",
+  "keywords": ["lb","regulator section", "regulator", "раздел регуляторов", "регуляторы"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "regulator-section.php"
+  }
+}

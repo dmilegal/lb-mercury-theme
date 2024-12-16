@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/hero-features-banner",
+  "title": "Hero Features Banner",
+  "description": "",
+  "style": ["hero-features-banner"],
+  "editorStyle": [],
+  "script": ["hero-features-banner"],
+  "category": "lb-main",
+  "icon": "align-wide",
+  "keywords": ["lb","hero features banner", "", "баннер фич", "фичи"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "hero-features-banner.php"
+  }
+}

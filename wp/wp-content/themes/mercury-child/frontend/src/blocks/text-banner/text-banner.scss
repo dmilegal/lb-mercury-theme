@@ -1,0 +1,39 @@
+@use 'sass:math';
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+@use '@/shared/styles/mixins/container';
+
+:root,
+.editor-styles-wrapper {
+  --lb-text-banner-background-color: var(--lb-color-surface-high);
+  --lb-text-banner-content-color: var(--lb-color-text-strong);
+}
+
+.lb-text-banner {
+  padding: var(--wp--preset--spacing--220) 0;
+  background-color: var(--lb-text-banner-background-color);
+
+  & {
+    @include font.get-text-styles('display-xs', false);
+    color: var(--lb-text-banner-content-color);
+
+    @include breakpoints.media-breakpoint-down('xs') {
+      text-align: center;
+      @include font.get-text-styles('text-lg', false);
+    }
+  }
+
+  @include breakpoints.media-breakpoint-down('md') {
+    padding: var(--wp--preset--spacing--180) 0;
+  }
+
+  @include breakpoints.media-breakpoint-down('xs') {
+    padding: var(--wp--preset--spacing--120) 0;
+  }
+
+  &__container {
+    @include container.make-container-max-width();
+  }
+
+}

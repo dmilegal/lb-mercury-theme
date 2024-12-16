@@ -6,7 +6,7 @@ $postId = $args['post_id'] ?? null;
 $thumbId = get_post_thumbnail_id($postId);
 
 ?>
-<a href="<? the_permalink($postId) ?>" class="<?= classNames($className, 'lb-post-outlined-card', [
+<a href="<? the_permalink($postId) ?>" class="<?= classNames('lb-post-outlined-card', $className, [
               'lb-post-outlined-card--no-thumb' => !$thumbId,
               'lb-post-outlined-card--grid' => !!$thumbId,
             ]) ?>" style="<?= stylesValue($style) ?>">

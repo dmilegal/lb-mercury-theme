@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/text-banner",
+  "title": "Text Banner",
+  "style": ["text-banner"],
+  "category": "lb-main",
+  "icon": "format-aside",
+  "keywords": ["lb", "text banner", "text", "текстовый баннер"],
+  "providesContext": {
+      "acf/fields": "data"
+  },
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "text-banner.php"
+  }
+}

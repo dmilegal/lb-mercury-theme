@@ -29,5 +29,12 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/author');
     register_block_type(__DIR__ . '/link-with-icon-list');
     register_block_type(__DIR__ . '/post-info');
+    register_block_type(__DIR__ . '/hero-features-banner');
+    register_block_type(__DIR__ . '/text-banner');
+    register_block_type(__DIR__ . '/feature-grid');
+    register_block_type(__DIR__ . '/latest-posts-section');
+    register_block_type(__DIR__ . '/contact-info-section');
+    register_block_type(__DIR__ . '/team-section');
+    register_block_type(__DIR__ . '/regulator-section');
 }
 

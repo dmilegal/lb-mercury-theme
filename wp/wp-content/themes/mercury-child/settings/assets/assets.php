@@ -37,6 +37,11 @@ function enqueue_main_assets()
   enqueue_assets_by_name('main');
   enqueue_assets_by_name('blocks');
 
+  wp_add_inline_script('main', 'const LB_GMAP_SETTINGS = ' . json_encode([
+    'gmap_api_key' => get_field('gmap_api_key', 'option'),
+    'map_id' => get_field('gmap_id', 'option'),
+  ]));
+
   // style ea accordion plugin
   wp_enqueue_style('ea-accordion', '', ['sp-ea-style'], wp_get_theme()->get('Version'));
 
@@ -96,6 +101,7 @@ function enqueue_block_editor_scripts()
     wp_add_inline_script('editor-custom', 'const WP_BLOCKS_DISALLOWED_VARIANTS = ' . json_encode($d_blocks['disallowed_variants']));
   }
 }
+
 add_action('enqueue_block_editor_assets', 'enqueue_block_editor_scripts');
 
 // register all assets
