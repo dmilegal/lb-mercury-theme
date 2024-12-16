@@ -4586,10 +4586,6 @@
   }
 }
 .lb-review-card__bonus-detail-title {
-<<<<<<< HEAD
-  white-space: nowrap;
-=======
->>>>>>> 92b93511f69c181dc31a0a243978b8b19082765a
   font-size: var(--wp--preset--font-size--text-xs);
   line-height: var(--wp--custom--line-height--text-xs);
   letter-spacing: inherit;
