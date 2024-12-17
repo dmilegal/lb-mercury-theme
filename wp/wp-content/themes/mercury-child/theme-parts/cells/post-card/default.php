@@ -4,6 +4,7 @@ $style = $args['style'] ?? '';
 $postId = $args['post_id'] ?? null;
 
 $thumbId = get_post_thumbnail_id($postId);
+[$date, $time] = getPostDateTime($postId);
 
 ?>
 <div class="<?= classNames('lb-post-card', $className, [
@@ -26,9 +27,9 @@ $thumbId = get_post_thumbnail_id($postId);
             <i class="icon-clock"></i>
             <?php if (get_theme_mod('mercury_time_ago_format')) {
             ?>
-              <?php printf(esc_html_x('%s ago', '%s = human-readable time difference', 'mercury-child'), human_time_diff(get_the_time('U', $postId), current_time('timestamp'))); ?>
+              <?php printf(esc_html_x('%s ago', '%s = human-readable time difference', 'mercury-child'), human_time_diff($time, current_time('timestamp'))); ?>
             <?php } else {
-              echo get_the_date('', $postId);
+              echo $date;
             } ?></span>
         <?php } ?>
 

@@ -3,24 +3,7 @@ $postId =  $args['post_id'] ?? null;
 $authorId = get_post_field('post_author', $post_id);
 $user = get_userdata($authorId);
 $dateVariant = $args['date_variant'] ?? 'published_date';
-$date = null;
-$time = null;
-
-if ($dateVariant == 'published_date') {
-  $date = get_the_date('', $postId);
-  $time = get_the_time('U', $postId);
-} else {
-  $date = get_the_modified_date('', $postId);
-  $time = get_the_modified_time('U', $postId);
-  if (!$date) {
-    $date = get_the_date('', $postId);
-  }
-  if (!$time) {
-    $time = get_the_time('U', $postId);
-  }
-}
-
-
+[$date, $time] = getPostDateTime();
 
 $displayName = $user->display_name;
 

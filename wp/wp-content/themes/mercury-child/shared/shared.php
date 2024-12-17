@@ -23,3 +23,4 @@ require_once 'get-review-data.php';
 require_once 'get-related-posts.php';
 require_once 'get-disallowed-block.php';
 require_once 'get-layout-container-size-classname.php';
+require_once 'get-post-date.php';
