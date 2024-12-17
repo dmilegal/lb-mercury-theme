@@ -37,8 +37,7 @@ $showAuthor = $args['show_author'] ?? false;
       <? if ($showAuthor) { ?>
         <div class="lb-hero-banner__author">
           <? get_template_part('theme-parts/cells/post-author-block', null, [
-            'post_id' => $post->ID,
-            'date_variant' => get_field('lb_public_date_variant', 'option')
+            'post_id' => $post->ID
           ]); ?>
         </div>
       <? } ?>
