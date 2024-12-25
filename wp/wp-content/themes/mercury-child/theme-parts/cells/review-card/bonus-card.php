@@ -8,6 +8,8 @@ $postId = $args['post_id'] ?? null;
 
 if (!$postId) return;
 
+$title = getReviewCardTitle($postId, $args['custom_title'] ?? '');
+
 $casino_allowed_html = array(
   'a' => array(
     'href' => true,
@@ -94,7 +96,7 @@ $is_locked = isBrandLocked($postId);
           "class" => "lb-review-card__logo"
         ]) ?>
         <div>
-          <div class="lb-review-card__title"><?= get_the_title($postId) ?></div>
+          <div class="lb-review-card__title"><?= $title ?></div>
           <div class="lb-review-card__info">
             <div class="lb-review-card__rating">
               <i class="icon-star"></i>
