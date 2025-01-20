@@ -7,11 +7,19 @@
   --hero-review-banner-space-top: var(--wp--preset--spacing--140);
   --hero-review-banner-space-bottom: var(--wp--preset--spacing--160);
   --hero-review-banner-color-background: var(--lb-color-surface-high);
-  --hero-review-banner-info-title-color-text: var(--lb-color-primary);
-  --hero-review-banner-info-value-color-text: var(--lb-color-text-strong);
+  //--hero-review-banner-info-title-color-text: var(--lb-color-primary);
+  //--hero-review-banner-info-value-color-text: var(--lb-color-text-strong);
   --hero-review-banner-desc-color-text: var(--lb-color-text-default);
   --hero-review-banner-toggle-color-text: var(--lb-color-text-default);
   --hero-review-banner-lar-color-text: var(--lb-color-on-surface-min);
+
+  --hero-review-banner-update-date-color: var(--lb-color-on-surface-min);
+
+  --hero-review-banner-spec-item-border-color: var(--lb-color-surface-outline-2);
+  --hero-review-banner-spec-title-color-text: var(--lb-color-primary);
+  --hero-review-banner-spec-value-color-text: var(--lb-color-text-strong);
+
+  --hero-review-banner-license-ico-color: var(--lb-color-on-surface-min);
 
   @include breakpoints.media-breakpoint-down(sm) {
     --hero-review-banner-space-top: var(--wp--preset--spacing--110);
@@ -41,10 +49,10 @@
     display: grid;
     grid-template-columns: var(--wp--preset--spacing--330) 1fr;
     column-gap: var(--wp--preset--spacing--120);
-    margin-bottom: var(--wp--preset--spacing--160);
+    margin-bottom: var(--wp--preset--spacing--140);
     @include breakpoints.media-breakpoint-down(sm) {
       column-gap: var(--wp--preset--spacing--70);
-      margin-bottom: var(--wp--preset--spacing--85);
+      margin-bottom: var(--wp--preset--spacing--120);
       grid-template-columns: var(--wp--preset--spacing--220) 1fr;
     }
   }
@@ -56,7 +64,7 @@
   &__title {
     @include font.get-text-styles('display-lg', false);
     font-weight: 600;
-    margin-bottom: var(--wp--preset--spacing--70);
+    // margin-bottom: var(--wp--preset--spacing--70);
     @include breakpoints.media-breakpoint-down(sm) {
       @include font.get-text-styles('display-xs', false);
     }
@@ -72,7 +80,7 @@
     }
   }
 
-  &__info {
+  /*&__info {
     @include font.get-text-styles('text-md', false);
     font-weight: 500;
     &-list {
@@ -103,6 +111,57 @@
         font-weight: 600;
       }
     }
+  }*/
+
+  &__update-date {
+    display: block;
+    margin-bottom: var(--wp--preset--spacing--80);
+    @include font.get-text-styles('text-xs', false);
+    color: var(--hero-review-banner-update-date-color);
+  }
+
+  &__spec {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: var(--wp--preset--spacing--60);
+      row-gap: var(--wp--preset--spacing--60);
+      @include breakpoints.media-breakpoint-down(sm) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include breakpoints.media-breakpoint-down(md) {
+        &:not(:last-child) {
+          margin-bottom: var(--wp--preset--spacing--120);
+        }
+      }
+    }
+
+    &-item {
+      border: 1px solid var(--hero-review-banner-spec-item-border-color);
+      border-radius: var(--wp--preset--spacing--60);
+      padding: var(--wp--preset--spacing--70) var(--wp--preset--spacing--80);
+    }
+
+    &-title {
+      @include font.get-text-styles('text-xs', false);
+      color: var(--hero-review-banner-spec-title-color-text);
+    }
+
+    &-value {
+      @include font.get-text-styles('text-md', false);
+      margin-bottom: var(--wp--preset--spacing--50);
+      color: var(--hero-review-banner-spec-value-color-text);
+      font-weight: 500;
+      i {
+        position: relative;
+        top: 1px;
+        margin-right: var(--wp--preset--spacing--50);
+        @include font.get-text-styles('text-lg', false);
+        line-height: 0;
+        font-weight: 600;
+      }
+    }
   }
 
   &__desc {
@@ -111,10 +170,10 @@
   }
 
   &-promo {
-    margin-bottom: var(--wp--preset--spacing--160);
-    @include breakpoints.media-breakpoint-down(sm) {
-      margin-bottom: var(--wp--preset--spacing--85);
-    }
+    // margin-bottom: var(--wp--preset--spacing--160);
+    // @include breakpoints.media-breakpoint-down(sm) {
+    //   margin-bottom: var(--wp--preset--spacing--85);
+    // }
     @include breakpoints.media-breakpoint-up(lg) {
       position: absolute;
       top: 0;
@@ -178,13 +237,27 @@
     }
   }
 
-  &__license-logos {
-    display: flex;
-    column-gap: var(--wp--preset--spacing--60);
-  }
+  &__license {
+    &-logos {
+      display: flex;
+      column-gap: var(--wp--preset--spacing--60);
+    }
 
-  &__license-logo {
-    display: flex;
-    
+    &-logo {
+      display: flex;
+    }
+
+    &-tp {
+      position: relative;
+      top: 1px;
+      padding: 0;
+      background: none;
+      border: none;
+      color: var(--hero-review-banner-license-ico-color);
+
+      i {
+        font-weight: 400;
+      }
+    }
   }
 }

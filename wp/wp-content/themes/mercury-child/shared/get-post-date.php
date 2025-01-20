@@ -1,7 +1,7 @@
 <?
-function getPostDateTime($postId = null, $format = '')
+function getPostDateTime($postId = null, $format = '', $dateVariant = null)
 {
-  $dateVariant = get_field('lb_public_date_variant', 'option');
+  $dateVariant = $dateVariant ?? get_field('lb_public_date_variant', 'option');
 
   if (!$dateVariant)
     $dateVariant = 'published_date';

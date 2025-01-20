@@ -16,9 +16,9 @@ $bonus_allowed_html = array(
     'src' => true,
     'alt' => true
   ),
-  'br' => array(),
+  //'br' => array(),
   'em' => array(),
-  'strong' => array(),
+  //'strong' => array(),
   'span' => array(
     'class' => true,
     'style' => true
