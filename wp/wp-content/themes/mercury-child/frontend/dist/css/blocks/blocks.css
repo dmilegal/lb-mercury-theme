@@ -616,6 +616,110 @@
   margin-top: var(--wp--preset--spacing--70);
   padding: 0 var(--wp--preset--spacing--80);
 }
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/brand-rating/brand-rating.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root,
+.editor-styles-wrapper {
+  --organization-rating-star-full-color: var(--wp--preset--color--primary-600);
+  --organization-rating-star-empty-color: var(--wp--preset--color--primary-200);
+  --organization-rating-item-color-border: var(--lb-color-surface-outline-1);
+}
+
+.organization-rating__header {
+  margin-bottom: var(--wp--preset--spacing--100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.organization-rating__title {
+  font-size: var(--lb-font-size-display-sm-relative);
+  line-height: var(--lb-line-height-display-sm-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-display-sm-relative, inherit);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.organization-rating__or {
+  display: flex;
+  column-gap: var(--wp--preset--spacing--50);
+  align-items: center;
+}
+.organization-rating__or-value {
+  font-size: var(--lb-font-size-display-xs-relative);
+  line-height: var(--lb-line-height-display-xs-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-display-xs-relative, inherit);
+  font-weight: 500;
+}
+.organization-rating__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--wp--preset--spacing--80) 0;
+  border-bottom: 1px solid var(--organization-rating-item-color-border);
+  column-gap: var(--wp--preset--spacing--100);
+}
+@media (max-width: 767.98px) {
+  .organization-rating__item {
+    padding: var(--wp--preset--spacing--85) 0;
+  }
+}
+.organization-rating__item-title {
+  font-size: var(--wp--preset--font-size--text-lg);
+  line-height: var(--wp--custom--line-height--text-lg);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
+  font-weight: 500;
+}
+@media (max-width: 767.98px) {
+  .organization-rating__item-title {
+    font-size: var(--wp--preset--font-size--text-md);
+    line-height: var(--wp--custom--line-height--text-md);
+    letter-spacing: inherit;
+    letter-spacing: var(--wp--custom--letter-spacing--text-md, inherit);
+  }
+}
+.organization-rating__item-stars {
+  display: flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--65);
+}
+.organization-rating__item-value {
+  font-size: var(--lb-font-size-text-xl-relative);
+  line-height: var(--lb-line-height-text-xl-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-xl-relative, inherit);
+  font-weight: 500;
+}
+
+.star-rating {
+  font-size: var(--lb-font-size-text-xl-relative);
+  line-height: var(--lb-line-height-text-xl-relative);
+  letter-spacing: inherit;
+  letter-spacing: var(--lb-letter-spacing-text-xl-relative, inherit);
+  line-height: 1em;
+}
+.star-rating--full {
+  color: var(--organization-rating-star-full-color);
+}
+.star-rating--half {
+  color: var(--organization-rating-star-full-color);
+}
+.star-rating--empty {
+  color: var(--organization-rating-star-empty-color);
+}
+.star-rating-list {
+  display: flex;
+  align-items: center;
+  column-gap: var(--wp--preset--spacing--55);
+}
 /*!****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/breadcrumbs/breadcrumbs.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************/
@@ -2411,6 +2515,14 @@
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
   color: var(--hero-review-banner-spec-title-color-text);
+}
+@media (max-width: 767.98px) {
+  .lb-hero-review-banner__spec-title {
+    font-size: var(--wp--preset--font-size--text-sm);
+    line-height: var(--wp--custom--line-height--text-sm);
+    letter-spacing: inherit;
+    letter-spacing: var(--wp--custom--letter-spacing--text-sm, inherit);
+  }
 }
 .lb-hero-review-banner__spec-value {
   font-size: var(--wp--preset--font-size--text-md);

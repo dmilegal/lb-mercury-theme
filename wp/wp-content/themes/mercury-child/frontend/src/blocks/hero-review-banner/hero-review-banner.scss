@@ -146,6 +146,9 @@
     &-title {
       @include font.get-text-styles('text-xs', false);
       color: var(--hero-review-banner-spec-title-color-text);
+      @include breakpoints.media-breakpoint-down(sm) {
+        @include font.get-text-styles('text-sm', false);
+      }
     }
 
     &-value {

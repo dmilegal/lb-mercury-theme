@@ -72,6 +72,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/brand-rating/brand-rating.scss":
+/*!***************************************************!*\
+  !*** ./src/blocks/brand-rating/brand-rating.scss ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/breadcrumbs/breadcrumbs.scss":
 /*!*************************************************!*\
   !*** ./src/blocks/breadcrumbs/breadcrumbs.scss ***!
@@ -836,6 +848,18 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bonus_card_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bonus-card.scss */ "./src/blocks/bonus-card/bonus-card.scss");
+
+
+/***/ }),
+
+/***/ "./src/blocks/brand-rating/brand-rating.ts":
+/*!*************************************************!*\
+  !*** ./src/blocks/brand-rating/brand-rating.ts ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _brand_rating_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./brand-rating.scss */ "./src/blocks/brand-rating/brand-rating.scss");
 
 
 /***/ }),
@@ -2866,6 +2890,7 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/badge-group/badge-group.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/blockquote/blockquote.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/bonus-card/bonus-card.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/brand-rating/brand-rating.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/breadcrumbs/breadcrumbs.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/button/button.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/clipping/clipping.ts")))
