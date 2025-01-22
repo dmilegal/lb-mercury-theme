@@ -53,12 +53,14 @@
       --lb-color-on-#{$colorName}-container: var(--wp--preset--color--#{$colorName}-600);
       --lb-color-#{$colorName}-container: var(--wp--preset--color--#{$colorName}-100);
       --lb-color-#{$colorName}-container-low: var(--wp--preset--color--#{$colorName}-50);
+      --lb-color-#{$colorName}-container-lowest: var(--wp--preset--color--#{$colorName}-25);
 
       --lb-color-#{$colorName}-outline-variant-1: var(
         --wp--preset--color--#{$colorName}-500
       );
 
       --lb-color-#{$colorName}-outline-low: var(--wp--preset--color--#{$colorName}-100);
+      --lb-color-#{$colorName}-outline-1: var(--wp--preset--color--#{$colorName}-200);
     }
   }
 

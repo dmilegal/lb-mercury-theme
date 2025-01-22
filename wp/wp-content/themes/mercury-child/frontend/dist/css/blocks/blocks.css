@@ -616,6 +616,50 @@
   margin-top: var(--wp--preset--spacing--70);
   padding: 0 var(--wp--preset--spacing--80);
 }
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/brand-feat-list/brand-feat-list.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root,
+.editor-styles-wrapper {
+  --lb-brand-feats-color-background: var(--lb-color-primary-container-lowest);
+  --lb-brand-feats-color-border: var(--lb-color-primary-outline-1);
+  --lb-brand-feats-title-color: var(--lb-color-text-strong);
+  --lb-brand-feats-subtitle-color: var(--lb-color-text-default);
+}
+
+.lb-brand-feats__list {
+  background-color: var(--lb-brand-feats-color-background);
+  border: 1px solid var(--lb-brand-feats-color-border);
+  border-radius: var(--wp--preset--spacing--85);
+  padding: var(--wp--preset--spacing--85) var(--wp--preset--spacing--100) var(--wp--preset--spacing--115);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: var(--wp--preset--spacing--100);
+  column-gap: var(--wp--preset--spacing--100);
+  grid-row-gap: var(--wp--preset--spacing--115);
+  row-gap: var(--wp--preset--spacing--115);
+}
+.lb-brand-feats__item-title {
+  font-size: var(--wp--preset--font-size--text-lg);
+  line-height: var(--wp--custom--line-height--text-lg);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
+  font-weight: 600;
+  color: var(--lb-brand-feats-title-color);
+}
+.lb-brand-feats__item-subtitle {
+  font-size: var(--wp--preset--font-size--text-xs);
+  line-height: var(--wp--custom--line-height--text-xs);
+  letter-spacing: inherit;
+  letter-spacing: var(--wp--custom--letter-spacing--text-xs, inherit);
+  color: var(--lb-brand-feats-subtitle-color);
+}
 /*!******************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/brand-rating/brand-rating.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************************/
