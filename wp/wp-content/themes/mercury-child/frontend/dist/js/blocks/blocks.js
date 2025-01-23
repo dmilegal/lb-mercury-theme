@@ -72,6 +72,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/bottom-brand-bonus/bottom-brand-bonus.scss":
+/*!***************************************************************!*\
+  !*** ./src/blocks/bottom-brand-bonus/bottom-brand-bonus.scss ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/brand-feat-list/brand-feat-list.scss":
 /*!*********************************************************!*\
   !*** ./src/blocks/brand-feat-list/brand-feat-list.scss ***!
@@ -861,6 +873,37 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bonus_card_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bonus-card.scss */ "./src/blocks/bonus-card/bonus-card.scss");
 
+
+/***/ }),
+
+/***/ "./src/blocks/bottom-brand-bonus/bottom-brand-bonus.ts":
+/*!*************************************************************!*\
+  !*** ./src/blocks/bottom-brand-bonus/bottom-brand-bonus.ts ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _bottom_brand_bonus_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bottom-brand-bonus.scss */ "./src/blocks/bottom-brand-bonus/bottom-brand-bonus.scss");
+
+function bottomBrandBonusInit() {
+  var bottomBrandBonus = document.querySelector('.lb-bottom-brand-bonus');
+  var lbPromoBonus = document.querySelector('.lb-promo-bonus');
+  if (bottomBrandBonus && lbPromoBonus) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          bottomBrandBonus.style.visibility = '';
+        } else {
+          bottomBrandBonus.style.visibility = 'visible';
+        }
+      });
+    }, {
+      threshold: 0
+    });
+    observer.observe(lbPromoBonus);
+  }
+}
+bottomBrandBonusInit();
 
 /***/ }),
 
@@ -2914,6 +2957,7 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/badge-group/badge-group.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/blockquote/blockquote.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/bonus-card/bonus-card.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/bottom-brand-bonus/bottom-brand-bonus.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/brand-feat-list/brand-feat-list.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/brand-rating/brand-rating.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/breadcrumbs/breadcrumbs.ts")))

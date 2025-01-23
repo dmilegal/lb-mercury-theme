@@ -616,6 +616,33 @@
   margin-top: var(--wp--preset--spacing--70);
   padding: 0 var(--wp--preset--spacing--80);
 }
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/bottom-brand-bonus/bottom-brand-bonus.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+/**
+* helpers
+**/
+/**
+* font
+**/
+:root,
+.editor-styles-wrapper {
+  --lb-bottom-brand-bonus-color-background: var(--lb-color-surface-high);
+}
+
+.lb-bottom-brand-bonus {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  padding: var(--wp--preset--spacing--70) var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
+  background-color: var(--lb-bottom-brand-bonus-color-background);
+  visibility: hidden;
+}
+@media (min-width: 992px) {
+  .lb-bottom-brand-bonus {
+    display: none;
+  }
+}
 /*!************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/brand-feat-list/brand-feat-list.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************************/

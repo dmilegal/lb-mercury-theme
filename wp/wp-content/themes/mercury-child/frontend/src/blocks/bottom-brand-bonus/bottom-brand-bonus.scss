@@ -1,0 +1,22 @@
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+@use '@/shared/styles/mixins/media-containers';
+
+:root,
+.editor-styles-wrapper {
+  --lb-bottom-brand-bonus-color-background: var(--lb-color-surface-high);
+}
+
+.lb-bottom-brand-bonus {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  padding: var(--wp--preset--spacing--70) var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
+  background-color: var(--lb-bottom-brand-bonus-color-background);
+
+  visibility: hidden;
+  
+  @include breakpoints.media-breakpoint-up(lg) {
+    display: none;
+  }
+}

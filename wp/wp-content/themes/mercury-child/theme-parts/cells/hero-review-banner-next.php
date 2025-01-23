@@ -44,6 +44,7 @@ $casino_owner = wp_get_object_terms($casinoId, 'owner');
 $license_ar_text_for_single = get_field('license_ar_text_for_single', 'option');
 $license_ar_logos = get_field('license_ar_logos', 'option');
 $casino_licences = wp_get_object_terms($casinoId, 'licence');
+$show_license_tooltip = get_post_meta($casinoId, 'show_license_tooltip', true) == 1;
 
 [$updatedDate, $time] = getPostDateTime($post->ID, 'Y-m-d', 'updated_date');
 ?>
@@ -180,18 +181,19 @@ $casino_licences = wp_get_object_terms($casinoId, 'licence');
               foreach ($casino_licences as $licence) {
                 $str[] = esc_html($licence->name);
               }
-              
+
               echo __('Yes', 'mercury-child');
 
-              get_template_part('theme-parts/atoms/tooltip', null, [
-                'content' =>  esc_html($licence->name),
-                'size' => 'sm',
-                'id' => 'hr-' . $id,
-              ]); ?>
-              <button id="<?= 'hr-' . $id ?>" class="lb-hero-review-banner__license-tp">
-                <i class="icon-help-circle"></i>
-              </button>
-
+              if ($show_license_tooltip) {
+                get_template_part('theme-parts/atoms/tooltip', null, [
+                  'content' =>  esc_html($licence->name),
+                  'size' => 'sm',
+                  'id' => 'hr-' . $id,
+                ]); ?>
+                <button id="<?= 'hr-' . $id ?>" class="lb-hero-review-banner__license-tp">
+                  <i class="icon-help-circle"></i>
+                </button>
+              <? } ?>
             <? } else { ?>
               <?= __('No', 'mercury-child') ?>
             <? } ?>

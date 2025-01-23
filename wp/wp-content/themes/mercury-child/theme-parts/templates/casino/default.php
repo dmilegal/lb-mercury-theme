@@ -38,7 +38,7 @@ if (get_option('aces_rating_stars_number')) {
 							<? get_template_part('theme-parts/cells/brand-feat-list', null) ?>
 							<? the_content() ?>
 							<? if (!$organization_disable_details)
-								get_template_part('theme-parts/cells/review-details', null, ['post_id' => get_the_ID(),]); ?>
+								get_template_part('theme-parts/cells/review-details', null, ['post_id' => get_the_ID()]); ?>
 							<?= do_shortcode('[show_wpb_author_info_box]'); ?>
 						</div>
 					</div>
@@ -46,7 +46,10 @@ if (get_option('aces_rating_stars_number')) {
 			<?php endwhile; ?>
 		<?php endif; ?>
 	</div>
-	<? get_template_part('theme-parts/organisms/before-footer-content/style-1'); ?>
+	<? get_template_part('theme-parts/molecules/bottom-brand-bonus-link', null, [
+		'post_id' => get_the_ID()
+	]); ?>
+	<? get_template_part('theme-parts/') ?>
 </div>
 
 
