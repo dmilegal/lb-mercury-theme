@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/brand-feats",
+  "title": "Brand Features",
+  "description": "",
+  "style": ["brand-feats"],
+  "script": ["brand-feats"],
+  "editorStyle": [],
+  "category": "lb-main",
+  "icon": "format-aside",
+  "keywords": ["lb", "casino features", "bookmaker features", "brand features", "фичи казино", "фичи букмекера", "фичи бренда"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "brand-feats.php"
+  }
+}

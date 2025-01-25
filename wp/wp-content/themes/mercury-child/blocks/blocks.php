@@ -36,5 +36,6 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/contact-info-section');
     register_block_type(__DIR__ . '/team-section');
     register_block_type(__DIR__ . '/regulator-section');
+    register_block_type(__DIR__ . '/brand-feats');
 }
 
