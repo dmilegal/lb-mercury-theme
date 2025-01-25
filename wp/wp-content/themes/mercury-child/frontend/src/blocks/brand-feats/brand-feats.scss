@@ -22,6 +22,10 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: var(--wp--preset--spacing--100);
     row-gap: var(--wp--preset--spacing--115);
+
+    &#{&} {
+      list-style: none;
+    }
   }
   
 

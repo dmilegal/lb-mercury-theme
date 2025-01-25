@@ -84,10 +84,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/blocks/brand-feat-list/brand-feat-list.scss":
-/*!*********************************************************!*\
-  !*** ./src/blocks/brand-feat-list/brand-feat-list.scss ***!
-  \*********************************************************/
+/***/ "./src/blocks/brand-feats/brand-feats.scss":
+/*!*************************************************!*\
+  !*** ./src/blocks/brand-feats/brand-feats.scss ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -907,14 +907,14 @@ bottomBrandBonusInit();
 
 /***/ }),
 
-/***/ "./src/blocks/brand-feat-list/brand-feat-list.ts":
-/*!*******************************************************!*\
-  !*** ./src/blocks/brand-feat-list/brand-feat-list.ts ***!
-  \*******************************************************/
+/***/ "./src/blocks/brand-feats/brand-feats.ts":
+/*!***********************************************!*\
+  !*** ./src/blocks/brand-feats/brand-feats.ts ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _brand_feat_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./brand-feat-list.scss */ "./src/blocks/brand-feat-list/brand-feat-list.scss");
+/* harmony import */ var _brand_feats_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./brand-feats.scss */ "./src/blocks/brand-feats/brand-feats.scss");
 
 
 /***/ }),
@@ -2958,7 +2958,7 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/blockquote/blockquote.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/bonus-card/bonus-card.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/bottom-brand-bonus/bottom-brand-bonus.ts")))
-/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/brand-feat-list/brand-feat-list.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/brand-feats/brand-feats.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/brand-rating/brand-rating.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/breadcrumbs/breadcrumbs.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/button/button.ts")))
