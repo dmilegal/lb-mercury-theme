@@ -2102,7 +2102,7 @@ function getFilterData(container) {
   var form = container.querySelector('.lb-review-list__cat-filter');
   if (!form) return {};
   var filterData = Object.fromEntries(new FormData(form));
-  return filterData;
+  return qs__WEBPACK_IMPORTED_MODULE_8___default().parse(qs__WEBPACK_IMPORTED_MODULE_8___default().stringify(filterData));
 }
 function initCatFilterSlider(container) {
   var catContainer = container.querySelector('.lb-review-list__cat-filter > .swiper');

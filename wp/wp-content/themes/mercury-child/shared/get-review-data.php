@@ -34,6 +34,7 @@ function getReviewData($postType = 'casino', $queryArgs = [], $reviewList = [], 
     unset($item['bookmaker_id']);
     return $item;
   }, $reviewList);
+
   $reviewIds = array_map(fn($p) => $p['post_id'], $reviewListFull);
 
   if (!$queryArgs) {
@@ -57,26 +58,36 @@ function getReviewData($postType = 'casino', $queryArgs = [], $reviewList = [], 
     }
   }
 
-  $wp_query = new WP_Query([...$queryArgs, 'no_found_rows' => false]);
+  $postsPerPage = isset($queryArgs['posts_per_page']) && $queryArgs['posts_per_page'] ? (int) $queryArgs['posts_per_page'] : (int) get_option('posts_per_page');
+  $currentPage = $queryArgs['paged'] ?? 1;
+  $maxPages = $postsPerPage == -1 ? 1 : ceil(count($reviewListFull) / $postsPerPage);
 
-  if ($wp_query->have_posts()) {
-    $reviewList = [];
-    while ($wp_query->have_posts()) : $wp_query->the_post();
-      $id = get_the_ID();
-      $params = array_values(array_filter($reviewListFull, fn($c) => $c['post_id'] == $id));
-      $reviewList[] = ['post_id' => $id, ...($params ? $params[0] : [])];
+  if ($postsPerPage != -1)
+    $reviewList = array_slice($reviewListFull, 0, $postsPerPage);
 
-    endwhile;
+  $refReviewList = array_map(fn($i) => $i['post_id'], array_values(array_filter($reviewListFull, fn($c) => !!getBrandExternalLink($c['post_id']))));
 
-    $refReviewList = array_map(fn($i) => $i['post_id'], array_values(array_filter($reviewListFull, fn($c) => !!getBrandExternalLink($c['post_id']))));
+  return [$reviewList, $reviewListFull, $refReviewList, $maxPages, $currentPage, $queryArgs];
+  //$wp_query = new WP_Query([...$queryArgs, 'no_found_rows' => false]);
 
-    $maxPages = $wp_query->max_num_pages;
-    $currentPage = $queryArgs['paged'] ?? 1;
+  // if ($wp_query->have_posts()) {
+  //   $reviewList = [];
+  //   while ($wp_query->have_posts()) : $wp_query->the_post();
+  //     $id = get_the_ID();
+  //     $params = array_values(array_filter($reviewListFull, fn($c) => $c['post_id'] == $id));
+  //     $reviewList[] = ['post_id' => $id, ...($params ? $params[0] : [])];
 
-    wp_reset_query();
+  //   endwhile;
 
-    return [$reviewList, $reviewListFull, $refReviewList, $maxPages, $currentPage, $queryArgs];
-  }
+  //   $refReviewList = array_map(fn($i) => $i['post_id'], array_values(array_filter($reviewListFull, fn($c) => !!getBrandExternalLink($c['post_id']))));
 
-  return [[], [], 0, 1];
+  //   $maxPages = $wp_query->max_num_pages;
+  //   $currentPage = $queryArgs['paged'] ?? 1;
+
+  //   wp_reset_query();
+
+  //   return [$reviewList, $reviewListFull, $refReviewList, $maxPages, $currentPage, $queryArgs];
+  // }
+
+  // return [[], [], 0, 1];
 }

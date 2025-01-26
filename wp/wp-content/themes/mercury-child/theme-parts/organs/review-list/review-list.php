@@ -5,6 +5,7 @@ $disablePagination = $args['disable_pagination'] ?? false;
 $enableSortByBonusCategory = $args['enable_sort_by_bonus_category'] ?? false;
 $postsPerPage = $args['posts_per_page'] ?? 0;
 $reviewList = $args['casino_list'] ?? [];
+$showDulicate =  $args['show_dulicate'] ?? false;
 $postType = $args['post_type'] ?? 'casino';
 $bonusCategory = $args['bonus_category'] ?? false;
 $showPostInfo = $args['show_post_info'] ?? false;
