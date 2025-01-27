@@ -186,7 +186,7 @@ function getFilterData(container: HTMLElement) {
 
   const filterData = Object.fromEntries(new FormData(form))
 
-  return filterData
+  return qs.parse(qs.stringify(filterData))
 }
 
 function initCatFilterSlider(container: HTMLElement) {

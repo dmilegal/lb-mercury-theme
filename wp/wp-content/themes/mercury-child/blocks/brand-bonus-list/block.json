@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/brand-bonus-list",
+  "title": "Brand Bonus List",
+  "description": "",
+  "style": ["review-list","review-card", "button", "badge", "promo-button", "brand-bonus-list"],
+  "editorStyle": [],
+  "script": ["review-list","review-card", "button","badge", "promo-button", "brand-bonus-list"],
+  "category": "lb-main",
+  "icon": "book",
+  "keywords": ["lb", "review list", "casino list", "casino selection", "casino cards", "list", "selection", "список обзоров", "список казино", "список бонусов", "список букмейкеров", "выбор казино", "карточки казино", "карточки бонусов", "карточки обзоров", "карточки букмейкеров", "список", "выбор"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "brand-bonus-list.php"
+  }
+}

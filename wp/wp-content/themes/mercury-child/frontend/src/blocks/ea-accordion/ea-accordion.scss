@@ -29,12 +29,12 @@
     &-header {
       a {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 1fr auto;
         column-gap: var(--wp--preset--spacing--100);
         padding: 0;
         @include font.get-text-styles('text-lg', false);
         font-weight: 500;
-        color: var(--ea-color-text);
+        color: var(--ea-color-text)!important;
         
         @include breakpoints.media-breakpoint-down(sm) {
           column-gap: var(--wp--preset--spacing--80);
@@ -44,6 +44,7 @@
 
     &-expand-icon {
       position: relative;
+      order: 2;
       top: 2px;
       font-size: font.font-size-by-name('display-xs', false)!important;
       margin: 0;
@@ -69,9 +70,9 @@
     &-body {
       padding: 0;
       padding-top: var(--wp--preset--spacing--60);
-      padding-left: var(--wp--preset--spacing--160);
+      padding-right: var(--wp--preset--spacing--160);
       @include breakpoints.media-breakpoint-down(sm) {
-        padding-left: var(--wp--preset--spacing--140);
+        padding-right: var(--wp--preset--spacing--140);
       }
 
       p {

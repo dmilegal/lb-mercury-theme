@@ -1,0 +1,90 @@
+@use '@/shared/styles/abstracts/colors';
+@use '@/shared/styles/mixins/container';
+@use '@/shared/styles/mixins/font';
+@use '@/shared/styles/mixins/breakpoints';
+
+:root,
+.editor-styles-wrapper {
+  --organization-rating-star-full-color: var(--wp--preset--color--primary-600);
+  --organization-rating-star-empty-color: var(--wp--preset--color--primary-200);
+	--organization-rating-item-color-border: var(--lb-color-surface-outline-1);
+}
+
+.organization-rating {
+  &__header {
+    margin-bottom: var(--wp--preset--spacing--100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    @include font.get-text-styles('display-sm');
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  &__or {
+    display: flex;
+    column-gap: var(--wp--preset--spacing--50);
+    align-items: center;
+    &-star {
+    }
+
+    &-value {
+      @include font.get-text-styles('display-xs');
+      font-weight: 500;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+		padding: var(--wp--preset--spacing--80) 0;
+		border-bottom: 1px solid var(--organization-rating-item-color-border);
+		column-gap: var(--wp--preset--spacing--100);
+		@include breakpoints.media-breakpoint-down(sm) {
+			padding: var(--wp--preset--spacing--85) 0;
+		}
+
+    &-title {
+      @include font.get-text-styles('text-lg', false);
+      font-weight: 500;
+			@include breakpoints.media-breakpoint-down(sm) {
+				@include font.get-text-styles('text-md', false);
+			}
+    }
+
+    &-stars {
+			display: flex;
+			align-items: center;
+			column-gap: var(--wp--preset--spacing--65);
+    }
+
+		&-value {
+			@include font.get-text-styles('text-xl');
+			font-weight: 500;
+		}
+  }
+}
+
+.star-rating {
+  @include font.get-text-styles('text-xl');
+  line-height: 1em;
+  &--full {
+    color: var(--organization-rating-star-full-color);
+  }
+  &--half {
+    color: var(--organization-rating-star-full-color);
+  }
+  &--empty {
+    color: var(--organization-rating-star-empty-color);
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    column-gap: var(--wp--preset--spacing--55);
+  }
+}

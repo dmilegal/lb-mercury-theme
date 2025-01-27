@@ -72,6 +72,42 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/bottom-brand-bonus/bottom-brand-bonus.scss":
+/*!***************************************************************!*\
+  !*** ./src/blocks/bottom-brand-bonus/bottom-brand-bonus.scss ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/brand-feats/brand-feats.scss":
+/*!*************************************************!*\
+  !*** ./src/blocks/brand-feats/brand-feats.scss ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/brand-rating/brand-rating.scss":
+/*!***************************************************!*\
+  !*** ./src/blocks/brand-rating/brand-rating.scss ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/breadcrumbs/breadcrumbs.scss":
 /*!*************************************************!*\
   !*** ./src/blocks/breadcrumbs/breadcrumbs.scss ***!
@@ -840,6 +876,61 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/bottom-brand-bonus/bottom-brand-bonus.ts":
+/*!*************************************************************!*\
+  !*** ./src/blocks/bottom-brand-bonus/bottom-brand-bonus.ts ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _bottom_brand_bonus_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bottom-brand-bonus.scss */ "./src/blocks/bottom-brand-bonus/bottom-brand-bonus.scss");
+
+function bottomBrandBonusInit() {
+  var bottomBrandBonus = document.querySelector('.lb-bottom-brand-bonus');
+  var lbPromoBonus = document.querySelector('.lb-promo-bonus');
+  if (bottomBrandBonus && lbPromoBonus) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          bottomBrandBonus.style.visibility = '';
+        } else {
+          bottomBrandBonus.style.visibility = 'visible';
+        }
+      });
+    }, {
+      threshold: 0
+    });
+    observer.observe(lbPromoBonus);
+  }
+}
+bottomBrandBonusInit();
+
+/***/ }),
+
+/***/ "./src/blocks/brand-feats/brand-feats.ts":
+/*!***********************************************!*\
+  !*** ./src/blocks/brand-feats/brand-feats.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _brand_feats_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./brand-feats.scss */ "./src/blocks/brand-feats/brand-feats.scss");
+
+
+/***/ }),
+
+/***/ "./src/blocks/brand-rating/brand-rating.ts":
+/*!*************************************************!*\
+  !*** ./src/blocks/brand-rating/brand-rating.ts ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _brand_rating_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./brand-rating.scss */ "./src/blocks/brand-rating/brand-rating.scss");
+
+
+/***/ }),
+
 /***/ "./src/blocks/breadcrumbs/breadcrumbs.ts":
 /*!***********************************************!*\
   !*** ./src/blocks/breadcrumbs/breadcrumbs.ts ***!
@@ -1185,8 +1276,44 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _hero_review_banner_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-review-banner.scss */ "./src/blocks/hero-review-banner/hero-review-banner.scss");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _shared_scripts_components_tooltip__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/shared/scripts/components/tooltip */ "./src/shared/scripts/components/tooltip.ts");
+/* harmony import */ var _hero_review_banner_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./hero-review-banner.scss */ "./src/blocks/hero-review-banner/hero-review-banner.scss");
+/* harmony import */ var _floating_ui_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @floating-ui/dom */ "./node_modules/@floating-ui/dom/dist/floating-ui.dom.mjs");
 
+
+
+
+
+document.querySelectorAll('.lb-hero-review-banner__license-tp').forEach( /*#__PURE__*/function () {
+  var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee(btn) {
+    var tp, tooltip;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          tp = btn.previousElementSibling;
+          _context.next = 3;
+          return new _shared_scripts_components_tooltip__WEBPACK_IMPORTED_MODULE_2__.LbTooltip(btn, tp, {
+            placement: 'top',
+            offset: 6,
+            middleware: [(0,_floating_ui_dom__WEBPACK_IMPORTED_MODULE_4__.flip)(), (0,_floating_ui_dom__WEBPACK_IMPORTED_MODULE_4__.shift)()],
+            enableBind: true,
+            closeOnClickOutside: true
+          });
+        case 3:
+          tooltip = _context.sent;
+        case 4:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}());
 
 /***/ }),
 
@@ -1975,7 +2102,7 @@ function getFilterData(container) {
   var form = container.querySelector('.lb-review-list__cat-filter');
   if (!form) return {};
   var filterData = Object.fromEntries(new FormData(form));
-  return filterData;
+  return qs__WEBPACK_IMPORTED_MODULE_8___default().parse(qs__WEBPACK_IMPORTED_MODULE_8___default().stringify(filterData));
 }
 function initCatFilterSlider(container) {
   var catContainer = container.querySelector('.lb-review-list__cat-filter > .swiper');
@@ -2493,17 +2620,32 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _excluded = ["offset"];
+var _excluded = ["offset", "enableBind", "closeOnClickOutside"];
 
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 
 var LbTooltip = /*#__PURE__*/function () {
+  // Добавим ссылку на функцию, которая будет отслеживать клики снаружи:
+
   function LbTooltip(reference, floating, params) {
     (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, LbTooltip);
     this.reference = reference;
     this.floating = floating;
     this.params = params;
+    var _this$params = this.params,
+      enableBind = _this$params.enableBind,
+      closeOnClickOutside = _this$params.closeOnClickOutside;
+    this.refEscClose = this.escClose.bind(this);
+
+    // Если хотим закрывать по клику снаружи — привязываем соответствующий обработчик:
+    if (closeOnClickOutside) {
+      this.refClickOutside = this.clickOutsideClose.bind(this);
+    }
+    if (enableBind) {
+      this.bindControl();
+    }
+    return arguments[0];
   }
   return (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(LbTooltip, [{
     key: "computePosition",
@@ -2511,11 +2653,11 @@ var LbTooltip = /*#__PURE__*/function () {
       var _computePosition2 = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_5___default().mark(function _callee() {
         var _arguments = arguments,
           _this = this;
-        var _this$params, offset, params;
+        var _this$params2, offset, enableBind, closeOnClickOutside, params;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_5___default().wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
-              _this$params = this.params, offset = _this$params.offset, params = (0,_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$params, _excluded);
+              _this$params2 = this.params, offset = _this$params2.offset, enableBind = _this$params2.enableBind, closeOnClickOutside = _this$params2.closeOnClickOutside, params = (0,_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$params2, _excluded);
               _context.next = 3;
               return (0,_floating_ui_dom__WEBPACK_IMPORTED_MODULE_6__.computePosition)(this.reference, this.floating, _objectSpread(_objectSpread({}, params), {}, {
                 middleware: [(0,_floating_ui_dom__WEBPACK_IMPORTED_MODULE_7__.offset)(offset || 0)]
@@ -2551,12 +2693,61 @@ var LbTooltip = /*#__PURE__*/function () {
         _this2.floating.classList.add('lb-tooltip--showed');
         _this2.computePosition();
       });
+
+      // При показе добавляем слушатели:
+      window.addEventListener('keydown', this.refEscClose);
+      if (this.params.closeOnClickOutside && this.refClickOutside) {
+        // Ставим захват (true), чтобы сначала обработать клик,
+        // прежде чем он дойдет до других обработчиков
+        document.addEventListener('click', this.refClickOutside, true);
+      }
     }
   }, {
     key: "hide",
     value: function hide() {
       this.floating.classList.remove('lb-tooltip--showed');
       this.floating.classList.add('lb-tooltip--hidden');
+
+      // При скрытии убираем слушатели:
+      window.removeEventListener('keydown', this.refEscClose);
+      if (this.params.closeOnClickOutside && this.refClickOutside) {
+        document.removeEventListener('click', this.refClickOutside, true);
+      }
+    }
+  }, {
+    key: "toggle",
+    value: function toggle() {
+      if (this.floating.classList.contains('lb-tooltip--showed')) {
+        this.hide();
+      } else {
+        this.show();
+      }
+    }
+  }, {
+    key: "escClose",
+    value: function escClose(e) {
+      if (e.code === 'Escape') {
+        this.hide();
+      }
+    }
+
+    // Обработчик клика снаружи:
+  }, {
+    key: "clickOutsideClose",
+    value: function clickOutsideClose(e) {
+      var target = e.target;
+      // Проверяем, что клик не по самой кнопке (reference) и не по тултипу (floating)
+      if (!this.reference.contains(target) && !this.floating.contains(target)) {
+        this.hide();
+      }
+    }
+  }, {
+    key: "bindControl",
+    value: function bindControl() {
+      var _this3 = this;
+      this.reference.addEventListener('click', function () {
+        return _this3.toggle();
+      });
     }
   }]);
 }();
@@ -2766,6 +2957,9 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/badge-group/badge-group.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/blockquote/blockquote.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/bonus-card/bonus-card.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/bottom-brand-bonus/bottom-brand-bonus.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/brand-feats/brand-feats.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/brand-rating/brand-rating.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/breadcrumbs/breadcrumbs.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/button/button.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/clipping/clipping.ts")))

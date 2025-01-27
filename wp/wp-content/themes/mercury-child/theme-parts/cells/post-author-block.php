@@ -1,6 +1,6 @@
 <?
 $postId =  $args['post_id'] ?? null;
-$authorId = get_post_field('post_author', $post_id);
+$authorId = get_post_field('post_author', $postId);
 $user = get_userdata($authorId);
 $dateVariant = $args['date_variant'] ?? 'published_date';
 [$date, $time] = getPostDateTime();

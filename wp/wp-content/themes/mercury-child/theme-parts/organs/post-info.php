@@ -6,7 +6,8 @@ if (!$post) return;
 $className = $args['className'] ?? '';
 $style = $args['style'] ?? '';
 $authorId = $args['author_id'] ?? $post->post_author;
-[$publishedDate, $time] = getPostDateTime($postId, 'Y-m-d');
+
+[$publishedDate, $time] = getPostDateTime($post->ID, 'Y-m-d');
 
 // Get author's display name
 $display_name = get_the_author_meta('display_name', $authorId);

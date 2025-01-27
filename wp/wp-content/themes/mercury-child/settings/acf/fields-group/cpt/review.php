@@ -10,11 +10,11 @@ add_action('acf/include_fields', function () {
     'fields' => array(
       array(
         'key' => 'field_66fd92fdb758d',
-        'label' => 'Custom Title',
+        'label' => 'Card Custom Title',
         'name' => 'card_custom_title',
         'aria-label' => '',
         'type' => 'text',
-        'instructions' => '',
+        'instructions' => 'Custom Title for the review cards',
         'required' => 0,
         'conditional_logic' => 0,
         'wrapper' => array(
