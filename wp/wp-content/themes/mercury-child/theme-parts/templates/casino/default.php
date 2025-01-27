@@ -31,10 +31,6 @@ if (get_option('aces_rating_stars_number')) {
 				<div class="lb-layout__content">
 					<div class="lb-layout__inner">
 						<div class="prose-headings prose-content prose-spaces prose-colors">
-							<?= do_shortcode('[ez-toc]'); ?>
-							<? if (get_post_meta(get_the_ID(), 'casino_rating_enable', true)) { ?>
-								<?= do_shortcode('[aces-rating-4 item_id=' . get_the_ID() . ']'); ?>
-							<? } ?>
 							<? the_content() ?>
 							<? if (!$organization_disable_details)
 								get_template_part('theme-parts/cells/review-details', null, ['post_id' => get_the_ID()]); ?>

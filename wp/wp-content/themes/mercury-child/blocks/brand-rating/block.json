@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "lb/brand-rating",
+  "title": "Brand Rating",
+  "description": "",
+  "style": ["brand-rating"],
+  "script": ["brand-rating"],
+  "editorStyle": [],
+  "category": "lb-main",
+  "icon": "star-filled",
+  "keywords": ["lb", "casino rating", "bookmaker rating", "brand rating", "рейтинг казино", "рейтинг букмекера", "рейтинг бренда"],
+  "acf": {
+      "mode": "auto",
+      "renderTemplate": "brand-rating.php"
+  }
+}

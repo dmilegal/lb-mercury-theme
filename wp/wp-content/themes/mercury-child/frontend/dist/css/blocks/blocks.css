@@ -1692,7 +1692,7 @@
 }
 .sp-easy-accordion.sp-easy-accordion.sp-easy-accordion.sp-easy-accordion .ea-header a {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
   grid-column-gap: var(--wp--preset--spacing--100);
   column-gap: var(--wp--preset--spacing--100);
   padding: 0;
@@ -1701,7 +1701,7 @@
   letter-spacing: inherit;
   letter-spacing: var(--wp--custom--letter-spacing--text-lg, inherit);
   font-weight: 500;
-  color: var(--ea-color-text);
+  color: var(--ea-color-text) !important;
 }
 @media (max-width: 767.98px) {
   .sp-easy-accordion.sp-easy-accordion.sp-easy-accordion.sp-easy-accordion .ea-header a {
@@ -1710,6 +1710,7 @@
 }
 .sp-easy-accordion.sp-easy-accordion.sp-easy-accordion.sp-easy-accordion .ea-expand-icon {
   position: relative;
+  order: 2;
   top: 2px;
   font-size: var(--wp--preset--font-size--display-xs) !important;
   margin: 0;
@@ -1726,11 +1727,11 @@
 .sp-easy-accordion.sp-easy-accordion.sp-easy-accordion.sp-easy-accordion .ea-body {
   padding: 0;
   padding-top: var(--wp--preset--spacing--60);
-  padding-left: var(--wp--preset--spacing--160);
+  padding-right: var(--wp--preset--spacing--160);
 }
 @media (max-width: 767.98px) {
   .sp-easy-accordion.sp-easy-accordion.sp-easy-accordion.sp-easy-accordion .ea-body {
-    padding-left: var(--wp--preset--spacing--140);
+    padding-right: var(--wp--preset--spacing--140);
   }
 }
 .sp-easy-accordion.sp-easy-accordion.sp-easy-accordion.sp-easy-accordion .ea-body p {
