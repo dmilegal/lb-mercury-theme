@@ -20,3 +20,10 @@
     display: none;
   }
 }
+
+:root:has(.lb-bottom-brand-bonus) {
+  @include breakpoints.media-breakpoint-down(md) {
+    --lb-scroll-to-top-correction-y: var(--wp--preset--spacing--200);
+  }
+  
+}

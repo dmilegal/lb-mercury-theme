@@ -65,7 +65,7 @@
 
   &__cat-filter {
     position: relative;
-    margin-bottom: var(--wp--preset--spacing--140);
+    margin-bottom: var(--wp--preset--spacing--100);
     .swiper-wrapper {
       display: flex;
     }
@@ -74,9 +74,6 @@
       &:not(:last-child) {
         margin-right: var(--wp--preset--spacing--60);
       }
-    }
-    @include breakpoints.media-breakpoint-down('sm') {
-      margin-bottom: var(--wp--preset--spacing--120);
     }
 
     &-nav {

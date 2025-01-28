@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 110;
   right: var(--wp--preset--spacing--80);
-  bottom: var(--wp--preset--spacing--120);
+  bottom: calc(var(--wp--preset--spacing--120) + var(--lb-scroll-to-top-correction-y, 0px));
   &--hidden {
     display: none;
   }
