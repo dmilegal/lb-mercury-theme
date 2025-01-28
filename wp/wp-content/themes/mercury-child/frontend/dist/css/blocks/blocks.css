@@ -643,6 +643,12 @@
     display: none;
   }
 }
+
+@media (max-width: 991.98px) {
+  :root:has(.lb-bottom-brand-bonus) {
+    --lb-scroll-to-top-correction-y: var(--wp--preset--spacing--200);
+  }
+}
 /*!****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/blocks/brand-feats/brand-feats.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************/
@@ -4971,7 +4977,7 @@
 }
 .lb-review-list__cat-filter {
   position: relative;
-  margin-bottom: var(--wp--preset--spacing--140);
+  margin-bottom: var(--wp--preset--spacing--100);
 }
 .lb-review-list__cat-filter .swiper-wrapper {
   display: flex;
@@ -4981,11 +4987,6 @@
 }
 .lb-review-list__cat-filter .swiper-slide:not(:last-child) {
   margin-right: var(--wp--preset--spacing--60);
-}
-@media (max-width: 767.98px) {
-  .lb-review-list__cat-filter {
-    margin-bottom: var(--wp--preset--spacing--120);
-  }
 }
 .lb-review-list__cat-filter-nav {
   position: absolute;
@@ -5085,7 +5086,8 @@
   position: fixed;
   z-index: 110;
   right: var(--wp--preset--spacing--80);
-  bottom: var(--wp--preset--spacing--120);
+  bottom: calc(var(--wp--preset--spacing--120) + 0px);
+  bottom: calc(var(--wp--preset--spacing--120) + var(--lb-scroll-to-top-correction-y, 0px));
 }
 .lb-scroll-to-top--hidden {
   display: none;
