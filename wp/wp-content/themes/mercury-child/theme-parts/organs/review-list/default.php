@@ -73,8 +73,8 @@ if ($reviewList || $asyncLoading) {
           } ?>
         </div>
         <?
-        if ($currentPage < $totalPages && !$disablePagination) { ?>
-          <div class="lb-review-list__actions">
+        if (!$disablePagination) { ?>
+          <div class="lb-review-list__actions" <? if ($currentPage >= $totalPages) { ?> style="display: none" <? } ?>>
             <?= get_template_part("theme-parts/organs/review-list/load-more-button", null, [
               'query_string' => http_build_query([
                 'query' => $queryArgs,
