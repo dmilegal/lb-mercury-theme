@@ -30,6 +30,9 @@ $organization_disable_details = esc_attr(get_post_meta(get_the_ID(), 'organizati
 			<?php endwhile; ?>
 		<?php endif; ?>
 	</div>
+	<? get_template_part('theme-parts/molecules/bottom-brand-bonus-link', null, [
+		'post_id' => get_the_ID()
+	]); ?>
 	<? get_template_part('theme-parts/organisms/before-footer-content/style-1'); ?>
 </div>
 
