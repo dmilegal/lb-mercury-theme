@@ -1,17 +1,6 @@
 <?php get_header();
 
 $organization_disable_details = esc_attr(get_post_meta(get_the_ID(), 'organization_disable_details', true));
-$casino_rating_trust = esc_html(get_post_meta(get_the_ID(), 'casino_rating_trust', true));
-$casino_rating_games = esc_html(get_post_meta(get_the_ID(), 'casino_rating_games', true));
-$casino_rating_bonus = esc_html(get_post_meta(get_the_ID(), 'casino_rating_bonus', true));
-$casino_rating_customer = esc_html(get_post_meta(get_the_ID(), 'casino_rating_customer', true));
-$casino_overall_rating = esc_html(get_post_meta(get_the_ID(), 'casino_overall_rating', true));
-
-if (get_option('aces_rating_stars_number')) {
-	$casino_rating_stars_number_value = get_option('aces_rating_stars_number');
-} else {
-	$casino_rating_stars_number_value = '5';
-}
 
 ?>
 <div class="lb-layout lb-layout--sticky-box">
