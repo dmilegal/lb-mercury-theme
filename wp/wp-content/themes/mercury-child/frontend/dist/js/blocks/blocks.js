@@ -2280,8 +2280,27 @@ _shared_scripts_components_tooltip__WEBPACK_IMPORTED_MODULE_0__.LbTooltip;
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _trust_info_block_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./trust-info-block.scss */ "./src/blocks/trust-info-block/trust-info-block.scss");
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _trust_info_block_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./trust-info-block.scss */ "./src/blocks/trust-info-block/trust-info-block.scss");
 
+
+function initCollapsableInfoBlock() {
+  var infoBlocks = document.querySelectorAll('.lb-trust-info-block');
+  infoBlocks.forEach(function (infoBlock) {
+    var trigger = infoBlock.querySelector('.lb-trust-info-block__header');
+    var icos = infoBlock.querySelectorAll('.lb-trust-info-block__ico-plus, .lb-trust-info-block__ico-minus');
+    if (trigger) {
+      trigger.addEventListener('click', function () {
+        if ((0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(icos).some(function (ico) {
+          return ico.clientHeight;
+        })) {
+          infoBlock.classList.toggle('lb-trust-info-block--closed');
+        }
+      });
+    }
+  });
+}
+initCollapsableInfoBlock();
 
 /***/ }),
 
