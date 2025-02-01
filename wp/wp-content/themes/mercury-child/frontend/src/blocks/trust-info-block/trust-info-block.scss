@@ -11,7 +11,7 @@
 
 .lb-trust-info-block {
   padding: var(--wp--preset--spacing--80) 0 var(--wp--preset--spacing--160);
-  background-color: var(--lb-hero-banner-color-background);
+  background-color: var(--lb-trust-info-block-color-background);
 
   &--closed {
     @include breakpoints.media-breakpoint-down(md) {
@@ -29,6 +29,15 @@
       }
     }
    
+  }
+
+  &--color {
+    &_white {
+      --lb-trust-info-block-color-background: var(--lb-color-surface);
+    }
+    &_gray {
+      --lb-trust-info-block-color-background: var(--lb-color-surface-highest);
+    }
   }
 
   &__inner {

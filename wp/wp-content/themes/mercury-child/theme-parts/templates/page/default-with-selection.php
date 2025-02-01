@@ -15,9 +15,11 @@
 		]); ?>
 	</div>
 	<? if (true /*get_field('listing_info_block_enable', 'option')*/) { ?>
-	<div class="lb-layout__after-banner">
-		<? get_template_part('theme-parts/cells/trust-info-block') ?>
-	</div>
+		<div class="lb-layout__after-banner">
+			<? get_template_part('theme-parts/cells/trust-info-block', null, [
+				'color' => 'white',
+			]) ?>
+		</div>
 	<? } ?>
 	<div>
 		<?
@@ -56,7 +58,7 @@
 		<?php endwhile; ?>
 	<?php endif; ?>
 
-<? get_template_part('theme-parts/organisms/before-footer-content/style-1'); ?>
+	<? get_template_part('theme-parts/organisms/before-footer-content/style-1'); ?>
 </div>
 
 <?php get_footer(); ?>

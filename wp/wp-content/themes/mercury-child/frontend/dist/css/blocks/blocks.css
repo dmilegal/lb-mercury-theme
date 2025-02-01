@@ -5510,7 +5510,7 @@
 
 .lb-trust-info-block {
   padding: var(--wp--preset--spacing--80) 0 var(--wp--preset--spacing--160);
-  background-color: var(--lb-hero-banner-color-background);
+  background-color: var(--lb-trust-info-block-color-background);
 }
 @media (max-width: 991.98px) {
   .lb-trust-info-block--closed .lb-trust-info-block__ico-minus {
@@ -5522,6 +5522,12 @@
   .lb-trust-info-block--closed .lb-trust-info-block__list {
     display: none;
   }
+}
+.lb-trust-info-block--color_white {
+  --lb-trust-info-block-color-background: var(--lb-color-surface);
+}
+.lb-trust-info-block--color_gray {
+  --lb-trust-info-block-color-background: var(--lb-color-surface-highest);
 }
 .lb-trust-info-block__inner {
   width: 100%;
