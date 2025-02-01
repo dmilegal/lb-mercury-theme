@@ -96,7 +96,11 @@ $is_locked = isBrandLocked($postId);
           "class" => "lb-review-card__logo"
         ]) ?>
         <div>
-          <div class="lb-review-card__title"><?= $title ?></div>
+          <? if ($external_link_url && !$is_locked) { ?>
+            <a href="<?= esc_url($external_link_url) ?>" rel="nofollow" target="_blank" class="lb-review-card__title"><?= $title ?></a>
+          <? } else { ?>
+            <div class="lb-review-card__title"><?= $title ?></div>
+          <? } ?>
           <div class="lb-review-card__info">
             <div class="lb-review-card__rating">
               <i class="icon-star"></i>
