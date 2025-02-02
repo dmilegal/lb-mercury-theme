@@ -23,7 +23,7 @@ function init() {
   btns.forEach((btn) => {
     btn.addEventListener('click', () => {
       const container = btn.closest<HTMLElement>('.lb-review-list')
-      nextPaga(container)
+      nextPage(container)
     })
   })
 
@@ -44,7 +44,7 @@ function init() {
   })
 }
 
-function nextPaga(container: HTMLElement) {
+function nextPage(container: HTMLElement) {
   const btn = container.querySelector<HTMLButtonElement>('.lb-review-list__load-more')
   triggerLoad(container, (+btn.dataset.currentPage || 1) + 1)
 }
@@ -137,6 +137,7 @@ function render(container: HTMLElement, html: string, page: number, total_pages:
 
 async function triggetRefModal(container: HTMLElement) {
   const modalEl = document.querySelector<HTMLElement>('#ref-review-list')
+  const btn = container.querySelector<HTMLElement>('.lb-review-list__load-more')
   if (!container || !modalEl) return
 
   const list = container.dataset.refItems
@@ -161,7 +162,7 @@ async function triggetRefModal(container: HTMLElement) {
 
   const data = await load(
     prepareQuery(
-      '',
+      btn.dataset.query,
       {
         post__in: listIn,
         post_type: type,
