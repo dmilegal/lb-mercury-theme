@@ -42,19 +42,23 @@
     padding: var(--wp--preset--spacing--90) var(--wp--preset--spacing--100);
     display: flex;
     column-gap: var(--wp--preset--spacing--120);
-    row-gap: var(--wp--preset--spacing--85);
+    row-gap: var(--wp--preset--spacing--70);
     &:empty {
       display: none;
     }
     @include media-containers.media-breakpoint-down(sm) {
-      padding: var(--wp--preset--spacing--80) var(--wp--preset--spacing--100);
+      padding: var(--wp--preset--spacing--75) var(--wp--preset--spacing--90) var(--wp--preset--spacing--90);
       column-gap: var(--wp--preset--spacing--100);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      flex-direction: column;
     }
   }
 
   &__bonus-detail {
+    @include media-containers.media-breakpoint-down(sm) {
+      display: flex;
+      justify-content: space-between;
+    }
+
     &-title {
       @include font.get-text-styles('text-xs', false);
       margin-bottom: var(--wp--preset--spacing--50);
@@ -64,6 +68,11 @@
       @include font.get-text-styles('text-sm', false);
       font-weight: 500;
       color: var(--lb-review-card-bonus-parameter-value-color);
+
+      @include media-containers.media-breakpoint-down(sm) {
+        text-align: right;
+        max-width: 50%;
+      }
     }
   }
 

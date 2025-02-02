@@ -197,6 +197,11 @@
     &-copy {
       width: 100%;
     }
+
+    &-desc {
+      text-decoration: none;
+      color: var(--lb-review-card-color-text);
+    }
   }
 
   &__play {

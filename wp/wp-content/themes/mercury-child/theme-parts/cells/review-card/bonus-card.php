@@ -61,6 +61,7 @@ $bonusCategory = $args['bonus_category'] ?? null;
 $bonusId = !empty($args['bonus']) ? $args['bonus'] : aces_get_casino_bonus_id($postId, !empty($bonusCategory) ? [$bonusCategory] : []);
 $bonus_short_desc = wp_kses(get_post_meta($bonusId, 'bonus_short_desc', true), $casino_allowed_html);
 $bonus_button_title = esc_html(get_post_meta($bonusId, 'bonus_button_title', true));
+$bonus_external_link = esc_url(get_post_meta($bonusId, 'bonus_external_link', true));
 $bonus_code = esc_html(get_post_meta($bonusId, 'bonus_code', true));
 $bonus_parameters = aces_get_bonus_parameters($bonusId);
 $is_bst_bonus =  get_post_meta($bonusId, 'is_best_bonus', true);
@@ -122,9 +123,15 @@ $is_locked = isBrandLocked($postId);
               <?= $cat ?>
             </div>
           <? } ?>
-          <div>
-            <?= $bonus_short_desc ?>
-          </div>
+          <? if ($bonus_external_link && !$is_locked) { ?>
+            <a href="<?= esc_url($bonus_external_link) ?>" rel="nofollow" target="_blank" class="lb-review-card__bonus-desc">
+              <?= $bonus_short_desc ?>
+            </a>
+          <? } else { ?>
+            <div class="lb-review-card__bonus-desc">
+              <?= $bonus_short_desc ?>
+            </div>
+          <? } ?>
         </div>
       <? } ?>
       <div class="lb-review-card__actions">
@@ -134,9 +141,9 @@ $is_locked = isBrandLocked($postId);
           'color' => 'primary',
           'className' => 'lb-review-card__play',
           'content' => esc_html($button_title),
-          'href' => $is_locked || !$external_link_url ? '' : esc_url($external_link_url),
-          'target' => $external_link_url && !$is_locked ? "_blank" : '',
-          'rel' => $external_link_url && !$is_locked ? "nofollow" : ''
+          'href' => $is_locked || !$bonus_external_link ? '' : $bonus_external_link,
+          'target' => $bonus_external_link && !$is_locked ? "_blank" : '',
+          'rel' => $bonus_external_link && !$is_locked ? "nofollow" : ''
         ]);
 
         if ($bonus_code)
