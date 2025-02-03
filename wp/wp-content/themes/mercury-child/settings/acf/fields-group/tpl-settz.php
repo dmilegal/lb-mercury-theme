@@ -356,7 +356,7 @@ add_action('acf/include_fields', function () {
 			),
 			array(
 				'key' => 'field_665f7180f2efb',
-				'label' => 'Regulator, License & Age Rating settings (Casino/Bookmaker Listing)',
+				'label' => 'Regulator, License & Age Rating settings & etc (Casino/Bookmaker Listing)',
 				'name' => '',
 				'aria-label' => '',
 				'type' => 'tab',
