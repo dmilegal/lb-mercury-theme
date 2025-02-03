@@ -28,10 +28,11 @@
     @extend %card__sub;
   }
   &__bonus-cats {
-    @include font.get-text-styles('text-xs', false);
+    @include font.get-text-styles('text-sm', false);
+
     color: var(--lb-review-card-bonus-cats-color);
-    font-weight: 400;
-    margin-bottom: var(--wp--preset--spacing--60);
+    font-weight: 600;
+    margin-bottom: var(--wp--preset--spacing--50);
     // @include media-containers.media-breakpoint-down(sm) {
     //   display: none;
     // }
@@ -60,9 +61,13 @@
     }
 
     &-title {
-      @include font.get-text-styles('text-xs', false);
+      @include font.get-text-styles('text-xxs', false);
       margin-bottom: var(--wp--preset--spacing--50);
       color: var(--lb-review-card-bonus-parameter-title-color);
+      
+      @include media-containers.media-breakpoint-down(sm) {
+        margin-bottom: 0;
+      }
     }
     &-value {
       @include font.get-text-styles('text-sm', false);
