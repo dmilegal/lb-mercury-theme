@@ -1909,7 +1909,7 @@ function init() {
   btns.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var container = btn.closest('.lb-review-list');
-      nextPaga(container);
+      nextPage(container);
     });
   });
   filterForm.forEach(function (form) {
@@ -1925,7 +1925,7 @@ function init() {
     initCatFilterSlider(el);
   });
 }
-function nextPaga(container) {
+function nextPage(container) {
   var btn = container.querySelector('.lb-review-list__load-more');
   triggerLoad(container, (+btn.dataset.currentPage || 1) + 1);
 }
@@ -2048,26 +2048,27 @@ function triggetRefModal(_x3) {
 function _triggetRefModal() {
   _triggetRefModal = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee3(container) {
     var _config$limit;
-    var modalEl, list, type, config, modal, listIn, limit, data;
+    var modalEl, btn, list, type, config, modal, listIn, limit, data;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
           modalEl = document.querySelector('#ref-review-list');
+          btn = container.querySelector('.lb-review-list__load-more');
           if (!(!container || !modalEl)) {
-            _context3.next = 3;
+            _context3.next = 4;
             break;
           }
           return _context3.abrupt("return");
-        case 3:
+        case 4:
           list = container.dataset.refItems;
           type = container.dataset.type;
           config = JSON.parse(container.dataset.refConfig);
           if (!(!list || !JSON.parse(list).length)) {
-            _context3.next = 8;
+            _context3.next = 9;
             break;
           }
           return _context3.abrupt("return");
-        case 8:
+        case 9:
           modal = new _shared_scripts_components_modal__WEBPACK_IMPORTED_MODULE_5__.Modal(modalEl);
           if (config.title) modal.setTitle(config.title);
           if (config.subtitle) modal.setSubtitle(config.subtitle);
@@ -2076,8 +2077,8 @@ function _triggetRefModal() {
           modal.openModal();
           listIn = JSON.parse(list);
           limit = (_config$limit = config.limit) !== null && _config$limit !== void 0 ? _config$limit : -1;
-          _context3.next = 18;
-          return load(prepareQuery('', {
+          _context3.next = 19;
+          return load(prepareQuery(btn.dataset.query, {
             post__in: listIn,
             post_type: type,
             post_status: ['publish', 'draft', 'private'],
@@ -2086,11 +2087,11 @@ function _triggetRefModal() {
           }, {
             card_variant: 'compact-bet'
           }));
-        case 18:
+        case 19:
           data = _context3.sent;
           modal.setBody(data.html, '.lb-review-list__list');
           window.initCompactReviewBonus(modal.modal);
-        case 21:
+        case 22:
         case "end":
           return _context3.stop();
       }
