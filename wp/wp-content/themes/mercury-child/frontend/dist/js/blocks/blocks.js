@@ -780,6 +780,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/blocks/trust-info-block/trust-info-block.scss":
+/*!***********************************************************!*\
+  !*** ./src/blocks/trust-info-block/trust-info-block.scss ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/blocks/user-block/user-block.scss":
 /*!***********************************************!*\
   !*** ./src/blocks/user-block/user-block.scss ***!
@@ -2389,6 +2401,37 @@ _shared_scripts_components_tooltip__WEBPACK_IMPORTED_MODULE_0__.LbTooltip;
 
 /***/ }),
 
+/***/ "./src/blocks/trust-info-block/trust-info-block.ts":
+/*!*********************************************************!*\
+  !*** ./src/blocks/trust-info-block/trust-info-block.ts ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _trust_info_block_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./trust-info-block.scss */ "./src/blocks/trust-info-block/trust-info-block.scss");
+
+
+function initCollapsableInfoBlock() {
+  var infoBlocks = document.querySelectorAll('.lb-trust-info-block');
+  infoBlocks.forEach(function (infoBlock) {
+    var trigger = infoBlock.querySelector('.lb-trust-info-block__header');
+    var icos = infoBlock.querySelectorAll('.lb-trust-info-block__ico-plus, .lb-trust-info-block__ico-minus');
+    if (trigger) {
+      trigger.addEventListener('click', function () {
+        if ((0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(icos).some(function (ico) {
+          return ico.clientHeight;
+        })) {
+          infoBlock.classList.toggle('lb-trust-info-block--closed');
+        }
+      });
+    }
+  });
+}
+initCollapsableInfoBlock();
+
+/***/ }),
+
 /***/ "./src/blocks/user-block/user-block.ts":
 /*!*********************************************!*\
   !*** ./src/blocks/user-block/user-block.ts ***!
@@ -3012,6 +3055,7 @@ var API_URL = ((_document$querySelect = document.querySelector('link[rel="https:
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/text-banner/text-banner.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/toc/toc.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/tooltip/tooltip.ts")))
+/******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/trust-info-block/trust-info-block.ts")))
 /******/ __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/user-block/user-block.ts")))
 /******/ var __webpack_exports__ = __webpack_require__.O(undefined, ["libs/chk-blocks-chk.lib"], () => (__webpack_require__("./src/blocks/width-container/width-container.ts")))
 /******/ __webpack_exports__ = __webpack_require__.O(__webpack_exports__);
