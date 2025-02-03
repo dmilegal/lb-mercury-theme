@@ -14,7 +14,7 @@
 			'show_author' => true
 		]); ?>
 	</div>
-	<? if (true /*get_field('listing_info_block_enable', 'option')*/) { ?>
+	<? if (get_field('listing_info_block_enable', 'option')) { ?>
 		<div class="lb-layout__after-banner">
 			<? get_template_part('theme-parts/cells/trust-info-block', null, [
 				'color' => 'white',

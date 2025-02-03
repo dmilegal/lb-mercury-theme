@@ -5513,6 +5513,17 @@
   background-color: var(--lb-trust-info-block-color-background);
 }
 @media (max-width: 991.98px) {
+  .lb-trust-info-block {
+    padding: 0 0 var(--wp--preset--spacing--160);
+  }
+}
+@media (max-width: 767.98px) {
+  .lb-trust-info-block {
+    padding: 0 0 var(--wp--preset--spacing--140);
+    margin-top: calc(-1 * var(--wp--preset--spacing--60));
+  }
+}
+@media (max-width: 991.98px) {
   .lb-trust-info-block--closed .lb-trust-info-block__ico-minus {
     display: none;
   }
@@ -5545,6 +5556,7 @@
 @media (max-width: 991.98px) {
   .lb-trust-info-block__header {
     cursor: pointer;
+    padding: var(--wp--preset--spacing--60) 0;
   }
 }
 .lb-trust-info-block__title {

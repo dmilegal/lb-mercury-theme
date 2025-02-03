@@ -13,6 +13,15 @@
   padding: var(--wp--preset--spacing--80) 0 var(--wp--preset--spacing--160);
   background-color: var(--lb-trust-info-block-color-background);
 
+  @include breakpoints.media-breakpoint-down(md) {
+    padding: 0 0 var(--wp--preset--spacing--160);
+  }
+
+  @include breakpoints.media-breakpoint-down(sm) {
+    padding: 0 0 var(--wp--preset--spacing--140);
+    margin-top: calc(-1 * var(--wp--preset--spacing--60));
+  }
+
   &--closed {
     @include breakpoints.media-breakpoint-down(md) {
 
@@ -51,6 +60,7 @@
 
     @include breakpoints.media-breakpoint-down(md) {
       cursor: pointer;
+      padding: var(--wp--preset--spacing--60) 0;
     }
   }
 
