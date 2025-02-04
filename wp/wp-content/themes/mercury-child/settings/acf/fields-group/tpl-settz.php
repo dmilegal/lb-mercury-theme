@@ -413,7 +413,7 @@ add_action('acf/include_fields', function () {
 			),
 			array(
 				'key' => 'field_679a6aac1ae20',
-				'label' => 'listing_info_block',
+				'label' => 'Listing info block',
 				'name' => 'listing_info_block',
 				'aria-label' => '',
 				'type' => 'group',
