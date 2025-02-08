@@ -14,7 +14,13 @@
 			'show_author' => true
 		]); ?>
 	</div>
-
+	<? if (get_field('listing_info_block_enable', 'option')) { ?>
+		<div class="lb-layout__after-banner">
+			<? get_template_part('theme-parts/cells/trust-info-block', null, [
+				'color' => 'white',
+			]) ?>
+		</div>
+	<? } ?>
 	<div>
 		<?
 		$selectionGroup = get_field('casino_selection_group', get_the_id()) ?? null;
@@ -52,7 +58,7 @@
 		<?php endwhile; ?>
 	<?php endif; ?>
 
-<? get_template_part('theme-parts/organisms/before-footer-content/style-1'); ?>
+	<? get_template_part('theme-parts/organisms/before-footer-content/style-1'); ?>
 </div>
 
 <?php get_footer(); ?>
