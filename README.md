@@ -150,9 +150,86 @@ WordPress template for local development and production.
 
 ## Работа со стилями
 
-1.  Все базовые css переменные находятся здесь `wp/wp-content/themes/mercury-child/theme.json`. В нем задана цветовая схема (`palette`), шрифты (`fontFamilies`), размеры шрифтов (`fontSizes`), семейства шрифтов (`fontFamilies`), спейсинги (`spacingScale`), размеры пробелов (`spacingSizes`) и т.д. Это стандартный функционал для wp, поэтому эти цвета, шрифты и т.д. появятся в гутенберг редакторе. Такде все базовые переменные равны своим базовым значениям в figma.
+1.  Все базовые стилистические параметры темы находятся в файле `wp/wp-content/themes/mercury-child/theme.json`. В нем задана цветовая схема (`palette`), шрифты (`fontFamilies`), размеры шрифтов (`fontSizes`), семейства шрифтов (`fontFamilies`), спейсинги (`spacingScale`), размеры пробелов (`spacingSizes`) и т.д. Это стандартный функционал wp, поэтому эти цвета, шрифты и т.д. появятся в гутенберг редакторе. Все параметры имеют свои css переменные и их можно увидеть в отладчике браузера. Например css переменной `--wp--preset--font-size--display-xl` соответсвует параметр из `theme.json`:
+    ```
+     "typography": {
+            "defaultFontSizes": false,
+            "customFontSize": false,
+            "fontSizes": [
+                ...
+                {
+                    "name": "Display xl",
+                    "slug": "display-xl",
+                    "size": "3.75rem"
+                },
+                ...
+            ]
+     }
+    ```
+    Также все базовые параметры равны своим базовым значениям в figma.
 2.  Все базовые css переменнве проксируются через функциональные css переменные. Они задаются тут `wp/wp-content/themes/mercury-child/frontend/src/shared/styles/base/_variables.scss`. Это сделано для того, чтобы свести влияение базовых переменных на разные части сайта к минимуму.
 3.  У конмпонентов и блоков есть свои css переменные. Знчения которых равняются значениям функциональных переменных или (изредка) значениям базовых переменных.
+4.  Все файлы scss mixins находятся в папке `wp/wp-content/themes/mercury-child/frontend/src/shared/styles/mixins`. В основном используются только эти миксины: `get-text-styles`, `line-height-by-name`, `media-breakpoint-down`, `media-breakpoint-up`, `make-container-max-width`. Все примеры использования можно посмотреть в стилях блоков. Для примера рассмотрим один их них.
+
+    ```scss
+    // обратите внимание как импортируюся миксины и как они используются
+    @use '@/shared/styles/abstracts/colors';
+    @use '@/shared/styles/mixins/container';
+    @use '@/shared/styles/mixins/font';
+    @use '@/shared/styles/mixins/breakpoints';
+
+    // Это блок определяет собственные переменные для конкретного блока.
+    :root,
+    // класс .editor-styles-wrapper используется для того чтобы в гутенберг редакторе были применены css переменные.
+    .editor-styles-wrapper {
+      // как видим собственные переменные ссылаются на функциональнее переменные или базовые переменные.
+      --lb-contact-info-section-background-color: var(--lb-color-surface-high);
+      --lb-contact-info-section-email-color: var(--lb-color-action-text-default);
+      --lb-contact-info-section-alt-color: var(--lb-color-text-strong);
+      --lb-contact-info-section-desc-color: var(--lb-color-on-surface-lowest);
+      --lb-contact-info-section-map-background-color: var(--lb-color-surface-max);
+    }
+
+    .lb-contact-info-section {
+      // здесь просто используются базовые переменные и это нормально
+      padding: var(--wp--preset--spacing--160) 0 var(--wp--preset--spacing--280);
+      // а здесь переменная уже самого блока
+      background-color: var(--lb-contact-info-section-background-color);
+
+      // миксин для @media запроса.
+      @include breakpoints.media-breakpoint-down(xs) {
+        padding: var(--wp--preset--spacing--160) 0;
+      }
+
+      &__container {
+        // Этот миксин установит max-width равный contentSize в файле theme.json. И отцентрирует себя по центру на странице. Но также этот миксин может принимать параметры для разных размеров.
+        @include container.make-container-max-width();
+      }
+
+      // ...
+
+      &__email {
+        flex-grow: 1;
+        &-link {
+          &#{&} {
+            font-weight: 500;
+            text-decoration: none;
+            color: var(--lb-contact-info-section-email-color);
+          }
+        }
+        &-desc {
+          display: block;
+          margin-top: var(--wp--preset--spacing--60);
+          // Это миксин сразу установит font-size и line-height в зависимости от переданного первого параметра.
+          // Второй параметр по дефолту true и это значит что размер шрифта будет зависит от размера экрана, т.е.
+          // если у этого размера шрифта есть @media запросы для маленьких и больших экранов, то они будут применены.
+          // В данном примере второй параметр false и это значит что размер шрифта неизменен на любом размере экрана, а @media не будут применяться.
+          @include font.get-text-styles('text-sm', false);
+          color: var(--lb-contact-info-section-desc-color);
+        }
+      }
+    }
+    ```
 
 ### Общие подсказки
 
