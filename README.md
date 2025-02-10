@@ -97,6 +97,11 @@ WordPress template for local development and production.
 
 6.  Мигрируйте дб. Phpmyadmin доступна по адресу http://localhost:8000.
 7.  Опционально мигрируйте медиа файлы.
+8.  Сайт будет доступен по адресу https://localhost.
+9.  Для установки зависимостей фронтенда используйте команду:
+    ```
+    yarn install
+    ```
 
 ## Работа с проектом
 
