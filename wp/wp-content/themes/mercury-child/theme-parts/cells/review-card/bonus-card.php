@@ -72,7 +72,7 @@ if (!$bonus_button_title) {
   if (get_option('bonuses_get_bonus_title')) {
     $bonus_button_title = esc_html(get_option('bonuses_get_bonus_title'));
   } else {
-    $bonus_button_title = esc_html__('Get Bonus', 'mercury-child');
+    $bonus_button_title = esc_html__('Get Now', 'mercury-child');
   }
 }
 
@@ -140,7 +140,7 @@ $is_locked = isBrandLocked($postId);
           'size' => 'xl',
           'color' => 'primary',
           'className' => 'lb-review-card__play',
-          'content' => esc_html($button_title),
+          'content' => esc_html($bonus_button_title),
           'href' => $is_locked || !$bonus_external_link ? '' : $bonus_external_link,
           'target' => $bonus_external_link && !$is_locked ? "_blank" : '',
           'rel' => $bonus_external_link && !$is_locked ? "nofollow" : ''
