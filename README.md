@@ -177,17 +177,18 @@ WordPress template for local development and production.
 4.  Все файлы scss mixins находятся в папке `wp/wp-content/themes/mercury-child/frontend/src/shared/styles/mixins`. В основном используются только эти миксины: `get-text-styles`, `line-height-by-name`, `media-breakpoint-down`, `media-breakpoint-up`, `make-container-max-width`. Все примеры использования можно посмотреть в стилях блоков. Для примера рассмотрим один их них.
 
     ```scss
+    // Это импорт в scss.
     // обратите внимание как импортируюся миксины и как они используются
     @use '@/shared/styles/abstracts/colors';
     @use '@/shared/styles/mixins/container';
     @use '@/shared/styles/mixins/font';
     @use '@/shared/styles/mixins/breakpoints';
 
-    // Это блок определяет собственные переменные для конкретного блока.
+    // Это блок определяет собственные css переменные для конкретного блока.
     :root,
-    // класс .editor-styles-wrapper используется для того чтобы в гутенберг редакторе были применены css переменные.
+    // Класс .editor-styles-wrapper используется для того чтобы в гутенберг редакторе были применены css переменные.
     .editor-styles-wrapper {
-      // как видим собственные переменные ссылаются на функциональнее переменные или базовые переменные.
+      // Как видим собственные переменные ссылаются на функциональнее переменные или базовые переменные.
       --lb-contact-info-section-background-color: var(--lb-color-surface-high);
       --lb-contact-info-section-email-color: var(--lb-color-action-text-default);
       --lb-contact-info-section-alt-color: var(--lb-color-text-strong);
@@ -196,7 +197,7 @@ WordPress template for local development and production.
     }
 
     .lb-contact-info-section {
-      // здесь просто используются базовые переменные и это нормально
+      // Здесь просто используются базовые переменные и это нормально
       padding: var(--wp--preset--spacing--160) 0 var(--wp--preset--spacing--280);
       // а здесь переменная уже самого блока
       background-color: var(--lb-contact-info-section-background-color);
