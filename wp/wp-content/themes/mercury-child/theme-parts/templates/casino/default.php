@@ -20,6 +20,7 @@ $organization_disable_details = esc_attr(get_post_meta(get_the_ID(), 'organizati
 				<div class="lb-layout__content">
 					<div class="lb-layout__inner">
 						<div class="prose-headings prose-content prose-spaces prose-colors">
+							<? get_template_part('theme-parts/organs/tabs-of-characteristics/default', null, ['post_id' => get_the_ID()]); ?>
 							<? the_content() ?>
 							<? if (!$organization_disable_details)
 								get_template_part('theme-parts/cells/review-details', null, ['post_id' => get_the_ID()]); ?>
