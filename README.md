@@ -95,7 +95,7 @@ WordPress template for local development and production.
 
         ./run.sh -h
 
-6.  Мигрируйте дб. Phpmyadmin доступна по адресу http://localhost:8000.
+6.  Мигрируйте дб. Phpmyadmin доступна по адресу `http://localhost:8000`. Для миграции подойдет дб с дев мультисайта. Используя wp migrate db поставьте `//localhost` для реплейса домена. Если не используете, то просто в дб перезапишите старый домен `//olddomain.com` локалхостом `//localhost`.
 7.  Создайте `wp/.htaccess` если он еще не создан. Это файл должен содержать следующий код:
 
     ```
@@ -149,7 +149,7 @@ WordPress template for local development and production.
     ```
 
 8.  Опционально мигрируйте медиа файлы.
-9.  Сайт будет доступен по адресу https://localhost.
+9.  Сайт будет доступен по адресу `https://localhost`. Вы можете использовать другие доменные имена дополнив ваш hosts файл на windows и перезаписав домен в дб.
 10. Для установки зависимостей фронтенда используйте команду:
     ```
     yarn install
