@@ -96,9 +96,61 @@ WordPress template for local development and production.
         ./run.sh -h
 
 6.  Мигрируйте дб. Phpmyadmin доступна по адресу http://localhost:8000.
-7.  Опционально мигрируйте медиа файлы.
-8.  Сайт будет доступен по адресу https://localhost.
-9.  Для установки зависимостей фронтенда используйте команду:
+7.  Создайте `wp/.htaccess` если он еще не создан. Это файл должен содержать следующий код:
+
+    ```
+    # start force trailing slash
+    <IfModule mod_rewrite.c>
+        RewriteCond %{REQUEST_URI} /+[^\.]+$
+        RewriteCond %{REQUEST_URI} !(/wp-json/) [NC]
+        RewriteRule ^(.+[^/])$ https://%{HTTP_HOST}%{REQUEST_URI}/ [R=301,L]
+    </IfModule>
+    # end force trailing slash
+
+    RedirectMatch ^/es/(.*)$ /
+
+    RewriteEngine On
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+
+    ### start subfolder multisite ###
+    # add a trailing slash to /wp-admin
+    RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
+    RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
+    RewriteRule . index.php [L]
+    ### end subfolder multisite ###
+
+
+    <ifModule mod_headers.c>
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options nosniff
+    Header set X-Frame-Options DENY
+    Header set Referrer-Policy: no-referrer-when-downgrade
+    Header set Content-Security-Policy "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';"
+    </ifModule>
+
+    <Files xmlrpc.php>
+    order deny,allow
+    deny from all
+    </Files>
+    ```
+
+    Его можно заменить на другой код от любого мультисайта. Также не забудьте поставить ему права на чтение и запись, если вы используете ubuntu:
+
+    ```
+    chmod 664 wp/.htaccess
+    ```
+
+8.  Опционально мигрируйте медиа файлы.
+9.  Сайт будет доступен по адресу https://localhost.
+10. Для установки зависимостей фронтенда используйте команду:
     ```
     yarn install
     ```
@@ -236,6 +288,15 @@ WordPress template for local development and production.
       }
     }
     ```
+
+5.  Общая рекомендация по именованию классов это BEM. Необязательно ее строго придерживаться, но в основном стоит использовать такие классы как
+    ```css
+    .block-name
+      .block-name__element
+      .block-name__element--modifier
+      .block-name__element--modifier-value;
+    ```
+    Если вам нужно создать класс, то имя класса должно быть таким же, как и элемент. Например, если вы хотите создать класс для обрамления элемента `button`, то его название должно быть `block-name__button`. Если вы хотите создать класс для обрамления элемента `button`, то его название должно быть `block-name__button--modifier`. А если вы хотите изолировать например хедер у блока, то такое имя класса для самого хедера - `block-name__header` и его чайлдов: `block-name__header-title`, `block-name__header-subtitle` вполне валидны.
 
 ### Общие подсказки
 
