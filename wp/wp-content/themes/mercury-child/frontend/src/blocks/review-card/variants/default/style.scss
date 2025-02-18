@@ -89,7 +89,12 @@
   &__title {
     @include font.get-text-styles('text-md', false);
     font-weight: 600;
+    color: var(--lb-review-card-color-text);
     margin-bottom: var(--wp--preset--spacing--50);
+
+    @at-root a#{&} {
+      text-decoration: none;
+    }
   }
 
   &__logo {
@@ -191,6 +196,11 @@
     }
     &-copy {
       width: 100%;
+    }
+
+    &-desc {
+      text-decoration: none;
+      color: var(--lb-review-card-color-text);
     }
   }
 
